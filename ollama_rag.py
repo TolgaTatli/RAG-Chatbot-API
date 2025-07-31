@@ -1,6 +1,6 @@
 import requests
 import json
-from typing import Dict, Optional
+from typing import Dict, Optional, List
 import warnings
 
 # Transformer uyarılarını bastır
@@ -61,7 +61,8 @@ class OllamaRAGQA:
         question_language = "Turkish" if any(turkish_word in question.lower() for turkish_word in ['nedir', 'nasıl', 'neden', 'ne', 'kim', 'hangi']) else "English"
         
         # Yeni hibrit yaklaşım: RAG bilgilerini kullanarak detaylı ve samimi cevap
-        prompt = f"""Sen yardımcı ve bilgili bir yapay zeka asistanısın. Kullanıcının sorusunu aşağıdaki bilgileri kullanarak cevaplayacaksın.
+        if context and context.strip():
+            prompt = f"""Sen yardımcı ve bilgili bir yapay zeka asistanısın. Kullanıcının sorusunu aşağıdaki bilgileri kullanarak cevaplayacaksın.
 
 VERİ TABANI BİLGİLERİ:
 {context}
@@ -69,14 +70,24 @@ VERİ TABANI BİLGİLERİ:
 KULLANICININ SORUSU: {question}
 
 TALİMATLAR:
-1. Önce verilen bilgileri analiz et
-2. Bu bilgileri kullanarak soruya detaylı bir cevap ver
-3. Cevabını samimi ve yardımsever bir tonla yaz
-4. Eğer bilgi yoksa açıkça belirt
-5. Ek sorular olursa yardım etmeye hazır olduğunu söyle
-6. {question_language} dilinde cevap ver
+1. Verilen bilgileri kullanarak soruya net ve anlaşılır bir cevap ver
+2. Cevabını samimi ve yardımsever bir tonla yaz
+3. Ham veri yapıştırma, işleyip düzgün cevap ver
+4. {question_language} dilinde cevap ver
+5. Eğer verilen bilgiler yetersizse, genel bilginle destekle
 
-Lütfen soruyu verilen bilgilere dayanarak yanıtla:"""
+Lütfen soruyu yanıtla:"""
+        else:
+            prompt = f"""Sen yardımcı bir yapay zeka asistanısın. Kullanıcının sorusuna mevcut genel bilginle cevap ver.
+
+KULLANICININ SORUSU: {question}
+
+TALİMATLAR:
+1. Soruya samimi ve yardımsever bir tonla cevap ver
+2. {question_language} dilinde cevap ver
+3. Eğer bilmiyorsan dürüstçe söyle
+
+Lütfen soruyu yanıtla:"""
 
         try:
             payload = {
@@ -152,6 +163,35 @@ Lütfen soruyu verilen bilgilere dayanarak yanıtla:"""
             
         return any(keyword in question_lower for keyword in general_chat_keywords)
 
+    def _contains_technical_terms(self, question: str) -> bool:
+        """Sorunun teknik terimler içerip içermediğini kontrol et"""
+        technical_terms = [
+            'port', 'api', 'agent', 'server', 'database', 'config', 'ip', 'url',
+            'geodi', 'gde', 'discovery', 'communication', 'protocol', 'service',
+            'application', 'system', 'network', 'connection', 'authentication',
+            'installation', 'configuration', 'deployment', 'monitoring'
+        ]
+        
+        question_lower = question.lower()
+        return any(term in question_lower for term in technical_terms)
+
+    def _check_answer_consistency(self, results: List[Dict], question: str) -> Dict:
+        """Sonuçların tutarlılığını kontrol et ve en güvenilir cevabı seç"""
+        if not results:
+            return None
+            
+        # Genel tutarlılık kontrolü - en yüksek skorlu sonucu döndür
+        best_result = max(results, key=lambda x: x['score'])
+        
+        # Birden fazla kaynak benzer bilgi veriyorsa güveni artır
+        similar_count = sum(1 for r in results if r['score'] >= best_result['score'] * 0.8)
+        
+        return {
+            'consistent_answer': best_result['text'],
+            'confidence': best_result['score'] * (1 + (similar_count - 1) * 0.1),
+            'source_count': similar_count
+        }
+
     def generate_general_response(self, question: str) -> str:
         """Genel sohbet soruları için yapay zeka benzeri cevap üret"""
         if not self.check_ollama_status():
@@ -190,19 +230,8 @@ Kısa, samimi ve yardımsever bir cevap ver. Türkçe cevap ver."""
         except Exception as e:
             return "Merhaba! Size nasıl yardımcı olabilirim?"
 
-    def answer_question(self, question: str, top_k: int = 3, confidence_threshold: float = 0.2) -> Dict:
-        # Önce genel sohbet sorusu mu kontrol et
-        if self.is_general_chat_question(question):
-            answer = self.generate_general_response(question)
-            return {
-                'question': question,
-                'answer': answer,
-                'context': "",
-                'sources': [],
-                'method': 'general_chat'
-            }
-
-        # RAG araması yap
+    def answer_question(self, question: str, top_k: int = 3, confidence_threshold: float = 0.5) -> Dict:
+        # RAG araması yap - her durumda
         search_results = self.retriever.search(question, top_k + 2)  # Daha fazla sonuç al, filtreleme sonrası için
 
         # Sonuç yoksa
@@ -215,9 +244,12 @@ Kısa, samimi ve yardımsever bir cevap ver. Türkçe cevap ver."""
                 'method': 'no_results'
             }
 
-        # Sonuçları çeşitlendirmek için, aynı içerikleri filtrele
+        # Sonuçları çeşitlendirmek için, aynı içerikleri filtrele ve sırala
         filtered_results = []
         seen_texts = set()
+
+        # Önce sonuçları güven skoruna göre sırala (yüksekten düşüğe)
+        search_results = sorted(search_results, key=lambda x: x['score'], reverse=True)
 
         for result in search_results:
             # İlk 50 karakter benzersiz mi kontrol et
@@ -228,33 +260,46 @@ Kısa, samimi ve yardımsever bir cevap ver. Türkçe cevap ver."""
                 if len(filtered_results) >= top_k:
                     break
 
-        # Filtrelenmiş sonuçları kullan
-        search_results = filtered_results[:top_k]
+        # Filtrelenmiş sonuçları kullan - yalnızca yüksek skorlu olanları al
+        high_score_results = [r for r in filtered_results if r['score'] >= 0.4]
+        if high_score_results:
+            search_results = high_score_results[:top_k]
+        else:
+            search_results = filtered_results[:top_k]
 
         # Bağlam oluştur
         context = self.retriever.get_context_for_query(question, top_k)
 
+        # Tutarlılık kontrolü yap
+        consistency_check = self._check_answer_consistency(search_results, question)
+        
         # En yüksek güven skoru
         top_confidence = search_results[0]['score'] if search_results else 0
+        
+        # Tutarlılık kontrolünden gelen güven skorunu da dikkate al
+        if consistency_check and consistency_check.get('source_count', 1) > 1:
+            top_confidence = max(top_confidence, consistency_check['confidence'])
 
         # Güven skoru düşükse
         low_confidence = top_confidence < confidence_threshold
 
-        # Ollama ile cevap oluştur
+        # Çok düşük güven skorunda bile LLM'e soralım, belki genel bilgiyle cevap verebilir
+        # Artık ham veri döndürmeyeceğiz
+
+        # Ollama ile cevap oluştur - HER ZAMAN LLM kullan, ham veri asla döndürme
         if self.check_ollama_status():
-            # Güven skoru düşükse uyarı ekle
-            if low_confidence:
+            # RAG verisi varsa onu kullan, yoksa genel bilgiyle cevapla
+            if search_results and context:
                 answer = self.generate_answer(question, context)
-                answer = f"⚠️ Güven skoru düşük. Cevap doğru olmayabilir.\n\n{answer}"
-                method = 'low_confidence'
+                method = 'ollama_with_rag'
             else:
-                answer = self.generate_answer(question, context)
-                method = 'ollama_generated'
+                # RAG verisi yoksa genel AI yanıtı ver
+                answer = self.generate_general_response(question)
+                method = 'ollama_general'
         else:
-            # Fallback: En iyi eşleşen dökümanı kullan
-            best_match = search_results[0]
-            answer = f"🔍 En ilgili bilgi: {best_match['text'][:300]}..."
-            method = 'retrieval_only'
+            # Ollama yoksa basit geri dönüş
+            answer = "Üzgünüm, şu anda cevap oluşturamıyorum. Ollama servisi çalışmıyor."
+            method = 'service_unavailable'
 
         return {
             'question': question,

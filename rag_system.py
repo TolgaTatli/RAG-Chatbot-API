@@ -61,13 +61,13 @@ class RAGRetriever:
         # Sorgu için embedding oluştur
         query_embedding = self.model.encode([prefixed_query], normalize_embeddings=True)
 
-        # FAISS ile arama yap
-        scores, indices = self.index.search(query_embedding, top_k)
+        # FAISS ile arama yap - daha fazla sonuç al ki filtreleme yapabilelim
+        scores, indices = self.index.search(query_embedding, min(top_k * 3, len(self.documents)))
 
-        # Sonuçları hazırla
+        # Sonuçları hazırla ve sırala
         results = []
         for i, (score, idx) in enumerate(zip(scores[0], indices[0])):
-            if idx < len(self.documents):  # Geçerli index kontrolü
+            if idx < len(self.documents) and score > 0.1:  # Minimum skor eşiği
                 result = {
                     'rank': i + 1,
                     'score': float(score),
@@ -76,7 +76,14 @@ class RAGRetriever:
                 }
                 results.append(result)
 
-        return results
+        # Skorlara göre sırala ve en iyi top_k sonucu döndür
+        results = sorted(results, key=lambda x: x['score'], reverse=True)
+        
+        # Rank'ları yeniden hesapla
+        for i, result in enumerate(results[:top_k]):
+            result['rank'] = i + 1
+            
+        return results[:top_k]
 
     def get_context_for_query(self, query: str, top_k: int = 3, max_length: int = 2000) -> str:
         """
