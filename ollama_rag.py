@@ -3,7 +3,6 @@ import json
 from typing import Dict, Optional, List
 import warnings
 
-# Transformer uyarılarını bastır
 warnings.filterwarnings("ignore", category=FutureWarning)
 import os
 os.environ['TRANSFORMERS_VERBOSITY'] = 'error'
@@ -230,9 +229,9 @@ Kısa, samimi ve yardımsever bir cevap ver. Türkçe cevap ver."""
         except Exception as e:
             return "Merhaba! Size nasıl yardımcı olabilirim?"
 
-    def answer_question(self, question: str, top_k: int = 3, confidence_threshold: float = 0.5) -> Dict:
+    def answer_question(self, question: str, top_k: int = 5, confidence_threshold: float = 0.0) -> Dict:
         # RAG araması yap - her durumda
-        search_results = self.retriever.search(question, top_k + 2)  # Daha fazla sonuç al, filtreleme sonrası için
+        search_results = self.retriever.search(question, 10)  # Daha fazla sonuç al, filtreleme sonrası için
 
         # Sonuç yoksa
         if not search_results:
@@ -354,7 +353,7 @@ Kısa, samimi ve yardımsever bir cevap ver. Türkçe cevap ver."""
 
                     if len(result['sources']) > 0:
                         print(f"\n📚 Kaynaklar:")
-                        for i, source in enumerate(result['sources'][:2]):
+                        for i, source in enumerate(result['sources'][:4]):
                             print(f"  {i+1}. {source['text'][:100]}... (skor: {source['score']:.3f})")
                 elif result['method'] == 'general_chat':
                     print("💬 Genel sohbet modu")
