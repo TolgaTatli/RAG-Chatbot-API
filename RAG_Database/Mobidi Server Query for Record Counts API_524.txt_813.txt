@@ -1,0 +1,15 @@
+A Token with query authorization is required to access the JSON result of the rest API. The JSON result can be reached with any client.
+
+The 'Query' operation returns the count of records grouped by layers corresponding to the query. For details on all functions with parameter and response types, the technical page of MobidiQueryManagerHandler should be visited.
+
+The request for the 'QueryCounters' operation is made to `[MOBIDISERVERURL]/MobidiQueryManagerHandler?op=QueryCounters&queryObject=[MobidiQuery_JSON]&UserSession=[TOKEN]`. The `queryObject` parameter is a `MobidiQuery` object in JSON format. This operation supports both GET and POST HTTP methods.
+
+Possible error types for the operation include 401 Unauthorized access / Access denied, 403 Forbidden, 511 Network Authentication Required, and 501 Server Error.
+
+The response for the operation is an array of `QueryCounter` objects.
+
+A request example shows a `myQuery` object with `startDate` as "20180114" (From 14 January 2018) and `endDate` as "-1w" (Up to 1 week ago). This `myQuery` object is then stringified and sent via a POST request to `[MOBIDIServerUrl]/MobidiQueryManagerHandler?op=Query` with a `callBackFunction`.
+
+A response example shows an array containing objects, each with `Layer_Id`, `Layer_Name`, and `Result_Count` properties.
+
+Sample applications include a Javascript Sample.

@@ -1,0 +1,3 @@
+Scripts for remediation can be written using languages such as Batch, Powerscript, or bash. Any other desired language may also be used for writing these scripts.
+
+The infrastructure associated with remediation scripts possesses low-code capabilities.

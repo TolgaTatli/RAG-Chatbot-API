@@ -1,0 +1,5 @@
+The provided text includes translations for several terms. "Güvenlik Noktası" is translated as "Security Point". "Açıklama" is translated as "Note" in English, "Nota" in Spanish, and "Remarque" in French. "Güvenlik Noktası Büyüklüğü" is translated as "Security Point Size" in English, "Tamaño Del Punto De Seguridad" in Spanish, and "Taille Du Point De Sécurité" in French. "Güvenlik Noktası (Oto)" is translated as "Security Point (Auto)". "Durum" is translated as "Status".
+
+A solution is described for reporting issues at construction or mining sites, and it can also be used by regular security personnel. Users are not required to use devices like Tomtom. The system allows users to take photos anywhere, take notes, and mark issues directly on photos. It provides instant reports and enables users to identify the nearest team in case of an issue. The solution also generates reports on areas that frequently experience problems. Associated concepts include security, camera, alarm, control, trust, peace, and gun.
+
+The version of the described system is 1.0.2133.48.

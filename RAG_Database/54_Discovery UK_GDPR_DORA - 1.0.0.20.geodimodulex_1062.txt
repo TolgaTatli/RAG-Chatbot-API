@@ -1,0 +1,5 @@
+Country-specific semantic recognizers are designed to extend the capabilities of GEODI Discovery and Classification. This particular package is specifically developed for the United Kingdom.
+
+Users should install this package after GEODI Discovery. The package includes several recognizers for United Kingdom-specific data, such as the UK Zip Code Recognizer, NINO Recognizer, Driving License Recognizer, Plate Recognizer, NHS Recognizer, GBP Recognizer, and UK Passport Number Recognizer.
+
+The version of this package is 1.0.0.20.

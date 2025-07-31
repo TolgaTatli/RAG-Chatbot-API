@@ -1,0 +1,21 @@
+The canonical phrase recognizer operates based on a defined rule, allowing for the selection and separation of text parts described using a formal language. The user determines the result. This usage is generally referred to as "Regex."
+
+The .NET Regex Tester site can be used to obtain information about regexes and to test them.
+
+When preparing regexes, it is important to use capital letters because Geodi capitalizes words.
+
+An example regex, `[0-9,\,]+X[0-9,\,]+X[0-9,\,]*[ ]*CM|[0-9,\,]+X[0-9,\,]+[ ]*CM`, can find size expressions in documents, such as "25X25cm" or "5x10x12.5 cm."
+
+Another example regex, `[0-9]+[ ]*SAYFA|[0-9]+[ ]*PIECE`, can find the number of pages and pieces in documents, for instance, "10 Pages, 20 Pieces."
+
+The regex `MIL-STD-[0-9]*[A-Z]*` is used to capture military standards, which is a worldwide term. Examples include "MIL-STD-1376" and "MIL-STD-1246C."
+
+An example regex for recognizing Instagram addresses is `(HTTPS?://)?(WWW[.])?([Iİ]NSTAGRAM[.]COM)(([/?#][^\s]*)|\s+)`. This regex supports different spellings, such as "https://www.instagram.com/deceyazilim/", "www.instagram.com/deceyazilim/", and "instagram.com/deceyazilim/."
+
+The recognizer also supports the use of near keywords and validation algorithms, including Luhn, Verhoef, or custom algorithms.
+
+The Words page can be utilized to better analyze the results.
+
+It is important to ensure that there are no spaces at the beginning and end of the regex expression.
+
+To use this recognizer, a Geodi Pro license and module are required.

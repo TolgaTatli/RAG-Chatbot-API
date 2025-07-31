@@ -1,0 +1,39 @@
+GEODI system management tools are accessible from an address or via the system tray icon menu (bottom-right). This page allows for discovery or classification settings, DECE-STORE, module installation, and other options.
+
+The "Projects" section lists projects and allows for new project creation, editing projects with the project wizard, and starting or stopping indexing. The available options may appear differently based on user permissions.
+
+In a GEODI Cluster structure, projects located on all connected GEODI Servers will be visible. This Cluster structure enables the management of all GEODI servers from a single location and allows for common reporting.
+
+DECE-STORE is a portal that provides access to GEODI Modules, ready-made templates, and agents. Users can download discovery and classification templates for regulations such as KVKK, PCI/DSS, HIPAA, or for many countries. To access DECE-STORE, http://service.decesoftware.com must be accessible. As DECE-STORE is updated, GEODI modules and agents are automatically updated, ensuring access to the best working and quality solution.
+
+Support Q is an AI Assistant that operates on DECE Servers and requires internet access. It provides assistance on topics such as GEODI, DSPM, and Data Discovery. Access to http://service.decesoftware.com is necessary for Support Q. Support Q is a GEODI Q application, and users have the option to create a similar assistant using their own data.
+
+GEODI utilizes Recognizers and Dictionaries to discover sensitive data. Dictionaries are lists employed for discovery and classification purposes. New dictionaries can be introduced through installations and add-ons loaded from DECE-STORE. For instance, customizable dictionaries have been created for each of the default classification rules. Users can also create their own dictionaries as needed.
+
+The "System Information" section provides instant information regarding logged-on users and system usage, including CPU and Memory.
+
+The "User Information" section allows for the management of a user's language and permissions, as well as general system permission management for system administrators.
+
+The "Settings" section allows users to configure parameters that determine discovery and general system operation. The Reports tab within this section contains numerous reports, including those related to system health and logs.
+
+The "Indexing Speed" setting allows users to determine the indexing or discovery speed. This speed should be set in accordance with system resources and user needs. The default speed is 5, which represents the maximum speed.
+
+At maximum speed, GEODI processes an average of 0.5 to 1 terabyte of data per day, though this can vary depending on server resources and the data itself. The speed setting can be adjusted even while the discovery process is ongoing.
+
+Even when indexing settings are at their highest, GEODI is designed to reserve CPU and memory resources. This mechanism aims to prevent the system from becoming unresponsive.
+
+In the default settings for "E-Posta Ayarları" (Email Settings), emails transmitted within alarms or workflows are sent via DECE servers. For this functionality, access to http://service.decesoftware.com must be available. If users prefer emails to utilize their organization's servers, specific settings must be configured.
+
+GEODI settings are stored encrypted by default, yet they are designed to be portable between different GEODI instances. Users have the option to modify these security level settings.
+
+Many GEODI installations require multiple GEODI Servers to increase their capacity for discovery or automatic classification. It is recommended to activate Cluster mode to centrally manage multiple GEODI instances and to obtain consolidated reports when needed.
+
+For the Cluster mode to function, a central login provider such as LDAP or Microsoft is required. To configure the cluster, navigate to Settings → System Settings → Cluster Settings.
+
+In the opened dialog, users should enter the URL and desired display name for each server to be included in the cluster. Before proceeding, it is recommended to verify the URLs and eliminate any potential network problems.
+
+Once the settings are applied, each server and its project count will be visible in the projects tab. For common reporting, project names must match across the cluster. The GenericSettings section can be left unchanged or modified to override the workspace and report matching.
+
+A Master GEODI is capable of generating a consolidated report by integrating data received from other GEODI instances. It is possible that each GEODI instance may have discovered different sources using different settings.
+
+For consolidated reporting, workspace names and reports must be matched. Alternatively, matching rules can be overridden by using the "DefaultWorkspace" and "DefaultReportID" values. When these values are changed, GEODI will match the selected items with the new values. Reports, excluding CSV and XLS formats, are provided within a ZIP file.

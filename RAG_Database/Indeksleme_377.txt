@@ -1,0 +1,71 @@
+İndeksleme, GEODI'nin gerçekleştirdiği keşif işleminin sonucudur. GEODI, veriler hakkında özet bilgiler oluşturur ve bu özetleri arama, raporlama ve diğer istekleri yanıtlamak için kullanır. GEODI, verinin orijinaline ihtiyaç duymaz; yalnızca bir görüntüleyicide açmak isterseniz orijinal dosyaya erişim gerekir. Bu yaklaşım sayesinde sistem kaynakları verimli kullanılır ve yüksek performans sağlanır.
+
+GEODI, indeksleme hızı ayarına sahiptir ve bu ayarın maksimuma getirilmesi önerilir.
+
+İlk indeksleme, tüm verileri işleyeceği için zaman alabilir. Sürekli keşif sırasında GEODI yalnızca yeni veya değişen içerikleri indeksler. Varsayılan olarak sistem günde bir kez yeniden tarama yapar, bu süre istenirse değiştirilebilir.
+
+İndeksleme hızını etkileyen başlıca faktörler sunucu kaynakları (CPU, RAM, disk hızı ve genel sistem yükü), ağ ve depolama performansı (veri kaynaklarının disk ve ağ okuma hızı), OCR veya FacePro gibi özellikler ve örnekleme (sampling) yöntemidir. OCR veya FacePro gibi gelişmiş işlemler daha fazla kaynak tüketebilir ve performansı düşürebilirken, örnekleme kısmi sonuç verse de hızlı ve etkili bir yöntemdir ve genel hakkında fikir verir. Dosya içerik filtreleme, varsayılan kurallarla GDPR veya PCI/DSS ile ilgisiz birçok dosya türünü dışlar ve bu kurallar istenirse değiştirilebilir.
+
+Keşif sürecine başlarken ilk adım "Tüm İçeriği İndeksle" olmalıdır. Bu seçenek, verilerin tamamını kapsayacak şekilde en kapsamlı sonuçları sunar. Ardından ihtiyaçlara göre diğer indeksleme seçenekleri kullanılabilir. Eğer zamanlanmış indeksleme ayarlandıysa ve düzenli yedeklemeler alınıyorsa, bakım ihtiyaçları dışında diğer seçenekleri kullanmaya gerek kalmaz. Bu yaklaşım kapsamlı veri görünürlüğü, otomatik güncellik ve minimum manuel müdahale sağlar.
+
+İndeksleme işlemi başladıktan sonra süreç anlık olarak takip edilebilir.
+
+İlerleme çubuğu, indeksleme yüzdesini tahmini olarak gösterir. Bu çubuk doğrusal değildir çünkü GEODI, henüz indekslenmemiş belgelerin ne kadar sürede işleneceğini önceden bilemez. Bu nedenle ilerleme çubuğu, daha önceki belge işleme sürelerine göre yaklaşık bir hesaplama yapar.
+
+Sayısal alan, kaç belge işlendiğini gösterir. Grafikler ise saniye başına belge sayısı gibi performans trendlerini sunar.
+
+Hata veya uyarı oluşursa burada görünür. Rapor üzerine tıklayarak indirilebilir ve Raporlar klasöründe saklanır. Ayrıca her proje için detaylı hata raporları da bu alanda sunulur.
+
+GEODI'nin oluşturduğu indeksler, verinin kendisinden daha küçük olsa da bir miktar depolama alanı gerektirir.
+
+İndeksleme için genellikle veri boyutunun %10 ila %20'si kadar alan yeterlidir. Ancak kesin boyut, veri türüne ve yapılan işlemlere göre değişkenlik gösterir.
+
+Örnekleme (Sampling) kullanılması indeksi küçültürken, benzerlik indeksleme (kopya/türev tespiti) gibi gelişmiş seçenekler ek alan gerektirebilir.
+
+İndekslerin yedeği için ayrıca alan ayırmanız önerilir. Bu, sistemin kesintisiz ve güvenli çalışmasını sağlar.
+
+Her veri kümesi farklı dosya türlerini içerir. Ancak bazı dosyalar proje kapsamı için gereksiz olabilir veya ağ ya da sistem kaynakları için fazla büyük olabilir.
+
+GEODI, birçok keşif projesinden edinilen en iyi uygulamalara dayanarak belirli dosya türlerini hariç tutar ve boyut sınırları uygular, örneğin 100 MB üstü dosyalar. Bu sayede gereksiz veriler işlenmez, sistem performansı korunur ve kaynaklar daha etkili kullanılır.
+
+Bu filtreleme kuralları klasörlerden gelen dosyalar, e-posta ekleri, GDE aracılığıyla gelen içerikler ve veritabanına gömülü dosyalar için geçerlidir. GEODI üzerinde bu kurallar düzenlenebilir ve ihtiyaçlara göre özelleştirilebilir.
+
+Ignore kuralları, indeksleme sırasında göz ardı edilmesi gereken dosya ve klasörleri tanımlar. Bu kurallar dosya uzantılarını ve bazı klasörleri içerir. Bu kurallara uyan dosyalar ve klasörler hiçbir şekilde indekslenmez ve loglara yazılmaz. Dosya türleri için ayar dosyası `\Settings\Engine\FileTypes.xml` adresinde, klasörler için ise `\Settings\Engine\IgnoreFolders.xml` adresinde bulunur. Varsayılan ayarları geçersiz kılmak için değişiklikler GEODIDATAFOLDER klasöründe yapılmalıdır.
+
+GEODI, PDF, DOCX, XLSX, PPTX gibi yaygın ofis ve belge formatları dahil olmak üzere belirli dosya türleri için yerleşik okuyuculara sahiptir. Tam desteklenen dosya türleri listesi için ilgili bağlantıya başvurulabilir.
+
+GEODI, bilinen dosya türlerini herhangi bir kısıtlama yoksa normal şekilde işler. Ancak bir IgnoreRule varsa dosya görünmez hale gelir ve işlenmez. Bir ProtectRule varsa, dosya belirli bir boyut sınırını aşarsa, örneğin 100 MB üzeri PDF'ler, işlenmez. Bu kurallar sayesinde sistem performansı korunur ve gereksiz veri işleme engellenir.
+
+GEODI, varsayılan olarak bilinmeyen dosya uzantılarını indekslemez. Bu, sistemin gereksiz veriyle meşgul olmasını engeller.
+
+Gelişmiş ayarlar kullanılarak bilinmeyen dosya uzantılarının indekslenme davranışı değiştirilebilir. Eğer "yalnızca ad ve tarih" seçeneği kullanılırsa, tüm bilinmeyen uzantılar da indekslenir ancak içerikleri analiz edilmeden sadece temel bilgiler alınır.
+
+Herhangi bir dosya türünü dışlamak için ignore listesine manuel olarak eklenebilir. Ancak bu değişikliklerin etkili olabilmesi için keşif işleminin yeniden başlatılması gerekir. Bu yüzden değişiklik yapmadan önce filtreleme ihtiyaçlarının dikkatle değerlendirilmesi önerilir.
+
+Protect kuralları, ağ ve sistem kaynaklarını büyük dosyalara karşı korumak amacıyla uygulanır. Bu kurallar hem bilinen hem de bilinmeyen dosya türleri için geçerlidir.
+
+Protect kuralları kapsamında içerik grupları "Local" ve "Far" olarak ayrılır. Yerel veya ağ klasörlerinden gelen "Local İçerik" için herhangi bir boyut sınırlaması uygulanmaz. GDE aracılığıyla gelen dosyalar, e-posta ekleri ve web sayfalarından gelen içerikler "Far İçerik" olarak adlandırılır ve boyut sınırlamalarına tabidir. Varsayılan olarak, Far içerikte 100 MB üzerindeki dosyalar sadece adıyla indekslenir. ZIP, RAR gibi sıkıştırılmış dosyalar ise 500 MB üzerindeyse içerikleri analiz edilmeden sadece adı indekslenir. Bu şekilde, dosyanın varlığından haberdar olunur ancak içeriği işlenmez. Varsayılan ayarları (`\Settings\Engine\ResourceBalancing`) geçersiz kılmak için değişiklikler GEODIDATAFOLDER klasöründe yapılmalıdır.
+
+GEODI, içerikleri sorgulamak için zengin bir sorgu dili sunar. İçerik tipi, kopyalar ve tarih aralıkları gibi birçok filtreyle arama yapılabilir. Hatalı, eksik ya da özel durumdaki içerikleri bulmaya yardımcı olacak özel sorgular da mevcuttur.
+
+GEODI'de indekslenmiş içerikleri sorgulamak için çeşitli özel sorgular kullanılabilir. "only_name_and_date" sorgusu, genellikle UnknownFiles veya ProtectRules nedeniyle içeriksiz işlenen, sadece adı ve tarihi indekslenmiş içerikleri verir. "unreadable" sorgusu, hatalı, şifreli veya bozuk dosyaları listeler ve bu tür dosyalar GEODI arayüzünde ünlem işareti (!) ile gösterilir. "container" sorgusu, ZIP, RAR gibi kapsayıcı dosyaları veya klasör yapılarındaki içeriği sorgular. "indexed" sorgusu, indeksleme işlemi başarıyla tamamlanmış içerikleri verirken, "recovery_failed" sorgusu sistem çökmesi sonrası indeks kurtarma işleminde başarısız kalmış içerikleri gösterir ve bu tür riskleri azaltmak için indeks yedeği alınması önerilir. Ayrıca, "partially_read" sorgusu ProtectRules nedeniyle kısmen okunmuş içerikleri, "fully_encrypted" sorgusu tamamı şifrelenmiş içerikleri ve "partially_encrypted" sorgusu kısmen şifreli içerikleri listeler.
+
+GEODI'nin keşif motoru sektördeki en hızlı motorlardan biridir. Ancak indeksleme yavaşlığı yaşanıyorsa bu durum çoğunlukla makine kaynakları, ayarlar veya çevresel koşullardan kaynaklanır.
+
+İndeksleme performansını artırmak için bir kontrol listesi mevcuttur. İndeksleme hızının ayarlardan yüksek seviyede olduğundan emin olunması önerilir. Bir kaynak çok fazla hata veriyorsa indeksleme sürecini yavaşlatabileceğinden hata logları kontrol edilmelidir. Başka bir görevin (örneğin antivirüs, yedekleme, büyük veri kopyası) sistem kaynaklarını tüketip tüketmediği incelenmelidir. Çok fazla tanıyıcı aktifse analiz süresini artırabileceğinden gereksiz tanıyıcılar devre dışı bırakılmalıdır. Yavaş diskler indeksleme sürecini ciddi ölçüde yavaşlattığından, indeks dosyalarının bir kısmının SSD gibi hızlı bir diske taşınması önerilir. Daha hızlı ve kısmi sonuçlar elde etmek için, özellikle büyük veri havuzları için, örnekleme (Sampling) modu kullanılabilir. Bu kontrolleri uygulayarak GEODI performansını maksimize edilebilir.
+
+GEODI gibi güçlü bir keşif motorunda yüksek CPU kullanımı beklenen bir durumdur. Ancak GEODI, sistemin uzun süre yanıt veremez duruma gelmesine yol açmaz. GEODI her zaman bir işlemci çekirdeğini serbest bırakır, böylece diğer sistem işlemleri etkilenmez.
+
+Yüksek CPU kullanımı gözlemlendiğinde, durumun geçici olup olmadığını anlamak için bir süre beklemek ve kullanımın düşüp düşmediğini gözlemlemek önerilir. Eğer sürekli yüksek kullanım varsa, indeksleme hızını azaltmak (örneğin 5'ten 3'e) denenebilir. OCR veya FacePro kullanılıyorsa, bu modüller yüksek işlem gücü gerektirdiğinden indeksleme hızının düşürülmesi veya işlemin tamamlanması beklenmelidir. Bu yaklaşım, sistem performansını dengelerken GEODI'nin indeksleme gücünden faydalanmaya devam etmeyi sağlar.
+
+GEODI, veri setini mümkün olduğunca etkili şekilde indekslemek için verileri sıkıştırarak çalışır. İndeks boyutunun, veri kümesinin yaklaşık %10 ila %20'si kadar olması beklenir. Eğer indeks boyutu beklenenden büyük görünüyorsa, olası nedenler ve çözümler gözden geçirilmelidir.
+
+İndeks boyutunun yüksek olması durumunda olası nedenler ve çözümler mevcuttur. Benzerlik (Similarity) indeksleme açıksa, bu özellik içerik kopyalarını tespit etmek için ek veri oluşturduğundan gerekmediğinde devre dışı bırakılabilir. Sunucu logları veya büyük CSV dosyaları gibi bilgi yüklü dosyalar çok fazla içerik barındırabileceğinden, bu tür dosyaları dışlamak için IgnoreFileTypes veya ProtectRules kullanılabilir. ZIP, RAR gibi arşivlerin içeriği çok sayıda belge barındırabileceğinden, büyük arşivler için boyut sınırlamaları tanımlanması önerilir. Doğru filtreleme ve yapılandırma ile indeks boyutu kontrol altında tutulabilir ve sistem performansı artırılabilir.
+
+GEODI, indeksleme süreci boyunca hata logları üretir. Bu logların çoğu veri içeriğine bağlıdır ve genellikle uyarı veya bilgilendirme niteliğindedir. Gerçek sistem hataları oluşursa, GEODI bu konuda açıkça bilgilendirme yapar.
+
+Sık karşılaşılan hata türleri arasında bozuk dosyalar veya desteklenmeyen formatlar nedeniyle okunamayan içerikler, şifre korumalı PDF veya Office belgeleri gibi şifreli dosyalar ve yetki eksikliği nedeniyle erişilemeyen klasör veya dosyalar bulunur. Bu tür içerikler indekslenmez ancak loglarda belirtilir. GEODI bu içeriklere ünlem işareti (!) ile işaret koyar ve gerekirse raporlamaya dahil eder.
+
+GEODI'nin gösterdiği içerik sayısı, sadece klasör ve dosyaları değil, aynı zamanda ZIP, RAR gibi sıkıştırılmış dosyaları ve e-posta eklerindeki içerikleri de kapsar. Bu nedenle GEODI'nin içerik sayısı, dosya sisteminde görülen sayılardan farklı olabilir ve bu durum normaldir.
+
+GEODI içerik sayısının dosya sistemi sayısıyla eşleşmemesinin diğer olası nedenleri arasında ignore listelerinde olan dosya türlerinin sayıya dahil edilmemesi ve şifreli, bozuk veya erişilemeyen içeriklerin yalnızca loglara yansıtılması, sayımda yer almaması bulunur. Bunların dışında GEODI, erişebildiği tüm verileri kapsar ve indeksler.

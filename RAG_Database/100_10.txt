@@ -1,0 +1,1 @@
+The provided text asks whether TLS 1.0-1.1 and SSL 3.0 can be disabled using 100 GEODI Configuration settings. The text explicitly states that there is no answer to this question.

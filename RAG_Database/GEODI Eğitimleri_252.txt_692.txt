@@ -1,0 +1,9 @@
+GEODI, Ofis ve Sahada çalışanların işlerini kolaylaştırmak için tasarlanmıştır. GEODI ile bilgiye ulaşım hızlanır ve paylaşım kolaylaşır. Kullanımı kolay olduğu için çok kısa bir kullanıcı eğitimi sonrası hemen kullanmaya başlanır ve kullandıkça daha da kolaylaşır.
+
+GEODI için Kullanıcı Eğitimleri mevcuttur. Bu eğitimler arasında GEODI 101 - Temel Kullanıcı Eğitimi, GEODI 102 - Sorgu Deyimleri, GEODI 121 - Sınıflama araçları Kullanıcı Eğitimi ve GEODI 131 - Discovery Keşif Paneli bulunmaktadır.
+
+GEODI Kurulum Eğitimleri de sunulmaktadır. Bu eğitimlere katılacakların Windows sunucular, IIS, ağ ve güvenlik duvarları hakkında yeterli bilgiye sahip olmaları beklenir. Kurulum eğitimleri arasında GEODI 301 - GEODI ve Modülleri Kurulumu, GEODI 311 - Desktop Explorer (GDE) Kurulumu, GEODI 315 - Sınıflama Araçlarının Uç Bilgisayarlara Kurulumu ve GEODI 316 - e-Posta Sınıflama Araçlarının Kurulumu yer alır.
+
+Sistem Yöneticileri Eğitimleri kapsamında katılımcılar GEODI sunucuların yönetimini öğrenirler. Sistem yöneticilerinin bu eğitimlere katılmadan önce kullanıcı eğitimlerini almış olmaları beklenir. Bu eğitimler GEODI 501 - Yönetim Sayfası, GEODI 504 - Kullanıcı ve Yetki Yönetimi, GEODI 505 - Proje Sihirbazı, GEODI 510 - Sistemin İzlenmesi ve Sorun Giderme ile GEODI 520 - Sınıflama Modülü Konfigürasyonunu içerir.
+
+GEODI ve GIS eğitimleri de sunulmaktadır. Bu kategori altında GEODI 110 - GEODI ile Kurumsal ve Coğrafi Arşiv eğitimi bulunmaktadır.

@@ -1,0 +1,3 @@
+Versiyonlar, GEODI kullanıcıları için önemli fayda sağlayan bir özelliktir. Versiyonları göstermeyi kapatmanın genel bir yöntemi bulunmamaktadır.
+
+Kullanıcılar, 'Ver:last' sorgusu ile sadece son versiyonların görünmesini sağlayabilirler.

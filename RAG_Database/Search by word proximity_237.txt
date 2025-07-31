@@ -1,0 +1,21 @@
+The "()" operator, when placed at the end of a rule, signifies the nearest discovery results based on the given words. This operator is considered a great insight tool.
+
+While search results remain unaffected when the "()" operator is used alone, it consistently impacts MAPS, KEYWORDS, and GRAPHS pages. This is because these specific pages inherently require discovery results.
+
+On the MAP page, using "Accident()" instructs the system to display places that are near the word "Accident".
+
+The phrase “Accident() Insurance” is used to find documents that contain both "Accident" and "Insurance", with the condition that these words should be close to each other within the document.
+
+Similarly, "Accident() Crash()" means that the words "accident" and "crash" should be near to each other. This application of the operator serves to narrow the search results.
+
+When the "()" operator is utilized on the keyword page, only related words are retained in the results. This method can be used to find places or people associated with accidents.
+
+The default distance for the proximity rule is set to 10.
+
+It is possible to override the default distance setting.
+
+When using the proximity rule, all specified words should be within a certain distance of each other. This differs from a phrase like “Accident Crash,” which specifically requires each word to be side by side.
+
+The proximity rule allows for the use of the asterisk (*) or tilde (~) operators in conjunction with it.
+
+The proximity rule is designed to work with other features.

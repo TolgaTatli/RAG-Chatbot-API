@@ -1,0 +1,3 @@
+Basex uzantılı dosyalar için halihazırda bir okuyucu bulunmamaktadır. Ancak, bir okuyucu mevcut olsaydı, GDE bu dosyaları destekleyecektir.
+
+Bir dosya için okuma ve keşif desteği GDE'den önce gelir. Desteklenmesi istenen dosyalar için örnek ve beklenen sonuçlar iletilirse, gerekli geliştirmeler değerlendirmeye alınabilir.

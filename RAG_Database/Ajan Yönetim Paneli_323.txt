@@ -1,0 +1,9 @@
+GEODI çözümleri için PC keşfi amacıyla GEODI Desktop Explorer (GDE) ve sınıflama amaçlı çeşitli Classifier ajanları çalışmaktadır. Bu ajanlar politikaları GEODI’den alır ve sonuçları yine GEODI’ye bildirirler.
+
+GEODI, tüm ajanları tek bir panelde sunar. Bu panelde ajan versiyonları, veri gönderme durumu ve pek çok diğer bilgi yer alır. Panel, IT ekiplerinin işlerini kolaylaştırmak için tasarlanmıştır ve erişim sadece sistem yöneticilerine açıktır.
+
+Ajan Yönetim Paneli, standart Classifier veya GDE kurulumu ile hazır olarak gelir. Kullanıcılar dilerlerse tasarladıkları paneller içine “Client Widget” ekleyerek de bu paneli kullanabilirler.
+
+Bu panel aracılığıyla toplam GEODI Client sayısı görüntülenebilir. Panelin raporu alınabilir veya yazdırma ikonu kullanılarak fiziki bir doküman haline getirilebilir. Panel, Client Makine bilgilerini sunar; bunlar arasında işletim sistemi sürümleri (Windows, MacOS, Linux ve Pardus), ajan türleri (GDE, GDE Service, Desktop Classifier, Office Classifier gibi) ve ajan versiyonları bulunur. GDE Ajanları için son veri gönderme zamanı ve sınıflama ajanları için son sınıflama aksiyonu zamanı da izlenebilir. Paneldeki sağ üstteki bar üzerinden iletişim zamanlarına göre filtreler (Son 1 Saat İçinde, Son 1 Gün İçinde, 1 Günden Eski, 7 Günden Eski, 30 Günden Eski, Veri Olmayanlar) eklenerek ajanların durumu incelenebilir. Uç nokta bilgisayara ait IP ve Port bilgileri ile bilgisayar adı da mevcuttur. Sınıflama yapılan Client için Shell/Add-In üzerinden yapılma durumları izlenebilir ve GDE ile gelen içerik sayısı ve içerikler görüntülenebilir.
+
+Eklenen ajanlar hiçbir zaman silinmezler. Her bir ajan bağlantı kurdukça ajan listesi güncellenecektir.

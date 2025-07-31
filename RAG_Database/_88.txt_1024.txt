@@ -1,0 +1,5 @@
+Son kullanıcıların hatalı sınıflandırma durumlarını tespit edilmesi mümkündür. Bu analiz yapılabilir.
+
+GEODI logları, kullanıcının verdiği değeri ve otomatik sınıflama olsaydı ne olacağı değerini içermektedir.
+
+CSV veya VT loglarda kritik farklar sorgulanarak istenilen analiz yapılabilir. Bu analiz Excel, SQL veya PowerBI gibi araçlar kullanılarak gerçekleştirilebilir.

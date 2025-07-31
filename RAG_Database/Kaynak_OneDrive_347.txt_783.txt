@@ -1,0 +1,3 @@
+OneDrive dizinleri, Windows dizinleri gibi indekslenir ve keşfedilir. Dosya ihmal kuralları geçerlidir.
+
+Bağlantı için gereken şartlar arasında, minimumda salt okunur yetkisi olan geçerli bir OneDrive hesabı bulunmaktadır.

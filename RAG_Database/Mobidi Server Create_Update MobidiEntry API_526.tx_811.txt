@@ -1,0 +1,15 @@
+A token is required to use this function. This service can be used with any client that is capable of calling REST APIs and parsing JSON results.
+
+Under the "Query" and "Description" sections, it is stated that this service can be used to update a Mobidi record, referred to as a MobidiEntry, or to create a new Mobidi record.
+
+For information on all functions, including their parameter and response types, users should visit the technical page of MobidiQueryManagerHandler.
+
+The request URL for this service is structured as `[MOBIDISERVERURL]/MobidiQueryManagerHandler?op=EditMobidiEntry&entry=[MobidiEntry_JSON]&UserSession=[TOKEN]`. The `entry` parameter expects a MobidiEntry object in JSON format. The service supports both GET and POST HTTP methods.
+
+Possible error types include 401 for Unauthorized access or Access denied, 403 for Forbidden, 511 for Network Authentication Required, and 501 for Server Error.
+
+The result of the service call is a MobidiEntry object, which represents the record that has been either created or updated.
+
+A request example demonstrates the creation of a `myEntry` object with `record` and `attributes` fields, and its use in a `$.post` call to `[MOBIDIServerUrl]/EditMobidiEntry?op=Query` with a callback function.
+
+Sample applications are available, including a Javascript Sample.

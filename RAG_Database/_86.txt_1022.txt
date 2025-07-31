@@ -1,0 +1,1 @@
+It is possible for Dotnet Core 7.0 GDE to be embedded within its installation on Linux servers.

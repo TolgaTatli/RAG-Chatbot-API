@@ -1,0 +1,5 @@
+The CRM provides forms and panels for customer relations. It facilitates the recording and tracking of customer information, which can then be analyzed through reports. This system is associated with various business functions such as stock management, sales, general business operations, commercial activities, financial management, accounting, follow-up processes, offers, orders, and account management.
+
+The CRM system includes specific data fields or categories such as Name, Note, Adress, Telephone, E-Mail, Authorized Person, Access Channel, Customer Name, Interview Notes, Next Meeting Time, Visit Result, Sales, Products, and Price.
+
+The version of the CRM is 1.0.21106.33.

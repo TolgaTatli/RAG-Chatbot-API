@@ -1,0 +1,65 @@
+This page contains the installation link, requirements, settings, and deployment stages for discovery, classification, or other topics.
+
+To install GEODI, download the setup file and run it. GEODI can operate as a Windows service or as an EXE during a log-on user session. For uninterrupted service, selecting Windows Service is required.
+
+During installation, the specified path will be used to store projects, indexes, logs, and certain configuration files. It is essential to ensure that the service user running GEODI has full access to this directory. The default path is not specified in this text. The folder can be changed in SystemSettings.json, but old folder content must be moved.
+
+A license code is required during setup. The setup automatically downloads and installs modules included in the license from DECE-STORE. If access to DECE-STORE (service.decesoftware.com) is unavailable, an offline installation is necessary, which is more complicated. It is suggested to follow the standard installation by allowing limited access to DECE-STORE.
+
+After installation, the GEODI Manager Page opens at http://127.0.0.1:3323/manager. This address is locally available, but an address reachable from the endpoints for Classification and GDE Discovery Agents must be defined.
+
+The next step involves loading necessary discovery scopes or templates from DECE-STORE. Modules can be quickly found by searching by country, regulation, or business need.
+
+Once a template is installed, GEODI automatically updates it to keep discovery and compliance configurations current. In offline installations, updates to DECE-STORE templates must be performed manually. However, providing limited outbound access to DECE-STORE is sufficient for automatic updates without requiring full internet access, ensuring up-to-date discovery rules and compliance templates in secure or isolated environments.
+
+For Classification and Agent PC Discovery projects, the GEODI address must be secure and accessible to clients. To ensure this, specific SSL Certificate settings must be made in GEODI before agent deployments.
+
+The SSL definitions should be in a file within the GEODI installation directory, including "AppPort":443, "NoSSLPort":80, "ForceHttpsRedirect": true, and "SSLLocalCertificateSerial":"".
+
+To obtain the certificate serial number, run the Manage User Certificates application. The serial number is located in the properties/details tab under the Personal directory. If a *.pfx file is available, double-click it to install it.
+
+In cases where certificates are managed with a load balancer, no additional definitions are required on the GEODI side.
+
+To install GEODI as a continuous Windows service after initial installation, run the GEODI.WindowsServiceInstall.bat file as an administrator. Windows will prompt for an administrator username and password.
+
+The user account for the service is expected to have access permissions for directories and other Windows sources that GEODI will index. If the user lacks access, authorized users must be added to GEODI. To uninstall the service, run GEODI.WindowsServiceUnInstall.bat in the same directory.
+
+The GEODI service will appear as “GEODI.WindowsService” in the service list and can be started or stopped as needed. While the service is starting, GEODI.exe must be closed. GEODI.exe can be run after the service starts, and it will automatically connect with the service, which is useful for rare cases requiring the Windows Form interface.
+
+If GEODI sources include a mapped directory or for other startup-related work, the necessary *.bat file must be placed in the GEODI → Settings/BatchFiles/Startup directory.
+
+For a GEODI software update, running the "update.bat" command that comes with the installation as an administrator is sufficient. All necessary operations will be performed on a running system. The "update.bat" command can also be configured as a scheduled task with an authorized user.
+
+Updates for PC Discovery (GDE) and Classification Agents are fully automatic. GEODI modules receive updates more frequently than the main GEODI version. To update modules only, UpdateModules.bat can be run.
+
+GEODI sends email notifications for features such as alerts and scheduled reports to predefined users or those who request them. These emails are valuable for monitoring system activity and health.
+
+By default, emails are sent using DECE servers. In offline environments or for customized email settings, options provided on the GEODI Automated Notifications & Email Settings page should be configured.
+
+To update a license, run LicenseUpdate.bat to open the dialog. If GEODI needs to be moved to another machine, the license should be deactivated and then reactivated on the new machine. New license keys should also be applied on the same dialog, and stopping the service is not required.
+
+Detailed information about GEODI logs can be found on the GEODI Logs page. For SIEM integration, configure the SIEM system to monitor the log directories specified on that page, as no additional connectors or agents are required. This setup enables real-time monitoring of system activity, security events, and action traces directly from GEODI.
+
+Keeping GEODI and Modules up to date is beneficial because they are constantly developed, leading to better performance, more accurate discovery, higher speed, less dependency on system sources, and more features for both users and administrators. Updates are released monthly, and following them is suggested. Update information can be found on the GEODI Download webpage.
+
+No precautions are needed for Windows System updates, as GEODI will automatically stop and restart its service when the system starts, requiring no manual intervention. Index Changed Content and Scheduled Index Backup are active by default, preventing data loss during unexpected shutdowns like manual service termination or power outages, provided these settings are not changed.
+
+To update the license, apply the method explained on the https://decesw.atlassian.net/wiki/spaces/geodien/pages/3968073736/GEODI+Server+Installation#License-Update page, then restart the service.
+
+It is possible to install more than one GEODI for Discovery. Each GEODI can discover the same or different data sources, with management and reporting centralized through the Master GEODI.
+
+A redundant configuration for high availability can be set up, and GEODI also supports an active-active configuration.
+
+If GEODI is not starting, check the license for expiration, especially if it's a trial. A file may not be a valid *.json file, or there may be an invalid value in a file. The disk might be full. Engine and app errors under a directory should be checked.
+
+If the GEODI service is not starting, verify if the service user is still valid and has sufficient permissions, as the password may have changed. Service users must have at least read/write/delete permissions in GeodiDataFolder.
+
+If access errors appear on index files when GEODI starts, check if the user can access GeodiDataFolder in either .exe or service mode. Ensure other processes are not using the files. This situation can occur when different projects back up to the same target directory; reverting to default settings or checking projects is advised.
+
+If modules are not getting updated, the server must have access to two unspecified locations. If access is unavailable, an offline update procedure can be followed.
+
+If the license code is invalid, the license may be expired. If the error occurs during the first activation phase, there might be an issue accessing DECE servers (DECE-STORE), potentially requiring an offline installation.
+
+If the GeodiAdmin password is forgotten, delete a directory to return the system to its initial state. As a precaution, it is suggested to create a backup user with “Edit Permission“ authorization.
+
+If there is no space left for indexes, the index location can be changed using settings found on the https://decesw.atlassian.net/wiki/spaces/geodien/pages/3968073736/GEODI+Server+Installation#GEODI-AppDataFolder page.

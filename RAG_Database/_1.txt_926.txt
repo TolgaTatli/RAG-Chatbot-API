@@ -1,0 +1,1 @@
+It is possible to localize GEODI for the Serbian Market. This localization includes adding the Serbian language and the Cyrillic alphabet as supported languages. The response indicates a willingness to adapt to local regulations and needs.

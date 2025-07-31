@@ -1,0 +1,23 @@
+Many professionals, such as lawyers, prosecutors, judges, inspectors, or consultants, face the challenge of mastering thousands of documents and folders, especially when starting a new job or addressing crisis situations. Information requests for old projects also present difficulties in understanding details and addressing problems efficiently.
+
+Finding specific information like company names, CAD drawings, or progress reports within vast amounts of papers is time-consuming. It is difficult to locate desired information in dusty archives, hard drives, or hundreds of CDs, especially when expected to examine everything and get results in a short period.
+
+GEODI is presented as a solution for exploring thousands or even millions of documents. It helps users address questions such as identifying individuals, firms, contracts, reports, their location, country, and history, which are often difficult to start searching for.
+
+GEODI is a software that reads and evaluates all available data using 'Natural Language Processing' and 'Artificial Intelligence' techniques.
+
+GEODI can find various types of information, including unexpected persons, bank account numbers, part numbers used in CAD drawings, and the individuals who created those drawings.
+
+GEODI allows users to view documents on a map, which clarifies relationships between persons, places, dates, and locations. This feature automatically displays documents, CAD drawings, or entitlements associated with a specific site or kilometer.
+
+GEODI can identify the language of documents, including English, German, Italian, and Chinese, enabling users to determine which documents may require translation before work begins.
+
+GEODI scans content in numerous formats, such as Word, Excel, PowerPoint, PDF, e-mail, Photos, Autocad and Netcad files, databases from different software, web pages, and Twitter accounts. It extracts data including ID numbers, Parseller, Kilometres, Locations, Exposure Numbers, Bank Account Numbers, Dates, Provinces, Regions, Countries, Credit Card Numbers, Company Names, Schools, Parties, and Part Numbers.
+
+GEODI software can run on a personal computer or server, ensuring that user data remains local and does not leave the system. Users can take notes on any content, which allows navigation to specific pages or positions within CAD files. The authority to access data can be determined based on individuals and content.
+
+GEODI is capable of completing all its tasks within a few hours.
+
+GEODI provides automatically extracted data for user convenience. It allows searching with desired words to find content, regardless of whether it is an Office document, CAD document, or database. Note-taking on content is a key feature, and these notes are included in the content, appearing in subsequent searches.
+
+GEODI is simple to install and operates automatically due to its use of AI and NLP. It possesses an adaptor and intelligence to understand location information, regardless of content diversity.

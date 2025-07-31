@@ -1,0 +1,27 @@
+The Standard Query API is a service that allows all features to be used and returns objects matching a query. An AdvancedQuery Token is required and must be received by generating a GEODI Token. For those developing an end-user interface, the "Displaying search results with templates" page is considered more useful.
+
+The Query definition for the Standard Query API states that it returns a list of documents matching the search result, enabling users to search within documents in a GEODI Workspace. All current requests and results for this service are accessible via GeodiJSONService.
+
+Requests to the Standard Query API are structured as `[GEODIURL]/GeodiJSONService?op=getDocuments&wsName=[WSNAME]&query=[StrorageManagerQueryOptions_JSON]&UserSession=[TOKEN]`. The `wsName` parameter is a string specifying the workspace name. The `query` parameter is a JSON object where the `SearchString` property, for example `{ SearchString: "query" }`, is sufficient for all searches. Rules for query text syntax are available under "GEODI Queries".
+
+Optional parameters for the Standard Query API include `SummaryCount`, an integer that, if greater than 0, returns a specified number of summaries, with summary length configurable using `query.GetSummaryType` parameters. The `RunUpdateClientData` boolean parameter is used to retrieve additional information from tools such as TextPro and FacePro.
+
+The Standard Query API supports both GET and POST HTTP methods. Expected errors include 401 Unauthorized access / Access denied, 403 Forbidden, 511 Network Authentication Required, and 501 Server Error. The current result object can be accessed by clicking a provided link.
+
+Example applications for the Standard Query API include a GeodiQueryJS Sample, an AngularJs Sample, and a Vue.js Sample. Users can click to run the sample code for these applications, and the GeodiQueryJS Sample also allows for template editing.
+
+The Simple Query service provides inputs and outputs containing simplified, basic information, which is sufficient for most applications. Generating a GEODI Token is needed for its use. If an end-user interface is being prepared, the "Displaying search results with templates" page will be more useful.
+
+The Simple Query service's definition states that it returns a list of documents matching the search result, allowing users to search from documents within a GEODI Workspace. Requests are made using the URL format `[GEODIURL]/QueryHandler?op=Query&wsName=[WSNAME]&q=[SearchString]&startIndex=[StartIndex]&endIndex=[EndIndex]&options=[OptionsJSON]&UserSession=[TOKEN]`. The `wsName` parameter is a string for the workspace name, and `q` is a string for the query text. Query text syntax rules are detailed under "GEODI Queries".
+
+Optional parameters for the Simple Query service include `StartIndex` and `EndIndex`, both optional integers with a limit of 0, which define the starting and ending indices for query results. The `options` parameter allows for additional changes to the query result, such as `ContentIDFilter` (an integer array) to filter content, `Envelope` (an integer array for BBOX geometry) to return words within specified boundaries, `LayerIdFilter` (an integer array) to filter words by recognizer IDs, and `KeywordIdFilter` (an integer array) to filter words by IDs.
+
+Within the `options` parameter for the Simple Query service, `CalculateCounts` (a true/false boolean) can be set to true to calculate the `NumberOfOccurences` field in the returned result. Similarly, `SummaryFill` (a true/false boolean) can be set to true to return summary information in the `Summary` field of the results.
+
+The Simple Query service supports both GET and POST HTTP methods. Expected errors include 401 Unauthorized access / Access denied, 403 Forbidden, 511 Network Authentication Required, and 501 Server Error.
+
+The return value for the Simple Query service is a JSON array of objects, each containing `ContentID` (the ID of the content) and `Content` information. `Content` includes `DisplayName` (e.g., filename), `EnumeratorID` (the name of the enumerator providing content), `ContentType` (type/extension), `HasViewer` (whether a viewer exists), `DisableDownload` (whether download is prevented), and `HasNote` (whether a note exists). A `Summary` object, containing `SummaryID` and `Text`, is returned if the `SummaryFill` field in options is true.
+
+The return value for the Simple Query service also includes an `Attributes` object for extra content information. This object contains `PDisplayName` (the display name of parent content if it exists), `PId` (the ID of parent content if it exists), and `PcontentType` (the type of parent content if it exists). The `NumberOfOccurences` field indicates how many times the word has occurred.
+
+Example applications for the Simple Query service include .Net WinForm (C#), Java, Javascript Sample, AngularJs Sample, and Vue.js Sample.

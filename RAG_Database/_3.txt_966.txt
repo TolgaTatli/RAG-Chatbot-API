@@ -1,0 +1,3 @@
+Data discovery from Solaris OS is possible. This capability is contingent upon Solaris sharing data to a Windows server.
+
+For Linux machines, GDE may be used.

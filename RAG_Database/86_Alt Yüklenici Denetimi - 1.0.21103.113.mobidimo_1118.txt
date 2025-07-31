@@ -1,0 +1,5 @@
+The provided text includes definitions for several terms. These terms and their English equivalents are: "İşyeri" as "Workplace", "Açıklama" as "Note", "İşyeri Büyüklüğü" as "Size of Workplace", "İşin Başlama Tarihi" as "Starting Date Of The Work", "İşin Bitiş Tarihi" as "Ending Date Of The Work", "İlgili Kişi" as "Related Person", "İşyeri Kontrol Soruları" as "Workplace Control Questions", and "İşyeri Kontrol Durumu" as "Workplace Control Status".
+
+The text defines "Alt Yüklenici Denetimi" as "Sub Contractor Management". This management approach suggests that subcontractors should check themselves. It also advises that visits should only be conducted when needed, and that costs can be reduced while increasing control frequencies. Associated hashtags are #subcontractor, #bidder, #sitework, and #construction.
+
+The text includes a version identifier: "ver 1.0.21103.113".

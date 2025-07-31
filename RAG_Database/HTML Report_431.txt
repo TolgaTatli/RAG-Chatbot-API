@@ -1,0 +1,7 @@
+Special messages can be given if no data is found in the Repeater tag when using panel objects known by Repeater. An example of such a message is "No content found." This functionality is relevant to "MyReport.html" and "Your documents".
+
+The use of nested control is mentioned in relation to "MyReport.html" and "Your documents". This context also includes "Similar Documents".
+
+The "Control visible condition" is a feature available for all "dcc elements". These elements possess a macro visible "visible" feature, which enables the definition of rules within the representation. Unlike Javascript rule processing, elements that do not adhere to these rules are not transmitted to the client, thereby preventing potential deficits. This feature is associated with "MyReport.html" and "Your Documents".
+
+A project can be edited. The content of this project may have a crawl error, indicated by [=d.OutputGeodiContent.ScanError].

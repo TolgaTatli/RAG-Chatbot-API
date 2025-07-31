@@ -1,0 +1,7 @@
+GEODI and MOBIDI offer many possibilities for developers.
+
+Both GEODI and MOBIDI software consist of two essential layers: an Engine and HTML5/JSON/Javascript interfaces.
+
+Developers can either create an entirely different interface or make Engine calls from the software they developed.
+
+Replacing the existing GEODI interfaces with custom CSS, HTML5, and JavaScript is also possible. Developers can either edit the whole interface or simply change a feature on the corresponding page.

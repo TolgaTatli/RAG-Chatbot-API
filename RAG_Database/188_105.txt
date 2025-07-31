@@ -1,0 +1,3 @@
+It is possible to hide the "Open in Browser" button on the Content Viewers Page. A plugin developed for this purpose is available in DECE-STORE, and it can be installed.
+
+GEODI supports discovery in all email servers that support IMAP or POP3, excluding the services listed in the E-Mail source. This applies to services such as GEODI Postfix E-Mail.

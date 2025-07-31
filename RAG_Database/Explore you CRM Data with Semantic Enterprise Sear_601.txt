@@ -1,0 +1,21 @@
+AWS S3 Bucket is supported.
+
+GEODI analyzes CRM Data and reveals hidden values in data through Data Discovery, Data Masking, Data Classification, and Insight capabilities.
+
+GEODI aims to cover all assets with over 200 data adapters to enable more effective and efficient Search, Data Discovery, Data Classification, Data Masking, and analysis.
+
+DECE Software has added Microsoft Dynamics CRM and Zoho CRM as new adapters. GEODI's Low-Code web service integration feature allows for regular indexing of Users, Organizations, opportunities, and proposes, which paves the way for semantic enterprise search and Data Discovery.
+
+CRM records can be opened where they are located, meaning records in Zoho CRM open within Zoho CRM.
+
+GEODI and its capabilities can be used for various purposes, including GDPR Compliance, combining other software used within an organization, and utilizing GEODI's features for archived and file-based data.
+
+GEODI's integrated map capability allows users to view customers or visits on a map and identify concentrated areas using a heat map. This map can provide results not extractable from CRM.
+
+GEODI’s analysis and Insights capabilities are designed to unlock the hidden value of data, complementing the map's dimension.
+
+To obtain more information, an appointment can be made.
+
+GEODI's capabilities include Search, Discover, Mask, Encrypt, and Classify, which collectively protect data.
+
+Topics of interest include "Enhancing DORA Compliance with GEODI: A Unified Approach to Data Security for Financial Firms" (April 12, 2024, 3 Min.), "Revolutionizing Data Discovery with GEODI Q" (November 20, 2024, 2 Min.), "Build your AI Assistant with GEODI" (November 19, 2024, 2 Min.), "Now it is time to leave manual classification and let AI do it." (November 17, 2024, 2 Min.), "How do you maintain your Data Security Posture Management, DSPM?" (October 1, 2024, 4 Min.), and "Palestine Investment Bank Manages Security Posture with GEODI" (August 28, 2024, 2 Min.).

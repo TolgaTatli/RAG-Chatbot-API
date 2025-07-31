@@ -1,0 +1,1 @@
+The setting that allows 155 GDE agents to scan unknown extensions as if they were text files during discovery is functional.

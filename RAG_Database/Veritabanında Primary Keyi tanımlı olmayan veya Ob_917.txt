@@ -1,0 +1,3 @@
+It is possible to index tables in a database that do not have a Primary Key defined or do not have a value like an Object ID. This restriction can be removed. However, re-indexing tables that lack a Primary Key or Object ID will result in a new version being created every time.
+
+It is possible to index tables in a database that do not have a Primary Key defined or do not have a value like an Object ID. This restriction can be removed. However, re-indexing tables that lack a Primary Key or Object ID will result in a new version being created every time.

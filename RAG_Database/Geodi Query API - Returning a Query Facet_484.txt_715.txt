@@ -1,0 +1,19 @@
+The GetFacet operation is defined as returning summary information of documents matching a query result. Generating a Geodi Token is needed for this operation.
+
+The GetFacet operation can be requested via the URL [GEODIURL]/QueryHandler?op=GetFacet&q=[SearchString]&options=[OptionsJSON]&UserSession=[TOKEN]. This operation supports both GET and POST HTTP methods.
+
+Required parameters for the GetFacet request include wsName, a string specifying the name of the workspace to search inside, and q, a string representing the query text. For query text syntax rules, users are directed to GEODI Queries.
+
+Optional parameters for the GetFacet operation are provided within the options JSON. These include ContentIDFilter (an array of integers) to filter content, Envelope (an array of integers [LonMin,LatMin,LonMax,LatMax]) to return words within specified BBOX geometry boundaries, LayerIdFilter (an array of integers) to filter words by recognizer IDs, and KeywordIdFilter (an array of integers) to filter words by keyword IDs.
+
+Expected errors for the GetFacet operation include HTTP status codes 401 Unauthorized access / Access denied, 403 Forbidden, 511 Network Authentication Required, and 501 Server Error.
+
+The GetFacet operation returns a JSON object as its resulting value. This object contains fields such as LastWSScanKey, TotalDocument, TotalDeletedDocument, TotalGeodiKeyword, TotalHasNote, FoundDocument, FoundGeodiKeyword, FoundDocLabel, FoundHasGeo, DocForEnumarator, DocForRecongizer, and DocForContentType.
+
+In the GetFacet result, LastWSScanKey provides the key to the latest scan. TotalDocument indicates the total number of documents in the workspace, while TotalDeletedDocument shows the total number of documents deleted. TotalGeodiKeyword represents the number of words found with the search, and TotalHasNote is the number of contents that have notes.
+
+Additional fields in the GetFacet result include FoundDocument, which is the number of found documents matching the query, and FoundGeodiKeyword, the number of found words matching the keyword. FoundHasGeo indicates the number of found contents that have geometry. DocForEnumerator provides enumerator ID and number pairs, detailing which enumerator provides content matching query results. DocForRecognizer gives identifier ID and number pairs, showing which identifier recognizes the number of contents matching the query result. DocForContentType expresses content-type key-value and number pairs, indicating how many content of which type.
+
+An example request for the GetFacet operation is [GEODIURL]/QueryHandler?op=GetFacet&wsName=PROJE&wsName=PROJE&q=ankara. The corresponding example result shows a LastWSScanKey of "20.01.2017 00:00:00", TotalDocument as 5, TotalDeletedDocument as 0, TotalGeodiKeyword as 400, TotalHasNote as 0, FoundDocument as 4, FoundGeodiKeyword as 0, FoundDocLabel as 0, and FoundHasGeo as 0. The example also includes DocForEnumarator as {"-1234":4}, DocForRecongizer as {"-2435":4,"-3456":4}, and DocForContentType as {"filecontent:.doc":2,"filecontent:.xls":1,"filecontent:.pdf":1}.
+
+Example applications that utilize the GetFacet operation include .Net WinForm (C#), Java, and HTML - Javascript.

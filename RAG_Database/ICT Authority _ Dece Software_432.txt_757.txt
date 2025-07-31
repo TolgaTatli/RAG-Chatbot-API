@@ -1,0 +1,15 @@
+Dece Software provides various services and resources, including Contact Us, Support, Live Projects, Need Analysis, Solutions, Search, Discover, Mask, Classify, and the GEODI Platform. Additional resources cover Company information, Blogs, Bulletins, Success Stories, Webinars, Support & Technical Docs, Developer Resources, Technology, Partners, and References.
+
+Dece Software's references include the Croatia Ministry of Agriculture, Vakıfbank, National Budget Office of Nigeria, Ministry of Energy and Natural Resources, Saudi Finance Company, Al Tijaria, Topnet, National Finance of Omman, Palestine Investment Bank, Vakıf Katılım, Iron Mountain, Ziraat Katılım, Verifone, Green Crescent, Kahve Dünyası, Gelecek Varlık, ICT Authority, Ministry of Trade, Carrefoursa, Teknosa, Istanbul Chamber of Industry, Koton, Turkey Coal Enterprises, Unifree Duty Free, The North Marmara Motorway, and Türk Nippon Insurance. These references span the Private Sector, State Agencies, and Municipalities & SPA.
+
+The Information and Communication Technologies Authority utilizes GEODI for its Data Discovery and Data Classification project. This project is undertaken to ensure GDPR compliance and Data Protection.
+
+GEODI Semantic Discovery Tools are designed to scan millions of documents from various sources, including file folders, databases, PCs, and E-Mails. GEODI automatically classifies these documents using pre-set rules based on Semantic Discovery, and all remediation policies are developed in accordance with the discovery results.
+
+With GEODI's search and insight capabilities, Data Protection Officers (DPOs) can quickly access and report documents containing critical and sensitive data within seconds.
+
+Key capabilities include Search, Discover, Mask, Encrypt, and Classify. The stated mission is to protect data.
+
+Available links include About-Us, Blog, Bulletins, Webinars, Integrations, Career, and Privacy Policy. Contact can be made via info@decesoftware.com.
+
+Solutions offered include Search, Discover, Mask, Classify, and GEODI. Contact options listed are Contact Us, Support, Live Projects, and Need Analysis.

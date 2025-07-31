@@ -1,0 +1,3 @@
+An application can be designed as N-Tier Architecture. It is already structured in this way.
+
+Greenplum Database can be discovered and anonymized. All Database Management Systems (VTYS) can be discovered and anonymized, provided an ODBC Driver is present.

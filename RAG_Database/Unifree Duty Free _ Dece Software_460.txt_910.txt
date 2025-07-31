@@ -1,0 +1,7 @@
+Unifree Duty Free has been a leading operator of duty-free shops since 1984, known for its commitment to service quality. The company operates duty-free shops in various locations, including Istanbul, Izmir, Ankara, Bodrum, Gazipasa, Tbilisi, Batumi, Kutaisi, Skopje, Ohrid, Tunisia, Riga, Madinah, Salalah, and Houston Airport since 2015. This extensive network presented Unifree with the challenge of managing a wide range of data sources across different countries.
+
+The diverse and scattered nature of Unifree's data made it difficult to find relevant and up-to-date information. To address these data management needs, Unifree initiated an Enterprise search project with GEODI. The implementation of GEODI provides Unifree's employees with access to a unified platform, allowing them to search for keywords, specific time intervals, document types, and document names within seconds.
+
+Data security was a critical component of the project, with GEODI ensuring that users could only access documents from their own PCs, email boxes, and authorized shared folders. GEODI's Natural Language Processing (NLP) capabilities also assist users in identifying similar and duplicate files, which further optimizes the search process.
+
+The ability to quickly locate necessary files has significantly improved Unifree's decision-making efficiency. This allows their teams to make faster, more accurate, and precise business decisions, contributing to the company's competitive edge.

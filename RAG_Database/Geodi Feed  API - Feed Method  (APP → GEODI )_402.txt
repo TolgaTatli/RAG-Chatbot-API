@@ -1,0 +1,47 @@
+The feed method enables an application to transmit information to GEODI when data or privileges change. This method functions as the opposite of the service connection method.
+
+To use the feed method, information from an authorized user with rights to add a data layer on GEODI is required. This method allows sending any amount of content at any time if the application is standing, if there are internal methods to trigger, or if a Web application is not present.
+
+The BulkFeed method forwards contents to GEODI, which then returns only status information without waiting for the call. This method is suitable for sending multiple contents, whereas the Feed method is more convenient for sending single content.
+
+A BulkFeed request uses the URL structure `[GEODIURL]/FeedHandler?op=BulkFeed&Content=[ContentJson]&UserSession=[Token]`. The `UserSession` parameter requires a feed-authorized Token obtained from the system administrator, with the Token rendering interface accessible via `[geodiurl]/API`.
+
+For BulkFeed requests, `wsName` is an optional parameter that must be passed if the provided Token is authorized to feed multiple projects. Similarly, `enumeratorID` is an optional parameter that must be passed if the provided Token is authorized to feed multiple sources (geodi enumerator). The `content` parameter is a JSON object containing content information.
+
+The BulkFeed method supports both GET and POST HTTP methods.
+
+Expected errors for the BulkFeed method include: 401 Unauthorized access / Access denied, 403 Forbidden, 511 Network Authentication Required, 501 Server Error, 470 Unsupported extension / Server configuration error, 471 Content Required, 481 This Token cannot access any workspaces, 453 wsName Required (if Token can feed multiple projects), 452 enumeratorID Required (if Token can feed multiple projects), and 480 wsname or enumeratorID is not accessible (Token does not have sufficient authority).
+
+Upon a BulkFeed call, "OK" is returned, indicating that scanning has started. If no error is received, the scan begins, and it is not necessary to check the result.
+
+An example BulkFeed request demonstrates sending multiple content items within a `Contents` array, where each item includes properties such as `ContentURL`, `DisplayName`, `ContentDate`, `ViewURL`, `Permission`, and `MetaData`.
+
+Example applications for the BulkFeed method include .Net 3.5 WebHandler (C#) and .Net WinForm (C#).
+
+The Feed method forwards content to GEODI and is more convenient for sending single content, while the BulkFeed method is suitable for sending multiple content. GEODI returns status information without waiting for the call.
+
+A Feed method request uses the URL structure `[GEODIURL]/FeedHandler?op=Feed&Content=[ContentJson]&UserSession=[Token]`. The `content` parameter is a JSON object containing content information, and it is preferred to send it by POST as the JSON can grow larger than expected.
+
+For the Feed method, the `UserSession` parameter requires a feed-authorized Token obtained from the system administrator, with the Token rendering interface accessible via `[geodiurl]/API`. `wsName` is an optional parameter that must be passed if the provided Token is authorized to feed multiple projects, and `enumeratorID` is an optional parameter that must be passed if the provided Token is authorized to feed multiple sources (geodi enumerator).
+
+The Feed method supports both GET and POST HTTP methods.
+
+Expected errors for the Feed method include: 401 Unauthorized access / Access denied, 403 Forbidden, 511 Network Authentication Required, 501 Server Error, 470 Unsupported extension / Server configuration error, 471 Content Required, 481 This Token cannot access any workspaces, 453 wsName Required (if Token can feed multiple projects), 452 enumeratorID Required (if the Token can feed multiple projects), and 480 wsname or enumeratorID is not accessible (Token does not have sufficient authority).
+
+Upon a Feed method call, "OK" is returned, indicating that scanning has started. If no error is received, the scan begins, and it is not necessary to check the result.
+
+An example Feed method request demonstrates sending a single content item as a JSON object, including properties such as `ContentURL`, `DisplayName`, `ContentDate`, `ViewURL`, and `Permission`.
+
+Example applications for the Feed method include .Net 3.5 WebHandler (C#), .Net WinForm (C#), and HTML - Javascript.
+
+Sub-content can be added to existing content in GEODI using two methods. If no authorization is defined for a child content, it inherits the rights of the parent; however, if authorization is defined, only the specified privileges are used, and it does not inherit from the parent.
+
+One method to link sub-content to earlier content is by using the `ParentContentIdOrURL` value. An example demonstrates this by defining a main document and a subsequent document that includes a `ParentContentIdOrURL` field pointing to the main document.
+
+Another method to add sub-content is by passing sub-contents of a main content in bulk using the `SubContents` object. An example illustrates this by defining a main document that contains an embedded `SubContents` array, which holds the child document's information.
+
+The BulkFeed method can be used for Web Crawl to scan a Web page and its linked pages. An example demonstrates this by specifying a `ContentURL` and `CrawlSettings` that include `DisableChangeHost` and `TotalContentCount`, along with `CopyMetaDataToSubContentTree` and `MetaData`.
+
+The BulkFeed method allows for Enumerator Manipulation, enabling changes to any property of a source without damaging the original source, which continues to work. The source must be defined and running in the GEODI project. An example shows how to specify "advancedmode" with `AdvSettings` to define `FolderNames` for a different folder scan of an attached Folder Source.
+
+If a MediaMon license is available, a Twitter search can be performed using the BulkFeed method via Enumerator Manipulation. This requires adding a working Twitter source to the GEODI project and feeding it. An example demonstrates this by setting `ContentURL` to "advancedmode" and `AdvSettings` to include `IncludeSearch` and `Queries`.

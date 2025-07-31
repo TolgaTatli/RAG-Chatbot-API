@@ -1,0 +1,1 @@
+User permissions can be easily adjusted in GEODI. This addresses how to manage the authorization part where each user sees different data on the interface.

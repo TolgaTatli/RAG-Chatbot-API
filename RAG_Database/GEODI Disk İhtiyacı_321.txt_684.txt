@@ -1,0 +1,19 @@
+GEODI Server uses disk for purposes other than installation. For data, GEODI uses and indexes data from its original location. It does not copy the data, so no additional disk space is needed for data itself.
+
+The index is a data structure necessary for GEODI to perform its search and discovery functions. The size of the index can vary significantly depending on data volume, data types, and settings.
+
+To reduce index size due to disk constraints, users can make index directories in projects located under %appdata%\Dece\geodi\workspaces into NTFS compressed folders, which typically provides over 10% gain. Another measure is to prevent the indexing of files containing a lot of text, such as Excel, CSV, or log files.
+
+Activating features like content similarity increases index size. Content summaries also occupy space; disabling them can provide up to approximately 90% gain. However, if content summaries are disabled, re-indexing from scratch is required when a new recognizer or dictionary is added.
+
+The GEODI index consists of three parts, which can be divided across different disks. This allows the first part, critical for speed, to be written to a limited SSD disk, while the others can be written to a relatively slower disk. This method does not result in overall size gain but can overcome size limitations on a single disk.
+
+The index is critical data for GEODI's operation. For uninterrupted operation, the index must be backed up at regular intervals. Sufficient space must be allocated for index backups.
+
+Logs are located under %appdata%. Logs are automatically deleted within 90 days, but they can occupy space during intensive use. Unneeded logs can be deleted.
+
+The OCR process converts scanned content into text. By default, the OCR process does not require a disk external to the index, and there is no loss in search and discovery capabilities.
+
+If scanned content is desired to become Searchable PDF (SPDF), additional disk space must be allocated for SPDFs.
+
+GEODI allows content from folders, remote PCs, social media, email, or web pages to be backed up after indexing. This ensures the content remains accessible even if it is no longer available at the source. Space must be allocated for backups.

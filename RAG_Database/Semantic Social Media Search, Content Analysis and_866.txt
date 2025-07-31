@@ -1,0 +1,11 @@
+GEODI utilizes its semantic search capability to recognize and analyze message content, such as 'thank you', 'complaint', or 'question', and then presents this information on a map.
+
+Social media consists of interactive technologies that facilitate the creation and sharing of information, ideas, interests, and other forms of expression through virtual communities and networks. While convenient, social media messages lack structure, have no control over language, and the same topic can appear in very different ways, making information processing difficult. GEODI offers a solution to these challenges with its semantic search capability.
+
+Thanks to its semantic abilities, GEODI recognizes and understands the meaning of messages from their content, allowing it to extract meaningful and useful information. For instance, GEODI can discern if messages are about a fridge or a laundry machine. After understanding the message content, GEODI forwards it to a related person or department using its notification infrastructure.
+
+GEODI’s semantic search capability works on any type of content, regardless of whether users access it from the internet, emails, or a call center. It supports various sources including Web, Emails, Facebook, Twitter, Instagram, and local data sources. This allows for the combination of different data channels, which eases business processes.
+
+Beyond understanding content, analyzing it is also important. GEODI’s panel provides insights into how many channels information originates from and specifically from which channel information was received.
+
+GEODI can create maps using geographic information extracted from content, which is useful for municipalities and energy companies that utilize such data. The source location can be anything, as messages containing a street name, suburb name, or coordinates are processed in the same manner.

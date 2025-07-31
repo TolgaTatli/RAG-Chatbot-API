@@ -1,0 +1,7 @@
+GEODI yönetim sayfası, proje oluşturma, ayarları değiştirme, yetkileri düzenleme, indexleme ve diğer ayarlara ulaşmak için kullanılan bir sayfadır. Bu eğitimde, GEODI yönetim sayfasının genel özellikleri anlatılacaktır.
+
+Bu eğitim teknik içeriklidir ve 45 dakika sürmektedir.
+
+Eğitimin kapsamı veya ön şart eğitimleri arasında GEODI Proje Sihirbazı, Zamanlanmış Görevler/Scheduled Tasks, GEODI Kullanıcı/Yetki Yönetimi, GEODI Otomatik Bilgilendirme ve E-Posta Ayarları, GEODI Ajan Yönetim Paneli, GEODI Sözlük ve Tanıyıcıları ve GEODI Haritalar bulunmaktadır.
+
+Eğitimler genel bir fikir vermeyi amaçlar ve öğrenilenlerin kullanılarak pekiştirilmesi gereklidir. Emin olunmayan veya yapılamayan konularda ekiplerden destek istenmesi önerilir. Eğitim kapsamında belirtilen bazı özellikler lisansınızda yer almayabilir.

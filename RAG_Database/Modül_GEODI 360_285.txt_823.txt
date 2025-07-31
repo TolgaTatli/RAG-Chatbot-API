@@ -1,0 +1,23 @@
+GEODI 360, basit araç içi kameralar ile toplanan videoları otomatik olarak işleyen bir GeoAI uygulamasıdır. Bu uygulama, videolardan Trafik İşaretleri ve diğer nesneleri tanıyabilir, envanter çıkarabilir. Ayrıca, videolar üzerinden manuel işaretleme ve görev atamaya izin verir.
+
+GEODI 360, kullanılan ArcGIS veya Netcad gibi yazılımlar ile uyumludur. Yol, Kanal, Baraj, Boru hattı, büyük tesisler ve kampüsler için ideal bir belgeleme ve denetim aracı olarak tanımlanır. Sahada geçirilen zamanı minimize ederek büyük tasarruf sağlar ve sahada tek tek yapılması mümkün olmayan bir kapsama alanı sunar.
+
+Verilerin toplanması, dahili GPS özellikli bir kamera veya harici GPS izi ile desteklenen herhangi bir kamera ile toplanan verilerin otomatik olarak işlenmesiyle gerçekleşir. Uyumlu cihazlar arasında Mio Mivue 330 ve Android cihazlarda kullanılabilen bir uygulama bulunmaktadır. Verilerin kolay alınması, yaygın ve görece ucuz donanım sayesinde çok sayıda görüntü alınabilmesi, aylar yerine günlük hatta saatlik görüntüler elde etmeyi mümkün kılar, bu da güncel verinin her zaman işe yaradığını belirtir.
+
+GPS izi için desteklenen formatlar arasında ".srtmap", ".nmea", ".gpx", ".gps", ".flightplan", ".fpl", ".igc" ve ".xml" bulunur.
+
+Görüntüler içinde gezinme özelliği sayesinde her bir video haritada bir iz olarak görünür. Haritada tıklanan yere ait görüntü açılır ve videoda ileri geri hareket edilebilir. Kullanıcı, bulunduğu zamana ait konuma da ulaşabilir.
+
+Eski verilere ulaşım özelliği, gezilen yere ait eski veya gelecek görüntülerin de sunulmasını sağlar. Kullanıcı, görüntüye tıklayarak ilgili zamana gidebilir.
+
+Video üzerinden konum işaretleme, GEODI'nin not alma mekanizması aracılığıyla yapılır. Video üzerine alınacak bir not ile yol bozukluğu, görüntü içine giren diğer sorunlar, aşınmış yaya geçidi veya bozuk işaret gibi durumlar işaretlenebilir. Alınan notlar GEODI haritasında bir nokta olarak görünür ve bu notlarda kişiler anılarak görev ataması yapılabilir.
+
+TrafficPro, GEODI 360 altında çalışan isteğe bağlı bir modüldür. Bu modül, görüntülerden Trafik İşaretlerini tanır ve envanterini tutar. Aynı yere ait sürekli gelen görüntüleri karşılaştırarak eksilen işaretleri bildirir ve bu sayede yol güvenliğini arttırır.
+
+ImagePro, GEODI 360 altında çalışan isteğe bağlı bir modüldür. ImagePro ile videolardaki nesneler tanınır. Eğer bu nesneler ImagePro'nun hazır modelleri arasında değilse, gerekli modeller oluşturulabilir.
+
+Kamera montajı, bir araca tek bir kamera olabileceği gibi, birden çok kamera da takılabilmesine olanak tanır (örneğin Sağ/Sol, daha geniş açı, Ön/Arka). Bu görüntülerin işlenmesi birbirinden bağımsız olarak yapılır.
+
+GEODI Kullanıcıları için eğitim kapsamı, harita ile videoların açılması (örnek proje üzerinden), eski görüntülere ulaşım, not alma ve sonraki işlemler, yeni görüntülerden haberdar olma, TrafficPro (varsa) ve ImagePro (varsa) konularını içerir.
+
+GEODI Yöneticileri için eğitim kapsamı, Sistem Gereksinimleri (Disk ve Görüntü işleme), araç kameralarından görüntülerin aktarılması, TrafficPro (varsa) ve ImagePro (varsa) konularını içerir.

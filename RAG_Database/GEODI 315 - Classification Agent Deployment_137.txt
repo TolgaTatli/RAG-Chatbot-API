@@ -1,0 +1,11 @@
+This course covers the deployment of GEODI Classification tools/agents to end computers. The course focuses on GEODI specific topics, assuming familiarity with ManageEngine, PDQ, or any other system developed for the deployment of agents.
+
+The duration of the course is 30 minutes.
+
+Prerequisite trainings for this course include understanding GEODI Classifier installation and the customization of classes.
+
+The scope of the course includes topics required for client setup, which are standard IT topics. The GEODI Classifier generates the command line for ManageEngine or similar tools, automatically generating information such as tokens.
+
+Specific topics covered include GEODI Classifier Windows Client Installation, GEODI Classifier - Class and Policy settings, GEODI Classifier Label/Tag Definitions, GEODI Classifier OWA Installation, GEODI Classifier Batch Classification, and GEODI Classifier Log Analysis Panel and Classifier Project.
+
+For supporting material, individuals should not hesitate to ask for support from the teams if they are unsure about a topic or unable to do something. It is also noted that some features may not be included in a user's license.

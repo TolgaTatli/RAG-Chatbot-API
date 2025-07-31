@@ -1,0 +1,1 @@
+MongoDB connected to Azure Cosmos using a CData ODBC Driver can be discovered. This discovery is possible as long as an ODBC driver is utilized.

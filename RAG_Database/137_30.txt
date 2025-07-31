@@ -1,0 +1,1 @@
+Kaynak Bazlı Yetkilerde yer alan "Görüntüleyebilir/İndirebilir" yetkisi ayrılamaz. Bu iki yetki efektif olarak aynıdır.

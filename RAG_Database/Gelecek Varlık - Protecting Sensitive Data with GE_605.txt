@@ -1,0 +1,15 @@
+A challenging and extensive integration project, focused on protecting sensitive data, achieved a successful outcome through the efforts and contributions of Dece Software, Symantec, and Partners. This project is titled "Gelecek Varlık - Protecting Sensitive Data with GEODI and Symantec" and was noted on 11/28/2023. Serdar Baygın, Group Manager of Information Technologies System and Network Management, expressed gratitude to everyone involved in the project.
+
+Gelecek Varlık A.Ş. is identified as Turkey's premier and largest asset management company. The company is dedicated to safeguarding its sensitive data through the use of advanced technology solutions.
+
+Gelecek Varlık encountered challenges in managing a vast amount of structured and unstructured data, which was dispersed across various sources including PCs, shared folders, databases, and other repositories. The diversity of this data, along with numerous storage environments, file types, and unstructured data, complicated accurate data discovery. An additional challenge was the continuous data generation by approximately 600 white-collar employees.
+
+To address information security, Gelecek Varlık sought accurate data discovery and automated data classification. They integrated GEODI into their workflow, enabling the platform to consolidate data from various sources. GEODI utilized semantic discovery to efficiently identify sensitive and personal data within both structured and unstructured data environments.
+
+As data discovery advanced, GEODI implemented automatic classification rules for data on end-user computers and shared folders, based on the precision and accuracy of its semantic discovery. Users contributed to this process by classifying documents and emails on their endpoints with GEODI Classifier. The outcomes of GEODI's classification provided guidance for Symantec's network and endpoint protection actions, leading to enhanced and simplified data protection across endpoints and network data.
+
+Through the use of GEODI, Gelecek Varlık successfully discovered over 10 million documents in shared folders. Approximately 2.7 million of these documents contained personal data, including resumes, health reports, names, and IBANs, along with other sensitive information. GEODI's semantic capabilities were used to expertly identify, classify, and report this sensitive data.
+
+Currently, GEODI classifies approximately 7,000 documents daily, contributing to ongoing data protection. Symantec's robust network and endpoint security capabilities further enhance Gelecek Varlık's incident tracking, reporting, and data monitoring, which facilitates timely preventive actions in accordance with established policies.
+
+The collaborative efforts of Symantec and GEODI effectively addressed Gelecek Varlık's complex and extensive data security requirements. Expert partners from both vendors were instrumental in correctly positioning and utilizing the solutions throughout the process. As a result, Gelecek Varlık now ensures compliance with GDPR and BDDK Data Security regulations and continuously safeguards its valuable data assets.

@@ -1,0 +1,23 @@
+GEODI can use web pages and RSS news feeds as content sources. Web pages can have highly variable structures, and the Web Page data source offers many options to support this variability.
+
+Indexing web pages can lead to intensive internet usage, which some sites might interpret as an attack, potentially resulting in a ban. Furthermore, the copyrights of indexed pages might not legally permit indexing. In these and other possible situations, DECE states that all responsibility lies with the user, and DECE only provides a technical solution.
+
+Connection requirements for GEODI to access web pages include general web page access. For sites that require user authentication, a token or other necessary authentication information for the page must be provided.
+
+Users can provide either a single address or multiple addresses for indexing. The domain restriction settings will operate independently for each address provided.
+
+The 'Level' setting controls the depth of indexing. With Level=0, only the initially provided page is indexed. To access all pages, the level must be set to a sufficiently large value. For situations involving pagination, a level value of 1000+ can be specified.
+
+Users can exclude unwanted pages, such as social media links or advertisement pages, from scanning results. Page addresses for exclusion should be separated by semicolons (;). Generalization of addresses can be achieved by using an asterisk (*). For example, to prevent scanning of "http://www.dece.com.tr/geodi", one could write "(*geodi* or *geodi.html)" in the exclusion field.
+
+GEODI treats different forms of the same web page that use different parameters as distinct pages. However, in many cases, parameters do not alter the content, allowing users to ignore these parameters. For instance, if "https://ornek.com" and "https://ornek.com?ShowComments=true" open the same page, "showComments" should be added to the parameters to be ignored, and GEODI will then evaluate both as the same page.
+
+GEODI has specific rules for scanning web pages, some of which are pre-configured. For example, on Wikipedia pages, only the content within the designated "box" is processed. Additionally, paginators, which are links appearing as "1,2,3,... 10" and define pages on some websites, are automatically processed.
+
+If a page is not indexed as it appears because it is generated with JavaScript, and its HTML content does not provide the necessary information, the "browse like a browser" option should be enabled. This will result in slower but desired indexing. For this option to function, an alternative web browser module must be installed.
+
+Page names in query results are determined by using the `og:title` information if it is present in the page's HTML source. If `og:title` is not available, the `title` information is used. If neither of these is present, the page's address as seen in the browser will be used.
+
+The website grouping feature can be activated in projects where web pages are scanned by setting a specific option to 'true' under 'Settings' in the detailed settings. Re-scanning is not required after activation. In DLV, sites are grouped based on their domain. A "for more result" link, located under the content name, allows access to all pages.
+
+Web page indexing can generate intensive requests to sites. To prevent these requests from being perceived as an attack or causing slowdowns, a Proxy list can be utilized. Request limitation settings for web pages can be configured in the Web Connection Source Advanced Settings. If a value greater than 0 is set, the system attempts to connect with other proxy addresses for that many times in case of an error, which can be useful for servers performing client attack control; however, 'DomainLockAndSleepMillisecond' should be preferred for this purpose. Additionally, when a value greater than 0 is provided, the system ensures that only one request is made at a time, with a specified millisecond delay between requests.

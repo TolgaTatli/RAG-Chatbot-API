@@ -1,0 +1,5 @@
+Country-specific semantic recognizers are designed to extend the capabilities of GEODI Discovery and Classification. This particular package is specifically developed for the Kingdom of Saudi Arabia.
+
+This package must be installed after GEODI Discovery. It includes several recognizers for the Kingdom of Saudi Arabia, such as the National ID and IQAMA Recognizer, Riyal Recognizer, Short Address Recognizer, Postal Codes Recognizer, Cities Recognizer, and Streets of Riyadh Recognizer.
+
+The version of this package is 1.0.0.16.

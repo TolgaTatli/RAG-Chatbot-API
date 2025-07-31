@@ -1,0 +1,1 @@
+Görüntü benzerliği özelliği açıksa, kullanıcılar ellerindeki bir görüntüyü GEODI'nin indekslediği görseller arasında arayabilir. Bu arama işlemini gerçekleştirmek için görüntünün arama kutusuna sürükle-bırakılması gerekmektedir.

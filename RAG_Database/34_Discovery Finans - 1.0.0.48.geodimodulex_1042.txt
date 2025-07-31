@@ -1,0 +1,3 @@
+Login, logout, and authorization transaction records can be added to AppUsage logs.
+
+The recognizers within the Finance module, identified as Discovery Finance, are capable of discovering specific financial information. This includes Bank account numbers, various currencies such as Dollar, Euro, Turkish Lira, and GBP, and card-related data like Mastercard, JCB, Visa, American Express, ChinaUnion Pay, Laser Card, Maestro Card, Troy Card, Diners Club, Discover Credit Card, CVV, PIN, and Password. The discovered information can be used for purposes such as semantic querying or data classification, particularly when applied over the amount of money. This functionality is part of version 1.0.0.48.

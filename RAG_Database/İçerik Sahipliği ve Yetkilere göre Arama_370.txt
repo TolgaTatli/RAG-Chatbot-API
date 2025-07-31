@@ -1,0 +1,5 @@
+Ğtpjrnizde bir dil tanıyıcı ekliyse, içerikler diline göre seçilebilir. Bu seçime örnek olarak `dil:TR` ve `dil:EN` verilebilir.
+
+Sürükle bırak yöntemiyle eklenen içeriklerin hangi kullanıcı tarafından eklendiği içerik özetinde görülebilir. Bir kullanıcının eklediği içerikleri sorgulamak için “owner:“ deyimi kullanılır; örneğin `owner:` şeklinde.
+
+Belirli bir kullanıcı ve grubun gördüğü belgeler sorgulanabilir. Bu sorgular sınıflandırma için de kullanılabilir; örneğin, belirli bir grup bir belgeyi görüyorsa, bu belge gizli olarak nitelendirilebilir. Bu tür sorgular için `user:`, `UserForContent:`, ve `ContentUsers:` gibi ifadeler kullanılabilir.

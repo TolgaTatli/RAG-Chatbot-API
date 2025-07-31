@@ -1,0 +1,3 @@
+A "Journalist" can record an interesting instance by taking a photo. This form also saves location and time, and allows for taking notes and annotating. This functionality is associated with media, television, newspapers, magazines, TV, special, pen, press, and publication.
+
+The version number for this functionality is 1.0.21155.16.

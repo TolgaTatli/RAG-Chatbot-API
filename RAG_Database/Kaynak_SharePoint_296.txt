@@ -1,0 +1,15 @@
+You can make a SharePoint connection from the Cloud tab. You can connect to your SharePoint account, which has an Online or OnPremise installation, using the SharePoint Online and SharePoint Onpremise options.
+
+All files in selected directories will be indexed within the framework of file exclusion and other rules. You must have a valid SharePoint user. You can define multiple connections for different directories for needs such as OCR on/off or different discovery scopes.
+
+The requirements for connection include an Online or OnPrem SharePoint service access address. A SharePoint account with at least read permission is also required, as the discovery scope will be limited by this user's access.
+
+When making a SharePoint Online connection in GEODI, usage consent must be given, which is asked once. To connect an account, redirection is made to the MS Site. After entering the username and password, the desired directory to be discovered is selected.
+
+For SharePoint Onpremise, the Service Address, Username, and Password information to be connected is filled in the relevant field. After the connection is established, the desired directory to be discovered is selected.
+
+Desktop, Office Add-in, and classification tools work on files located in SharePoint Online if certain conditions are met for SharePoint Classification. GEODI must run in exe Mode. SharePoint connections must be MAPped (Connect Network Drive) using the specified method, and classification is performed on files accessed via this network connection.
+
+For SharePoint Online usage, you can apply the Map Method by utilizing the page at https://learn.microsoft.com/en-us/sharepoint/sharepoint-view-in-edge. Microsoft does not offer a similar method for SharePoint On-Premise, so this recommended solution is only valid for SharePoint Online.
+
+For troubleshooting SharePoint online connections, ensure that your machine has internet. If the Username or Password is entered incorrectly, an alert code is received, and you should check the entered username and password information. If your Service Address is entered incorrectly, an alert is received, and you should check your service address when this alert occurs.

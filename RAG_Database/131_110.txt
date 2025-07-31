@@ -1,0 +1,3 @@
+Machines originating from GDE and containing personal data can be queried.
+
+The ability to discover a large number of accounts simultaneously with Zimbra E-Posta is entirely dependent on the capabilities of the Zimbra e-mail server.

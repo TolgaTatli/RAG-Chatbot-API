@@ -1,0 +1,9 @@
+GEODI searches for given criteria across all sources connected to your project.
+
+GEODI automatically versions content without requiring any settings. By default, all versions are included in queries.
+
+To limit the versions included in queries, the “ver:” keyword should be used. Versioning happens in the index, and GEODI does not store previous versions as files.
+
+The “backup content” option can be activated to store old versions. A new version is created if a discovery finds content with a different timestamp, whether it is a file or any other type. A new version is also created if a user adds a document by drag-and-drop.
+
+Specific uses of the “ver:” keyword include: “ver:last” for the last version, “ver:0” for old versions, “ver:” for a specific version, and “ver:[prev | hasprev]” for one older version.

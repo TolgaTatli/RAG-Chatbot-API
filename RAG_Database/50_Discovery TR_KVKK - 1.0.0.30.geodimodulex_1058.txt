@@ -1,0 +1,5 @@
+Country-specific semantic recognizers extend the capabilities of GEODI Discovery and Classification. This package is for Turkey. Users can check KVKK compliance with this package.
+
+This package should be installed after GEODI Discovery.
+
+The package includes Plate Recognizer, Turkey Passport Number Recognizer, Sensitive Personal Data Recognizer, Goverment Doc ID Recognizer, Mersis Number, and Serial Number.

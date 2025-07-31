@@ -1,0 +1,17 @@
+GEODI Geo Archive allows users to gather CAD, GIS files, and documents under a single archive.
+
+GEODI possesses analytical skills that reveal hidden values beyond simple word searches. For instance, its Language Recognizer identifies the language of a text, and it can identify objects, traffic signs, or faces from pictures, as well as determine which department is related to a complaint addressed to a Municipality.
+
+The Geo Archive module extracts information into the geographical field by automatically finding the borders of CAD, GIS, and Raster files and rendering a geographical archive, regardless of the number of files. GEODI does not convert or copy data.
+
+Results are displayed on a map, and files can be opened by clicking on their borders, with the option to open adjacent drawings. GEODI supports numerous formats including DWG, DGN, NCZ, Shape, ECW, TIF, DTED, and KML, and can identify and display the contents of over 200 formats. The borders identified are actual borders, not just the rectangular area encompassing a drawing.
+
+Compared to classic GIS/Mapping software which requires complex data structures, specialized software, and significant operator time, GEODI uses AI to automatically solve issues without operator interference or data conversion, reducing tasks that could take months or years to just a couple of days.
+
+Geo Archive can read and comprehend not only CAD and GIS documents but also anything that includes a location, such as PDFs, Excel files, or emails. It identifies Coordinate Values, Section Names, and Tables, and uses AI to determine projections and position information on a map, with inquiries displaying results on a map.
+
+GEODI's solution for boosting GIS with unstructured data is simple to install and automatic due to AI and NLP. It has adaptors and intelligence to understand location information from diverse content.
+
+Technology is a key to GEODI's success, along with listening to customers.
+
+Enterprise Search applications, like those offered by GEODI, enable institutions and companies to search data across different sources. GEODI's capabilities include Search, Discover, Mask, Encrypt, and Classify.

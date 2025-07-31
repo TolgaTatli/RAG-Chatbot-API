@@ -1,0 +1,17 @@
+The training aims to explain the determination of classes, the configuration of watermark settings, and the establishment of classification policies.
+
+The content of the training includes Technical, Sales, User, and General categories.
+
+The duration of the training is 30 minutes.
+
+Prerequisite knowledge of GEODI Project Wizard and GEODI Queries is required for this training.
+
+The scope of the training covers Classification Module settings within the Project Wizard. This includes the determination of classes, queries that define classes, and class label settings.
+
+The training also covers watermark, header, and footer settings for office software, along with the determination of policies and the addition of project layers for automatic classification.
+
+Potential issues with visual markings, such as lack of space for headers and footers and margins, are part of the training's scope. Additionally, the reflection of class settings on clients, examples, and questions are covered.
+
+Supporting materials for the training include GEODI Classifier Class and Policy Determination, GEODI Classifier Label Definitions, GEODI Classifier Windows Client Installation, GEODI Classifier OWA Installation, GEODI Classifier Bulk Classification, GEODI Classifier Log Analysis Panel and Classifier Project, and GEODI Queries.
+
+The trainings aim to provide a general idea, and it is necessary to reinforce what is learned by using it. Some features mentioned within the scope of the training may not be included in the user's license.

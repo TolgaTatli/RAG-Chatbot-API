@@ -1,0 +1,7 @@
+Country-specific semantic recognizers extend the capabilities of GEODI Discovery and Classification.
+
+This package, identified as Discovery OMN/CMA/PDPL, is designed for Oman and includes an Oman ID Recognizer.
+
+This package must be installed after GEODI Discovery.
+
+The version of this package is 1.0.0.10.

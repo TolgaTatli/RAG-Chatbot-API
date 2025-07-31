@@ -1,0 +1,3 @@
+GEODI has integration with LDAPS/Active Directory Secure LDAP.
+
+MOBIDI for Telco enables the recording of maintenance and inspection for remote transmitters or base stations. This functionality reduces incomplete work in the field and lowers costs. Within the scope of this solution, it is recommended to consider accessing technical documentation and archives from the field using GEODI.

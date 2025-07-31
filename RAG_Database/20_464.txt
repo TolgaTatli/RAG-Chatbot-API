@@ -1,0 +1,3 @@
+GEODI Sınıflama ajanları ile TCKN veya VKN ve IBAN geçen her türlü belgeyi "kişisel hassas belge" olarak işaretlemek mümkündür.
+
+GEODI Sorguları sınıflamada geçerlidir ve isteğe bağlı değişim yapılabilmektedir.

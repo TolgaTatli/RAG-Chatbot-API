@@ -1,0 +1,9 @@
+Consent-Based Remediation is a governance-driven approach where actions such as deletion, quarantine, or redaction of data are executed only after explicit approval by authorized individuals, typically data owners or information custodians.
+
+This model ensures accountability, as the person responsible for the data, not IT alone, makes the decision. It also provides transparency, with all actions traceable via audit trails showing who consented and when. Governance compliance is achieved by aligning with regulations like GDPR, KVKK, and ISO 27001 through enforcing a human decision before irreversible actions. Furthermore, it allows for automation with control, where GEODI automates execution in scheduled workflows once consent is given via tagging, annotation, or UI action, thereby removing manual errors or delays.
+
+Consent-Based Remediation is best suited for regulated industries such as finance, healthcare, and government. It is also ideal for environments with strict data stewardship policies and organizations that promote shared responsibility in the data lifecycle.
+
+The process involves the data owner tagging a document for deletion using a predefined note, for example, “Marked for Removal.” Note templates in Data Discovery projects contain predefined items such as "Delete," "Copy and then Delete," or "Copy and then Mask." Scheduled workflows periodically review these tags and execute the specified action, which can include deletion or quarantine.
+
+After actions are executed, a report is sent to managers summarizing what was done and which documents were marked. Notes used for marking are removed after deletion. A record of the user's decision is retained as a report before execution, and audit logs retain the owner’s decision even after the content is removed.

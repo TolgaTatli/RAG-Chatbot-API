@@ -1,0 +1,21 @@
+This page describes the basic structure of GEODI Server, including its extensions and integrations. The general structure is outlined, though not all mentioned features may be included in a user's license.
+
+GEODI is designed to consume almost all data within a data lake, supporting over 200 data types as data sources. A comprehensive list of these data types can be found on the 'GEODI Data Sources' and 'Supported Formats' pages.
+
+To access resources, GEODI requires authorized users, tokens, or database connection information, which it stores in a secured form. GEODI's capabilities include searching, discovering, analyzing, and classifying data, with additional support for OCR, Face, and Image Recognition. Further details on GEODI installation and configuration are available on the 'GEODI Server Installation and Configuration' page.
+
+GEODI creates an index from the content it scans. This index contains various details, such as information for Full Text Search, semantic information, and other discovered information.
+
+The index is considered the most critical component for GEODI and must be backed up. For disaster recovery, GEODI can operate in active/active or active/passive modes and is compatible with load balancing tools like F5, Citrix, or TR7.
+
+GEODI is a web-based application that can be accessed via the internet or intranet. On-premise installation of GEODI is also possible.
+
+GEODI Enterprise Search users can access the application using web browsers such as Chrome, Edge, Safari, or Firefox. The majority of GEODI's management interfaces are also web-based, allowing system administrators to access them in the same manner.
+
+Detailed user authorization within GEODI enables access restrictions based on specific features and resources. By default, GEODI opens on port 3323. If configured to port 80, specifying the port on the client side is unnecessary. Similarly, if the SSLCertificate setting is configured, using the 443 SSL port also eliminates the need for client-side port specification. More details are available on the 'System Configuration - Security Settings' page.
+
+The GEODI Classifier comprises several optional components, including the Desktop and Office Classifier, and the OWA Classifier.
+
+The Desktop and Office Classifier can be deployed using tools such as ManageEngine or SCCM. Installation, configuration, and training materials for the Classifier components are provided on the 'Classification' page.
+
+GEODI features an open API designed to extend its functionality, allow the addition of new data types, and facilitate integration with other applications.

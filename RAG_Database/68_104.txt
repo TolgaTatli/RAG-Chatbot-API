@@ -1,0 +1,1 @@
+It is possible to change the masking rules within Masking Categories. It is also possible to add new categories.

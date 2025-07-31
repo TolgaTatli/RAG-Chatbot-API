@@ -1,0 +1,11 @@
+The scope of the content involves understanding the discovery panel that comes with GEODI Discovery and interpreting its capabilities. The intended audience for this information is general.
+
+Prerequisite trainings for this content include GEODI 101 and GEODI 102.
+
+The contents cover an explanation of panel tools and an explanation of local, remote, PC, and VT sources.
+
+Further contents include the interpretation of problematic content, interpretation of remote PC discovery results, and interpretation of duplicate content. Destruction Scripts are also part of the contents.
+
+Additional contents involve making a report of the panels, general reports, and video content.
+
+Users are advised to ask for support from the teams if they are unsure about a topic or unable to do something. It is also noted that some features may not be included in a user's license.

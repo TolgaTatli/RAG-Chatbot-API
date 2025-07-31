@@ -1,0 +1,3 @@
+It is possible to determine the operating system of data received with GDE. GDE functions on Windows, Mac, and Linux operating systems.
+
+The operating system of indexed data is available in the content list and other reports. Actions may differ for each operating system.

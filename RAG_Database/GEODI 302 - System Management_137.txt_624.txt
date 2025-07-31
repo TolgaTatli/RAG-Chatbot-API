@@ -1,0 +1,25 @@
+The GEODI management page provides access to create projects, change settings, access DECE-STORE, edit permissions, and manage indexing, among other settings.
+
+The course content is technical, with a duration of 45 minutes plus an additional 45 minutes. The course will follow topics found in "GEODI System Management" and its sub-pages.
+
+In GEODI, users can have one or more projects, each potentially having different data sources and rules. For Classification and Discovery, it is suggested as a best practice to create different projects for each data source. However, if GEODI is used for Enterprise Search, all sources should be included within the same project.
+
+Indexing is a crucial process for each project, managed on the same page. GEODI crawls or discovers data sources to create the index, which serves as the source for queries, reports, and other functions.
+
+Each GEODI project can have distinct permissions. Further details regarding a project will be covered in a separate course titled "GEODI 303 Project Wizard."
+
+The index in GEODI functions as a database and requires maintenance. Users should regularly take backups and perform optimizations from time to time.
+
+Brief reports are available for projects, and errors should be checked within these reports. The settings page also provides brief reports for both the system and projects, from which usage reports can be obtained.
+
+The Setup page contains sections for user management, DECE-STORE, and various global settings for GEODI. It is noted that not all settings are accessible through the Graphical User Interface (GUI), with additional settings mentioned in "System Configuration and Security Settings."
+
+Indexing speed is an important setting that influences how quickly data is indexed or discovered. Increasing the indexing speed requires more resources. While GEODI always reserves some CPU resources, it does not guarantee resources for Disk and Memory.
+
+DECE-STORE is necessary to find templates, which include those for regulations like GDPR, SAMA, or PCI/DSS, as well as country-specific recognizers such as an SSN recognizer. DECE-STORE is continuously updated, which also applies to user installations.
+
+Dictionaries are utilized in GEODI both directly as a discovery compound and indirectly by some recognizers. This section of dictionaries is open for user modification.
+
+Users are encouraged to contact the support teams if they are uncertain about a topic or unable to perform a task.
+
+It is possible that some features may not be included in a user's specific license.

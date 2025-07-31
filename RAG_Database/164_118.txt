@@ -1,0 +1,5 @@
+Anonimleştirilmiş dokümanların orijinalinden ayırt edici bir özelliği bulunup bulunmadığına dair genel bir yöntem bilinmemektedir. Bu durum GEODI ile sınırlı değildir; bilinen işletim sistemleri veya dosya sistemlerinde (NTFS, FAT, Linux gibi) "Maskelenmiş/Anonimleştirilmiş doküman" diye bir kavram mevcut değildir. Dolayısıyla, bu şekilde üretilmiş dokümanları ayırt edecek genel bir yol bilinmemektedir ve öneriler doğrultusunda çözümler incelenebilir.
+
+Önerilen yöntem isimlendirmedir. Maskelenmiş doküman aksiyonunda, maskeli dokümanların isimleri değiştirilebilir. Ancak, bu veya farklı herhangi bir işaretin kullanıcılar tarafından değiştirilmesini engelleyecek bir yol bulunmamaktadır. Konulan isim veya etiket, değiştirilebilir bir özellik olacaktır.
+
+Dokümanlarda kalıcı bir etiket olduğu varsayılsa bile, ikonların değişmesi için her makinede bu eklentiyi sağlayan özel bir ajan gereklidir. Kullanıcıların değiştirmesi olası bir işaret olduğu için, ajan çözümü teknik olarak meseleyi çözse de pratik olarak çok verimli olmayacaktır.

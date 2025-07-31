@@ -1,0 +1,13 @@
+The GEODI Workspace and other sensitive data settings are encrypted, with the level of encryption depending on the selected security level. Users can choose between "everything is visible" and "settings only valid on one machine." An example of secure data includes a Database connection string or credentials for OneDrive.
+
+The default security setting in GEODI ensures that files only function on the server.
+
+When LDAP is active, GEODI does not store sensitive information about a user. However, if GEODI authorization is used, sensitive information is stored in an encrypted format.
+
+GEODI processes data by requiring only read-only access, meaning it does not copy or alter the data. Furthermore, the data itself, or anything extracted from it, does not leave the system.
+
+Upon installation of GEODI, a default administrator user named `geodiadmin` is created along with a password. It is recommended not to routinely use the `geodiadmin` user, but instead to create new users with the necessary permissions.
+
+GEODI logs queries and other actions performed within the system. These logs are typically in CSV format, which allows them to be monitored and analyzed using various SIEM (Security Information and Event Management) tools.
+
+GEODI undergoes continuous testing to protect against cyber risks. Additionally, customers in the Defense, Security, and Finance sectors routinely conduct their own tests on GEODI.

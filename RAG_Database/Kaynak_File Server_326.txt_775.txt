@@ -1,0 +1,5 @@
+File Server/Dosya Sunucular bir kaç farklı şekilde keşfedilebilir.
+
+Eğer bir paylaşım varsa, Kaynak:Klasör/Folder veya Kaynak: SSH yöntemi kullanılmalıdır.
+
+Eğer paylaşım yoksa ya da GEODI Servis kullanıcısının yetkileri yeterli değilse, GDE ajanı Windows Servis olarak kurulmalıdır. Detaylar için Keşif Ajanı - GEODI Desktop Explorer(GDE) bilgisi sunulmuştur.

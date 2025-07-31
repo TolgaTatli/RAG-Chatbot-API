@@ -1,0 +1,3 @@
+The application is already configured as an N-Tier Architecture.
+
+The LDAP File/Directory Read Permissions Configuration is valid for users in the SystemAdmin Group. To enable this, the method specified on the authorization page must be used.

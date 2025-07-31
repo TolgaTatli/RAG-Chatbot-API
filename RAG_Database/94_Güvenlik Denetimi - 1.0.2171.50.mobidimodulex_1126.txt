@@ -1,0 +1,7 @@
+The text identifies several terms and their English equivalents: 'Güvenlik Noktası' as 'Security Point', 'Açıklama' as 'Note', 'Güvenlik Noktası Büyüklüğü' as 'Security Point Size', 'Güvenlik Noktası (Oto)' as 'Security Point (Auto)', and 'Durum' as 'Status'.
+
+The term 'Güvenlik Denetimi' is translated as 'Security Check'.
+
+A system is described that automates security patrol checks, allowing users to record everything without needing devices other than a smartphone. Users can take photos and notes anywhere, mark issues directly on photos, and receive instant reports. The system also enables users to see the nearest team in case of a problem and obtain reports for areas with the most issues. Associated hashtags include #security, #camera, #alarm, #control, #trust, #peace, and #weapon.
+
+The version associated with this information is 1.0.2171.50.

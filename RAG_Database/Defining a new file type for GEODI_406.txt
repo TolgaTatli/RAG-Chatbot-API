@@ -1,0 +1,19 @@
+IGeodiContent is utilized to return and determine properties.
+
+An implementation deriving from ContentReaderBase allows for reading the desired extension. An example is MyContentReader, which inherits from ContentReaderBase and sets its DisplayName to "MyContentReader" and its Category to Geodi.CoreV1.Defines.CategoryInfoDefines.Other.
+
+The MyContentReader specifies "filecontent:.myfileextension" as its ContentTypeKeys. It also provides an override for the Create method, which returns a new instance of MyContentReader based on an IGeodiContent source.
+
+Within MyContentReader, the GetSectionSplitters method can process combined sub-pages using StringContentSplitter. It can also add section information for custom viewers and return values with known types, such as DateTime.Now, using HeaderArraySplitter.
+
+The CreateOrGetLocalFileSystemPath method is designed to download data from sources like zip, email, or web, providing a physical file path for APIs that require local files.
+
+The GetIconName method in MyContentReader returns "Content/file.myfileextension", which is expected to be a path located within the GUI/Icons folder.
+
+If a WebContentViewerBase implementation is provided for an added reader, GEODI will open the file using the prepared interface.
+
+MyViewer is an example implementation that derives from WebContentViewerBase. It handles content types specified by "filecontent:.myfileextension".
+
+The StartView method in MyViewer is responsible for writing an HTML page, specifically "GUI/ContentViewer/MyViewer.html", to handle all user interactions.
+
+MyViewer includes a WebMethod named MyViewerApiMethod, which is accessible via the viewer. This method retrieves IGeodiContent and checks if the current login has "GEODI.ENUMERATOR_DOWNLOAD" permission, throwing an unauthorized access error if the permission is not present.

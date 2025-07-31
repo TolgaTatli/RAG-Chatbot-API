@@ -1,0 +1,7 @@
+It is currently not possible to perform destruction and quarantine operations within the GEODI interface.
+
+A feature or report is identified as 'QR Code-Report'.
+
+The system generates GEODI-QR mobile compatible QR Codes. These QR Codes are produced for each content that corresponds to a room, a maintenance place, or a museum artifact.
+
+The version of the system is 1.0.0.13.

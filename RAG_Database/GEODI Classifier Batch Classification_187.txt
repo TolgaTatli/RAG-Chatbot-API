@@ -1,0 +1,3 @@
+GEODI Classifier is the common name for a set of tools used for manual or automatic classification of data. Plugins for GEODI Classifier are available for Microsoft Office, Exchange Server, Office 365, and Windows. These Classifier solutions are compatible with DLP solutions such as ForcePoint, Symantec, and TrendMicro.
+
+GEODI allows for batch classification of office and PDF files. Users can select documents for classification by search and then classify them automatically or manually. This capability enables the classification of hundreds of thousands or even millions of documents in a very short time. Criteria like the presence of personal data in documents can be utilized as search criteria for selecting files.

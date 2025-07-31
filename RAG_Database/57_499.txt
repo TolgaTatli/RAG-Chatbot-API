@@ -1,0 +1,5 @@
+Attempts were made to use Arabic keywords matching regex, but these did not trigger in Geodi.
+
+An example of such a keyword is “الحساسة”. The corresponding regex `(?:ال)?(?:حساس(ة|ه))` was designed to include the use of `ال` and alternative uses of `ة` and `ه`.
+
+The word “الحساسة” means “Sensitive”. Instead of using a regex, this word can be added to a dictionary, where it would be related to a specific class.

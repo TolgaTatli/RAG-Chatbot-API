@@ -1,0 +1,3 @@
+For remote users to utilize GEODI API, access to GEODI is mandatory. Regarding the security aspects of this access, it is necessary to consult the rules of Firewall or other network applications.
+
+GEODI is frequently subjected to penetration tests and has successfully passed them. Furthermore, there are additional restrictions on the APIs used by classification agents. The tokens employed by these agents are specifically restricted from being used for any purposes other than classification.

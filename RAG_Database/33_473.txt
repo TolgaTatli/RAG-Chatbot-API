@@ -1,0 +1,3 @@
+Reports and dashboards are available that can present a discovery summary for PCI/DSS or other regulations.
+
+A customer wants to be able to comment directly from the report screen without getting lost in the details.

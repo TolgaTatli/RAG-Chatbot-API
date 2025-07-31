@@ -1,0 +1,1 @@
+Farklı bir tablodaki gömülü dosya, ilk tabloya alt içerik olarak yapılabilir. Bu işlevsellik bu şekilde çalışmaktadır.

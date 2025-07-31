@@ -1,0 +1,21 @@
+This page illustrates the fundamental structure of GEODI Server, its plugins, and integrations. The general architecture is explained here. It is noted that not all features mentioned may be included in a user's license.
+
+GEODI is capable of indexing a wide array of data sources and file types. These sources encompass local networks, cloud servers, email servers, web pages, and social media services. A comprehensive list of these can be found on the "GEODI Veri Kaynakları" and "Desteklenen Formatlar" pages.
+
+To access various data sources, GEODI requires authorized user credentials, tokens, or database connection information. This sensitive information is stored in an encrypted format, ensuring it cannot be decrypted even if the files are compromised. Further details regarding privacy are available on the "GEODI Gizlilik Konuları" page.
+
+GEODI provides numerous capabilities through its content processing, including Search, Discovery, Analysis, and Classification. Additionally, it can perform advanced functions such as Optical Character Recognition (OCR), face recognition, and object recognition. Information on GEODI installation, configuration, and resource definition is detailed on the "GEODI Server Kurulum ve Konfigürasyon" page.
+
+GEODI generates an index from the content it scans. This index incorporates various details, including Full-text Search capabilities, semantic information, discovered insights, and document previews.
+
+The index is identified as the most critical component for GEODI, and its backup is essential. In the event of a potential disaster, GEODI can operate in either active/active or active/passive modes. It is also compatible with load balancing tools such as F5, Citrix, or TR7.
+
+GEODI functions as a web application, capable of delivering its services over both the internet and/or intranet.
+
+Users of GEODI Corporate Search can access the system via standard web browsers like Chrome, Edge, Safari, or Firefox. The majority of GEODI's management interfaces are also web-based, allowing system administrators to access them similarly. Access can be restricted based on specific features and resources through detailed user authorization.
+
+GEODI's default operating port is 3323. If configured to Port 80, clients do not need to specify the port. Similarly, if an SSLCertificate is set up and the 443 SSL port is utilized, clients are not required to enter the port. Comprehensive details on these settings are available on the "Sistem Yapılandırma ve Güvenlik Ayarları" page.
+
+The GEODI Classifier comprises several optional components, specifically the Desktop and Office Classifier, and the OWA Classifier. The distribution of the Desktop and Office Classifier is facilitated by tools such as Manageengine or SCCM. Installation, configuration, and training content for the Classifier can be found on the "Classification" page.
+
+GEODI's capabilities can be enhanced through its API, allowing for the connection of new data sources and integration with various other applications.

@@ -1,0 +1,5 @@
+The OldReports module contains old reports.
+
+Reports within the OldReports module were removed after the Discovery 1.0.0.168 module update.
+
+The version of the OldReports module is 1.0.0.1.

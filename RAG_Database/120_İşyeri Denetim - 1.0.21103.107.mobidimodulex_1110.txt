@@ -1,0 +1,9 @@
+GEODI can be integrated with Box.
+
+The text lists several fields related to workplace inspections, including Workplace, Note, Workplace Size, Starting Date Of The Work, Ending Date Of The Work, Related Person, Workplace Control Questions, and Workplace Control Status.
+
+A project is available for immediate use in restaurants, stores, or gas stations. Market personnel can conduct inspections before you visit. Pre-inspections can be done via photos or video, allowing visits only when necessary. Scoring and Control Reports help easily identify areas needing improvement. Problematic issues and stores are reported daily or weekly via map or list.
+
+The text also includes hashtags such as #denetim, #eğitim, #fabrika, #faaliyet, #teftiş, #risk, and #kaza, and their English equivalents: #inspection, #training, #factory, #activity, #inspection, #risk, and #accident.
+
+The provided text mentions a version number: ver 1.0.21103.107.

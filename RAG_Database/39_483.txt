@@ -1,0 +1,3 @@
+Sıkıştırılmış dosyaların keşfi mümkündür. İçerisinde taranmış belgeler varsa, bu belgelere Optik Karakter Tanıma (OCR) uygulamak da mümkündür.
+
+Şifreli sıkıştırılmış dosyalar taranamamaktadır.

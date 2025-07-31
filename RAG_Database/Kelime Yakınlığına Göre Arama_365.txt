@@ -1,0 +1,23 @@
+Kuralın sonuna "()" eklenmesi, harita, takvim ve kelimeler sorgularını etkileyen bir değişiklik yapar. Bu işlem içeriklerde bir değişikliğe yol açmaz. Yakınlık operatörü, veriye bakışı değiştiren önemli bir işlemdir.
+
+Haritada, "Hartada" ifadesi "kaza olan yerler" anlamına gelir.
+
+"Kaza() kasko" sorgusu, "Kasko" kelimesinin "Kaza" kelimesine yakın olması durumunda bulunmasını sağlar.
+
+Bu operatör, KELİMELER sayfasında kullanıldığında yakın isimler, tarihler ve yerler gibi sorgular için kullanılabilir.
+
+"Yakınında" işlemi, GEODI Discovery ile birlikte gelen Ağ Grafiği özelliğinin etkisini önemli ölçüde artırır.
+
+Bir belediyede "kaçak()" gibi bir sorgu ile kaçak ile ilgili parsellerin bulunması sağlanır.
+
+Haber sitelerini kullanan Haber Ajansları projesinde, "kaza()" sorgusu ile kazaların hangi tarihlerde veya hangi illerde yoğunlaştığı kolayca sorgulanabilir.
+
+"Yakında" işlemi diğer kurallar ile birlikte kullanılabilir.
+
+Varsayılan yakınlık 10 kelimedir ve istenilen değer belirtilebilir.
+
+Diğer kurallar geçerlidir.
+
+Tırnak kuralı geçerlidir.
+
+Tarh kuralları geçerlidir.

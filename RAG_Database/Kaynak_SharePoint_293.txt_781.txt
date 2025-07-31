@@ -1,0 +1,23 @@
+You can establish a SharePoint connection from the Cloud tab.
+
+You can connect to your SharePoint account, whether it's an Online or On-Premise installation, using the SharePoint Online and SharePoint On-Premise options.
+
+All files within selected directories will be indexed in accordance with file exclusion and other rules.
+
+A valid SharePoint user account is required.
+
+You can define multiple connections for different directories to accommodate needs such as OCR being enabled or disabled, or different discovery scopes.
+
+Requirements for connection include an Online or On-Prem SharePoint service access address and a SharePoint account with at least read permissions. The discovery scope will be limited by this user's access.
+
+When establishing a SharePoint Online connection in GEODI, user consent must be granted, which is requested once.
+
+For SharePoint Online, to link an account, you will be redirected to the MS Sites page. After entering your username and password, you select the directory you wish to discover.
+
+For SharePoint On-Premise, you fill in the Service Address, Username, and Password information in the relevant fields. After establishing the connection, you select the directory you wish to discover.
+
+SharePoint Classification: Desktop, Office Add-in, and classification tools operate on files located in SharePoint Online if the following conditions are met: GEODI must be running in exe Mode, and SharePoint connections must be mapped to a network drive using the specified method. Classification is performed on files accessed through this network connection.
+
+You can utilize the method described on the page https://learn.microsoft.com/en-us/sharepoint/sharepoint-view-in-edge for SharePoint Online mapping. Microsoft does not offer a similar method for SharePoint On-Premise, so the recommended solution is applicable only to SharePoint Online.
+
+Troubleshooting: When connecting to SharePoint Online, ensure your machine has an internet connection. If the username or password is entered incorrectly, an alert code will be received, and you should check the entered username and password details. If the Service Address is entered incorrectly, an alert will be received, and you should check your service address.

@@ -1,0 +1,17 @@
+GEODI Discovery empowers organizations to perform deep data discovery across a wide range of industries and use cases. This page outlines a typical discovery process, step by step. With GEODI, users can scan rich and diverse data sources, supporting local ID formats and regulations for many countries. High accuracy and speed are among GEODI's top priorities.
+
+The discovery workflow involves key stages for a discovery project. Each data source should ideally follow this process independently to facilitate progress management. A project is complete once all relevant sources are covered. If new sources emerge over time, the same process can be repeated.
+
+The first step in the discovery process is to define a clear objective, which could be compliance with regulations such as KVKK, GDPR, HIPAA, SAMA, PDPL, CMA, DPDPA, LGPD, or for Fraud Prevention. GEODI provides ready-to-use recognizers, reports, dashboards, and actions aligned with various regulations through the DECE-STORE. After GEODI installation, relevant DECE-STORE modules can be easily installed.
+
+The second step involves identifying sources and launching discovery. The Project Wizard is used to define data sources, set permissions, and configure discovery settings. GEODI supports various data sources, whether agentless or agent-based, depending on the environment, and can scan single or multiple sources simultaneously. The discovery phase identifies personal, financial, and other defined types across the selected scope. Discovery duration depends on source size, scope, and selected options. It is recommended to start with a sample-based discovery to save time and help decide whether to proceed with a full scan.
+
+The third step is to analyze results. This involves learning how to examine discovery results, detect risky findings, and take appropriate action.
+
+The fourth step, remediation, involves taking action based on findings. GEODI enables users to remediate risks using actions such as Secure Delete, Quarantine, Masking, Classification, and Anonymization. These actions are reflected in dashboards and reports, aiding in iteration until all risks are addressed.
+
+The fifth step is to stay informed, as discovery is an ongoing task. Once the environment is configured, GEODI can alert users in real time about new risks, such as a CV or contract placed in a shared folder. These alerts help strengthen access policies and data protection strategies.
+
+GEODI processes both structured and unstructured data at an average speed of 0.5–1.5 TB/day. However, for very large datasets, such as hundreds of TB or more, this speed alone may not be sufficient.
+
+To scale effectively, GEODI can be deployed on multiple servers to form a GEODI Cluster. This cluster architecture supports centralized reporting and management, allowing multiple GEODI instances to be managed as if they were one. For example, scanning 50 TB of data in 3 weeks may require 2 to 4 GEODI servers. GEODI 302 – System Administration will cover cluster configuration in detail.

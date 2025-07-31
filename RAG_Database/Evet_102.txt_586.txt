@@ -1,0 +1,3 @@
+It is possible to ignore the "Person Name" found in folder name 107.
+
+It is possible to change the masking rules within Masking Categories 68 and to add new categories.

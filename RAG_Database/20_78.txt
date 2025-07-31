@@ -1,0 +1,1 @@
+Parent-child relationships can be established. It is also possible to perform a parent search using child data.

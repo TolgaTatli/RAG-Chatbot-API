@@ -1,0 +1,45 @@
+This object is designed to provide detailed content to the Geodi Data Extraction API (Formatter) and Geodi Feed Api (FeedHandler) services. It enables the forwarding of definitions, privileges, special display names, special display addresses of content, paths, URLs, or entire content as byte arrays to the service.
+
+All properties of these objects can be accessed via Geodi using the "Single Content - ContentObject" and "Multiple Content - IntegrationObject" addresses.
+
+For a single content transaction, the "Mode" property, an optional integer, indicates the transaction type. A value of 0 (Default) signifies content that has been Added or Changed, 1 indicates Deleted content, and 2 denotes Only Authorization Change.
+
+The "ContentURL" property, a string, specifies the unique path of the content, which must be capable of showing the content. This path can be exported from a file on a URL or Disk.
+
+The "DisplayName" property, a string, is used for the name of the image to be displayed in search results. The "ContentDate" property, an optional GMT string, specifies the date of the content.
+
+The "ViewURL" property, an optional string, defines the display address of the content. If this property is not specified, GEODI will display the content using its internal viewer without resorting to an external application. When specified, GEODI directs the user to this URL to access the content, noting that a scanned document and an opened document are distinct.
+
+Within the "ViewURL", specific definitions are available: "{wsName}" represents the project name defined on GEODI, "{unc}" refers to the Content.Content_Id value passed during the feed, and "{viewParam}" denotes document opening parameters sent to GEODI Viewer. The "{user}" value refers to the active user, but as this is a GET-based redirect process and the user can modify the browser, this value should not be relied upon, and the application should use its own user authentication mechanisms. An example usage is ViewURL:".../MyViewer.aspx?ID={unc}&wsName={wsName}".
+
+The "Thumbnail" property, an optional string, specifies the preview image to be shown in search results. This can be returned as a base64 encoded image or directly as an image path. The "FastViewHTML" property, an optional string, if specified, causes the search result to be displayed directly with the content.
+
+The "TextURL" property, an optional string, if defined and not returning a blank result, is used to retrieve the text content of the document, and if successful, "ContentURL" is not called. The "TextData" property, an optional string array, allows for the transmission of additional text information, such as OCR or searchable text content obtained through various methods. Each element in this array should correspond to one page, or if paging is unknown, a single element containing all text should be sent. Unlike "TextURL", values passed via "TextData" are appended to the content, processed as either ContentURL + TextData or TextURL + TextData.
+
+The "MetaData" property, an optional object array, contains Key/Value pairs that are reflected in the search results and do not need to be specified separately within the content. Each metadata entry includes a "Name" (string) for the metadata key.
+
+Within "MetaData", the "Value" property holds the metadata key's value. The "GType" property, an optional string, specifies the type of the "Value", with available types including System.TypeCode and Geom, defaulting to String.
+
+Further advanced properties within "MetaData" include "DDoubleValue", an optional property for the normalized value of certain types, and "DText", an optional property for string values of certain types. "DAttributes", also an optional advanced property, provides additional information for certain value types, allowing for the acceptance of values like KM, Parcel, or Name as a kmi name or parcel by adding them to the ItemType value.
+
+The "Content" property, an optional object, is used when content is transmitted without resorting to "ContentURL". This object contains details about the content itself.
+
+Within the "Content" object, "Extension" is a string specifying the content's file extension, such as .pdf, .zip, .rar, .dwg, or .form for form content. The "Content" property, an optional field, can hold base64 formatted byte array content or plain text, with "ContentUrl" serving only as an ID. Alternatively, "ContentForcedBytes", an optional property, allows content to be provided directly as a byte array, in which case "Content.Content" is ignored, and "ContentUrl" is still used solely as an ID.
+
+The "CurrentSections" property, an optional advanced section array, contains section information of splitters, used to return to specific content locations like a page or cell. The "Properties" property, also an optional advanced section array, holds additional information about splitters and finalization information for Recognizers, enabling special operations for content in specific columns or layers, such as parcel, first name, or last name.
+
+The "Splitters" property, an optional advanced array, represents values fragmented from the content, which can be lines, paragraphs, or pages. It supports "string", "string[]", and "object[]" as SpliterType values, each with different features. The "GType" value within a spliter is consistent with that found in "MetaData".
+
+The "Permission" property, an optional object within Single Content, shares features with Root Permission and is used to define customized privileges on a file-by-file basis, working in conjunction with the root Permission.
+
+For "Multiple Content", the structure includes "PageCount", "ChangeKey", "Permission", and "Contents".
+
+The "PageCount" property, an optional integer within Multiple Content, allows an application to reduce resource usage by returning the number of pages in the initial GetContents request when more content is expected from a service. The server status can determine the size of the content to be returned and the internal authorization mechanism, allowing content to be returned all at once or page-by-page.
+
+The "ChangeKey" property, a string, represents the value to be passed to the application as a ChangeKey during the subsequent scheduled scan.
+
+The "Permission" property, an optional object within Multiple Content, if specified, applies document-specific viewing privileges. GEODI does not provide capabilities to modify, edit, or delete content obtained through this service. All contents returned by "Contents" in this service call will inherit these privileges. When authorization is utilized, the GetContent list should return documents affected by authorization changes, and "Mode: 2" should be set only if privilege changes are confirmed.
+
+Within the "Permission" object, "Permit" is an optional string array listing allowed users, roles, or groups. "Deny" is also an optional string array, listing prohibited users, roles, or groups.
+
+The "Contents" property is an object array that holds multiple Content objects.

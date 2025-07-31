@@ -1,0 +1,5 @@
+It is possible to make an embedded file from a different table into sub-content for the first table. This functionality is supported and works in this way.
+
+The "Discovery CL" package, version 1.0.0.0, extends the capabilities of GEODI Discovery and Classification through country-specific semantic recognizers. This particular package is designed for Chile.
+
+Users should install the "Discovery CL" package after GEODI Discovery. This package for Chile includes a Chilean Peso Recognizer.

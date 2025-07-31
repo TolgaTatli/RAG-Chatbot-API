@@ -1,0 +1,1 @@
+Klasör olarak sınıflandırma yapılabilmektedir. Bu sınıflandırma hem GEODI Server üzerinden hem de Shell Classifier ile gerçekleştirilebilir.

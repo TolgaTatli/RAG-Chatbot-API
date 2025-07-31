@@ -1,0 +1,1 @@
+Authenticator interfaces can be developed for OIDC or SAML.

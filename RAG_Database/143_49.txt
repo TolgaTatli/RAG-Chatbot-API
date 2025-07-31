@@ -1,0 +1,5 @@
+AWS S3 Bucket is supported.
+
+The Shell classifier offers a command line interface.
+
+It is possible to use the Shell classifier from within Batch or Powershell.

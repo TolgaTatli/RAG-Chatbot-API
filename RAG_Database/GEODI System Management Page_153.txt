@@ -1,0 +1,33 @@
+The System Management Page serves as the entry point for various GEODI features, including new project creation, classification settings, DECE-STORE, and installation. This page can be accessed from the system tray icon's bottom-right menu by selecting "System Management Page".
+
+The Projects section allows users to view and manage all GEODI projects. Key actions available include creating new projects, editing projects via the Project Wizard, and starting or stopping indexing tasks.
+
+In a GEODI Cluster setup, the Projects panel displays all projects across connected GEODI servers. Users can monitor and manage projects on multiple servers, control indexing and actions remotely, and generate consolidated reports from all nodes. The Cluster architecture enables administration of the entire GEODI environment from a single interface, enhancing scalability, efficiency, and oversight.
+
+DECE-STORE functions as a central portal for accessing GEODI modules, predefined discovery and classification templates, and GDE agents and tools. It provides ready-made templates for regulations such as KVKK, PCI/DSS, and HIPAA, tailored to different countries and compliance needs. When connected, GEODI automatically updates its modules and agents as DECE-STORE is refreshed, ensuring the system runs the latest and most reliable components.
+
+Support Q is an AI-powered assistant that runs on DECE servers, designed to offer real-time assistance with GEODI usage and features, DSPM (Data Security Posture Management) workflows, data discovery, classification, and remediation. It provides instant guidance and intelligent answers to improve work efficiency.
+
+Support Q is a specialized implementation of GEODI Q, which is GEODI’s AI-powered platform for intelligent data interaction. Users can build their own assistants using GEODI Q, training them on their own data, documents, and domain knowledge. This capability allows for the deployment of smart, organization-specific AI helpdesks or knowledge agents.
+
+GEODI utilizes recognizers and dictionaries to identify sensitive data. Dictionaries are lists employed in discovery and classification processes, helping to identify and label content based on keywords, patterns, or terms relevant to an organization or its regulatory needs. New dictionaries can be added during installation or through DECE-STORE extensions. Each default classification rule includes a customizable dictionary, and users can also create their own dictionaries at any time to meet specific needs. These dictionaries enable GEODI to recognize sensitive data, domain-specific language, and risk indicators during discovery and classification.
+
+The System Information panel offers real-time insights into logged-in users and current system usage, including CPU, memory, and other key resources. This data assists administrators in monitoring system health, identifying performance issues, and effectively managing active sessions.
+
+The User Info panel allows for the management of user language preferences, individual user permissions, and global permission settings for system administrators. This area is crucial for controlling access, maintaining compliance, and ensuring users only view authorized information.
+
+The Settings tab contains subtabs for various purposes, and the settings configured here affect GEODI and all projects.
+
+The Indexing Speed setting controls the speed of indexing and discovery, and it should be adjusted based on system resources and project needs. The default value is 5, representing maximum speed, at which GEODI can process an average of 0.5–1 TB of data per day, depending on server capacity and data complexity. The speed can be modified even while the discovery process is running, allowing for on-the-fly performance optimization.
+
+Even at the highest indexing speed, GEODI is designed to intelligently reserve CPU and memory resources. This ensures the system remains responsive, other applications or background services can operate normally, and system overloads and crashes are minimized. GEODI balances performance and stability, making it suitable for continuous discovery operations, even on shared or critical infrastructure.
+
+By default, emails triggered by alerts or workflows are sent via DECE servers. For this functionality to work, the system must have access to `http://service.decesoftware.com`. Alternatively, users can configure GEODI to send emails through their organization’s SMTP servers by adjusting the appropriate settings.
+
+GEODI stores its settings in an encrypted, portable format across different GEODI instances by default. This facilitates transferring configurations between environments, maintaining consistency across clustered or distributed systems, and ensuring secure storage of sensitive parameters. This default behavior can be customized if required.
+
+Many organizations may require multiple GEODI servers to increase Discovery or Auto-classification capacity. Activating Cluster mode is suggested to manage all servers from a central location and obtain consolidated reports. A central login provider, such as LDAP or Microsoft, is necessary for this method to function.
+
+To configure a Cluster, users navigate to Settings → System Settings → Cluster Settings. In the open dialog, servers to be included in the cluster are defined using only a URL and a Display Name. It is a best practice to eliminate wrong URLs and potential network problems before proceeding. Once set up, defined servers and project counts will appear in Projects, and project names must match to generate consolidated reports. GenericSettings can be left as shown or changed to override workspace and report matching.
+
+A Master GEODI can generate a consolidated report from other GEODI instances, even if each instance discovered different sources with different settings. Workspace names and reports should be matched, or match rules can be overridden with values. When these values are changed, GEODI will match the selected ones accordingly. Report formats other than XLS and CSV are merged into a ZIP file as separate reports.

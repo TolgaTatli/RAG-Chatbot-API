@@ -1,0 +1,13 @@
+The training is designed for users of GEODI Data Classification tools. With these tools, users will be able to perform manual or automatic classification within Desktop and Microsoft Office software.
+
+The participants for this training include Technical, Sales, User, and General personnel.
+
+There are no prerequisite trainings required.
+
+Supporting materials for the training include the GEODI Classifier Office and Other Add-ons User Guide, and a User Training Video.
+
+The trainings aim to provide a general idea, and it is necessary to reinforce what is learned by using it.
+
+Users should not hesitate to ask for support from the teams regarding topics they are unsure about or cannot perform.
+
+Some features mentioned within the scope of the training may not be included in the user's license.

@@ -1,0 +1,5 @@
+Mevcut sorgunuzu arama kutusunun yanındaki menü ile kaydedebilirsiniz. Sorguları kaydetmek iki fayda sağlar: sık kullanılan sorgulara hızlı erişim imkanı sunar ve izlemeye alındığında sürekli bilgilenmeyi sağlar.
+
+Kaydedilmiş sorgular diğer kullanıcılar ile paylaşılabilir. Bu paylaşım, eğitim ihtiyaçlarını azaltmaya ve ekip çalışmasını güçlendirmeye yardımcı olabilir.
+
+Kaydedilen sorgular izlemeye alınırsa, sistem sorguda değişiklik gerektiren durumları bildirecektir. Örneğin, yeni bir doküman geldiğinde veya bir doküman değiştiğinde, kullanıcı birkaç dakika içinde bilgilendirilir.

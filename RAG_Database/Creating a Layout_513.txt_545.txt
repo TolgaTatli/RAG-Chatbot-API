@@ -1,0 +1,15 @@
+The layout is a concept created to partially change the order and operation of DOM objects in the ES interface.
+
+Scripts and CSS files can be copied under a subfolder, with the name to be specified for Layout, which can be created under the GUI\Custom\ES\Layout folder. When selected on a project or user basis, the layout will load all script and CSS contents in the ES interface folder to the page.
+
+A layout can be passed through the URL using 'Layout =', where a value is transmitted. This transmitted value will be stored in the browser.
+
+The default layout can be specified on a project basis by adding the definition 'Layout': 'a specified value' under GenericSettings in project settings.
+
+The layout concept can be turned off by using the definition 'Layout': 'a specified value'.
+
+A single mandatory layout can be defined for use in a project by using the definition 'ForceLayout': 'a specified value'. When this definition is made, all other layout determination methods are ignored.
+
+The definition 'Layout': 'a specified value' can be added under SystemJSONSettings to specify the default Layout for all projects.
+
+A value of 'none' means that a layout is not selected.

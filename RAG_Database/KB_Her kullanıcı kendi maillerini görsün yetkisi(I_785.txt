@@ -1,0 +1,7 @@
+Veri keşif projelerinde bir mail kutusunu ya da toplu olarak tüm e-postaları keşfedildiğinde yetkili olanlar tüm mailleri görürler. Anlatılan ayar ile her kullanıcı sadece kendi maillerini görebilir. Üst yetkiler, admin gibi, bakidir.
+
+Ctrl +Shift arayüzünden kaynak veya proje bazlı yapılan ayar ile Mail indexleme Projesinde kullanıcılar, sadece From/To/CC/BCC alanlarında geçiyorsa maili görebilmektedir.
+
+Ctrl +Shift arayüzünde Permission_CustomizeMode içinde AppendUserMails seçildiğinde, GEODI’ye giriş yapan kullanıcı indexlenen mail’de From/To/CC/BCC alanlarında geçiyorsa maili görebilmektedir. Bunun dışında sadece sistem yöneticisi görebilmektedir.
+
+Ayarı değiştirdikten sonra ReIndex Permission yapılırsa geçmiş eposta verileri için yetki indexi düzeltilecektir. Bu işlem otomatik yapılmamaktadır. Buradaki yetki ayarlarının değişmesi veya hata giderilmesi yeniden tarama gerektirmemektedir. Geçmiş verileri düzenlemek için ReIndex Permission yeterlidir.

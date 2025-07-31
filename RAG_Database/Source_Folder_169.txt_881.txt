@@ -1,0 +1,25 @@
+GEODI connects local folders or network shares for indexing and discovery. If sharing is not preferred or possible, or when many computers need discovery, the GDE agent can be used for indexing on Windows, MacOS, or Linux clients.
+
+Indexing starts with the folder source in the project wizard, where options like OCR and FacePro may vary based on the license. The selected folder and all its subfolders will be indexed. By default, certain types such as EXE and DLL are excluded, but this exclusion list can be modified. For most file and content types listed on the "Supported Formats" page, the file content will be indexed, while for unknown types, only the file name will be indexed. Sampled discovery is also possible, allowing for a decision to crawl all or a sampled subset.
+
+For GEODI Windows Service, a service user is required for connection. Credentials, including username and password, should be provided to access each folder or share if the service user does not have access to them.
+
+GEODI indexes various content types, including All file typeWordke word, excel, PDF, text, jpeg, tiff, video, file databases like SQLite and Access, and compressed files and their content such as ZIP, RAR, and 7ZIP. For unrecognized, password-protected, or corrupted files, only the file name is indexed, with an exclamation mark appended to the name for the latter two categories. GEODI also indexes *.xDeceConnection files, which are connection files for any database created by GEODI, and *.meta.xml files, which serve as a structure for defining additional metadata for any file.
+
+New or changed content may be indexed periodically or manually. Sampling is possible when exhaustive indexing is not required.
+
+The GEODI Service user must have at least read-only access to the folder tree. GEODI users' permisions may be defined per source, or if LDAP is enabled, LDAP permisions per user is preserved for G” action to synchronize. If options like Drag & Drop are selected, write permisions may also be required for defined directories and subdirectories. If a different username is required for file server or sharing, it can be defined in GEODI or by using a command like 'net use ..'.
+
+If indexing of changing content is active on a project basis, it applies to all resources. Periods for automatic scanning can be defined on a resource basis by enabling automatic scanning. Files added to a folder will be included, and changed files will be versioned. Deleted files will continue to exist in the index, and to remove them, a system administrator needs to execute the "index repair --> delete deleted items" operation.
+
+Selected dictionary entries for the status dictionary appear in the "note-taking" interface, which facilitates easier and more accurate labeling. An example status dictionary provided with GEODI can be used for HR processes.
+
+The backup option is valid for all resources. GEODI indexes content and backs it up to a specified directory. Files deleted after indexing are included in the backup and can be accessed via GEODI. With backup, files can be opened, viewed, or downloaded not only for the latest version but for all versions, and CAD & GIS Viewer can visually compare CAD files.
+
+File paths in network directories can be very long, which is a known issue with the Windows operating system. A possible solution is to shorten the folder path using the "subst" or "net use" commands. If LDAP permisions change after indexing, a system administrator needs to execute the "index repair --> update permisions" operation.
+
+By default, GEODI excludes some file types from indexing, such as EXE, DLL, and system files, but these definitions can be expanded or collapsed. The definitions are used from the Settings/IgnoreFileTypes directory under AppData or app, where multiple files can exist, allowing settings to be modular. This setting applies regardless of the file source, with example exclusions including ~$*, $*, BOOTMGR, BOOTNXT, *.$NCZ, *.$KTB, *.TMP, *.SW, *.CSS, and *.EXE.
+
+For many file types with TEXT encoding but different extentions, such as XML, BAT, or LOG files, their extensions can be added to Settings/Reader/TextFileSettings. GEODI will then index and view these files as a TEXT file.
+
+A read limit of 104857600, equivalent to 100Mb, can be set, or 0 for no limit, with MaxSize also being 104857600. This applies to files with content types such as .txt, .log, .kap, and .drk.

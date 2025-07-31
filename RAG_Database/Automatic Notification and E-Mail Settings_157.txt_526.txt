@@ -1,0 +1,9 @@
+The Automatic Notification Messages feature provides two basic monitoring capabilities. Users can monitor desired queries and receive automatic notifications when query results change, such as when a new document is added. Additionally, users can send messages to individuals mentioned in their notes, facilitating easy sharing of notes with team members.
+
+In the default setup, users are limited to saving and sharing their queries with other users. To fully utilize the Automatic Notification Messages feature, specific definitions are required. Users must have an e-mail address, with LDAP users utilizing e-mail settings from Active Directory. Furthermore, the user must click the “Save and Watch the Query” button, and the “Watch” option must be selected within the project.
+
+GEODI employs an e-mail infrastructure for both notification and user settings. If e-mail settings are left blank, notifications will be delivered via a DECE Gmail account. To customize the sender of messages to an e-mail belonging to the organization, users can access the settings via GEODI/Manager/Settings/e-Mail.
+
+When configuring organizational e-mail settings, Microsoft Office 365 is provided as an example. The server address and port number will vary depending on the mail server used. Users can set the sender display name as desired, which will be visible to recipients as the person who sent the mail, though some servers may not allow the "image name." After creating the settings, they should be tested and saved once functionality is confirmed. Incorrect e-mail definitions will prevent notifications, and settings must be updated if the password of the associated account changes.
+
+For links embedded within e-mails to function correctly, the ServerUri URL must be defined. This definition is described under "System Configuration - Security Settings." An example of this definition is `{"ServerUri":"http://servis2.dece.com.tr"}`.

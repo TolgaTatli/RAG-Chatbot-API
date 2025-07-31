@@ -1,0 +1,57 @@
+GEODI Sınıflama Politika Yöneticisi, otomatik sınıflamada grup, kişi, IP veya yazılım (örneğin Word, Excel) bazında farklılıklar oluşturmaya olanak tanır. Bir kullanıcı grubu için sadece otomatik, diğerleri için sadece manuel sınıflama ayarlanabilir veya istenilen kullanıcı grubu için sınıflama tamamen devre dışı bırakılabilir. Kurallar değiştirildikten yaklaşık 10 dakika sonra istemcilerde aktif hale gelir.
+
+GEODI arayüzünde toplu sınıflama yapılabilir. Kullanıcılar sorguyu yazıp facet alanında "Toplu Sınıflama"yı seçerek bu işlemi gerçekleştirebilir. Bu özellik, Folder, File Server ve GDE veri kaynaklarından gelen verilerde geçerlidir. Etiketler ilgili dosyalara veya ADS (Alternate Data Stream) olarak yazılacaktır.
+
+Semantik Sınıflama, GEODI'nin IBAN ve Kredikartı gibi bilgilerin yanı sıra para, doküman türü ve tarih gibi bilgileri de keşfetmesi ve bu bilgilere göre sınıflama yapabilmesi anlamına gelir. Örneğin, "Para > 1M TL ise gizlidir" şeklinde bir kural yazılabilir. Dokümanlarda farklı şekillerde yazılsa dahi para değerlerinin tanınması ve miktara göre sorgulanması semantik sınıflamanın bir örneğidir. GEODI, bir belgenin sözleşme olup olmadığını Yapay Zeka ile anlayarak "sözleşme ise hizmete özeldir" gibi etiketlemeler yapabilir.
+
+GEODI sınıflama araçları, sınıflanan dokümanların dosya tarihini korur ve bu tarih değişmez.
+
+Uzak PC'lerde GDE ile keşfedilmiş dosyalar yerinde sınıflanabilir. GEODI sunucusuna GDE üzerinden gelen dokümanlarda Sınıflama lisansı varsa, GEODI ES üzerinden dokümanlar sorgulatılıp kaynak makine üzerinde sınıflama yapılabilir. Sınıflama yapılacak makinede Classifier ve GDE çözümlerinin yüklü olması gerekmektedir.
+
+Veri tabanlarına doğrudan etiket yazma diye bir kavram bulunmamaktadır. Ancak GEODI sınıflama araçları, bir veri tabanı kaydının sınıfını raporlayabilir ve bu rapora göre aksiyon alınmasını sağlayabilir.
+
+Kurum içi mailler (aynı domaindeki mailler) sınıflama dışı tutulabilir. GEODI Sınıflama Yönetim Arayüzündeki seçenekler kullanılarak aynı domain içerisindeki kullanıcıların mail gönderimi sınıflama dışında bırakılabilir.
+
+Header, Footer ve Filigran çok dilli olabilir. Aynı anda çok sayıda dil tanımlanabilir ve dil seçimi makinanın diline göre yapılacaktır. Bu değerlerde kullanıcı adı gibi değerler kullanılabilir ve birden çok satır tanımlanabilir.
+
+Sınıf küçültmeye izin verilip verilmemesi, politikalara bağlı olarak tüm ya da belirli bir kullanıcı kümesi için ayarlanabilir. Otomatik sınıflamanın altında sınıf verilemez kuralı da kullanılabilir.
+
+Mail İmzalarında yer alan isim, telefon ve e-posta gibi bilgiler bir araya geldiğinde kişisel veri olarak algılanır. Bu durum, boş mail dahi iletilse PII (Kişisel Tanımlayıcı Bilgi) olarak etiketlenmesine neden olabilir. Bu durumu engellemek için imzaları tanıyacak bir sözlük oluşturulmalıdır. Bu durumda sınıflama sadece mail gövdesindeki bilgilere bakacaktır.
+
+GEODI Sınıflama Politika Yönetici arayüzünden sınıflama loglarının formatı seçilebilir. Veritabanı, syslog, CEF veya CSV seçenekleri sunulur. Bu loglar bir SIEM uygulaması ya da Log Paneli ile izlenebilir.
+
+GEODI ajanlarının dağıtımı için ManageEngine, PDQ, SCCM veya benzeri araçlar kullanılabilir. GEODI Sınıflama çözümü, ajan dağıtımı için gerekli MSI ve parametrelerini otomatik olarak üretir. Ajanların güncellenmesi otomatiktir ve her 2 günde bir kontrol edilir. Tek ajan dağıtılacaksa ilgili MSI paketini uçlarda çalıştırmak yeterlidir. Ajanların izlenmesi için bir panel oluşturulabilir.
+
+Varsayılan olarak, Ofis eklentilerini Windows kullanıcısı kaldıramaz veya pasif hale getiremez.
+
+GEODI Sınıflama ve GDE (Keşif) ajanları, uç bilgisayarlara veya istemcilere minimum yük yaratacak şekilde tasarlanmıştır.
+
+Classifier ayar değişiklikleri istemcilerde otomatik olarak ve yaklaşık 10 dakika içinde aktif olacaktır.
+
+GEODI eklentileri çevrimdışı çalışabilir. Eklentilerin politikaları alabilmesi için GEODI sunucusuna en az bir kez erişmesi gerekmektedir. Çevrimdışı durumda manuel sınıflama kullanılabilirken, otomatik sınıflama seçeneği kullanılamaz. Son bağlantıdaki kurallar geçerli olur ve loglar biriktirilerek sunucu bağlantısı kurulduğunda aktarılır.
+
+PDF ve Ofis belgeleri dışındaki dosyalar için ADS (Alternate Data Stream) yöntemi kullanılır.
+
+Windows için "dir /r" komutu ile ADS (Alternate Data Stream) dosyaları listelenebilir. ADS etiketleri NTFS dosya sisteminin bir özelliğidir.
+
+ADS etiketleri bazı koşullarda korunmayabilir. Dosyanın adı değiştirildiğinde, dosyanın uzantısı değiştirildiğinde (örneğin txt'den log'a, mp4'ten avi'ye) veya dosya GEODI Classifier olmayan başka bir bilgisayara kopyalanıp kontrol edildiğinde sınıf korunur. Ancak, dosya RDP bağlantısı üzerinden kopyalandığında, wetransfer gibi platformlara yüklenip indirildiğinde, Rar/zip olarak sıkıştırılıp extract edildiğinde veya bir e-postaya eklendiğinde sınıf korunmaz.
+
+GEODI, mevcut bir sınıflama aracının etiketleme şemasına uyum sağlayabilir. Bu sayede, DLP tarafında ek bir çalışma yapmadan aynı anda iki sınıflama çözümünü kullanmaya devam edilebilir.
+
+GEODI sınıflama çözümü Windows bilgisayarlarda çalışır. Linux, MacOS veya SharePoint ortamlarında ise veri keşfi yapılabilir.
+
+GEODI Classifier, etiketleme şeması aynı olduğu sürece farklı bir sınıflama aracı ile sınıflanmış dokümanları anlayabilir. GEODI sınıflama aracı, önceden sınıflanmış bir dosyanın sınıfını anlar ve politika ayarlarına göre davranır.
+
+Ofis eklentileri veya Desktop Sınıflama aktif değilse, istemci kurulumunun tamamlandığı, GEODI sunucusuna erişim olduğu ve GEODI Token geçerliliğinin kontrol edilmesi gerekmektedir.
+
+Otomatik Sınıflama aktif değilse, GEODI sunucusuna erişim olmayabilir ya da politika ayarlarında otomatik sınıflama pasif olabilir.
+
+Sınıflama uzun sürüyorsa, otomatik sınıflama, ağ trafiği, sunucu yükü ve dosya boyutları sebebiyle zaman zaman uzun sürebilir. GEODI otomatik sınıflamayı dosya içeriğine göre yapar ve Word ya da Excel gibi dosyaları açmak zaman isteyebilir.
+
+Mail İmzaları genellikle isim ve telefon içerdiği için kişisel veri olarak algılanması beklenen bir durumdur. Bunu önlemek için e-posta sunucusunun ayarları değiştirilmeli veya bir sözlük oluşturulmalıdır. Benzer yöntem, antetli Word belgelerindeki header/footer'da yer alan bilgilerin ihmal edilmesi için de kullanılır.
+
+Sınıflama ajan ve eklentileri GEODI sunucusunu görmüyorsa (GEODI kapalıysa veya GEODI portu açık değilse), ancak ajanlar en az bir kez GEODI sunucusuna erişip politikaları almışlarsa, manuel sınıflama kullanılabilir ancak otomatik sınıflama seçeneği kullanılamaz. Son bağlantıdaki kurallar geçerli olur ve loglar biriktirilerek sunucu bağlantısı kurulduğu zaman aktarılır.
+
+Mail Merge gibi aynı anda çok sayıda mail gönderiminde normalde her mail için sınıflama pop-up'ı açılır. Toplu maillerde bunu engellemek için mail gövdesine veya mail merge için Word belgesi içine `<GEODI_NO_POPUP>` ifadesi eklemek yeterlidir. Bu sayede iletilen mailler pop-up açılmadan otomatik olarak sınıflanacaktır. Alternatif olarak Outlook/OWA için ayrı sınıflama politikası da oluşturulabilir.
+
+Sınıflandırma ajanları, otomatik olarak sunucuda güncel bir sürüm olup olmadığını her 2 günde bir kontrol eder. Bu kontrol ve otomatik güncelleme işlemi için `documents.decesoftware.com` adresine erişim sağlanabilmelidir. Erişim var ve otomatik olarak kurulum sağlanmıyorsa, güvenlik duvarı ayarları da kontrol edilmelidir.

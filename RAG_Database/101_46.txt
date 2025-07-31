@@ -1,0 +1,1 @@
+When scanning changing web page contents, the same contents are re-indexed. This is because web pages do not provide clear information indicating changes, which results in the content being indexed in the same way every time.

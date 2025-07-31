@@ -1,0 +1,13 @@
+In this course, participants will learn how to create an Archive using GEODI and its Geo capabilities. Some of the features covered in the course originate from specific modules, including CAD&GIS Viewer, GeoArchive, GEODI Pro, and the Parcel Recognizer module.
+
+The course has a duration of 1 hour. Prerequisite trainings for this course include GEODI 101 and GEODI 102 Queries.
+
+The scope of the course includes the Search Page, where users can add documents using drag and drop, and learn why metadata or an index is not needed. It also covers Scanned Documents, detailing how to scan, things to watch out for, scanning with a cell phone, adding a note, and monitoring queries.
+
+The course scope also includes Map functionalities, such as accessing documents via the map. It explains how the map is created, detailing location sources like Provincial/District dictionaries, Parcels, Geographical Boundaries, Layout Recognizer, and Coordinated Images. Map overlay, which involves drawing an NCZ or DWG on the base map, and interrogation nearby are also covered.
+
+Handling of CAD&GIS files is part of the course scope, including supported file types such as DWG, NCZ, DGN, GeotTIFF, ECW, KML, and SHP. Other topics related to CAD&GIS files include viewing and note taking, opening spatially conflicting files, and comparison of two different files for difference analysis.
+
+Additional topics within the course scope include adding a Database, Authorizations, and Locations.
+
+For support, participants are advised to contact the teams if they are unsure about a topic or unable to perform a task. It is also noted that some features mentioned may not be available in a user's specific license.

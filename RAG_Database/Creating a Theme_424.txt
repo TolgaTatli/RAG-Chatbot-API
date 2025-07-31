@@ -1,0 +1,11 @@
+A folder created under the GUI / Theme directory is considered theme content. Themes allow for the replacement of existing images, icons, and CSS files with new ones, or for the addition of new CSS and JavaScript content to each page. A theme can encompass all or a subset of the files found under the GUI folder.
+
+A theme is activated by using a specific link format, such as `http://127.0.0.1:3323/?Theme=[ThemeName]`. To reactivate the default theme, the link `http://127.0.0.1:3323/?Theme=None` can be used. The GEODI address provided in these examples, `http://127.0.0.1:3323`, is for a local GEODI instance and may differ in other environments.
+
+To change existing CSS or image sources, a theme folder can contain all or some of the folders and files from the GUI directory, with the specific content determined by the designer's needs. The `GUI / img`, `GUI / CSS`, and `GUI / icons` directories are frequently used for easily modifying appearance and icons. When creating new theme files for replacement, it is important to ensure they have the same name as the files they are replacing. Original files located at `GUI / *` will continue to be used if their counterparts are not present in the theme directory.
+
+An example folder structure for a theme named "MyTheme" under `GUI / Theme` includes subdirectories like `img`, `CSS`, and `icons`. Within `img`, there can be `windowsMenu` and `mainMenu` containing files such as `16.png`, `24.png`, and `docs24.png`. The `CSS` directory might contain `ol / ol3-controls.css` and `bootstrap.css`. The `icons` directory could include `Content / file.pdf.png`.
+
+To implement changes that affect all pages, a `Default` folder must be created within the `[ThemeName]` folder. The CSS and JavaScript content placed in this `Default` folder will be loaded on every page. This method also allows for changes to all Bootstrap plugins by adding a Bootstrap 3.3.1 theme file, which was the approach used to create the sample theme.
+
+An example folder structure for adding global CSS and JavaScript includes a `Default` folder located under `GUI / Theme / MyTheme`. This `Default` folder can contain files such as `bootstrap.theme.css`, `custom.css`, and `AllPage.js`.

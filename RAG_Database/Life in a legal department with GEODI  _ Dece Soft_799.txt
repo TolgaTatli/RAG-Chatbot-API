@@ -1,0 +1,9 @@
+A legal department faces many challenges, including security, attention to detail, collaboration, corporate memory, and regulatory compliance. GEODI impacts life in a legal department by offering features such as discovery, search, collaboration, anonymization, LLM, and other AI and NLP-based smart features.
+
+GEODI provides solutions for data management, including Search, Discover, Mask, and Classify. The platform also offers capabilities to Search, Discover, Mask, Encrypt, and Classify data, emphasizing data protection.
+
+An upcoming webinar titled "World’s First AI-LLM Powered Data Discovery and Classification with GEODI Q" is scheduled for January 23, 2025.
+
+Recent webinars include "PCI/DSS Compliance with GEODI" (August 27, 2024, 23 min), "Life in a legal department with GEODI" (August 6, 2024, 18 min), "Semantic Discovery, Classification and Search" (July 23, 2024, 30 min), "Database Discovery" (July 9, 2024, 30 min), "How quick GEODI in 0 to Classification" (June 25, 2024, 23 min), "Adapt GEODI to your needs:DECE-Store" (June 11, 2024, 15 min), "Data Anonymization and Masking" (June 4, 2024, 30 min), "Media Archive with Face Recognition" (February 27, 2020, 8 min), and "Croatia, Ministry of Agriculture Success Story" (January 23, 2020, 7 min).
+
+Dece Software is the company associated with GEODI. Contact information is available, including the email address info@decesoftware.com. Additional resources and links provided are About-Us, Blog, Bulletins, Webinars, Integrations, Career, and Privacy Policy.

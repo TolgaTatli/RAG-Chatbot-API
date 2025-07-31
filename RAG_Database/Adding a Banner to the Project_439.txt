@@ -1,0 +1,15 @@
+To specify a picture for the banner background, rename the desired image as 0.jpg and place it under the BannerList folder. This BannerList folder should be created under C:\Users\User\AppData\Roaming\Dece\App\GEODI\GUI\Custom.
+
+For project-specific banners, a sample folder structure is C:\Users\User\AppData\Roaming\Dece\App\GEODI\GUI\Custom\Projects\"YourProject'sName"\BannerList.
+
+To make a banner global and active in all projects, create a folder named _GlobalBanner. Within this _GlobalBanner folder, create a BannerList folder and locate the banner image there. A project-based banner will override the global banner, becoming visible in the specific project where it is set.
+
+A logo in .png format can be placed under C:\Users\User\AppData\Roaming\Dece\App\GEODI\GUI\Custom\Projects\"Your Project Name"\. This logo will automatically appear on the banner.
+
+More than one image can be used on the banner. When the page is refreshed, the picture displayed is also refreshed. To achieve this, use n number of pictures named 0.jpg, 1.jpg, up to n.jpg in the BannerList folder.
+
+Changes can be made to banners by activating prepared HTML files. These HTML files should be downloaded and placed in a "BannerCustomize" folder, which must be created under the directory C:\Users\User\AppData\Roaming\Dece\App\GEODI\GUI\Custom\Projects\"Project Name".
+
+In the Standard Banner View template, the Geodi logo can change according to the background and current status. This occurs when no Customize files are added.
+
+Specific HTML files can be used for banner customization. Placing nameDelete.html results in a banner without the project name. Using alongName.html positions the logo and project name next to each other. ToCenter.html places the logo and the project name in the center of the banner. WSDescription.html includes the description text, added to the project from the project wizard, on the banner.

@@ -1,0 +1,1 @@
+Confluence can be used as a source.

@@ -1,0 +1,7 @@
+For details, refer to the Enumerator (Connector/Adapter) Concept document.
+
+If an application is a library or adapter, it can choose to feed with this method if it does not have an active application running.
+
+For details, refer to the Enumerator (Connector/Adapter) Concept document.
+
+If an application is a library or adapter, it can choose to feed with this method if it does not have an active application running.

@@ -1,0 +1,1 @@
+If a language recognizer is added to Ğtpjrn, content can be selected according to its language. Examples of languages for selection include Turkish (dil:TR) and English (dil:EN).

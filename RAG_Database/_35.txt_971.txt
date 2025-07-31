@@ -1,0 +1,1 @@
+Log files cannot be configured to create a new file for each day.

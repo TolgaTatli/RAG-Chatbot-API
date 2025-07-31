@@ -1,0 +1,5 @@
+The content is titled NATO and National Classification Template.
+
+This module includes classification and label definitions along with the NATO and National Classification Scheme.
+
+The version is 1.0.0.4.

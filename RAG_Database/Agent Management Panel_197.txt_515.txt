@@ -1,0 +1,11 @@
+GEODI utilizes end-point agents for the discovery of end-point PCs or for classification purposes. These agents are designed to obtain policies from a central GEODI Server and subsequently transmit their results back to the same server.
+
+A management panel is available for system administrators to monitor the health and activities of these agents. This panel is exclusively accessible to system administrators. It is provided ready with either a Classifier Suite or GDE installation and can also be utilized as a widget.
+
+The management panel provides specific information for each end-point, including the total end-point count. Details available through the panel encompass the OS version (such as Windows, MacOS, and Linux), IP address, Port, and computer name. It also displays the agent type (including GDE, GDE Service, Desktop Classifier, and Office Classifier) and the agent version. For GDE agents, the panel shows the last data sent time and the total send count.
+
+Users can generate a report from the management panel or convert the panel's information into a physical document by using the print icon. The Client panel features a bar in the top right corner that enables filtering of agents' statuses based on their communication times. Available filters include "In the Last Hour," "In the Last Day," "More than 1 day old," "More than 7 day old," "More than 30 day old," and "No Data." Additionally, the panel displays the last classification action for each Classifier Agent, specifically Desktop and Office types.
+
+Once an agent is added, it will never be automatically deleted from the list. To reset the agent list, it is necessary to delete the "GEODI.clients" file located in the "%appdata%NamedClients" folder. Agents will be re-added to the list as they connect to the system.
+
+The text indicates that agent installation details are provided on subsequent pages. Identified agent types include "Keşif Ajanı - GEODI Desktop Explorer (GDE)" and "Classifier."

@@ -1,0 +1,21 @@
+The course will cover how GEODI features are used for a Discovery project. After discovery, it will demonstrate how to identify inappropriate content, understand risks, and focus on results and actions aimed at reducing risks.
+
+The course content is categorized as Technical and General. The total duration of the course is 45 minutes + 45 minutes.
+
+The course assumes that a GEODI server is already installed and running. Participants are expected to know how to connect to a data source and discover content. The course will focus on results, including queries, reports, panels, and actions, rather than the details of connecting or discovering.
+
+The Discovery Panel in GEODI 131 offers brief information about findings and serves as a good starting point for viewing Discovery results.
+
+Users have the option to utilize queries, reports, or panels, and the choice of which to use is left to their discretion.
+
+For databases, the ContentFindings(DB) report can be used to locate tables and columns that contain sensitive data, PII, PCI, or other information. Users determine how to correct these findings. GEODI provides a masking/anonymization solution that allows for the masking or anonymization of this data either in its original location or within a copy, such as for test or software development purposes.
+
+A specific page briefly explains how to query compliant or non-compliant information. The Facet field provides further details related to this.
+
+For remediation, users have the option to correct data, modify permissions, or leave the data unchanged. If LDAP is in use, it is possible to see which groups have access to specific content, or a query starting with "user:" can indicate what a user or group can access. Remediation functionality is applicable to folder/file server and GDE content.
+
+For legacy data, queries can be used to select data that is older than 5 or 10 years. This data can then be deleted, quarantined, or masked. Additional criteria, such as "CV and older than 5 years," can be incorporated into these selections.
+
+Alarms provide information on whether new data contains sensitive content, addressing the continuous arrival of new data that may contain sensitive information even after initial discovery and correction. An alarm can be set within a query to notify if sensitive information enters a system like XServer. The GEODI query bar includes actions for saving and setting alarms for this purpose.
+
+If users are unsure about a topic or unable to perform a task, they are encouraged to seek support from the teams. It is noted that some features may not be included in a user's license.

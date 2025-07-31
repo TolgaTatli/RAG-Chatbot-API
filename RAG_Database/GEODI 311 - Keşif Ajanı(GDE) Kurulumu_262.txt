@@ -1,0 +1,17 @@
+Bu eğitim, GEODI keşif araçlarının veya ajanlarının uç bilgisayarlara dağıtımını kapsar. Eğitim sadece GEODI'ye özgü konuları ele alır ve ajanların dağıtımı için geliştirilmiş ManageEngine, PDQ veya başka bir sistemin bilindiği varsayılır. Eğitimin süresi 30 dakikadır.
+
+Eğitimler genel bir fikir vermeyi amaçlar ve öğrenilenlerin kullanılarak pekiştirilmesi gereklidir. Eğitim kapsamında belirtilen bazı özellikler lisansınızda yer almayabilir.
+
+Eğitim kapsamı, Keşif Ajanı GEODI Desktop Explorer (GDE) ile ilgili konuları içerir. Bu konular arasında GDE'nin ne olduğu, EndPoint'lere GDE kurulumu, Ajan Yönetim Paneli, tipik sorunlar/sorular ve çözümleri, port konuları ile doğru dizinlerin ve içeriklerin belirlenmesi ve özelleştirilmesi bulunur.
+
+Ayrıca eğitim, çok sayıda EndPoint ve kuyruk yönetimi, GDE ile gelen verilerin sorgulanması, belirli bir makineden gelen verilerin sorgulanması, GDE sürekli keşif, GDE EndPoint kaynak kullanımı ve GDE güncelleme konularını da kapsar.
+
+Eğitimde sunucular için GDE kurulumu ve GDE Servisi, Linux ve MacOS makinelerdeki kurulum, GDE ile sınıflandırma, GDE ile aksiyonlar (imha, karantina), herkesin kendi verisini görmesi ve EndPoint veri yedekleme gibi diğer konular da yer alır.
+
+Uygulama kapsamında bir istemciye GDE kurulması ve keşif sonuçlarının gösterilmesi beklenmektedir. Bu kurulum öncesinde varsayılan port 1982'nin açık olduğunun ve istemcilerin GEODI sunucusunu gördüğünün kontrol edilmesi gerekmektedir. İstemcide keşif yapmak için geçici bir dizin oluşturulmalı ve GDE ayarları uygun şekilde değiştirilmelidir. GDE kurulumu manuel olabilir veya ManageEngine, SCCM gibi araçlar kullanılabilir. Kurulum sonrası istemcinin Ajan Yönetim Panelinde göründüğü teyit edilmeli, sonuçlar GEODI arayüzünde görülmeli/raporlanmalı ve GDE üzerinden dosyaların açılıp görüntülendiği kontrol edilmelidir.
+
+İstemci bazlı özelleştirme ile ikinci bir istemci için GDE ayarları IP'ye bağlı olarak özelleştirilebilir. Özelleştirme kapsamı genellikle dizinleri veya ihmal edilecek dosya türlerini içerebilir.
+
+Erişim ve ihtiyaçlar doğrultusunda bir Linux ve MacOS makineye kurulum yapılmalıdır; Windows için geçerli MSI kurulumu bu ortamlarda geçerli değildir.
+
+GEODI FileServer'lar ajansız olarak doğrudan veya SSH ile keşfedilebilir. İhtiyaçlara göre ajanlı keşif istenirse GDE, Windows sunuculara servis olarak kurulabilir.

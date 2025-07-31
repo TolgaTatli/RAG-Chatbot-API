@@ -1,0 +1,9 @@
+The GEODI BELGENET Module allows users to define BELGENET as a source within GEODI. This module can be downloaded from DECE-STORE. Users can search, discover, and view documents within BELGENET by providing suitable criteria. Any documents found will open directly on BELGENET.
+
+To use the GEODI BELGENET Module, a valid BELGENET user is required. The search, discovery, and other features of the module are limited by the permissions of this user.
+
+Connection to BELGENET requires certain conditions. These include a Belgenet access address and a Belgenet account with a minimum of read permission. The scope of discovery will be limited by the access permissions of this user account.
+
+The module supports searching by criteria such as Konu (Subject), Evrak ID (Document ID), Sayı (Number), and Doküman Sayısı (Document Count). Users can add asterisks (*), commas (,), or desired words to their search queries.
+
+Indexing within the module will cover documents that have been added after a specified start date. The end date for indexing can be left blank. If Scheduled Indexing is activated, new general documents will continue to be processed at a user-defined period.

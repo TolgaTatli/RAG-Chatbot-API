@@ -1,0 +1,13 @@
+Dece Software's offerings and navigation include Contact Us, Support, Live Projects, Need Analysis, and the GEODI Platform. Available resources encompass Blogs, Bulletins, Success Stories, Webinars, Support & Technical Docs, Developer Resources, Technology, and Partners. Solutions provided are Search, Discover, Mask, and Classify. Database Discovery and Register are also listed.
+
+Database discovery presents challenges such as billions of rows, embedded documents, and thousands of tables. Strategies for databases will be discussed. A Database Discovery event is scheduled for 9/7/2024, and spots can be reserved today.
+
+An upcoming webinar, "World’s First AI-LLM Powered Data Discovery and Classification with GEODI Q," is scheduled for 23/1/2025.
+
+Recent webinars include "PCI/DSS Compliance with GEODI" (27/8/2024, 23 min), "Life in a legal department with GEODI" (6/8/2024, 18 min), "Semantic Discovery, Classification and Search" (23/7/2024, 30 min), "Database Discovery" (9/7/2024, 30 min), "How quick GEODI in 0 to Classification" (25/6/2024, 23 min), "Adapt GEODI to your needs:DECE-Store" (11/6/2024, 15 min), "Data Anonymization and Masking" (4/6/2024, 30 min), and "Media Archive with Face Recognition" (27/2/2020, 8 min).
+
+A success story involves the Croatia, Ministry of Agriculture, dated 23/1/2020 and lasting 7 minutes.
+
+Dece Software protects data through actions such as Search, Discover, Mask, Encrypt, and Classify. Solutions listed include Search, Discover, Mask, and Classify, which are associated with GEODI.
+
+Additional links provided are About-Us, Blog, Bulletins, Webinars, Integrations, Career, and Privacy Policy. Contact can be made via info@decesoftware.com.

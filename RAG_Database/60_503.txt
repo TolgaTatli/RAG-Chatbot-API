@@ -1,0 +1,7 @@
+GEODI File Server taraması yapabilir. Bu tarama için iki ana yöntem bulunmaktadır: Ağ Paylaşımı ve GDE Ajanı.
+
+Ağ Paylaşımı yöntemi, mevcut bir ağ paylaşımı üzerinden dosyalara doğrudan erişim ve indeksleme sağlar. Bu yöntem ek bir araç gerektirmez ve gerekli izinler mevcut olduğunda basittir.
+
+GDE Ajanı, ağ paylaşımı mevcut olmadığında veya GEODI Hizmeti kullanıcı izinleri yetersiz olduğunda kullanılır. GDE ajanı Windows, Linux veya macOS üzerinde çalışır ve paylaşım tanımlamadan dosya sunucularındaki dosyaların indekslenmesini ve bulunmasını sağlar. GDE ajanı, değişen dosyaları bulmak ve indekslemek için her 3 saatte bir uç noktaları veya dosya sunucularını sürekli tarar ve seçilen dosyaları GEODI Sunucusuna gönderir.
+
+Daha ayrıntılı bilgi için GEODI Destek sayfasına başvurulabilir. Kaynak: File Server - GEODI - DESTEK (dece.com.tr).

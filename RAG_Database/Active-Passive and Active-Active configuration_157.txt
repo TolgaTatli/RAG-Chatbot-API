@@ -1,0 +1,15 @@
+GEODI Server can operate in a redundant structure, specifically through an Active-Passive configuration. This configuration requires two servers and two GEODI licenses. Both the Active-GEODI and Passive-GEODI servers must have identical settings and indexes.
+
+For GDEs and/or Classification Agents that run based on the GEODI Server to operate without interruption during an Active-Passive transition, DNS records must be adjusted. After the transition, the Active-GEODI address should become the Passive-GEODI address. Consequently, the IP option should not be used in the settings.
+
+In an Active-Passive GEODI setup, the configurations, project settings, versions, and modules of both Active and Passive GEODIs must be identical. It is important to note during synchronization that settings may only be valid on the relevant machine according to GEODI Privacy settings.
+
+The Token used for GDEs and/or Classification agents in an Active-Passive GEODI configuration must be the same. Both Active and Passive GEODIs should utilize the same LDAP users, which ensures that the TOKEN obtained for the same user will be identical.
+
+Active and Passive GEODIs are capable of working on the same indexes and/or copies. For this to function, source addresses and UNCPaths must be identical on both servers. If directories are mapped with drive names using commands like `net use` or `subst`, their network access addresses should also be the same.
+
+During a transition from Active to Passive, the contents of the Index file of the Active GEODI can be copied to a specified directory using the `d.BackupIndex("BACKUP_TARGET_DIRECTORY","WS_NAME")` command. Additionally, the GEODI environment and settings necessary for operation in a Disaster Environment must be synchronized. Index Backup and Recovery is a relevant process in this context.
+
+If the Active-Passive transition process is manual, the necessary arrangements should be made in the script, including changing the DNS record. Once the passive GEODI is activated, subsequent changes, such as adding a new document, will occur on the passive system. When switching back to the active system, these actions must be reversed.
+
+GEODI's Active-Active configuration is utilized for its Classifier solution. This configuration can be set up and load balanced over Network Load Balancer (NLB) devices, with usage dependent on desired settings in NLB device management. To employ this method, certain conditions must be met across the GEODIs, including identical GEODI Versions, GEODI Module Versions, the TOKEN user (including user name and password) used in the installation, Project Names, and Project settings (such as Classification rules/classes).

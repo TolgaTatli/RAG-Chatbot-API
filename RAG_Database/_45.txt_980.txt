@@ -1,0 +1,1 @@
+96 Geodi Agents can be disseminated using the Self Contained Deployment Model. This method is already in use.

@@ -1,0 +1,29 @@
+GEODI is known by the motto "Search-Discover-Classify-Mask". Data discovery, often associated with regulations such as KVKK or PCI/DSS, is a core function. GEODI's discovery capabilities extend beyond the requirements of these regulations.
+
+GEODI specializes in uncovering hidden value within data, employing diverse methods to achieve this. Data discovery is inherently beneficial, as it enhances the understanding of data leakage risks and identifies data requiring protection, thereby increasing overall security.
+
+The network graph is an advanced tool designed to reveal deeper relationships within data. It provides insights that cannot be derived from simply reviewing lists or documents. This document will explain how to utilize the network graph.
+
+GEODI's tools are beneficial for a wide range of professionals, including lawyers, press consultants, independent auditors, inspectors, experts, managers, and individuals involved in Digital Forensics. These tools are characterized by their ease of use and effective results.
+
+A network graph is composed of points connected by lines, which can be conceptualized as a road network.
+
+Within GEODI's network graph, points are interpreted as words discovered through the system's processes or as documents, while the lines connecting these points signify relationships.
+
+The network graph is included as a component of the GEODI Discovery package. An example visual of the network graph is sourced from a sample project on the GEODI website, specifically "1013-Veri Koruma-KVKK - GEODI (decesoftware.com)".
+
+Network graph analysis presents challenges, particularly because GEODI performs data discovery at terabyte and petabyte scales. It is not feasible to display all relationships in a single graph simultaneously due to two primary reasons: the inability to achieve an understandable visual representation and performance limitations. While GEODI's general performance extends to the network graph, it operates within physical constraints.
+
+An example project containing only 5000 content items does not produce a highly meaningful visual representation. Consequently, to derive significant insights from a network graph, it is always necessary to narrow down the data. GEODI implements adjustments to enhance the clarity of the visual, and users have the option to pause or restart the process by modifying the query.
+
+The network graph loads data at one or two levels, with additional levels loadable via the navigation features. Users should allow sufficient time, as the process may occasionally demand significant computer resources.
+
+Navigation within the network graph allows users to zoom in and out using the mouse's middle wheel, similar to a map, and to enlarge specific areas. Right-clicking on any point provides access to associated documents through their properties. To load an additional level of the network graph, the "expand" function can be utilized.
+
+Document-Word Relationships address what has been discovered within a document. In this view, documents are central, and each identified name, date, location, or credit card within a document is linked by lines. If the same name appears in multiple documents, it connects to the same point, enabling the tracking of relationships across documents. Users can refine discovery results in the facet area, for instance, by limiting them to only names and credit cards.
+
+Word-Document Relationships function as the inverse of Document-Word analysis. In this configuration, a specific name is central, and connections extend from it to all documents in which that name is present.
+
+In Word-Word analysis, documents are not directly represented but are involved indirectly. Elements found within the same document are interconnected.
+
+GEODI supports over 200 data sources, ensuring no digital data is excluded. This includes scanned documents processed through OCR, databases, Word, Excel, and Open Office files, emails, UYAP files, videos, and images. Consequently, documents such as invoices, reports, proposal files, project files, specifications, and contracts can be processed by GEODI without requiring any prior manipulation. The system also allows for the addition of new data sources not already listed. Further information is available at "GEODI Veri Kaynakları - GEODI - DESTEK (dece.com.tr)".

@@ -1,0 +1,5 @@
+The lassification of PDF files taking long may have a few reason.
+
+The potential reasons for the lassification of PDF files taking long are Server load, Network issues, and GEODI configuration.
+
+Our experince says that Server load and Network issues are the most probable reasons for the lassification of PDF files taking long.

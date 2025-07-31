@@ -1,0 +1,3 @@
+Kendi dokümanlarımızda manuel olarak oluşturulan alt ve üst bilgiler ile şablonlarımızın içeriğindeki yazılar, sınıflama etiketi ile çakışmaktadır. Bu çakışmaları önlemek için bir çözüm yolu aranmaktadır.
+
+GEODI Classifier, https://destek.dece.com.tr/space/geoditr/4642111490/GEODI+Download#GEODI-SETUP-8.0.144(27921) versiyonu ile Word Quickpart ile oluşmuş metinlerini desteklemektedir. Bu destek sayesinde standart dışı etiketleme şemaları geliştirilebilir.

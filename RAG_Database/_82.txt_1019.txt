@@ -1,0 +1,3 @@
+The classification feature for Linux and MacOS is included in the roadmap.
+
+The roadmap specifies that a tool for this classification feature will be available, and it will operate exclusively through the shell.

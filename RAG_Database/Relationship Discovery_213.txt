@@ -1,0 +1,31 @@
+GEODI operates with the motto of Search-Discover-Classify-Mask. While data discovery is commonly associated with regulations like GDPR or PCI/DSS, GEODI offers capabilities that extend beyond the requirements of such regulations. The system delves deeper into discovery functionalities.
+
+Discovering relationships among people, dates, and places is considered critical information across various professions and businesses. GEODI tools facilitate analyses such as identifying individuals who appear together in documents or photographs, associating place names with a person, or finding individuals related to a specific word, place, or date.
+
+GEODI's tools are designed to be easy to use and provide effective results, benefiting professionals such as lawyers, press consultants, independent auditors, inspectors, experts, managers, and anyone involved in digital forensics.
+
+The capabilities described, including the discovery of relationships, apply to all types of information discovered by GEODI data discovery tools, not just names of people, places, or dates.
+
+In GEODI, discovery tools recognize numerous entities within data, including names, place names, addresses, ID numbers, credit card numbers, company names, and user-defined entities. These recognized entities serve as summaries of the content and are referred to as 'words' within GEODI.
+
+A relationship in GEODI can be defined by the co-occurrence of entities, such as two people appearing in the same document. If person names are in close proximity within the same document, it is considered a relationship, whereas if they are in very different parts, it may not be. Documents can also be related if the same name appears across them.
+
+GEODI processes over 200 data sources, encompassing all digital data. This includes documents scanned with OCR, databases, Word, Excel, Open Office files, emails, UYAP files, videos, and images. The system can process various documents like invoices, reports, proposal documents, project files, specifications, and contracts, with the flexibility to add new sources beyond the listed ones.
+
+When searching for two names, GEODI can return content where both names appear, even if they are far apart within a document. To address this, GEODI uses a special proximity search operator. For example, specifying a query like `name1 name2(10)` means the names must be within a maximum of 10 words of each other. Users can adjust this proximity value, with 10 words being the default, chosen based on the average paragraph size.
+
+The rule for proximity also applies to a name and a place name, allowing queries like `name city`. GEODI supports alternative spellings and variations, where `*` covers variations like "from [CityName]" or "in [CityName]", and `~` covers misspellings.
+
+GEODI queries allow for the simultaneous application of multiple rules. For instance, a query like `name1 name2(10) economy` will find content where two names are close and the word "economy" is present. Users can add an unlimited number of criteria, such as `economy date(01/01/2023-03/31/2023)`, which will retrieve content containing "economy" and dates within January and March 2023. GEODI's semantic features ensure it finds correct date formats regardless of language, format, or alphabet.
+
+Beyond the "Contents" tab, GEODI offers different view options for queries, including Words, Calendar, Network Graph, and Map, which provide more comprehensive information.
+
+The Words page, for a query like `name1 name2`, lists names, dates, and other information close to these two names. Users can filter results to see only close dates or a combination of dates and places using the facet area. If no selection is made, all discovered words are displayed. The Words page also supports proximity queries for a single entity, such as `name1()`, which will show dates close to the provided name and affects the Map, Calendar, and Network Graph views, but not the Contents view.
+
+The Calendar page is automatically generated from date information discovered in texts. When a query is performed, dates from matching content are displayed. A search for `Economy` will show all dates from documents containing the word "Economy," while `Economy()` will narrow results to only dates close to the word "Economy." The dates listed on the Words page are presented as a calendar, including information on date frequency over time.
+
+On the Map page, GEODI displays "Location" words, which are words with coordinates such as parcels, place names, or area codes with phone numbers. A query like `Economy` will show locations in documents where the economy is mentioned, while `Economy()` will display locations close to the word "Economy." This feature can help understand, for example, in which cities the economy is prominent in the news. Other examples include finding drillings in a construction company's archive with `drilling()` or parcels related to division in municipality documents with `division()`.
+
+The Network Graph is a component of the GEODI Discovery Module that visualizes relationships between words, words and documents, or documents and words.
+
+The GEODI FacePro application is designed to recognize faces in photos and videos. It allows users to perform queries similar to those described for other entities, specifically for people appearing in the same photograph.

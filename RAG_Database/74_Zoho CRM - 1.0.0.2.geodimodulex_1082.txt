@@ -1,0 +1,3 @@
+Dotnet Core 7.0 GDE installation can be embedded within Linux servers.
+
+Zoho CRM Integration allows for the ease of searching information in GEODI. This integration is version 1.0.0.2.

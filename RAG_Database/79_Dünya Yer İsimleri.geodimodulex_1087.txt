@@ -1,0 +1,3 @@
+The text mentions "World Places".
+
+A module is described as containing dictionaries for world oceans, continents, and countries. This module also allows for the creation of multilingual maps using dictionaries of Continents, Oceans, Countries, and World Cities.

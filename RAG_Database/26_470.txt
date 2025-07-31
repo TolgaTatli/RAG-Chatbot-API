@@ -1,0 +1,1 @@
+It is possible to label emails as "in-company" without a popup, even if users send mail within the company via Outlook and OWA.

@@ -1,0 +1,25 @@
+GEODI can use web pages and RSS news sources as content. The Web Page data source offers many options to support the variable structures of web pages.
+
+Web page indexing involves critical issues, such as intensive internet usage, which may lead some sites to perceive it as a DDOS attack and ban the user's IP address. Additionally, legal terms may prevent some page content from being processed and used outside its original site. DECE's sole responsibility is to provide software, and it cannot be held responsible for any consequences arising from these issues.
+
+For indexing, users can provide a single web address or multiple addresses. Domain restriction settings will operate independently for each address provided.
+
+The 'Level' setting determines the depth of indexing. With `level=0`, only the specified page is indexed. To access all pages, the level must be sufficiently large, with values of `1000+` suggested for cases involving paging.
+
+The 'Clean Content' setting intelligently attempts to select the actual content of a web page. It is recommended to enable this setting most of the time.
+
+Many web pages utilize URL parameters. By default, GEODI creates content for each unique URL. However, if a parameter does not alter the page's content, users can ignore such parameters to achieve better index results. An example of this is `https://sample.com` versus `https://sample.com?backtomail=true`.
+
+The 'Pages to Ignore' setting allows users to exclude specific pages from the index, such as social media links or advertising pages. Users can list multiple pages to exclude, separating each with a semicolon. Wildcards are permitted, for instance, `;` ignores any files containing "adds" and ending with "last.html".
+
+GEODI incorporates page crawling rules that are applied on a per-web-page basis, with some rules pre-configured. For example, on Wikipedia pages, only the "info box" containing content is processed. Pagination controls, such as links appearing as "1, 2, 3,..., 10" that determine pages, are automatically processed.
+
+For pages generated using JavaScript, where HTML content may not provide sufficient information, the "Render like Browsers" option should be enabled. While this will result in slower indexing, it yields the desired results. An alternative web browser module must be installed for this option to function.
+
+Page content names are generated following a specific order: first `og:title`, then `title`, and finally the `page URL`.
+
+In projects where web pages are crawled, scanned web pages can be grouped by setting `EnableSiteGroup` to `true` under `Settings` in the `Shift+Ctrl` menu. This grouping does not require re-crawling. In DLV, sites are grouped based on their domain, and a "for more results" link allows access to all pages.
+
+Web Page Indexing frequently sends requests to websites. To prevent these requests from being perceived as an attack or causing slowdowns, a Proxy List can be utilized. This list of proxies can be modified within the `GEODI\Settings\ProxyList` directory.
+
+Request limits for web pages can be configured under `Web Connection Source Advanced Settings`. The `TryProxyCount` setting, when set to a value greater than 0, attempts to connect using other proxy addresses up to the specified value in case of an error, which is useful for servers with client attack control. However, `DomainLockAndSleepMillisecond` is recommended instead. The `DomainLockAndSleepMillisecond` setting, when greater than 0, ensures that only one request is made at a time and enforces a delay, measured in milliseconds, between consecutive requests.

@@ -1,0 +1,7 @@
+GEODI, belirtilen kaynaklardaki dosyaları indeksler. Bu işlem sırasında dosya yoksayma ve diğer kurallar uygulanır.
+
+GEODI'nin kullandığı kaynaklara web üzerinden erişilir. İndeksleme performansının internet hızından etkilendiği belirtilmiştir. Kaynak, diğer web kaynakları gibi bağlantıyı sınırlayabilir veya engelleyebilir.
+
+Google Drive, GEODI'nin indekslediği kaynaklardan biridir. Google Drive dizinleri, Windows dizinleri gibi indekslenir ve keşfedilir. Google Drive için de dosya ihmal kuralları geçerlidir.
+
+Google Drive bağlantısı için gereken şart, minimumda salt okunur yetkisi olan geçerli bir Google Drive hesabıdır.

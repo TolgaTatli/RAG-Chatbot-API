@@ -1,0 +1,3 @@
+A user intends to translate the 'class' option, which appears in the menu when a file is right-clicked for classification, into Turkish. To achieve this, it is stated that the ID value within the classification module in the administration panel needs to be changed.
+
+In the GEODI Classification Policy Manager, the values in question can be prepared to support multiple languages. The selection of the language for these values is determined by the language setting of the endpoint.

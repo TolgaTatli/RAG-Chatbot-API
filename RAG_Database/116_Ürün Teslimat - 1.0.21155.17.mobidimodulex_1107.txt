@@ -1,0 +1,7 @@
+The provided text includes fields such as "Delivered Person / Place", "Delivered Address", "Telephone", "Signature", "Description", and "Result".
+
+The concept of "Product Delivery" is described as a process to track deliveries. This tracking involves documenting when, where, and by whom the delivery was made.
+
+As part of "Product Delivery", the text indicates that the recipient's signature can be obtained if desired. This process is applicable to various sectors, including shipping, construction, service, e-commerce, and FMCG.
+
+The version number associated with the described information is 1.0.21155.17.

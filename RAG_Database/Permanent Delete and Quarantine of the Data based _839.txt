@@ -1,0 +1,19 @@
+One of the biggest problems in an ever-growing data environment is getting lost in duplicate documents. The method to eliminate duplicates involves deleting or quarantining documents that are "no longer needed." GEODI offers a seamless end-to-end solution, covering data inventory analysis, data discovery, and subsequent data deletion and quarantine.
+
+Duplicate documents are frequently produced through the use of tools such as Word, Excel, and e-mail. Gartner, a technology research firm, estimates the rate of duplicate document production to be 40%.
+
+Some data may reside in "wrong" locations, such as on PCs or in accessible repositories. These locations might contain personal data, offers, or confidential research reports. Such documents must first be moved to a safe place, a process referred to as quarantine.
+
+GEODI provides a seamless end-to-end solution that spans from analyzing a data lake to data discovery and permanent deletion and quarantine. This process is not a one-time task, emphasizing the importance of sustainability.
+
+The GEODI process begins with reporting and analyzing the data lake. Users define an extensive data source for GEODI, which can include files, shared repositories, databases, e-mail correspondence, SharePoint, ERP, SAP, DMS, CRM, Office 365, or personal computers.
+
+GEODI indexes and reports the contents within millions of documents. It assists users in performing a wide range of analyses based on the data source and the discovered data.
+
+GEODI allows for easy querying of data that needs to be deleted or quarantined. Subsequently, it creates the necessary scripts for deleting and/or quarantining, tailored to the source data and operating system. IT teams are then responsible for carrying out these operations.
+
+Discovery and indexing are ongoing processes within GEODI. Users can monitor both incoming data and the results of remediation operations, and the process can be repeated at preferred intervals.
+
+After the quarantine process has been run once, GEODI can instantly notify users of risky situations. Users can easily define rules, such as "There can be no documents containing personal data in the public sources," and will be informed immediately if such a situation occurs, enabling proactive risk management.
+
+The processes described include data discovery and remediation, specifically deletion and quarantine. These are presented as some of the resulting benefits offered by GEODI, which also provides broader capabilities in enterprise search and data discovery.

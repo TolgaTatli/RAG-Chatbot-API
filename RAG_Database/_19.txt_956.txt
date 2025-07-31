@@ -1,0 +1,3 @@
+Clones will appear as separate machines on the agent monitor panel. This outcome is due to the GDE/Classifier agent generating a new ClientID for each clone.
+
+Removing specific files from the GoldenImage will cause the GDE/Classifier agent to generate a new ClientID for each clone.

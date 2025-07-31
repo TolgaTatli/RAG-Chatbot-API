@@ -1,0 +1,3 @@
+It is possible to query words within the dictionary with a random 5-word limit. GEODI recognizes word clouds.
+
+It is possible to determine the operating system of data received with GDE. GDE operates on Windows, Mac, and Linux. The operating system of indexed data is available in the content list and other reports. Actions may be separate for each operating system.

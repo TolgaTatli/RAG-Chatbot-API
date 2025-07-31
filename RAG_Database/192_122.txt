@@ -1,0 +1,3 @@
+Gecikmeli OCR, PC keşfi sırasında yapılabilir.
+
+Ajan Yönetim Paneli üzerinde, uzun süredir haberleşemeyen ajanları liste dışı bırakmak mümkündür. Bu işlem, paneldeki çeşitli filtreler kullanılarak gerçekleştirilebilir. Özellikle, en son veri gelme kriteri bu ajanları belirlemek için kullanılabilir.

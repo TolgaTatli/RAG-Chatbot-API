@@ -1,0 +1,5 @@
+It is possible to query words within the dictionary with a random 5-word limit. GEODI recognizes word clouds.
+
+Terms listed include 'Güvenlik Noktası' (Security Point), 'Açıklama' (Note), 'Güvenlik Noktası Büyüklüğü' (Security Point Size), 'Güvenlik Noktası (Oto)' (Security Point (Auto)), and 'Durum' (Case).
+
+A solution for 'Facility Security' allows users to take photos, notes, and mark issues on photos anywhere. It provides instant reports, shows the closest team in case of an issue, and generates reports for areas with the most issues. This solution can also be used by regular security personnel. Associated hashtags are #security, #camera, #alarm, #control, #trust, #peace, and #gun. The version is 1.0.21155.51.

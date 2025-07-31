@@ -1,0 +1,5 @@
+GEODI extracts information from free texts with Data Extraction. The API provided extracts the values recognized by the identifiers in your project.
+
+This service can be used to retrieve and use GEODI-recognized content in a text or file content, such as Contact names, Dates, Parcel Numbers, e-mail addresses, or dictionary definitions.
+
+The Geodi Data Extraction API includes a Text Recognition Method, a Single Content Recognition Method, and a Multiple Content Recognition Method.

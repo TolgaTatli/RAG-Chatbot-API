@@ -1,0 +1,7 @@
+GEODI Classifier, verilerin manuel veya otomatik sınıflaması için kullanılan bir dizi aracın ortak adıdır.
+
+GEODI Classifier için Microsoft Ofis, Exchange Server, Office 365 ve Windows için eklentiler mevcuttur.
+
+Classifier çözümleri, ForcePoint, Symantec ve TrendMicro gibi DLP çözümleri ile uyumludur.
+
+GEODI ile Ofis ve PDF dosyaları için toplu sınıflama yapılabilir. Sınıflanacak belgeler arama ile seçilir ve otomatik veya manuel olarak sınıflanır. Bu yöntemle yüzbinler hatta milyonlarca belge çok kısa sürede sınıflanabilir. Belgelerin içinde kişisel veri geçmesi gibi kriterler arama kriteri olarak kullanılabilir.

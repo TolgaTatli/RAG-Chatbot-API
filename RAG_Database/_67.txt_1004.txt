@@ -1,0 +1,1 @@
+Mail Signatures can be ignored within the scope of Data Classification and Data Discovery. This is possible as explained on the support page.

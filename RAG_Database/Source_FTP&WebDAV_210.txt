@@ -1,0 +1,7 @@
+GEODI indexes and discovers file data from the mentioned sources. File omission and other rules apply.
+
+The sources from which GEODI indexes and discovers file data are accessed over the internet. Internet speed affects indexing performance. Furthermore, if too many requests are made, the other party may block the connection or slow it down, a behavior common to all web sources.
+
+FTP directories are indexed and discovered by GEODI in a manner similar to Windows directories. File neglect rules apply to FTP directories. Conditions for connecting to FTP include providing a service address and a user name.
+
+WebDAV directories are indexed and discovered by GEODI like Windows directories. File neglect rules apply to WebDAV directories. Conditions for connecting to WebDAV include providing a service address, a username, and a password.

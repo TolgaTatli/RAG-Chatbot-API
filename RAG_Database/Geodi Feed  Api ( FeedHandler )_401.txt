@@ -1,0 +1,19 @@
+Three basic models can be used to integrate applications with GEODI and provide data. All models aim to ensure that the content allowed by the application is visible to the users it allows.
+
+Documents that are allowed to search from an application are expected from the integrated application, along with metadata, authorizations, and a return path if available. This service can be used to provide source data to GEODI, and the application to open can be specified when the provided resource is reached in a search result.
+
+Warnings and frequently important information about the feed API can be found in the Frequently Asked Questions. Content transmitted during a feed operation is not retained on Geodi unless the backup is opened on the project.
+
+The Geodi Feed API - Feed Method (APP → GEODI) allows sending content at any time if the application is standing, if there are internal methods to trigger, or if there is no Web application.
+
+The Geodi Feed API - Integration with Application Services (GEODI → APP) can be used to trigger an application by GEODI if it is a web application and not standing all the time.
+
+The Geodi Feed API - Embedded Code Support (Connector/GeodiEnumerator) (GEODI ← → APP) method can be chosen for feeding if the application is a library or adapter and does not have an active application running.
+
+The Enumerator (Connector/Adapter) Concept involves GEODI using classes that implement the IContentReaderEnumarator interface to provide content from different data sources.
+
+Implementations of IContentReaderEnumarator must return IGeodiContents. Ready-made IGeodiContent implementations can be utilized, or a class derived from GeodiContentBase can be written. If a new type not recognized by GEODI is created, a ContentReaderBase implementation should also be performed. If a Viewer is not available, WebContentViewerBase can be implemented, though a Viewer is not mandatory.
+
+To define a new file type for GEODI, IGeodiContent is used to return and determine properties. The desired extension can be read with an implementation that derives from ContentReaderBase.
+
+The Geodi ContentObject, which is a Content Definition Object, can be used to provide more detailed content to the Geodi Data Extraction API (Formatter) and Geodi Feed Api (FeedHandler) services.

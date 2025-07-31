@@ -1,0 +1,15 @@
+The GEODI Content Risk Report allows for the calculation of content-based risk scores after discovery.
+
+Risk calculation involves assigning a risk score between 0 and 100 to each source. Sources without an assigned risk score are assumed to have a risk score of 0, indicating no risk. Sources like shared file areas, which should not contain sensitive data, should have a high risk value, while protected areas like databases should have a low risk value. The user determines the risk score for each source.
+
+Findings and identifiers are also taken into account for risk calculation. In the default report, identifiers such as credit card, IBAN, CVV, PIN, password, name, TCNO, e-mail, address, VKN, foreign ID, and passport are considered risky.
+
+For each content item, the report includes values from the Content List, along with the source's risk score (the value entered by the user), the number of risky identifiers, and a calculated risk score. The calculated risk score is determined by multiplying the source risk by the number of risky identifiers.
+
+This report is more than 2 times slower than the Content List and places a greater load on the system. Therefore, it should be used carefully and only when necessary.
+
+The report is located within the GEODI Discovery module. Users must be members of the ACC.Discovery group to access it.
+
+To determine a source's risk score, a risk value between 0 and 100 must be defined when adding sources in the Project Wizard. If the risk option is not selected, the source risk value is accepted as zero.
+
+If a source is a database (VT), the risk will not appear in the report even if it has been defined. The Content List and Risk Report are not available for VT sources.

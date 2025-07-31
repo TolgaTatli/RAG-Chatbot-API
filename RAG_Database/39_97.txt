@@ -1,0 +1,1 @@
+FeedLogs found within Logs are capable of being deleted.

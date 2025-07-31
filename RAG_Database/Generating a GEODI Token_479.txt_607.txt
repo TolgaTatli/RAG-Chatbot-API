@@ -1,0 +1,11 @@
+A token is an expression that includes the user information that created it, the requesting role, user, and privileges. It is also used to set constraints.
+
+A received token is valid for 10 years unless specifically modified. It is sufficient to generate a token once.
+
+When generating a token, it is recommended that it has only the required permissions. Users should limit their token with an IP address and keep it in a secure place.
+
+The GEODI addresses provided are illustrative, and users should change the address with their specific GEODI. An illustrative address for token generation is https://service.decesoftware.com/api/GeodiTokenApi.html.
+
+Token validation involves checking if a token is valid.
+
+The GEODI addresses provided are illustrative, and users should change the address with their specific GEODI. An illustrative address for token validation is https://service.decesoftware.com/api/token_parser.html.

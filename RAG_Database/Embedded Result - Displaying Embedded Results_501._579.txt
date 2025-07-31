@@ -1,0 +1,5 @@
+GEODI query results can be utilized within an application through GEODI interfaces or scripts.
+
+GEODI provides REST API services, enabling the use of query results in an application via Geodi Query APIs. With GeodiQueryJS, users can display these results in any desired format or integrate them with libraries such as Angular.js and Vue.js for displaying search results with templates.
+
+Existing GEODI screens can be retrieved from a different application by specifying query text and then used within an iframe. This method allows for the direct display of views such as Document, Map, Words, or Network graph within the user's software.

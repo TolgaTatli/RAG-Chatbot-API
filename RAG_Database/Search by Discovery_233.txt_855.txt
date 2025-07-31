@@ -1,0 +1,7 @@
+The recognizer discovers Credit cards, dates, names, IPs, city names, or any other sensitive or required data.
+
+The query allows you to query by recognizer. It finds content that contains VISA credit card numbers.
+
+You may use the layer name as it looks on the facet.
+
+Examples of layer names include layer:Date and layer:"Name Recognizer". The syntax layer:"Name*" finds all layers that start with 'name'.

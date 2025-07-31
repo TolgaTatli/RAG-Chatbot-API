@@ -1,0 +1,23 @@
+This training covers GEODI setup, applying licenses, and activating modules. It is described as quite easy and straightforward, requiring basic IT knowledge on Windows servers. The course also includes topics such as configuring a Discovery or Classification project, and settings for PCI/DSS.
+
+The content of the training is technical, with a duration of 45 minutes plus another 45 minutes.
+
+For the scope of the training, participants will need a server and environment that meets the requirements detailed on the GEODI Installation Requirements page. Before starting, it is advised to check the GEODI Privacy Issues page for any concerns regarding privacy and security.
+
+Basic information about GEODI architecture is provided by GEODI Topology. Answers to some questions before starting may be found in the GEODI FAQ.
+
+A roadmap for installation and implementation phases is preferred, specifically the Installation and Implementation Roadmap. This roadmap is stated to help ensure a successful project and happy users.
+
+GEODI installation is described as quite easy and straightforward, as explained in GEODI Server Installation. A license key is required, and all included modules will automatically download and install without intervention, unless a completely offline installation is needed, which requires extra effort and workload. All details for this are explained on the relevant page.
+
+Most of the time, setting GEODI as a Windows server will be sufficient. GEODI includes its own HTTP server, eliminating the need for IIS.
+
+The configuration phase is important for adapting GEODI to specific needs. DECE-STORE is available to match regulations or a country's needs.
+
+For a discovery project, the next step is adding data sources. GEODI supports hundreds of file types and data stores, including file servers, SharePoint, and e-mails. A full list and details are available in GEODI Data Sources. GEODI does not require a Discovery Agent but has one, the GDE, whose deployment is covered in another course. OCR and other choices are also covered.
+
+For a classification project, users are almost ready, with the exception of agent deployments.
+
+Performance, resource allocation, and troubleshooting issues are covered in GEODI 510.
+
+Users are encouraged to ask for support from the teams if they are unsure about a topic or unable to perform a task. It is also noted that some features may not be included in a user's license.

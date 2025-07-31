@@ -1,0 +1,5 @@
+Data discovery using GDE is possible on 52 Windows servers without requiring a login. GDE can also be installed as a service.
+
+The "Discovery TZ/PIPA" package, version 1.0.0.11, extends the capabilities of GEODI Discovery and Classification through country-specific semantic recognizers. This package is designed for Tanzanian use and must be installed after GEODI Discovery.
+
+The "Discovery TZ/PIPA" package includes an ITanzanian Shilling Recognizer, a Tanzania City Recognizer, and a Tanzania NIDA Recognizer.

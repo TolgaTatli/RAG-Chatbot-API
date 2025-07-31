@@ -1,0 +1,19 @@
+GEODI Discovery enables discovery for many different sectors and purposes. It includes intelligent recognizers that provide the robust infrastructure needed for GEODI Discovery automatic classification.
+
+The Discovery Lifecycle involves five basic steps for discovering a Data Source. While all data sources can be discovered together, it is suggested to separate each one, as completing each discovery finalizes the project. This method is also suitable for handling new data sources or changes in discovery scope. The five steps are: Determine the discovery purpose, Define the data source, Discover, Present/Report, and Remediate/Action.
+
+Determining the purpose of exploration provides a healthy start, with potential goals including KVKK, HIPAA, PCI/DSS, or Fraud. DECE-STORE offers recognizers, reports, panels, and actions that are suitable for various regulations and countries. After the basic GEODI installation, appropriate DECE-STORE modules must be downloaded.
+
+Data sources, permissions, and other preferences are defined within the Project Wizard.
+
+The Discover phase is where personal, financial, and other specified data are discovered. This phase may take time, depending on the data size, scope of discovery, and chosen options. It is recommended to begin with a sample exploration and then decide on a full exploration based on the results, as sampling can save significant time. Discovery results are presented through the Discovery Panel and Reports, which can offer a one-page summary or detailed information. This presentation aids in deciding which sources and data types require action. Actions allow source data to be destroyed, encrypted, or quarantined, with options like batch masking also available. Action results are reflected in the discovery panel and reports, allowing users to continue until risks are minimized.
+
+GEODI Discovery generates new reports that provide extensive information on areas containing sensitive data, areas targeted for actions like destruction or quarantine, and business processes.
+
+GEODI Discovery includes many actions that allow for data modification, such as destroying or quarantining target data.
+
+The panels in GEODI Discovery provide a summary of exploration results, offering easier access to results compared to reports.
+
+For the management and monitoring of GDE and Classifier agents, users should refer to a specific page. The Clients Panel is exclusively accessible to System Administrators.
+
+GEODI processes structured and unstructured data sources at an average speed of 0.5-1.5TB per day. However, this speed is insufficient for processing several hundred TB or more data within reasonable timeframes. To address this, multiple GEODI servers should be set up to create a Cluster. A GEODI Cluster configuration allows for the management of multiple GEODI servers as a single GEODI, providing features like centralized reporting and administration.

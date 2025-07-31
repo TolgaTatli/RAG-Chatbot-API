@@ -1,0 +1,9 @@
+GEODI searches for given criteria across all sources connected to your project.
+
+GEODI's "Find Similars" feature identifies similarities between text and image contents. It lists similar documents or texts based on the input provided. Both copied and similar documents are displayed within the GEODI search interface and viewers.
+
+In similarity search, specific expressions can be used. These include "limit similar count by n" and "set similarity," which has a default value of 0.7. The "exclude copies" setting defaults to "false," meaning copies are listed under similar results. Examples of similarity search expressions are "similar:(doc:a.pdf)" and "similar:”Georgia Aquarium"" which finds similar document containig the words.
+
+GEODI also includes a "Find Duplicates" feature. Typically, 40% of documents in an organization are duplicates, which can cause confusion and make searches difficult. GEODI finds these duplicates and helps to eliminate them.
+
+For duplicate searches, typing "duplicate" will find all documents that have copies, while using "-duplicate" will find those without copies, meaning unique ones. Duplicates and similar documents are shown in the GEODI search interface and viewers. Specific expressions for duplicate search include "duplicate (content with copies)", "-duplicate (content w/o any copy. i.e unique ones)", "duplicate:(doc:a.pdf)" which finds copies of a.pdf, and "duplicate:"Georgia Aquarium"" which finds copy document containg the words.

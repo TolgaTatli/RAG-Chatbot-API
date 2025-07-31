@@ -1,0 +1,7 @@
+It is stated that 'Kişi Adı' (Person Name) can be ignored in the context of '107 Klasör'.
+
+The system or solution includes fields such as 'Ad ve Soyad' (Name and Surname), 'Telefon' (Telephone), 'Site/Apartman Adı' (Site/Apartment Name), 'Daire' (Apartment), 'Bildirim' (Notice), and 'Açıklama' (Description).
+
+A feature named 'Site İstek ve Şikayet' (Household Complaint) allows for recording, tracking, and reporting requests and complaints within a residential site. This solution can be used in conjunction with security and other forms. It is suitable for use by residential sites, large facilities, and factories, and is associated with concepts like service, cleanliness, management, and site.
+
+The version of the system or solution is 1.0.2142.4.

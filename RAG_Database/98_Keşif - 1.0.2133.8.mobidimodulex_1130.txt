@@ -1,0 +1,5 @@
+Description, Result, and Drawing Area are identified terms.
+
+Site Exploration is a feature where the best way to explore a place is by taking a photo. A form associated with this process saves location and time, and allows users to take notes and annotate. Related hashtags include #discover, #exploration, #space, #travel, and #control.
+
+The version is specified as 1.0.2133.8.

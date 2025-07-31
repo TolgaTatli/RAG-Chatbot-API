@@ -1,0 +1,1 @@
+The FileDB module enables the processing of file-based databases. Files affected by this module include .mdb, .accdb, .accde, .accdr, .accdt, .sqlite, and shp files. The module's version is 1.0.0.1.

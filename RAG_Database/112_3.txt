@@ -1,0 +1,3 @@
+GEODI database masking allows for the original data to be changed or protected. This process can involve the masked data taking the place of the original or creating a copy of it.
+
+Database masking and anonymization are explained in detail on the support site.

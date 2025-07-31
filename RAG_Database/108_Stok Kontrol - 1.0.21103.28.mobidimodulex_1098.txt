@@ -1,0 +1,5 @@
+The text identifies several categories or fields: Material, Description, Barcode, Store, Material, Amount, and Date.
+
+The described system is for Stock Management, providing basic forms to track stock entries and exits. It also features panels that allow for monitoring of stock changes and quantities.
+
+This Stock Management system is associated with keywords such as inventory, management, collection, production, integration, tracking, saving, sale, warehouse, barcode, QR code, QRCode, material, and ERP. The system's version is 1.0.21103.28.

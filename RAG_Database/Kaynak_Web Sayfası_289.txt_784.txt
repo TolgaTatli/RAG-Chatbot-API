@@ -1,0 +1,19 @@
+GEODI, içerik olarak web sayfalarını ve RSS haber kaynaklarını kullanabilir. Web sayfaları çok değişken yapılarda olabildiğinden, Web Sayfası veri kaynağı bu değişkenliği desteklemek için pek çok opsiyon sunar.
+
+Web sayfalarını indekslemek yoğun internet kullanımı yaratabilir ve bazı siteler bu kullanımı "saldırı" olarak yorumlayıp yasaklayabilir. Ayrıca, indekslenen sayfaların telif hakları indekslemeye yasal olarak izin vermeyebilir. Bu ve olası diğer durumlarda tüm sorumluluk kullanıcıya aittir ve DECE sadece teknik bir çözüm sunar.
+
+Web sayfasına bağlantı kurmak için gereken şartlar arasında web sayfasına erişim ve kullanıcı doğrulaması yapan yerler için token veya sayfanın gerektirdiği doğrulama bilgileri bulunur.
+
+GEODI'ye tek bir adres veya çok sayıda adres verilebilir. Domain kısıtlama ayarları, her bir adres için bağımsız şekilde çalışır.
+
+İndeksleme derinliğini belirlemek için "Seviye" ayarı kullanılır. Seviye=0 olarak ayarlandığında sadece verilen sayfa indekslenir. Bütün sayfalara erişebilmek için seviye yeterince büyük olmalıdır; sayfalama olan durumlar için seviye değeri 1000+ verilebilir.
+
+Bazı web sitelerinde içerik olarak ilgilenilmeyen sosyal medya linkleri, reklam sayfaları veya benzeri sayfalar bulunabilir. Kullanıcılar, diledikleri kadar sayfayı tarama sonuçlarından çıkarabilirler. Sayfa adresleri ";" ile ayrılmalı ve adresleri tanımlarken "*" kullanılarak genelleştirme yapılabilir. Örneğin, "http://www.dece.com.tr/geodi" sayfasının taranması istenmiyorsa, ihmal edilecek sayfalar alanına "(*geodi* veya *geodi.html)" yazılabilir.
+
+Pek çok web sayfasında parametreler kullanılır ve GEODI, aynı sayfanın farklı parametre kullanan biçimlerini farklı sayfa olarak değerlendirir. Ancak, parametrelerin içeriği değiştirmediği durumlarda bu parametreler ihmal edilebilir. Örneğin, "https://ornek.com" ve "https://ornek.com?ShowComments=true" aynı sayfayı açıyorsa, ihmal edilecek parametrelere "showComments" yazılmalıdır; bu durumda GEODI her ikisini aynı sayfa olarak değerlendirir.
+
+GEODI, Web Sayfası bazında kurallara sahiptir ve bazı kurallar hazır gelir. Örneğin, Wikipedia sayfalarında sadece içeriğin olduğu "kutucuk" işlenir. Bazı web sayfalarında yer alan ve sayfaları belirleyen sayfalayıcılar (örneğin 1,2,3,... 10 şeklinde görünen linkler) otomatik olarak işlenir.
+
+Bazı sayfalar JavaScript ile oluştuğunda, sayfanın HTML içeriği gerekli bilgiyi vermeyebilir. Böyle durumlarda "tarayıcı gibi gez" seçeneği işaretlenmelidir. Bu seçenek indekslemeyi daha yavaş hale getirse de, istenen sonucun elde edilmesini sağlar. Bu seçeneğin çalışması için alternatif web tarayıcı modülünün yüklü olması gerekmektedir.
+
+Sorgu sonucuna gelecek sayfa isimleri, sayfanın HTML kaynağında og:title bilgisi varsa bu bilgiden, yoksa title bilgisinden alınır. Eğer bu bilgiler de yoksa, sayfanın tarayıcıda görünen adresi kullanılacaktır.

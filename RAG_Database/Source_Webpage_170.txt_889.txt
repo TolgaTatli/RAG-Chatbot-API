@@ -1,0 +1,19 @@
+GEODI is capable of utilizing web pages and RSS news sources as content. Web pages exhibit highly variable structures, and to accommodate this variability, the Web Page data source provides numerous options.
+
+Important issues related to web page indexing include the potential for intensive internet usage, which might lead some sites to interpret it as a DDOS attack and ban the user's IP address. Additionally, some page content may not be processed or used outside the site due to legal terms. DECE's sole responsibility is to provide software, and it cannot be held responsible for any consequences arising from these issues.
+
+Conditions for connection to web pages include access to the web page itself and information required for verification. This verification information may be required by a token or the page for user verification places.
+
+For addresses, users can provide either a single address or multiple addresses. Domain restriction settings will operate independently for each address provided.
+
+The "Level" setting determines the depth of indexing. With level=0, only the given page is indexed. To access all pages, the level must be sufficiently large. For instances involving paging, a level value of 1000+ can be used.
+
+Many web pages incorporate URL parameters. By default, GEODI generates content for each unique URL. However, in certain situations, a parameter might not alter the page's content. In such cases, ignoring these parameters can lead to a better index result. An example includes `https://sample.com` versus `https://sample.com?backtomail=true`.
+
+The "Pages to Ignore" feature allows users to exclude specific pages from the index, such as social media links, advertising pages, or similar content. Users can list as many pages as needed for exclusion, with each page separated by a semicolon. Wildcards are permitted; for example, `;` ignores any files containing "adds" and ending with "last.html".
+
+GEODI implements rules on a per-web-page basis for crawling. Some of these rules are pre-configured. For instance, on Wikipedia pages, only the "info box" containing content is processed. Pagination controls, such as links appearing as "1, 2, 3,..., 10" that determine pages, are automatically processed on some web pages.
+
+For pages generated using JavaScript, the HTML content alone may not provide the necessary information. In these situations, the "Render like Browsers" option should be activated. While indexing will be slower with this option, it will yield the desired results. An alternative web browser module must be installed for this option to function.
+
+Page content names are generated following a specific order: `og:title` is prioritized, followed by `title`, and then the `page URL`.

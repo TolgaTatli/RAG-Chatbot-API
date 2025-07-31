@@ -1,0 +1,5 @@
+150TB veriyi keşfetmek birkaç hafta içinde mümkündür. Bu süreye sunucuların kurulması ve konfigüre edilmesi aşaması dışındaki işler eklenmelidir.
+
+Bir GEODI sunucusu, koşullara, sunucu kaynaklarına ve veriye bağlı olarak günlük ortalama 0.5-1+TB veri işleyebilir. Kullanıcılar ve sistem, örneklemeli keşfin çoğu zaman yeterli olduğunu gözlemlemiştir. 1/100 örnekleme ile 150TB veri yaklaşık 1 hafta içinde keşfedilebilir.
+
+Kapsayıcı bir keşif için yaklaşık 2 hafta ve 10 sunucu gereklidir.

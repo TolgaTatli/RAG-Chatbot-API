@@ -1,0 +1,9 @@
+The Query Rules training allows users to learn more and get more out of GEODI, building upon the most commonly used features learned in basic user training.
+
+This training is also essential for designing more efficient Dashboards or creating Automatic data classification rules.
+
+The audience for this training is general, and the prerequisite training is GEODI 101.
+
+Supporting materials for this training include GEODI Query Rules and Video.
+
+Users are encouraged to ask for support from teams if unsure about a topic or unable to do something. It is noted that some features may not be included in a user's license.

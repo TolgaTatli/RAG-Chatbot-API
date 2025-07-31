@@ -1,0 +1,19 @@
+A template project for the classification project and Log Analysis Panel is ready with the installation of the Classification module.
+
+In projects where classification activities are tracked, classification movements are regularly recorded. These classification logs can be written to a database and monitored or analyzed by any Security Information and Event Management (SIEM) tool or Log Analysis Panel.
+
+The GEODI Log Analysis Panel allows monitoring classification activities and performing user and class-based analyses. For the panel to function, logs must be stored in a database.
+
+The project will automatically become active upon the installation of the Classification Module.
+
+The panel provides access to various information, including classes, applications where classification was performed, the number of classifications made by users, classified contents, and trend analysis of classification by month, week, and year.
+
+Only users who are members of the ACC.Classifier group are able to view the panel.
+
+GEODI will process the data contained within its log records. New log records will continue to be processed automatically based on the scan definition for changes.
+
+Logs can be stored in CSV, CEF syslog, or database formats. GEODI Logs are compatible for use with SIEM applications.
+
+GEODI logs include several fields: "Object ID" for a unique ID, "Log Time" indicating when the classification was performed, "Log User" for the user who performed the classification, "Log App" which is GEODI, "Log App Ver" for the GEODI Version, "Log Module" as DLP Classifier, "Log Security Level" as https or http, "Log Level" as medium, "File" for the UNCPath information of the classified content (e.g., C:\Users\\Desktop\Yeni Microsoft Word Belgesi (2).docx), "Previous Class" for the existing class (or "?" if no class), "Class" for the assigned class, "Source" for the method of classification (Shell/Add-In), "Client IP" for the client's IP address, and "Client User" for the client's username. The "AutoClass" column contains the ID value of the class determined automatically as a suggestion or when forced, and it will be logged as empty if not used automatically.
+
+The "Action Type" field in GEODI logs specifies how a classification was applied: "Auto" for an automatically assigned class, "Manuel" for a manually selected class, "Offline" for a manually selected class (GDE and Shell), "AUTOCLASS Body Email" for automatic classification via %AUTOCLASS% text in Outlook desktop, "Auto Menu Click" for automatic classification by clicking an add-in, "Class Menu Click" for classification by selecting a class via an add-in, "Form UI" when a form interface was opened and selection was made via the form, and "Forced AutoClass" when automatic classification was enforced.

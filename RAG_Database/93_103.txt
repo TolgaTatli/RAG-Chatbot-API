@@ -1,0 +1,1 @@
+93 VT possesses the capability to scan documents with the .eml extension and their corresponding attachments. This function is active when 93 VT is engaged in scanning embedded files.

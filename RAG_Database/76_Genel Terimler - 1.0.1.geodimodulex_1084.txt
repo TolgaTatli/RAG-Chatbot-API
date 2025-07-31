@@ -1,0 +1,1 @@
+Genel Terimler enables the addition of dictionaries to GEODI. These dictionaries include terms related to regions, banks, road-construction, and law. The version associated with this functionality is 1.0.1.0.

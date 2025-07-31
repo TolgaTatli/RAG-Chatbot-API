@@ -1,0 +1,13 @@
+All institutions that store credit card information must ensure PCI/DSS compliance. This regulation has many conditions, with a focus on data discovery and subsequent actions.
+
+For PCI/DSS compliance, GEODI discovers credit card information, as well as PIN and CVV, and checks if they are encrypted. The process involves choosing the PCI/DSS template in GEODI's user-friendly interfaces, defining Fileservers and Databases, and allowing GEODI to perform the job.
+
+GEODI's high-speed indexing engine consumes data at an average rate of 1TB+ per day.
+
+Results are provided via Panel or Reports, detailing sources that contain or do not contain credit card data, unencrypted PIN or CVV, and the number of content in these sources. Users can then implement Destruction, Quarantine, or Encryption options as desired.
+
+The PCI/DSS regulation imposes restrictions on processing card information, meaning discovered card information is not publicly disclosed to anyone, including system administrators. While issue and source information is provided, access to the findings themselves is denied.
+
+Compliance is not a one-time check; once the system is installed, GEODI's discovery runs automatically. New content will be discovered, and users can be notified of incompatibility situations if they wish.
+
+DECE Software offers a PCI/DSS solution with GEODI, characterized by its modern software architecture, user-friendly interfaces, and a licensing model that does not limit the number of resources or data size.

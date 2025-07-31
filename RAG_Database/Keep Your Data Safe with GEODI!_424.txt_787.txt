@@ -1,0 +1,19 @@
+Our GEODI product enables users to perform various operations on their data with a single program while ensuring its protection. This product's features and achievable outcomes are the subject of the newsletter.
+
+GEODI users benefit from searching data from a single point, consolidating over 200 data sources using adapters and OCR. This provides control over data, allowing management from one location. The product, developed with natural language processing and artificial intelligence, simplifies the search process, enabling corporate searches and document access outside working hours.
+
+With GEODI, users can discover all data that could be misused, including personal data, credit card numbers, national ID numbers, and unique content, through Semantic Data Discovery. Hundreds of ready-to-use identifiers for PCI/DSS, KVKK, or GDPR facilitate quick discovery of sensitive data and action plan preparation. This discovery process also identifies copies, similar versions, and variants of documents.
+
+The discovery process allows users to determine which computers have received copies of documents containing sensitive data. This enables the application of deletion or quarantine to all copies of a document. For instance, when searching for a CV document, GEODI recognizes and suggests other similar documents as alternatives.
+
+For long-term projects with ongoing development and version creation, GEODI assists in observing changes across all versions. Its semantic querying feature allows for faster document retrieval by recognizing dates regardless of format, such as "June" or "06," making it format-independent.
+
+Following data discovery, GEODI offers a classification feature to protect data by categorizing it according to user needs. This capability helps prevent confidential documents containing sensitive data from being sent outside the organization. The GEODI classification feature is usable within office programs, on the desktop, or within the Outlook Web Application (OWA).
+
+GEODI provides effective action options for documents where sensitive data has been detected. Users can create a masked copy of specified expressions, such as names, credit card numbers, or monetary information, using the masking feature to control visibility for different individuals within a document.
+
+If a document's visibility to others is problematic, GEODI allows for mass encryption, deletion, or quarantine. Additionally, GEODI's alarm feature can notify users when new data that does not comply with specified rules arrives.
+
+GEODI offers a Data Analysis feature with various reporting options to analyze data. Reports can be generated in alternatives such as graphs, tables, maps, calendars, and network graphs.
+
+GEODI includes a patented Maps & Spatial Analysis feature that allows for the creation of maps from unstructured data. This enables mapping of information like news, streets, social media messages, or MGRS coordinates with a single click.

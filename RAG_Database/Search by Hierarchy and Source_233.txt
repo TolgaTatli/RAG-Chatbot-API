@@ -1,0 +1,7 @@
+GEODI searches for given criteria across all sources connected to your project. Search results can be limited by content sources used in the project settings. Rules can also be set for parent documents. Multiple sources can be specified, and if source names are set in a tree format, they should be referred to in the same way.
+
+The "parent" search function allows searching by parent content. ZIPs or folders may contain other content, and if a note is taken, it becomes a child of that content. A Parent query finds content whose parent matches a specified rule. For example, one can give the name of a ZIP to find files within that ZIP. Specific examples include `parent:Georgia*` to find files whose parent (ZIP or Folder) starts with "Georgia", and `parent2:*.ZIP` to find files within ZIP files. A combined query like `source:Archive parent2:*.ZIP georgia` finds all ZIPs from Archive, and files within them that contain "georgia".
+
+The "child" search function finds the parent from a child. This involves giving criteria for a file to find the ZIP or Folder that contains that file. For example, `child:”eligible”` is used to search by child content.
+
+A GEODI Project may include multiple sources. Searches can be limited by specifying a source. For instance, `source:Archive anyword` finds all content from the "Archive" source that contains the word "Anyword".

@@ -1,0 +1,13 @@
+As a developer, GEODI is composed of two main parts: the engine and user interfaces. The engine is responsible for providing all core functionality and includes a REST API that covers all its features.
+
+The user interfaces of GEODI are built using HTML, CSS, and Javascript, and they rely on the GEODI REST API for their operations. Developers can inspect the HTML by pressing F12 to understand how a specific function utilizes GEODI.
+
+Certain components of the GEODI user interface can be integrated into other code as iframes. This allows developers to directly incorporate elements such as maps, query results, or viewers, potentially saving significant development time. Developers maintain control over the look and feel of these integrated components.
+
+The API documentation for GEODI is structured into two parts. The first part is available on this site, offering many pages of detailed documentation on the basic API. This section includes sample applications in various languages and embedded forms for direct experience with API calls.
+
+The second part of the API documentation is GEODI itself. Accessing the /API URL opens a developer page within GEODI, which lists available methods, parameters, and provides access to fundamental actions like token creation.
+
+GEODI includes a Frequently Asked Questions (FAQ) section, which compiles questions received so far along with their answers. It is strongly recommended that users review the FAQ before proceeding with deeper software development.
+
+Support Q possesses knowledge regarding the GEODI API and can answer certain questions. However, Support Q is not able to write code for users.

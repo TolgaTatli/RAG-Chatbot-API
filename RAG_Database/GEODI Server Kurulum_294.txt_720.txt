@@ -1,0 +1,23 @@
+GEODI can operate either as a logged-on user application or as a Windows service. Running GEODI as a service is recommended. To simplify subsequent steps, it is advised to perform the installation using a service user.
+
+The GEODI installation process involves downloading and initiating the setup. The setup will prompt for a license code; providing a valid code will automatically install modules included in the license via DECE-STORE. For an offline installation environment, the DECE Team will supply the necessary modules.
+
+Upon successful installation of GEODI, its management interface becomes accessible in a web browser at the address `http://127.0.0.1:3323/manager`. For classification or agent-based discovery applications, the GEODI Server must be reachable from other machines, necessitating DNS and SSL definitions. A Windows Service should also be established for continuous operation.
+
+After GEODI is installed, the next step is to load the required discovery scope or other templates from DECE-STORE. For solutions to issues encountered during installation or other processes, users can consult the Frequently Asked Questions (SSS) page, which is also referred to as Support Q - SSS and Technical News.
+
+GEODI software is continuously updated to ensure quality and enhance user experience. To update GEODI, simply run the "update.bat" command, included with the installation, as an administrator. This command can be executed and left to complete, as all necessary operations will be performed on a running system. The "update.bat" command can also be configured as a scheduled task by a user with appropriate permissions.
+
+Updates for PC discovery (GDE) and Classification Agents are fully automatic. GEODI modules are updated more frequently than the main GEODI version. To update only the modules, the "UpdateModules.bat" command can be executed.
+
+GEODI stores project definitions, indexes, and logs within the `%appdata%` directory associated with the logged-in user. This directory is automatically created during the installation process.
+
+The default `%appdata%` directory for GEODI can be changed if the installing user and the Windows service user are different, or if there is insufficient space. The desired directory for projects and workspaces should be specified in a particular key. For these changes to take effect, GEODI must be closed. Existing directories must be moved to the new location, and after the move, the Windows Service user must be granted read/write permissions to the new directories to preserve existing project and license information.
+
+For Classification and Agent-based PC Discovery projects, the GEODI address must be secure and accessible to clients. This requires configuring SSL certificate settings within GEODI. These definitions should be established before deploying agents.
+
+SSL definitions are configured in a specific file located in the GEODI installation directory, using parameters such as "AppPort":443, "NoSSLPort":80, "ForceHttpsRedirect":true, and "SSLLocalCertificateSerial". To obtain the certificate serial number, run "Manage User Certificates" via Windows Run, then find the serial number under the properties/details tab of the relevant certificate in the Personal tree. If a *.pfx file is available, it should be loaded by double-clicking it first. No additional GEODI configuration is needed if certificates are managed by a load balancer.
+
+GEODI modules are typically updated from DECE-STORE. If the GEODI Server cannot access DECE-STORE, specific adjustments are required for an offline environment. The DECE Team will provide necessary files, which must be copied to a designated directory, and will continue to supply new versions as they are released. Additionally, a specific value in a file must be modified to enable offline mode. No extra steps are needed for GDE and Classifier agents in this setup. New GEODI Setups can also be downloaded and updated through the traditional method.
+
+The license dialog can be accessed by running "LicenseUpdate.bat" from the GEODI installation directory. If relocating a machine, the license can be deactivated on the old machine and then activated on the new one. When a license expires, a new license key can be entered using the same method. This license update process can be performed while the GEODI service is running, without requiring it to be stopped.

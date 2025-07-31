@@ -1,0 +1,21 @@
+GEODI can operate without the need for Internet Information Services (IIS). However, if IIS capabilities are desired, GEODI can be installed as an IIS service. Basic knowledge of IIS is necessary to follow the instructions for this installation.
+
+For IIS setup, the IIS application must be installed. If it is already installed, it should be verified whether ASP.net components are also installed.
+
+If either the IIS application or ASP.net components are not installed, the "Internet Information Services" button must be checked on the "Open or Close Windows Features" menu. Subsequently, the ASP/ASP .NET 3.5/ASP .NET 4.8 boxes within "Word Wide Web Services → Application Development Features" should be checked. This process is automatic and provides IIS installation upon completion.
+
+After launching the IIS application, a new application pool needs to be created. This pool should have a .Net CLR version of v4.xx and a Managed successive mode set to Integrated.
+
+Once the application pool is created, its ID must be established in the advanced settings. The account defined for this application pool ID must possess full authorization to both the "GEODI" and "Defined AppData" Folders.
+
+Within the application pool settings, the Maximum Worker Processes must be set to 1. Additionally, Recycling Conditions, specifically Regular time intervals, must be disabled.
+
+GEODI should be executed as GEODI.exe for purposes such as GEODI licensing and initial setup. The GEODI IIS Service runs continuously, and GEODI.EXE should be utilized for tasks like project editing or other specific purposes. Turning GEODI off and on does not impact the IIS service.
+
+GEODI will remain accessible as long as IIS is operational. Windows logins are not required for accessing GEODI when it is running as an IIS service.
+
+If a MAPed directory is used in GEODI resources or for other tasks that require execution at startup, the necessary .bat file should be placed in the GEODI → Settings/BatchFiles/Startup directory.
+
+Following the completion of the IIS installation, to serve GEODI over IIS, the "AppDataFolder" value must first be determined as specified in "System Configuration - Security Settings". The GEODI application running on IIS must also be able to access this specified directory. An example format for this value is { "AppDataFolder":"C:\\GEODI_APPDATA" }.
+
+A new website is created through the sites in IIS. General settings, including the site name, physical path, port, and domain, are configured during this process. Authorization controls for the provided directory can be verified using the option to check the settings. The previously created "GEODI" application pool should be selected for this website.

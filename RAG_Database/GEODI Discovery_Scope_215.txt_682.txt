@@ -1,0 +1,5 @@
+GEODI Discovery functions as a general-purpose discovery engine. It offers ready-to-use templates designed for regulations and country-specific discovery tools. Users also have the option to define their own rules within the system.
+
+Following the installation phase, users are directed to select their preferred templates from the DECE-STORE. These chosen templates are equipped with pre-defined rules, reports, and panels.
+
+The system includes numerous country packages specifically for PII (Personally Identifiable Information). These PII packages incorporate recognizers for various types of identification, such as ID numbers, medical numbers, and tax numbers.

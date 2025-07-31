@@ -1,0 +1,13 @@
+Localization is performed using resx files within the globalization framework. Interfaces and reports can be localized by utilizing either new or existing resx files. Translations in various languages can be added to existing resx files, and once added, these translations will appear on the interfaces.
+
+The syntax `[$ resx: key]` allows for the use of a key from a resx file within interfaces. To apply this syntax, "resx" should be replaced with the name of the resx file, excluding language and extension details, and "key" should be replaced with the specific data name found within the resx file. An example of this syntax is `[$default:displayname]`.
+
+An alternative format, `[.language: ....; language2: ...; language3: ...]`, is also available for use. An example of this format is `[.tr:Adı;en:Name;fr:Nom]`.
+
+Expressions derived from Resx files might not be suitable for direct use within script or HTML attributes. To address this, an encode operation can be applied using either the `/html` or `/js` parameters. An example of this encoding is `[ [$default:close/html] ]`.
+
+Localization can also be achieved using a macro structure.
+
+The `context.Localize` method enables translation for either a specifically defined language or the currently active language. Examples include `[=c.Localize("[$default:close]")]` and `[=c.Localize("[$default:close]",en-US)]`.
+
+The `context.ToString` method allows an object to be formatted according to a specified language. Examples of its use include `[=c.ToString(DateTime.Now,"en-US","dd MMM yyyy")]`, `[=c.ToString(DateTime.Now,"tr-TR","dd MMM yyyy")]`, and `[=c.ToString(DateTime.Now,null,"dd MMM yyyy")]`.

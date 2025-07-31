@@ -1,0 +1,3 @@
+A question was posed regarding the possibility of displaying scan results as percentages. Specifically, it was asked if a user could see the percentage of TCKNs found after a database scan, such as 500 TCKNs found in 1000 rows of data being visible as 50% without needing to access the full content.
+
+It is stated that such a percentage display is not available. However, users can effectively view the number of discovered rows and the number of rows containing findings within Dashboards and reports.

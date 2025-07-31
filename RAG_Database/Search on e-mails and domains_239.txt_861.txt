@@ -1,0 +1,3 @@
+GEODI searches for given criteria across all sources connected to your project.
+
+Users can search their website contents in GEODI by the domain name. This search capability is referred to as "Query by Domain Name" and is associated with a "Domain:" field.

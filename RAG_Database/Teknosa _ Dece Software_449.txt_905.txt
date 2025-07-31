@@ -1,0 +1,11 @@
+TeknoSA utilizes GEODI for Search, Discovery, Encryption, and Masking, specifically to ensure compliance with GDPR and Data Protection regulations.
+
+GEODI is capable of discovering all structured and unstructured data within TeknoSA's data lake, identifying sensitive data. Its Discovery and Semantic Query features assist TeknoSA in remediating, masking, or encrypting sensitive content, thereby enabling full compliance with data protection regulations.
+
+The GEODI platform offers functionalities including Search, Discover, Mask, Encrypt, and Classify.
+
+Dece Software is associated with the GEODI Platform. Contact information for Dece Software is provided as info@decesoftware.com.
+
+References for GEODI include a diverse range of entities such as Croatia, Ministry of Agriculture; Vakıfbank; National Budget Office of Nigeria; Ministry of Energy and Natural Resources; Saudi Finance Company; Al Tijaria; Topnet; National Finance of Omman; Palestine Investment Bank; Vakıf Katılım; Iron Mountain; Ziraat Katılım; Verifone; Green Crescent; Kahve Dünyası; Gelecek Varlık; ICT Authority; Ministry of Trade; Carrefoursa; Teknosa; Istanbul Chamber of Industry; Koton; Turkey Coal Enterprises; Unifree Duty Free; The North Marmara Motorway; and Türk Nippon Insurance. These references are categorized under Private Sector, State Agencies, and Municipalities & SPA.
+
+Available sections and resources mentioned include Contact Us, Support, Live Projects, Need Analysis, Solutions, GEODI Platform, Company, Resources, Blogs, Bulletins, Success Stories, Webinars, Support&Technical Docs, Developer Resources, Technology, Partners, References, About-Us, Integrations, Career, and Privacy Policy.

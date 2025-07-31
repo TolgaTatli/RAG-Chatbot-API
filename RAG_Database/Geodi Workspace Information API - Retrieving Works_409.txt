@@ -1,0 +1,19 @@
+Project information may be required to interpret some information from GEODI services. With this service, users can access identifiers and resources within a project, including ID and short ID values. The ID values for multiple layers added to a project vary by project, while the ID values for layers in a list that can be added to a project once are fixed.
+
+A list of recognizers and their associated ID values includes Geometry Recognizer (1724773852), Date Recognizer (1394679678), Language Recognizer (-45620008), Name Recognizer (1908803329), E-Mail Recognizer (-137705666), Parcel Recognizer (-82231797), Kilometre Recognizer (-100440746), Geographical Boundary Recognizer (-773006848), Twitter Hashtag Recognizer (-1235424222), Twitter Mention Recognizer (1004933692), TCKN Recognizer (-770985758), PhoneNo Recognizer (-827888131), Tax Identification Number Recognizer (557387937), and Address Recognizer (1628522554).
+
+Generating a Geodi Token is needed for certain operations. The GetWSInfo service is defined to return workspace information.
+
+The GetWSInfo service can be requested using the format `[GEODIURL]/WSInfoHandler?op=GetWSInfo&wsName=[WSNAME]&IncludeInfo=[IncludeInfo]`. The `wsName` parameter specifies the Workspace Name, and `IncludeInfo` is an optional enum value that selects which information to include in the returned object. The supported HTTP methods for this service are GET and POST.
+
+The `IncludeInfo` parameter accepts specific enum values to determine the information returned: 0 for Default (adds all), 1 for Recognizers, 2 for Enumerators, 4 for Content readers, 8 for Languages, 16 for Other workspaces, and 31 for All.
+
+Expected errors when calling the GetWSInfo service include 401 Unauthorized access / Access denied, 403 Forbidden, 511 Network Authentication Required, and 501 Server Error.
+
+The GetWSInfo service returns a JSON object containing arrays for "Recognizers", "Enumarators", "ContentReaders", and "Languages". It also includes a "Workspaces" array, where each workspace object has "Name", "IconName", and "CanEdit" properties.
+
+Within the returned object, "Recognizers" are identifiers attached to the Workspace and are returned if the Recognizers (1) bit is set in `IncludeInfo`. "Enumerators" are attached to the Workspace and are returned if the Enumerator (2) bit is set in `IncludeInfo`. "ContentReaders" are readers attached to the Workspace and are returned if the Content Reader (4) bit is set in `IncludeInfo`. "Workspaces" contains workspace information, typically from the workspace specified by the `wsName` parameter. If the bit (8) is set in `IncludeInfo` to bring other workspaces, they are added to this list. The "Name" field indicates the Workspace NAME, "IconName" indicates the Workspace ICON NAME, and "CanEdit" indicates whether the requesting user is authorized to edit the workspace.
+
+An example request for the GetWSInfo service is `[GEODIURL]/WSInfoHandler?op=GetWSInfo&wsName=TEST-BUCA&IncludeInfo=3`. The corresponding example response includes details for "Recognizers" such as "ParcelRecognizer" and "GeodiDictionary", "Enumarators" like "FolderContentReaderEnumarator", and "Workspaces" information for "TEST-BUCA".
+
+Example applications for utilizing GEODI services include .Net WinForm (C#) and HTML - Javascript.

@@ -1,0 +1,1 @@
+Etiket seçeneklerinin seviye olarak düşürülememesi ancak yükseltilebilmesi mümkündür. Bu durum, bir etiketin gizliden genele açıka çevrilemediği, fakat genele açıktan gizliye çevrilebildiği bir örnekle açıklanmaktadır.

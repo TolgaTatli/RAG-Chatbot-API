@@ -1,0 +1,23 @@
+GEODI's operation can be affected by firewall and antivirus security rules, as GEODI works with large data. During communications, certain rules in security tools may slow down processes or completely prevent communication. In such situations, support from the DECE technical team is required to exclude the relevant GEODI tools from these rules.
+
+Index repair after system shutdown and startup is a normal behavior. Unexpected shutdowns can result from various issues such as power outages, hardware problems, or the application being intentionally closed. In such cases, the index undergoes a health check on the next startup to correct any potential damage or errors found. To accelerate this process, it is necessary to back up the index and restore it from the backup upon startup. Restoring from a backup does not lead to irreversible data loss, and in the subsequent "index changed items" operation, the most recently added items are renewed.
+
+GEODI is designed to optimize server usage by dynamically utilizing server memory and CPU resources. The number of simultaneous tasks increases for simple and quickly processed files, while it decreases for heavy files. If the indexing process is very slow, potential causes include low memory or memory being used by other processes on the server, high CPU-consuming operations like intensive OCR, very slow network connections with the fileserver, the presence of a large volume of content such as logs, CSVs, or large Excel files, network issues or database congestion in the database connection, or the GEODI indexing speed being set to the lowest in the Project Wizard.
+
+The periodic backup of the index and the creation of an active/passive FKM environment are explained on the "GEODI Aktif-Pasif ve Aktif-Aktif konfigürasyonu" page. Simply performing a backup can speed up the system's startup and deployment in the event of potential interruptions.
+
+Within the Advanced settings on the last page of the GEODI Project Wizard, a project index backup directory can be specified to mitigate potential system interruptions. In the event of such interruptions, the GEODI index can be utilized from this designated directory. For detailed information on backup procedures, users can refer to the resource available at https://decesw.atlassian.net/wiki/spaces/geoditr/pages/3952812269/GEODI+Proje+ve+Index+%2C+Yedeklenmesi+veya+Senkronizasyonu#GEODI-Index-Kurtarma-Se%C3%A7enekleri.
+
+GEODI indexes only the names of encrypted files. Encrypted files indexed in this manner can be listed using the queries "status:GEODICryptedContent" or "status:GEODICryptedContentPart". Files identified as erroneous can be queried using "status:HasScanError".
+
+It is an expected and designed behavior for files deleted from their original sources to still appear in GEODI search results. To remove these files from the GEODI index, the "delete deleted items" operation must be performed through the Project Management interface.
+
+The "System.io Path too Long Exception" error occurs because Windows can access directories with a maximum length of 260 characters. If a path exceeds this length, this error is received. The solution involves appropriately adjusting the path, often through mapping.
+
+GEODI stores its logs in the `appdata/dece/geodi` directory. These logs are in CEF format, which makes them processable by SIEM tools. The specified directory contains the necessary logs for SIEM integration.
+
+Email notifications may not be delivered for query monitoring or when mentioning another user in notes. This issue might stem from server settings, which can be accessed via the GEODI Management Panel/settings. If the problem affects only a limited number of users, their spam folders or mail rules should be checked.
+
+GEODI checks for available updates upon startup and can proceed with an update if approved. A new version may involve converting the index structure to align with new features, which will be indicated by a warning. It is recommended to back up the old index before proceeding with the update. GEODI must be closed while the update is being performed.
+
+Recent GEODI Setup releases include version 8.0.140 on November 25, 2024, version 8.0.139 on November 05, 2024, version 8.0.137 on October 17, 2024, and version 8.0.136 on September 16, 2024.

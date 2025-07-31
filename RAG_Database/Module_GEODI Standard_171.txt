@@ -1,0 +1,29 @@
+GEODI Standard serves as the foundational module, with all other applications operating on it.
+
+Upon installation of GEODI Standard, the application modules included in your license are automatically installed. Users have the option to install additional tools, such as a 3D map or a measurement tool, from the GEODI Application marketplace, DECE-STORE.
+
+The Locations Recognizer is a feature included in the standard license. It is designed to understand coordinate expressions found in documents and subsequently place them on a map.
+
+The Locations Recognizer can interpret various forms of location information. This includes locations from photos taken with cell phones or GPS-enabled cameras, as well as specific location expressions found in documents like "+40.974968-037.89562/", "39° 42' 32° 40'", "39° 42′ 5″ 32° 40′ 9″", WKT Geometry information, and MGRS Information.
+
+The Date Recognizer is also part of the standard license. It identifies date expressions within texts and the dates associated with content.
+
+The Date Recognizer supports many different date spellings, including "29 Ekim 1923", "Ekim 1923", "October 1923", "October 29, 1923", and "October-November 1923". GEODI processes dates without day information as ranges; for instance, "October 1923" is recognized as "01 October 1923 - 30 October 1923".
+
+The GEODI date recognizer can also identify dates in various languages, such as English, Russian, French, and Spanish. Installing the GEODI Language Pack may be necessary for this functionality. Relative date expressions like "yesterday", "today", "last week", and "last year" are also recognized in content from reliable sources like Social Media messages and emails.
+
+GEODI provides standard reports for different purposes. These reports are accessible to both users and system administrators within the "ACC.STDREPORT" group. A GEODI Pro license is required to access these reports.
+
+The "Compress Files and Download" feature allows selected content to be downloaded as a ZIP file. Only the contents of the file are included in the ZIP. Downloading a large volume of content may require a significant amount of time.
+
+Location information extracted from content is presented in GeoJSON format. This output can be utilized in ArcGIS or any other software that supports GeoJSON. Once the GeoJSON source is added to ArcGIS, GEODI contents can be accessed by clicking on them.
+
+GEODI Standard includes several ready panels. These panels are visible to users in the group and to system administrators.
+
+The Image Similarity Module is included in the standard license. This module enables users to find similar files, such as JPEG or PNG images. It can also locate images similar to one on a user's computer or on the internet, facilitating easier searching through large image archives.
+
+To use the Image Similarity feature, users can click the "Search Image or Document" button located to the right of the GEODI query box. They can then drag and drop a file from their computer or type the internet address of an image into the opened window. Additionally, users can search by selecting a portion of an image from the screen after specifying the image.
+
+GEODI displays the similarity rate for the images it finds.
+
+To enable the Image Similarity feature, users must select the "Enable Image Similarity" option in both the Content section of the Project Wizard and in the subsequent Save step, before performing a scan.

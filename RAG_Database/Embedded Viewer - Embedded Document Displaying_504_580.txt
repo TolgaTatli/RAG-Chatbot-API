@@ -1,0 +1,17 @@
+The existing GEODI Document Viewer can be called from a different application and used within an HTML iframe tag, allowing documents to be displayed directly inside the software. By default, serving GEODI in an iframe via an external domain is disabled. This setting can be configured by using the System Configuration - Security Settings page to specify allowed domains for iframe usage.
+
+The GEODI Viewer GUI Request uses the base URL `[GEODIURL]/DefaultContentViewer` followed by parameters. Examples of request URLs include `[GEODIURL]/DefaultContentViewer?wsName=[wsName]&q=[Query]`, `[GEODIURL]/DefaultContentViewer?wsName=[wsName]&unc=[UNC]`, `[GEODIURL]/DefaultContentViewer?wsName=[wsName]&relation_id=[relation_id]`, and `[GEODIURL]/DefaultContentViewer?wsName=[wsName]&content_id=[content_id]`.
+
+The `wsName` parameter represents the project name containing the document, which is short for workspace. The `force` parameter is optional; when `force=1` is passed, the `ViewURL` specified during Feed is not used, and the document is opened with the GEODI viewer. Parameters other than `wsName` and `force` should not be used together, as GEODI will only use one parameter to find the document and ignore the others.
+
+The `q` parameter takes a Geodi query. The system attempts to match the location of the text that corresponds to the query with its display priority. For specific query text syntax rules, users should refer to GEODI Queries.
+
+The `unc` parameter refers to a ContentID transmitted via feed services, and it can be used to specify the path of the file on the disk.
+
+The `relation_id` parameter is obtained exclusively through the Geodi Query API (Query). It provides information about the content found and its location within that content.
+
+The `content_id` parameter is also obtained only via the Geodi Query API (Query). This parameter represents the ID value of the content stored inside GEODI.
+
+The HttpMethod for these requests is GET. Expected errors include 401 Unauthorized access / Access denied, 403 Forbidden, and 511 Network Authentication Required.
+
+To ensure consistent results across all browsers, `wsName` and `Query` parameters must be passed via URL encoding. An HTML script is provided for URL Encode operations: `function UrlEncode(val) { return window.encodeURIComponent ? window.encodeURIComponent(val) : val.replace(/&/g, '%26'); }`. For .Net systems, the `System.Web.HttpUtility.UrlEncode` method is already available.

@@ -1,0 +1,3 @@
+Sürükle bırak ile eklenen içerikleri hangi kullanıcının eklediği içerik özetinde görülebilir. Bir kullanıcının eklediği içerikleri sorgulamak için “owner:“ deyimi kullanılır.
+
+Belirli bir kullanıcı ve grubun gördüğü belgeler sorgulanabilir. Bu sorgular sınıflandırma için de kullanılabilir. Örneğin, belirli bir grup bir belgeyi görürse, bu belge gizli olarak nitelendirilebilir.

@@ -1,0 +1,13 @@
+DECE Software provides an AI and NLP-based solution for Enterprise Content Management. This solution encompasses capabilities such as Discover, Search, Encrypt, Mask, and Classify. The GEODI Platform offers solutions including Search, Discover, Mask, and Classify, with a stated focus on protecting data.
+
+The Discover capability makes sensitive information visible, assists in data protection, identifies non-compliant data for regulation, and reveals hidden value within data. Discovery is presented as a tool that saves time, reduces obligatory risks, and increases corporate agility.
+
+The GEODI Search solution aims to save time for office workers, who are noted to spend 40% of their time searching for information. This solution facilitates faster decision-making with fewer errors. It enables all employees, including senior management, to search and collaborate 24/7 from their desktop, laptop, or mobile devices.
+
+Masking is a solution designed to hide unwanted information in documents, such as names, money, or company names. It supports sharing information without taking risks. This solution relies on the high accuracy findings of Discovery and is compatible with Word, Excel, Libre Office, and PDF files.
+
+Classification identifies and labels data based on protection policies. The GEODI Classification Suite includes both automatic and manual classification tools. Classification for Desktop, Office, CAD, or OWA (Webmail) helps ensure data safety, and Automatic Legacy Data Classification further aids in data protection.
+
+DECE Software lists various references and clients. These include Croatia, Ministry of Agriculture; Vakıfbank; National Budget Office of Nigeria; Ministry of Energy and Natural Resources; Saudi Finance Company; Al Tijaria; Topnet; National Finance of Omman; Palestine Investment Bank; Vakıf Katılım; Iron Mountain; Ziraat Katılım; Verifone; Green Crescent; Kahve Dünyası; Gelecek Varlık; ICT Authority; Ministry of Trade; Carrefoursa; Teknosa; Istanbul Chamber of Industry; Koton; Turkey Coal Enterprises; Unifree Duty Free; The North Marmara Motorway; and Türk Nippon Insurance. The references also broadly cover Private Sector, State Agencies, and Municipalities & SPA.
+
+Contact information for DECE Software is provided via info@decesoftware.com. The website also lists links to sections such as About-Us, Blog, Bulletins, Webinars, Integrations, Career, and Privacy Policy.

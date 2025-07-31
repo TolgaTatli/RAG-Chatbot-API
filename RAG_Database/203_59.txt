@@ -1,0 +1,3 @@
+It is considered normal for a scan stop to take a very long time. This situation can occur for files that have a very long indexing process.
+
+The shortening of this duration is included in the development roadmap.

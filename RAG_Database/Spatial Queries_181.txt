@@ -1,0 +1,15 @@
+GEODI functions as a GIS solution equipped with a robust spatial relations query language. This capability allows users to directly query unstructured data by employing words, semantic rules, and spatial relations. This approach significantly reduces the time and resources typically required by traditional GIS solutions.
+
+GEODI's rules are designed to locate content using geometric words, which include places, points, section numbers, land parcels, roads, addresses, MGRS coordinates, or photographs with GPS. The results of these queries are presented on the CONTENT pages, while the associated words appear on the KEYWORDS page. A map also visually displays the query results.
+
+To query content containing location-related information, users can employ the keyword 'geom'. This keyword facilitates searches for various location references such as place names like Georgia or London, parcel numbers, and known area codes of phone numbers. Information identified through the 'geom' keyword is visible on the GEODI map.
+
+GEODI's spatial relations query language includes a set of operators for precise data retrieval. These operators are bbox, Intersects, Contains, Within, Equals, Touches, Distance, Covers, Overlaps, and CoveredBy. The 'Related' operator is specifically defined as a combination of Contains, CoveredBy, and Touches.
+
+The Keywords page typically lists keywords found within the content. However, certain rules, such as the Word Proximity rule '()' and spatial queries, can alter this normal behavior. When the keyword 'content' is added to spatial operator keywords, those keywords are also affected by the rule.
+
+When 'Related:Georgia' is queried, it returns specific content, and the Keywords page will display all keywords present in that content. In contrast, 'RelatedContent:Georgia' returns the same content, but the spatial keywords displayed are limited by the rule, while non-spatial keywords remain unaffected.
+
+GEODI supports spatial queries using coordinates. For example, 'Related:42.5,36.4' represents a longitude and latitude point. Queries like 'Related:42.5,36.4,43.8,38.5' utilize two sets of longitude and latitude coordinates. More complex coordinate strings, such as 'Related:42.5,36.4,46.0,36.4,43.2,32.1,42.5,36.4' or 'Intersects:"Line 42.5,36.4,46.0,36.4"', define an area or a line string. For a coordinate string to represent an area, its first and last coordinates must be identical. It is specified that coordinates must not contain unnecessary blanks.
+
+GEODI also facilitates spatial queries using named locations. For instance, 'Touches:"Georgia"' assumes the presence of a spatial city dictionary that includes geometry for Georgia. The 'Distance' operator can find content within a specified range, as shown by 'Distance:"Georgia geodistance:50000"' which finds content within 50,000 meters. The 'Within' operator, used in 'Within:"Georgia geocenter"', identifies documents that cover the Georgina geocenter. Additionally, a buffer can be applied around a location, such as 'Related:"Route66 geobuffer:10"', to find related content within a 10-meter buffer around Route66.

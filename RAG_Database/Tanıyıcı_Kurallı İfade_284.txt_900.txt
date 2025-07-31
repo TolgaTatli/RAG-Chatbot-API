@@ -1,0 +1,21 @@
+A "Kurallı ifade tanıyıcı" (Rule-based expression recognizer) operates according to a rule determined by the user. It helps to select and separate parts described using a formal language within texts. The user determines the outcome it will yield. This usage is generally known as "Regex" and is a common practice.
+
+To obtain information about Regex and test prepared regex expressions, the ".NET Regex Tester" website can be used.
+
+When preparing regex expressions, care should be taken to use uppercase letters because Geodi converts and uses words in uppercase.
+
+An example regex, `[0-9,\,]+X[0-9,\,]+X[0-9,\,]*[ ]*CM|[0-9,\,]+X[0-9,\,]+[ ]*CM`, can be used to find dimension expressions in documents. Examples include "25X25cm" or "5x10x12,5 cm".
+
+Another regex example, `[0-9]+[ ]*SAYFA|[0-9]+[ ]*ADET`, can be used to find page and quantity numbers in documents. Examples include "10 Sayfa, 20 Adet".
+
+The regex `MIL-STD-[0-9]*[A-Z]*` is used to identify terms that specify military standards globally. Examples that can be captured with this regex include "MIL-STD-1376" and "MIL-STD-1246C".
+
+The regex `(HTTPS?://)?(WWW[.])?([Iİ]NSTAGRAM[.]COM)(([/?#][^\s]*)|\s+)` recognizes Instagram addresses and supports different writing styles. Examples include "https://www.instagram.com/deceyazilim/", "www.instagram.com/deceyazilim/", and "instagram.com/deceyazilim/".
+
+In addition to rules, custom validation algorithms can be written, such as those based on close words, Luhn validation, or Verhoef validation.
+
+To better analyze the results, the "Kelimeler" (Words) page can be used.
+
+When preparing a regex expression, it is important to ensure there are no spaces at the beginning or end of the expression.
+
+To use this recognizer, possession of a Geodi Pro license and module is required.

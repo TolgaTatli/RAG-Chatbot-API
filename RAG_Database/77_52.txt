@@ -1,0 +1,1 @@
+It is possible to perform a scan by entering a user screen and password when defining a source fileserver for GEODI.

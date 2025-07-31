@@ -1,0 +1,7 @@
+Instructions are provided for users experiencing issues viewing content, advising them to click to open it in a new window or to change their browser's cookie settings.
+
+Available options include Teknik Destek, SSS, Bize Ulaşın, and Hesabınıza giriş yapın.
+
+The product is identified as GEODI version 8.0.0.27821.
+
+Login options include Beni hatırla and Şifremi Unuttum. Users can also log in using Dropbox, LinkedIn, Microsoft, or Google, with options presented as "[ Dropbox ile oturum aç ]", "Dropbox ile oturum aç", "[ LinkedIn ile oturum aç ]", "LinkedIn ile oturum aç", "[ Microsoft ile oturum aç ]", "Microsoft ile oturum aç", "[ Google ile oturum aç ]", and "Google ile oturum aç".

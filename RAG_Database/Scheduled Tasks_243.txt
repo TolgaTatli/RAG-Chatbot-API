@@ -1,0 +1,29 @@
+GEODI features a powerful scheduler that automates various tasks. Templates are provided for frequently used tasks.
+
+Scheduled Discovery is performed within the last page of the project wizard. To activate it, users must activate the scheduled Index and set the time.
+
+By default, all GEODI projects are configured to be backed up daily at 03:00. These backups are stored in the Backup folder, which is located under the Project Workspace directory.
+
+Backup settings can be modified in the "Advanced Settings" section of the Project Wizard. It is recommended to make changes to these settings only if there is a specific requirement.
+
+The template for Scheduled Report Mail is designed to send a Summary report weekly on Monday at 09:00 clock. Users have the option to change the report or the period.
+
+The SendWeeklyReport.jSettings.sample template is found in the Settings\Notifications\TimedNotification folder. To use it, this file must be renamed to SendWeeklyReport.jSettings.
+
+To customize the Scheduled Report Mail template, the [TOMAIL] value needs to be replaced with the desired recipients. Multiple e-mail addresses can be separated using a semicolon (";").
+
+For the Scheduled Report Mail template, the [WSNAME] value should be set to the workspace name.
+
+Multiple settings can be configured for different periods, projects, or reports by copying the jsettings file and assigning a new ID.
+
+The template for Discovery and Automatic Classification is designed to automatically classify each newly received document.
+
+The ScheduledClassifier.jsettings.Sample template is located in the \Settings\Notifications\Geodi.OnScanEnd\ folder.
+
+For the Discovery and Automatic Classification template, a [GEODI_TOKEN] can be obtained. The [GEODIURL] should be set to the project's URL address, and [WSNAME] should be set to the project's workspace name.
+
+The template for "Summary Report via Email When Discovery is Completed" is designed to send an email containing a summary report and a notification once the discovery process is finished.
+
+The ScanEnded.jsettings.sample file is located in the directory. To activate this template, ScanEnded.jsettings.sample must be renamed to ScanEnded.jsettings.
+
+To customize the "Summary Report via Email When Discovery is Completed" template, the [TOMAIL] value must be replaced with the recipient's email addresses. Multiple recipients can be separated using a semicolon (";").

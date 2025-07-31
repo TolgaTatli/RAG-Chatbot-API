@@ -1,0 +1,5 @@
+The Language Pack is an add-on that enhances GEODI's language capabilities. While GEODI inherently supports basic English, this add-on introduces support for German, Russian, Arabic, Georgian, Croatian, and Albanian languages. Furthermore, the Language Pack incorporates date-time rules, which GEODI is then able to recognize.
+
+Following the installation of the Language Pack, users are required to select their desired language through the user preferences.
+
+The version of the Language Pack is 1.0.0.12.

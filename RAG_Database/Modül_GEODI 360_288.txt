@@ -1,0 +1,19 @@
+GEODI 360 is a GeoAI application that automatically processes videos collected with simple in-car cameras. It can recognize traffic signs and other objects from videos and create an inventory. The application also allows for manual marking and task assignment directly on the videos.
+
+GEODI 360 is compatible with software like ArcGIS or Netcad. It serves as an ideal documentation and inspection tool for various infrastructures, including roads, canals, dams, pipelines, large facilities, and campuses. This tool minimizes time spent in the field, leading to significant savings, and provides a level of coverage that would not be possible through individual manual efforts in the field.
+
+Data for GEODI 360 is automatically processed when collected with a camera featuring internal GPS or any camera supported by an external GPS track. Compatible devices include Mio Mivue 330 and Android devices, which can be used with a specific application. The ease of data acquisition and the use of common, relatively inexpensive hardware allow for frequent image collection, enabling daily or even hourly updates instead of monthly, ensuring current data is always available. GPS tracks can be in formats such as ".srtmap", ".nmea", ".gpx", ".gps", ".flightplan", ".fpl", ".igc", and ".xml".
+
+Within GEODI 360, each video appears as a track on a map. Users can open the image corresponding to a clicked location on the map and navigate forward or backward within the video. The system also allows users to reach the location corresponding to the current time in the video.
+
+GEODI 360 provides access to old, and potentially future, images related to the navigated location. By clicking on an image, users can navigate to the relevant time point.
+
+The GEODI note-taking mechanism is applicable within videos, allowing users to mark various issues such as road damage, other problems visible in the image, worn pedestrian crossings, or broken signs. These notes appear as points on the GEODI map, and tasks can be assigned by mentioning individuals within these notes.
+
+TrafficPro is an optional module that operates under GEODI 360. It recognizes traffic signs from images and maintains an inventory. TrafficPro enhances road safety by comparing continuously incoming images for the same location and reporting any missing signs.
+
+ImagePro is another optional module that functions under GEODI 360. This module is used to recognize objects within videos. If the objects are not part of ImagePro's existing models, the necessary models can be created.
+
+Multiple cameras can be mounted on a vehicle, such as for right/left, wider angle, or front/rear views, in addition to a single camera setup. The processing of images from these multiple cameras will be conducted independently.
+
+Training for GEODI 360 covers different scopes for users and administrators. For GEODI Users, topics include opening videos with maps via an example project, accessing old images, note-taking and subsequent operations, being informed about new images, and training on TrafficPro and ImagePro if applicable. For GEODI Administrators, the training covers system requirements related to disk and image processing, transferring images from vehicle cameras, and training on TrafficPro and ImagePro if applicable.

@@ -1,0 +1,7 @@
+GEODI displays the signature information and timestamp information of E-Signed PDF files and allows searching from this information. This increases reliability without the need for external verification methods.
+
+The signature information of PDF documents signed with the PAdES method is automatically recognized during indexing. When the document is opened, this information is visible, including signatories, timestamps, and certificate details.
+
+There is no additional work required to recognize e-signed documents, as GEODI performs this automatically. E-signatures can be searched using query commands such as e-signature:... or signature:..... For instance, searching for e-signature: "name surname" will find documents e-signed by the person "name surname".
+
+When an e-signed document is selected, all e-signature information is visible on the right side. On the Words screen, discovered words originating from the e-signature can be seen. E-signature details can also be viewed on the document viewer screen using the top right Info (I) button.

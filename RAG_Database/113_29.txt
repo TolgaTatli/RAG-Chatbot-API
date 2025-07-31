@@ -1,0 +1,1 @@
+Veritabanı Primay Key Kontrolü ve Örneklemeli Keşif Ayarları, arayüzden yapılmaktadır.

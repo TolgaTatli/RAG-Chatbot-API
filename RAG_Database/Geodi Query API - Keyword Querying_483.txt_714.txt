@@ -1,0 +1,17 @@
+QueryHandler.GetKeywords is described as a simplified service, with the geyKeywords API offering more features. The GetKeywords service is defined as searching in documents within the Workspace and for searched words.
+
+The request URL for the GetKeywords service is `[GEODIURL]/QueryHandler?op=GetKeywords&wsName=[WSNAME]&q=[SearchString]&startIndex=[StartIndex]&endIndex=[EndIndex]&options=[OptionsJSON]&UserSession=[TOKEN]`. The `wsName` parameter (string) specifies the name of the workspace to search within. The `q` parameter (string) is the query text. The `startIndex` parameter (int, optional) indicates the index where query results will begin, with a limit of 0. The `endIndex` parameter (int, optional) indicates the index where query results will end, also with a limit of 0.
+
+The `options` parameter is optional and allows for additional parameters to modify the query result. These include `ContentIDFilter` (int[] - optional) for filtering content, `Envelope` ([LonMin(int),LatMin(int),LonMax(int),LatMax(int)] - optional) for returning words within specified BBOX geometry boundaries, `LayerIdFilter` (int[] - optional) for filtering words by the IDs of their recognizers, and `KeywordIdFilter` (int[] - optional) for filtering words by their IDs. Additionally, `CalculateCounts` (true/false - optional) determines if the `NumberOfOccurences` field is calculated in the result, and `GetRelatedKeywords` (true/false - optional), which is true by default, returns related keywords information.
+
+The GetKeywords service supports both GET and POST HTTP methods. Expected errors when using this service include 401 Unauthorized access / Access denied, 403 Forbidden, 511 Network Authentication Required, and 501 Server Error.
+
+The service returns a JSON array of objects. Each object contains `KeywordID`, `Keyword`, `Keyword_Extra`, `RecognizerID`, `NumberOfOccurences`, and `GeoType` fields. `KeywordID` represents the keyword's ID, `Keyword` is the keyword text, and `Keyword_Extra` provides additional keyword information. `RecognizerID` is the ID of the identifier that found the keyword, if applicable. `NumberOfOccurences` indicates the number of times the keyword occurred.
+
+The `GeoType` field in the returned value specifies the geometry type of the found word. Its possible values are: 0 for Unknown, 1 for NonSpatial, 2 for Point, 4 for LineString, 8 for Polygon, 16 for MultiPoint, 32 for MultiLineString, 64 for MultiPolygon, 128 for GeometryCollection, and 254 for AllSpatial.
+
+An example query for the GetKeywords service is `[GEODIURL]/QueryHandler?op=GetKeywords&wsName=PROJE&q=ankara&startIndex=0&endIndex=1`. This query returns a result formatted as `[ { "KeywordID": 1, "Keyword": "Ankara", "Keyword_Extra": "", "RecognizerID": -987, "GeoType": 1 } ]`.
+
+Another example query is `[GEODIURL]/QueryHandler?op=GetKeywords&wsName=PROJE&q=ankara&startIndex=0&endIndex=3&options={"LayerIDFilter":[-456]}`. This query can return multiple results, such as `[ { "KeywordID": 2, "Keyword": "Ankara", "Keyword_Extra": "", "RecognizerID": -456, "GeoType": 1 }, { "KeywordID": 3, "Keyword": "Ankara", "Keyword_Extra": "", "RecognizerID": -456, "GeoType": 1 }, { "KeywordID": 4, "Keyword": "Ankara", "Keyword_Extra": "", "RecognizerID": -456, "GeoType": 1 } ]`.
+
+Example applications that utilize this service include .Net WinForm (C#), Java, and HTML - Javascript.

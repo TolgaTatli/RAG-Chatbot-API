@@ -1,0 +1,5 @@
+A service allows users to search from documents within GEODI Workspace. Users can request documents, facets, or words to be returned as a search result.
+
+This service can be used to query from a project indexed by GEODI and process the results in an application.
+
+The accessible query capabilities include Geodi Query API - Document Search, Geodi Query API - Document Summary Query, Geodi Query API - Keyword Querying, and Geodi Query API - Returning a Query Facet.

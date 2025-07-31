@@ -1,0 +1,5 @@
+SSH connections can be used as an alternative to Folder and GDE (Agent-based) connections.
+
+With SSH, agentless discovery can be securely performed on devices across the network.
+
+Connection requirements for SSH include Server Address, Port Number, Username, and Password.

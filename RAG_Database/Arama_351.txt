@@ -1,0 +1,7 @@
+GEODI platformunun en temel özelliği aramadır. Arama yeteneği Keşif ve sınıflama gibi uygulamalar için de çok önemli bir katkı sağlamaktadır. Bu sayfa, çok sayıda kullanıcının kullanacağı ortamlardan olan Kurumsal Arama’dan söz etmektedir.
+
+Kurumsal arama projeleri, temel olarak keşif projelerine çok benzemekle birlikte, daha fazla kullanıcı etkileşimi ve yetkiler gibi temel konularda farklılık gösterir.
+
+SAR/Subject Access Request ya da Bilgi Edinme kapsamında gereken arama ihtiyacı da benzer yapıda kurgulanabilir.
+
+Yetkiler, kurumsal arama projeleri için en önemli konulardan birisidir. GEODI, var olan LDAP yetkileri yanında veri tabanı yetkileri, e-posta yetkileri, istemci bilgisayarlardaki yetkiler ve entegre olan diğer uygulama yetkilerini de dikkate alır.

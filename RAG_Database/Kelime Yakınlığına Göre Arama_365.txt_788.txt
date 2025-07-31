@@ -1,0 +1,7 @@
+Adding "()" to the end of a rule modifies map, calendar, and word queries, though the content itself remains unchanged. This proximity operator is an important operation that alters how data is viewed.
+
+On a map, "kaza" signifies locations where accidents have occurred. The query "Kaza() kasko" finds the word "Kasko" if it is in proximity to "Kaza". When used on the "KELİMELER" (Words) page, this operator can be applied for queries involving nearby names, dates, and places.
+
+The "Yakınında" (Nearby) operation significantly enhances the effectiveness of the Network Graph feature, which is included with GEODI Discovery. For instance, a query like "kaçak()" in a municipality can locate parcels related to "kaçak". In a News Agencies project that utilizes news websites, "kaza()" allows for easy querying to determine the concentration of accidents by specific dates or provinces.
+
+The "Yakında" (Nearby) operation can be used in conjunction with other rules. The default proximity is set to 10 words, but users can specify a different desired value. Other rules, including the quote rule and "Tarh" rules, are also applicable.

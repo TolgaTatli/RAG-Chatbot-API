@@ -1,0 +1,7 @@
+These pages provide technical documentation along with samples for the Mobidi Server API. The Mobidi Server API can be utilized for various operations on Mobidi records, such as querying, creating, and editing.
+
+Specific APIs mentioned include the Mobidi Server Query for Record Counts API, Mobidi Server Query API, Mobidi Server Create/Update MobidiEntry API, and MOBIDI Office REST API.
+
+The software itself self-documents the REST API methods. These methods are subject to variation based on the software version and any installed add-ons.
+
+To access the available methods, users are instructed to replace the provided links with their specific host address.

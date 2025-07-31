@@ -1,0 +1,7 @@
+Bu eğitim, GEODI Sınıflama araçlarının OWA, Microsoft 365 veya Exchange Server için kurulumunu kapsar. Eğitim sadece GEODI spesifik konuları ele alır ve katılımcıların söz konusu e-posta sunucuları hakkında yeterli bilgiye sahip olduğu varsayılır.
+
+Eğitimin süresi 45 dakikadır. Bu eğitim için herhangi bir ön şart eğitim bulunmamaktadır.
+
+Eğitimin kapsamı GEODI Classifier Sınıf ve Politikaların belirlenmesi, GEODI Classifier Etiket Tanımları, GEODI Classifier SSS, GEODI Classifier Windows İstemci Kurulumu, GEODI Classifier OWA Kurulum, GEODI Classifier Ofis ve Diğer Eklentiler Kullanıcı Rehberi, GEODI Classifier Toplu Sınıflama, GEODI Classifier Log Analiz Paneli ve Classifier Projesi konularını içerir.
+
+Eğitimler genel bir fikir vermeyi amaçlar ve öğrenilenlerin kullanılarak pekiştirilmesi gereklidir. Emin olunmayan veya yapılamayan konularda ekiplerden destek istenmesi tavsiye edilir. Eğitim kapsamında belirtilen bazı özellikler lisansınızda yer almayabilir.

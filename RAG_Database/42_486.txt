@@ -1,0 +1,1 @@
+Sınıflandırmanın çevrimdışı çalışması mümkündür. Bu durum, sadece manuel sınıflama ile gerçekleştirilebilir.

@@ -1,0 +1,3 @@
+DivvyDrive does not have classification capabilities.
+
+The backup procedure for the database used with GEODI is detailed on the support and support site.

@@ -1,0 +1,3 @@
+GEODI indexes files from sources mentioned on the current page. File ignore rules and other rules are applied during this process. It is important to note that these sources are accessed over the web, and therefore, indexing performance is influenced by internet speed. The source itself may establish a connection or block access, similar to how other web sources behave.
+
+Google Drive is identified as one of the sources for GEODI's indexing. Within Google Drive, directories are indexed and discovered in a manner similar to Windows directories. File ignore rules are applicable to Google Drive content. To connect to Google Drive, a valid Google Drive account is required, possessing a minimum of readonly permission.

@@ -1,0 +1,5 @@
+This package expands the capabilities of GEODI Discovery and Classifier by providing country-specific semantic recognizers. It is specifically designed for Kenya, and users can install this desired package after installing GEODI Discovery.
+
+The package includes a Kenyan Shilling Recognizer, a Kenyan ID Recognizer, and a Kenyan City Recognizer.
+
+The package version is 1.0.0.3.

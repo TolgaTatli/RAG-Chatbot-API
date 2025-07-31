@@ -1,0 +1,1 @@
+The EnumeratorID, which is required for using 21 API, can be obtained from the Project Report. Alternatively, it is also possible to find the EnumeratorID through GEODI interfaces by using F12.

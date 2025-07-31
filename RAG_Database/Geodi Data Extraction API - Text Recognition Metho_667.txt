@@ -1,0 +1,17 @@
+The token required for operations can be obtained by generating a GEODI Token. The "Recognize" operation is defined as returning entries found by scanners in an existing workspace for user-supplied text.
+
+The "Recognize" operation can be requested via the URL `[GEODIURL]/DataExtractionHandler?op=Recognize&wsName=[WSNAME]&Text=[Text]&UserSession=[TOKEN]`. The `wsName` parameter specifies the Workspace Name, and the `Text` parameter refers to the text to be inspected. This operation supports both GET and POST HTTP methods.
+
+Expected errors for the "Recognize" operation include 401 Unauthorized access / Access denied, 403 Forbidden, 511 Network Authentication Required, and 501 Server Error.
+
+The result value for the "Recognize" operation is a JSON object containing `ElapsedMilliseconds` and `Entries`. `ElapsedMilliseconds` indicates the time in milliseconds spent for recognition. `Entries` is a list of entrances recognized by GEODI.
+
+Each entry within the `Entries` list contains several fields: `OriginalText`, which is the piece of text where recognition occurs; `Text`, which is the text of the recognition made within the original text; `StartIndex`, representing `OriginalText`'s starting position within the text (starting from 0); `Length`, which is `OriginalText`'s length; and `Filter`, which is a value created for the entry, if any.
+
+The `Filter` object within an entry can include `StartDouble`, indicating the beginning of a value range, and `EndDouble`, indicating the end of a range. `IsFixedValue` specifies whether the value is constant, where `False` indicates a range value. `RecognizerID` is the ID of the recognizer that recognizes the word. `ValueTypeCode` is an Enum value corresponding to the value type.
+
+The `ValueTypeCode` enum values and their word value type equivalents are: 0: Empty, 1: Object, 2: DBNull, 3: Boolean, 4: Char, 5: SByte (-128, 127), 6: Byte (0, 255), 7: Int16 (-32768, 32767), 8: UInt16 (0, 65535), 9: Int32 (-2147483648, 2147483647), 10: UInt32 (0, 4294967295), 11: Int64 (-9223372036854775808, 9223372036854775807), 12: UInt64 (0, 18446744073709551615), 13: Single, 14: Double, 15: Decimal, 16: DateTime, and 18: String.
+
+An example request for the "Recognize" operation is `[GEODIURL]/DataExtractionHandler?op=Recognize&wsName=PROJE&Text=10 blocks in 20th parcel`. The corresponding result for this example shows `ElapsedMilliseconds: 0` and an `Entries` list containing one entry. This entry has `OriginalText: "10 blocks in 20th parcel"`, `Text: "10 blocks in 20 parcels"`, `StartIndex: 0`, `Length: 20`, and `Filter: null`.
+
+Example applications for this functionality include .Net WinForm (C#) and HTML - Javascript.

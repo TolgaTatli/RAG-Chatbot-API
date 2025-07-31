@@ -1,0 +1,9 @@
+GEODI is an AI assistant that supports discovery and auto classification, with relevance for legal and project offices. The system promotes a shift from manual classification to AI-driven processes.
+
+Manually classifying a document is a challenging task, requiring knowledge of available classes, rules, and exceptions, which often leads to mistakes. User behavior is identified as a significant issue in classification. Comparisons between manually assigned classes and GEODI auto-classification have indicated that manual classification is risky. When risk perception increases, users tend to assign higher classes, which complicates the process.
+
+GEODI's auto-classification now supports Large Language Models (LLM), which is described as a game-changing improvement. This enhancement allows auto-classification to cover not only document labeling but also a broader range of functions, depending on the prompts used.
+
+Auto-classification is much easier for users and is considered a less risky method for document protection, whether or not LLM is utilized. The issue of classification speed has been solved. Auto classification also enables legacy data classification and on-the-fly classification, allowing for the classification of any new document, analysis, and risk reduction.
+
+GEODI offers solutions for data security and compliance, including enhancing DORA Compliance for financial firms and managing Data Security Posture Management (DSPM). Other topics of interest include revolutionizing data discovery with GEODI Q and the ability to build an AI Assistant with GEODI. The system provides capabilities to search, discover, mask, encrypt, and classify data for protection.

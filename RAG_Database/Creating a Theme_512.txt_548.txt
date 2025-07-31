@@ -1,0 +1,7 @@
+Each folder created under the GUI / Theme folder is considered theme content. Creating a theme allows for the replacement of existing images, icons, and CSS files with new ones, or for specifying new CSS and JavaScript content to be added to each page. A theme can encompass all or a subset of the files found under the GUI folder.
+
+A theme is activated by using a specific link format, such as `http://127.0.0.1:3323/?Theme=[ThemeName]`. To reactivate the default theme, the link `http://127.0.0.1:3323/?Theme=None` can be used. The GEODI address provided in these examples, `127.0.0.1:3323`, represents a local GEODI instance and may vary in different environments.
+
+When changing existing CSS or image sources, the theme folder can contain all or some of the folders and files from the GUI folder, with the designer determining the required content. The `GUI / img`, `GUI / CSS`, and `GUI / icons` directories are the most frequently used for easily changing appearance and icons. It is crucial that new theme files created for replacement have the same name as the files they are replacing. For any files not present in the theme directory, their original versions from `GUI / *` will continue to be used.
+
+To implement changes that will affect all pages, a `Default` folder must be created under the `[ThemeName]` folder. The CSS and JavaScript content placed within this `Default` folder will be loaded on all pages. For instance, all Bootstrap plugins can be modified by adding a Bootstrap 3.3.1 theme file, a method that was used to create the sample theme.

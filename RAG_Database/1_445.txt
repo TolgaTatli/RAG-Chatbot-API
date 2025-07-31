@@ -1,0 +1,5 @@
+Similar capabilities are considered within the current approach regarding the main screen opening with a dashboard and the ability to drill down into details by clicking.
+
+In GEODI, the ability to drill down into details is provided through the use of queries and facets.
+
+Dashboards are affected by the main query, which allows users to focus on their desired data types and topics.

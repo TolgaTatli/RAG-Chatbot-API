@@ -1,0 +1,5 @@
+Arama kuralları, içeriklerin adı ve gövdesi için geçerlidir.
+
+İçerik adlarını GEODI arama sonucunda görebilirsiniz.
+
+Sadece içerik türünden arama yapabilirsiniz. İçerik türleri facet alanından öğrenilebilir.

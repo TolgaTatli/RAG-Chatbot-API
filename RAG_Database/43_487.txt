@@ -1,0 +1,5 @@
+Sunucularda gerçekleştirilen taramalarda, sürecin hangi aşamada olduğu ve ne kadar bir alanın tarandığı anlaşılamamaktadır. Ayrıca, süreç yarıda kesilip tekrar başlatıldığında, yönetim ekranındaki veriler sıfırlanmaktadır.
+
+Proje raporunda ve Proje Görüntüleme arayüzünde, toplam taranmış doküman sayıları, ihmal edilenler ve doküman işleme hızı gibi bilgiler grafiksel olarak gösterilmektedir.
+
+İndeksleme süreci için bir timelog tutulmaktadır. Benzer bilgiler ve grafikler bu timeloglardan türetilebilir.

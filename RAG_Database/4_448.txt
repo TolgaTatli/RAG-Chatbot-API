@@ -1,0 +1,1 @@
+GEODI is capable of indexing databases and performing data discovery. Databases, along with their contained file information, including embedded files, can be indexed. This indexing process covers all tables and rows. Simple rules can be utilized to limit tables, rows, or fields, and to adjust how rows are presented to the user.

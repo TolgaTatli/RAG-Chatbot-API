@@ -1,0 +1,15 @@
+Melikgazi Municipality in Kayseri, Turkey, successfully integrated GEODI with ArcGIS. This integration aimed to streamline access to 17 million unstructured archival documents. The project automated classification, indexed spatial data, and connected ArcGIS users with crucial land information. DECE Software's support was instrumental in the project's success.
+
+Melikgazi Municipality is part of the Greater Municipality of Kayseri, which is one of the largest cities in Turkey. Kayseri is known for industry, food, and winter tourism, and was historically the capital city of the Selcuk civilization.
+
+The project to access the archive from within ArcGIS presented challenges because the archive contained no direct spatial information. Additionally, the content was mostly unstructured data, including formats such as PDF and TIFF.
+
+With GEODI, the municipality scans and classifies 17 million documents and their attribute data within the archive. GEODI also processes all documents in the management information system (MIS) by utilizing their attribute data in the database and classified data in the unit folders. An institution-specific dictionary is used for categorization during the classification process.
+
+GEODI was chosen as a solution to automate the data processing task. Its advanced spatial and data discovery features were key to the project's success. GEODI indexed all documents and extracted crucial spatial information, Land Parcel IDs, and addresses from the archived documents. GEODI also performed Optical Character Recognition (OCR) on documents that required it.
+
+A common key has been established between ArcGIS and the archive. An ArcGIS custom widget was developed to connect to GEODI, utilizing the GEODI API and LDAP authorization level for this connection. An ArcGIS user can now click a parcel and query related documents through this widget, which retrieves results from GEODI. Users can also search for related land parcels using GEODI's search feature.
+
+Many users throughout the municipality are satisfied with the new system. Previously, they used multiple software programs, including ArcGIS, Archive, MIS, Task Management, and Personnel Archive, to obtain meaningful information. Now, they can achieve this using a single program.
+
+The DECE teams were thanked for their support during the project, specifically for assisting with the design and use of API documentation during the implementation phase. Mr. Muzaffer Elgün was also thanked for the project and for sharing his thoughts for GEODI.

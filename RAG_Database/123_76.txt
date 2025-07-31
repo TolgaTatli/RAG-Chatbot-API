@@ -1,0 +1,1 @@
+It is possible to have a setting for providing a 'Risk value based on 123 Source'. This setting is available in the interfaces. The Risk Report utilizes these values.

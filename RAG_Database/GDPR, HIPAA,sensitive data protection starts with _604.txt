@@ -1,0 +1,19 @@
+GDPR, HIPAA, or sensitive data protection starts with discovery. GEODI is presented as a solution to begin this process.
+
+Data protection must start with discovery because it is impossible to protect something that is unknown.
+
+GEODI's discovery process begins by defining the data lake. It identifies various sensitive data types within the lake, including PII, IBAN, SSN, money amounts, and content types such as CVs, contracts, tender documents, and invoices.
+
+GEODI discovers data that is in the wrong place, such as documents containing PII accessible by all employees or contracts visible to departments other than sales or management. After discovery, GEODI generates the scripts necessary to move or delete this content.
+
+GEODI identifies duplicate and similar content. This capability helps reduce data conflicts, decrease storage usage, and lessen the amount of data requiring protection.
+
+Data protection needs to be continuous, so GEODI continuously discovers incoming data. It notifies users when situations that do not comply with their rules occur. GEODI helps pinpoint leaks and reduces risks, and its monitoring function also serves as a time-saving feature for business processes, not just for protection.
+
+Logs are important, and GEODI records and reports all accesses and downloads.
+
+Successful automatic classification is an essential component of data protection. Automatic semantic classification reduces leakage risks, decreases employee complaints, and increases regulatory compliances.
+
+Insight or analysis is an important method for understanding data. GEODI provides extensive information about data for both protection and decision-making processes, saving users from reading hundreds, sometimes thousands of pages.
+
+GEODI offers solutions including Search, Discover, Mask, Encrypt, and Classify.

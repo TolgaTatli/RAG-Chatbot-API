@@ -1,0 +1,5 @@
+Country-specific semantic recognizers extend the capabilities of GEODI Discovery and Classification.
+
+This package is designed for Georgia and includes a Georgia ID Recognizer.
+
+This package should be installed after GEODI Discovery.

@@ -1,0 +1,3 @@
+SSH bağlantısı, Folder ve GDE (Ajanlı) bağlantılara bir alternatif olarak kullanılabilir. SSH ile ağ üzerindeki cihazlarla güvenli bir şekilde ajansız keşif yapılabilir.
+
+SSH bağlantısı için gereken şartlar Sunucu Adresi, Port Numarası, Kullanıcı Adı ve Şifre'dir.

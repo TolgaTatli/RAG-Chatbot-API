@@ -1,0 +1,1 @@
+A setting is available that allows for assigning a Risk value based on the Source. This setting can be found in the interfaces. The Risk report utilizes these values.

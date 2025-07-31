@@ -1,0 +1,9 @@
+Login, logout, and authorization records can be added to AppUsage logs.
+
+The most fundamental feature of the GEODI platform is search. This search capability provides a significant contribution to applications such as discovery and classification. This page will discuss Corporate Search, which is intended for environments with a large number of users.
+
+Corporate search projects are fundamentally very similar to discovery projects, but they differ in key areas such as increased user interaction and permissions.
+
+The search requirement for Subject Access Request (SAR) or Freedom of Information can be structured in a similar manner.
+
+Permissions are one of the most important topics for corporate search projects. GEODI considers existing LDAP permissions, along with database permissions, email permissions, client computer permissions, and permissions from other integrated applications.

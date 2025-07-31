@@ -1,0 +1,1 @@
+It is possible for data coming from GDE to be deleted or not shown in Geodi when it is deleted from the source. The "delete deleted ones" action performs this operation. Alternatively, this can also be done from the GEODI index maintenance interface.

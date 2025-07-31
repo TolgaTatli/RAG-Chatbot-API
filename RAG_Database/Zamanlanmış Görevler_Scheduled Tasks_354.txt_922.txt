@@ -1,0 +1,11 @@
+GEODI, güçlü bir zamanlama altyapısına sahiptir ve bu sayede birçok görevi otomatik olarak yerine getirebilir. Sık kullanılan görevler için hazır şablonlar sunulmaktadır. Bu şablonların nasıl düzenleneceği bu sayfada anlatılmaktadır.
+
+Zamanlanmış Keşif (Scheduled Discovery) işlemi Proje Sihirbazı'nın son sayfasında yapılır. Bu işlemi gerçekleştirmek için zamanlanmış keşfi aktive etmek ve periyodunu düzenlemek gerekmektedir.
+
+Zamanlanmış Yedekleme (Scheduled Backup) varsayılan olarak tüm projeleri her gün saat 03:00'te yedekleyecek şekilde ayarlanmıştır. Yedekler, Proje Workspace dizini altındaki Backup klasörüne alınır. Yedekleme ayarları, proje Sihirbazı'nın gelişmiş ayarlarından değiştirilebilir, ancak bu önerilmemektedir.
+
+Zamanlanmış Rapor Maili (Scheduled Report Mail) şablonu, Keşif Özet raporunu her hafta Pazartesi günü saat 09:00'da iletmek üzere tasarlanmıştır. Rapor ve periyot değiştirilebilir.
+
+Zamanlanmış Rapor Maili şablonu, Settings\Notifications\TimedNotification dizininde SendWeeklyReport.jSettings.sample olarak yer alır. Bu dosya SendWeeklyReport.jSettings olarak yeniden adlandırılmalıdır. Alıcıların e-posta adresleri için [TOMAIL] değeri kullanılmalı ve birden çok alıcı için adresler arasına noktalı virgül (;) konulmalıdır. Raporun kaynak workspace adını yazmak için [WSNAME] değeri kullanılır. ID değeri değiştirildiği sürece birden çok ayar kullanılabilir ve her bir ayar için ayrı periyot ve workspace belirlenebilir.
+
+Keşif ve Otomatik Sınıflama (Discovery and Automatic Classification) şablonu, yeni gelen her dökümanı otomatik olarak sınıflayacak şekilde tasarlanmıştır. Bu şablon ScheduledClassifier.jsettings.Sample olarak \Settings\Notifications\Geodi.OnScanEnd\ dizininde bulunur. [GEODI_TOKEN] değeri ilgili sayfadan alınır, [GEODIURL] değerine projenin URL adresi yazılır ve [WSNAME] değerine projenin workspace adı yazılır.

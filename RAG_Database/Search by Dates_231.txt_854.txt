@@ -1,0 +1,13 @@
+GEODI searches for given criteria across all sources connected to a project. It allows users to search dates in a natural way, as they are used in daily language, and will find all instances regardless of how they are written.
+
+GEODI automatically recognizes all dates and date ranges within content and presents them in a CALENDAR view. This view provides an idea about the temporal distribution of a query. If a language package is installed, GEODI can support Russian, Arabic, Georgian, Hebrew, and other languages. The calendar view can help perceive temporal events, especially when news is concentrated, such as during events like the Orange Blower Festival.
+
+A prefix can be used to limit searches to contentdate, which includes types like file date or tweet date.
+
+GEODI supports searching by specific dates and date ranges. Examples include finding content with "23 April 1923" or "04.23.1923", any content with a date within a specified range, content from "1st of May to December 31 of 1923", content that has a given date, or content added today.
+
+GEODI allows the use of relative date clauses in queries, where the reference date (today) is determined by the date on the user's computer. GEODI also recognizes these relative date words in emails and social media, where the contentdate is an exactly known source.
+
+Relative date clauses like "Yesterday," "Today," and "Tomorrow" function as expected. Queries such as "This Week," "Last Week," and "Next Week" are converted to dates ranging from Monday to Sunday. Similarly, "This Month," "Last Month," and "Next Month" queries are converted to dates from the first to the last day of the respective month. For "This Year," "Last Year," and "Next Year," queries are converted to dates from January 1st to December 31st of the year.
+
+When a "Next Decade" query is made, GEODI returns dates from the current week and the 10 years following that week. Conversely, a "Last Decade" query returns dates from the current week and the 10 years preceding that week.

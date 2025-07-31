@@ -1,0 +1,1 @@
+Amazon S3 depolarına 3. parti yazılımlar kullanarak erişilebilir. Bu erişim için WinFSP ve Rclone yazılımları kullanılmalıdır. Erişim kaynağı olarak Klasör/Folder belirtilmiştir.

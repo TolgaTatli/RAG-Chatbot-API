@@ -1,0 +1,5 @@
+GEODI searches for given criteria across all sources connected to your project.
+
+Users can drag and drop an image into the search box to find similar images. Examples of images that can be used include a machine part or a wallpaper sample.
+
+This image search feature must be activated in the project.

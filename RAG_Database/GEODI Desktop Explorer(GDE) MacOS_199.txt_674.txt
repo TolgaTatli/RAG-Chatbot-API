@@ -1,0 +1,5 @@
+For MACOS setup, GDE MACOS must be downloaded. The installation from the downloaded *.pkg package is done with a click-to-run method.
+
+After GDE MACOS is installed, a TOKEN and URL are made in Settings.json on the client. These settings are then moved to the directory where they are installed for the settings to be valid with the system command. The specific system command for this is `$ sudo cp /Applications/GDE/Settings.json /usr/local/share/dotnet`.
+
+GDE MACOS and Linux must be restarted when the initial setup specific settings file is changed.

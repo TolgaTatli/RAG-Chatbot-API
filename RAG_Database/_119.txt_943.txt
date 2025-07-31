@@ -1,0 +1,1 @@
+GEODI'de tanıyıcıları gruplamak için iki gruplama yöntemi mevcuttur. Proje Sihirbazı'nda gruplar için GroupName kullanılmalıdır. Facet alanında ise isimlendirme Grup\İsim şeklinde yapılmalıdır.

@@ -1,0 +1,9 @@
+Son kullanıcıların hatalı sınıflandırma durumlarını tespit etmek mümkündür. Bu analiz, GEODI logları kullanılarak yapılabilir. GEODI logları, kullanıcının verdiği değeri ve otomatik sınıflama olsaydı ne olacağı değerini içerir. CSV veya VT loglarda kritik farklar sorgulanarak istenilen analiz Excel, SQL veya PowerBI gibi bir araç kullanarak gerçekleştirilebilir.
+
+Log alan değerleri açıklamaları, https://destek.dece.com.tr/space/geoditr/3995959304/GEODI+Classifier+Log+Analiz+Paneli+ve+Classifier+Projesi#Veri-Tabanı-Formatı sayfasında bulunabilir.
+
+AUTOCLASS değeri, otomatik sınıflama olsaydı ne olacağı bilgisidir. AUTOCLASS değerinin her zaman hesaplanması için “Otomatik altı sınıf verme” seçeneği aktif olmalıdır.
+
+CLASS değeri, nihai olarak kullanıcının verdiği değerdir. PREVCLASS değeri ise, eğer sınıf değişimi yapıldıysa önceki değeri içerecektir.
+
+GEODI, her bir işlem için bir satır log üretecektir. Bu, aynı dosya için yapılan her sınıflama aktivitesi için bir satır bulunacağı anlamına gelir.

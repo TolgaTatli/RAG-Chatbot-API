@@ -1,0 +1,7 @@
+GEODI searches for given criteria across all sources connected to your project.
+
+The content summary contains the owner, who added the content by drag-and-drop. The owner: query results in the content added by the specified user.
+
+The term “me” may be used as the current user's username. If this query is used in a panel, every user sees content added by themselves.
+
+Documents that a specific user and group has seen can be queried. These queries can also be used for classification; for example, if a certain group sees a document, it can be classified as confidential.

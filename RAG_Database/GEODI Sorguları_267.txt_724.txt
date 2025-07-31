@@ -1,0 +1,23 @@
+Sorgular, aradığınızı bulmanızı sağlar. GEODI Sorguları Google aramaları kadar basittir; sadece birkaç kelime yazıp arama yapılabilir. Kelimelerin yetersiz kaldığı durumlarda daha detaylı aramalar için semantik sorgular da zor değildir.
+
+GEODI Sorguları sadece içerikleri bulmaya yaramaz. Sorgular aynı zamanda bir harita, takvim, kendi tasarlanan bir panel veya rapor olarak da alınabilir.
+
+GEODI Sorguları, Keşif Sonuçlarını İnceleme, Temel Arama, İçerik Adı veya Türüne Göre Arama, Tarihlere Göre Arama, Kelime Yakınlığına Göre Arama, İçerik Versiyonuna Göre Arama, Kopya veya Benzer İçerikleri Arama, Alt/Üst ilişkilerine ve Kaynağa göre Arama, Keşif Bulgularına göre Arama, Veri Tabanı Kolon ve Alanlara göre Arama, İçerik Sahipliği ve Yetkilere göre Arama, E-posta ve Domain Arama, Görüntü ile Arama, İçerik Dili ile Arama, E-İmza'lı Belgeler: Arama ve Görüntüleme, Konumsal Sorgular, Sorguları Sakla ve İzle/Alarmlar, Sorguları Sırala ve Örnek Sorgular gibi çeşitli arama ve yönetim özelliklerini içerir.
+
+Aranan bir belgenin tarihi hakkında emin olunmadığında, sadece bir aralık kestirimi yapılabiliyorsa, arama kuralına zaman kısıtı konulabilir. Belgenin PDF olduğu hatırlanıyorsa bu bilgi de eklenebilir. Örneğin, "Ocak-Mart 2017 doc:*.PDF Ankara" şeklinde bir arama yapılabilir.
+
+Bir belgenin e-posta ile geldiği hatırlanıyorsa, kural aynı şekilde uygulanır. PDF belirtmekle e-Posta'yı belirtmek GEODI için aynı içerik türünü ifade eder. Örneğin, "doc:e-Posta Ankara" şeklinde arama yapılabilir.
+
+Sıkıştırılmış dosyalar içinde de arama yapmak mümkündür. "parent:*.ZIP" deyimi eklendiğinde sonuçlar ZIP dosyaları içindeki içeriklerle sınırlanır. Ayrıca, ZIP içinde "Metraj" ile başlayan ve "Duvar" geçen belgeler de aranabilir, örneğin "parent:*.ZIP doc:Metraj* Duvar" şeklinde.
+
+Bir İK sürecinde pozitif not alınan CV'leri bulmak için, "child:(*.geodinote “görüşelim”)" kuralı kullanılabilir. Benzer şekilde, "child:(*.geodinote "uygun değil")" ile uygun olmayan notlar aranabilir.
+
+Ankara ile ilgili arama yapılırken Ankara Kalesi hariç tutulmak istenirse, "Ankara -Kale*" kuralı ile Ankara içeren ama içinde kale geçmeyen içerikler bulunacaktır.
+
+Aynı kelimenin farklı yazımlarını aynı anda bulmak için GEODI'de kendi sektör veya ihtiyaçlara göre bir sözlük oluşturulabilir. Bu işlem kolaydır ve tek satırlık bir sözlükle "Yapay Zeka", "Artifical Intelligence", "AI", "Expert System", "Uzman Sistem" gibi farklı yazımların aynı sonucu getirmesi mümkündür.
+
+GEODI ile kopyaları bulmak oldukça kolaylaşabilir. Kopya veya duplicate kuralları, içeriklerdeki kopyaları bulur, birisi bir dizinde diğer bir e-postanın ekinde bile olsa. Bu kurallara doküman türleri ve diğerleri de eklenebilir. Örneğin, "kopya parent:*.ZIP" kuralı, kopyası sıkıştırılmış bir içerikte olan kopyaları çıkarır.
+
+Uzun belgelerde kelimelerle arama yeterli gelmeyebilir, özellikle web sayfaları veya uzun raporlar farklı sayfalarda farklı konulardan söz ettiğinde. GEODI, "()" kuralı ile bu sorunu önemli ölçüde çözer. "Metraj() Duvar" ifadesi, "duvar" kelimesinin "metraj" kelimesine yakın olmasını sağlar. Varsayılan kelime mesafesi 10 kelimedir; 10 sayfalık bir belgede ilk sayfada "metraj", 5. sayfada "duvar" geçiyorsa bulmaz. Yakınında olmadan yapılan sorgu ise bulur, örneğin "Metraj Duvar".
+
+İlişkili belgeleri ve bunların yerini bulmak bir konuyu çözümlemek için çok faydalıdır. "Yakınında" kuralı ile bir tarihle ilgili kişiler veya bir kelime ile ilgili yerler kolayca bulunur. "kaza()" sorgusu ile çizilen bir harita sadece ilgili yerleri gösterecek, kelimeler sayfası sadece ilgili kelimeleri bulacak veya ağ grafiği sadece daha doğru olanları gösterecektir. "()" kuralı kaldırıldığında sonuç görülebilir. Web sayfalarından kazaların haritası, bir konu ile ilgili kişiler, bir deyimle ilgili kişiler gibi pek çok sorgu yapılabilir.

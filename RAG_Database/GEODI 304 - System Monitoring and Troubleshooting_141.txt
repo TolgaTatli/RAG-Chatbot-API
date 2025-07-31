@@ -1,0 +1,33 @@
+This training covers monitoring the system and finding solutions to potential problems. It is a technical training with a duration of 60 minutes, and knowledge of GEODI installation and system administration is required as a prerequisite.
+
+Trainings are intended to provide a general idea, and users need to reinforce what they have learned by applying it. Some features mentioned in the training may not be included in a user's specific license.
+
+The training begins with the problem diagnosis method, followed by a review of Troubleshooting sections for Discovery, Classification, and other areas. It is recommended to review these sections separately for maximum benefit.
+
+Problems can manifest as obvious error messages, an Agent not seeing the GEODI server, warning messages, or processes not working as expected. Diagnosing the problem is considered half the solution, and attempting to find a solution without identifying the source is typically a waste of time.
+
+The troubleshooting sections available on the support site are a significant resource for monitoring and troubleshooting. It is advisable to read these sections before encountering any problems to gain an understanding of the topics.
+
+The Support Q section can answer many questions, guiding users to relevant pages for solutions. Many problems have solutions outside of GEODI, requiring basic system and diagnostic knowledge for issues like no network access or disk fullness. Tools like Ping and Telnet can help understand why a client might not see the GEODI server.
+
+Logs are among the most valuable resources for diagnosing problems, with both the operating system and GEODI recording numerous logs.
+
+GEODI Reports, found under Settings/System Reports, contain information on errors, indexes, and system health. These reports can sometimes reveal possible causes for issues.
+
+Assumptions or bias are often significant factors that hinder error detection. If the software, GEODI, is the first suspect when an error or unexpected situation occurs, it is likely to be incorrect. While GEODI, like other enterprise software, is not entirely error-free, it is free from errors that would disrupt processes. If a process that works flawlessly for thousands of users fails in a specific environment, the environment or configuration is the most probable reason.
+
+GEODI Error logs can be categorized into a few main types, including Application logs and Discovery/Indexing logs. GEODI also maintains logs for tasks such as application and classification.
+
+Application logs record situations encountered during GEODI operation. Examples include a location being inaccessible due to disk fullness or authorization issues, a JSON file with an inappropriate format or encoding, or a macro definition that does not work.
+
+Discovery/Indexing logs are located in a directory under every project/workspace. These logs are categorized as Warning, Information, and Error messages. Information and Warning messages typically relate to content types and access permissions, logging issues like corrupt or encrypted files, unopenable ZIPs, inaccessible web pages, and authorizations in subdirectories of introduced sources. Some error messages are configuration-related, such as those concerning a bad JSON file or a bad macro.
+
+Authority issues need to be managed from the installation phase. Potential problems with the authorizations of the establishing user, service user, and users accessing resources will result in errors.
+
+Network-related situations represent the most common problem group, frequently involving agents not seeing GEODI, closed ports, or content blocked by a firewall. The necessary open ports and access conditions are detailed in a relevant document, and these conditions must be met. Users should possess basic knowledge of tools like Ping and Telnet.
+
+Disk insufficiency is a common problem. It is important to ensure sufficient disk space for indexing and backups. CPU usage can increase based on content types and indexing speed, and this can be managed by reducing the speed or waiting for usage to decrease.
+
+Performance problems include situations like a slow-progressing discovery or an unresponsive server. There can be multiple reasons for these issues, and most of them may not be reflected in the logs.
+
+Reasons for performance problems include insufficient server capacity (CPU, Memory, Disk), which can be mitigated by reducing discovery speed. A slow source, unable to deliver data quickly enough, can also cause issues. Network problems, as all resources are accessed via the network, can lead to general slowness. Simultaneous usage, such as intensive searching during ongoing discovery, can also cause performance issues, requiring a reduction in discovery speed or separation of operations to different servers.

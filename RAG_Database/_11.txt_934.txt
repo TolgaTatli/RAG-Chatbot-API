@@ -1,0 +1,3 @@
+Uzaktan çalışan kullanıcıların GEODI API kullanımları için GEODI’ye erişimi olması şart.
+
+Bu erişimin güvenlik konuları için Firewall veya diğer ağ uygulamalarının kurallarına bakmanız gereklidir.

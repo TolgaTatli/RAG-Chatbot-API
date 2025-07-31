@@ -1,0 +1,7 @@
+Anonimleştirme yapıldığında orijinal doküman farklı bir yere taşınabilir.
+
+Maskeleme aksiyonu sonrasında aynı dosya kümesine karantina uygulanması, maskeleme aksiyonuna denk bir konudur.
+
+Geodi, bir sorgu kullanarak maskelenecek alt kümeyi seçer.
+
+Geodi, maskeleme veya anonimleştirme aksiyonu ile gerekli scripti oluşturur.

@@ -1,0 +1,5 @@
+GEODI platformu çok farklı sektörlerin ihtiyacını karşılamak için tasarlandı ve temel yapısı bunu sağlamaktadır. Uygulama Modülleri bazı sektörlerin özel ihtiyaçlarına yanıt vermek için oluşturuldu.
+
+GEODI kurulduktan sonra lisansınıza dahil olan uygulama modüllerini otomatik olarak kurar. Harici lisansınız kapsamında kullanabileceğiniz çeşitli araçları ve varsayılan olarak kurulmayan modülleri GEODI yönetim sayfasından kurabilirsiniz.
+
+GEODI platformunda bulunan modüller ve tanıyıcılar arasında Modül:GEODI Standart, Modül:OCR, Modül:CAD&GIS Viewer, Modül:MediaMon, Modül:GeoArchive, Modül:GEODI Pro, Tanıyıcı:Kurallı İfade, Modül:GEODI 360 ve Modül:GEODI e-İmza yer almaktadır.

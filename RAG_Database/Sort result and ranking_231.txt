@@ -1,0 +1,3 @@
+GEODI attempts to prioritize the most relevant content. Users have the option to define alternative orders for content display.
+
+Sorting keywords exhibit different behaviors on CONTENT and KEYWORDS pages. The criteria 'orderby:name', 'orderby:date', and 'orderby:layer' are specifically valid for keywords.

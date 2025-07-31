@@ -1,0 +1,17 @@
+Temel arama kuralları Google, Bing veya diğer web arama motorlarınınkine çok benzerdir. Bütün veri kaynakları, dosyalar, sosyal medya veya veri tabanları aynı anda aranır. "İçerik" kelimesi bütün veri tipleri için kullanılır ve bir dosya, tweet veya veri tabanı satırı olabilir.
+
+Dilediğiniz kelimeyi veya kelimeleri arayabilirsiniz. Büyük/küçük harf ayrımı yapılmaz; örneğin, "Ankara" veya "ankara" aynı sonucu verir.
+
+Eğer aradığınız kelimelerin ardışık olmasını isterseniz, bunları tırnak işaretleri arasında yazmalısınız. Örneğin, "Ankara Kalesi" tırnak içinde yazıldığı için tam olarak bu ifadeyi arar.
+
+Kelimenin başını veya sonunu bilmiyorsanız, yıldız işareti `*` kullanabilirsiniz. Örneğin, `Kumlu*` araması "Kumlu" veya "Kumluca" gibi "Kumlu" ile başlayan kelimeleri içeren içerikleri bulur.
+
+Eksi işareti `-` ile arama sonucunu tersine çevirebilirsiniz. Örneğin, `-Ankara` kelimesini içermeyen içerikleri bulur. Benzer şekilde, `-Kayapınar -Dumlupınar` araması "Kayapınar" veya "Dumlupınar" içermeyen içerikleri bulur.
+
+Tilda işareti `~` ile yazılışından emin olmadığınız kelimeleri arayabilirsiniz. Örneğin, `~Ankara` araması "Ankara", "Angora" veya "Ankara" kelimelerini bulur.
+
+Tarih araması yaparken, tarihleri veya tarih aralıklarını doğal yolla yazabilirsiniz. GEODI, semantik özellikleri sayesinde, içeriklerdeki tarihler nasıl yazılırsa yazılsın bulacaktır; bu, "2023", "01.01.2023" veya "01/01/2023" gibi farklı yazılışları kapsar. Ayrıca, belirli bir tarih aralığı içindeki tarihleri içeren içerikler de bulunabilir, örneğin `2023..2024`.
+
+Notları aramak için `notes:` veya `my:notes` kullanmalısınız. Bütün içerik türlerine not alabilirsiniz ve nota tıklayarak ana içeriğe erişebilirsiniz. `my:notes` araması size ait notları bulur.
+
+Bütün arama kuralları birlikte kullanılabilir. İçerik türleri, kaynaklar ve tanıyıcılar hakkında daha fazla kriter eklemek için soldaki facet alanı kullanılabilir. Ayrıca, `my:dragdrop` araması tarafınızdan sürükle bırak ile eklenmiş içerikleri bulur.

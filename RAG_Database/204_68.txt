@@ -1,0 +1,1 @@
+A watermark removal option is available when printing documents that have been classified and labeled with headers/footers. This capability exists in Word. Within Word's print options, users can remove the header/footer.

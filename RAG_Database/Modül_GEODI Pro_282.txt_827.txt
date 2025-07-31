@@ -1,0 +1,11 @@
+GEODI Pro modülü ile veri tabanı indexleme yeteneği ve kurallı ifade tanıyıcı kazanılır. Bu modül, Discovery için zorunludur.
+
+Eğitim Kapsamı, GEODI Kullanıcıları için veri tabanı kayıtlarının nasıl göründüğünü içerir. Kullanılacak proje, https://servis2.dece.com.tr/?wsName=1013-TR-Ki%C5%9Fisel%20Veri%20Ke%C5%9Ffi&Tab=DLV&f=s.1795690074 adresindeki "1013-TR-Kişisel Veri Keşfi" projesidir. Bu proje içinde yapısal olmayan veriler de bulunmaktadır. Eğitim ayrıca Fieldindex aramasının nasıl yapıldığını da kapsar ve Tanıyıcı olarak Kurallı İfade kullanılır.
+
+GEODI Yöneticileri için eğitim, Bölüm 1'de Veri Tabanları konusunu ele alır. Bu bölümde Veri Tabanı Kaynağının ne olduğu ve nasıl bağlanacağı açıklanır. Kaynak olarak Veritabanı belirtilmiştir.
+
+GEODI Yöneticileri için eğitimde Bölüm 2, Kurallı ve Bitiş İfadesi Tanıyıcıları hakkındadır. Bu bölümde kurallı ifade ve bitiş ifadesi tanıyıcılarının neler olduğu ve kendi tanıyıcısının nasıl ekleneceği anlatılır.
+
+GEODI Yöneticileri için eğitimde Bölüm 3, Yönetici Raporları konusunu işler. Bu bölümde GEODI rapor özellikleri aktif hale gelir ve GEODI içerisinde gelen raporlar veya sonradan hazırlanacak raporlar kullanılabilir.
+
+GEODI Yöneticileri için eğitimde Bölüm 4, KLV (Kelimeler) sekmesini ve Soru ve Cevapları içerir.

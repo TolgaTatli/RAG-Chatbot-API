@@ -1,0 +1,39 @@
+Indexing is the outcome of discovery, where GEODI generates brief information about data. This brief information is then utilized by GEODI to respond to searches, reports, and other requests. The original data is not required by GEODI unless a user intends to open it in a viewer.
+
+GEODI includes an indexing speed setting, which is suggested to be set to maximum. While the initial indexing process may take time, continuous discovery does not, as GEODI only indexes new or changed content. The default setting for rescans is per day, but this period can be adjusted.
+
+Several factors influence indexing speed, including the CPU, memory, disk, and other server resources on which GEODI operates. The data throughput of the network and disk of data sources is also crucial. Additionally, options such as OCR or FacePro significantly impact performance.
+
+To increase indexing speed, sampling can be used, which provides partial results but may offer sufficient insight into the data. File content filtering is another method to eliminate unnecessary content, with default rules already removing many file types not related to GDPR or PCI/DSS.
+
+For indexing options, it is recommended to start with "Index all Content." Subsequently, other options can be utilized. If scheduled indexing is configured along with periodic backups, options beyond maintenance needs will generally not be required.
+
+Once indexing begins, the process can be monitored. A progress bar displays the approximate percentage of indexing, though it is important to note that this bar is not linear. GEODI estimates future document indexing time based on previous documents, making the progress bar an estimate.
+
+Monitoring also includes an area that displays numbers and graphics showing trends in documents per second. Any generated errors or warnings are indicated, and a report can be downloaded from the %appdata%logs folder. This includes error reports and detailed project reports.
+
+The index requires storage, and its size will be considerably smaller than the original data, though it is unpredictable. A general assumption for index size is 10% to 20% of the data size. Options like sampling mode or similarity indexing can affect the index size. Furthermore, a backup space for the index should be reserved to ensure uninterrupted service.
+
+File content filtering addresses the fact that any data corpus contains various file types, some of which may be unnecessary for a project's scope or too large for the network or system. GEODI provides default rules, based on best practices from Discovery projects, to avoid certain file types and impose size limitations. These rules and their modification methods are documented.
+
+These file content filters are applied universally to all files, regardless of their origin, whether from a folder, an email attachment, GDE, or embedded within a database.
+
+Ignore rules, a component of file content filtering, consist of file extensions, directory names, and specific patterns. The default ignore list includes entries like *.DLL, *.SYS, and "program files." Any file that matches these ignore rules is neither indexed nor logged. Settings for these rules are located in Settings\IgnoreFileTypes and \Settings\IgnoreFolders, and defaults can be overridden in %appdata%. GDE also has additional ignore rules documented on its related page.
+
+KnownFiles, also referred to as Supported Formats, are file types for which GEODI has a reader, such as PDF or DOCX. These files are processed as expected unless an IgnoreRule or ProtectRule is applied. An IgnoreRule will make the file type invisible, while a ProtectRule may impose size limitations.
+
+By default, unknown file types are ignored. However, advanced settings allow for different handling. If the "only name and date" option is selected, all unknown extensions will be indexed. Unwanted file types can be added to the ignore list, but this action necessitates running discovery again.
+
+ProtectRules are designed to safeguard the system and network from large files and apply to both known and unknown files. Content is categorized as local or far. Local content, residing in local or network folders, has no size limitations. Far content refers to files from GDE, email attachments, and web pages. By default, far content files larger than 100MB, and compressed files larger than 500MB, are indexed by name only, meaning their content is not indexed. Settings for ProtectRules are found in \Settings\Engine\ResourceBalancing, and defaults can be overridden in %appdata%.
+
+GEODI offers a comprehensive query language to search content, duplicates, date ranges, and more, including specific queries for erroneous content. Examples include `status:OnlyName` for content with only name and date (from UnknownFiles and ProtectRules), `status:HasScanError` for unreadable files marked with an exclamation point, `status:IsContainer` for files within folders or compressed archives, and `status:IsCompletedIndex` for successfully indexed content. `status:Crashed` shows unsuccessful content after index recovery from a system crash, suggesting index backup for prevention. `status:PartialRead` indicates content partially read by ProtectRules. Additionally, `GEODICryptedContent` identifies encrypted content, and `GEODICryptedContentPart` identifies partly encrypted content.
+
+If indexing is slow, despite GEODI's discovery engine being fast, the issue may stem from the machine, settings, or environment. Troubleshooting steps include checking that indexing speed is set high, reviewing engine errors (as too many errors from a source can slow indexing), identifying other tasks consuming excessive resources, and noting that too many recognizers or a slow disk can impede performance. Dividing the index and placing parts on a fast disk like an SSD, or using sampling mode for quicker results, are also suggested.
+
+High CPU usage during GEODI operation is expected, but GEODI is designed to never render the machine unresponsive, always reserving one core for other tasks. If CPU usage is temporary, waiting to see if it drops is advised. For consistent high CPU usage, decreasing the indexing speed can help. If OCR or FacePro options are in use, which consume more CPU resources, decreasing indexing speed or waiting is recommended.
+
+GEODI compresses the index as much as possible, with an expected index size of up to 20% of the corpus size. If the index size appears too high, potential causes include an open similarity index or the inclusion of files (like logs or CSVs) that contain excessive information, which may warrant exclusion.
+
+GEODI generates error logs during indexing, which are mostly content-related and should often be considered warnings or information. Real system errors will be explicitly reported. Common content-related errors include unreadable content, encrypted content, and unreachable content due to permissions.
+
+When the GEODI content count does not match the document count, it is typical because GEODI's count includes all folders and files within compressed files like ZIP and RAR. Additionally, some file types may be present in ignore lists. Beyond these factors, it is important to ensure that GEODI covers all intended content.

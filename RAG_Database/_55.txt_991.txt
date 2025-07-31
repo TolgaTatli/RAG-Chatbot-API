@@ -1,0 +1,3 @@
+When defining a Source Fileserver for GEODI, it is possible to perform scanning by entering a user screen and password.
+
+In Unstructured Data Discovery, it is possible to perform conditional discovery based on a date criterion. Date and similar constraints can be placed on the content before discovery.

@@ -1,0 +1,1 @@
+Dosyalara tanımlanan meta.xml dosyalarındaki alanlardan sorgulama yapmak için bu içerikler full text içeriğine dahil edilir. Bu alanlar için ayrıca bir sorgulama yöntemi sunulmaz.

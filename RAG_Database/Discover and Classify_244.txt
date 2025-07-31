@@ -1,0 +1,7 @@
+GEODI possesses the capability to classify each content item as it is discovered. This feature requires activation through a specific process.
+
+To activate the content classification feature, sample settings are located within a designated folder. The file named 'ScheduledClassifier.jsettings.Sample' must then be renamed to 'ScheduledClassifier.jsettings'.
+
+Following the renaming, three specific variables need to be replaced to configure the classification. The '[GEODIURL]' variable should be replaced with the web address of GEODI, '[WSAME]' with the relevant classification project, and '[TOKEN]' with the token that has been generated for Agents.
+
+Although GEODI can classify various types of content, such as documents and videos, the current setting for this feature is restricted to Office, Libre Office, and PDF documents only. Users have the option to modify the query value if there is a need to change the target documents for classification.

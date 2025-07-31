@@ -1,0 +1,5 @@
+GEODI searches for given criteria across all sources connected to a project.
+
+GEODI allows users to search website contents by the domain name, a function indicated by "Query by Domain Name" and "Domain:".
+
+GEODI supports querying by mail domain, which includes fields such as "From:" and "To:".

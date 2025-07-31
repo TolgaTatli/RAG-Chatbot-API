@@ -1,0 +1,21 @@
+An API exists to retrieve the Workspace list.
+
+Reports can be created by copying XLSX content into the Reports Folder. To define a custom rule, image name, or icon, a jSettings file must be placed alongside the XLSX content. Only a jSettings file can be created with the report, and creating a report with a jSettings file is equivalent to creating a CSV Report.
+
+When creating reports, it is necessary to understand the type of object passed to the report content to edit the report appropriately. For reports generated with GEODI Pro, the macro data object is a GeodiEntry Array. For Mobidi Server Reports, the object is a MobidiEntry Array.
+
+To create a new Excel Template, several Worksheets must be established. These required pages include "Template", "Data", and any desired number of Analysis pages.
+
+The "Data" worksheet is where the report's data will be written. Instructions on how to write the data, which columns to include, and definitions of style information are specified on the "Template" page.
+
+Analysis pages are optional worksheets that can be defined by time, subject, pivot table, graph, or other outputs. These pages can use data as input and other analysis pages as source data. For pivot analysis, using options like automatic refresh of pivot tables when files are loaded can simplify the process.
+
+The "Template" page, which specifies the fields for the report, must have a specific structure. The first line should define the column headings, and the second line should contain the expression that determines the content. Both "macro" and "localization" can be utilized within column names and values.
+
+Optional style information can be included on other lines of the "Template" page. If subsequent lines are formatted with different colors, the software will repeat these styles. Text style, cell style, and other styles can also be repeated in the same manner.
+
+Column-based styles also adhere to this repetition rule, allowing for variations such as writing "Person Name" in 20 pt or "Date" using different fonts and colors. It is recommended to examine and test examples provided with the software.
+
+To use an Excel formula within column content, type '= FORMUL(..)' into the cell content. The formula must be in the same format as English Excel, and rows must be specified using '% row%'. An example is '=SUM(A%row%;B%row;)'.
+
+When an Excel report is received, a new page named "Data" is created, and the report's result is displayed on this page. Users can create pages with Pivot tables and charts that reference this "Data" page, and Excel macros can be used. To simplify these tasks, a report can be obtained as a result and then used instead of the template.

@@ -1,0 +1,19 @@
+The technology behind GEODI is key to successful projects. GEODI utilizes various technologies to save users work and increase their success. The company aims to provide users with the best support and technology.
+
+Unstructured data is an inevitable and significant portion of daily information generated in today's digital age. Analyzing and organizing this data can uncover hidden patterns, trends, and relationships, enhancing decision-making, fueling innovation, and enabling organizations to leverage all available data for strategic objectives. GEODI processes unstructured data from documents, e-mails, web pages, and more, discovering and making it searchable without requiring a specific format.
+
+Natural Language Processing (NLP) is a crucial technology for processing unstructured data. A discovery tool needs to discover sensitive data in texts without relying on predefined rules. GEODI addresses this task using NLP, which is a key factor behind GEODI's high-accuracy discovery capabilities.
+
+Based on its NLP functionalities, GEODI assists users with Semantic Queries for searching, discovering, or classifying information. Users can search for documents containing specific criteria, such as more than 1M Dollars and an IBAN, or filter by document types and date intervals. GEODI's semantic features also integrate with auto-classification policies.
+
+Artificial Intelligence (AI) is integrated throughout GEODI. This includes recognizers with pre-trained Machine Learning (ML) models, an unsupervised document classifier, TextPro which learns from content, and GEODI FacePro which detects faces in images and videos. Each application of AI enhances GEODI's effectiveness and reduces user workload.
+
+A recent and influential AI development within GEODI is the GEODI LLM. While public Large Language Models (LLMs) like ChatGPT are powerful tools fed by public data, GEODI LLM is specifically designed for private data, bringing private data and LLM functionality together.
+
+GEODI uses Retrieval Augmented Generation (RAG) to maintain the privacy of private data, ensuring that only questions, not private data, are sent to LLM servers. This enables the creation of in-house chatbots for different departments, each with distinct expertise and access to up-to-date information as long as GEODI discovery is running. GEODI also integrates with external LLMs such as ChatGPT, Gemini, and LaLaMa, with LaLaMa offering the unique advantage of being deployable on-premise. LLMs can be utilized for tasks like automatic classification, discovery of challenging information, and generating document summaries.
+
+TextPro employs word2vec technology to classify documents, generating feature vectors for documents using word and document embeddings. TextPro is similar to LLMs but offers significantly faster performance for certain tasks. Unlike LLMs, TextPro is suitable for classifying millions of documents, addressing potential performance issues. TextPro operates unsupervised, examining documentation in the GEODI workspace to find and group “similar” documents, with users naming the resulting groups.
+
+GEODI offers numerous low-code possibilities across various functionalities, including recognizers, panels, reports, integrations, and masking. Minimal code changes can alter behavior, and users do not need to be programmers to utilize these features.
+
+Integrations with various data sources, such as file servers, PCs, SharePoint, Databases, and e-mails, are crucial for covering a user's data lake. GEODI connects to a list of sources, including those listed under "Support: GEODI Data Sources."

@@ -1,0 +1,3 @@
+Microsoft Dynamics CRM is identified with a version number of 1.0.0.5.
+
+An integration is available for Microsoft Dynamics CRM, enabling users to experience the ease of searching their information within GEODI.

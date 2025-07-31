@@ -1,0 +1,11 @@
+GEODI Classifier is a set of tools designed for both manual and automatic classification. This tool includes a GEODI module installation, along with separate client installations for Desktop and Office add-ins. These components are specifically installed on Outlook Web App, Outlook 365, and Exchange environments.
+
+For OWA Classifier Setup in an OWA/Office 365 environment, separate installation methods are provided for individual users or for all users. Regardless of the chosen method, a web service address used to access OWA must be provided. This address requires the addition of `/ews/exchange.asmx` at the end. If OWA utilizes an SSL, GEODI must also operate with an SSL, as exemplified by `https://192.168.100.201/owa/ews/exchange.asmx`.
+
+To set up OWA for a single user, a username and password are required. If the username is part of a domain, it should be entered as `domain@username`; otherwise, it should be entered directly. After providing this information, selecting "Install to Server" completes the installation for that specific user. The steps for batch installation are detailed in the "Installation for All Users" section.
+
+The OWA plugin can be deployed to all users defined in the Microsoft 365 Admin Center through the "OWA Installation for All Users" process. This involves navigating to the installation tab within the GEODI Classifier settings and downloading an XML manifest file using the "Download Manifest" option.
+
+Following the download, the process continues in the Microsoft 365 Admin Center, specifically in the Organization / Add-ons section, where the user clicks the "+" button. On the subsequent screen, the downloaded XML manifest file is selected by clicking "Choose File" and then uploaded. Once uploaded, the Classifier OWA plugin begins distribution to all or selected users within the institution, with the distribution process taking between 3 to 24 hours depending on the number of users. For the plugin to function smoothly, the OWA plugin must have access to GEODI, enabling the classification plugin to be used in Outlook accessed via a browser.
+
+A specific note indicates that the OWA plugin for On-prem Exchange may not open for sending emails, with a reference provided: `https://learn.microsoft.com/en-us/office/dev/add-ins/outlook/outlook-on-send-addins?tabs=classic#install-outlook-add-ins-that-use-on-send`.

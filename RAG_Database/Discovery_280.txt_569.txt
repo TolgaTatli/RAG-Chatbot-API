@@ -1,0 +1,23 @@
+GEODI Discovery enables discovery for a wide range of sectors and purposes. It discovers a rich data set, recognizing and reporting local IDs and other magnitudes for many countries. High accuracy and speed are among its most important objectives.
+
+The typical discovery process involves fundamental steps to be followed in a discovery project. These steps, when followed separately for each source, simplify project execution, and the project is completed once all sources are processed. New sources or discovery scopes that may emerge over time are handled in a similar manner.
+
+Determining the discovery purpose ensures a healthy start. This purpose can be related to regulations such as KVKK, GDPR, HIPAA, SAMA, PDPL, CMA, DPDPA, LGPD, Fraud, or other specific goals. DECE-STORE provides identifiers, reports, panels, and actions suitable for each purpose and the regulations of different countries. After the basic GEODI installation is complete, appropriate DECE-STORE modules are installed.
+
+Introducing the source, specifying permissions, and many other operations are performed using the Project Wizard. GEODI can connect to numerous data sources, either without agents or with agents when necessary. It is possible to discover a single source or multiple sources simultaneously. The discovery phase involves finding personal data, financial data, and other specified data according to the defined scope. This phase may take time depending on the source's size, discovery scope, and selected options. It is recommended to always start with a sample discovery and decide on a full discovery based on the results, as sample discovery provides significant time savings.
+
+The presentation of discovery results begins with a search and is detailed through the Discovery Panel and Reports. Risky findings can be easily queried based on the discovery scope. Identifying files, databases, or other sources containing risky findings facilitates taking action.
+
+Predefined:PII allows querying sources that contain personal data. GEODI shows the number of contents with personal data and their distribution across sources. This analysis simplifies the separation of risky areas. According to corporate policies, personal data is expected in some sources, such as CVs in a CV pool, but should not be present in shared data areas. Queries can be narrowed down by source to define the target set for actions like destruction, quarantine, or masking.
+
+Predefined:PCI is used to query findings within the PCI/DSS scope. Following a path similar to PII, incompatible content can be separated, and necessary actions can be executed. The destruction or quarantine of old data can also be performed in a similar way.
+
+The discovery panel can be used to delve into the details of query results. This panel includes finding details such as names, TC IDs, or credit card numbers. Analysis can be narrowed or broadened based on queries; for example, it is possible to select personal data located in old data or only those containing TC IDs.
+
+Actions allow modifying data based on discovery results, with options such as Destruction, Quarantine, Masking, Classification, or Anonymization readily available. The results of these actions are reflected in the discovery panel and reports, allowing the process to continue until risks are minimized.
+
+Discovery is a continuous activity. Once the necessary environment and rules are established, alarms provide instant notification of non-compliant situations in newly arriving data, such as a CV or proposal file placed in a shared area. These alarms contribute to improving authorization and other data protection policies.
+
+The Agent Management Panel is used for the management and monitoring of GDE and Classifier agents. The Clients Panel is accessible only to System Administrators.
+
+GEODI processes structured and unstructured data sources at an average speed of 0.5-1.5 TB per day. Even this high speed is insufficient for processing several hundred TBs or more within reasonable timeframes. For this purpose, a cluster must be formed by installing GEODI on multiple servers. The GEODI Cluster configuration will enable the management of numerous GEODI servers as a single GEODI, offering features such as central reporting and management.

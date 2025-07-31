@@ -1,0 +1,15 @@
+GEODI automatically scans offers in email attachments, making both the mail body and attachments searchable. The system is very comfortable for the user, allowing data searches from a mobile or desktop browser at any time. When found content is opened, GEODI opens the CRM content on the CRM and the email content on the relevant email server. In summary, after narrowing a search or using the map, GEODI moves the user to the main source of the data for quick process continuation.
+
+A typical office worker may spend almost half their time searching for documents because information is spread across many solutions, making searches time-consuming. DECE Software experiences this same problem.
+
+The solution is to search and access all data sources from a single point. The software will search CRM, emails, and files, merging the results into a single list. It will also tell users how much data they have in each source and can present this data on a map whenever desired.
+
+DECE Software has used ZOHO CRM for a long time to track daily activities, deals, and offers. While ZOHO CRM is a good application, it cannot cover all daily or digital data produced. Emails are another important source for DECE, holding an important place in communication with partners or users. For this reason, the GEODI Enterprise Search project at DECE includes the joint emails used by the sales team and ZOHO CRM.
+
+Only shared files, Jira, and Confluence remained out of scope for a specific project, but GEODI has the ability to connect and scan all these resources. GEODI has over 200 adapters, and new ones are easy to create thanks to its low-code capabilities. It supports ZOHO and Microsoft Dynamics CRM, with a Salesforce CRM connector on the way.
+
+Accessing data from a single point provides great comfort because different software used by different teams come together. The authorization factor is an important issue, and GEODI acts in accordance with authorizations at every stage.
+
+GEODI Map capabilities are very useful. Maps are created using only the data entered by the user. For example, users can effortlessly map their customers, offers, or activities.
+
+GEODI offers functions such as Search, Discover, Mask, Encrypt, and Classify, indicating that it protects user data.

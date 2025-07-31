@@ -1,0 +1,5 @@
+Country-specific semantic recognizers are designed to extend the capabilities of GEODI Discovery and Classification. This particular package is specifically for Kuwait.
+
+Installation of this package should occur after GEODI Discovery. A key component of this package is the Kuwait ID Recognizer.
+
+The version of this package is 1.0.0.11.

@@ -1,0 +1,1 @@
+The Grid System, version 1.0.0.1, converts the list structure to the grid for the Contents screen. This system makes more content appear on the screen.

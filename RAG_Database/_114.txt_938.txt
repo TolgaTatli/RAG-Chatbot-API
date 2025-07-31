@@ -1,0 +1,5 @@
+There is currently no reader for .basex files. However, if a reader for .basex files existed, GDE would also support them.
+
+Reading and discovery support for a file precedes GDE.
+
+If examples and expected results are provided for files whose support is desired, necessary developments can also be made.

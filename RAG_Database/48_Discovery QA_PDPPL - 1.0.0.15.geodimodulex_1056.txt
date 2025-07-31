@@ -1,0 +1,5 @@
+Country-specific semantic recognizers extend the capabilities of GEODI Discovery and Classification. This package is for Qatar.
+
+This package should be installed after GEODI Discovery. It includes the Qatar ID Recognizer and the Qatar Address Recognizer.
+
+The version of this package is 1.0.0.15.

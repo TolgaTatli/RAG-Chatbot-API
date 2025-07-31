@@ -1,0 +1,11 @@
+Otomatik Bilgilendirme Mesajları özelliği iki temel izleme yeteneği sunar. Bu özellik sayesinde dilediğiniz sorguları izlemeye alabilir ve sorgu sonucunda yeni bir doküman eklenmesi gibi bir değişiklik olduğunda otomatik olarak haberdar olabilirsiniz. Ayrıca, aldığınız notlarda bahsettiğiniz kullanıcılara mesaj gitmesini sağlayarak notlarınızı ekip üyelerinizle kolayca paylaşabilirsiniz.
+
+Varsayılan kurulumda kullanıcılar yalnızca sorgularını kaydedip diğer kullanıcılarla paylaşabilir. Özelliğin tam olarak kullanılabilmesi için kullanıcıların e-posta adresine sahip olması gereklidir. LDAP kullanıcıları için e-posta ayarları Active Directory üzerinden yapılır.
+
+Mesajların kurumunuza ait bir e-postadan gelmesini istiyorsanız belirli ayarların yapılması gerekmektedir. GEODI, bilgilendirme ve kullanıcı ayarları için e-posta altyapısını kullanır. Eğer bu ayarlar boş bırakılırsa, bildirimler DECE Gmail hesabı üzerinden iletilir. Ayarları özelleştirmek için adımlar izlenebilir.
+
+E-posta ayarlarına GEODI/Manager/Ayarlar/e-Posta ayarları yoluyla ulaşılabilir. Sunucu adresi ve port numarası kullanılan mail sunucusuna göre değişiklik gösterir. Gönderen görüntü adı istenildiği gibi belirlenebilir ve bu isim kullanıcılarda mail gönderen kişi bilgisi olarak görünür; ancak bazı sunucular görüntü adına izin vermeyebilir.
+
+Ayarlar oluşturulduktan sonra test edilmeli ve çalıştığından emin olunduktan sonra kaydedilmelidir. Hatalı e-posta tanımları bildirimlerin gönderilmemesiyle sonuçlanır. Kullanılan hesabın şifresi değiştiğinde ayarların güncellenmesi gereklidir.
+
+E-postalar içindeki linklerin doğru çalışması için Sistem Yapılandırma - Güvenlik Ayarları altında ServerUri URL tanımının yapılması gereklidir. Bu tanım örneğin {"ServerUri":"http://servis2.dece.com.tr"} şeklinde olabilir.

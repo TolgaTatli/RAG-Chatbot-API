@@ -1,0 +1,27 @@
+GEODI'nin en önemli ve fark yaratan özelliklerinden birisi, yapısal ve yapısal olmayan verilerden harita üretebilmesidir. Geleneksel GIS yazılımlarının aksine, GEODI için tablosal veri gerekmez. Bir PDF içindeki yer ismi, bir belgedeki parsel numarası veya bir yol projesindeki kilometre değeri konum olarak algılanır. Şema olarak birbirine uymayan çok sayıda veriyi bir araya getirebilir. GEODI, coğrafi haritaların yanı sıra bir elektrik şeması veya bir uçağın resmini de "harita" olarak kullanabilir.
+
+Harita altlığı tanımlama özelliği kapsamında, Google ve Bing için tanımlar hazır olarak gelir. Bu altlıkların kullanımları için gerekebilecek telif veya ek ücretler ya da diğer sorumluluklar GEODI'nin sorumluluğunda değildir; kullanıcıların ilgili sağlayıcı sayfalarından kontrol etmeleri önerilir.
+
+Proje Sihirbazı içindeki Katman Listesi, altlık seçeneklerini de içerir. Kullanıcılar, ellerindeki bir imajı, DWG/DGN gibi CAD dosyalarını, GPX, geoTIFF, KML gibi dosyaları veya TileJSON/WMS Sunucularını altlık olarak kullanabilirler. Tanımlanan altlıklar projeye özel olacaktır ve proje dosyaları paylaşılıyorsa altlık dosyalarının da paylaşılması gerekmektedir.
+
+Altlıkların bir koordinat sistemi olmalıdır. Bunun için uygun EPSG değeri ve bu EPSG'ye tekabül eden limit koordinat değerleri (BBOX) girilmelidir. Bu yöntemle, "etkileşimli dokümantasyon" projesindeki Cessna 172 örneğinde olduğu gibi, herhangi bir görsel harita olarak kullanılabilir.
+
+Kullanılmak istenen EPSG değeri mevcut tanımların dışında ise, GEODI/Projections dizini altında "EPSG-.WKT" adlı bir dosyada WKT değerleri oluşturulmalıdır. Kendi EPSG değeri tanımlanırken, mevcut EPSG kodları ile çakışmayı engellemek için 100000 ve yukarısı bir değer atanması önerilir. Projeler başkaları ile paylaşılıyorsa, atanan değerlerin de paylaşılması gerekir. EPSG'den WKT üretmek için http://www.epsg-registry.org iyi bir kaynak olarak kullanılabilir; ayrıca ArcGIS, Netcad veya diğer GIS yazılımlarının projeksiyon araçları da projeksiyonları WKT olarak saklayabilir.
+
+Projeksiyonu bilinmeyen DWG, DGN, DXF veya NCZ dosyaları için harici bir meta dosyası ile projeksiyon tanımlanabilir. Projeksiyonu bilinmeyen CAD dosyaları için GEODI'nin genel harici özellik tanımlama yeteneği kullanılır.
+
+GEODI haritaları, OGC WMS (Web Map Service) yolu ile farklı GIS yazılımlarında kullanılabilir. Bu sayede ArcGIS, Netcad GIS, Autocad Civil 3D, GeoServer, Google Earth gibi yazılımlar veya Open Layers, Leaflet gibi altyapıları kullanan tüm yazılımlar, GEODI'nin yapısal olmayan verileri ile üretilmiş haritayı kullanabilir.
+
+GEODI, OGC WMS 1.3.0 standardını destekler. Bu standardı destekleyen istemcilerde harita üzerine tıklandığında GEODI'de bir diyalog açılır. WMS canlı bağlantı sunar; GEODI tarafındaki sorgu değiştirildiğinde yayınlanan harita değişir. Değişimde sorun yaşanması durumunda ilgili yazılımın önbellek (cache) ayarlarına bakılmalıdır. Aktif proje için WMS adresi http://127.0.0.1:3323/wms şeklindedir. Belli bir projenin haritasının yayınlanması için http://127.0.0.1:3323/wms?wsname=[Proje Adı] adresi kullanılır; [Proje Adı] yerine projenin adı yazılmalı ve proje adındaki boşluklar %20 ile değiştirilmelidir, örneğin http://127.0.0.1:3323/wms?wsname=deneme%20proje.
+
+GEODI Haritası KML olarak dışa aktarılabilir. KML dinamik değildir; GEODI sorgularından veya yeni içeriklerden etkilenmez.
+
+GeoJSON raporu, seçilmiş içeriklerdeki konumları GeoJSON olarak dışa aktarır. Bu rapor, ArcGIS veya başka bir GIS yazılımında katman olarak eklenebilir. Kullanıcılar, rapor içindeki linkler aracılığıyla GEODI'deki dokümanlara erişebilirler.
+
+ArcGIS Enterprise Widget eklentisi ile ArcGIS kullanıcıları, GEODI dokümanlarına ArcGIS içinde erişebilirler.
+
+Shape dosya projeksiyon sorunlarının giderilmesi için, projeksiyonların olmaması veya hatalı olması durumunda dosyanın okunması, görüntülenmesi veya sözlük olarak kullanılmasında sorunlar yaşanabilir. Projeksiyon sorunu yaşanması durumunda PRJ dosyasının düzenlenmesi veya yeniden oluşturulması gereklidir. Projeksiyon sorunu, sözlük hazırlama gibi işlemler sırasında doğrudan gösterilirken, tarama sırasında tarama günlük dosyasına kaydedilir. "Missing projection parameter 'latitude_of_origin' It is also not defined as 'latitude_of_center'. Parametre adı: parameterNam" gibi bir örnek, GEODI'nin söz konusu projeksiyonu tanıyamadığına işaret eder. Düzenleme için, dosyanın projeksiyonunu başka bir yazılım (ArcGIS, Netcad) veya https://www.epsg-registry.org/ gibi kaynaklar kullanarak bir Projeksiyon WKT oluşturmak ve PRJ içeriğini değiştirmek gerekir. Sorun yaşanan Shape dosyası veya PRJ dosyası GEODI'ye iletilerek yardım istenebilir.
+
+Plan veya harita içeren DWG ve DGN dosyaları için projeksiyon tanımı yapılması, GeoArchive ve CAD&GIS viewer modülleri içindeki faydayı artıracaktır.
+
+Shape dosya karakter kodlama (encoding) sorunlarının giderilmesi için, kayıtların görüntülenmesinde veya kısa özetlerde "garip" karakterlerin görünmesi durumunda bir çözüm olarak, Shape dosyası ile aynı isimde CPG veya CST uzantılı bir dosya oluşturularak kodlama adı (UTF-8, ISO-...) yazılabilir. Eğer kodlama yazmak çözüm olmuyorsa, SHP dosyası ile aynı dizindeki DBF dosyası yedeklendikten sonra, OpenOffice veya başka bir yazılım ile açılıp kodlama seçimi yapılır ve dosya aynı isim ve uzantı ile kaydedilir. Bu işlemden sonra SHP farklı programlar ile görüntülendiğinde hatalar alınabileceği için DBF dosyasının mutlaka yedeklenmesi önemlidir.

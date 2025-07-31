@@ -1,0 +1,3 @@
+In GEODI Classifier, it is possible to define a Class Super Category.
+
+Forms, reports, and panels are available for ATM cleaning processes. These processes allow users to know the nearest ATM and its previous and subsequent states through photography. Online report access can be offered to banks for these services. This functionality is identified as version 1.0.21155.68.

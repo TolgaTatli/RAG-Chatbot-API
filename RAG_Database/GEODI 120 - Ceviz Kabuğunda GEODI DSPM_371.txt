@@ -1,0 +1,31 @@
+GEODI addresses a wide range of data security needs, including discovery, classification, masking, and more.
+
+In 2022, Gartner introduced the concept and scope of DSPM (Data Security Posture Management), which is a strategic approach aimed at identifying and protecting sensitive data in distributed environments.
+
+GEODI's capabilities align well with the DSPM framework, making it a comprehensive and future-proof solution for organizations seeking control, compliance, and reliable data management.
+
+GEODI DSPM (Data Security Posture Management) ensures the discovery, classification, and protection of sensitive data regardless of its location, including file systems, emails, SharePoint, databases, or cloud platforms.
+
+GEODI DSPM's discovery feature automatically scans and identifies sensitive data, such as PII, PCI, or custom-defined content, across all data sources. Its classification capability applies labels, classes, or metadata based on content, risk, or compliance rules.
+
+For protection, GEODI DSPM performs operations like masking, anonymization, encryption, or secure deletion through manual or automated workflows.
+
+GEODI DSPM provides visibility through dashboards and detailed reports that show where sensitive data is located and how it is processed. It also offers automation and workflows, enabling real-time responses to findings with powerful, rule-based automations for actions like quarantining, team notification, or content classification.
+
+GEODI DSPM includes Consent-based Remediation, a governance-based approach ensuring that actions such as deletion, quarantining, or censoring are performed only after approval by authorized individuals, typically the data owner or information manager.
+
+GEODI DSPM supports multiple platforms, working compatibly with Windows, Linux, macOS, SharePoint, S3, databases, and more.
+
+GEODI DSPM combines data discovery with automated response processes, allowing organizations to take control of their data security posture and manage it confidently.
+
+Within the DSPM (Data Security Posture Management) framework, Data Discovery and Classification are among the most critical components, and GEODI excels in these areas.
+
+GEODI offers advanced discovery and classification capabilities, ensuring seamless compliance with regulations such as GDPR, KVKK, DPDPL, PDPL, SAMA, and HIPAA. It identifies and manages sensitive data like PII, PCI, financial information, and fraud-related data, and provides automatic classification to reduce human error and minimize data risks.
+
+GEODI features AI-powered accuracy, utilizing AI & NLP-based intelligence to provide high accuracy and broad coverage. It integrates with GEODI Q-LLM for in-depth discovery using next-generation large language models and offers high-speed discovery through a scalable architecture.
+
+GEODI provides extensive integration and automation, supporting rich data sources including file systems, emails, SharePoint, S3, and databases. It offers workflow-based automation to automatically quarantine, mask, or delete risky content, and enables access management to control who can see what and where.
+
+GEODI is enterprise-ready and easy to use, featuring an administrator-friendly interface that is powerful yet simple for system administrators. It functions as a solution partner, offering a help desk, business partners, and an active user community. GEODI supports on-premise installation for full control over infrastructure, ensures continuous development through frequent updates and roadmap-based innovation, and provides an Open API for seamless integration with existing systems.
+
+GEODI is described not just as a powerful tool, but also as a comprehensive DSPM solution partner that adds value to organizations' data security strategies.

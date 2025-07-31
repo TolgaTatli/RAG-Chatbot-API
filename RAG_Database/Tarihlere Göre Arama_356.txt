@@ -1,0 +1,9 @@
+Tarihleri doğal yoldan yazarsınız. GEODI, nasıl yazdığınızdan ve içeriklerde nasıl yazıldığından bağımsız şekilde aramayı yapar.
+
+GEODI, içeriklerdeki tüm tarihleri ve tarih aralıklarını otomatik olarak tanır ve TAKVİM görüntüsü olarak sunar. Dil paketi yüklendiğinde bu işi Rusça, Arapça, Gürcüce, İbranice ve diğer diller için de yapar. Takvim görünümü, bir sorgunun zamansal dağılımı hakkında fikir verecektir. Bu görünüm, bazı haberlerin yoğunlaştığı zamanlar veya portakal çiçeği festivali gibi etkinliklerin zamansal olayların daha kolay algılanmasını sağlayacaktır.
+
+GEODI'de kullanılabilecek sorgu örnekleri şunlardır: -> 23 nisan 1920 veya 23.04.1920 içerenler; -> Aralık içinde tarih içerenler; -> 1 Mayıs ile 31 Aralık 1923 arası; ( → 23 Nisan 1923’de eklenecek içerikler; -> Bugün eklenen içerikler.
+
+Sorgularda belirli cümleler kullanılabilir. Referans tarihi (bugün) bilgisayarınızın tarihidir. GEODI, e-postalarda ve sosyal medyada bu kelimeleri tanır; 'contentdate' tam olarak bilinen kaynaktır.
+
+GEODI'de 'Dün, bugün, yarın, evvelsi gün' sorguları beklendiği gibi çalışır. 'Geçen Hafta, gelecek hafta, bu hafta, önceki hafta, evvelsi hafta' sorguları pazartesi gününden pazar gününe kadar olan tarihleri kapsar. 'Geçen ay, gelecek ay, bu ay, evvelsi ay' sorguları ayın birinden son gününe kadar olan tarihleri kapsar. 'Gelecek Sene, bu sene, geçen sene, evvelsi sene, bu yıl' sorguları yılın ilk gününden son gününe kadar olan tarihleri kapsar. 'Sonraki On Yıl' sorgusu yapıldığında içinde bulunulan haftanın ve bu haftadan sonraki 10 yılın tarihleri döndürülür. 'Son On Yıl' sorgusu yapıldığında ise içinde bulunulan haftanın ve bu haftadan önceki 10 yılın tarihleri döndürülür.

@@ -1,0 +1,1 @@
+GEODI writes logs after a certain number of requests to avoid straining system resources. If immediate logs are required, the syslog protocol should be used.

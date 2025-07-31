@@ -1,0 +1,3 @@
+Mail attachments are not considered during classification.
+
+The relationship between mail attachments and classification must be established on the DLP side.

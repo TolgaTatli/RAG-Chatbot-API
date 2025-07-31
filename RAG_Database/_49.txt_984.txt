@@ -1,0 +1,1 @@
+Command methods are available for using Classifier Desktop classification. The Shell classifier provides a command line interface. This interface can be used from within Batch or Powershell.

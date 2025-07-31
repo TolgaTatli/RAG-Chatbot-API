@@ -1,0 +1,7 @@
+The GEODI Project Wizard defines the interfaces users will use, the resources they will see, authorizations, default views, and many other rules.
+
+This tutorial provides a general idea, and for detailed information, users should refer to the detailed support pages.
+
+The content categories include Technical, Sales, User, and General. The duration is 15 minutes, with an application duration of 60 minutes.
+
+Trainings are intended to give a general idea, and users need to reinforce what they have learned by applying it. Some features mentioned in the training may not be included in a user's license.

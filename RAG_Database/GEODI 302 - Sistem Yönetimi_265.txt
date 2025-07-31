@@ -1,0 +1,9 @@
+The GEODI management page serves as the access point for project creation, setting modifications, permission arrangements, indexing, and other settings.
+
+General features will be explained in this training.
+
+The content is technical, and the duration is 45 minutes.
+
+The scope of the training includes Project Wizard, Agent Management Panel, Indexing, User/Permission Management, Customizations, Dictionary and Recognizers, Maps, and Questions.
+
+The trainings aim to provide a general idea. It is necessary to reinforce what is learned by using it. Some features specified within the scope of the training may not be included in the user's license.

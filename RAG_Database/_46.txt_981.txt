@@ -1,0 +1,3 @@
+Geodi Agents can be deployed using the Self Contained Deployment Model. This is already the method used for their deployment.
+
+When scanning web pages with changing content, the same contents are re-indexed. This occurs because web pages do not provide clear information indicating changes, resulting in the content being indexed in the same way every time.

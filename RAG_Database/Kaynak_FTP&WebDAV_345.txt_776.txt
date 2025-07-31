@@ -1,0 +1,5 @@
+GEODI indexes and discovers file data from the sources mentioned. File exclusion and other rules are applicable. These sources are accessed over the internet, and internet speed affects indexing performance. If there are too many requests, the other party may ban or slow down the connection, similar to other web sources.
+
+FTP directories are indexed and discovered by GEODI in the same way as Windows directories. File exclusion rules apply to FTP. The conditions required for an FTP connection include a service address and a user name.
+
+WebDAV directories are indexed and discovered by GEODI in the same way as Windows directories. File exclusion rules apply to WebDAV. The conditions required for a WebDAV connection include a service address, a user name, and a password.

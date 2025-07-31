@@ -1,0 +1,1 @@
+False-positive (FP) markings can be included in reports based on user preference. Users have the option to report these FPs within the same report or to generate a report that exclusively contains the false-positives.

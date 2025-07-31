@@ -1,0 +1,1 @@
+Veri işleme hızı 0.5-1TB/Gün olarak belirtilmiştir. Bu hız, oldukça iyi bir hız sunmaktadır.

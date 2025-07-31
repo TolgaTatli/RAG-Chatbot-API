@@ -1,0 +1,13 @@
+The scope involves understanding the discovery panel that comes with GEODI Discovery and interpreting its capabilities. Participants are general.
+
+Prerequisite trainings include GEODI 101 and GEODI 102.
+
+The content covers topics such as "What is the Discovery Panel?", "What does the Discovery Panel do?", "Data Sources", "Data Sources Containing Personal Data", and "Documents by Content Type".
+
+Further content areas are "Discovery Results", "Other Findings", "Content Summaries and List Report", "Destruction Report", "Alarms", "New Data", "Authorization and Development", "Sharing the Panel as PDF", and "Video".
+
+Trainings aim to provide a general idea, and it is necessary to reinforce what is learned by using it.
+
+If there are topics one is unsure about or cannot do, support should be requested from the teams.
+
+Some features mentioned within the scope of the training may not be included in the user's license.

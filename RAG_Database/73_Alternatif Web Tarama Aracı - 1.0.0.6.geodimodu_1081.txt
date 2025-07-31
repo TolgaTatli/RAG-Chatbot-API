@@ -1,0 +1,5 @@
+An "Alternative Web Engine" is mentioned in the provided text.
+
+Some websites may require scanning using a method different from the usual. To enable scanning of these sites, a module must be installed. It is recommended for MediaMon users to install this module.
+
+The version associated with this information is 1.0.0.6.

@@ -1,0 +1,7 @@
+Sharepoint Online and OneDrive environments allow for data destruction and quarantine, as determined by a discovery made in these environments.
+
+To enable data destruction and quarantine in Sharepoint Online and OneDrive, an open-source application named RCLONE must be installed and activated for these resources. RCLONE functions by presenting the aforementioned resources as if they were local folders.
+
+It is assumed that the quarantine area is a local or network directory, and not located within the Sharepoint or OneDrive environments.
+
+Under these specified conditions, the data destruction and quarantine process can be executed using the existing method of "script generate/script run."

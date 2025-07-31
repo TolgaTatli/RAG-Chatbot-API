@@ -1,0 +1,3 @@
+A query was raised concerning whether it is possible to tag emails sent by 24 users outside the company via Outlook and OWA, specifically if this process must occur with a popup.
+
+The response to this query indicates that such a capability "Var" (exists), and it is described as being for "Genel ve yaygın kullanım" (general and common use).

@@ -1,0 +1,3 @@
+Excel files are capable of classification, and labels can be applied to them. The classification of Excel files is not restricted to metadata alone, as it can also extend to elements such as headers, footers, or watermarks.
+
+The labels applied to classified Excel files are visible when viewing the files in Page Layout view.

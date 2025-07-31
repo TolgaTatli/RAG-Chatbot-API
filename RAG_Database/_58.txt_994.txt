@@ -1,0 +1,7 @@
+It is possible to create a policy to classify all documents created by person A within an institution as confidential.
+
+Documents can be selected and limited using the `owner:A` query.
+
+Alternatively, documents visible to user A can be selected using `user:A`.
+
+Date and all capabilities supported by GEODI can be added to these queries.

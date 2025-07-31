@@ -1,0 +1,3 @@
+The text includes an inquiry about whether discovery can be performed for Atlassian Wiki.
+
+Confluence is indicated as a resource that can be utilized as a source.

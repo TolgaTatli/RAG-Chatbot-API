@@ -1,0 +1,11 @@
+A jSettings file can be created by placing it into the Report Folder.
+
+Localization column names must be added into the content of jSettings using a macro.
+
+To edit a report accordingly, it is necessary to know the type of object passed to the report content.
+
+For reports created with GEODI Pro, the macro data object is a GeodiEntry Array.
+
+The object for Mobidi Server Reports is a MobidiEntry Array.
+
+An example jSettings file, `CSVReport.jSettings`, includes fields such as `ID`, `DisplayName`, `__type`, `Headers`, and `Columns`. The `DisplayName` field shows localization with "My CSV Report" in English and "CSV Raporum" in Turkish. The `Headers` field also demonstrates localization for "Content," "Layer," and "Keyword." The `Columns` field specifies data paths like "=context.Data.OutputGeodiContent.DisplayName", "=context.Data.RecognizerBackRef.Recognizer==null?string.Empty:context.Data.RecognizerBackRef.Recognizer.DisplayName", and "=context.Data.RecognizerBackRef.Text".

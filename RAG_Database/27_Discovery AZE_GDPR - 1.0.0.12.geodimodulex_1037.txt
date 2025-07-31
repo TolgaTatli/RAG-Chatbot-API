@@ -1,0 +1,7 @@
+The "Discovery AZE/GDPR" module is designed for Azerbaycan, identified by the code AZ.
+
+This module provides recognition for AZ ID numbers, AZ TAX numbers, and AZ city names.
+
+It also extends the existing name recognizer to include AZ names.
+
+The module's version is 1.0.0.12.

@@ -1,0 +1,3 @@
+A mechanism exists to address the need for files scanned with 145 GDE to be removed from the project interface after they have been removed from the computer.
+
+These operations are performed via the Aksiyonlar (Actions) menu. The 'Silinenleri Sil' (Delete Deleted Ones) action will address the need. A new version update may be required for the operation to work.

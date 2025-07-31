@@ -1,0 +1,3 @@
+Confluence can be used as a source for discovery related to Atlassian Wiki.
+
+GEODI writes usage logs after a certain number of requests to avoid straining system resources. If immediate logs are required, the syslog protocol should be used.

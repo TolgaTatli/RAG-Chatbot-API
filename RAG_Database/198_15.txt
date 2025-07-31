@@ -1,0 +1,5 @@
+Solidworks files can be classified by users using GEODI Classifier. Files that lack an add-in area, such as Solidworks files, can be classified via a right-click (shell extension) "sınıfla" option. This method enables the tagging of these files using the ADS (Alternate Data Stream) technique.
+
+The ability to write to the meta fields of Solidworks files is a feature that is not currently possessed.
+
+Regarding the feature of writing to Solidworks file meta fields, there are several questions and requests. It is requested to examine tagged and untagged sample files, if available. It is also necessary to investigate whether the capability of software libraries, which exist for every file type, is applicable to Solidworks. Further inquiries include whether Solidworks needs to be present in the environment where this classification will occur, and if automatic classification is desired, which information within Solidworks will be evaluated.

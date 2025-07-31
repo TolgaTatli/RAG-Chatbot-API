@@ -1,0 +1,7 @@
+The provided text asks if content discovered with 176 GDE from PCs that are no longer in use can be removed from the GEODI interface. The text states that a mechanism exists to meet two needs.
+
+The text also includes a question about whether a file deleted from a computer can be deleted from the project interface.
+
+A further question in the text is whether files scanned on an out-of-use computer can be deleted from the project interface.
+
+These operations, concerning the removal of content from the GEODI interface and the deletion of files from the project interface, are performed through the Aksiyonlar (Actions) menu.

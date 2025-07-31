@@ -1,0 +1,19 @@
+Aksiyonlar (Actions) encompass operations such as the destruction or quarantine of sensitive content discovered by GEODI Discovery. These actions also include data improvement or remediation processes. System administrators and members of a specific group can access the actions mentioned on this page. For actions to be valid in desired projects, a specific setting must be configured.
+
+The "Discovery-İmha" (Destruction) action is one of the data remediation scripts produced by GEODI using its reporting infrastructure. Ready-made scripts are in Windows Batch language and function for both local and remote (GDE) sources. Scripts can also be generated for other languages like Bash or Python. Destruction is an irreversible process, requiring caution.
+
+Due to browser security measures, the destruction script downloads with a *.bat.txt extension and must be renamed to *.bat. The generated script may not work on different machines because of reasons such as access rights or remote file paths. It must be run on the machine where the GEODI Server is located.
+
+The "Discovery-Karantina" (Quarantine) action creates a batch script that enables selected content to be moved to a designated directory. This includes local or network directories and remote directories provided by GDE. The selected files undergo a "move" operation to the quarantine area. Quarantine is an irreversible process, and caution is advised. It is also necessary to ensure the quarantine directory has sufficient space.
+
+The generated quarantine script may not work on different machines due to factors like access rights or remote file paths, and it must be run on the GEODI Server machine. In the quarantine directory, content originating from local and network directories is stored in a similar hierarchy, while content from remote machines is stored with an "IP.." prefix. Other conditions for quarantine are the same as for destruction.
+
+The "Discovery-Şifreleme" (Encryption) report generates a script that creates a compressed, encrypted file in the directory of the selected content without altering the original files. The scope of encryption covers local or network directories. Users can choose different passwords for different operations and are responsible for storing these passwords.
+
+The generated encryption script may not function on different machines due to reasons such as access rights or remote file paths, and it must be executed on the machine where the GEODI Server is located. Winrar must be installed on the machine where the script is run for it to function.
+
+The "Silinenleri Sil" (Delete Deleted) operation is used to remove files from the index that continue to appear in search results and reports even after being deleted during the GEODI discovery process. This operation removes files from the index if they have been deleted, covering both local and GDE discovered files. Alternatively, the "Silinenleri Sil" operation can be performed from the Project/Maintenance menu.
+
+The "Discovery-Toplu Maskeleme" (Bulk Masking) action requires a Masking license. This action creates a GEODI command file that facilitates taking a masked copy of selected content to a specified directory. Masking functionality covers local or network directories.
+
+The generated bulk masking script may not work on different machines due to factors such as access rights or remote file paths, and it must be run on the machine where the GEODI Server is located. The script requires specific parameters: a Token, MaskDataMetaID, and the directory where masked files will be saved. The Token must be obtained from the /API page by a user with sufficient authorization for the masking operation. MaskDataMetaID allows for defining different masking profiles, and the ID value of the chosen profile must be entered, which can be found on the Maskeleme page.

@@ -1,0 +1,23 @@
+The GEODI Data Classification Suite course is intended for a general audience and covers the use of Desktop, Microsoft Office Addons, and OWA components.
+
+GEODI Classifier is a common name for a set of tools that enable manual or automatic data classification. It provides plug-ins for Microsoft Office, Exchange Server, Office 365, and Windows. These Classifier solutions are compatible with Data Loss Prevention (DLP) solutions, including ForcePoint, Symantec, and TrendMicro.
+
+GEODI Classifier plug-ins are not activated until both GEODI and GEODI Classifier licenses are installed.
+
+After installing the Desktop Classifier plugin, a "classify" option becomes available in the Windows right-click menu. The specific options presented may vary based on server settings. This method creates tags for file formats that support tagging, such as Office documents and PDFs, which are then interpreted by DLP solutions. For file types without native tag support, tags are written using a feature of the NTFS file system, which is also compatible with DLP solutions.
+
+The installation of Microsoft Office plugins adds a classification menu to the "Home" tab within Microsoft Office applications. Supported applications include Word, Excel, PowerPoint, and Outlook.
+
+Within Microsoft Office applications, the classification options presented may vary based on server settings, allowing for manual or automatic document class selection. The chosen class determines which labels are written, the presence of a watermark, and its appearance, all dependent on user settings. When saving the document or exporting a PDF, classification options are presented again, and depending on settings, saving may require a class selection.
+
+Automatic classification in GEODI Classifier utilizes GEODI's discovery capabilities. The specific rules for creating classes are determined in the server settings. Users can define various classes, such as "Confidential" or "Private," and also create distinctions like "with personal data" or "without personal data."
+
+The GEODI classification tool attempts to place class values and watermarks in the optimal position within documents. The specific values written depend on defined settings. Users can configure Header, Footer, and Watermark values to appear, with options for right, left, or centered alignment, though not all elements are necessarily applied.
+
+Due to the extensive layout, font, and size options in Word, Excel, and PowerPoint, it may not always be possible to place class values without affecting the document's content. In such instances, users should try the provided options or modify their templates to accommodate classification values. Situations that affect manually created headers and footers also apply to GEODI tags; for example, a footer might not display in some Office versions when printing a portrait-formatted page horizontally. If document margins are used to their limit, GEODI class labels will overlap existing content, requiring users to reserve space for the label.
+
+When a computer cannot access the GEODI server, only manual classification can be performed using the classification tools. Logs of classifications made during offline periods are transferred to the server once the connection is restored. During offline periods, the classification tools may attempt to contact the servers, potentially leading to slightly longer startup times.
+
+Classification policies and rules for the classes and tools are set centrally. When these rules are updated on the server, the interfaces will reflect these changes the next time a user logs in.
+
+Trainings are designed to provide a general understanding, and users are encouraged to reinforce their learning through application. It is noted that some features mentioned in the training may not be included in a user's specific license.

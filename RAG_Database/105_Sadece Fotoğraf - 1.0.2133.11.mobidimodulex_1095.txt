@@ -1,0 +1,5 @@
+The best way to record an instance is by taking a photo. This form of recording saves location and time. It also allows users to take notes and annotate.
+
+This recording method is relevant for various fields, including energy, building, control, architecture, engineering, project, telecom, real estate, retail, fmcg, service, cleaning, pesticide, consulting, white goods, medical, combi, circuit, sale, marketing, textile, automotive, dealer, and food.
+
+The system includes elements labeled 'Note', 'Drawing Area', and an option for 'Only Photograph'. The version of the system is 1.0.2133.11.

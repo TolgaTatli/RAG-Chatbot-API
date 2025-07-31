@@ -1,0 +1,11 @@
+The service allows users to discover and hide sensitive data, including names and money, through batch masking. It supports various document types such as PDF, Word, Excel, and Libre Office.
+
+Data masking is a process used to hide sensitive information. For example, it can mask company names and money amounts within a contract, enabling safe sharing. Documents can be masked either permanently or dynamically, with permanent masking serving as an alternative to deletion.
+
+Dynamic Data Masking involves masking findings such as names, IBANs, and money, which are identified through data discovery. This masking is applied based on user permissions, resulting in the same document appearing differently to various users.
+
+Permanent Masking applies to PDF, Office, and Libre Office documents, which are masked and then stored. This method also supports bulk masking operations.
+
+Database Masking involves the permanent masking of an entire database. This process is particularly useful for developers or in situations where databases need to be shared without containing any sensitive information.
+
+Anonymization is the process of replacing identified sensitive findings with fictional information, thereby creating a source that appears real. Specifically, anonymization replaces values like names, IBANs, or money with new, real-looking values.

@@ -1,0 +1,13 @@
+User activities on Geodi can be monitored, and their corresponding logs can be accessed. Unless logging is explicitly turned off, these user activities are stored in CSV format files. These log files are located under the path %appdata%\Dece\Logs\GEODI\AppUsage.
+
+GEODI offers live event monitoring, which is defined as the system's ability to report to an application when content is opened or reached. This reporting is achieved by GEODI calling a user-specified web address and including user information in the call.
+
+To enable live event monitoring, a JSON definition file with the .jSettings extension must be placed into the GEODI/Settings/Events folder. Only a system administrator with access to this folder can add this definition. The GEODI/Settings/Events folder also contains sample contents.
+
+An example request for GEODI events follows the format [ServiceURL]?m=FireEvent&user={username}. Within the ServiceURL context, parameters such as {user}, {username}, {wsName}, {data}, and {event} can be utilized. Even if {user} and {username} parameters are not explicitly used in the request, the request-user and request-username information is still passed within the HTTP Header content. The HTTP method used for these requests is GET.
+
+When making GEODI event requests, several HTTP error codes may be encountered. These include 401 Unauthorized access / Access denied, 403 Forbidden, and 511 Network Authentication Required.
+
+An example GEODI settings file, intended for event handling, includes several key fields. DisplayName is set to "Sample Event Handler", and __type specifies "Factory.ActionFactory:UrlCallerEventHandler". The ServiceURL defines the endpoint, such as http(s)://myhost/MyEventHandlerService.ashx?contentid={content}&event={event}. It also specifies a GEODIRequestHeader as "GEODI_Request", sets AllowCancel to false, and defines EventTargets as ["ContentViewer"] with ActionTargets as *.
+
+An example application type for integration with GEODI is a .Net 3.5 WebHandler developed in C#.

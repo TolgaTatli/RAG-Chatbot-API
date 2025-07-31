@@ -1,0 +1,1 @@
+Kişi bazlı maskeleme mümkündür. Rol bazlı maskeleme ve anonimleştirme de yapılabilmektedir. Destek sayfasına bakılması gerekmektedir.

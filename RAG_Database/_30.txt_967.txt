@@ -1,0 +1,1 @@
+Database primary key control and sampled exploration settings can be performed via the interface. Both are performed via the interface.

@@ -1,0 +1,1 @@
+Google Drive üzerinde dosyaları izinlerine göre görüntülemek mümkün değildir. Bunun nedeni, Google Drive kullanıcıları ile GEODI kullanıcılarını eşleştiren bir mekanizmanın bulunmamasıdır.

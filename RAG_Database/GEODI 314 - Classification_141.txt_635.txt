@@ -1,0 +1,13 @@
+The purpose of this content assumes the user has completed GEODI 301 and is prepared to activate their initial Classification project. Agent deployment, covered in GEODI 315, and OWA installation, covered in GEODI 316, are separate courses required after this one.
+
+The content covers Technical, Sales, User, and General topics. The duration is 1 hour. Prerequisite trainings include GEODI Project Wizard and GEODI Queries, and IT knowledge is also required.
+
+The scope indicates that after GEODI installation, which is covered in GEODI 301, the GEODI Classifier is already installed. This module includes a ready-to-use template called Classifier Template. A roadmap and checklist are available for a typical classification project, and it is suggested that users follow these.
+
+The initial project created using the Classifier Template contains ready-to-use classes, allowing for direct use. Modifications are also possible for Classes, Rules, Annotations, and customization by groups.
+
+Users are ready to deploy agents, with agent deployment covered in GEODI 315. OWA deployment is covered in GEODI 316. End user training is covered in GEODI 121, and this course assumes the use of default classes, suggesting that an extra guideline might be desired for specific environments.
+
+The content will cover Frequently Asked Questions (FAQ), discussing potential questions, problems, and their answers, specifically the GEODI Classifier FAQ. The next topic is the Log Panel and reading logs, including connecting GEODI logs to a SIEM. The final topic is Legacy Data Classification.
+
+Supporting materials include GEODI Classifier - Class and Policy settings, GEODI Classifier Office and Other Plugins User Guide, GEODI Classifier Batch Classification, and GEODI FAQ. Users are encouraged to seek support from teams if they are uncertain about a topic or unable to perform a task. It is noted that some features may not be included in the user's license.

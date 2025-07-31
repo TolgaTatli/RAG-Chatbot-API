@@ -1,0 +1,3 @@
+Ready sensitive data identifiers are available for compliance with various global regulations, including KVKK, PCI/DSS, CB DDO BİG Rehber, and GDPR.
+
+For compliance with the ISO 27001 2022 version, discovery, destruction, search, and masking solutions are necessary.

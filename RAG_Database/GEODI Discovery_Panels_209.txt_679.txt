@@ -1,0 +1,9 @@
+The panels display the results of GEODI discoveries in a summarized form. These panels allow for easier access to results compared to reports. The summaries presented in the panels are influenced by queries, which facilitates achieving effective results more easily. The next step after using panels is to use Reports and Actions.
+
+Panels are accessible to system administrators and members of the group. Panels are only visible in projects where is included in the GenericSettings under the Advanced Workspace settings.
+
+With the Discovery Panel, findings, duplicate contents, and non-compliant contents are summarized in reports. Users can refer to GEODI 131 training for this panel.
+
+The PCI/DSS Panel is provided with the PCI/DSS Module. Users can create their project by simply defining the source. This panel allows for checking compliance with the PCI/DSS Regulation.
+
+The Client Panel is designed to monitor GDE ve Classifier agents. This panel is visible only to System Admins. Further details for this panel can be found on the following page.

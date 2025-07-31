@@ -1,0 +1,5 @@
+GEODI content can originate from a multitude of different sources. Data sources are created when defining projects, with the GEODI Project Wizard referenced as a guide for this process.
+
+The data sources mentioned within the text are included with GEODI Standard. For information on other sources, users should refer to the relevant module page, specifically the GEODI Application Modules and Supported Formats sections.
+
+Supported data sources include Klasör/Folder, File Server, PC's, Veritabanı (with DB Meta Tanımları), E-posta, Web Sayfası, Confluence, Amazon S3, Dropbox, Google Drive, OneDrive, SharePoint, FTP&WebDAV, MOBIDI Verileri, BELGENET, and SSH.

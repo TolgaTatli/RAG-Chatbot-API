@@ -1,0 +1,39 @@
+GEODI's note mechanism offers a practical and effective way for collaboration. Taking notes saves users from unnecessary emails and the clutter of documents in email attachments.
+
+When reviewing a contract, editing is significantly easier based on notes taken by colleagues on specific clauses. With document versioning, the entire process and all participants are recorded.
+
+GEODI allows users to take spatial notes directly on CAD&GIS viewers. This functionality can be applied to architectural projects or any of the numerous spatial data formats supported by GEODI. When a user views a note, they are directly guided to the relevant point, which helps eliminate uncertainties.
+
+A note taken on a Word or PDF file is linked to the specific page. Similarly, a note taken on an AutoCAD or Netcad file is linked to the relevant coordinate, and a note taken on a video is linked to the precise second.
+
+A note itself is considered a document type within GEODI. Users can query only notes by using the search term “doc:*.geodinote”.
+
+Users can search based on the content of notes. For instance, using “doc:*.geodinote olumlu” will retrieve notes that contain the word "olumlu" (positive).
+
+It is possible to search for the main document based on the content of its associated notes. For example, using “child:”olumlu”” will query documents that have notes containing the word "olumlu" (positive).
+
+The expression “parent2:” allows users to query notes that have been taken on a specific document. Additionally, notes taken on a document can be generated as a report.
+
+Users can search for notes based on the user who created them by using the “owner:” expression.
+
+The notes panel provides a view of both the notes taken and the documents on which notes have been made. This panel simplifies the monitoring of processes.
+
+Users have the ability to determine who can view each note. Within notes, other users can be mentioned using the “@” symbol, which triggers an email notification to them. The recipient of this email can directly access the specific page of the document where the note was taken.
+
+When notes are being taken, GEODI's recognizers are active, and any recognized content is marked. If a defined status dictionary is available on a source basis, it is possible to ensure that notes are taken in a standardized manner.
+
+Features such as note-taking, panels, queries, and monitoring provide practical process management and traceability within GEODI. Users can view the status of tasks through panels or queries and can create custom panels tailored to their institution's specific needs.
+
+Unlike classic software where processes begin with a record, GEODI's process management starts with a document. This approach simplifies tasks, prevents unnecessary data entry, and allows users to focus on their work.
+
+For example, in a job application scenario, the process can commence directly with a CV document without requiring additional data entry. While traditional software would necessitate re-entering information already present in the CV, such as the applicant's name, school, birth date, and certificates, GEODI eliminates these unnecessary tasks.
+
+Users can initiate a process by simply dragging and dropping a CV. There is no need to separately associate certificates or other documents belonging to the individual, as GEODI automatically recognizes and links person names or national ID numbers. Those evaluating the application are informed about the added documents, take positive or negative notes, and these notes are then forwarded to those organizing interviews, ensuring a smooth process flow.
+
+Another example pertains to social media, which has become an indispensable platform for institutions and companies to reach and listen to citizens or users. If a complaint is received from social media, the message is treated as a document in GEODI, allowing notes to be taken. Writing the name of the relevant person or unit within the note is sufficient for the concerned parties to be informed. GEODI's smart methods also enable the automatic determination of the relevant unit based on the content.
+
+For municipalities or special provincial administrations, numerous stakeholders, including the municipality, building inspection firms, contractors, and property owners, are involved in construction permit processes. GEODI makes it very easy to monitor these processes and ensure that all necessary documents are collected completely. Experiences of users like Aksaray Municipality and Artvin Special Provincial Administration are available through webinars.
+
+Another example concerns project processes. Construction companies and engineering offices generate numerous projects in formats such as AutoCAD, Microstation, Netcad, ArcGIS, or GeoTIFF. Many versions are created during the maturation of these projects. Tracking these versions can be difficult and prone to errors due to factors like files being saved with different names in directories or arriving as email attachments. GEODI simplifies the project maturation process and, in addition to versioning, reduces errors by identifying similar and duplicate documents.
+
+Using GEODI provides speed, practicality, and fluidity, serving as an alternative to manual data entry-based process management software that employees or external stakeholders often find difficult to comply with.

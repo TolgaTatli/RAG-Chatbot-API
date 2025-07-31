@@ -1,0 +1,5 @@
+The provided text defines several terms and their translations. "İşyeri" translates to "Workplace". "Açıklama" translates to "Note" in English, "Nota" in Spanish, and "Remarque" in French. "İşyeri Büyüklüğü" translates to "Workplace Size". "İşin Başlama Tarihi" translates to "Starting Date Of The Work" in English and "Fecha De İnicio Del Trabajo" in Spanish. "İşin Bitiş Tarihi" translates to "Ending Date Of The Work" in English and "Fecha De Finalización Del Trabajo" in Spanish. "İlgili Kişi" translates to "Related Person" in English and "Persona De Contacto" in Spanish. "İşyeri Adı" translates to "Workplace Name". "İşyeri Kontrol Soruları" translates to "Workplace Control Questions". "İşyeri Kontrol Durumu" translates to "Workplace Control Status".
+
+The term "Denetim" translates to "General Inspection". A general form for inspection is available that can be adapted to specific needs. This form is suitable for various sectors, including textile, confection, fmcg, white appliances, electronics, evets, clothing, telecom, insurance, and furniture.
+
+The version number provided is 1.0.21137.112.

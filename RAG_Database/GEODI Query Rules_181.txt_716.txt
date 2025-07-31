@@ -1,0 +1,27 @@
+GEODI queries enable users to locate necessary content. The GEODI Query language is designed to be as simple as Google's, allowing users to type words and view results. Beyond basic word searches, semantic queries are available to address data more precisely when simple word searches are insufficient.
+
+GEODI supports querying by date, including not only the document date but also dates found within the content itself. GEODI recognizes dates written in various formats as the same, treating them as semantic entities. The system offers multiple methods for querying these dates.
+
+Money serves as another example of a semantic entity recognized by GEODI. The Discovery tool can identify money phrases expressed in many different ways, consolidating them based on their value and currency. This recognition is crucial because finding such phrases solely through word search would be very difficult. Recognizing money is also highly useful for tasks like auto-classification and fine-tuning permission schemas.
+
+GEODI includes additional semantic features designed to help users find any document more quickly and accurately. Detailed explanations of all the rules for these features are provided on the current page and its sub-pages. For rules that may be complex or difficult to recall, GEODI offers methods to save them as templates for future reuse.
+
+GEODI queries can be displayed in various formats, including a list, map, calendar, panel, or report, allowing users to choose the most suitable view. Users can switch between these views and refine their queries. These different views provide diverse perspectives on the data, aiding in gaining insights.
+
+GEODI's search capabilities include inspecting Discovery Results, Basic Search, and searching by content name or type. Users can also search by Dates, word proximity, and Version. The system supports searching for Duplicate or Similar Content, by Hierarchy and Source, and by Discovery. Further search options include searching On Fields or DB Columns, on Ownership or Permissions, on e-mails and domains, by Image, and by Content Language. Additionally, GEODI allows for searching and viewing E-Signed Documents, saving and watching queries, sorting results and ranking, and performing Spatial Queries.
+
+GEODI provides sample queries for users to try with their own content. These samples are intended to demonstrate the ease and effectiveness of finding content within the system.
+
+An example query for finding content is "Jan-March 2017 doc:*.PDF Georgia". If a document originated via email, the same rule applies, as both PDF and email are considered content types for GEODI. For instance, to find email content related to Georgia, the query "content:e-Mail Georgia" can be used.
+
+To find a document that was contained within a ZIP file, had a name starting with "Geological", and included the word "wall", a sample query is "parent:*.ZIP doc:Geological* Wall".
+
+During an HR process, if notes were made on resumes indicating opinions, GEODI can be used to find resumes based on these notes. For example, to find resumes that received positive notes like "let’s interview", the query "child:(.geodinote “let’s interview”)" can be used. Conversely, to find resumes marked as "not suitable", the query "child:(.geodinote “not suitable”)" is applicable.
+
+To search for "Georgia" but exclude results containing "aquarium", a sample query is "Georgia -Aqua*".
+
+GEODI allows users to search for a word and its synonyms simultaneously by defining a GEODI dictionary. For example, a single-line dictionary could make the queries "Artifical Intelligence", "AI", and "Expert System" identical in their search results.
+
+In long documents, using only words for searching can be misleading if the words are far apart, such as the first word on the first page and the second word on the last page. To prevent this, GEODI offers a proximity rule, indicated by parentheses `()`. For instance, "Education() “High School”" finds "High School" within 10 words of "education". Removing the parentheses, as in "Education “High School”", would yield a different result.
+
+GEODI supports finding words in proximity to currency expressions that fall within a specified range. An example of such a currency range query is "100..500GBP".

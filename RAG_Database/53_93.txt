@@ -1,0 +1,1 @@
+Toplu şekilde maskeleme, ara yüz içerisinden yapılabilir.

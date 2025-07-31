@@ -1,0 +1,1 @@
+Geodi uses password complexity and other policies. These policies are offered by authentication services such as LDAP.

@@ -1,0 +1,15 @@
+The provided text lists various terms related to customer and property information, including Customer, Telephone, Email, Date, and Customer Name/Surname.
+
+Property identification and location details mentioned are Immovable Owner, City, District, Sheet No, Plot No, Parcel No, Title Deed Information, and Location.
+
+Characteristics and measurements of a property are specified as Portfolio Price, Category, Gross m², Net m², Land Area, Type, Room Quantity, Kitchen, Bathroom, Toilet, Rooms, and Frontage.
+
+The text also details various property statuses and conditions, such as Ownership Status, Building Supervised, Zoning Status, Construction Year, Global Info, Is On Site?, Site Name, Independent Section Status, Building Status, Furniture Condition, Furniture Status Description, Renovation Status, Floor Condition, Pool Status, Parking Area Status, Fireplace / Barbeque, Suitable for Pet, Assets, Security Status, Landscape Status, and Warming Condition.
+
+Financial and administrative information includes Janitor, Monthly Fee Amount, Financial Condition / Credit Eligibility, Other Subjects, Contract Date, and Contract Termination Date.
+
+Terms related to meetings and consultant interactions are Customer Signature, Signature of the Consultant, Staff Personnel, Interview Type, Interview Result, Date of Meeting, and Interview Notes.
+
+A Property Management system enables users to save field work, create a customer portfolio, and list real estate records by type, region, and prices.
+
+The software version is identified as 1.0.21155.175.

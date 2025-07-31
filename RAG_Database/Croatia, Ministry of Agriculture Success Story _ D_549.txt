@@ -1,0 +1,11 @@
+The 'Croatia, Ministry of Agriculture Success Story' is dated 23/1/2020. This success story describes a solution provided to the Croatian Ministry of Agriculture by Conscius, an official solution partner.
+
+The Croatian Ministry of Agriculture was seeking a solution to identify harmful organisms in vineyards. Additionally, the Ministry aimed to utilize data from various organizations.
+
+The solution provided to the Croatian Ministry of Agriculture involved MOBIDI and GEODI. MOBIDI addressed issues such as photographing organisms in vineyards, determining their location, and identifying which specific parcels contained organisms.
+
+GEODI, as part of the solution for the Croatian Ministry of Agriculture, resolved issues related to reporting organisms. It also handled the geographical distribution of diseases and forecasting.
+
+Dece Software provides information on upcoming and recent webinars. An upcoming webinar, 'World’s First AI-LLM Powered Data Discovery and Classification with GEODI Q', is scheduled for 23/1/2025. Recent webinars include 'PCI/DSS Compliance with GEODI' on 27/8/2024, 'Life in a legal department with GEODI' on 6/8/2024, 'Semantic Discovery, Classification and Search' on 23/7/2024, 'Database Discovery' on 9/7/2024, 'How quick GEODI in 0 to Classification' on 25/6/2024, 'Adapt GEODI to your needs:DECE-Store' on 11/6/2024, 'Data Anonymization and Masking' on 4/6/2024, 'Media Archive with Face Recognition' on 27/2/2020, and 'Croatia, Ministry of Agriculture Success Story' on 23/1/2020.
+
+Dece Software offers solutions including Search, Discover, Mask, and Classify, and states 'We Protect Your Data'. The company also lists resources such as Blogs, Bulletins, Success Stories, Webinars, Support&Technical Docs, and Developer Resources. Contact information for Dece Software includes info@decesoftware.com.

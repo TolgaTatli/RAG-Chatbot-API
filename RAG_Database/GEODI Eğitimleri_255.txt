@@ -1,0 +1,11 @@
+GEODI offers many features for both users and system administrators. This page provides training content to acquire basic information. In addition to training programs, the support page contains information that can be learned independently.
+
+The available certification programs include the GEODI DSPM Training Program.
+
+User training programs offered are GEODI 101 - Basic User Training, GEODI 102 - Query Statements, GEODI 121 - Classification Tools User Training, and GEODI 131 - Discovery Panel.
+
+For installation training, participants are expected to have sufficient knowledge about Windows servers, IIS, network, and firewalls. The installation training programs include GEODI 301 - GEODI Installation and Configuration, GEODI 311 - Discovery Agent (GDE) Installation, GEODI 315 - Classification Agent Installation, and GEODI 316 - OWA e-Mail Classification Installation.
+
+System Administrator Training focuses on participants learning the management of GEODI servers. It is expected that system administrators have completed user training. Specific programs under this category are GEODI 302 - System Management, GEODI 305 - User and Authorization Management, GEODI 303 - Project Wizard, GEODI 304 - System Monitoring and Troubleshooting, and GEODI 314 - Classification.
+
+GEODI and GIS training includes GEODI 110 - Corporate and Geographical Archive with GEODI.

@@ -1,0 +1,13 @@
+AI-Based solutions are offered for Enterprise Search, Data Discovery, GIS, Archive, Mobile Team Management, and Data Protection.
+
+The GEODI Platform provides solutions for Search, Discover, Mask, and Classify. It also offers capabilities for Encrypting data. Specific applications mentioned include e-Discovery with GEODI, Enterprise Search with GEODI and Beyond, and the ability to gather CAD, GIS files, and documents under a single archive with GEODI Geo Archive.
+
+The text states, "We Protect Your Data."
+
+Available resources include Blogs, Bulletins, Success Stories, Webinars, Support&Technical Docs, Developer Resources, Technology, and Partners. Blogs are categorized by All, Discovery, Search, Classification, Masking, AI, Regulations, News, and Other.
+
+Content items include 'Boost Your GIS with Unstructured Data', categorized as 'other', published on 7/4/2023, with a 2-minute read time. 'DECE Software is in Gartner Hype Cycle Reports', categorized as 'news', was published on 27/1/2021, with a 1-minute read time. 'e-Discovery with GEODI', categorized under 'discovery' and 'AI', was published on 26/10/2017, with a 4-minute read time. 'Enterprise Search with GEODI and Beyond', categorized under 'search', 'classification', 'masking', and 'AI', was published on 19/6/2017, with a 3-minute read time. An article titled 'Gather Your CAD, GIS Files and Documents Under a Single Archive with GEODI Geo Archive', categorized under 'other' and 'search', has a 3-minute read time.
+
+Navigation options and contact information include Contact Us, Support, Live Projects, Need Analysis, Solutions, GEODI Platform, Company, Resources, Blogs, Bulletins, Success Stories, Webinars, Support&Technical Docs, Developer Resources, Technology, Partners, Links, About-Us, Blog, Integrations, Career, and Privacy Policy. The contact email provided is info@decesoftware.com.
+
+An error message stating "Oops! Something went wrong while submitting the form." is present in the text.

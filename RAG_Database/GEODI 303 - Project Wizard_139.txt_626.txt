@@ -1,0 +1,25 @@
+GEODI Project Wizard defines the interfaces users will use, the resources they will see, authorizations, default views, and many other rules.
+
+This course provides a general idea, and for detailed information, users should refer to the detailed support pages.
+
+The content of the course covers Technical, Sales, User, and General topics.
+
+The duration of the course is 45 minutes plus another 45 minutes.
+
+The scope of the course will cover topics found on the Project Wizard page.
+
+A new project begins with a template. Users can choose a blank template, but it is easier to select a template for a specific purpose, such as PCI/DSS, GDPR, or SAMA. If these templates are not visible, users should open DECE-STORE to obtain them.
+
+The second page is dedicated to data sources, allowing users to add as many as needed. Each data source can have different settings, such as enabling OCR in one or setting sampling in another.
+
+The course will cover Folder and Database sources, but not each source separately.
+
+The second page is also for defining the scope of Discovery. If a template was used, recognizers should be ready and can be added or removed.
+
+On the last page, users name the project and finalize it. Project permissions are set here, and permissions can also be configured per data source.
+
+Advanced settings are necessary to make certain reports and panels visible to specific users.
+
+Users should not hesitate to ask for support from the teams if they are unsure about a topic or unable to perform a task.
+
+Some features mentioned may not be available depending on the user's license.

@@ -1,0 +1,3 @@
+The setting to scan unknown extensions, such as text files, during discovery with the GDE agent works.
+
+To create a multilingual watermark for classification, the format `[$en:english;.ar:Arabic]` can be used for all languages. GEODI automatically selects the language based on the user's language.

@@ -1,0 +1,3 @@
+A different application can be integrated with GEODI via API. This integration allows for path-based searching.
+
+In addition to path-based searching, it is also possible to perform searches through texts within file content and through discovery results.

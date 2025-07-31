@@ -1,0 +1,1 @@
+Fotoğraf ve güvenlik kamera video kayıtlarından yüz tanıma yapılabilir. Bu işlem, ilgili lisansa dahil olduğu takdirde gerçekleştirilebilir.

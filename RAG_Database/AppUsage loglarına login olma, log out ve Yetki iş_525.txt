@@ -1,0 +1,1 @@
+Login, logout, and authorization process records can be added to AppUsage logs.

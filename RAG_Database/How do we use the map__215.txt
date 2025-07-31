@@ -1,0 +1,31 @@
+GEODI is associated with the motto Search-Discover-Classify-Mask. While data discovery is often highlighted due to regulations such as PDPL or PCI/DSS, GEODI provides capabilities beyond just regulatory data discovery, including mapping.
+
+Although some sectors might question the relevance of maps, approximately 80% of daily life is connected to location and maps, indicating that maps offer numerous benefits.
+
+GEODI automates map creation entirely and makes it cost-free, which expands the opportunities to utilize maps.
+
+Maps are clearly essential for entities such as municipalities, construction companies, architectural offices, planning units, project offices, and real estate departments, which frequently use GIS software. GEODI enhances their existing capabilities by integrating non-structural data, offering substantial advantages.
+
+In Digital Forensics, users aim to identify locations within data, such as photo origins or mentioned addresses. GEODI addresses these requirements, providing maps at no extra cost because they are automatically generated using artificial intelligence and natural language processing. These maps also enable further analyses, including relationships and heat maps.
+
+Small and Medium-sized Enterprises (SMEs) frequently encounter resource limitations in data processing, making it difficult to hire a data analyst. Maps can provide significant insights into aspects like suppliers, customers, service points, or stores.
+
+Maintaining maps or GIS systems typically involves costs and often requires qualified operators for tasks such as data entry. GEODI eliminates these costs, complementing its features like maps, search, and discovery capabilities.
+
+AnkaPedia is a live project available on the website's live projects link, which used open-source data related to Ankara. The project's map was automatically generated from various sources, including PDFs, Word documents, Excel sheets, DWG files, NCZ files, databases, videos, and social media. This map provides extensive information about the data without incurring additional costs when using GEODI.
+
+The data utilized in the AnkaPedia project could have originated from an institution's archives, invoices, contracts, projects, eBYS data, CRM, or ERP databases.
+
+The Map of World News project, found on the English website, is another example that features a heat map of around 100 news sites. This map can be queried to display information based on topics such as Covid or the Ukraine conflict.
+
+GEODI supports over 200 data sources, ensuring comprehensive coverage of digital data. It can process scanned documents using OCR, and its supported formats include databases, Word documents, Excel files, Open Office files, emails, UYAP files, videos, and images.
+
+GEODI can process various types of documents without exclusion, such as invoices, reports, proposal files, project documents, specifications, and contracts. The system also allows for the addition of new data sources not currently listed.
+
+The information displayed on a map can be customized based on the user's purpose, including parcels for municipalities, customer addresses, construction sites, locations of service providers, or city/district names from a report. Any or all of these data points can be represented on the map.
+
+To find locations related to exports, a user can type "Export" into the GEODI search box to see locations mentioned in documents containing that word. For locations directly associated with exports, using "Export()" refines the search. The results of this query can then be visualized on a Heat Map for deeper insights.
+
+Company addresses or construction site locations can be converted into a dictionary within minutes. Once this information is in a dictionary format, GEODI can map out associated documents, emails, or database records.
+
+GEODI is compatible with other GIS software, such as ArcGIS or GeoServer, and is designed to be used alongside them. It supports international standards like WMS and includes a specific widget for ArcGIS Enterprise.

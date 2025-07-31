@@ -1,0 +1,1 @@
+When a document is classified and subsequently encrypted, the preservation of its classification is entirely dependent on the specific encryption method that is employed.

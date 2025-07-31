@@ -1,0 +1,9 @@
+The explosion of digital information has created new challenges and opportunities for data discovery, requiring organizations to sift through massive amounts of data from various sources to uncover insights quickly. GEODI Q is an LLM inside the GEODI platform, added to boost AI and NLP based Data Discovery and Classification solutions.
+
+GEODI provides ready-to-use templates for regulations such as GDPR, PCI/DSS, PDPL, DPDPA, and HIPAA. Using rule and ML based techniques, GEODI achieves a processing speed of more than 1TB/day for unstructured data within the scope of these regulations.
+
+GEODI Q advances discovery and classification by offering LLM-enabled recognizers for gaining insights from data. These capabilities include employee records analysis, financial statements analysis, finding suitable CVs, classifying contracts and relating them with legal regulations, classifying CAD files, extracting metadata, and generating briefs. GEODI Q enables driving data discovery insights to another level.
+
+Topics of interest include "Enhancing DORA Compliance with GEODI: A Unified Approach to Data Security for Financial Firms" (April 12, 2024, 3 minutes), "Revolutionizing Data Discovery with GEODI Q" (November 20, 2024, 2 minutes), "Build your AI Assistant with GEODI" (November 19, 2024, 2 minutes), "Now it is time to leave manual classification and let AI do it." (November 17, 2024, 2 minutes), "How do you maintain your Data Security Posture Management, DSPM?" (October 1, 2024, 4 minutes), and "Palestine Investment Bank Manages Security Posture with GEODI" (August 28, 2024, 2 minutes).
+
+Data protection is achieved through actions such as Search, Discover, Mask, Encrypt, and Classify. Additional resources and information are available via links including About-Us, Blog, Bulletins, Webinars, Integrations, Career, and Privacy Policy. Contact can be made via info@decesoftware.com.

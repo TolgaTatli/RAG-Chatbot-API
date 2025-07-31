@@ -1,0 +1,21 @@
+A template is a concept created to set how each content will appear on the interfaces.
+
+To implement a template, a subfolder should be created in the `GUI\Custom\ES\Template` folder. This subfolder must be given the name specified for the Template, and a file named `Default.html` should be placed within it.
+
+Templates can be selected by passing `Template=` through the URL. The value transmitted via the URL will be stored in the browser.
+
+A default Template can be specified on a project basis by adding the definition `"Template":" "` under `GenericSettings` in project settings.
+
+The Template concept can be turned off by using the definition `"DisableTemplate":true`.
+
+A single mandatory Template can be defined for use in a project by the definition `"ForceTemplate":" "`. When this definition is made, all other Template determination methods are ignored.
+
+The definition `"Template":" "` can be added under `SystemJSONSettings` to specify the default Template for all projects.
+
+A value of "none" means that a Template is not selected.
+
+`Default.html` can contain `dece-template` or special methods. A Template should only change the document view and should not interfere with other fields on the pages. Colors, Theme, and Order are considered Layout topics.
+
+Html CSS can contain script definitions and can load another CSS or script.
+
+Specific `dece-template` id values and their functions that can be included in `Default.html` are: `geodi-template-default`, used to change the appearance of a single content on the DLV home screen; `geodi-template`, used to change the appearance of a single content on the screen in vertical lists; `geodi-template-hor`, used to change the appearance of a single content on the screen in horizontal lists; `geodi-container-template-default`, used to change the appearance of the Content and the entire list on the DLV main screen; `geodi-container-template`, used to change the appearance of the content and the entire list in vertical lists; and `geodi-container-template-hor`, used to change the appearance of the content and the entire list in horizontal lists.

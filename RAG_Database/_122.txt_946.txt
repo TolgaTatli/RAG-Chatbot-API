@@ -1,0 +1,1 @@
+150TB veriyi bir kaç hafta içinde keşfetmek mümkündür. Bu sürelere sunucuların kurulması ve konfigüre edilmesi aşaması dışındaki işler eklenmelidir.

@@ -1,0 +1,1 @@
+Fields defined in `meta.xml` files associated with documents are queried by being included in the full text content. No separate query method is offered for these fields.

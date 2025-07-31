@@ -1,0 +1,11 @@
+A classification project requires many issues to be resolved, including rules, labels, user/department differences, and agent deployments. GEODI classification adapts easily and quickly, and it is easy to manage.
+
+An upcoming webinar titled 'World’s First AI-LLM Powered Data Discovery and Classification with GEODI Q' is scheduled for January 23, 2025.
+
+Recent webinars include 'PCI/DSS Compliance with GEODI' on August 27, 2024, lasting 23 minutes; 'Life in a legal department with GEODI' on August 6, 2024, lasting 18 minutes; 'Semantic Discovery, Classification and Search' on July 23, 2024, lasting 30 minutes; 'Database Discovery' on July 9, 2024, lasting 30 minutes; 'How quick GEODI in 0 to Classification' on June 25, 2024, lasting 23 minutes; 'Adapt GEODI to your needs:DECE-Store' on June 11, 2024, lasting 15 minutes; and 'Data Anonymization and Masking' on June 4, 2024, lasting 30 minutes.
+
+Success stories include 'Media Archive with Face Recognition' from February 27, 2020, lasting 8 minutes, and 'Croatia, Ministry of Agriculture Success Story' from January 23, 2020, lasting 7 minutes.
+
+GEODI offers solutions for Search, Discover, Mask, Encrypt, and Classify. The company emphasizes data protection, stating, 'We Protect Your Data'.
+
+Dece Software provides the GEODI Platform, offering various services and resources. These include Contact Us, Support, Live Projects, Need Analysis, and Solutions such as Search, Discover, Mask, and Classify. Company-related information, Resources like Blogs, Bulletins, Success Stories, Webinars, Support&Technical Docs, Developer Resources, Technology, and Partners are also available. Additional links include About-Us, Blog, Integrations, Career, and Privacy Policy. The contact email is info@decesoftware.com.

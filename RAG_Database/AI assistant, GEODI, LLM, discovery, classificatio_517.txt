@@ -1,0 +1,13 @@
+GEODI is an AI-driven data discovery and analysis tool designed to handle both structured and unstructured data. It integrates AI and natural language processing (NLP) to bridge diverse data formats, allowing users to access and search a wide range of content from a single platform.
+
+Data within GEODI can be used for chat and discovery through GEODI Q, which is the Large Language Model (LLM) integrated within the GEODI system. This enables interactive engagement with the processed data.
+
+Support Q serves as an example of what GEODI Q can achieve, functioning as an AI assistant primarily for tech and salespeople. It is fed information from support sites, FAQs, and developer sites, allowing users to ask questions and receive answers instead of performing traditional searches. Support Q demonstrates a working model of a GEODI-powered AI assistant.
+
+Building an AI assistant with GEODI is presented as a straightforward process, provided the user has the necessary data. GEODI can consume data regardless of its format to create an AI assistant. When content within GEODI is updated, the corresponding AI assistant will also be updated.
+
+A GEODI-powered AI assistant can be made available to GEODI users via a dashboard or published on an Intranet or Internet. Access to the assistant can be configured to be open to any user or to require a login.
+
+GEODI AI assistants offer various possibilities, including creating assistants for technical or nontechnical issues, similar to Support Q. An internal assistant named DECE Q exists within the company, possessing specific knowledge on internal issues, and users can create similar internal assistants. Legal departments can utilize legal documents to ask questions about ongoing issues. For complex projects, a GEODI Q-powered assistant can consume data to save significant time in documentation.
+
+The AI Assistant functionality is an example of GEODI Q's capabilities. The system has integrated recognition technology with its LLM, yielding positive results.

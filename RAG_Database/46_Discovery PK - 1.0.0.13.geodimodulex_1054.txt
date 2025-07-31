@@ -1,0 +1,5 @@
+The 'Discovery PK' package, version 1.0.0.13, is designed to extend the capabilities of GEODI Discovery and Classification through country-specific semantic recognizers. This particular package is specifically for Pakistan.
+
+Installation of the 'Discovery PK' package is required after GEODI Discovery has been installed.
+
+The 'Discovery PK' package for Pakistan includes a range of specific semantic recognizers. These recognizers are the Pakistan CNIC Recognizer, IMEI Recognizer, Pakistan NICOP Recognizer, Pakistan Raast ID Recognizer, Pakistan SRTN/SST Recognizer, Pakistan NTN Recognizer, Pakistan City Recognizer, and Pakistani Rupee Recognizer.

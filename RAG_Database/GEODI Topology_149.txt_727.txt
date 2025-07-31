@@ -1,0 +1,13 @@
+The provided text outlines the basic structure of GEODI Server, including its extensions and integrations. It describes the general structure, noting that not all mentioned features may be included in a user's license.
+
+GEODI is designed to consume almost all data within a data lake, supporting over 200 data types as sources. To access these resources, GEODI requires authorized users, tokens, or database connection information, which it stores in a secured form. GEODI's capabilities include searching, discovering, analyzing, and classifying data, with additional support for OCR, face recognition, and image recognition.
+
+GEODI creates an index of the content it scans. This index is critical for GEODI and includes details such as full-text search, semantic information, and discovered information. The index must be backed up, and GEODI can operate in active/active or active/passive modes for disaster recovery. It is compatible with load balancing tools like F5, Citrix, or TR7.
+
+GEODI functions as a web-based application, accessible via the internet or intranet, and supports on-premise installation. GEODI Enterprise Search users can access the application through browsers such as Chrome, Edge, Safari, or Firefox. The majority of GEODI's management interfaces are also web-based, allowing system administrators to access them similarly. Detailed user authorization enables access restrictions based on features and resources.
+
+GEODI opens by default on port 3323. If configured to port 80, specifying the port on the client side is unnecessary. Similarly, if the SSLCertificate setting is configured, using the 443 SSL port also eliminates the need to specify the port on the client side.
+
+The GEODI Classifier comprises several optional components, including the Desktop and Office Classifier and the OWA Classifier. The Desktop and Office Classifier can be deployed using tools such as ManageEngine or SCCM.
+
+GEODI features an open API designed to extend its functionality, allow the addition of new data types, and facilitate integration with other applications.

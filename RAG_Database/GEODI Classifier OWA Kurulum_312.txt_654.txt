@@ -1,0 +1,15 @@
+GEODI Sınıflandırıcı (Classifier) consists of a set of tools for manual and automatic classification. A portion of this tool is installed as a GEODI module, while Desktop and Office add-ins require a separate client installation.
+
+The GEODI Classifier is installed only on Outlook Web App, Outlook 365, and Exchange.
+
+For OWA/Office 365 environments, separate installation methods are provided for individual users or for all users for the OWA Classifier.
+
+Regardless of the installation method, the address used to access OWA must be provided as the Web Service Address. The suffix `/ews/exchange.asmx` must be added to this address. If OWA has an SSL, GEODI must also operate with an SSL. An example address is `https://192.168.100.201/owa/ews/exchange.asmx`.
+
+For single-user OWA installation, a username and password must be provided. If the username is within a domain, it should be written as `domain@username`; otherwise, it should be written directly as the username. After entering the information, the installation for the relevant user is completed by clicking "Sunucuya Yükle" (Upload to Server).
+
+The "All Users for OWA Installation" process allows distribution of the OWA add-in to all users defined in the Microsoft 365 Admin Center. From the installation tab in GEODI Classifier settings, an XML manifest file, used during installation, is downloaded via "Manifest İndir" (Download Manifest).
+
+Add-ins can be uploaded via the Microsoft 365 Admin Center, allowing distribution to all or selected users. On the screen that opens, the downloaded XML manifest file is selected by clicking "Dosya Seç" (Choose File) and then uploaded. The Classifier OWA add-in then begins to distribute to all and selected users in the organization. This distribution process will take between 3 and 24 hours, depending on the number of users. For the add-in to function without issues, the OWA add-in must be able to access GEODI and have SSL defined.
+
+The classification add-in can now be used on Outlook, which is accessed via a browser.

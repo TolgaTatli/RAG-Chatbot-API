@@ -1,0 +1,29 @@
+GEODI is designed to be easy to use and to assist users in their daily jobs, aiming to eliminate issues with accessing information. This page provides basic usage instructions for immediate use of GEODI. Further GEODI courses are available on a dedicated page, and information on how to use GEODI, along with installation details for IT teams, will be provided.
+
+The GEODI Search Page is the most frequently used page within GEODI. This page integrates various functionalities including Search, Map, Calendar, Document View, Query Watch, Note Taking, and reporting.
+
+On the GEODI Search Page, users can type what they are looking for in a designated field, accepting words and other criteria as search inputs. Search results are displayed in a separate field, which can be scrolled using the mouse wheel. The total number of content found from the search is indicated on the top left of this field.
+
+When a user clicks on any content within the search results, a list of options appears. One option is 'Open' to view the content. The available options may vary based on the content type, and functionalities such as note taking, copying, and finding similar content are also presented. If a user clicks with the 'ctrl' key, the content will open within the current area.
+
+The Facet field is available to make queries more practical. Users can view search results in various ways, such as Discovery, Calendar, and Map views.
+
+The 'Contents' view lists files and other items from the search result, allowing users to scroll through documents with the mouse wheel. The 'Discovery' view enables navigation through content in a structure similar to Windows discovery, showing directories where content is located and allowing navigation within these directories.
+
+The 'Map' view displays locations found within the content on a map, and users can access content by clicking on the map. The 'Calendar' view is automatically generated from date information present in the content, allowing users to click on the calendar to access documents associated with a specific date. The 'Notes' panel is where users can review notes they have taken and the content on which those notes were made; different panels may be present depending on the environment.
+
+A 3-dot menu on the GEODI Search Page provides additional options such as language selection, reporting, and viewing functionalities.
+
+GEODI is capable of directly displaying a large amount of content without requiring other software. While a word document is used as an example, GEODI offers different viewers for various content types, including DWG, NCZ, Videos, and E-mails. These viewers share common features.
+
+Within the content viewer, users can view their document and scroll up or down using the mouse wheel. Moving the mouse while holding 'ctrl' will enlarge the document. Users can take notes anywhere within the document by using the right mouse button.
+
+Users can include many contents in their search criteria. When one of these contents is opened in the viewer, other related contents can be opened sequentially without needing to return to the search results.
+
+The panel on the right side of the content viewer displays information such as words/metadata, notes, copies, and versions of the content. The types of attachments shown may vary for different content types. To download any older version of a document, users can use the 'shift+download' combination, provided that backup options are enabled in the source.
+
+In a specific area of the content viewer, options are listed based on user authorization or licenses. These options include downloading content if the user has authorization, or masking content if the user possesses a masking license.
+
+Users have the ability to perform searches within the document that is currently open in the content viewer.
+
+After GEODI version 7.0.1.26858, documents viewed in the viewer can be downloaded. This download capability for backup-supported viewers is currently available for *.dwg files. To download the most recent version of a versioned document from the ES interface, the 'Shift+Download' combination can be used.

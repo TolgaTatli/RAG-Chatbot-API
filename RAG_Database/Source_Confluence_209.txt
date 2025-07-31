@@ -1,0 +1,9 @@
+Confluence/Wiki directories are indexed and discovered in the same way as Windows directories. File neglect rules are applicable to these directories.
+
+Users can explore pages within their Confluence Online permissions. This exploration requires entering a username and password.
+
+With Confluence Public, external resources can be discovered. This discovery is achieved by providing only the domain.
+
+Documents found on pages discovered using the “Include Attachments” option will be indexed. It is important to consider that this option will lead to an increase in indexing time.
+
+To discover a private address, username and password information must be utilized.

@@ -1,0 +1,3 @@
+GEODI indexleme durumunu izleyebileceğimiz bir rapor mevcuttur.
+
+GEODI'nin arama arayüzü ve diğer arayüzler pek çok rapor seçeneği sunar. Bu raporlarda, indexleme sırasında alınan hatalar, dosya sayıları ve satır sayıları bulunabilir.

@@ -1,0 +1,41 @@
+A GEODI Workspace requires a project definition for Data Extraction, Query, and Feed operations. GEODI supports creating projects to completely isolate indexes. New projects can be added to address needs such as institution-specific terms and differences in resources that will be searched.
+
+Defining multiple GEODI projects within an organization can make accessing content from various sources difficult. Preparing only one project is more effective for use, as it allows access to resources included in the project, even if they are not in your application, to the extent of your authorization.
+
+A new GEODI project can be created from the projects screen, which is located in the left menu of the interface opened using GEODI.exe.
+
+An Enumerator or Connector is used to specify the resources that GEODI will scan during project preparation. Available resource types include Folders, Web Pages, E-mail, Database, and Dropbox. By preparing and adding a Content Feed Service resource that provides access to a web service in your application, GEODI can request updated or changed data from your application at specified intervals and manage authorization based on content.
+
+Recognizers are layers that enable content recognition and can be defined during project preparation. GEODI offers many ready recognizers, including dictionaries, Turkish National ID identifier, Plot/Parcel of the land recognizer, Kilometer recognizer, and canonical expression recognizer. These recognizers allow GEODI to display data even before it is searched, and the DataExtraction API returns only the content found by the identifiers defined in the project.
+
+GEODI prefers the word "Content" over "Document" because it can scan not only text from documents but also objects provided by enumerators. Additionally, the term "document" is considered insufficient to cover items like tweets and E-mails for customers.
+
+To extract information from a text or file using GEODI, users can utilize the Geodi Data Extraction API, also known as Formatter, via web services.
+
+To query from the GEODI index, users can make use of the Geodi Query API, also known as Query, via web services.
+
+When using GEODI's Database enumerator and selecting tables for scanning during project preparation, GEODI scans the content like an Excel table and indexes known types and texts. To scan image or byte array fields, GEODI requires a filename, an image name, and a unique ID for update values, which it uses for names shown in query results. To specify the source of this information, an XML file with a specific structure must be located in the "Settings \ Reader \ DBMeta" folder within the GEODI application, as GEODI uses the metadata in this folder for any database scan.
+
+To get content indexed to GEODI from an application, users can utilize the Geodi Feed API, also known as FeedHandler, via web services.
+
+A GEODI Token contains information such as which services can be accessed, when it was issued, by which user, its validity period, and which clients are allowed. Tokens obtained from the services remain valid for up to 10 years as long as the user is active, and this method is considered more secure than distributing usernames and passwords.
+
+To obtain a GEODI Token, an authorized user with a username and password can use the interface accessible from the GEODI REST API page. If a user lacks a username and password, they should request the system administrator to acquire a Token on GEODI and either forward it to them or insert it into their application's configuration file. The system administrator can also use the interface found on the GEODI REST API page.
+
+To use GEODI APIs, it is typically sufficient for an application to store the GEODI URL, WorkspaceName, and Token information.
+
+To update content or privileges submitted via the GEODI feed service, a unique ID is required for the content. The feed service uses `ContentObject.Content.ContentId` as the content ID, which, if required, must be unique and include the application name. If `ContentId` is not provided, the `ContentURL` ID from the feed operation is used, and this `ContentURL` must remain consistent in subsequent requests to prevent GEODI from treating it as new content.
+
+When submitting content via the GEODI feed service, if known, the content date (`ContentObject.ContentDate`) and/or content hash information (`ContentObject.ForcedContentHash`) should be passed. The `ContentDate` must be linked to the transmitted content. Changing these values, even if the content itself remains unchanged during each feed, will cause GEODI to rescan the content, leading to an extra load on both systems.
+
+No special action is required when privileges for content transmitted via the GEODI feed service change; simply feeding with the same service and new authorizations is sufficient.
+
+To turn off versioning for content communicated with the GEODI feed service, it is sufficient to set `ContentObject.Mode` to `DisableVersions` (integer value 8), which will mark the old version as deleted.
+
+The up-to-date properties of objects used in GEODI feed services, such as `Geodi.Integration.ContentObject` and `Geodi.Integration.IntegrationObject`, can be accessed via specific local addresses like `http://127.0.0.1:3323/DeceSystemInfoWebHandler?op=ObjectInfo&Name=Geodi.Integration.ContentObject,Geodi.Integration`. Additionally, object documentation is available from the "Geodi ContentObject - İçerik Tanım Nesnesi#İçerikTanımNesnesi-Çokluİçerik" document.
+
+For applications developed with the .NET framework, GEODI provides API classes within the `Geodi.Integration.dll` for use with RestApi. The .NET examples found in the document pages also utilize this language. The current `dll` file is located alongside `Geodi.exe` and also next to the examples on the service detail pages.
+
+GEODI can be run as an ASP.NET application under IIS, allowing API access even if `GEODI.exe` cannot be run directly on the server. To configure this, a virtual folder must be created under IIS for GEODI, and ASP.NET 4.0 should be set to pool in integrated mode. It is noted that prepared pool scanning operations and `GEODI.exe` might require more privileges than standard IIS applications to access the same project meta location.
+
+For GEODI to run under IIS, a `.SystemSettings.json` file must be created in the same location as `Geodi.exe`. This file should contain the `AppDataFolder` setting in JSON format, specifying the path where GEODI will create projects and store metadata. To ensure compatibility with `GEODI.exe`, the folder name for `AppDataFolder` can be retrieved by typing `%appdata%` in Windows Explorer's address bar. After configuration, GEODI interfaces can be accessed via URLs like `http://[host]/[virtualfolder]/` or `http://[host]/[virtualfolder]/gui/`.

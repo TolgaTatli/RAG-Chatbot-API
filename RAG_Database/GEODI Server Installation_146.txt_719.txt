@@ -1,0 +1,15 @@
+To install GEODI, download and run the setup. The installation process will prompt for a license code. With a valid license code, the modules included in the license will be automatically installed.
+
+After GEODI is installed, its management interface can be accessed in a browser at http://127.0.0.1:3323/manager. For continuous operation, a Windows Service should be created for GEODI. If clients are running agents, the GEODI server must be accessible to them, requiring DNS and SSL configurations.
+
+Upon successful installation of GEODI, users can download templates from DECE-STORE for various needs, including GDPR and Classification. The Frequently Asked Questions page is available to provide solutions for issues encountered during installation or other processes.
+
+To update GEODI, run the "update.bat" command as an administrator from the installation directory; all necessary operations will be performed on a running system. GEODI modules are updated more frequently than the main GEODI version, and these can be updated by running "UpdateModules.bat".
+
+GEODI automatically creates and uses the %appdata% folder during installation to store workspace definitions, indexes, logs, and other data. A new folder must be set up if the install and Windows service users differ, or if there is insufficient space in the default %appdata% folders, as the service may otherwise be unable to access license and other information. GEODI must be closed during these changes. If previous %appdata% folders exist, they can be moved to the new location, and their read/write permissions should be adjusted for Windows service users to ensure license and settings remain intact.
+
+For Classification and Agent PC Discovery projects, the GEODI address must be secure and accessible to clients, and SSL definitions must be made before agent deployments. To obtain the certificate serial number for SSL configuration, open the Manage User Certificates application and retrieve it from the properties/details tab of the relevant certificate under the Personal tree; if a *pfx file is available, it must be installed first by double-clicking. In cases where certificates are managed with a load balancer, no additional definitions are required on the GEODI side. The text lists parameters such as "AppPort":443, "NoSSLPort":80, "ForceHttpsRedirect":true, and "SSLLocalCertificateSerial":"".
+
+By default, GEODI downloads its modules from DECE-STORE. If the server cannot access DECE-STORE, the update address should be changed for offline installation.
+
+To update a GEODI license, run LicenseUpdate.bat to open the dialog where new license keys can be applied. If GEODI needs to be moved to another machine, the license should be deactivated on the old machine and then reactivated on the new one. The service does not need to be stopped for these license operations.

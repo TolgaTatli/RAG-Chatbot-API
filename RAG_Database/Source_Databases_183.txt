@@ -1,0 +1,35 @@
+GEODI can evaluate databases, which are structured data. Databases and their file information, including embedded files, can be indexed, covering all tables and rows. Simple rules can be used to limit tables, rows, or fields, and to define how rows are displayed to the user.
+
+To define a database connection in GEODI, use the Project Wizard/Database connection. This involves specifying connection conditions and connection parameters, such as the connection string for read-only access to the DB. If an additional driver is required, such as ODAC for Oracle, the DB name can be found in a table. Decisions can be made regarding sampled data discovery, specifying the number of records per table, and the indexing and discovery of embedded or linked files.
+
+When using the “New Connection” option, users can choose the database and define the connection string. Views can be excluded if desired, which helps reduce duplicate data discovery and improve performance, as views often contain data already present in other tables.
+
+GEODI supports various DBMS. Some databases may require an extra driver installation, and a list is provided for reference. For OLEDB connections, it may be possible to connect to unlisted database management systems or data sources using a utility included with the GEODI installation. This utility lists registered OLEDB providers, and the required provider must be present. Experimentation with detailed parameters in GEODI connection settings might be necessary, and for unlisted sources, installing an appropriate OLEDB driver may be required, referencing the data source’s technical documentation.
+
+For ODBC sources, driver registration can be checked using the ODBC Data Source Administrator. If a source is not listed, installing the appropriate ODBC driver may be necessary, again referencing the data source’s technical documentation.
+
+Elasticsearch requires an ODBC Driver Download based on the Elasticsearch Version, and the Microsoft Visual C++ Redistributable for Visual Studio 2017 is also required. An ODBC Configuration Guide is available for setup. A sample connection string for GEODI to Elasticsearch is provided.
+
+PostgreSQL and Microsoft SQL Server do not require extra installation. Sybase requires ODBC driver installation. For Oracle (OleDB), downloads are available, and the ODAC 12.1.0.2.4 package needs to be extracted and installed via a command executed as Administrator in CMD, specifying installation components, target directory, Oracle Home name, and dependencies.
+
+DB2 requires the Oledb Driver to be installed, with a link provided for the Microsoft OLE DB Provider for DB2. Oracle BigData requires the Microsoft Hive ODBC Driver to be installed, with a download link provided. SqLite, Shape File, CSV File, KML File, SQLCE, SQL express, and Kafka do not require extra installation.
+
+For Excel and MS Access, the Access Database Engine 2010 must be installed, with a download link provided. Cassandra and MongoDB require either an OLEDB or ODBC driver, with download links provided for specific drivers.
+
+Alternative connection methods to the project wizard exist. File-based databases like SQLite, MDB, and AccDB are indexed automatically if found in a directory and have no password; DBMeta can be defined for them. Excel files must be indexed as structured content using the Project Wizard. Settings made with Project Wizard/Database can be saved in *.xDeceConnection format, which are automatically processed and offer a portable and secure way to define connections.
+
+When indexing databases, the default behavior is to crawl all tables and rows. Tables must have a primary key by default, but tables without a primary key can also be indexed. A sampling mode can be chosen to index only a selected number of rows per table. A subset of tables can be chosen, and columns can be limited by their names. SQL statements can be defined to change the content to be indexed. Embedded files and file paths are indexed with proper definitions. Row permission information can be utilized with proper definitions. Each row is considered content when searching in GEODI, and the name and appearance of a record can be defined database or table-wise.
+
+Troubleshooting for "No result from the DB sources" includes checking the connection string for correctness, testing it before saving, verifying permissions, examining index error logs via the developer report, and ensuring DBmetas are correct. Jsettings files should be syntax validated using a provided site, and the correctness of column, table, and GEODI project names in the database should be checked.
+
+If there are no DB connections but results show tables (*.geodi_table) and rows (*.geodi_rows), GEODI crawls file-based databases like SQLite or Access by name in default settings. A module from DECE-STORE can be installed to override this setting and discover rows.
+
+If embedded or linked files do not show, DB meta must be defined to do so, and the process for creating DB metas is explained.
+
+If indexing is slow, it may be because GEODI crawls all tables and rows by default. Using sampled discovery or narrowing the target can help. The database might also be serving another application. GEODI indexing speed options might be set to low and can be increased. The GEODI Server might be running on a low-capacity machine with insufficient memory or a slow disk, and system requirements should be checked.
+
+DB row versions increasing after the initial index, for tables without a primary key, can create versions that impact GEODI index size but not discovery results or reports. GEODI indexing logs errors for such tables, which can be checked in the error log. By default, GEODI requires a primary key (PK) column, and this situation occurs unless otherwise specified. Adding a PK to tables is a best practice. If a table has a PK but errors persist, the primary key column name must be recorded in GEODI by defining a DB meta.
+
+Permissions not being effective means that by default, GEODI reads all rows with the same permissions. To set row-based permissions, DB meta should be used.
+
+Regarding FAQs, permissions on rows or files can be discovered using DBmeta, which allows reading row or embedded file permissions from a database. Embedded files in tables can be indexed with simple DBmeta definitions, causing GEODI to show the row and file separately, allowing querying of the file using DB attributes. CRM applications can be opened through GEODI search by indexing the CRM database with a simple DB meta and setting a link that opens the original CRM apps, provided the CRM app has a simple URL (query string) that can be built using attributes.

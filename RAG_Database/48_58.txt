@@ -1,0 +1,1 @@
+It is possible to mask only a specific range of 48 TCKNs, making them appear as 13********* 42. This capability can be achieved by creating masking metadata, which allows similar rules to be provided using low-code capabilities.

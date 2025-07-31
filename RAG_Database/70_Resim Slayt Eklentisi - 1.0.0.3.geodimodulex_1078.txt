@@ -1,0 +1,3 @@
+The described software component is an Image Slider Extention. This extension is identified as version 1.0.0.3.
+
+The Image Slider Extention's purpose is to list sub-contents of VT records. These sub-contents, specifically those that are images, are presented in a slider format.

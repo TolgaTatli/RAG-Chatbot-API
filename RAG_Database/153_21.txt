@@ -1,0 +1,1 @@
+Sınıflandırma sonucu Metadata alanına yazılan etiketlerin silinmesi mümkündür. Bu işlem engellenebilir bir süreç değildir.

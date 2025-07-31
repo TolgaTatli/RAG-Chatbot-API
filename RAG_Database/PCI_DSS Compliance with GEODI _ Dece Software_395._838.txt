@@ -1,0 +1,9 @@
+GEODI assists with PCI/DSS compliance by utilizing its high-accuracy Data Discovery and rich reporting features. It can pinpoint compliant data sources and continuously discover and report, aiding in adherence to PCI/DSS.
+
+A list of recent webinars includes "PCI/DSS Compliance with GEODI" on August 27, 2024, lasting 23 minutes; "Life in a legal department with GEODI" on August 6, 2024, lasting 18 minutes; "Semantic Discovery, Classification and Search" on July 23, 2024, lasting 30 minutes; "Database Discovery" on July 9, 2024, lasting 30 minutes; "How quick GEODI in 0 to Classification" on June 25, 2024, lasting 23 minutes; "Adapt GEODI to your needs:DECE-Store" on June 11, 2024, lasting 15 minutes; "Data Anonymization and Masking" on June 4, 2024, lasting 30 minutes; "Media Archive with Face Recognition" on February 27, 2020, lasting 8 minutes; and "Croatia, Ministry of Agriculture Success Story" on January 23, 2020, lasting 7 minutes.
+
+An upcoming webinar is titled "World’s First AI-LLM Powered Data Discovery and Classification with GEODI Q," scheduled for January 23, 2025.
+
+GEODI offers solutions that include Search, Discover, Mask, and Classify. Additionally, its capabilities extend to Encrypting data.
+
+Dece Software is the company associated with GEODI. For contact, the email address info@decesoftware.com is provided.

@@ -1,0 +1,11 @@
+You can monitor user activities on Geodi and access their logs. GEODI supports live event monitoring, which allows it to report to your application when content is opened or reached. This reporting is achieved by GEODI calling a web address that you specify, and it includes user information.
+
+To enable this event reporting, a JSON definition file with the `.jSettings` extension must be placed into the `GEODI/Settings/Events` folder. Only a system administrator who can access this address can add this definition. The `GEODI/Settings/Events` folder contains sample contents.
+
+An example request for event reporting follows the format `[ServiceURL]?m=FireEvent&user={username}`. Within the `ServiceURL` context, parameters such as `{user}`, `{username}`, `{wsName}`, `{data}`, and `{event}` can be utilized. Even if the `{user}` or `{username}` parameters are not explicitly used, the `request-user` and `request-username` information is passed within the HTTP Header content. The `HttpMethod` for these requests is `GET`.
+
+Expected errors that may occur during event reporting include `401 Unauthorized access / Access denied`, `403 Forbidden`, and `511 Network Authentication Required`.
+
+An example GEODI settings file includes the following properties: `DisplayName` (e.g., "Sample Event Handler"), `__type` (e.g., "Factory.ActionFactory:UrlCallerEventHandler"), `ServiceURL` (e.g., "http(s)://myhost/MyEventHandlerService.ashx?contentid={content}&event={event}"), `GEODIRequestHeader` (e.g., "GEODI_Request"), `AllowCancel` (e.g., `false`), `EventTargets` (e.g., `["ContentViewer"]`), and `ActionTargets` (e.g., `"*"`).
+
+User activities are stored in CSV format files under the path `%appdata%\Dece\Logs\GEODI\AppUsage`. This logging occurs unless it has been specifically turned off.

@@ -1,0 +1,11 @@
+GEODI Çalışma Alanı ve diğer hassas veri ayarları, seçilen güvenlik seviyesine bağlı olarak şifrelenir. Kullanıcılar "her şey görünür" ve "sadece bir makinede geçerli ayarlar" seçenekleri arasında tercih yapabilir. Örneğin, bir Veritabanı bağlantı dizesi veya OneDrive için kimlik bilgileri güvende tutulur.
+
+Varsayılan güvenlik ayarı, dosyaların yalnızca sunucuda çalışmasıdır.
+
+LDAP etkinleştirilirse, GEODI bir kullanıcıyla ilgili hassas bilgileri depolamaz. GEODI yetkilendirme kullanılıyorsa, hassas bilgiler şifrelenmiş olarak saklanır.
+
+geodiadmin kullanıcısı için varsayılan bir şifre belirlenmiştir ve ilk kullanımda değiştirilmelidir. geodiadmin kullanıcısının rutin olarak hiç kullanılmaması veya tek bir kullanıcı tarafından kullanılması önerilir. Diğer yöneticiler için gerekli izinleri oluşturmak mümkündür.
+
+GEODI, sorguları ve diğer aksiyonları loglar. Bu loglar genellikle CSV formatındadır ve pek çok SIEM aracı ile izlenebilir veya analiz edilebilir.
+
+GEODI, sızma risklerine karşı sürekli olarak test edilmektedir. Savunma Sanayi, Emniyet ve Finans sektörlerindeki çok sayıda kullanıcı, rutin olarak kendi sızma testlerini yapmaktadır.

@@ -1,0 +1,23 @@
+Firewall and antivirus security rules can impact GEODI operations because GEODI handles big data. These rules may slow down or completely prevent communication during operations. To resolve this, relevant GEODI tools should be excluded from these security rules, with assistance from the DECE technical team.
+
+GEODI performs an index repair after a shutdown and reboot, which is normal behavior. Unintentional shutdowns can result from power outages, system hardware problems, or deliberate application shutdowns. Following such an event, the index undergoes a health check at the next startup to identify and fix any damage. To accelerate this process, users can back up the index and recover from the backup during startup. This recovery method does not lead to irreversible data loss, and subsequent indexing refreshes the latest additions for changed data.
+
+GEODI is designed to optimize server resource usage, dynamically utilizing server memory and CPU. It adjusts the number of concurrent tasks, increasing them for simple files and decreasing them for heavy files to ensure efficient processing. If indexing is too slow, potential causes include low memory or memory consumption by other server processes, high CPU usage from intensive OCR, slow network connections to the fileserver, the presence of numerous logs, CSV, or large Excel files, or network issues with database connectivity or congestion. Additionally, the GEODI indexing speed displayed in the Project Wizard might be at its lowest setting.
+
+Periodic backup of the GEODI index and the creation of an active/passive Disaster Recovery Management (DRM) environment are described on a relevant page. Performing index backups helps to speed up system startup and activation in the event of potential interruptions.
+
+To restore an index backup, the project index backup directory can be specified in the Advanced settings on the last page of the GEODI Project Wizard. This allows the GEODI index to be utilized from this directory during potential system outages or interruptions. Further details for backup procedures are available on a dedicated page.
+
+GEODI processes password-protected files by indexing only their names. These protected files can be listed using the queries "status:GEODICryptedContent" or "status:GEODICryptedContentPart". Files that contain errors can be identified and queried using “status:HasScanError”.
+
+Deleted files may still appear in GEODI search results, which is an intentional design behavior. To remove these files from the GEODI index, users must delete them through the Project Management interface.
+
+The "System.io Path too Long Exception" error occurs when a directory path exceeds 260 characters, which is the maximum length Windows can access. To resolve this error, the path should be edited appropriately, for example, by mapping it.
+
+GEODI logs are stored in the appdata/dece/logs directory. These logs are in CEF format, which allows them to be processed by SIEM tools. The appdata/dece/logs directory specifically contains the logs necessary for SIEM integration.
+
+If email notifications are not forwarded when a friend is mentioned in notes, which should trigger a tracking query to be sent to email, there might be an issue with the server settings. These settings can be accessed via the GEODI Management Panel under settings. If the problem affects multiple users, it is recommended to check Spam folders or mail rules.
+
+GEODI checks for updates upon startup and can proceed with an update if confirmed. During an update, the index structure may be converted to align with new features introduced in the updated version, a process indicated by a warning. It is recommended to back up the old index before initiating the update, and GEODI must be turned off while the update is in progress.
+
+Recent GEODI Setup releases include version 8.0.140 on November 25, 2024, version 8.0.139 on November 05, 2024, version 8.0.137 on October 17, 2024, and version 8.0.136 on September 16, 2024.

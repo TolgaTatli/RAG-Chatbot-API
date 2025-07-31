@@ -1,0 +1,1 @@
+It is possible to query machines that originate from 12 GDE and contain personal data.

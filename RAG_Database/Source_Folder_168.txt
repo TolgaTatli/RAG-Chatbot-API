@@ -1,0 +1,27 @@
+This source connects local folders or network shares for indexing and discovery. If sharing is not preferred or possible, the GDE agent can be used for indexing on Windows, MacOS, or Linux clients.
+
+For discovering many computers, the GDE agent, available for Windows, MacOS, or Linux clients, may be utilized.
+
+To begin, the folder source should be selected in the project wizard. Available options, such as OCR or FacePro, may vary based on the user's license. The selected folder and all its subfolders will be indexed, though certain types like EXE and DLL are excluded by default; this exclusion list can be modified. For most file and content types listed on the "Supported Formats" page, the file content will be indexed, while for unknown types, only the file name will be indexed. Sampled discovery is also possible.
+
+For connection requirements, a service user is necessary for the GEODI Windows Service. Credentials, including a username and password, should be provided to access each folder or share if the service user lacks direct access.
+
+GEODI supports indexing various content types, including Word, Excel, PDF, text, JPEG, TIFF, video, file databases like SQLite and Access, and compressed files (ZIP, RAR, 7ZIP) and their content. For unrecognized file types, only the file name is indexed. Similarly, for password-protected or corrupted files, only the name is indexed, with '!' appended to the name. Specific file types like *.xDeceConnection files, which are connection files for any database created by GEODI, and *.meta.xml files, which serve as a structure for defining additional metadata for any file, are also handled.
+
+New or changed content may be indexed periodically or manually. When exhaustive indexing is not required, sampling is possible. A decision can be made to crawl all content or a sampled subset, which also relates to the scope of discovery.
+
+Regarding permissions, the GEODI Service user must possess at least read-only access to the folder tree. GEODI users' permissions can be defined per source, or if LDAP is enabled, LDAP permissions per user are preserved for synchronization. If options like Drag & Drop are selected, write permissions may also be required for defined directories and subdirectories. If a different username is needed for a file server or sharing, it can be defined within GEODI or by using a command like 'net use ..'.
+
+When indexing of changing content is active on a project basis, it applies to all resources. Users can define specific periods for automatic scanning on a resource basis if desired. Files added to a folder will be included, and changed files will be versioned. Deleted files will continue to exist in the index, and to remove them, a system administrator must execute the "index repair --> delete deleted items" operation.
+
+The selected dictionary entries for the status dictionary appear in the "note-taking" interface, facilitating easier and more accurate labeling. An example status dictionary provided with GEODI can be used for HR processes.
+
+The backup option is valid for all resources. GEODI indexes content and backs it up to a specified directory. Files deleted after indexing are included in the backup and remain accessible via GEODI. With backup, files can be opened, viewed, or downloaded not only for their latest version but for all versions. A CAD & GIS Viewer can visually compare CAD files.
+
+For troubleshooting, long file paths in network directories are a known issue with the Windows operating system. A possible solution is to shorten the folder path using the "subst" or "net use" commands. If LDAP permissions change after indexing, the system administrator needs to execute the "index repair --> update permissions" operation.
+
+By default, GEODI excludes certain file types from indexing, such as EXE, DLL, and system files. These definitions can be expanded or collapsed. The definitions located in the Settings/IgnoreFileTypes directory under AppData or app will be used, and multiple files can exist there, allowing settings to be modular. Examples of ignored files include ~$*, $* BOOTMGR, BOOTNXT, *.$NCZ, *.$KTB, *.TMP, *.SW, *.CSS, and *.EXE. This setting applies regardless of the file source.
+
+For text files without a TXT extension, such as XML, BAT, or LOG files, which have TEXT encoding but different extensions, these extensions can be added to Settings/Reader/TextFileSettings. GEODI will then index and view them as TEXT files.
+
+A read limit can be set, with 104857600 (100Mb) as a default maximum size, or 0 for no limit.

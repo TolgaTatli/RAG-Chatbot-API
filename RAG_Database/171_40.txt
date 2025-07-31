@@ -1,0 +1,5 @@
+GEODI default sınıf seviyesi, otomatik sınıflandırma kurallarının eşleşmediği zaman verilmesi gereken sınıf olarak belirlenmektedir.
+
+Manuel sınıflama, temel mantığı ve çalışma biçimi gereği kullanıcıya sınıf seçtirme ve doküman sınıfını dokümanın sahibinin belirlemesi üzerine çalışan bir uygulamadır. Bu sebeple, ilk aşamada dokümana belli bir sınıf verilmemektedir.
+
+Projenin ilerleyen aşamalarında Otomatik Sınıflama bir seçenek olarak getirildiğinde, default öneri ve sınıf belirlenebilir. Ayrıca, GEODI’nin sınıfı otomatik belirlediği senaryoda bir politikaya takılmaması durumunda en düşük seçeceği sınıf belirtilebilir.

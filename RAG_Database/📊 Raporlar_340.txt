@@ -1,0 +1,19 @@
+GEODI Discovery provides information about discovery results through four powerful reports. Members of the "System Administrators" group can access these reports.
+
+The "Discovery Summary" report summarizes the discovery results for both structured and unstructured data. It provides summary information such as sensitive data, findings, and table/column names. The Discovery Summary includes many sub-reports and is available in PDF format.
+
+The "Content List" report presents each row as a content/file and its risk value. Risks are calculated using risk scores assigned to the source and findings.
+
+The Content List covers all types of content, including files, database rows, emails, and files fed by GDE. Content types can be limited using queries.
+
+A risk score between 0 and 100 must be assigned for each source. Sources without an assigned risk score are assumed to contain no risk.
+
+The risk score of a content/file is calculated using the source's risk score and the findings. Each finding has a risk score. Personal Data (PII) and Credit Card Data (PCI) carry high risk, while a city name has a low risk score.
+
+GEODI Discovery provides information about discovery results through four powerful reports. Members of the "System Administrators" group can access these reports.
+
+The "Content Finding" report details the number and type of findings discovered for each document. It provides clear information about whether a content is compliant or non-compliant.
+
+The "Content Detail" report is the most detailed report. It generates a CSV report where each row represents a discovery result. Each row includes the source, content identifier, version, and discovery results (such as Name, IBAN, or Money). This is the most detailed report available about content. For example, if a file/content contains 100 credit cards and 100 identity details, there will be 200 rows.
+
+It is recommended to narrow down the target content with a query beforehand.

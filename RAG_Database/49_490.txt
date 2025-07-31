@@ -1,0 +1,1 @@
+Toplu Etiketleme/Sınıflama (Bulk Tagging/Classification) yapılabilir.

@@ -1,0 +1,21 @@
+The solution offers AI-based Enterprise Search, Data Discovery, Data Classification, GIS, Data Masking, and Insight capabilities.
+
+Organizations aim to "Go Digital" to become more agile, make faster decisions, and identify risks earlier.
+
+Enterprise Search (ES) is presented as the biggest step in Digital Transformation. ES enables an organization to directly utilize existing structured and unstructured data. Using unstructured data is a good starting point because over 90% of today's data is unstructured, allowing software usage to begin in hours.
+
+Unstructured data includes mails, reports, invoices, CVs, social media, CAD files, and photographs. Organizations typically spend valuable resources transforming this data into tabular formats. Enterprise Search (ES) saves organizations from most of the burden associated with this data transformation.
+
+A key advantage of Enterprise Search (ES) is its consolidated search capability. Users can simultaneously search files, CRM, Social Media, e-mails, and multiple databases. ES connects both data and people, leading to faster decision-making, quicker adaptation for newcomers, and a stronger organizational memory.
+
+Data is considered an important asset that requires protection. Enterprise Search (ES) covers all data assets, making it a crucial step in data protection. For compliance with regulations or to gain more insight into data assets, additional features like data discovery, data classification, data masking, and DLP integration are available on top of ES.
+
+GEODI Enterprise Search is stated to make an organization "breathe."
+
+Users are invited to book a demo or Proof of Concept (PoC).
+
+Topics of interest include "Enhancing DORA Compliance with GEODI: A Unified Approach to Data Security for Financial Firms," "Revolutionizing Data Discovery with GEODI Q," "Build your AI Assistant with GEODI," "Now it is time to leave manual classification and let AI do it," "How do you maintain your Data Security Posture Management, DSPM?," and "Palestine Investment Bank Manages Security Posture with GEODI."
+
+The core capabilities include Search, Discover, Mask, Encrypt, and Classify, with a statement that "We Protect Your Data."
+
+Contact information is provided as info@decesoftware.com. Solutions offered include Search, Discover, Mask, Classify, and GEODI. Other available links and resources include About-Us, Blog, Bulletins, Webinars, Integrations, Career, Privacy Policy, Contact, Support, Live Projects, Need Analysis, GEODI Platform, Company, Resources, Success Stories, Support&Technical Docs, Developer Resources, Technology, and Partners.

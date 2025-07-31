@@ -1,0 +1,7 @@
+The GDE agent allows for indexing and discovering many PCs without defining each.
+
+The GDE runs on Windows, Linux, or MacOS.
+
+The method described on the GEODI Desktop Explorer(GDE) Installation page should be used to distribute the GDE agent to PCs. The GEODI Desktop Explorer(GDE) Installation page also has the configuration steps to follow, including conditions for connection.
+
+With the GDE, users can define which local folders will be included. For search purposes, each user can search general data as well as data on their own PC. Indexed data can optionally be backed up to a central location.

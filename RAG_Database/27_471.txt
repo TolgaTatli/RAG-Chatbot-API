@@ -1,0 +1,9 @@
+The licensing model is based on a rental system, available for durations of 1 year and 3 years.
+
+The scope of the license is determined and shaped according to the specific details of the project.
+
+Geodi is a platform that consists of various capabilities added to it.
+
+Based on specific needs, the scope can be considered to include a combination of Discovery, Classification, and Masking.
+
+End-users are also provided with the option to utilize standalone Discovery or standalone Classification capabilities.

@@ -1,0 +1,1 @@
+Amazon S3 storage can be mapped as local folders through the use of 3rd party software. WinFSP and RClone are examples of software that can be used for this purpose, allowing the mapped drive to then be connected with · Source:Folder.

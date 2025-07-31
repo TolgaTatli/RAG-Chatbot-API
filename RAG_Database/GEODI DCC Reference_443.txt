@@ -1,0 +1,19 @@
+GEODI utilizes a command language stored in *.DCC files. These DCC commands can be used to initiate or conclude a discovery process, or to start a repair, among other functions. DCC files can be executed by double-clicking them or by integrating them into GEODI Workflows.
+
+Links are provided to list DCC commands. One link lists the available DCC commands, requiring the user to replace "GEODI URL" with their specific GEODI Server. Another link lists all DCC commands present in the user's environment, also requiring a change to the GEODI URL. The specific URL provided is https://servis2.dece.com.tr//GUI/DeceSystemInfoWebHandler?op=ObjectInfo&Name=GEODI.TestHelper.DCCCommandExecuter, GEODI.
+
+Discovery processes can be paused and continued for all WorkSpaces or for specific ones. The "d" object, which is of the DCCCommandExecuter type, facilitates this control. Examples of commands include d.PauseAllWorkspace(), d.ContinueAllWorkspace(), d.PauseWorkspace(" "), and d.ContinueWorkspace(" ").
+
+Other objects can also be utilized within GEODI. For instance, the context provided by the "c" object offers numerous features.
+
+Any exception encountered during DCC execution will prevent the remaining commands from running. To handle exceptions, the TryRunLine command should be used, as demonstrated by d.TryRunLine(d.PauseAllWorkspace()).
+
+C# code can be incorporated at any point within DCC. An example of C# usage is d.ShowMessage(d.GetTotalRAM().ToString()).
+
+For implementing loops or more complicated programming constructs, the code should begin with a forward slash ("/"). An example of a loop is /for (int i = 0; i < 5; i++) { d.ShowMessage(i.ToString()) }.
+
+Variables can be set and reused within DCC using commands such as d.SetVariable(..) and d.GetVariable(..). An example of setting and using a variable is d.SetVariable("TOKEN";@"abc......") followed by d.CallService(string.Concat(".... ",d.GetVariable("TOKEN"),"...").
+
+DCC files can be executed within a batch file, and conversely, a BAT file can be run from within a DCC file. This interaction is shown through examples like "some batch commands .. start a.dcc .." and ".. d.ShellExecute(...) ..".
+
+If a DCC file contains a syntax error or terminates with an error, a text file named "-error.txt" is created. Users are advised to always check this error file.

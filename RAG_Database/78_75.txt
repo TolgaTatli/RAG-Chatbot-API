@@ -1,0 +1,1 @@
+EML files within GEODI can be scanned together with their attachments. This functionality is confirmed to be operational.

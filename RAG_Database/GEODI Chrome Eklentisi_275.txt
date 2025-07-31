@@ -1,0 +1,5 @@
+The GEODI Chrome extension allows users to search selected text within the browser in any desired GEODI instance. This functionality simplifies finding information by eliminating the need to switch between applications.
+
+For instance, users can search text from software like Office 365 or Google Mail, accessed via the browser, within their own GEODI. The action required for this is to "Right-Click, Select and search". This same operation is applicable for any web-based software or for searching information from news sites within the user's own environment.
+
+The GEODI Chrome extension can be installed from the top-right menu of the GEODI search interface.

@@ -1,0 +1,3 @@
+Classification is not possible in SharePoint On-prem environments.
+
+In these environments, classification can only be performed if files are mapped to a directory. An example of a tool for this mapping is RCLONE.

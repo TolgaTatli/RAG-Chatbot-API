@@ -1,0 +1,21 @@
+Vehicle information includes details such as Worksite, Plate, Vehicle Type, Control Date, and Description.
+
+Inspection-related vehicle information includes the Amount Sent for Inspection, Inspection Fee Submitted Date, Inspection Date, Next Year Inspection Date, and Number of Inspection Rights.
+
+Maintenance details for vehicles cover Maintenance Performed km/h, Date of Maintenance, Next Maintenance km/h, and Next Maintenance Date. Specific components for maintenance include Transmission Oil, Engine Oil, Differential Oil, Hydraulic Oil, Grease Lubrication, Antifriz, Filter Bleed, Fuel Filter, Oil Filter, Transmission Filter, and Hydraulic Filter.
+
+Accident information for vehicles includes Accident Type, Driver / Operator Name, Accident Date, Accident Detection Record Type, Accident Detection Report, Defect Condition, Vehicle Repair Location, and Vehicle Repair Company Information. Financial aspects of accidents include Damage Cost, whether it was Paid from Traffic Insurance and the Amount Paid From Traffic Insurance, whether it was Paid By Center and the Amount Paid By Center, whether it was Paid from Insurance and the Amount Paid From Insurance, whether it was Paid by Person and the Amount Paid by Person, and whether it was Paid By Staff and the Amount Paid By Personnel. It also includes the Damage Amount Transferred From Insurance to Center and Payment / Insurance Company Description.
+
+Further accident-related details include Defense of Personnel Received, whether Accident Photos Added, whether Accident Detection Record Added, Center Description, Recede, Price of Recede, Recede Description, whether Given to Law, Date Given to Law, Legal Department Approval, Legal Statement, and whether the File Closed.
+
+Tire status information includes Tire Condition, Tire Brand, Number of Tires Changed, Tire Position, Tire Serial Number, and Installation Date. Specific tire positions mentioned are Front Right, Front Left, Front Right-2 (For Centipede Tools), Front Left-2 (For Centipede Tools), Rear Right, Rear Left, Middle Right (Inner), Middle Right (Outer), Center Left (Inner), and Center Left (Outer).
+
+Worksite Notes are recorded. The area for Central Accounting will be filled with details such as Bill No, Invoice Date, Company Name, Company Province, and Central Accounting Notes.
+
+Vehicle revision and repair information includes the Revised Workshop, Select Revised Location, Revised Type, Date Of Entry, The Master Who Revised, Ida Registration, Ida Registration Information, Vehicle/Part Location Information, Operation Status (Engine Revised), Reconditioning, Rectifying Company, Revised Company, Transaction Status, Workshop Notes, Vehicle Failure Cause, Vehicle Fault Description, Release date, and Worksite Confirmation.
+
+Detailed vehicle information includes Chassis No and Engine No. Policy details include Policy Type, Real Estate Adress, UAVT Address Code, Policyholder, Policy Holder Information, Policy No, Policy Issuing Company, Policy Issuing Date, Policy Start Date, Policy Expiry Date, Policy Amount, Policy Status, Damage Record, Payment Method to Insurance Company, Bank information, Collection Method, and Commission Amount.
+
+Information for the Insured/Victim includes Name-Surname, Identification Number, Date of Birth, Telephone, Adress, and E-Mail. Additional damage details include Policy Number, Place of Damage, Damage Date, and Description.
+
+The "Fleet Management" system is designed for managing a vehicle fleet. It allows for recording and reporting various operations, including vehicle maintenance and revision processes, mileage controls, inspection tracking, fleet accidents, tire change operations, and insurance operations.

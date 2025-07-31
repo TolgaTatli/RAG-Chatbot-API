@@ -1,0 +1,1 @@
+Classification rules for information found by a recognizer in 50 documents cannot be written based on the number of times the information appears within the document.

@@ -1,0 +1,1 @@
+GEODI supports all email servers that provide IMAP or POP3 functionality. This support extends beyond the services explicitly listed in the E-Posta source.

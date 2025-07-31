@@ -1,0 +1,11 @@
+Dece Software offers solutions including Data Anonymization and Masking. The company's offerings and resources encompass Contact Us, Support, Live Projects, Need Analysis, Solutions, Search, Discover, Mask, Classify, GEODI Platform, Company, Resources, Blogs, Bulletins, Success Stories, Webinars, Support&Technical Docs, Developer Resources, Technology, and Partners.
+
+Data anonymization and masking is presented as a solution to the challenge of sharing information, which is encouraged by digital transformation, while simultaneously being restricted by regulations such as GDPR, PCI/DSS, or HIPAA. A webinar is planned to discuss the details of this solution.
+
+An upcoming webinar is scheduled for January 23, 2025, titled "World’s First AI-LLM Powered Data Discovery and Classification with GEODI Q."
+
+Recent webinars include "PCI/DSS Compliance with GEODI" on August 27, 2024, lasting 23 minutes; "Life in a legal department with GEODI" on August 6, 2024, lasting 18 minutes; "Semantic Discovery, Classification and Search" on July 23, 2024, lasting 30 minutes; "Database Discovery" on July 9, 2024, lasting 30 minutes; and "How quick GEODI in 0 to Classification" on June 25, 2024, lasting 23 minutes.
+
+Additional recent webinars include "Adapt GEODI to your needs:DECE-Store" on June 11, 2024, lasting 15 minutes; "Data Anonymization and Masking" on June 4, 2024, lasting 30 minutes; "Media Archive with Face Recognition" on February 27, 2020, lasting 8 minutes; and "Croatia, Ministry of Agriculture Success Story" on January 23, 2020, lasting 7 minutes.
+
+Dece Software states, "We Protect Your Data," and offers services such as Search, Discover, Mask, Encrypt, and Classify. The company provides various links including About-Us, Blog, Bulletins, Webinars, Integrations, Career, Privacy Policy, and Contact, with the contact email being info@decesoftware.com. Solutions offered by Dece Software include Search, Discover, Mask, Classify, and GEODI.

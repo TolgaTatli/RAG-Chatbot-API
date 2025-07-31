@@ -1,0 +1,3 @@
+Regarding the question of whether documents inside a compressed file are indexed when compressed content is signed with GEODI, it is stated that there is no connection between signing and indexing. This means that the act of signing compressed content does not establish a link to the indexing of documents within that compressed file.
+
+There is no standard available for the signing of compressed files. However, GEODI is capable of opening archives, such as those in ZIP format or other formats, and subsequently indexing the files that are contained within these archives.

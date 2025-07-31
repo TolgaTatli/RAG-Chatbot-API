@@ -1,0 +1,7 @@
+GEODI cannot perform destruction or quarantine actions on emails discovered from an Exchange Server.
+
+It is possible to discover 50TB of data in 2 months or even less time.
+
+Discovery in the product can be done in several stages. Using a method called sampled discovery, it is possible to discover 50TB of data from a database or file server in less than 1 week. Reports provided at the end of this period will reveal risky sources containing sensitive data and facilitate progress on authorization and other matters.
+
+Sampled discovery is generally sufficient for databases. For a comprehensive discovery of file servers and other sources, GEODI processes data at an average speed of 0.5 to 1+ TB per day, completing 50TB of data within 50-100 days. This duration can be shortened by installing additional GEODI servers.

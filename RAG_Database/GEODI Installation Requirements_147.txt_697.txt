@@ -1,0 +1,19 @@
+GEODI is a web application that users access through an internet browser such as Chrome, Firefox, or Edge. The GEODI Server operates on your servers, ensuring that data remains within your infrastructure.
+
+The basic requirements for GEODI Server installation include 16 or more Cores, 32GB or more Memory, and 500GB or more Disk space. The server must run Windows 8 or above and have .NET Framework 4.0 installed. Additional power is beneficial for extensive OCR requirements. GEODI can be deployed on physical, virtual, or cloud servers, including platforms like Azure and Amazon. For FacePro or ImagePro functionalities, CUDA-supported NVIDIA GPU hardware is a specific requirement.
+
+Authorized users and their credentials are necessary for GEODI. For Windows Service Installation, a user with read-only access rights is required for Folder Data sources or File servers. File servers can be indexed using a GDE agent as a Windows service, and each server might need a distinct user. Credentials for databases, e-mails, and other data sources should be prepared before installation, and GEODI stores this information in an encrypted format.
+
+GEODI requires storage for its Index and, depending on user preferences, for other purposes.
+
+Internet access for GEODI is optional, as it can be configured for offline and on-premise operation. However, certain addresses facilitate management and updates: `service.decesoftware.com` and `servis.dece.com.tr` are used to access DECE-STORE for automatic updates of modules and configuration materials. While offline updates are possible, they require manual intervention. Additionally, `documents.decesoftware.com` and its sub-links are used for GEODI and Agent setup, as well as automatic updates for new versions.
+
+GEODI requires an SSL-certified address and the default port 3323 to be open, though this port is subject to change. Depending on their location, clients, including users and agents, may access the GEODI address either from the internet or not. The GEODI Mobile app, available for download from the AppStore or Google Play, necessitates internet access to connect with GEODI.
+
+GEODI supports many data adapters, with a dedicated page explaining how to connect each data source. While data sources can be added or deleted at any time, it is recommended to determine them and have access credentials ready before installation. For data discovery, defining the discovery scope is crucial, as GEODI offers hundreds of recognizers and tools for compliance standards like GDPR, PCI/DSS, HIPAA, Finance, country-specific, or custom discovery.
+
+Depending on the configuration, some agents may need to be installed for GEODI. It is recommended to use tools such as ManageEngine or SCCM for the installation, updating, and removal of these agents.
+
+The GEODI Desktop Explorer (GDE) functions as a PC/FileServer crawling agent, available in different packages for Windows, Linux, and Mac computers. GDE can operate either in the login user space or as a service. If a user needs to open or view a file from a PC, port 1982, or another chosen port, must be open on the client machines.
+
+The GEODI Classifier family provides classification agents for both Desktop and Microsoft Office environments. The Office Classifier agent is compatible with Microsoft Office Word, Excel, PowerPoint, and Outlook, while the Desktop Classifier agent works with Windows Explorer. All these agents are included in a single package. Microsoft Office Classifier compatibility extends to MS Word, Excel, PowerPoint, and Outlook versions 2007 and above. The OWA Classifier is compatible with MS Exchange Server 2013 and above, as well as Microsoft Office 365.

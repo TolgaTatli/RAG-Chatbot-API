@@ -1,0 +1,15 @@
+This training aims to cover system monitoring and troubleshooting potential issues. Knowledge of GEODI installation and system management is required for this training.
+
+The content of this training is technical. The duration of the training is 45 minutes plus an additional 45 minutes. There are prerequisite trainings required.
+
+The scope of the training includes the indexing interface, interpretation of numbers, stopping and restarting indexing, and interpreting indexing errors. Specific indexing errors covered are encrypted or faulty files, long file names, inaccessible sources, and unsupported content types.
+
+The training also covers obtaining and examining logs, specifically usage logs and classification logs.
+
+Topics within the training scope include recovering the index during interruptions and index backup.
+
+Performance topics covered in the training include scanning speed, Optical Character Recognition (OCR), and the deletion of deleted items.
+
+The training addresses authorization topics, updating GEODI, updating the index after an update when necessary, and updating modules. It also covers email notifications, including issues where emails are not received.
+
+The trainings aim to provide a general idea, and it is necessary to reinforce what is learned by practicing. If there are topics one is unsure about or cannot perform, support should be sought from the teams. Some features mentioned within the scope of the training may not be included in the user's license. Supporting materials include video recordings, a date, and a link.

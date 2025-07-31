@@ -1,0 +1,3 @@
+It is possible to hide the "Tarayıcıda Aç" (Open in Browser) button on the 184 İçerik Görüntüleyiciler (Content Viewers) Page.
+
+A plugin developed for this purpose is available in DECE-STORE, and it can be installed.

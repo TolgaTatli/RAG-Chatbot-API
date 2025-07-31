@@ -1,0 +1,1 @@
+Geodi, sıralama ve ilişki skoru hesaplaması için farklı yöntemler kullanır. OrderBy:name ve OrderBy:date gibi seçeneklerin detayları GEODI Sorguları sayfasında bulunabilir.

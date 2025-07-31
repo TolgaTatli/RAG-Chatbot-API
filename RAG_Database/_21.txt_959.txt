@@ -1,0 +1,3 @@
+Authenticator interfaces can be developed for OIDC or SAML to configure user management for a corporate installation.
+
+Tags written to the Metadata field as a result of classification can be deleted. This operation is not preventable.

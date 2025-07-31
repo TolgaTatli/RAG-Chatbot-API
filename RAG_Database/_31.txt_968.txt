@@ -1,0 +1,1 @@
+Within "Kaynak Bazlı Yetkiler" (Source-Based Authorities), the "Görüntüleyebilir/İndirebilir" (View/Download) authority cannot be separated. This is because these two authorities are effectively the same.

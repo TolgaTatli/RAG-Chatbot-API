@@ -1,0 +1,7 @@
+GDE is capable of operating with .Net 6 or .Net 7.
+
+DSPM Erişim Yönetimi is identified as DSPM Access Management.
+
+This module is a part of DSPM solutions and provides the tools required for reporting and modifying permissions. Permissions are discovered on local or remote PCs and can be changed for selected content as a part of data remediation.
+
+The version number is 1.0.0.0.

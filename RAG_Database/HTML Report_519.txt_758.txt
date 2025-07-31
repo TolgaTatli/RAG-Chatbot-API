@@ -1,0 +1,7 @@
+If no data is found in the Repeater tag using panel objects known by Repeater, special messages can be given. This functionality is relevant for 'MyReport.html' within 'Your documents' and can result in messages such as 'No content found.'
+
+The use of nested control is a feature applicable to 'MyReport.html' within 'Your documents'. This feature is associated with 'Similar Documents'.
+
+All dcc elements possess a macro visible "visible" feature, which allows for the definition of rules in the representation. Elements that do not adhere to these rules are not passed to the client, unlike when processing rules on Javascript, thereby avoiding possible deficits. This "Control visible condition" feature is relevant for 'MyReport.html' within 'Your Documents'.
+
+A project can be edited. However, the content of this project has a crawl error, specifically indicated as '[=d.OutputGeodiContent.ScanError]'.

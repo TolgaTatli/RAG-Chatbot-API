@@ -1,0 +1,5 @@
+Vertical placement of watermarks in classification settings is not currently supported. This feature is planned and is on the roadmap.
+
+A mechanism exists to address the need for removing files scanned with GDE from the project interface after they have been removed from the computer. This mechanism also covers scenarios where files deleted from a computer need to be removed from the project interface, and where files scanned on a decommissioned computer need to be removed from the project interface.
+
+These operations, which involve the removal of scanned files from the project interface, are performed through the Actions menu.

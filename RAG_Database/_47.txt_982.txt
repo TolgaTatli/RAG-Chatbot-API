@@ -1,0 +1,1 @@
+Veri kaynakları kaldırıldığında, "Silinmiş İçerikleri Kaldır" özelliği kullanılarak içerikler indeksten kaldırılabilir. Bu işlem, "silinenleri sil" operasyonu tarafından gerçekleştirilir.

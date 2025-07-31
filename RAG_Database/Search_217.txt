@@ -1,0 +1,7 @@
+The core feature of the GEODI platform is search. This search capability also makes a significant contribution to applications such as Discovery and Classification. This page will discuss Enterprise Search, which is used in environments with many users.
+
+Enterprise search projects are fundamentally similar to discovery projects but differ in key aspects such as user interaction and permissions.
+
+The search requirements within the scope of SAR/Subject Access Request or Information Retrieval can also be structured similarly.
+
+Permissions are one of the most important aspects of enterprise search projects. In addition to existing LDAP permissions, GEODI also considers database permissions, email permissions, permissions on client computers, and permissions of other integrated applications.

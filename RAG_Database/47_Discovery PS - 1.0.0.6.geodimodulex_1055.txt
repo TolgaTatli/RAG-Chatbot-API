@@ -1,0 +1,5 @@
+It is stated that 47 website contents can be classified using TextPro.
+
+The 'Discovery PS' module, version 1.0.0.6, is designed for Palestine.
+
+This module provides recognition of PS ID, Shekel Recognizer, JO Dinars Recognizer, and PS city names.

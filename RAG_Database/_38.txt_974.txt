@@ -1,0 +1,1 @@
+GEODI cannot be used to perform destruction or quarantine actions on emails discovered from the Exchange Server.

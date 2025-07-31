@@ -1,0 +1,13 @@
+SharePoint connections are managed on Cloud Drives, and files within selected folders will be indexed. Other rules, including ignore rules, also apply to these connections.
+
+Users can connect to their SharePoint account using either SharePoint Online or SharePoint On-premise options. An authorized SharePoint user must be provided for the connection. It is possible to define multiple connections to the same site, each with different rules, such as enabling or disabling OCR or varying discovery coverage.
+
+Conditions for establishing a SharePoint connection include providing an Online or On-Prem SharePoint service access address. A SharePoint account with a minimum of read privileges is required, as the scope of discovery will be limited to that user's access. For SharePoint Online connections in GEODI, usage approval must be given, which is requested only once.
+
+To connect a SharePoint Online account, a redirect occurs to the Microsoft Site. After entering the Username and password, the user selects the directory they wish to be discovered.
+
+For SharePoint On-Premise connections, the Service Address to be connected, Username, and Password information are filled into the relevant fields. Once the connection is established, the user selects the directory they want to discover.
+
+Classifying content on SharePoint from the GEODI ES Interface is possible using desktop, Office Add-in, and classification tools, provided specific conditions are met for files in SharePoint Online. GEODI must operate in an executable (exe) mode, and SharePoint connections must be established using the MAP (Network Drive) method. For SharePoint Online usage, the MAP method can be applied by following instructions on the `https://learn.microsoft.com/en-us/sharepoint/sharepoint-view-in-edge` page. Microsoft SharePoint does not offer a similar method for on-premises installations, so this recommended solution is exclusively applicable to SharePoint Online.
+
+For troubleshooting SharePoint online connections, ensure the machine has internet access. If an incorrect Username or Password is entered, a warning code is received, indicating that the login username and password information should be checked. A warning is also received if the Service Address is entered incorrectly, in which case the service address should be verified.

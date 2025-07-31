@@ -1,0 +1,1 @@
+GEODI default class level is determined as the class to be given when automatic classification rules do not match.

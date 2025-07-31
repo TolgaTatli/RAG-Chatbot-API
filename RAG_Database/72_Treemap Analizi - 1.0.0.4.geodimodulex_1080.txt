@@ -1,0 +1,3 @@
+Details on how to connect to Kafka VT, a database, are explained on the database source support page.
+
+The Treemap Analysis module adds a new widget to GEODI panels. This Treemap widget shows the relation between keywords between two different queries. The module version is 1.0.0.4.

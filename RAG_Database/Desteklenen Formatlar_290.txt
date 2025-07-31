@@ -1,0 +1,45 @@
+GEODI supports over 200 formats, with variations possible depending on the license. Files can be sourced from diverse locations such as folders, embedded within databases, or as email attachments.
+
+GEODI supports Microsoft Office formats, including Word, Excel, PowerPoint, and Visio, with supported extensions such as DOC, DOCX, RTF, XLS, XLSM, XLSX, PPT, PPTX, and XPS. It supports MS Word, PowerPoint, and Excel versions from 97-2003 and subsequent releases. Tagging and masking features are available for these files.
+
+GEODI supports Libre Office and Open Office formats, specifically ODT, ODP, and ODS files. Tagging and masking functionalities are provided for these document types.
+
+GEODI supports PDF files, which can undergo automatic OCR processing if they lack text information. E-signature details from e-signed PDFs are also readable. Supported features for PDFs include tagging, masking, e-signature processing, and OCR.
+
+GEODI supports email, including servers like Google Mail, Yahoo Mail, Office 365, and Exchange, with POP3 and IMAP support for unlisted servers. It handles PST and OST file types, incorporating both email body and all attachments. Classification is available for Office 365, and corporate search provides an authorization option for users to access their own emails.
+
+GEODI supports various image, video, and audio file formats. Image formats include JPG, JPEG, PNG, TIF, TIFF, GIF, BMP, and JP2. Video and audio formats supported are M2TS, MOV, MP4, MP3, OGG, AVI, 3GP, ASF, FLV, MKV, MPG, MPEG, OGV, WMV, DIVX, DAT, XVID, X264, WMV1, and SEC. Available features include tagging, FacePro, ImagePro, and SpeechToText, which is a third-party solution.
+
+GEODI supports social media and web content, including HTML, HTM, and MHT web formats, as well as RSS feeds. It also integrates with social media platforms such as Twitter, Instagram, and Facebook.
+
+GEODI supports a range of databases, including Oracle, Postgres, DB2, SQLServer, Mongo, Cassandra, and Kafka. File-based databases such as Access, SQLite, MDB, ACCDB, ACCDE, ACDDT, and ACCDR are also supported. The system can process files embedded or linked within databases, texts embedded in databases, and spatial information from sources like Oracle Spatial and Postgres.
+
+GEODI supports compressed file formats such as ZIP, ZIPX, RAR, 7Z, and 7ZIP. It can process all archives and files that are contained within these compressed archives.
+
+GEODI supports CAD and GIS formats from software like Autocad, Netcad, Microstation, ArcGIS, and Google Earth. Supported file extensions include DWG, NCZ, DGN, DXF, SHP, KML, GeoTIFF, ECW, SID, and IMG. GEODI360 supports SRTMAP, NMEA, GPX, GPS, FLIGHTPLAN, FPL, IGC, and XML, while Netcad specific formats include NCZ, KSE, KSP, DRE, CKS, KAP, and DRK. GeoArchive and viewing capabilities are also provided.
+
+GEODI supports additional file formats, including TXT, XML, MPP for Microsoft Project Manager, UDF for Uyap Document Format, EYP for E-Correspondence Package, and MOBIDI for MOBIDI Office.
+
+GEODI URL is a proprietary format specific to GEODI, enabling the mapping of a website to a geographical location, such as a point, line, or area. This feature can be utilized for applications like defining a hiking route, a camping area, or a specific point within a factory. GEODI URL does not index the website content itself; for that, a separate web source definition is required.
+
+The GEODI URL file structure includes fields for specifying a URL, a Turkish description, and an English description. It also supports defining geometry in WKT format using the WGS84 datum, with examples like POINT(33 42) or LINESTRING (30 10, 10 30, 40 40). Additionally, a `geomdisplayname` field allows setting the label for the geometry on the map.
+
+GEODI allows defining external metadata for files by placing a ".meta.xml" file in the same directory as the main file. This method enables the definition of information not contained within the file itself, such as projections for CAD files with unknown projections, or associating values like a person or a parcel. For example, a file named "Dünya Haritası.DWG" would have a corresponding meta file named "Dünya Haritası.DWG.meta.xml". This approach is one of several ways GEODI supports structural data definition for content.
+
+The structure and naming conventions for meta files in GEODI can be configured through a separate jsettings file, enabling support for various meta file formats. This definition file must reside in the `[.\Settings\AttributeProvider\XMLMeta]` directory, and GEODI requires a restart for changes to take effect. An example configuration demonstrates associating `*.meta.xml` files with `*.tif` files, where the XML content is expected to define elements such as `TargetExtension`, `MainFileFormat`, `IgnoreMetaFile`, `GroupElement`, `KeyElement`, `ValueElement`, and `AreaElement`.
+
+The configuration for external metadata includes several parameters. `TargetExtension` is an optional field that, if undefined, enables name matching for all files. `MainFileFormat` dictates how file name matching is controlled, using `[FILE]` for the file name and `[EXT]` for the extension. `IgnoreMetaFile` is an optional setting; if left blank, GEODI will also index the meta file itself.
+
+Within the XML structure, `GroupElement` specifies the group node name. `KeyElement` defines the key node name under the group node, which is optional, and any "Projection" expression obtained via `KeyElement` is recognized as a projection, supporting EPSG or WKT formats. The `META_VALUE` field is used to write projections in WKT or EPSG format, or WKT geometry.
+
+Additional meta file configurations allow for forcing a preview image using a base64 image, and forcing a summary preview to be displayed in search results. The address for the content viewer can also be configured. Furthermore, `Permit` and `Deny` lists can be defined to specify authorized and forbidden users, respectively, including user IDs, group IDs, and provider group ID lists, with active user information retrievable from the `/api` address.
+
+The `ValueElement` specifies the value node name under the group node. `AreaElement` defines the area type value under the group node, determining its position in the index, which can be either "Header" or "Content". "Content" is visible in the summary content, and while "Header" is the default, using "Content" ensures display in summaries.
+
+An example meta XML file demonstrates its use for defining projections for files lacking geographical references, such as DWG files. It is specified that coordinates within the DWG file must align with the defined projection. Examples of projection definitions include "Projection" with "EPSG:4326" or "WKT Projeksiyon".
+
+The "Content" field in a meta XML file is used to add textual information to existing content, such as descriptions for image or video files. This defined content is appended to other text information within the file. The `AreaElement` value for this content can be set to "Header" or "Content"; "Content" ensures visibility in summary content, while "Header" is the default.
+
+The meta XML file can also be used to add geometry to any content, specified through a "GEOM" field containing a WKT geometry definition.
+
+Content viewing based on authorization can be managed through the meta XML file, operating in conjunction with standard authorization systems like LDAP. If a file is forbidden to a user via LDAP, the meta.xml cannot override this restriction. The meta file allows defining `Permit` lists for authorized users and `Deny` lists for forbidden users, which can include user IDs, group IDs, and provider group ID lists. Active user information for these lists can be retrieved from the `/api` address.

@@ -1,0 +1,9 @@
+DECE-STORE is a repository backed by GEODI search. It is designed to customize GEODI for specific needs, such as different regulations and countries.
+
+Each package within DECE-STORE contains various recognizers, reports, and templates. These packages are continuously improved and updated, which also results in updates to GEODI.
+
+For offline environments, DECE-STORE is unavailable unless access to service.decesoftware.com is permitted. Users should check offline installation procedures for these environments.
+
+The "With Search" feature allows users to search in the DECE-STORE. Searches can be performed by regulation, country, or a specific entity, such as an SSN (Social Security Number).
+
+The "With MAP" feature displays specific solutions for a country. Users can click on a country to install its related module.

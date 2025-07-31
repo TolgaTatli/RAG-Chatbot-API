@@ -1,0 +1,9 @@
+Bu belge, PoC (Proof of Concept) veya satış sonrası kurulum ve devreye alma sürecinin genel hatlarını sunmaktadır. Sürecin ilk adımı Açılış Toplantısıdır. Bu toplantıya tercihe bağlı olarak Veri Koruma, IT, Hukuk, Yönetim, Satın alma veya İnsan Kaynakları gibi birimler katılabilir. Toplantıda DECE'nin kim olduğu, GEODI'nin ne olduğu ve ne iş yaptığı hakkında bilgilendirme yapılır. Ayrıca, projeden beklenen hedefler anlaşılır ve veri kaynakları, keşif kapsamı, sınıflama, maskeleme, imha, karantina ve OCR gibi konularda tercihler netleştirilir. Toplantı sonrası diğer aşamalara geçebilmek için GEODI Kurulum Gereksinimleri'nde belirtilen uygun bir sunucu ve kullanılacak veri kaynakları için gereken erişim bilgileri hazır olmalıdır.
+
+Sürecin ikinci adımı Setup/Kurulumdur. Bu aşamada GEODI ve gerekli modüllerin kurulumuna başlanır. Kurulum süreci, lisansların aktivasyonunu, kullanıcı yetkilendirmelerini ve genel sistem ayarlarını içerir. GEODI Sunucu Kurulumu da bu adımda gerçekleştirilir.
+
+Üçüncü adım Konfigürasyondur. Keşif, Sınıflama veya Arama gibi seçenekler için farklı konfigürasyonlar gereklidir. Kullanıcının amacına uygun sürecin izlenmesi tavsiye edilir. Bu seçenekler arasında Discovery, Classification ve Arama (Search) bulunur.
+
+Dördüncü adım Teknik Bilgilendirmedir. Kapanış öncesinde, istenirse sistemin genel mimarisi, ajanların izlenmesi, performans konuları, yedekleme ve API dokümantasyonu hakkında bilgi verilir.
+
+Sürecin son aşaması Kapanıştır. Bu aşamada projenin genel değerlendirmesi yapılır ve aşamalar ile sonuçlar sunulur. Ayrıca, GEODI platformu üzerindeki Sosyal Medya İzleme ve Yüz Tanıma gibi farklı uygulamalar ve çözümler hakkında da bilgi verilebilir.

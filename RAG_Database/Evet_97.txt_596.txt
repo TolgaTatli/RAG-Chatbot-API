@@ -1,0 +1,1 @@
+GEODI has integration with LDAPS/Active Directory Secure LDAP.

@@ -1,0 +1,5 @@
+Versiyonlar, GEODI kullanıcıları için önemli fayda sağlayan bir özelliktir.
+
+Genel bir kapatma yoktur.
+
+Ver:last sorgusu ile sadece son versiyonları görüünmesini sağlamak mümkündür.

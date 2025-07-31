@@ -1,0 +1,9 @@
+Users experiencing issues viewing content can resolve this by clicking a provided link to open the content in a new window. Alternatively, they can adjust their browser's cookie settings.
+
+Available options include Technical Support, Frequently Asked Questions (SSS), and Contact Us. Users also have an option to log in to their account.
+
+The product identified is GEODI, with a version number of 8.0.0.27821.
+
+Login features include a "Remember me" option and a "Forgot my password" option.
+
+Users have the option to log in using third-party services such as Dropbox, LinkedIn, Microsoft, or Google.

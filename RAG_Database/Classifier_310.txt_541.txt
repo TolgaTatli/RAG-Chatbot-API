@@ -1,0 +1,17 @@
+This page guides users through the server and user installations of GEODI Classifier.
+
+Setting up and adapting manual or automatic classification projects is covered. Users can start immediately with ready classes if they have not used a classification tool before. If transitioning from a different tool, defining existing classes and labels can be done within similar timeframes.
+
+GEODI's advanced classification policy manager allows for easy group, person, or software-based customization, ensuring flexibility if rules or policies change after deployment. Classification agents automatically update these policies.
+
+For further inquiries, information is available on the GEODI Classifier SSS page.
+
+To simplify management, panels for monitoring both classification agents and classification activities will be provided.
+
+End-users need only watch the GEODI 121 Online training video to use the Office and Desktop add-ons.
+
+The installation process follows a roadmap and checklist, with classification setup comprising the following steps.
+
+The classification installation steps include: GEODI Server installation, Classification Module Activation, Activation of Default Classes and Policies, ignoring mail signatures (via dictionary or email server settings), generation of the Agent MSI Package, Installation on Sample End Computers, Agent Monitoring Panel Activation, Log Monitoring Panel Activation, interim evaluation, adaptation of Classes and Policies, closing, and distribution of Agents to all clients.
+
+Related topics include GEODI Classifier Class and Policy determination, GEODI Classifier Label Definitions, GEODI Classifier SSS, GEODI Classifier Windows Client Installation, GEODI Classifier OWA Installation, GEODI Classifier Office and Other Add-ons User Guide, GEODI Classifier Bulk Classification, and GEODI Classifier Log Analysis Panel and Classifier Project.

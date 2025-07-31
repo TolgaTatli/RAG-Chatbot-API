@@ -1,0 +1,7 @@
+Reports can be created by copying a jSettings file to the Report Folder. To create a desired report, metadata must be added to the jSettings content, and definitions for folder names and file content must be made.
+
+A Metaobject is structured as a tree. Each level within this tree content is a MetaType, with keys defined as Folder, File, or Loop. An example of a Meta Structure includes MetaType, Data (set to "=MACRO"), Name, and Date (set to "DisplayName").
+
+The Macro structure provides access to different data contents. Users need to identify the type of object passed to the report content to edit the report appropriately. For reports created with GEODI Pro, the macro data object is a GeodiEntry Array. For Mobidi Server Reports, the object is a MobidiEntry Array.
+
+An example of a zip report definition provided with GEODI Pro is detailed in MyZipReport.jSettings. This definition includes an ID of "MyZipReport", a DisplayName that translates to "Zip and and Download" in English and "Sıkıştır ve İndir" in Turkish, and a type of "Factory.ActionFactory:ZipReporter". Its Meta section specifies a MetaType of "Enumarator" and data derived from distinct SystemContentIDs. It further defines a folder MetaType based on ContentTypeKey, containing a file MetaType with a name derived from SystemContentID and GetFileNameForDownload(), and data from GetStream().

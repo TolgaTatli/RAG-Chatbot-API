@@ -1,0 +1,9 @@
+The recognizer identifies Credit cards, dates, names, IPs, city names, or other sensitive or required data. Documents can be queried using names, IPs, or money. For instance, a query can locate content that includes VISA credit card numbers.
+
+To query by recognizer, one can use the layer name exactly as it appears on the facet. Examples include `layer:Date`, `layer:"Name Recognizer"`, and `layer:"(Date,Hashtag)"`. The syntax `layer:Money*` can be used to find any recognizer that starts with "money".
+
+Recognizers can also be referred to by labels or other criteria, with labels serving to group recognizers. For example, all money recognizers, such as USD, Euro, and Pound, share an "IsMoney" label. Querying by label can be done using `Layer:(has:IsMoney,has:AnotherLabel,..)`, which applies to a recognizer label or any key-value pair with the label, or `Layer:(true:IsMoney)` if the "IsMoney" value in genericsettings is true.
+
+A keyword, in the context of querying, is defined as the entity produced by a recognizer. If a dictionary identifies a word in a text, that word is queriable; however, if a recognizer identifies sentiment in a text, that text is not considered part of FTS (Full Text Search). The keyword query method enables querying based on the output of a recognizer.
+
+The keyword query method is particularly useful for GEODI Q and classifiers. For example, a GEODI Q recognizer might return a document type like "invoice," "CV," or "Contract," allowing a specific keyword to be queried. The syntax for a keyword query is `Keyword:SOMEWORD,SOMERECOGNIZER`, indicating that "SOMEWORD" was discovered by "SOMERECOGNIZER." Quotes and asterisks can be used for some words, and multiple recognizers can be listed with commas. Recognizers can also be referred to by label using the same syntax as in Layer queries. An example is `Keyword:SOMEWORD,FTS`, which searches for "someword" in FTS.

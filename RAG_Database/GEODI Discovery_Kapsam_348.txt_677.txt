@@ -1,0 +1,11 @@
+GEODI Discovery is a general-purpose data discovery engine. It can create discovery scopes required by regulations such as KVKK, PCI/DSS, GDPR, or HIPAA, in addition to custom scopes specific to an institution.
+
+Many of these templates are available on DECE-STORE. After the installation phase, the relevant template should be selected from DECE-STORE to proceed.
+
+For personal data discovery, there are packages for different countries. These packages, which contain identity and country-specific identifiers for the country you operate in, are named like Discovery TR/KVKK and Discovery KSA/SAMA/PDPL/CMA.
+
+Data discovery templates will provide ready tools for the discovery scope and reporting of results.
+
+An environment will be created to answer questions that may arise under the Right to Information/Subject Access Request.
+
+You will also be ready for data remediation operations, such as destruction or quarantine, after discovery.

@@ -1,0 +1,1 @@
+93 VT is capable of scanning .eml documents and their attachments when it is scanning embedded files.

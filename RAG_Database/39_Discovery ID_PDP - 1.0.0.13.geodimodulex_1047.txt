@@ -1,0 +1,7 @@
+FeedLogs found within logs can be deleted.
+
+Country-specific semantic recognizers extend the capabilities of GEODI Discovery and Classification. This package is specifically for Indonesia and should be installed after GEODI Discovery.
+
+The Indonesia package includes various recognizers such as Plate Recognizer, Driving License Number, NIK Number, IDR Recognizer, Closing Balance Recognizer, Credit Recognizer, Currency Recognizer, Debit Recognizer, Opening Balance Recognizer, Period Recognizer, and ID Passport Number Recognizer.
+
+The version of this package is 1.0.0.13.

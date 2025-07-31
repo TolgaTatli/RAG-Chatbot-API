@@ -1,0 +1,7 @@
+GEODI offers enhanced classification features that allow users to categorize documents, e-mails, and other content based on their importance and privacy levels.
+
+The Ministry of Energy and Natural Resources, along with its 14 sub-organizations, utilizes GEODI for data classification to ensure compliance with GDPR regulations. This data classification project for the ministry and its subsidiaries is noted as one of the most significant in the EMEA region, involving over 40,000 users.
+
+GEODI is a single software solution designed to address GDPR compliance, Data Discovery, Data Classification, Data Protection, Data Masking, and DLP Integration. Its capabilities also extend to enhancing DORA Compliance, revolutionizing Data Discovery with GEODI Q, building AI Assistants, enabling AI-driven classification, and managing Data Security Posture Management (DSPM). Core functions include Search, Discover, Mask, Encrypt, and Classify.
+
+Palestine Investment Bank manages its security posture using GEODI.

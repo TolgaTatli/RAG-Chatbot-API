@@ -1,0 +1,19 @@
+The GEODI e-Signature module enables electronic signing of PDF, CAD, and other files. It features a flexible structure that allows it to work with any e-Signature the user possesses. The application also supports multi-signature functionality.
+
+Documents can be signed in two ways using the GEODI e-Signature module. Users can sign documents by attaching them via drag and drop, or they can sign a document found through a search. The application automatically makes the necessary selections for the signature method based on whether the file is CAD or PDF, as their signature methods differ.
+
+When a previously existing file is signed using the GEODI e-Signature module, a new version of that file is automatically created.
+
+Upon first use, the GEODI e-Signature module requires the installation of a GEODI e-Signature plugin on the computer. This plugin facilitates communication between the GEODI software and the e-signature attached to the computer. It does not store any e-signature information, allowing for installation and use on different computers. Users can seek support from their system administrator for installation issues, including authorization problems.
+
+The GEODI interface displays the owner of the e-signature being used. After entering the required PIN code, users can proceed to sign files.
+
+The GEODI e-Signature module automatically determines appropriate signature formats based on document extensions. Users can select signer information and sign multiple documents using drag and drop. Additionally, the process can be continued without signing if desired.
+
+For PDF files, the GEODI e-Signature module signs them as PAdES type. Other file extensions are signed as CAdES type, where the signature is integrated by being appended to the document itself. If already signed files, typically p7s files, require further signing, a CAdES type Serial Signature, which integrates a new signature with the last one, is added. If PAdES signed PDF files also need additional signatures, a new PAdES signature is added to the document.
+
+The GEODI e-Signature Module is compatible with the signing principles of the Signer Program, an e-signing and verification program developed by TÜBİTAK. For e-signing and verification processes, the module utilizes certain libraries shared by KamuSM.
+
+The GEODI interface displays the signature date and the signers of signed documents. Users can also inquire about this information, including viewing signed document's signer information and signature verification results.
+
+The "Sign" button within the GEODI e-Signature module allows users to sign a selected document or to add a new signature to a document that has already been signed.

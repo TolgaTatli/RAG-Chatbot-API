@@ -1,0 +1,3 @@
+This package contains Topic Recognizers. These recognizers add great value to any GEODI or MediaMon project.
+
+A topic recognizer analyzes and labels content. Content types it analyzes and labels include Football, Politics, Health, Economy, Insult, Complaint, and PharmaceuticalandMedicalMaterial. This automatic labeling saves time and resources.

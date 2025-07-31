@@ -1,0 +1,7 @@
+After this training, users will be able to utilize GEODI for various business needs, including Enterprise Search, Archive, and Social Media Monitoring.
+
+Users are encouraged to contact support teams if they are uncertain about a topic or encounter difficulties.
+
+It is noted that some features of GEODI may not be available depending on the user's license.
+
+Suggestions for future training include a course titled 'GEODI 102 Query Rules'.

@@ -1,0 +1,3 @@
+Veri keşfinde amaç, hassas verinin nerede olduğunu anlamaktır.
+
+GEODI için ilk hedef, tüm veritabanı ve tabloları dolaşıp hassas veri bulunan tablo ve kolonları raporlamaktır. İçerikBulgu(DB) raporu bu hedefi sağlar.

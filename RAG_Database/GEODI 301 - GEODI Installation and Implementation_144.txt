@@ -1,0 +1,25 @@
+This training includes GEODI setup, applying licenses, and activating modules. It is quite easy and straightforward. Basic IT knowledge on windows servers is required for the course. Topics like, Configuring a Discovery or Classification project, or settings for PCI/DSS will also be covered.
+
+The content of this training is technical, with a duration of 45min+45min. In this training, the content on GEODI Server Installation and its subpages will be followed. Apart from the license information, no additional data will be needed for the installation.
+
+This training includes GEODI setup, applying licenses, and activating modules. It is quite easy and straightforward. Basic IT knowledge on windows servers is required for the course. Topics like, Configuring a Discovery or Classification project, or settings for PCI/DSS will also be covered.
+
+The content of this training is technical, with a duration of 45min+45min. In this training, the content on GEODI Server Installation and its subpages will be followed. Apart from the license information, no additional data will be needed for the installation. Trainings are intended to give a general idea. Learners need to reinforce what they’ve learned by applying it. Some features mentioned in the training may not be included in a user's license.
+
+For License and Installation Overview, a license key must be obtained from the DECE teams.
+
+Installation and Configuration Topics include GEODI Topology, AppDataFolder location, Logon user / Service user considerations, Windows Service configuration, Index and backup setup, Error logs, SSL definition and renewal, DECE-STORE usage, and Regulatory and country-specific adaptations.
+
+Project Wizard Usage covers an Overview of the Project Wizard, Discovery Templates, Classification Templates, First Project, First Data Source, and Defining Email Recipients.
+
+Other Topics include Software updates, Agent updates (if applicable), and Offline installation procedures.
+
+The objective for the Online Installation & Assignment is to perform an online service installation using the PCI–PII dataset in a training environment. Requirements include running a discovery with the dataset after installation, completing configurations and actions an end user might request, and independently solving issues related to service user permissions and port access. Use of documentation is allowed, but time is limited.
+
+The Submission Checklist for the Online Installation & Assignment includes Start time (with a 45-minute limit), a Summary Discovery Report (PDF), a Discovery Dashboard screenshot (PDF), the Number of contents discovered, a directory (ZIP/RAR), Index size, whether a Backup is present and its size if yes, a directory of the project (ZIP/RAR), and Completion time.
+
+For the Offline Installation & Assignment, the scenario involves a user wanting to perform discovery under KVKK and PCI/DSS regulations in an offline environment. Environment details specify that the server is not connected to the internet but is accessible via an internal network. Required files for offline installation are already prepared and must be transferred to the server in one go, with readiness according to user organization requirements.
+
+Requirements for the Offline Installation & Assignment include performing discovery with the PCI–PII dataset, simulating end-user level configuration and action requests, and independently handling issues with access permissions and communication.
+
+The Submission Checklist for the Offline Installation & Assignment includes Start time (with a 45-minute limit), how the offline installation package was created, a Summary Discovery Report (PDF), a Discovery Dashboard screenshot (PDF), the Number of contents discovered, a directory (ZIP/RAR), Index size, whether a Backup is present and its size if yes, a directory of the project (ZIP/RAR), and Completion time.

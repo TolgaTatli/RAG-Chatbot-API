@@ -1,0 +1,5 @@
+GEODI indexes the files in the sources mentioned on this page. File ignore, and other rules apply. These sources are accessed through the web, and indexing performance is affected by internet speed. The source may also ban and/or slow the connection, like any other web source.
+
+Google Drive directories are indexed and discovered like windows directories. File neglect rules apply to Google Drive.
+
+A valid Google Drive account with minimum readonly privileges is a condition for connection.

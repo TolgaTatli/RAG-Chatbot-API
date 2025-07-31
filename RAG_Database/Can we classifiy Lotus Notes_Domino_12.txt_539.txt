@@ -1,0 +1,3 @@
+Our classification solutions do not function within the Lotus Notes/Domino environment. In contrast, these solutions are compatible with and work effectively on Windows Desktop, OWA, and Microsoft Office.
+
+Despite the limitations in classification, it is feasible to discover documents and contents that are stored within the Lotus Notes/Domino environment.

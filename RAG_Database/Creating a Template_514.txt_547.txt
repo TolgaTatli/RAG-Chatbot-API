@@ -1,0 +1,19 @@
+A template is a concept created to define how each content will appear on interfaces. A template's purpose is to change the document view without interfering with other fields on the pages. Colors, Theme, and Order are considered Layout topics, not template responsibilities.
+
+To implement a template, a subfolder must be created within the GUI\Custom\ES\Template folder. This subfolder should be named according to the specified template, and a file named Default.html must be placed inside it.
+
+One method for template selection involves passing "Template=" through the URL. The value transmitted via the URL will be stored in the browser.
+
+A default template can be specified on a project basis by adding the definition "Template":" " under GenericSettings in project settings.
+
+The template concept can be turned off by using the definition "DisableTemplate":true.
+
+A single mandatory template can be defined for use in a project with the definition "ForceTemplate":" ". When this definition is applied, all other template determination methods are ignored.
+
+The definition "Template":" " can be added under SystemJSONSettings to specify the default template for all projects.
+
+If a value of "none" is used, it signifies that a template is not selected.
+
+The Default.html file can contain HTML CSS, which may include script definitions. This HTML CSS can also load other CSS or scripts. Default.html can also include "dece-template" id values and functions.
+
+Specific "dece-template" id values and functions that can be included in Default.html are: "geodi-template-default" for changing the appearance of a single content on the DLV home screen; "geodi-template" for changing the appearance of a single content on the screen in vertical lists; "geodi-template-hor" for changing the appearance of a single content on the screen in horizontal lists; "geodi-container-template-default" for changing the appearance of the Content and the entire list on the DLV main screen; "geodi-container-template" for changing the appearance of the content and the entire list in vertical lists; and "geodi-container-template-hor" for changing the appearance of the content and the entire list in horizontal lists.

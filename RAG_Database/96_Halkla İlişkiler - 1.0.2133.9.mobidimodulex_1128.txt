@@ -1,0 +1,5 @@
+Geodi Agents can be deployed using a Self Contained Deployment Model. This method is already in use for their deployment.
+
+Public relations activities involve recording communication with customers, solution partners, and dealers within an ecosystem. This process is associated with CRM and applies to various sectors including construction, architecture, engineering, telecom, municipality, energy, service, electricity, medical, cleaning, FMCG, tourism, insurance, textile, software, IT, BT, hardware, and holding.
+
+The version number is 1.0.2133.9.

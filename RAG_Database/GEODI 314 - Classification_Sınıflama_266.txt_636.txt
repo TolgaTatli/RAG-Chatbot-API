@@ -1,0 +1,17 @@
+Bu eğitim ile sınıfların belirlenmesi, water mark ayarlarının yapılması ve sınıflama politikalarının belirlenmesi anlatılacaktır.
+
+Eğitimin içeriği Teknik, Satış, Kullanıcı ve Genel başlıklarını kapsamaktadır.
+
+Eğitimin süresi 1 saattir.
+
+Bu eğitim için GEODI Proje Sihirbazı ve GEODI Sorguları bilgisi gereklidir.
+
+Eğitimin kapsamı Proje Sihirbazı içinde Sınıflama Modülü ayarlarını, sınıfların belirlenmesini, sınıfları belirleyen sorguları, sınıfların etiket ayarlarını ve Ofis yazılımları için watermark/header/footer ayarlarını içerir. Ayrıca politikaların belirlenmesi, otomatik sınıflama için proje katmanlarının eklenmesi, görsel işaretlerde olabilecek olası sorunlar, header ve footer'a yer olmaması, marjinler, sınıf ayarlarının istemcilere yansıması, örnekler ve sorular da kapsam dahilindedir.
+
+Destekleyici materyaller arasında GEODI Classifier Sınıf ve Politikaların belirlenmesi, GEODI Classifier Etiket Tanımları, GEODI Classifier SSS, GEODI Classifier Windows İstemci Kurulumu, GEODI Classifier OWA Kurulum, GEODI Classifier Ofis ve Diğer Eklentiler Kullanıcı Rehberi, GEODI Classifier Toplu Sınıflama, GEODI Classifier Log Analiz Paneli ve Classifier Projesi ile GEODI Sorguları bulunmaktadır.
+
+Eğitimler genel bir fikir vermeyi amaçlar ve öğrenilenlerin kullanılarak pekiştirilmesi gereklidir.
+
+Emin olunmayan veya yapılamayan konularda ekiplerden destek istenebilir.
+
+Eğitim kapsamında belirtilen bazı özellikler lisansınızda yer almayabilir.

@@ -1,0 +1,19 @@
+Generating a Geodi Token is a necessary step. For preparing an end-user interface, displaying search results with templates will be more useful.
+
+QueryHandler.GetSummaries is a simplified service. The getDocumentSummaries API offers more features, and allows setting the summary text length using GetSummaryType in the query parameter.
+
+The GetSummaries service returns summaries of locations that match a query from within a particular workspace.
+
+The request for GetSummaries uses the URL format `[GEODIURL]/QueryHandler?op=GetSummaries&wsName=[WSNAME]&q=[SearchString]&startIndex=[StartIndex]&endIndex=[EndIndex]&options=[OptionsJSON]&UserSession=[TOKEN]`. The `wsName` parameter is a string representing the name of the workspace to search inside. The `q` parameter is a string for the query text, and its syntax rules are detailed in GEODI Queries. `StartIndex` is an optional integer indicating the starting index for query results, with a limit of 0. `EndIndex` is an optional integer indicating the ending index for query results, also with a limit of 0. `options` is an optional parameter for additional query result changes, and `UserSession` is a token.
+
+Optional parameters within the `options` JSON for GetSummaries include `ContentIDFilter`, an integer array to filter the content from which to query. `Envelope` is an optional parameter defined by `[LonMin(int),LatMin(int),LonMax(int),LatMax(int)]` that returns words within the boundaries of a given BBOX geometry. `LayerIdFilter` is an optional integer array that filters words based on the IDs of the recognizers that recognize them. `KeywordIdFilter` is an optional integer array used to filter words by their IDs.
+
+The GetSummaries service supports both GET and POST HTTP methods. Expected errors include 401 Unauthorized access / Access denied, 403 Forbidden, 511 Network Authentication Required, and 501 Server Error.
+
+The resulting value from a GetSummaries request is an array of objects. Each object contains a `ContentID`, which is the ID of the content, and a `Summary` object. The `Summary` object provides documents summary information and includes a `SummaryID` and `Text`, which is the summary text. An example structure is `[ { "ContentID": 1, "Summary": { "SummaryID": "", "Text": "" } } ]`.
+
+An example request for GetSummaries is `[GEODIURL]/QueryHandler?op=GetSummaries&wsName=PROJECT&q=ankara&startIndex=0&endIndex=1`. This request queries for "ankara" in the "PROJECT" workspace, starting at index 0 and ending at index 1. The corresponding result for this example shows a `ContentID` of 2 and a `Summary` with `SummaryID` "FTS_0_123_4567_8" and `Text` "... ankara ...".
+
+Another example GetSummaries request is `[GEODIURL]/QueryHandler?op=GetSummaries&wsName=PROJECT&q=ankara&startIndex=0&endIndex=1&options={"ContentIDFilter":[3]}`. This request includes an `options` parameter with a `ContentIDFilter` set to [3]. The result for this example includes two entries, both with `ContentID` 3, and `Summary` objects containing `SummaryID` "FTS_0_123_4567_8" and "FTS_9_876_5432_1" respectively, with `Text` "... ankara ...".
+
+Example applications for using GetSummaries include .Net WinForm (C#), Java, and HTML - Javascript.

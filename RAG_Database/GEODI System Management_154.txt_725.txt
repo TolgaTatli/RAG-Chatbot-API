@@ -1,0 +1,15 @@
+The System Management Page can be accessed from the system tray icon's bottom-right menu by selecting "System Management Page." This page serves as the entry point for features such as new project creation, classification settings, DECE-STORE, and installation. GEODI's architecture is highly modular, meaning features may vary based on the user's license. The basic features mentioned include Projects, Project Wizard, Indexing, Scheduled Tasks, Dictionary and Recognizers, Maps/GIS topics, Settings, DECE-STORE, User/Authorization Management, and Automatic Notification and E-Mail Settings.
+
+The Projects tab within the System Management Page is used for project management. Users can create new projects, start or stop indexing, obtain system reports, and perform maintenance tasks from this tab.
+
+The Dictionaries tab is dedicated to managing dictionaries defined by the user and those utilized by certain recognizers. Dictionaries and Recognizers are described as the "actors behind the discovery." While most definitions are supplied via DECE-STORE, a dictionary may be needed in specific cases, such as to modify classification rules.
+
+The Settings tab contains subtabs for various purposes. Any settings configured here affect both GEODI and all associated projects.
+
+The Support Area provides shortcuts to access courses and support pages, including the current page.
+
+Organizations may require multiple GEODI servers for several reasons. For BigData scenarios, where massive data is distributed across various sources like FileServers, Databases, Sharepoint, e-Mails, Hive, and ElasticSearch, multiple GEODI Servers are necessary to complete discovery within a reasonable timeframe. For Auto Classification, which demands CPU resources, it is suggested to separate Classification servers from discovery servers. Multiple servers can also be used behind a load balancer for this purpose.
+
+To centrally manage GEODI servers, a central login provider such as LDAP or Microsoft is required. When adding servers, their URLs should be checked with a browser beforehand to eliminate network issues like firewalls. An error message will appear if a URL is inaccessible or if there are authorization problems. GenericSettings can be left as shown or changed to override the workspace and report matching.
+
+A Master GEODI instance can generate a consolidated report from other GEODI instances. Each individual GEODI may have discovered different sources using different settings. Workspace names and reports should be matched, or match rules can be overridden with "ve values." When these values are changed, GEODI will match the selected ones with those values.

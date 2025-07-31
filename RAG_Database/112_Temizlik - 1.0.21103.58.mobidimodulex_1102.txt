@@ -1,0 +1,5 @@
+The provided text includes categories such as Name, Location, Note, and Cleaning Status. It also references Cleaning. These terms are presented with their English, Spanish, and French translations.
+
+The text describes a system that provides practical forms for cleaning jobs. This system allows for easy recording of all types of cleaning tasks. It enables tracking of cleaning status using photographs and ensures completed work through personnel and location-based reports. Activities can be reported online to the main company. The service is associated with concepts such as service, spraying, and disinfection.
+
+The text specifies a version number, which is 1.0.21103.58.

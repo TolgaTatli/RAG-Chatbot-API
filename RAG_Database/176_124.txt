@@ -1,0 +1,3 @@
+A mechanism exists to address the need for removing content from the GEODI interface that originated from PCs discovered with 176 GDE but are no longer in use. This mechanism also covers the ability to delete files from the project interface that were either deleted from a computer or scanned on an out-of-use computer.
+
+These operations, including the removal of content from unused PCs and the deletion of files from the project interface, are performed through the "Aksiyonlar" (Actions) menu. The "Silinenleri Sil" (Delete Deleted) action is specifically designed to fulfill these requirements. A new version update may be necessary for this operation.

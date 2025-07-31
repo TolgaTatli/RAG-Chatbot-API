@@ -1,0 +1,19 @@
+GEODI e-İmza module allows electronic signing of PDF, CAD, and other files. It is flexible, working with any e-signature, and supports multiple signatures.
+
+The GEODI e-İmza module offers two ways to sign a document: signing while adding documents via drag-and-drop, or signing a document reached through search.
+
+The signing method for CAD and PDF files differs, with the application automatically making the necessary selections based on file type. When an existing file is signed, a new version is automatically created.
+
+Upon first use, the GEODI e-İmza application will request the installation of a GEODI e-İmza plugin on the computer. This plugin facilitates communication between the attached e-signature device and the GEODI software, and it does not store any e-signature information. Therefore, it can be installed and used on different computers. Users facing authorization or other installation issues can seek support from their system administrator.
+
+The owner of the e-signature being used will be visible in the interface. Files can be signed after entering the PIN code.
+
+Appropriate signature formats are automatically determined based on document extensions. Users select signer information and can sign multiple documents using drag-and-drop. It is also possible to proceed with operations without signing, if desired.
+
+Files with PDF extensions are signed as PAdES type, while other file extensions are signed as CAdES type, both integrated (the signature is added to the document itself). If signed files (generally with p7s extensions) are to be signed again, a CAdES type Serial Signature (a new signature integrated with the last one) is added. If PAdES-signed PDF files are to be signed again, a new PAdES signature is added to the document.
+
+The İmzager Program is an e-signing and verification program developed by TÜBİTAK. The GEODI e-İmza Module is compatible with İmzager's signing principles. For e-signing and verification processes, GEODI utilizes certain libraries shared by KamuSM.
+
+In the GEODI interface, the signature date and signers of signed documents will be visible. Queries can also be performed using this information, and signer information and signature verification results of signed documents can be displayed.
+
+The "Sign" button allows signing a selected document or adding a new signature to an already signed document.

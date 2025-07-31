@@ -1,0 +1,3 @@
+Sözlüğün içerisinde bulunan kelimeleri rastgele 5 kelime kısıttı ile sorgulama yapılabilir.
+
+GEODI kelime bulutu tanır.

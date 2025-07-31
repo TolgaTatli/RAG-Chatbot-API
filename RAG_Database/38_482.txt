@@ -1,0 +1,1 @@
+GEODI provides SIEM integration. It can supply the necessary logs for SIEM integration in CEF and CSV formats. These logs are structured to be processable by SIEM tools. Furthermore, Syslog support is also offered.

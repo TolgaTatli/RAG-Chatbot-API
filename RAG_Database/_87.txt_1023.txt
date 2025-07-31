@@ -1,0 +1,3 @@
+Dotnet Core 7.0 GDE can be embedded within the installation on Linux Servers.
+
+It is possible to discover 50TB of data in 2 months or even less. In "our product," discovery can be performed in several stages. Using a method called "sampled discovery," it is possible to discover 50TB of data from a database or file server in less than 1 week.

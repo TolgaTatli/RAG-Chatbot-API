@@ -1,0 +1,3 @@
+Log files cannot be set up as new files for each day.
+
+It is possible to mask IP addresses. In cases of potential purchase, IP masking or event anonymization can be implemented within a few weeks.

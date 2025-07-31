@@ -1,0 +1,9 @@
+Original documents can be moved to a different location during the anonymization process.
+
+Applying quarantine to the same file set after a masking action is a comparable issue.
+
+The masking or anonymization process involves Geodi selecting the subset of files to be masked. Geodi then creates the necessary script for masking or anonymization. Windows subsequently runs this generated script, resulting in the files being masked.
+
+For the quarantine of original files, Geodi selects the same subset of files that were to be masked. Geodi then creates the necessary script for quarantine. Windows subsequently runs this generated script, and the original files are moved to the quarantine area.
+
+The described scenario can be applied. It is also possible to combine operations under a single command, but this might result in numerous action script options due to cross-duplication, potentially making management more challenging.

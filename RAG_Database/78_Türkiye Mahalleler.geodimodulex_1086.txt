@@ -1,0 +1,3 @@
+GEODI is capable of scanning EML files. This scanning process includes the attachments found within the EML files.
+
+The term 'Türkiye Mahalleler' (Turkey Neighborhoods) refers to a dictionary. This dictionary contains aliases that are used for parcel query processing.

@@ -1,0 +1,19 @@
+A GEODI Project or Workspace integrates data sources, discovery rules, permissions, and other policies.
+
+When creating a "New Project" in GEODI, users are prompted to select a template. Utilizing pre-built templates for classification and data discovery simplifies the process. Additional templates can be found in the DECE-STORE, and new modules can be added via Manager/Settings/Module Manager. The DECE-STORE contains numerous modules covering topics such as PCI/DSS, GDPR, HIPAA, country-specific recognizers, and other utilities.
+
+The next step in a GEODI project involves defining content sources, which can include options like folders, web pages, and e-mail accounts. The available options may vary based on the application modules, and users can define an unlimited number of sources. It is recommended to choose source names carefully as they will be visible to other users. The list of available sources may also change depending on the license. Users can check "Use Scheduled Scan" to automatically include new data, or set a single scan period for all sources on the last page. Additionally, "Enable drag&drop" can be checked to allow users to add their content through a browser.
+
+Optical Character Recognition (OCR) is a process that is time-consuming and resource-intensive, consuming a significant amount of CPU resources. Therefore, it is recommended to consider these factors when applying OCR to large datasets.
+
+Recognizers and Dictionaries serve as GEODI's information extraction tools. For instance, the Date Recognizer reads and parses dates from content, while the Parcel Recognizer reads and parses parcel numbers. The specific recognizers available may vary according to the user's license. Dictionaries allow users to define synonyms, with examples provided such as Act/Law, Parceling/Amalgamation, Kil/Clay, and Yapay Zeka/Articifical Intelligence. Some recognizers may offer additional setting options, which can be accessed by right-clicking on the Layers page.
+
+For base maps, users can utilize Google, Bing, WMS resources, and CAD files as underlays. However, using underlays such as Google or Bing may require obtaining approval or a license from the relevant company.
+
+The "Last Page" of the project setup allows for numerous settings in addition to defining the project's name and description. After saving, the project appears in the projects list and can be edited at any time. Users must also provide final approval for settings activated in the sources, such as OCR and Backup, on this page. GEODI automatically incorporates changing content, and users specify the period for checking changes, with the option to edit this setting per source. Furthermore, users can define which other users their project will be accessible to, in addition to setting some access restrictions to the source. Upon saving, the first scan can commence, and the scanning process can then be managed from the projects page.
+
+GEODI Classification is activated on the last page of the wizard. If a project was initiated with a template, the classes should be ready for use. The GEODI Classification solution comprises several components, and the procedures for setting up and deploying agents are detailed on subsequent pages, including GEODI Classifier - Class and Policy settings and GEODI OWA Classifier Installation.
+
+The initial scan duration depends on the size of the data. Subsequent scanning, which only processes changed and new content, takes significantly less time. Users can continue to use the system during scanning, but should be aware that heavy file content or OCR processing may lead to slower usage.
+
+The search interface provides various themes and layout options, allowing users to select the desired assumptions for their project.

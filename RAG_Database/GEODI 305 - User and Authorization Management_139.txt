@@ -1,0 +1,11 @@
+This technical training has a duration of 30 minutes. Its purpose is to teach how to authorize GEODI contents, panels, or notes, perform LDAP integration, and manage row-based authorization of database contents. Prior to this training, participants must have received GEODI user and Project management trainings.
+
+The scope of the training includes Project Wizard, with associated links https://decesw.atlassian.net/wiki/x/AQBq_Q and https://decesw.atlassian.net/wiki/x/pQDPFAE. It also covers User/Authorization Management, linked at https://decesw.atlassian.net/wiki/x/IoBgMgE, and Dictionary and Recognizers, linked at https://decesw.atlassian.net/wiki/x/bIDb7.
+
+The training covers GEODI User Management, including creating users and creating/assigning groups. It also details defining various types of authorizations: System Authorizations, Project Authorizations, Content Source Authorizations, Note seeing authorization definition, and Registered query authorization definition.
+
+Further topics covered include Panels and Authorizations, Operator Authorization for Classifier, LDAP integration (including Groups and User emails), and Changes in authority and duration of influence. The training also addresses Integration Authorization Sharing, reading authorizations from the database, and Authorization feed with Feed API.
+
+The training also covers Tokens and Authorizations, including the Token receiving interface and issues such as password change. Additionally, it addresses Guest User Authorizations, including Login with Google and OAuth2 (Facebook, Google, etc.).
+
+Trainings are intended to give a general idea, and participants need to reinforce what they have learned by applying it. Some of the features mentioned in the training may not be included in your lic﻿Purpose.

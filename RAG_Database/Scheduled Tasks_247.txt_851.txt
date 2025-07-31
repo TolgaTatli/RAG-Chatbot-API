@@ -1,0 +1,19 @@
+GEODI has a very powerful scheduler that automates various tasks, and templates are provided for frequently used ones.
+
+Scheduled Discovery is performed within the project wizard’s last page by activating the scheduled Index and setting a time.
+
+Scheduled Backup is set by default for all projects to occur every day at 03:00. Backups are saved in the Backup folder, which is located under the Project Workspace directory.
+
+Backup settings can be modified in the "Advanced Settings" section of the Project Wizard, but it is recommended to make changes only if there is a specific requirement.
+
+The Scheduled Report Mail template is designed to send a Summary report every week on Monday at 09:00 clock, and the report or period can be changed.
+
+The template for Scheduled Report Mail, SendWeeklyReport.jSettings.sample, is located in the Settings\Notifications\TimedNotification folder.
+
+To configure Scheduled Report Mail, the SendWeeklyReport.jSettings.sample file must be renamed to SendWeeklyReport.jSettings.
+
+For Scheduled Report Mail, the [TOMAIL] value needs to be replaced with recipients, and a semicolon (;) can be used between e-mail addresses.
+
+For Scheduled Report Mail, the [WSNAME] value needs to be replaced to workspace you.
+
+Multiple settings for different periods, projects, or reports can be configured by copying the jsettings file and setting a new ID.

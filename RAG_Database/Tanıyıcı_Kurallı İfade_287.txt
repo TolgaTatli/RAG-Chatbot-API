@@ -1,0 +1,21 @@
+Kurallı ifade tanıyıcı, belirlenen bir kurala göre hareket eder ve metinlerde biçimsel bir dil kullanarak tarif edilen kısımları seçip ayırmaya yarar. Bu tanıyıcının ne sonuç getireceği belirlenebilir. Genel olarak bu kullanım "Regex" olarak adlandırılır ve yaygın bir kullanımdır.
+
+Hazırlanan regex'leri test etmek ve hakkında bilgi almak için .NET Regex Tester sitesi kullanılabilir.
+
+Geodi kelimeleri büyük harfe çevirip kullandığı için, hazırlanan regex'lerde büyük harf kullanmaya dikkat edilmelidir.
+
+Dokümanlarda geçen boyut ifadelerini bulmak için `[0-9,\,]+X[0-9,\,]+X[0-9,\,]*[ ]*CM|[0-9,\,]+X[0-9,\,]+[ ]*CM` gibi bir kurallı ifade kullanılabilir. Bu ifade "25X25cm" veya "5x10x12,5 cm" gibi boyut ifadelerini bulmaya yarar.
+
+Dokümanlarda geçen sayfa ve adet sayılarını bulmak için `[0-9]+[ ]*SAYFA|[0-9]+[ ]*ADET` gibi bir ifade kullanılabilir. Bu örnek "10 Sayfa, 20 Adet" gibi ifadeleri bulmaya yarar.
+
+Dünya genelinde askeri standartları belirtirken kullanılan terimleri bulmak için `MIL-STD-[0-9]*[A-Z]*` gibi bir regex kullanılabilir. Bu regex ile "MIL-STD-1376" veya "MIL-STD-1246C" gibi örnekler yakalanabilir.
+
+Instagram adreslerini tanımak için `(HTTPS?://)?(WWW[.])?([Iİ]NSTAGRAM[.]COM)(([/?#][^\s]*)|\s+)` regex'i kullanılabilir. Bu ifade, https://www.instagram.com/deceyazilim/, www.instagram.com/deceyazilim/ ve instagram.com/deceyazilim/ gibi farklı yazım şekillerini destekler.
+
+Kurallara ek olarak yakın kelimeler, Luhn, Verhoef doğrulaması veya tamamen özel doğrulama algoritmaları yazılabilir.
+
+Sonuçları daha iyi incelemek için Kelimeler sayfası kullanılabilir.
+
+Hazırlanan regex ifadesinin başında ve sonunda boşluk olmamasına dikkat edilmelidir.
+
+Bu tanıyıcıyı kullanabilmek için Geodi Pro lisansına ve modülüne sahip olmak gerekmektedir.

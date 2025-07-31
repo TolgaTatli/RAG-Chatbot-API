@@ -1,0 +1,1 @@
+HA (High Availability) kurulum mimarisi için seçenekler mevcuttur. Desteklenen seçenekler Aktif-Aktif ve Aktif-Pasif'tir. Konfigürasyon, bu seçeneklere göre yapılmalıdır.

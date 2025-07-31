@@ -1,0 +1,9 @@
+Ziraat Katılım, one of Turkey's largest participation banks, utilizes GEODI for Sensitive Data Discovery. This process is described as the initial step for Information Security and BRSA Data Protection compliance.
+
+GEODI Semantic Discovery Tools are employed to test compliance with BDDK Data Security and KVKK regulations. These tools examine millions of documents and reports, identifying and flagging incompatible content.
+
+The GEODI Platform offers functionalities including Search, Discover, Mask, Encrypt, and Classify. These capabilities are part of the services provided by Dece Software.
+
+Dece Software's offerings include Contact Us, Support, Live Projects, Need Analysis, and Solutions. They also provide resources such as Blogs, Bulletins, Success Stories, Webinars, and Support & Technical Docs. Developer Resources, Technology, Partners, and References are also listed.
+
+The text lists several entities that are partners or clients, including Croatia, Ministry of Agriculture; Vakıfbank; National Budget Office of Nigeria; Ministry of Energy and Natural Resources; Saudi Finance Company; Al Tijaria; Topnet; National Finance of Omman; Palestine Investment Bank; Vakıf Katılım; Iron Mountain; Verifone; Green Crescent; Kahve Dünyası; Gelecek Varlık; ICT Authority; Ministry of Trade; Carrefoursa; Teknosa; Istanbul Chamber of Industry; Koton; Turkey Coal Enterprises; Unifree Duty Free; The North Marmara Motorway; and Türk Nippon Insurance. The categories Private Sector, State Agencies, and Municipalities & SPA are also mentioned in relation to Ziraat Katılım.

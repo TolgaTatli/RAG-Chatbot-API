@@ -1,0 +1,17 @@
+GEODI Live Projects demonstrate how GEODI operates using real-life project examples. GEODI offers AI-Based Search, Discovery, Masking, and Classification capabilities.
+
+The "GDPR & HIPAA Discovery" project illustrates how GEODI identifies all sensitive and personal data, including GDPR and HIPAA-related information, within data storages. GEODI also associates these data points with each other and provides insights from their content. It is also possible to search and find any information from the content. This project is associated with e-Discovery, GDPR, and Network Graph.
+
+The "London Politan" project shows how Smart Cities can track and access any data source and type from anywhere and anytime. GEODI assists Local Governments in accessing structured and unstructured data from a single point, connecting them with GIS without any manual process. This project is associated with Social Media Tracking, GIS, Geo Archive, Archive, and Documentation.
+
+The "Map of World News" project highlights GEODI's inherent ability to make every data searchable, even if it originates from various sources. It demonstrates how GEODI reads live sources from News Websites and transforms that data into insights. This project is associated with Network Graph, GIS, and e-Discovery.
+
+The "Interactive Documentation" project showcases GEODI's capacity to connect the content of documents with visuals and maps. An example provided is GEODI connecting documents related to specific parts of a Cessna 172 to an image of the airplane itself. This project is associated with Training and Documentation.
+
+The "Face Recognition" project elevates content search and data discovery through its face recognition capability. It enables the automated finding of the same faces in various photographs and videos, and allows users to see the relationships between people who were in the same photos or videos. This project is associated with Face Recognition and Network Graph.
+
+GEODI's references include Croatia, Ministry of Agriculture; Vakıfbank; National Budget Office of Nigeria; Ministry of Energy and Natural Resources; Saudi Finance Company; Al Tijaria; Topnet; National Finance of Omman; Palestine Investment Bank; Vakıf Katılım; Iron Mountain; Ziraat Katılım; Verifone; Ziraat Katılım; Green Crescent; Kahve Dünyası; Gelecek Varlık; ICT Authority; Ministry of Trade; Carrefoursa; Teknosa; Istanbul Chamber of Industry; Koton; Turkey Coal Enterprises; Unifree Duty Free; The North Marmara Motorway; and Türk Nippon Insurance. Additionally, references broadly include Private Sector, State Agencies, and Municipalities & SPA.
+
+GEODI's capabilities include Search, Discover, Mask, Encrypt, and Classify, with a stated commitment to data protection: "We Protect Your Data." The solutions offered by GEODI encompass Search, Discover, Mask, and Classify.
+
+DECE Software can be contacted via info@decesoftware.com. Other available links include About-Us, Blog, Bulletins, Webinars, Integrations, Career, and Privacy Policy.

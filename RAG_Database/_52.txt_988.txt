@@ -1,0 +1,1 @@
+Person-based masking is possible. This capability extends to role-based masking and anonymization. For further details, users should refer to the support page.

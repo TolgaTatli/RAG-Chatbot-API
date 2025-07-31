@@ -1,0 +1,1 @@
+17 hazır sorgu seti eklendikten sonra, örneğin önkv sorgusuna erişebilen gruplar veya kişiler için bir dashboard oluşturmak mümkündür.

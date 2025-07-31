@@ -1,0 +1,7 @@
+This package extends the capabilities of GEODI Discovery and Classification through country-specific semantic recognizers. It is specifically designed for Vietnamese.
+
+The package includes a Vietnamese ID Number Recognizer and a Vietnamese City Recognizer.
+
+This package must be installed after GEODI Discovery.
+
+The version of this package is 1.0.0.1.

@@ -1,0 +1,15 @@
+A Token can be obtained by generating a Geodi Token.
+
+The BulkRecognizeContents operation is defined as returning entries found by scanners in the existing workspace. These entries are derived from one or more content items submitted by the user to GEODI.
+
+The request for BulkRecognizeContents uses the URL `[GEODIURL]/DataExtractionHandler?op=BulkRecognizeContents&wsName=[WSNAME]&content=[ContentJson]&UserSession=[TOKEN]`. This operation supports both GET and POST HTTP methods.
+
+The request parameters for BulkRecognizeContents include `wsName`, which specifies the Workspace Name, and `content`, which is a JSON object containing content information. Further details about the content object can be found in the "Geodi ContentObject - Content Definition Object" document.
+
+Expected errors when using BulkRecognizeContents include 401 Unauthorized access / Access denied, 403 Forbidden, 511 Network Authentication Required, and 501 Server Error.
+
+The returning value for BulkRecognizeContents is a JSON object. This object contains "ElapsedMilliseconds" and an "Entries" array. Each entry within the "Entries" array includes fields such as "OriginalText", "Text", "StartIndex", "Length", and "Filter".
+
+In the returning value, "ElapsedMilliseconds" indicates the milliseconds spent for recognition. "Entries" is a list of entrances recognized by GEODI. "OriginalText" refers to the piece of text where recognition occurs, while "Text" is the recognized text made within the original text. "StartIndex" denotes OriginalText's starting position within the text, beginning from 0. "Length" specifies OriginalText's length, and "Filter" is the value created for the entry, if any.
+
+An example request for BulkRecognizeContents shows the `content` parameter as a JSON object containing a `Contents` array. This array can include multiple content items, each with properties like `ContentURL`, `DisplayName`, `ContentDate`, and `ViewURL`. For instance, one content item might have `ContentURL: '~/MyApplication/Content.php?id=1811'`, `DisplayName:'Document1'`, `ContentDate:'Mon, 06 May 2015 10:15:20 GMT'`, and `ViewURL: '~/MyApplication/ContentView.php?id=1811'`.

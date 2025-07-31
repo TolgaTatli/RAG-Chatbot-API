@@ -1,0 +1,75 @@
+GEODI 9 introduces numerous enhancements, making it, in the opinion of the developers, the best version yet. It includes major architectural upgrades such as a revamped Admin Interface and Workflow Engine, alongside significant improvements to Search, Data Discovery, and the DECE-STORE module. This version aims to provide the most powerful GEODI experience to date.
+
+With GEODI 9, the new Workflow feature significantly advances automation, enabling a wide range of operations to run completely hands-free, beyond just deletion or quarantine actions. Workflows can now be scheduled to run periodically or automatically trigger after a discovery process, facilitating tasks like sending emails upon discovery completion, classifying new data, or notifying users when PII is detected.
+
+GEODI 9 introduces Consent-Based Remediation, a governance-driven approach where data actions like deletion, quarantine, or redaction require explicit approval from authorized individuals, typically data owners or information custodians. Data owners can now directly drive the remediation process within GEODI 9.
+
+The Admin Interface in GEODI 9 has been completely redesigned for system administrators, offering a cleaner and more modern experience. This redesign makes frequently used actions easier to access, leading to faster and more efficient daily operations. Managing GEODI Clusters is also simpler, with streamlined configuration and more intuitive project management, which saves time and reduces complexity.
+
+GEODI 9 expands its coverage of digital data sources to include ElasticSearch, Amazon S3, Microsoft Teams, MinIO, and SSH. Additionally, a new Customization Report feature lists all customizations made in a GEODI environment and packages the differences for easy tracking, simplifying configuration management, server migrations, and troubleshooting.
+
+The Discovery Agent in GEODI 9 has been enhanced, allowing customization by server or IP directly through the interface. These agents now fully support data enrichment and actions across all platforms. GEODI has also improved its detection and querying of duplicate or similar content, making it easier to identify items in the same classification, remove near-duplicates, or securely dispose of exact copies.
+
+Several actions within GEODI 9 have received significant enhancements. The Secure Delete action now offers true permanent deletion and supports Windows, Linux, and macOS devices. The Copy action allows backing up original content across all content types before critical operations. The Masking action provides options for in-place masking or creating a masked copy, with expanded support for Windows, Linux, and macOS systems.
+
+The Encryption action in GEODI 9 has been upgraded to support multiple secure workflows, including in-place encryption or generating an encrypted copy, with extended endpoint support across Windows, Linux, and macOS environments. The Classification action has also been enhanced to allow automatic classification during discovery, application to existing data, creation of classified copies, or in-place classification based on customizable rules, with full endpoint support on Windows, Linux, and macOS.
+
+The Send Email action, a key component of GEODI 9 workflows, enables notification of stakeholders at any point during or after a process, providing information on what happened and when. Emails can be sent to individuals or entire LDAP groups and can include reports or other attachments directly in the message.
+
+Classification performance in GEODI 9 has been significantly improved, particularly for large Excel files, resulting in quicker processing times. GEODI Q also features enhanced AI-powered automatic classification. All actions within workflows are now thoroughly logged, capturing issues like corrupted files or unsupported formats, which is essential for diagnosing problems and improving operations.
+
+Logging capabilities in GEODI 9 have been expanded to cover additional system events, providing deeper visibility into operations. Syslog integration has also been improved, facilitating the forwarding of logs to centralized monitoring and SIEM platforms. A major upgrade to Template Projects makes classification and discovery templates fully generic, allowing a single template to support global use.
+
+GEODI 9 has initiated a series of UI improvements, making help texts instantly accessible directly within the interface, eliminating the need to click to read or navigate to a help page. Discovery for embedded and linked files has been improved, enabling GEODI to identify extensionless files and refine display names for clarity. Editors for advanced settings have been upgraded with smarter error detection and a refined interface to save time and reduce misconfigurations.
+
+GEODI SETUP 8.0.144, released on March 14, 2025, introduced several improvements. GEODI installation has been simplified, with online or offline module and agent updates now fully automated. A new option for Smarter Web Discovery automatically removes unnecessary content like headers, footers, and menus from web pages, enhancing efficiency for ChatBot development with GEODI Q or other discovery needs.
+
+GEODI SETUP 8.0.144 also expanded Classifier Tagging Options, allowing GEODI Classifier to support texts created with Word QuickPart for more effective development of non-standard tagging schemes. System updates now halt much faster, significantly reducing system downtime.
+
+GEODI SETUP 8.0.143, released on February 10, 2025, introduced email notifications with summary reports upon project discovery completion, eliminating the need for continuous monitoring. New Dashboard Tools were added, including the Counter/Multi-Counter tool, which allows for easily adding the number of words matching a rule in a query result.
+
+The Discovery Panel in GEODI SETUP 8.0.143 was enhanced with Finding Trend analysis and Counters. Counters now include Total PII content count, Total PCI content count, Copies count, and Data count older than 10 years. Trend analysis facilitates tracking changes in finding numbers over time, such as increases from newly discovered findings or decreases from destruction/quarantine.
+
+The Client Panel in GEODI SETUP 8.0.143 received new counters for Total Number of PCs, Number of PCs Analyzed, Number of Operating Systems, and Existing GDE Versions. Detailed information on data received from each machine is now available, enhancing system monitoring and analysis processes.
+
+GEODI SETUP 8.0.143 also improved the readability of Info, Warning, and Error messages, making them clearer and more informative with specific tags. The Office add-on for classification became faster, especially for large Excel files, and agents automatically update after GEODI updates.
+
+GEODI Q Recognizer in GEODI SETUP 8.0.143 received numerous enhancements, including Deepseek support, easier prompt writing, and internal resolution of challenging topics. Features like automatic segregation of multiple findings within a single content were introduced, along with pre-built recognizers for common purposes. GEODI Q Chat also became faster.
+
+GEODI SETUP 8.0.141, released on December 19, 2024, enabled GEODI to discover SSH sources, with agents still usable for some. The backup option is now default, with all templates active for backup to the /backup folder in the index folder daily at 03:00.
+
+Classification received various improvements in GEODI SETUP 8.0.141, making "Classify after discovery settings" more manageable and enhancing the recognition of labels and visual markings from alternative classification tools. GEODI Q's recognizer and chat features were greatly improved, enhancing advanced discovery and automated classification.
+
+GDE Agent installation was made easier in GEODI SETUP 8.0.141, as the Project wizard now generates the necessary Batch file for setup, which can be used with tools like ManageEngine or SCCM, or installed manually.
+
+GEODI SETUP 8.0.140, released on November 25, 2024, significantly improved the readability of Error and Warning messages displayed in logs and the interface, categorizing them as Error, Warning, or Information. An option was added to exclude Views during database discovery, reducing duplicate data and improving performance.
+
+GEODI SETUP 8.0.140 also introduced the ability to configure a manual proxy for email connections. For LDAP permission checks on shared resources, an option was added to ignore sharing and built-in permissions, with new settings applying to existing content via the "Adjust Permissions" feature without re-scanning.
+
+The default speed for new projects in GEODI SETUP 8.0.140 was increased from 3 to 5, resulting in faster project starts. Summary reports for projects and discoveries received visual and performance enhancements for a better user experience.
+
+GEODI SETUP 8.0.139, released on November 5, 2024, improved Classification Server and Agents, enhancing labeling and annotation features. Agents are now managed more easily via DECE-STORE, simplifying management on closed networks, and offline updates are also much easier to manage in such environments.
+
+GEODI SETUP 8.0.139 also introduced indexing of unknown file extensions, where files not on the ignore list will be indexed by their name and dates.
+
+GEODI SETUP 8.0.138, released on October 17, 2024, updated default values based on user feedback. Performance is now at its highest level. Unrecognized file extensions are now indexed by file name (previously ignored). MDB and file-based databases are indexed by name by default, with a module from DECE-STORE available to explore tables and rows. Maintenance tools, such as updating permissions, were also accelerated.
+
+GEODI SETUP 8.0.137, released on September 16, 2024, introduced the ability to query for file names and file contents, usable in searches or classifications. It also made it possible to compress old discovery and search indexes to transition them to the new, more compact index structure.
+
+GEODI SETUP 8.0.137 allows modification of default auto-classification rules using new dictionaries for Confidential and Restricted classes, where additions, deletions, or modifications affect classification rules. These dictionaries are accessible under the Classification tab on the GEODI dictionaries page.
+
+The name recognizer, a critical feature of GEODI NLP, was improved in GEODI SETUP 8.0.137 to recognize names in more languages, which is crucial for discovery and classification from unstructured data. GEODI now also handles digits consistently across all languages and alphabets.
+
+GEODI SETUP 8.0.137 added ready-made queries: `predefined:SourceCode` lists all source code files (requires module from DECE-STORE), and `predefined:CV` queries various CV documents based on content, supporting English, German, French, Arabic, Spanish, Portuguese, Hindu, Urdu, and Turkish.
+
+GEODI Setup 8.0.135, released on August 9, 2024, significantly enhanced discovery scope and performance for each country, introducing templates for each country and regulation as part of GEODI Discovery. Users can now search DECE-STORE with regulation names like GDPR, SAMA, or PDPL.
+
+GEODI Setup 8.0.135 also introduced the ability to limit System Administrators' permissions, preventing them from seeing content and discovery results while still allowing them to manage the system. LDAP support was improved, enabling queries for documents based on user and group visibility, and `user:` or `group:` queries can be used for classification.
+
+A new component was added in GEODI Setup 8.0.135 for system administrators to view all permissions for documents on the search interface, allowing them to click a document to see who can access it.
+
+GEODI Setup 8.0.134, released on July 25, 2024, significantly reduced index disk requirements and included minor performance improvements. The License dialog was improved for subscription licenses, making the remaining time more visible and simplifying license deactivation/activation.
+
+Sampled DB discovery in GEODI Setup 8.0.134 was optimized, making it up to 70% faster by reducing the workload on databases. Memory usage was also optimized to be almost constant for any dataset, addressing previous "out of memory" errors, while system requirements for memory remain valid.
+
+GEODI Setup 8.0.134 introduced new predefined queries and a dedicated page for detailed explanations, making it easier to address target data. Examples include `Predefined:PCI` for PCI/DSS regulation scope, `Predefined:PII` for PII data, and `Predefined:O5Y` for legacy data older than 5 years.

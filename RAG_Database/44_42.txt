@@ -1,0 +1,1 @@
+When connecting to Linux/Unix environments, authorization should be handled by Linux, as the process will involve GDE.

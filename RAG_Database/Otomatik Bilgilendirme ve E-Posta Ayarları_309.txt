@@ -1,0 +1,11 @@
+The Otomatik Bilgilendirme Mesajları (Automatic Notification Messages) feature provides two fundamental monitoring capabilities. Users can monitor desired queries, receiving automatic notifications when a change occurs in the query result, such as a new document being added. Additionally, users can ensure messages are sent to individuals mentioned in their notes, which facilitates easy sharing of notes with team members.
+
+In its default configuration, the feature allows users only to save their queries and share them with other users. To enable the full utilization of the Otomatik Bilgilendirme Mesajları feature, specific definitions are required. A prerequisite for users is to have an email address; for LDAP users, email settings configured via Active Directory are used.
+
+To ensure messages originate from an email address belonging to your organization, a specific setting must be configured. GEODI utilizes an email infrastructure for its notification and user settings. If these settings are left blank, notifications will be sent via a DECE Gmail account. Customization of this sender email requires following specific steps.
+
+Email settings can be accessed through the path GEODI/Manager/Ayarlar/e-Posta ayarları. Microsoft Office 365 is presented as an example in the accompanying visual. The server address and port number will vary based on the mail server in use. The sender display name can be freely determined, and this name will be visible to recipients as the sender information. It is noted that some servers may not support a display name.
+
+After configuring the settings, they should be tested. Once their functionality is confirmed, they must be saved. Incorrect email definitions will lead to the failure of notifications. If the password for the account used in these settings changes, it is necessary to update the settings accordingly.
+
+For links embedded within emails to function correctly, the ServerUri URL must be defined as outlined in the System Configuration - Security Settings. An example of this definition is { "ServerUri":"http://servis2.dece.com.tr" }.

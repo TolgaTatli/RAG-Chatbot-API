@@ -1,0 +1,7 @@
+Bootstrap is used in existing interfaces. The following steps must be followed to ensure that the prepared Dashboard is compatible with the themes.
+
+For Step 1, the Bootstrap grid structure should be used to split Bootstrap pages in dashboard content placements. The appropriate number of grids is used according to the density of the content.
+
+For Step 2, after dividing the pages into the desired structure, Bootstrap panels should be used to place the data fields. Panel-default, panel-info, panel-primary, panel-danger, and panel-success looks can be preferred depending on the theme.
+
+Subtext should be used for subtexts under panel-heading. If a heading is not needed, the part can be simply deleted, which allows for a box with a solid white background. Bootstrap panels also have a field, and this footer can be used if necessary.

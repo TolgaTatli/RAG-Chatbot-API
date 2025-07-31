@@ -1,0 +1,29 @@
+GEODI is designed to be easy to use and to assist users in their daily jobs, aiming to eliminate issues with accessing information. This page provides basic usage instructions for immediate use, and GEODI courses are also available on a dedicated page.
+
+The GEODI Search Page is the most frequently used page within GEODI. It integrates various functionalities including Search, Map, Calendar, Document View, Query Watch, Note Taking, and reporting.
+
+On the GEODI Search Page, users can type what they are looking for into a designated field. Both words and other criteria can be used for searches, with GEODI Query Rules applying.
+
+Search results are displayed in a specific field, allowing users to scroll up or down using the mouse wheel. The total number of content items found from the search is indicated in the top left corner of this field.
+
+Clicking on any content item in the search results displays a list of options. Users can open content using the 'Open' option. The available options may vary based on the content type, and can include note taking, copy, and similar content. Holding 'ctrl' while clicking will open the content within the current area.
+
+The Facet field is utilized to enhance the practicality of user queries.
+
+GEODI allows search results to be viewed in various ways, including Contents, Discovery, Map, Calendar, and Notes. The 'Contents' view lists files and other search results, allowing scrolling with the mouse wheel. The 'Discovery' tab enables navigation through content in a Windows discovery-like structure, showing directories and allowing navigation within them. The 'Map' view displays content locations on a map, where clicking provides access to the content. The 'Calendar' view automatically generates a calendar from content date information, allowing access to documents by clicking on relevant dates. The 'Notes' panel displays taken notes and their associated content, with the possibility of different panels existing in a user's environment.
+
+The 3-dot menu provides options such as language selection, report generation, and view settings.
+
+GEODI's Content Viewers enable direct display of a large volume of content without requiring external software. While a Word document serves as an example, GEODI offers distinct viewers for various content types, including DWG, NCZ, Videos, and E-mails. The following descriptions detail the common features across these viewers.
+
+Within the content viewer, users can view documents and scroll up or down using the mouse wheel. Moving the mouse while holding 'ctrl' will enlarge the document. Notes can be taken anywhere in the document by using the right mouse button.
+
+Users can include multiple content items in their search criteria. When one of these items is opened, subsequent items can be opened sequentially without needing to return to the previous view.
+
+The right-side panel of the content viewer displays information such as words/metadata, notes, copies, and versions of the content. Content types may have varying attachments. To download an older version of content, users can use 'shift+download', provided that backup options are enabled in the source.
+
+This area lists options that are dependent on user authorization, such as downloading content if authorized, or masking content if a masking license is held.
+
+Users have the ability to search within an open document.
+
+As of GEODI version 7.0.1.26858, documents viewed in the viewer can be downloaded. This download capability is currently available for *.dwg files if the viewer supports backup. To download the most recent version of a versioned document from the ES interface, the 'Shift+Download' combination can be used.

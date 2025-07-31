@@ -1,0 +1,3 @@
+Classification is not possible in SharePoint On-prem environments. In these environments, classification can only be performed if files are mapped to a directory, for example, using tools like RCLONE.
+
+GEODI uses the Modified Date instead of the Creation Date because the Modified Date is a more reliable value. The Creation Date changes in situations such as copying. Additionally, even if a file is old, it might still be in use, and the Modified Date shows this history, making it more reliable for operations like destruction or quarantine.

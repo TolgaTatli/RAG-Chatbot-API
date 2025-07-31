@@ -1,0 +1,7 @@
+Veri Keşfi ve Sınıflandırma süreçleri temel olarak iç içe ancak paralel ilerler. Verilerin keşfi, mevcut kaynaklar içindeki taranmak istenen alanlar üzerinde gerçekleştirilen bir işlemdir. Kaynaklar tanımlandıktan ve keşfedilecek öğeler ayarlandıktan sonra GEODI, taramaları tamamen otomatik olarak yapar ve kurumsal arama ile keşif sonuçlarını içeren çıktılar sunar.
+
+Sınıflama tarafında, mevcut verinin keşfe dayalı olarak otomatik sınıflanması mümkündür. Bu, bir kural ile veri keşfedildikçe sınıflanmasının sağlanmasıyla gerçekleştirilebilir.
+
+Son kullanıcı bilgisayarlarındaki veri sınıflama ajanının amacı, kurum politikasına göre farklılık gösterebilir. Bu ajanın temel amacı, kullanıcıların dosya ve e-postaları kaydederken veya gönderirken bir gizlilik sınıfı belirtmelerini sağlamaktır. Bu süreç, kuruma ait bir karar olarak, kullanıcıya manuel seçtirme, otomatik öneri ile kullanıcıya bırakma veya tamamen otomatik sınıflama gibi çeşitli konfigürasyonlarla çalışabilir.
+
+Birçok kurum, kullanıcıların bilinçlenmesini sağlamak amacıyla manuel sınıflama ile başlasa da, zamanla otomatik sınıflamaya doğru ilerlemektedir. Bu ilerleme özellikle keşif yoluyla mevcut veri üzerinden başlatılmaktadır.

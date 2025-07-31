@@ -1,0 +1,3 @@
+Parent-child relationships can be established in a manner similar to Elasticsearch.
+
+It is possible to perform a parent search by utilizing child data.

@@ -1,0 +1,53 @@
+GEODI can discover many sources without an agent. However, for situations where sharing is not available or preferred, or for a large number of endpoints, the GDE agent must be used. The GDE agent enables actions such as Destruction, Quarantine, Classification, and Masking on endpoints.
+
+To connect GDE agents, several conditions are required. For installing on many clients, a tool like ManageEngine or SCCM and an authorized user are needed, with MSI distribution parameters automatically generated via the Project Wizard/Feed Source/GDE connection. A GEODI user with feeding authority is also required, solely for token generation. Client machines must have access to the GEODI server, and the GEODI server must have access to client machines with port 1982 (which can be changed) open. Additionally, the directories and file types to be discovered on client machines must be determined, and default directories can be changed on a client-by-client basis.
+
+GDE agents support Windows, Linux, MacOS, and Pardus platforms. Agent updates for Windows clients are fully automatic. GDE agents are automatically downloaded via the GEODI Discovery module from a provided MSI link. Windows agents will update themselves from this directory when a new version is released.
+
+The GDE agent can be installed as a Windows Service for File Servers. Active agents can be monitored through the GEODI Agent Management Panel.
+
+GDE discovery settings allow users to determine which file types and directories will be discovered, along with their preferences. GDE clients automatically receive these settings in approximately 1 hour. Settings can be changed even while discovery is ongoing, and these changes will only affect the scope of future discoveries. These settings are accessed via "Keşif Ayarları" and can be applied as a single setting for all clients or customized based on IP, User, or Machine name.
+
+The `FolderList` setting, a string array, is used to specify folders for scanning. Folders can be defined separated by commas, and Windows, MacOS, and Linux client folders can be used together. Default directories include user profile, users, and home folders, encompassing documents, downloads, and desktop. Values are case-sensitive, and subdirectories can be defined. To scan all disks, `["*"]` can be used.
+
+The `ExplorerPort` setting, an integer, allows content to be viewed on GEODI as long as the client is open if a value greater than 0 is entered. The selected port must be confirmed as open. For two-way communication between GDE and GEODI, port 1982 must be open on clients by default, though this value can be changed. If the `ExplorerPort` value is not specified in the settings, GDE performs one-way feeding, allowing files to be searched but not viewed.
+
+The `EnableLDAP` setting, a boolean, indexes LDAP permissions for files if set to `true`. The default value for this setting is `false`.
+
+The `IgnoreFolders` setting, a string array, specifies a list of folders to be ignored, accepting `*`. These settings are combined with the rules under `Geodi Settings/IgnoreFolders`. The default value is `null`. GEODI's central file/folder ignore rules always apply, and the restrictions specified within the GDE settings are added on top of these.
+
+The `IgnoreFiles` setting, a string array, specifies a list of files to be ignored, accepting `*`. These settings are combined with the rules under `Geodi Settings/IgnoreFileTypes`. The default value is `null`. GEODI's central file/folder ignore rules always apply, and the restrictions specified within the GDE settings are added on top of these.
+
+To protect network resources, by default, only the name and date of files larger than 100MB are indexed. For compressed file contents, this limit is set to 500MB. These values can be changed on the GEODI server.
+
+Metadata can be defined to parse files coming from clients, and macros can be defined for this metadata. This metadata can be used for searching and will be visible along with their values in the GEODI search interface.
+
+If indexing has not started, several troubleshooting steps can be taken. Verify that the client has access to the GEODI Server by attempting to access GEODI from a browser on the client. Ensure the GEODI server can access the GDE on the client by typing a specific address in a browser on the client, which should return `null` if there are no issues, and confirm the GDE rules' specified or selected port is open. Check firewalls, antivirus, or similar tools that might be blocking communication. Confirm the client machine is running and GDE is installed and active, with `Geodi.Desktopexplorer.exe` visible in the task list. Verify the validity of the obtained TOKEN. If the endpoint status appears good in the Agent Management Panel, waiting for a period may resolve the issue as the GEODI Server queues incoming data. If data still isn't arriving, check the `FolderList` and `IgnoreFiles` values in the GDE rules. If only a specific file type is not arriving, ensure its extension is not included in the `IgnoreFiles` value within the GDE rules.
+
+If the provided settings are not taking effect, verify that the settings file is a valid JSON using an online tool. Settings typically become effective within a few hours, but this process can take up to 3 hours if the client's IP address has changed.
+
+Some files may not be indexed due to default settings that block large files, such as videos. Files larger than 100 MB or compressed files larger than 500 MB are blocked. These settings can be changed, and the changes will become effective in approximately a few hours.
+
+If a client machine is formatted, it will be registered as a new client, but the old index will be preserved in GEODI.
+
+If port 1982 is unavailable or in use, it can be replaced with any available port, but care should be taken not to assign previously used ports. Setting the GDE connection port to 0 will prevent GEODI from opening remote files, though searching and discovery will remain unaffected.
+
+To query discovered content on clients, standard GEODI queries are used. For example, files from a given machine name can be listed, or PDF files from a given machine name, or PDF files containing the word "sözleşme" from a given machine name.
+
+Remote classification on clients is possible using the GEODI Batch Classification tool, which classifies content discovered by GDE, provided that Classification agents are installed on the client.
+
+GEODI improvement tools can be used to improve (manipulate) remote files. The only requirement is that the user must have delete/update permissions on the remote machines. This allows GEODI to delete, create, or encrypt remote files just like local ones.
+
+If a client is shut down, searching remains unaffected, but files cannot be opened, viewed, or modified (e.g., destroyed or masked).
+
+GDE clients do not copy discovered files. However, if local files need to be backed up, the "İçerikleri Yedekle" (Backup Contents) checkbox in GEODI source settings can be checked. This setting can be enabled or disabled at any time.
+
+System Administrators can view all discovered files from clients. Permissions for other users depend on the "Enable LDAP" settings; if LDAP is enabled, local permissions are used. It is possible to configure each user to see only their own computer files, and the DECE team should be consulted for instructions on how to achieve this.
+
+If a client machine is formatted, GDE is reinstalled in the standard way. The client will be considered new, and old data will be preserved in GEODI.
+
+The GDE API can be accessed via a browser for making requests and for error diagnosis. The `/DEW?op=GetStatus` endpoint can be used to ascertain the GDE's current status, with the default port being 1982, which is changeable. The `/DEW?op=GetLastError` endpoint can be used to retrieve errors encountered during the GDE feed, returning `null` if no error is found.
+
+GDE can be installed as a Windows Service to index or discover File Servers. In addition to Windows MSI requirements, the Windows Service user must have read-only access permissions to the FileServer directories. Separate setting files must be created under the GEODI Server for each fileserver to define the directories to be indexed and other rules. After GDE Windows installation, it can be converted into a service using `WindowsServiceInstall.bat` located in the same directory, and the service mode can be removed with `WindowsServiceUninstall`. A login user is not required in service mode.
+
+For distribution with tools like ManageEngine or SCCM, MSI parameters are automatically generated by the GDE interface. The `GEODI_URL=` parameter specifies the GEODI server address, which is recommended to be secure with DNS/SSL settings configured. The `GEODI_WSNAME=` parameter indicates the project where data will be collected. The `GEODI_TOKEN=` parameter is automatically generated; the password of the user from whom the token was obtained should not change, as a password change may necessitate re-creation of the token and re-installation. Commands for installation include `"GEODI.Classifier.msi" /quiet GEODI_URL="..." GEODI_WSNAME="..." GEODI_TOKEN="..."`, which is automatically generated by the GDE interface. To uninstall, the command `msiexec.exe /x "GEODI.DesktopExplorer.msi" /qn /norestart` is used.

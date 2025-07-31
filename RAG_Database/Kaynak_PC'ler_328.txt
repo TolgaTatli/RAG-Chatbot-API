@@ -1,0 +1,7 @@
+Windows, Linux veya MacOS işletim sistemlerini kullanan çok sayıda PC'de bulunan veriler, keşif veya arama amaçları için indekslenebilir.
+
+GEODI Desktop Explorer (GDE) ajanı, GEODI Desktop Explorer (GDE) sayfasında açıklanan yöntem kullanılarak PC'lere dağıtılmalıdır.
+
+GEODI Desktop Explorer (GDE) birkaç imkan sunar: PC'lerdeki verilerin keşfini sağlar ve kullanıcı hangi dizinlerin keşfedileceğini belirleyebilir. Ayrıca, arama amaçlı olarak her kullanıcı genel verilerin yanı sıra sadece kendi PC'sindeki verileri de arayabilir.
+
+PC'lerdeki veriler merkezi bir noktada yedeklenebilir. Bağlantı için gereken şartlar doğrultusunda, GEODI Desktop Explorer (GDE) sayfasında yer alan kurulum adımları izlenmelidir.

@@ -1,0 +1,1 @@
+It is possible to add phrases such as “Gizli Bilgi” or “Hassas Veri İçermektedir” onto documents when they are sent. This is achieved because explanations can be added to GEODI class rules, and in this way, these explanations can be written onto the document.

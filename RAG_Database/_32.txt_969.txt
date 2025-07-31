@@ -1,0 +1,3 @@
+Sınıflandırma ayarlarında watermark dik şekilde yerleştirilememektedir.
+
+Watermark'ın sınıflandırma ayarlarında dik şekilde yerleştirilmesi, yol haritasında olan bir özelliktir.

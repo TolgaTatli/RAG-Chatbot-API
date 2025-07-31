@@ -1,0 +1,13 @@
+This course focuses on the deployment of GEODI discovery tools or agents to end computers. It covers GEODI-specific topics and assumes the user is familiar with systems like ManageEngine or PDQ, which are developed for agent deployment. The course content is technical, has a duration of 30 minutes, and has no prerequisite trainings. Trainings are intended to provide a general idea, requiring reinforcement through application, and some features mentioned may not be included in the user's license.
+
+The course scope includes the installation of the Discovery Agent, GEODI Desktop Explorer (GDE), and covers what GDE is. It addresses EndPoints GDE Setup, the Agent Management Panel, and typical problems or issues and their solutions, such as port issues, identifying and customizing directories and content, and managing numerous EndPoints and queues. The course also covers querying data received with GDE, querying data from a specific machine, GDE continuous exploration, GDE EndPoint resource utilization, and GDE updates.
+
+Further topics within the course scope include GDE Setup for Servers and GDE Service, as well as considerations for Linux and MacOS Machines. Other areas covered are classification with GDE, actions like destruction and quarantine with GDE, enabling everyone to see their data, and EndPoint data backup.
+
+For practical assignments, GDE will be installed on a client, and users are expected to install GDE and demonstrate the discovery results. Before installation, it is necessary to verify that the default port 1982 is open and that clients can connect to the GEODI server.
+
+The practical steps involve checking port and other conditions, creating a temporary directory on the client for exploration, and adjusting GDE settings accordingly. GDE installation can be manual or performed using tools like ManageEngine or SCCM if the user has the competence. After installation, the client's appearance in the Agent Management Panel must be confirmed, and results should be viewed or reported in the GEODI interface, including searching GDE to ensure files open and display.
+
+Client-based customization allows for GDE settings to be customized for a second client based on its IP address. This customization may involve specifying directories in general or file types to be omitted. For Linux or MacOS client setup, installation should be done on a machine running one of these operating systems, as the MSI installation for Windows is not valid in these environments.
+
+GEODI is capable of discovering FileServers directly or via SSH without requiring an agent. However, if discovery with agents is desired, GDE can be installed as a service on Windows servers, depending on specific needs.

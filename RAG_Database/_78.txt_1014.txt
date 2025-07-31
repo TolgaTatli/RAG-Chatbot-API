@@ -1,0 +1,1 @@
+GEODI Classifier allows for the definition of a Class Super Category.

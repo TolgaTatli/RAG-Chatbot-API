@@ -1,0 +1,5 @@
+There are two ways to index or discover file servers.
+
+If a network share is available, the "Source:Folder" method can be used to index or discover file servers.
+
+Alternatively, if there is no network share or if the GEODI Service user permissions are insufficient, the GDE agent can be used as a service. For more information on this method, users should refer to the "GEODI Desktop Explorer(GDE) Installation" guide.

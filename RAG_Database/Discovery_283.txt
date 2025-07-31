@@ -1,0 +1,21 @@
+GEODI Discovery, çok sayıda farklı sektör ve amaç için keşif yapabilme imkanı sunar. Bu sistem, zengin bir veri kümesini keşfeder ve pek çok ülke için yerel Kimlik ID ile regülasyonları destekler. Yüksek doğruluk ve hız, GEODI Discovery'nin önemli hedeflerindendir.
+
+Bir keşif projesinde izlenecek temel adımlar bulunmaktadır. Bu adımların her bir kaynak için ayrı ayrı izlenmesi projenin yürütülmesini kolaylaştırır ve tüm kaynaklar için tamamlandığında proje de tamamlanmış olur. Zaman içinde ortaya çıkabilecek yeni kaynaklar veya yeni keşif kapsamları da benzer şekilde yürütülür.
+
+Keşif kapsamı, regülasyonları içermektedir. KVKK, GDPR, DPDPL veya PCI/DSS gibi regülasyonlar kapsanmaktadır. Gerekli eklentiler DECE-STORE'da yapılacak bir arama ile kurulabilir.
+
+Farklı ülkelerin farklı regülasyonları bulunmaktadır; ID numaraları ve pasaport numaraları farklılık gösterebilir. DECE-STORE bu farklılıkları kapsamaktadır.
+
+Kopya ve benzer belgelerin yönetimi önemlidir; ortalama %40 dokümanın kopya ya da benzer olduğu belirtilmektedir. Orijinalleri hariç tutularak kopya veya benzerlerin imhası veya ayrıştırılması mümkündür.
+
+Coğrafi yetenekler kapsamında parsel numarası, koordinat ve WKT gibi bilgiler keşfedilmektedir.
+
+GEODI Q ile LLM teknolojisi keşifte kullanılabilmektedir. Yazılan prompta göre dolandırıcılık, hakaret, zararlı e-posta, işe uygun CV, dokümanların tasniflenmesi, özet çıkarılması ve daha fazlası yapılabilmektedir.
+
+GEODI, çok sayıda veri kaynağına bağlanabilir ve dosya türünü keşfedebilir. Bu kaynaklarda hassas veri bulunmasının yaratacağı risk kullanıcı tarafından belirlenir ve keşif sonrası bir risk raporu üretilir. Veri kaynaklarının bağlanması için Proje Sihirbazı kullanılır.
+
+Tüm işlemler, sonuçların irdelenmesi aşaması için yapılır. Her bir kaynak taranır, hassas veriler keşfedilir ve raporlanır. Keşif sonuçlarının nasıl sorgulanacağı ve gerektiğinde imha veya karantina gibi aksiyonların nasıl alınacağı detaylı olarak anlatılacaktır.
+
+Keşif sonuçlarını inceleme ve aksiyonlar kapsamında, Onay temelli Veri İyileştirme önemli bir özelliktir. Bu özellik, kurumlarda veri imhasının önünde duran pek çok engeli aşmada fayda sağlar.
+
+GEODI, yapısal ve yapısal olmayan veri kaynaklarında ortalama 0.5-1.5 TB/gün gibi bir veri işleme hızına sahiptir. Ancak bu hız dahi birkaç yüz TB ve üzeri verileri makul sürelerde işlemeye yetmeyebilir. Bu amaçla, birden çok sunucuya GEODI kurularak bir Cluster oluşturulmalıdır. GEODI Cluster konfigürasyonu, merkezi raporlama ve yönetim gibi özelliklerle çok sayıda GEODI sunucusunun tek bir GEODI gibi yönetilmesini sağlar. Örneğin, 50 TB veriyi 3 haftada keşfetmek için minimum 2 ila 4 sunucuya ihtiyaç duyulabilir. Bu konu GEODI 302 Sistem Yönetiminde anlatılacaktır.

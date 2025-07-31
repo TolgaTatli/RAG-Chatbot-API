@@ -1,0 +1,11 @@
+For Debian Linux based distributions, the installation of GDE Linux involves downloading the *.deb package. The setup is completed by simply saying "next" during the installation process.
+
+After the setup of GDE Linux is completed on a Debian system, TOKEN and URL settings are configured using a *.json file on the client machine. This *.json file is then thrown to the directory where the package is installed using the command: `$ sudo cp Settings.json /usr/share/dece/gde/Settings.json`.
+
+For autostart functionality on Debian systems, the GDE dll file must be added to the *bashrc file, along with the path to the GDE files.
+
+For Linux Red Hat setup, the installation steps involve downloading the *.rpm package. The setup is completed by simply saying "next" during the installation process.
+
+After the setup of GDE Linux is completed on a Red Hat system, TOKEN and URL settings are configured using a *.json file on the client machine. This *.json file is then thrown to the directory where the package is installed using the command: `$ sudo cp Settings.json /usr/share/dece/gde/Settings.json`.
+
+If documents are not displayed when feeding is started in GEODI on a Red Hat system, Red Hat Firewall settings should be checked.

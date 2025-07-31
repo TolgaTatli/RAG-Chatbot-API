@@ -1,0 +1,7 @@
+This training aims to teach how to install and make GEODI operational. The duration of the training is 3 x 25 minutes. Mandatory participants for this training include Technical and Test personnel. The scope of the training covers GEODI Server Installation.
+
+In this training, participants will follow the GEODI Server Installation page and its sub-pages. For the installation, no information other than license information will be needed. Participants must obtain their license code from DECE teams.
+
+The installation topics covered include AppDataFolder change, Windows Service topics, Logon user/Service user topics, SSL definition and renewal, DECE-STORE, Update, and Offline installation.
+
+The records for this training are located at \\decenas\Public\GEODI_AKADEMI\Courses\GEODI\GEODI_301_Kurulum_ve_Sistem_Yonetimi.mp4.

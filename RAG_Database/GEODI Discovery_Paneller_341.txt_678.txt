@@ -1,0 +1,11 @@
+Paneller, GEODI keşif sonuçlarını özet olarak sunar ve raporlardan daha kolay sonuçlara ulaşılmasını sağlar. Panellerdeki özetler sorgulardan etkilenir, bu da etkin sonuca daha kolay erişim imkanı tanır. Panellerin ardından Rapor ve Aksiyonlar kullanılabilir.
+
+Panellere sistem yöneticileri ve belirli bir grubun üyeleri erişebilir. Paneller, yalnızca Gelişmiş Workspace ayarlarında GenericSettings içine dahil edilmiş projelerde görünür.
+
+Keşif Paneli, bulguları, kopya içerikleri ve regülasyonlara uymayan içerikleri özet olarak raporlar. Bu panel hakkında daha fazla bilgi için GEODI 131 eğitimine bakılabilir.
+
+PCI/DSS Paneli, PCI/DSS Modülü ile birlikte gelir. Projeler sadece kaynak tanımı yapılarak oluşturulabilir. Bu panel üzerinden PCI/DSS Regülasyonuna uyumluluk kontrol edilebilir.
+
+Client Paneli, GDE ve Classifier ajanlarını izler. Bu panel yalnızca Sistem Yöneticileri tarafından görülebilir.
+
+GEODI Ajan Yönetim Paneli de mevcuttur.

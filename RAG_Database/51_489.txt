@@ -1,0 +1,3 @@
+Yetki Ekranındaki "Ayarlar" sekmesi her zaman görüntülenmektedir.
+
+Classifier çözümleri, piyasadaki öncü DLP çözümleri ile uyumludur; bu çözümler arasında ForcePoint, Symantec ve TrendMicro bulunmaktadır.

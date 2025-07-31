@@ -1,0 +1,21 @@
+GEODI Document Management software includes Digital Signature search, allowing users to search for e-signatures in documents and query electronic signatures.
+
+GEODI recognizes, makes searchable, and extracts metadata from over 200 content types and media without requiring manual intervention.
+
+E-signatures are now recognized by GEODI. Users can query which documents are e-signed, or determine who and when documents were signed.
+
+GEODI's capabilities include Search, Discover, Mask, Encrypt, and Classify, which contribute to data protection.
+
+An entry titled 'GEODI Recognizes E-Signed Documents' was published on September 6, 2021, and is estimated to take 2 minutes to read.
+
+An entry titled 'Enhancing DORA Compliance with GEODI: A Unified Approach to Data Security for Financial Firms' was published on April 12, 2024, and is estimated to take 3 minutes to read.
+
+An entry titled 'Revolutionizing Data Discovery with GEODI Q' was published on November 20, 2024, and is estimated to take 2 minutes to read.
+
+An entry titled 'Build your AI Assistant with GEODI' was published on November 19, 2024, and is estimated to take 2 minutes to read.
+
+An entry titled 'Now it is time to leave manual classification and let AI do it' was published on November 17, 2024, and is estimated to take 2 minutes to read.
+
+An entry titled 'How do you maintain your Data Security Posture Management, DSPM?' was published on October 1, 2024, and is estimated to take 4 minutes to read.
+
+An entry titled 'Palestine Investment Bank Manages Security Posture with GEODI' was published on August 28, 2024, and is estimated to take 2 minutes to read.

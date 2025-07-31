@@ -1,0 +1,7 @@
+GEODI indexes structural data such as databases and Excel. GEODI effectively brings together structural and unstructured data.
+
+Searches within this data can be limited by providing a field name. If the same field name appears in multiple tables, GEODI will search all of them. For a specific table, the table name can be specified using "parent:".
+
+GEODI collects field names itself. Indexing is performed automatically, but users can determine how tables will be indexed using views or other methods if desired.
+
+Structural data can come from different sources. For example, it is used to query PC data coming with GDE (GEODI Desktop Explorer) by IP, Computer Name, or User Name.

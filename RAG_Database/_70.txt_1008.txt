@@ -1,0 +1,1 @@
+The LDAP File/Directory Read Permissions Configuration is valid for a user in the SystemAdmin Group. To enable this, the method specified on the authorization page must be used.

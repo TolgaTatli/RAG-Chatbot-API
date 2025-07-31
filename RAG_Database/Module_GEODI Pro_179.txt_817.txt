@@ -1,0 +1,11 @@
+The GEODI Pro module provides database indexing capability and a canonical expression recognizer. This module is mandatory for Discovery, and its recognizer uses Regular Expression.
+
+For GEODI Users, the scope of training includes understanding how database records look like. A specific project to be used is identified by the URL https://servis2.dece.com.tr/?wsName=1013-TR-Ki%C5%9Fisel%20Veri%20Ke%C5%9Ffi&Tab=DLV&f=s.1795690074, which also includes unstructured data. Users are also instructed on how to perform a fieldindex search.
+
+For GEODI Admins, Section 1 addresses Databases, specifically defining what a Database Source is and how to connect it. The source is identified as Database Data Source.
+
+For GEODI Admins, Section 2 covers Regular and End Expression Recognizers. This section explains what these recognizers are and how to add one's own recognizer.
+
+For GEODI Admins, Section 3 focuses on Executive Reports. In this section, GEODI report features become active, allowing incoming reports or reports prepared later to be used within GEODI.
+
+For GEODI Admins, Section 4 pertains to the KLV (Words) tab, which includes Questions and Answers.

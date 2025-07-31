@@ -1,0 +1,3 @@
+This training enables users to begin using GEODI. After completing the training, users will be capable of using GEODI for corporate search, archive, social media monitoring, and process management.
+
+Suggestions for future courses include GEODI 102 Query Rules. Users should not hesitate to request support from the teams if they are uncertain about a topic or unable to perform a task. Additionally, it is noted that some GEODI features may not be included in a user's license.

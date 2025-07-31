@@ -1,0 +1,1 @@
+Reports are available to monitor GEODI's indexing status. GEODI's search interface, along with other interfaces, offers a variety of report options. Within these reports, users can find details such as errors encountered during indexing, as well as file and line numbers.

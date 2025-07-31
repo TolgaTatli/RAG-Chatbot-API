@@ -1,0 +1,11 @@
+This training covers Masking and Anonymization using GEODI. While these are two distinct concepts, they share a common technological foundation within GEODI and follow similar operational workflows, making them efficient to learn together. The training includes both masking and anonymization techniques, their use cases, and how to implement them effectively within a data protection strategy.
+
+The training is designed for a Technical audience and has a duration of 30 minutes. There are no prerequisites for this training.
+
+Masking is the process of hiding sensitive data by replacing it with fictional but realistic values, while maintaining data format and usability. Common use cases for masking include displaying data to unauthorized users without exposing sensitive content, masking names, IDs, or contact information in reports, and obscuring personal data in test environments.
+
+Anonymization removes or irreversibly alters personal data so it can no longer be linked to an individual. Common use cases for anonymization include compliance with regulations such as GDPR, KVKK, or HIPAA, sharing data for analytics without violating privacy, and public dataset publishing.
+
+Key concepts in GEODI include Permanent Masking, which alters data at the source for irreversible protection. Masking & Anonymization Rules / Profiles define how different data types, such as names, numbers, and emails, are handled. Dynamic Masking masks data in real time without changing the original source, ideal for UI-level security. Database Masking applies masking rules directly on structured data sources like SQL or PostgreSQL. Bulk Masking via Actions automates large-scale masking operations across files, emails, SharePoint, and databases, integrated into GEODI Workflows.
+
+Trainings are intended to provide a general idea, and users need to reinforce what they have learned by applying it. It is noted that some features mentioned in the training may not be included in a user's license.

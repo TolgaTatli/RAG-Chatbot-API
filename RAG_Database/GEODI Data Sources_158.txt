@@ -1,0 +1,5 @@
+GEODI content can originate from various sources. Users define these data sources when they create their GEODI projects.
+
+Certain data sources are included as part of the GEODI Standard. For information regarding other data sources, users should consult the relevant module page.
+
+GEODI supports content from a variety of sources, including Folder, File Server, PC's, Databases (which includes DB Meta Definitions), E-mail, Webpage, Confluence, Amazon S3, FTP&WebDAV, Dropbox, Google Drive, OneDrive, MOBIDI Records, SharePoint, and SSH.

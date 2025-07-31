@@ -1,0 +1,3 @@
+The 'Hide Admin Panel' feature hides the Login screen for standard users. This functionality is applicable in environments that contain GDE and Classifier distributions.
+
+The version associated with this information is 1.0.0.2.

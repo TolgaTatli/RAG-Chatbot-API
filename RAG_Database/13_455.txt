@@ -1,0 +1,3 @@
+GEODI accesses paths and sources that are data sources within the user's environment, scanning areas based on user-provided permissions. The primary scope of GEODI is the discovery of sensitive data. It is not designed for the detection of vulnerabilities or malicious content, even if harmful software or suspicious situations are present in the scanned areas.
+
+A recognizer has been developed in a study to discover content and websites from a list of harmful sites internally. This capability may allow for the discovery of whether content belonging to these types of websites is circulating within the environment.

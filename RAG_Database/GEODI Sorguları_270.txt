@@ -1,0 +1,27 @@
+GEODI Queries are central to all solutions and are a key component for GEODI to be a powerful DSPM. These queries serve as the method to express what a user is monitoring or interested in.
+
+GEODI Semantic queries facilitate easy searching within complex, unclassified, and diverse documents. Queries also support discovery by enabling users to find what they are looking for, separate risky data, and take actions like destruction or quarantine when needed.
+
+Automatic classification in GEODI leverages queries, allowing documents to be automatically classified using rule-based or AI-based recognizers. For data analysis, queries are used to separate different views and parts of the same data within panels, where discovery results can be seen in panels and reports.
+
+GEODI queries enable the monitoring of specific situations, such as the arrival of an invoice, the entry of PII data into a risky area, or the receipt of data concerning projects of interest to a manager. When data matches a query rule, GEODI notifies relevant stakeholders.
+
+The GEODI Query language is designed to be as simple as Google, allowing users to type words and view results. Beyond basic word searches, GEODI offers semantic queries that provide clearer access to data in situations where simple keywords may be insufficient.
+
+GEODI can perform queries based on dates found within the content of documents, not just the document's creation date. These dates are recognized as semantic entities by GEODI, regardless of their format, and the system offers multiple methods for querying them.
+
+The GEODI discovery tool can identify and process money expressions written in various formats within documents. These expressions are converted into a single standardized format based on their value and currency, which would be difficult to find with only keyword searches. Recognizing money is beneficial for automatic classification and fine-tuning authorization schemes.
+
+GEODI supports various search types, including Basic Search, searching by Content Name or Type, and by Dates. It also allows searching based on Discovery Findings, for Duplicate or Similar Content, and by Database Columns and Fields.
+
+Further search capabilities in GEODI include searching by Word Proximity, Content Version, Parent/Child relationships and Source, Content Ownership and Permissions, and by Email and Domain. Users can also search with Images, by Content Language, for E-Signed Documents (including viewing), and perform Positional Queries. Queries can be Saved, Monitored/Alarmed, and Sorted.
+
+GEODI provides various query examples to demonstrate its capabilities. Users can specify a time constraint and document type, such as searching for PDF documents from January to March 2017 containing "Ankara" using "Ocak-Mart 2017 doc:*.PDF Ankara". Similarly, to find email documents containing "Ankara", the query "doc:e-Posta Ankara" can be used, as GEODI treats both PDF and e-Posta as content types.
+
+GEODI allows searching within compressed files; for instance, "parent:*.ZIP doc:Metraj* Duvar" limits results to ZIP files containing documents that start with "Metraj" and include "Duvar". The system also supports searching based on notes or child documents, such as finding CVs with positive notes using "child:(*.geodinote “görüşelim”)" or negative notes with "child:(*.geodinote "uygun değil")".
+
+Users can exclude specific terms from their searches, for example, "Ankara -Kale*" finds content containing "Ankara" but not "Kale". To address different spellings or variations of the same word, GEODI enables the creation of a dictionary for a specific sector or need, allowing terms like "Yapay Zeka", "Artificial Intelligence", "AI", "Expert System", and "Uzman Sistem" to yield the same result.
+
+GEODI offers duplicate rules to identify copies of content, even if they are located in different places like a directory or an email attachment. For example, "kopya parent:*.ZIP" can find copies where one is within compressed content. The system also supports word proximity searches, where "Metraj() Duvar" ensures "duvar" is within a default distance of 10 words from "metraj", while "Metraj Duvar" finds them without this proximity constraint.
+
+The proximity rule in GEODI is useful for finding related documents and their locations, such as people related to a date or places related to a word. A query like "kaza()" can generate a map showing only relevant locations, a word page showing only relevant words, or an accurate network graph. Removing the "()" from the query allows users to see results without the proximity constraint. This functionality supports various queries, including maps of accidents from web pages, individuals related to a topic, or people associated with an idiom.

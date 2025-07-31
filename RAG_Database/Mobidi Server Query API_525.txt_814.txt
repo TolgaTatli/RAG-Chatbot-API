@@ -1,0 +1,15 @@
+A token is required to use this function. This service can be used with any client capable of calling REST APIs and parsing JSON results.
+
+The "Query" function returns an array of records corresponding to the query. For comprehensive details on all functions, including parameter and response types, users should visit the technical page of MobidiQueryManagerHandler.
+
+Requests for the "Query" operation are made to `[MOBIDISERVERURL]/MobidiQueryManagerHandler?op=Query&queryObject=[MobidiQuery_JSON]&UserSession=[TOKEN]`. The `queryObject` parameter expects a `MobidiQuery` object in JSON format. Both GET and POST HTTP methods are supported for this operation.
+
+Potential error types include 401 for Unauthorized access or Access denied, 403 for Forbidden access, 511 for Network Authentication Required, and 501 for Server Error.
+
+The result of the "Query" operation is an array of `MobidiEntry` objects.
+
+A request example demonstrates a `myQuery` object with `startDate`, `endDate`, `startIndex`, and `endIndex` parameters, and shows how to use `$.post` to send this query object as JSON to the `MobidiQueryManagerHandler` with a callback function.
+
+A result example illustrates the structure of the returned array, showing multiple objects, each containing a `record` with `id` and `layer_id`, and an `attributes` array with `id` and `name`.
+
+A Javascript Sample is available under Sample Applications.

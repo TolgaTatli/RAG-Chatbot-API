@@ -1,0 +1,39 @@
+GEODI capabilities can be accessed through GEODI APIs. Documentation for all basic APIs and parameters is available.
+
+Sample applications are accessible via links and service detail pages. These examples include .Net (C#) WinForm, MVC, Asp.Net applications, Java applications, and HTML-Javascript applications.
+
+For .net implementations, RestApi classes within Geodi.Integration.dll can be utilized. RestApi.Helper methods are available for API calls that do not have a specific class within the RestApi content.
+
+A GEODI Token is an expression that contains user information, the requesting role, user, and privileges. It is also used to set constraints. Once received, a token is valid for 10 years unless specifically modified, and it is sufficient to generate it only once.
+
+The Geodi Query API (Query) allows users to query from a project indexed by GEODI and process the results within their application. All query capabilities are accessible, including Document Search, Document Summary Query, Keyword Querying, and Returning a Query Facet.
+
+The Geodi Data Extraction API (Formatter) is used to retrieve and utilize GEODI-recognized content from text or file content. Examples of recognized content include Contact names, Dates, Parcel Numbers, e-mail addresses, or dictionary definitions. This API offers methods such as Text Recognition, Single Content Recognition, and Multiple Content Recognition.
+
+The Geodi Feed API (FeedHandler) provides a service for supplying source data to GEODI. Users can specify the application to open when the provided resource is found in a search result.
+
+The Geodi Feed API's Feed Method (APP → GEODI) can be used to send any desired content at any time. This method is applicable if the user's application is standing, has internal methods to trigger, or is not a Web application.
+
+The Geodi Feed API's Integration with Application Services (GEODI → APP) allows GEODI to trigger a user's application. This method is suitable for web applications that are not continuously running.
+
+The Geodi Feed API's Embedded Code Support (Connector/GeodiEnumerator) (GEODI ← → APP) can be chosen for feeding if the user's application is a library or adapter and does not have an active application running.
+
+The Geodi ContentObject, also known as the Content Definition Object, is used to provide more detailed content. This object is utilized with the Geodi Data Extraction API (Formatter) and Geodi Feed API (FeedHandler) services.
+
+The Geodi Workspace Information API (WSInfo) provides access to various project information, which may be necessary to interpret data from GEODI services. The "Retrieving Workspace Information" service within this API allows users to access project identifiers, resources, and id/short id values.
+
+The "Sharing user authorizations" service (GEODI → APP) enables the sharing of authority or role information. This service can be performed if a web application uses either the Geodi Feed API - Feed Method (APP → GEODI) or the Geodi Feed API - Integration with Application Services (GEODI → APP).
+
+Users can monitor activities on Geodi and access their corresponding logs.
+
+GEODI query results can be incorporated into an application using GEODI interfaces or scripts.
+
+GEODI offers REST API services, allowing query results to be used in an application via Geodi Query APIs. With GeodiQueryJS, results can be displayed in any desired format, or libraries such as Angular.js and Vue.js can be utilized.
+
+Existing GEODI screens can be retrieved from a different application by specifying query text and then used within an iframe. This functionality enables the direct display of views like Document, Map, Words, or Network graph within the user's software.
+
+The existing GEODI Document Viewer can be called from a different application and embedded using an HTML iframe tag. This allows for the direct display of documents within the user's software.
+
+GEODI provides documentation for its REST API methods. This documentation may vary based on the specific GEODI version and modules in use, and the provided APIs can be accessed via links.
+
+GEODI utilizes a command language stored in *.DCC files. These DCC commands can initiate or conclude a discovery process, or start a repair, among other functions. These files can be executed by double-clicking them or by integrating them into GEODI Workflows.

@@ -1,0 +1,9 @@
+Confluence/Wiki dizinleri, Windows dizinleri gibi indekslenir ve keşfedilir. Bu süreçte dosya ihmal kuralları geçerlidir.
+
+Confluence Online kullanılarak, yetkiniz bulunan sayfalar Confluence kullanıcı adı ve şifrenizi girerek keşfedilebilir.
+
+Confluence Public ile dışa açık kaynaklar, sadece alan adını vererek keşfedilebilir.
+
+“Ekleri Dahil Et” seçeneği aktif edildiğinde, keşfedilen sayfalardaki dokümanlar da indekslenecektir.
+
+Bağlantı için gereken şartlar arasında Public Servis adresi ve eğer Private Adres taranacaksa Kullanıcı Adı Şifre Bilgileri bulunmaktadır.

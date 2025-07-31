@@ -1,0 +1,19 @@
+This portal was created to provide better service. GEODI and MOBIDI can be integrated with a user's own solutions, in addition to their existing capabilities.
+
+GEODI and MOBIDI offer many possibilities for developers. Both software consist of two basic layers: Engine and Html5 / Json / Javascript interfaces. This architecture allows developers to create a completely different interface, make Engine calls from their developed software, or modify existing interfaces or specific pages using CSS and other methods.
+
+For engine level development, Microsoft .NET Assembly can be used, supporting languages such as c#, vb.net, f#, javascript.net, and c++.net. To access the API, developers can use MVC, Asp.Net, ASP, PHP, or Java. If the goal is to use GEODI or MOBIDI within custom applications, being able to call the REST API is sufficient.
+
+Detailed API documentation and examples are available on the following pages. Samples can be downloaded and reviewed from Github, serving as a basis for new applications. These examples include interactive pages that allow users to view API results without needing to write any code.
+
+Key topics for GEODI integration and customization include Basic GEODI Architecture for Developers, Sharing Permits and Prohibitions between GEODI and other applications, and Integration Notes for Electronic Document Management Systems and Archive Software. Other areas covered are E-Commerce/Payment System Integration, Customizing the GEODI User Interfaces, Writing HTML Plugins, and Creating a Dashboard, along with considerations for preparing a dashboard.
+
+Further customization options for GEODI involve Creating a Query View, Editing document list results, Creating a Theme, Creating a Layout, Creating a Template, and Map styles. Additionally, users can add a Banner to the Project.
+
+The GEODI API Documentation covers various functionalities, including Generating a GEODI Token and the Geodi Query API. The Query API supports Document Search, Document Summary Query, Keyword Querying, and Returning a Query Facet. The documentation also details the Geodi Data Extraction API (Formatter), which includes Text Recognition Method, Single Content Recognition Method, and Multiple Content Recognition Method.
+
+The Geodi Feed API (FeedHandler) provides methods for application-to-GEODI communication (Feed Method), GEODI-to-application integration with application services, and embedded code support (Connector/GeodiEnumerator) for bidirectional communication. The Geodi ContentObject defines content objects, and the Geodi Workspace Information API (WSInfo) allows for retrieving workspace information and sharing user authorizations from GEODI to applications.
+
+Additional GEODI APIs include the Geodi User Token API for SSO with trusted clients, and functionalities for User Event Monitoring/Accessing Event History. For displaying results, the Embedded Result section covers Displaying Embedded Results, Displaying search results with templates, and Showing results with Iframe. The Embedded Viewer section focuses on Embedded Document Displaying, and a general Geodi REST API is also available.
+
+The MOBIDI Server API Documentation outlines several APIs, including Mobidi Server Query for Record Counts API, Mobidi Server Query API, and Mobidi Server Create/Update MobidiEntry API. The documentation also lists the MOBIDI Office REST API.

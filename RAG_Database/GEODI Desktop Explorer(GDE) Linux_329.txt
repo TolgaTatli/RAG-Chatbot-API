@@ -1,0 +1,7 @@
+Debian Linux tabanlı dağıtımlar için kurulum, indirilen *.deb paketinde sadece ileri diyerek yapılır. GDE Linux kurulumu tamamlandıktan sonra, client makine üzerinde Settings.json dosyası içinde TOKEN ve URL ayarları yapılır. Bu ayarlar yapıldıktan sonra, ayarların geçerli olması için Settings.json dosyası paketin kurulu olduğu dizine $ sudo cp Settings.json /usr/share/dece/gde/Settings.json komutu ile atılır.
+
+Debian Linux tabanlı dağıtımlar için otomatik başlangıç sağlamak amacıyla, *.bashrc dosyasının içine GDE dosyalarının yolu ile beraber GDE dll dosyası eklenmelidir. Ayrıca, Dotnet kurulumu paketin içerisinde Self-Deployment olarak kullanılmaktadır.
+
+Red Hat Linux kurulumu, indirilen *.rpm paketinde sadece ileri diyerek yapılır. GDE Linux kurulumu tamamlandıktan sonra, client makine üzerinde Settings.json dosyası içinde TOKEN ve URL ayarları yapılır. Bu ayarlar yapıldıktan sonra, ayarların geçerli olması için Settings.json dosyası paketin kurulu olduğu dizine $ sudo cp Settings.json /usr/share/dece/gde/Settings.json komutu ile atılır.
+
+GEODI’de besleme yapılmaya başlandıysa ve dokümanlar görüntülenmiyorsa, Red Hat Firewall ayarları özellikle kontrol edilmelidir.

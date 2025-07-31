@@ -1,0 +1,13 @@
+Applications can send permits and prohibitions during the Feed process. This functionality allows the use of custom user, authorization role, or authorization definitions. Roles or definitions from the application's own authorization model can be submitted for these permits and prohibitions.
+
+When a user makes a query, GEODI requests the user's authorizations from the other application. This process is repeated every 20 minutes. The other application is responsible for managing the user-role-authorization mappings by performing the 'Sharing user authorizations (GEODI → APP)' service.
+
+An example of a role-based authorization model shows roles like 'Rol1', 'Rol2', and 'Rol3' being permitted, while 'Rol5' is denied within the 'Permission' structure. For this model, the application must return the user's roles via the 'GetRoles' method, as described in the 'Sharing user authorizations (GEODI → APP)' service. These roles must be strings and must match those defined in FeedAPI.
+
+In a document-based authorization model (Method 1), specific User IDs such as 'UserID1', 'UserID2', and 'UserID3' can be permitted, while 'UserID5' is denied. The application is required to return the ID of the requested user using the 'GetRoles' method, which is detailed in the 'Sharing user authorizations (GEODI → APP)' service.
+
+Another document-based authorization model (Method 2) permits access based on a 'DocID'. For this model, the application should return the document IDs visible to the user when the 'GetRoles' method is called, as specified in the 'Sharing user authorizations (GEODI → APP)' service.
+
+Groups and users recognized by GEODI can be utilized within the 'Permit' or 'Deny' arrays for authorization. For GEODI Groups, a Group ID is required, which is an identifier found in the Geodi Authority management screen, for example, 'UserGroup_111aa11-1b11-...'. GEODI users require their User UniqueName, such as 'Geodi:guest'. For LDAP Groups and users, their LDAP SID should be used, for instance, 'S-1-5-......'.
+
+An example demonstrates the use of GEODI-recognized entities in a 'Permission' structure, where 'UserGroup_111aa11-1b11...', 'S-1-5-...', and 'Geodi:ornek.kullanici' are permitted. Conversely, 'Geodi:guest' is explicitly denied in this example. This illustrates how Groups, LDAP Users, and GEODI users can be included in the Permit array.

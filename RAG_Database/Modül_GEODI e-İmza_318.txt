@@ -1,0 +1,13 @@
+GEODI e-İmza modülü, PDF, CAD ve diğer dosyaların elektronik olarak imzalanmasını sağlar. Bu modül, esnek bir yapıya sahiptir ve kullanıcının sahip olduğu e-İmza türünden bağımsız olarak çalışır. Uygulama, çoklu imzayı desteklemektedir.
+
+Bir belgeyi imzalamak için iki farklı yol sunulur. Kullanıcılar, sürükle-bırak yöntemiyle bir veya birden fazla belge eklerken imzalama yapabilir ya da arama yoluyla ulaştıkları bir belgeyi imzalayabilirler. CAD ve PDF dosyaları için imza yöntemi farklılık gösterir; uygulama, dosya türüne göre gerekli seçimleri otomatik olarak yapar. Daha önce var olan bir dosya imzalandığında, otomatik olarak yeni bir versiyonu oluşur.
+
+GEODI e-İmza modülünü ilk kez kullanırken, GEODI e-İmza eklentisinin bilgisayara kurulması istenir. Bu eklenti, bilgisayara takılı imza ile GEODI yazılımının haberleşmesini sağlar ve e-İmza'ya ait hiçbir bilgiyi saklamaz. Bu özelliği sayesinde, eklenti farklı bir bilgisayarda dahi kurulup kullanılabilir. Kurulum sırasında yetki veya başka bir sorun yaşanması durumunda sistem yöneticisinden destek alınabilir.
+
+GEODI arayüzünde kullanılan e-imzanın sahibi görülebilir. Kullanıcı, PIN kodunu girdikten sonra dosyaları imzalayabilir. Belgelerin uzantılarına göre uygun imza formatları otomatik olarak belirlenir. Kullanıcı, imzacı bilgilerini seçerek sürükle-bırak yöntemiyle çoklu belge imzalayabilir. İstenildiği takdirde, imzalamadan da işleme devam etme seçeneği mevcuttur.
+
+PDF uzantılı dosyalar PAdES türünde, diğer dosya uzantıları ise CAdES türünde tümleşik olarak imzalanır; bu, imzanın dokümanın kendisine eklendiği anlamına gelir. Genel olarak p7s uzantılı olan imzalı dosyalar tekrar imzalanmak istenirse, CAdES türünde Seri İmza eklenir, bu da son atılan imza ile bütünleşik yeni bir imza oluşturur. PAdES imzalı PDF uzantılı dosyalar da tekrar imzalanmak istenirse, dokümana yeni bir PAdES imza eklenir.
+
+GEODI e-İmza Modülü, TÜBİTAK tarafından geliştirilen e-imzalama ve doğrulama programı olan İmzager'in imzalama prensipleriyle uyumludur. E-imzalama ve doğrulama işlemleri için KamuSM'nin paylaştığı bazı kütüphanelerden yararlanılmaktadır.
+
+GEODI arayüzünde imzalı belgelerin imza tarihi ve imzalayanları görülebilir. Bu bilgiler üzerinden sorgulama yapılabilir; imzalı belgenin imzalayan bilgileri ve imza doğrulama sonuçları görüntülenebilmektedir. "İmzala" butonu kullanılarak seçili belge imzalanabilir veya imzalı bir belgeye yeni bir imza eklenebilir.

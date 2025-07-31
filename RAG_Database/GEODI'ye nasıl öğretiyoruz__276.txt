@@ -1,0 +1,9 @@
+GEODI, içeriklerdeki değerli bilgiyi keşfeder. GEODI'nin keşif yetenekleri büyük ölçüde yapay zeka ve kurallara dayanır. Keşif doğruluğu, örnekler arttıkça artmaktadır. GEODI bir şeyi hatalı bulduğunda, doğrusunu anlatmak için bir yola ihtiyaç duyulur.
+
+"Öğren işlemi" (Learn operation) GEODI'ye bir bulgunun hatalı olduğunu belirtme ve doğrusunu gösterme yöntemidir.
+
+Hatalı bulguları işaretlemek için Kelimeler sayfasında hatalı bulgu bulunmalı, 3 nokta menüsünden "Öğren" işlemi seçilmeli ve açılan formda gerekli bilgiler verilmelidir.
+
+GEODI'nin öğrenmesi için çok daha fazla örneğe ihtiyacı vardır ve bu iş için ekiplerden yardım alması gerekmektedir. Düzeltmelerin yeni içerikler için muhtemelen birkaç gün içinde etkin hale geleceği belirtilmiştir.
+
+Eski içeriklerin de değişmesi isteniyorsa, tarama veya değişenleri tarama yapılması gerekebilir. Teknik ekipler bu konuda yardımcı olacaktır.

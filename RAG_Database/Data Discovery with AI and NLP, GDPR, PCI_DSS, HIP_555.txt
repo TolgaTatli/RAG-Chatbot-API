@@ -1,0 +1,7 @@
+Discovery makes all critical data visible. It helps protect data, identifies non-compliant data for regulation, and reveals secret value hidden within the data. This process saves time, reduces obligatory risks, and increases corporate agility.
+
+Discovery makes all critical data visible and assists in data protection by identifying non-compliant data within a data lake. GEODI discovers sensitive information within data and highlights it throughout documents, regardless of their size.
+
+Discovery can be used to check compliance with regulations such as PCI/DSS, GDPR, and HIPAA. Alarms inform users before a data breach and when non-compliance occurs. Users may utilize hundreds of ready-to-use recognizers or create their own with low-code. Discovery also provides crucial information for Classification.
+
+Discovery has various references, including Croatia's Ministry of Agriculture, Vakıfbank, National Budget Office of Nigeria, Ministry of Energy and Natural Resources, Saudi Finance Company, Al Tijaria, Topnet, National Finance of Omman, Palestine Investment Bank, Vakıf Katılım, Iron Mountain, Ziraat Katılım, Verifone, Green Crescent, Kahve Dünyası, Gelecek Varlık, ICT Authority, Ministry of Trade, Carrefoursa, Teknosa, Istanbul Chamber of Industry, Koton, Turkey Coal Enterprises, Unifree Duty Free, The North Marmara Motorway, Türk Nippon Insurance, Private Sector, State Agencies, and Municipalities & SPA.

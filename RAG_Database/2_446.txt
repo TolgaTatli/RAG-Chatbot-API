@@ -1,0 +1,3 @@
+Arama ekranında listelenen dosyaların tam yol bilgisine ulaşılamamaktadır. Sağlanan örnek görüntü sıkıştırılmış bir dosyadan gelmektedir.
+
+Bu dosyaların tam yol bilgisi, "parent" bilgisi kullanılarak oluşturulur. Gerekli olan "parent" bilgisi aynı raporda yer almaktadır.

@@ -1,0 +1,3 @@
+İmzalama ile indeksleme arasında bir bağlantı bulunmamaktadır. Ayrıca, sıkıştırılmış dosyaların imzalanmasına yönelik bir standart mevcut değildir.
+
+GEODI, ZIP veya farklı formatta bir arşivi açıp içindeki dosyaları indeksler.

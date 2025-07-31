@@ -1,0 +1,1 @@
+Projenize dil tanıyıcı ekliyse içerikleri diline göre seçebilirsiniz. Örnek dil seçenekleri arasında dil:TR ve dil:EN bulunur.

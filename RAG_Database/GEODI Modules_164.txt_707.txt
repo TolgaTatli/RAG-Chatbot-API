@@ -1,0 +1,7 @@
+The GEODI platform is designed to meet the needs of many different sectors, a capability ensured by its basic structure.
+
+Application Modules have been created to respond to the specific needs of particular sectors.
+
+Once GEODI is installed, it automatically installs the application modules included in your license. Apart from these, various tools and modules not installed by default can be installed from the GEODI administration page within the scope of your license.
+
+Specific examples of modules and a recognizer include GEODI Standard, OCR, CAD&GIS Viewer, MediaMon, GeoArchive, GEODI Pro, Regular Expression (Recognizer), GEODI 360, and GEODI e-Signature.

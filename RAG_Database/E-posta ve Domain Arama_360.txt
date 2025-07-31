@@ -1,0 +1,3 @@
+E-postalar arasında alıcı ve gönderene göre sorgulama yapılabilir. Bu sorgulama için 'From' ve 'To' parametreleri kullanılabilir.
+
+GEODI'de web sitesi içerikleri, 'Domain' adına göre sorgulanabilir. Bu sorgulama için 'Domain' parametresi mevcuttur.

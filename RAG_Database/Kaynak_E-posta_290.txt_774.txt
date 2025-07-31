@@ -1,0 +1,13 @@
+GEODI e-posta içeriklerini ve ekleri iki farklı yoldan indeksleyebilir. Bunlardan biri, *.PST ve *.OST dosyaları için ek bir işleme gerek olmamasıdır; bu dosyalar bulundukları ortamda otomatik olarak işlenirler.
+
+E-posta sunucularının indekslenmesi için, eğer sunucu listede yoksa "Diğer" seçeneği ile IMAP ya da POP3 destekleyen bir e-posta sunucusu eklenebilir. İndekslenecek e-postaları azaltmak için "Filter" kullanılabilir. Her bir e-posta hesabı için bir tanım yapılması gerekir; toplu işlem yapılmak istenirse Exchange dosyaları olarak indekslenirler. E-posta sunucusu, istek yoğunluğuna göre erişimi yavaşlatabilir ya da tamamen engelleyebilir.
+
+E-posta bağlantısı için gereken şartlar arasında geçerli bir e-posta hesabı ve bilgileri bulunur. Exchange için çok sayıda hesap aynı anda keşfedilecekse gerekli kullanıcı bilgisi sağlanmalıdır. E-posta bağlantılarında manuel proxy ayarı yapılabilir; bunun için Proxy Sunucu Adresi, Proxy User ve Proxy Password bilgilerinin doldurulması gerekmektedir.
+
+Exchange Server'da tüm adreslerin indekslenmesi mümkündür; tüm veya seçilmiş hesaplar tek seferde indekslenebilir. Bu özellik için E-Posta Kaynağı Ayarlarında "Paylaşılan Mail Adreslerini Dahil Et" seçeneği işaretli olmalı ve yetkili bir kullanıcı gereklidir. GEODI'de, tüm kullanıcıların e-postaları, ortamda diğer kullanıcıların e-posta adreslerine erişebilen bir kullanıcı ile indekslenebilir. Bu özellik, GEODI ve Mail Yönetimi arayüzünde ayarlamalar yapılarak aktifleştirilebilir ve tek bir e-posta adresinden GEODI'ye birden fazla e-posta taranabilir, arama ve keşif yapılabilir.
+
+Exchange Server'da bağlantının sağlanabilmesi için "EWS" hizmeti etkinleştirilmelidir. Detaylı bilgi için https://blogs.msdn.microsoft.com/deva/2011/12/01/how-to-get-the-ews-endpoint-url-from-outlook-20072010/ adresi kullanılabilir.
+
+Mail hesabında yapılacak işlemler arasında "Kişiler" sekmesinden yeni kişi eklenmesi gerekmektedir. Eklenen kişi için "Okuma ve Yönetme" izni verilmelidir. Birden fazla kişiyi listeye eklemek için "Yönet" menüsünden "Kişileri İçeri Aktarın" seçeneği kullanılabilir.
+
+GEODI'ye giriş yapan kullanıcı, indekslenen mailde From, To, CC veya BCC alanlarında geçiyorsa maili görebilmektedir. Bunun dışında sadece sistem yöneticisi maili görebilir. Uygulama için teknik ekipten destek alınabilir.

@@ -1,0 +1,21 @@
+GEODI offers two index options: GEODI Standard Index (STDI) and ExplorerIndex (EXPI). STDI includes all GEODI capabilities, while EXPI is suitable for data discovery projects.
+
+Estimating time and disk requirements for data discovery is difficult due to factors like data volume, diversity, server and network speeds, and GEODI server speed. Therefore, it is recommended to start with sampling to get quick results, which will likely suffice for database needs.
+
+GEODI Standard Index (STDI) is a data structure that allows the application of all GEODI capabilities.
+
+Explorer Index (EXPI) is suitable for data discovery projects. It uses an index database, has lower disk requirements, and discovery times are approximately the same.
+
+EXPI is suitable for data discovery projects, and it will be pre-selected in templates used for PCI/DSS, KVKK, GDPR, or other discovery purposes. EXPI also has search capabilities and can be used for Subject Access Request (SAR).
+
+The EXPI index size is between 10% and 30% of the standard index. EXPI has certain limitations, but these do not pose a weakness for data discovery projects.
+
+EXPI cannot be used for classification, corporate search, FacePro, or maps. It also cannot be used for note-taking. EXPI does not support "other rules" found on the GEODI Queries page. Index repair commands are not valid for EXPI; for repairs, methods specific to the used VTYS (defaulting to SQLite) should be applied. LDAP content authorization is not supported with EXPI.
+
+For unstructured data such as folders, fileservers, SharePoint, and email, index size comparisons are provided. These ratios are derived from sample test data and are intended to give an idea of magnitudes, noting that different data sets may yield different results. For STDI, the index size is 100% (FULL), while for SUM_OFF it is 25%-50%, and for EXPI it is 10%-30%.
+
+For database discovery, including Oracle, SQL Server, and PostgreSQL, EXPI should be used, and a minimum index space of approximately 5%-10% of the database data volume should be allocated. STDI should only be used for sampled database discovery, as a comprehensive database discovery with STDI can result in an unexpectedly large index requirement.
+
+For GEODI index directories, enabling Windows compression can provide significant space savings (over 50%) without causing a noticeable performance loss.
+
+Additional points regarding EXPI include that the last line of the Timelog will be "RecognizerEndScan." Also, dates recognized with EXPI will appear in a different format in the ES interface, for example, 2/25/2020 will appear as 20200225.

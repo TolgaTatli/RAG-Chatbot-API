@@ -1,0 +1,11 @@
+The scope of the training involves explaining the understanding of the discovery panel that comes with GEODI Discovery, and interpreting its capabilities.
+
+The participants for this training are general.
+
+The duration of the training is 30 minutes.
+
+The prerequisite trainings are GEODI 101 and GEODI 102.
+
+The content of the training includes examining discovery results, understanding what the discovery panel is, what the discovery panel does, data sources, data sources containing personal and PCI data, monitoring changes in findings, documents by content type, discovery results, other findings, content detail and list report, sharing the panel as PDF, and video.
+
+The trainings aim to provide a general idea, and it is necessary to reinforce what has been learned by using it. If there are topics that are uncertain or cannot be done, support should be requested from the teams. Some features mentioned within the scope of the training may not be included in the license.

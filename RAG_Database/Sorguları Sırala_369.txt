@@ -1,0 +1,7 @@
+GEODI results can be reordered.
+
+Sorting options include `sırala:ad/adı/isim` or `orderby:name`, and `sırala:tarih` or `orderby:date`.
+
+Sorting behaves differently on the İçerikler (Contents) and Kelimeler (Words) pages.
+
+For Kelimeler (Words), an additional sorting option is available: `sırala:katman` or `orderby:layer`.

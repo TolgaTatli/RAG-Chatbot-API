@@ -1,0 +1,3 @@
+Text files can be classified. However, the metadata of these files could not be checked or viewed, leading to a request for elaboration on how to do so.
+
+Metadata is added to .txt files through ADS. To view this metadata, a user must change the directory in the command prompt to the folder containing the text file. Subsequently, running the `dir /r` command will allow the metadata to be seen.

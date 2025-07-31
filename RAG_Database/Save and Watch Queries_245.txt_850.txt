@@ -1,0 +1,3 @@
+The current query can be saved using the search box menu. Saving queries enables the reuse of frequent queries and their publication with other users.
+
+If a user watches a query, GEODI will inform them through email whenever new content or a change occurs. This feature is stated to save a lot of time. Users may watch for certain words, but semantic features are indicated as being much more useful. For instance, watching a query like “layer:SSN” will result in an email notification when a document with social security information appears.

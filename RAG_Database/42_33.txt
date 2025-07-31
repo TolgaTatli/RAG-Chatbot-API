@@ -1,0 +1,1 @@
+Files on Google Drive cannot be viewed according to their permissions. This is because there is no mechanism that matches Google Drive users with GEODI users.

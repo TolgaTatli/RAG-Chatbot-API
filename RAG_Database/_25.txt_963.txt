@@ -1,0 +1,3 @@
+Log4j is not used in Geodi.
+
+Geodi utilizes password complexity and other policies offered by authentication services such as LDAP.

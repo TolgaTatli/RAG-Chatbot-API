@@ -1,0 +1,39 @@
+GEODI capabilities can be leveraged through GEODI APIs. Documentation for all basic APIs and parameters is available.
+
+Sample applications for GEODI APIs are accessible via links and service detail pages. These examples include .Net (C#) WinForm, MVC, Asp.Net applications, Java applications, and HTML-Javascript applications.
+
+For .net implementations, RestApi classes within Geodi.Integration.dll can be utilized. Additionally, RestApi.Helper methods are available for API calls that do not have a dedicated class within the RestApi content.
+
+A GEODI Token can be generated, which is an expression containing user information, requesting role, user, and privileges, and is also used to set constraints. This token remains valid for 10 years unless specifically modified, and only needs to be generated once.
+
+The Geodi Query API allows users to query from a GEODI-indexed project and process the results within their application. All query capabilities, including Document Search, Document Summary Query, Keyword Querying, and Returning a Query Facet, are accessible through this service.
+
+The Geodi Data Extraction API can be used to retrieve and utilize GEODI-recognized content from text or file content. Examples of recognized content include Contact names, Dates, Parcel Numbers, e-mail addresses, or dictionary definitions. This API includes methods such as Text Recognition, Single Content Recognition, and Multiple Content Recognition.
+
+The Geodi Feed API provides a service for supplying source data to GEODI. Users can specify which application should open when the provided resource is found in a search result.
+
+The Geodi Feed API's Feed Method (APP → GEODI) allows applications to send content to GEODI at any time, particularly if the application is standing, has internal trigger methods, or is not a web application.
+
+The Geodi Feed API's Integration with Application Services (GEODI → APP) method enables GEODI to trigger a web application, especially if the application is not continuously running.
+
+The Geodi Feed API's Embedded Code Support (Connector/GeodiEnumerator) method is suitable for applications that are libraries or adapters and do not have an active application running, allowing them to feed data.
+
+The Geodi ContentObject is a Content Definition Object that can be used to provide more detailed content to the Geodi Data Extraction API (Formatter) and Geodi Feed API (FeedHandler) services.
+
+The Geodi Workspace Information API (WSInfo) provides access to various project-related information, which may be necessary to interpret data from other GEODI services.
+
+The Geodi Workspace Information API's Retrieving Workspace Information service allows users to retrieve identifiers and resources, including id and short id values, from a project. This information is useful for interpreting data from GEODI services.
+
+The service for sharing user authorizations (GEODI → APP) can be performed if a web application utilizes either the Geodi Feed API - Feed Method (APP → GEODI) or the Geodi Feed API - Integration with Application Services (GEODI → APP) to share authority and role information.
+
+GEODI allows users to monitor user activities and access their corresponding logs through User Event Monitoring/Accessing Event History.
+
+GEODI query results can be incorporated into an application using GEODI interfaces or scripts through Embedded Result - Displaying Embedded Results.
+
+GEODI provides REST API services, enabling the use of query results from Geodi Query APIs in applications. GeodiQueryJS can be used to display results in various formats, and libraries like Angular.js and Vue.js are also supported for displaying search results with templates.
+
+Existing GEODI screens can be retrieved from a different application by specifying query text and then embedded within an iframe. This functionality allows for direct display of views such as Document, Map, Words, or Network graph within the user's software by showing results with Iframe.
+
+The existing GEODI Document Viewer can be called from a different application and embedded using an HTML iframe tag, enabling direct display of documents within the software through Embedded Viewer - Embedded Document Displaying.
+
+GEODI offers documentation for its REST API methods. This documentation may vary based on the GEODI version and modules in use, and specific APIs can be accessed via provided links.

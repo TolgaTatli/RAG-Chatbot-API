@@ -1,0 +1,15 @@
+Bu eğitim, GEODI kullanarak Maskeleme ve Anonimleştirme konularını ele almaktadır. Bu iki kavram farklı amaçlara hizmet etse de, GEODI içerisinde ortak bir teknolojik temele sahiptir ve benzer operasyonel iş akışlarını izler, bu da onları birlikte öğrenmeyi verimli hale getirir. Eğitim, maskeleme ve anonimleştirme tekniklerini, kullanım senaryolarını ve veri koruma stratejisinde bunların etkili bir şekilde nasıl uygulanacağını kapsamaktadır.
+
+Eğitimin süresi 30 dakikadır.
+
+Maskeleme, hassas verileri gizlemek amacıyla, bu verileri kurgu ama gerçekçi değerlerle değiştirme sürecidir; bu süreçte veri formatı ve kullanılabilirliği korunur.
+
+Maskelemenin yaygın kullanım senaryoları arasında yetkisiz kullanıcılara veri gösterirken hassas içeriği ifşa etmeden görüntüleme, raporlarda ad, kimlik numarası veya iletişim bilgilerini maskeleme ve test ortamlarında kişisel verilerin gizlenmesi bulunur.
+
+Anonimleştirme, kişisel verileri tamamen kaldırma veya geri döndürülemez şekilde değiştirme işlemidir, böylece veriler artık bir bireyle ilişkilendirilemez hale gelir.
+
+Anonimleştirmenin yaygın kullanım senaryoları arasında GDPR, KVKK veya HIPAA gibi regülasyonlara uyum, verilerin gizliliğini ihlal etmeden analiz amacıyla paylaşılması ve kamuya açık veri seti yayınlama yer alır.
+
+GEODI'deki temel kavramlardan Kalıcı Maskeleme, veriyi kaynakta değiştirerek geri döndürülemez bir koruma sağlar. Maskeleme ve Anonimleştirme Kuralları/Profilleri, isimler, sayılar ve e-postalar gibi farklı veri türlerinin nasıl ele alınacağını tanımlar.
+
+GEODI'deki diğer temel kavramlar arasında Dinamik Maskeleme bulunur; bu, orijinal kaynağa dokunmadan veriyi gerçek zamanlı olarak maskeleme olup UI seviyesinde güvenlik için idealdir. Veritabanı Maskelemesi, SQL ve PostgreSQL gibi yapılandırılmış veri kaynaklarında maskeleme kurallarını doğrudan uygular. Aksiyonlarla Toplu Maskeleme ise dosyalar, e-postalar, SharePoint ve veritabanları üzerinde büyük ölçekli maskeleme işlemlerini otomatikleştirir ve GEODI İş Akışları ile entegredir.

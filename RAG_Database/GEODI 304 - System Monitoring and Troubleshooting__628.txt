@@ -1,0 +1,13 @@
+This course focuses on monitoring the system and identifying solutions for potential problems. Knowledge of GEODI installation and system administration is a required prerequisite for this course.
+
+The content of this course is technical. The duration of the course is 45 minutes plus an additional 45 minutes.
+
+The scope of the course includes the indexing interface, interpretation of numbers, and procedures for stopping and restarting indexing. It also covers indexing errors and their interpretation, specifically addressing issues with encrypted or faulty files, long file names, inaccessible resources, and unsupported content.
+
+The course covers receiving and analyzing logs, including usage logs and classification logs. It also addresses index recovery during outages and index backup procedures.
+
+Performance topics are included in the course, such as scanning speed, OCR, and deleting deleted items. Authorization issues are also covered.
+
+The course addresses updating GEODI, updating the index after an update when necessary, and updating modules. Notification by e-mail is also a topic, specifically addressing scenarios where no email is coming.
+
+For support, participants are advised not to hesitate to ask for help from the teams if they are unsure about a topic or unable to perform a task. It is noted that some features discussed may not be included in a user's license.

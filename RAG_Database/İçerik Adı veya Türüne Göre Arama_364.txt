@@ -1,0 +1,11 @@
+Search rules apply to the name and body of content. However, if you want to search only by the name of the content, such as a file name, you can use the or prefix.
+
+Content names can be seen in GEODI search results.
+
+You can search only by content type. Content types can be learned from the facet area.
+
+Specific search examples include finding only PDF files, finding all content that starts with 'Eğitim' (which can be a file or a tweet), and finding tweets.
+
+Further specific search examples for tweets include finding tweets that contain 'kelimesi' in their body, and finding tweets that contain 'futbol' in their title.
+
+The term 'notlar' can be used to find notes, and this is described as a short way to search for notes.

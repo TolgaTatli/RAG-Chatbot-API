@@ -1,0 +1,9 @@
+GEODI searches for given criteria across all sources connected to your project. The criteria used for these searches is a GEODI query.
+
+Fields are special compartments within GEODI that allow users to narrow their search target. These field values may originate from Database table columns, if enabled, or be provided by certain tools like GDE.
+
+GEODI also conducts searches within databases or structured Excel files. Users can limit these searches by specifying a field name. If the same field exists in more than one table across multiple databases, the search will encompass all instances, effectively merging all structured data with unstructured data. To specify a search within a particular table, the 'parent:' syntax can be used.
+
+GEODI automatically collects field names. Indexing and other related phases are also automated. However, users have the option to use SQL to define how a database and its tables will be indexed.
+
+PCs discovered by GDE and some other tools may also have a field name that can be searched using these methods.

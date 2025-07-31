@@ -1,0 +1,13 @@
+The GDE Windows Client can be installed in two different ways. One method allows it to run as long as a login user exists. The other method is as a Windows Service, which is the recommended mode for FileServers.
+
+General installation conditions for the GDE Windows Client include ensuring the GEODI URL address is accessible and that a GEODI Token has been created. Additionally, port 1982, which is changeable, must be open on clients. For deploying to multiple PCs, a tool such as ManageEngine, SCCM, or PDQ is required.
+
+The GDE Agent MSI can be found in the /GUI/Agents/GDE directory.
+
+MSI parameters for the GDE Windows Client include GEODI_URL and GEODI_TOKEN. The GEODI_URL parameter specifies the address agents will use to access GEODI, with a secure and named address (DNS, SSL) being recommended. The GEODI_TOKEN parameter is used for authentication, and instructions for its creation are provided via a specific URL.
+
+Commands for agent deployment using tools like PDQ, ManageEngine, or SCCM are available. For setup, the command is "GEODI.DesktopExplorer.msi" /quiet GEODI_URL="https:// / " GEODI_TOKEN="EAAAAL2FcQ9RvjWM…". To remove the agent, the command is msiexec.exe /x /qn /norestart "GEODI.DesktopExplorer.msi". An update command, start "GDE" "%ProgramFiles(x86)%\DECE Software\GEODI Desktop Explorer\Updater.exe", runs the updater, though it is typically not needed as agents update themselves.
+
+GDE agents are designed to check for updates every two days and automatically update themselves from the GEODI server, eliminating the need for user intervention.
+
+Installing GDE as a Windows Service is used for indexing or discovering File Servers. In addition to the standard Windows MSI requirements, the Windows Service user must possess at least read-only access to the FileServer directories. If remediations are desired, write and delete rights are also necessary. A separate configuration file must be created under the GEODI Server for each FileServer to define directories for indexing and other rules. The GDE installation can be converted to a Windows Service using the script located in the GDE folder, and the WindowsServiceUninstall.bat script uninstalls the service setup. This service mode does not require a login user.

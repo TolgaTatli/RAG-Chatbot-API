@@ -1,0 +1,7 @@
+The GEODI administration page is the access point for creating projects, changing settings, editing authorizations, and managing indexing and other settings. This training will explain general features related to this page.
+
+The content of this training is technical, and its duration is 45 minutes.
+
+Prerequisite trainings include the following resources: https://decesw.atlassian.net/wiki/x/AQDc7, https://decesw.atlassian.net/wiki/x/AQBq_Q, https://decesw.atlassian.net/wiki/x/pQDPFAE, https://decesw.atlassian.net/wiki/x/LYDb7, https://decesw.atlassian.net/wiki/x/IoBgMgE, https://decesw.atlassian.net/wiki/x/JADc7, and https://decesw.atlassian.net/wiki/x/bIDb7.
+
+Trainings are intended to provide a general idea, and learners should reinforce what they have learned by applying it. Some features mentioned in the training may not be included in the user's license.

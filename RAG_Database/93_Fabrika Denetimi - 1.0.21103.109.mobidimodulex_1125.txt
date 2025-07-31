@@ -1,0 +1,5 @@
+When scanning embedded files, VT is capable of scanning .eml documents and their attachments.
+
+The following terms are identified: Workplace, Note, Workplace Size, Starting Date Of The Work, Ending Date Of The Work, Related Person, Workplace Control Questions, and Workplace Control Status.
+
+Factory Inspection involves practically inspecting a factory or plant. This process allows for optional counting of products on shelves, enables workers to self-check the shop, aims to cut costs, and increase inspection frequency. It also facilitates the analysis and pinpointing of problems. Associated keywords include visit, control, report, personnel, census, industrial, manufacturing, material, mechanical, product, error, safety, and quality. The version related to this is 1.0.21103.109.

@@ -1,0 +1,3 @@
+Özel kurallar, regular expressionlar (Regex kuralları) kullanılarak oluşturulabilir.
+
+Daha fazla esneklik ve hız sağlamak için GEODI2'nin kendi makro dili de kullanılabilir.

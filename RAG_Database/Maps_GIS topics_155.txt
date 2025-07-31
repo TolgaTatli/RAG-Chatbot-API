@@ -1,0 +1,37 @@
+One of the most important and distinctive features of GEODI is its ability to produce maps using both structured and unstructured data. Unlike traditional GIS software, GEODI does not require tabular data. It can recognize locations from unstructured data, such as a place name in a PDF, a parcel number in a document, or a kilometer value in a road project. GEODI is capable of integrating a large volume of data that may not schematically fit together.
+
+Beyond traditional geographic maps, GEODI can also utilize non-geographic images, such as an electrical diagram or a picture of an airplane, as a "map".
+
+GEODI provides ready-made definitions for Google and Bing as map bases. The user is advised to check with the respective provider pages, as GEODI is not responsible for any royalties, additional fees, or other liabilities that may be required for the use of these underlays.
+
+The Layer List within the Project Wizard in GEODI offers various underlay options. Users can utilize existing images, CAD files such as DWG/DGN, or files like GPX, geoTIFF, KML, or TileJSON/WMS Servers as underlays. Underlays defined by the user are specific to their project, and if project files are shared, the corresponding underlay files must also be shared.
+
+Underlays in GEODI require a coordinate system. To define this, users must input the appropriate EPSG code and the corresponding limit coordinate values (BBOX). This method allows any image, such as the Cessna 172 in the "interactive documentation" project, to be used as a map.
+
+If a desired EPSG value is not among the existing definitions, WKT values must be created in a file named "EPSG-.WKT" within the GEODI/Projections directory. When defining a custom EPSG value, using a number of 100000 or higher helps prevent conflicts with existing EPSG codes. If projects are shared, any custom EPSG values assigned must also be shared.
+
+The website http://www.epsg-registry.org is a useful resource for generating WKT from EPSG codes. Additionally, projection tools found in other GIS software, such as ArcGIS or Netcad, can assist in this process, as they are capable of storing projections as WKT.
+
+For CAD files like DWG, DGN, DXF, or NCZ that have an unknown projection, a projection can be defined using an external metafile. GEODI's generic external feature definition capability is employed for CAD files with unknown projections.
+
+GEODI maps can be utilized in various other software applications through OGC WMS. This enables software such as ArcGIS, Netcad GIS, Autocad Civil 3D, GeoServer, Google Earth, and any software using infrastructures like Open Layers or Leaflet, to access maps generated from GEODI's non-structural data.
+
+GEODI supports the OGC WMS 1.3.0 standard. When a user clicks on a map within client software that supports this standard, the corresponding dialog in GEODI will open.
+
+WMS provides a live connection, meaning that changes to a query on the GEODI side will result in the published map being updated. If issues arise with these changes, users should check the cache settings of the relevant software.
+
+To access GEODI maps via WMS, the address http://127.0.0.1:3323/wms presents the active project. To publish a map from a specific project, the address http://127.0.0.1:3323/wms?wsname=[Project Name] should be used, where "[Project Name]" is replaced with the actual project name, with spaces replaced (e.g., "deneme%20proje").
+
+GEODI maps can be exported as KML files. However, KML is not dynamic and will not be affected by GEODI queries or new content.
+
+GEODI can export selected locations as a GeoJSON report. This report is compatible with ArcGIS and other GIS software. The GeoJSON report includes links for each geometric entity, enabling users to open documents directly from ArcGIS.
+
+A free ArcGIS Enterprise Widget is available that allows ArcGIS Enterprise users to search for and open documents directly through GEODI.
+
+Missing or incorrect shape file projections can lead to problems when reading, viewing, or using the file as a dictionary in GEODI. If a projection problem occurs, the PRJ file needs to be edited or recreated. Such issues are directly displayed during operations like dictionary preparation and are recorded in the scan log file during scanning. An example of GEODI not recognizing a projection is indicated by a message like "Missing projection parameter 'latitude_of_origin' It is also not defined as 'latitude_of_center'. Parameter name: parameterNam".
+
+To edit a PRJ file with a projection problem, it is necessary to create a Projection WKT using another software that recognizes the file's projection, and then modify the PRJ content. Resources such as ArcGIS, Netcad, and https://www.epsg-registry.org/ can be utilized for this purpose. Users can also send the problematic Shape file or PRJ file for assistance.
+
+Defining the projection for DWG and DGN files that contain plans or maps enhances the usefulness of GEODI's GeoArchive and CAD&GIS viewer modules.
+
+If "strange" characters appear in short summaries when viewing records from ShapeFiles, a solution is to create a CPG or CST file with the same name as the shape file and write the encoding name, such as UTF-8 or ISO-..., within it. If this does not resolve the issue, the DBF file, located in the same directory as the SHP file, can be backed up, then opened with OpenOffice or other software to select the correct encoding, and saved with the same name and extension. It is crucial to back up the DBF file, as errors may occur when the SHP file is viewed with different programs after this process.

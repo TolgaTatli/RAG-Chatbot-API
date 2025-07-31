@@ -1,0 +1,29 @@
+MediaMon is a social media monitoring tool that makes social media messages searchable and analyzes them like other content. It supports Twitter, Facebook, and Instagram sources.
+
+MediaMon serves as a tool for institutions and organizations to foster relationships with citizens or customers. It facilitates faster action on important messages by directing social media messages to relevant units using GEODI notification capabilities, effectively making social media a 24/7 team member. The source data for this process extends beyond social media to include emails and forms from an organization's web page.
+
+Incoming messages processed by MediaMon can appear on a map based on their content, without requiring GIS integration. For example, a message stating "I live in 112 Street, Sincan. We want a nice playground for our neighborhood" would result in "112 streets" appearing on the map, and "Sincan" would also be marked by GEODI, even if the message does not explicitly contain a separate location. These messages are then automatically or manually forwarded to the appropriate unit via the GEODI note-taking mechanism.
+
+MediaMon can perform trend research on larger datasets to identify popular topics or the discussion volume around competitor products. It provides reports on topics, hashtag frequencies, and tweet frequencies over different time periods. The tool allows for automatic extraction of topics and emotions using custom recognizers or the TextPro classification tool, and GEODI's synonymization capabilities help reduce data differences.
+
+MediaMon includes recognizers that identify Hashtag (#x) and Mention (@x) phrases within content. These recognized phrases are utilized in the MediaMon Media Monitoring Panel and serve as keys to link content for GEODI Discovery.
+
+The Media Monitoring Panel displays the frequency and time distribution of hashtags and mentions from social media sources. The content shown on this panel adjusts based on the queries performed within GEODI.
+
+To use Twitter as a source, a Twitter account is required to be associated with GEODI. GEODI can read tweets from the timeline or Twitter searches, accepting tweets from the user's account and accounts followed by it as content. Users can choose to include links, mentions, and tweets. GEODI's search capability extends as far back as the oldest tweets visible in a Twitter search.
+
+GEODI does not access private messages, the email address linked to the Twitter account, or the Twitter password. Users can disconnect GEODI from their Twitter account at any time. GEODI can also analyze search results by searching open tweets, allowing detailed searches by word, person, place, and date. Search criteria can be categorized with positive, negative, or question options, and retweeted tweets can be included or excluded using the "Include retweets" option.
+
+For Facebook source identification, users can search posts and comments. It is possible to read one's own and followed posts by providing a username and password, or to browse public pages without logging in by adding them to the addresses section. Users can retrieve posts matching a desired query result by adding expressions to the query box.
+
+All posts visible to the user on Facebook are scanned. Automatic scanning can be configured to scan only new posts during specific periods. Previews of these posts can be obtained using the index images on the page option.
+
+Instagram posts from pages can be used as a content source, with two available modes: API mode and browser navigation mode. In API mode, logging in with an account is mandatory, and only posts from that account and its stream are read, requiring no settings beyond account login.
+
+In browser browsing mode for Instagram, public pages can be scanned by adding their links to the Addresses section without logging in. Alternatively, by logging in, links of pages followed by the account can be added and scanned. Unlike Facebook, Instagram does not support word queries; only accounts appear in search results.
+
+The scope of training for GEODI Users includes understanding MediaMon, Hashtag and Mention recognizers, awareness of social media content retrieval and access restrictions, the Media Monitoring Panel, and routing incoming messages with note-taking.
+
+For GEODI Admins, the training scope covers sources such as Facebook, Instagram, Twitter, email, and web, all within MediaMon objectives. It also includes Hashtag and Mention Recognizers, with details and possible problems for Facebook, Twitter, and Instagram.
+
+Additional topics for GEODI Admins training include the MediaMon Panel, the possibility of OCR, ImagePro, and FacePro with images from social media, how to convert a social media message into a task, and performing more detailed analysis with Discovery. Awareness of possible problems, query specification, security updates to linked accounts and their effects, handling unwanted Twitter posts, Twitter query methods, and automatic scanning are also covered, along with a questions and answers section.

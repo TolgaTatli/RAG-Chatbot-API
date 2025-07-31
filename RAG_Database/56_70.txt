@@ -1,0 +1,1 @@
+Veritabanında Primary Key tanımlı olmayan veya Object ID gibi bir değeri olamayan tabloları indekslemek mümkündür. Bu kısıt kaldırılabilir. Ancak, bu şekilde olan tablolarda yeniden indeksleme her seferinde yeni bir versiyon oluşturacaktır.

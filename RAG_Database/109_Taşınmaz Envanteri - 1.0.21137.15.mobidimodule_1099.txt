@@ -1,0 +1,9 @@
+The automatic logout duration can be changed parametrically.
+
+The text includes the terms Material, Description, Barcode, and Room.
+
+The text refers to Assets Management.
+
+Assets can be recorded and counted using barcode or QRCodes. Associated keywords include asset, inventory, stock, control, barcode, QRCode, label, count, and report.
+
+The version number is 1.0.21137.15.

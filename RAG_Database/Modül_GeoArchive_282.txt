@@ -1,0 +1,11 @@
+GeoArchive module recognizes Sheet Numbers, Coordinate Tables, Coordinate Values, and file boundaries within structured and unstructured data. This capability gives archives a geographic quality and automates tasks that would otherwise require manual effort with GIS software. Adding the recognizers that come with the GeoArchive module to a project is sufficient. For recognizer settings, users should refer to the project wizard help pages.
+
+GeoArchive can also operate with the separately licensed Parcel Recognizer and/or Kilometer Recognizer. This functionality allows plans, expropriation maps, road projects, and intersection projects created with AutoCAD, Microstation, or Netcad to be automatically linked with GIS without requiring any prior processing.
+
+The Geographic Boundary Recognizer automatically identifies boundaries from geographic information present in existing CAD, GIS, and Spatial Databases. These boundaries allow users to automatically view plans, plan revisions, all types of project sheets, and their covered areas. The map will change according to search criteria. This same recognizer also identifies Turkish Standard Sheet Numbers. The default scale is 1/5000 and larger, which can be changed if desired.
+
+For DWG, DXF, and DGN files, external metadata must be defined. For NCZ and DRE files, if not present, the same metadata file can be defined. For Shape files, a PRJ (Projection) file must be present; if not, the same metadata file can be used.
+
+Training for GEODI Users requires prior completion of CAD&GIS User Training. Topics covered include: what GeoArchive is (explained with an AnkaPedia example), what the Parcel Recognizer does (if applicable, explained via AnkaPedia), what the Kilometer Recognizer does (if applicable, explained via a sample project), what the Geographic Boundary Recognizer does (explained via a drone maps scenario), what the Geographic Table Recognizer does (explained via sample data), and examples of intersecting content.
+
+Training for GEODI System Administrators covers GeoArchive installation, Parcel Recognizer installation (including parcel geometry sources like megsis and databases), Kilometer Recognizer installation (including the creation of route dictionaries), Boundary Recognizer, Coordinate Table Recognizer, Sheet Recognizer, and Questions and Answers.

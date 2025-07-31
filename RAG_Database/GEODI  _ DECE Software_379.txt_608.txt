@@ -1,0 +1,41 @@
+GEODI is an AI and NLP based Semantic Search, GIS, and Discovery Platform. It provides solutions such as Digital Archive with artificial intelligence, GIS Archive and Enterprise GIS, Document Archive, Ebys e-archive and document management system, data discovery, and data protection solutions.
+
+The GEODI Platform has powerful unstructured data processing, semantic search, discovery, and patented GIS functions, all based on AI and NLP. All solutions are built on top of the GEODI platform.
+
+GEODI utilizes over 200 Data Adapters, enabling connections to numerous data sources and web services. Its fast indexing engine quickly consumes both text and non-text data, and includes OCR for processing scanned data.
+
+Recognizers within GEODI are designed to discover information. These include various types such as Dictionaries, Regex Recognizers, ML Recognizers, Face Recognizer, Object Recognizers, or custom ones, all providing insight about the data.
+
+The GEODI Search engine incorporates Patented Spatial Query capabilities, offering almost all query capabilities found in GIS software. A key difference is that GEODI operates on unstructured data, injecting location awareness into any dataset.
+
+Semantic queries are crucial for achieving more relevant search results within GEODI, helping to find content that would be impossible to locate using keywords alone. This functionality applies to dates, money, units, topics, or custom types.
+
+GEODI functions as an insight engine module, equipped with multiple analysis gadgets. These include Network Graph, Treemap, Heat Maps, Calendar, Proximity, Trend Analysis, and Briefing.
+
+The GEODI Platform features built-in collaboration capabilities, allowing users to be notified through alarms, automatic actions, and other mechanisms.
+
+DECE and its partners offer many modules that operate on top of GEODI. A list of these modules is served through DECE-STORE, which is an application built by GEODI.
+
+GEODI has a well-documented API that allows third-party applications to consume GEODI services or develop new features.
+
+GEODI is the standard module, providing 24/7 usable features for all search and collaboration needs, starting from 5 users. This standard includes basic search, search by image, finding copy/similar documents, versioning, basic GIS, note-taking, and viewing features for PDF, Office, and e-Mail. Other modules run on the GEODI standard.
+
+The GEODI Discovery Suite analyzes data and provides insights, including checking compliance for regulations such as PCI/DSS, GDPR, or HIPAA by showing non-compliant content. It includes hundreds of ready-to-use recognizers for entities like Names, Money, Dates, Places, Card Numbers, IBAN, or SSN, and allows for the creation of new and custom recognizers using Low-code tools.
+
+The GEODI Classification Suite offers automatic and manual classification tools for Desktop, Office, CAD, OWA (Webmail), and legacy data. It identifies and labels data according to protection policies, ensuring data safety, and automatic Legacy Data Classification further enhances data protection.
+
+Masking in GEODI hides any discovery result in unstructured or structured data, including credit cards, names, company names, and money. Role-based dynamic masking is available for office or PDF documents, and it supports permanent database masking for developers or data science teams.
+
+Anonymization replaces sensitive information with fake but real-looking values in unstructured or structured data. It can anonymize any discovery result, such as credit cards, names, company names, and money. Role-based dynamic anonymization is possible for office or PDF documents, and it can permanently create a copy of a database for developers or data science teams.
+
+The Geo Suite unlocks GEODI's Spatial Features, providing GIS capabilities on unstructured data. It adds discovery, search, and view support for CAD, Raster, Video, and GIS formats, including ESRI, AutoCAD, Microstation, and ECW. Geo Suite also utilizes spatial or location-based information from unstructured data like PDF, Word, Excel, Mails, and Videos, and can create maps, street view-like navigators, and spatial analysis such as heat maps.
+
+TextPro uses AI-based self-learning tools to discover the document type, working for CVs, contracts, reports, invoices, or any other document type without a training phase. It plays a crucial role in classification or remediation processes.
+
+FacePro is an AI-based tool that finds faces from photos and videos without any training. It is designed for applications in Media archives, Security, Forensics, Intelligence, or personal data discovery.
+
+ImagePro recognizes objects from photos and videos, answering questions such as which products and how many products are on shelves. It is a learnable tool that can be trained with desired objects, even extracting information from blurry or dark photos. ImagePro can work with MOBIDI and other GEODI Modules, enabling recognition/classification on field photos and automating control processes.
+
+MediaMon enables social media analysis, allowing complaints from social media to be converted into tasks. Its panel facilitates the analysis of hashtags and mentions. MediaMon provides 24/7 social media monitoring, including resources like blogs, websites, and complaints websites, without requiring manual resources. It aims to provide convenience and increase satisfaction for organizations assisting citizens or consumers, such as municipalities, consumer product companies, and utility distribution companies.
+
+GEODI's references include Croatia's Ministry of Agriculture, Vakıfbank, National Budget Office of Nigeria, Ministry of Energy and Natural Resources, Saudi Finance Company, Al Tijaria, Topnet, National Finance of Omman, Palestine Investment Bank, Vakıf Katılım, Iron Mountain, Ziraat Katılım, Verifone, Green Crescent, Kahve Dünyası, Gelecek Varlık, ICT Authority, Ministry of Trade, Carrefoursa, Teknosa, Istanbul Chamber of Industry, Koton, Turkey Coal Enterprises, Unifree Duty Free, The North Marmara Motorway, Türk Nippon Insurance, Private Sector, State Agencies, and Municipalities & SPA.

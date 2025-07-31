@@ -1,0 +1,25 @@
+Bu MSI paketi, Cassifier Desktop (Shell Extension) ve Microsoft Office eklentilerini içerir.
+
+GEODI Classifier Kurulum sekmesi parametreleri otomatik olarak oluşturur. Kurulum manuel olarak yapılabilir veya dağıtım için ManageEngine gibi bir araç kullanılabilir.
+
+Office eklentileri kullanıcılar tarafından devre dışı bırakılmaz veya kaldırılamaz; bunu yalnızca sistem yöneticileri yapabilir.
+
+Kurulu ajanlar, GEODI Ajan Yönetim Paneli'nde açıklanan bir panel ile izlenir.
+
+GEODI'de Sınıflama Politikaları için bir Proje (WorkSpace) gereklidir ve GEODI URL adresine erişilebilir olmalıdır.
+
+Çok sayıda PC için dağıtım, ManageEngine, SCCM ya da PDQ benzeri bir araç ile yapılabilir.
+
+Classifier Ajanı /GUI/Agents/GDE adresinde yer alır.
+
+Sınıflama modülü Kurulum sekmesinden parametrelerin tümü otomatik olarak elde edilebilir.
+
+MSI parametreleri arasında GEODI_URL, GEODI_WSNAME ve GEODI_TOKEN bulunur. GEODI_URL, GEODI sunucu adresidir ve güvenli olması, DNS/SSL ayarlarının yapılmış olması önerilir. GEODI_WSNAME, ajanların sınıflama politikalarını alacağı GEODI Workspace'inin adıdır. GEODI_TOKEN, Sınıflama Modülü Ayarlarının son sekmesindeki Kurulum ekranından alınabilir; farklı bir kullanıcı ile alınıp bu kullanıcının şifresinin muhafaza edilmesi gereklidir, şifre değişirse yeniden oluşturulması ve yeniden kurulum gerekebilir.
+
+PDQ, ManageEngine, SCCM gibi bir araç ile dağıtım için "GEODI.Classifier.msi" /quiet GEODI_URL="https://icdemo.dece.com.tr/" GEODI_WSNAME="1013-TR-Kişisel Veri Keşfi" GEODI_TOKEN="EAAAAL%%2FcQ9RvjWM…" komutu kullanılabilir. MSI yukarıda belirtilen parametreler ile dağıtılır. "GEODI.Classifier.msi" MSI paketinin dizini olmalıdır, ancak bazı araçlar MSI paketini seçtirdiği için bu komuta gerek kalmayabilir. /quiet bir msiexec parametresidir.
+
+Kaldırma işlemi için msiexec.exe /x "GEODI.Classifier.msi" /qn /norestart komutu kullanılır ve MSI uninstall parametresi ile çalıştırılır.
+
+Güncelleme işlemi için start "" "%ProgramFiles(x86)%\DECE Software\GEODI Classifier\Updater.exe" komutu ile Updater çalıştırılır.
+
+Ajanlar iki günde bir güncelleme kontrolü yaparlar ve varsa GEODI sunucusu üzerinden kendilerini güncellerler, bu durum herhangi bir müdahale gerektirmez.

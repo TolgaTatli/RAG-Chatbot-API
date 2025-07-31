@@ -1,0 +1,13 @@
+Microsoft Teams bağlantısı Bulut sekmesinden yapılabilir.
+
+Bağlanan hesaptaki tüm sohbet alanları ve sohbetlerdeki dosyalar keşfedilebilir.
+
+Microsoft Teams bağlantısı için bir Microsoft hesabı gereklidir. Keşif, kullanılan hesabın erişim alanı ile sınırlıdır.
+
+GEODI'de Microsoft Teams bağlantısı yapılırken bir kez bağlantı onayı istenir.
+
+Bir dosya üçüncü kişilere iletildiğinde ve bu kişilerin dosyaya erişim yetkisi yoksa, proje taraması sırasında bu durum loglara hata olarak yansıyacaktır.
+
+Ancak, ilgili dosya Microsoft Teams uygulaması üzerinden manuel olarak OneDrive'da bulunup "Paylaş" seçeneğiyle üçüncü kişiler eklenerek ve ardından "Gönder" butonuna tıklanarak paylaşılırsa, bu kişilere erişim hakkı tanımlanmış olur. Bu işlem sonrasında, proje tekrar tarandığında aynı hata alınmayacaktır.
+
+Sorun giderme için internet bağlantısı olduğundan emin olunmalıdır. Kullanıcı adı veya şifre doğru girilmelidir. Bilgilerin değişmesi durumunda bağlantı geçersiz hale gelebilir.

@@ -1,0 +1,5 @@
+Bulk masking can be performed through the interface.
+
+Country-specific semantic recognizers are used to extend the capabilities of GEODI Discovery and Classification.
+
+The "Discovery UAE/PDPL" package, version 1.0.0.16, is specifically for UAE. This package should be installed after GEODI Discovery and includes the UAE PID Recognizer, UAE Dubai Street Recognizer, and UAE Passport Recognizer.

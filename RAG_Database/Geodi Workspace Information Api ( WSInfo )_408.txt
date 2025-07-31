@@ -1,0 +1,3 @@
+Project information may be required to interpret some information from GEODI services. Various information about the project can be reached by using services within this scope.
+
+The Geodi Workspace Information API is a service for retrieving workspace information. With this service, identifiers and resources in the project, including id and short id values, can be accessed.

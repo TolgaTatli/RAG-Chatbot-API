@@ -1,0 +1,13 @@
+A Token can be obtained by generating a Geodi Token.
+
+The BulkRecognizeContents operation returns entries found by scanners in the existing workspace. These entries are derived from one or more content items submitted by the user to GEODI.
+
+The request for BulkRecognizeContents uses the URL `[GEODIURL]/DataExtractionHandler?op=BulkRecognizeContents&wsName=[WSNAME]&content=[ContentJson]&UserSession=[TOKEN]`. The `wsName` parameter represents the Workspace Name, and `content` is a JSON object containing content information. Details for the content object can be found in the Geodi ContentObject - Content Definition Object document. The HttpMethod for this operation can be GET or POST.
+
+Expected errors for the BulkRecognizeContents operation include 401 Unauthorized access / Access denied, 403 Forbidden, 511 Network Authentication Required, and 501 Server Error.
+
+The returning value for the BulkRecognizeContents operation is a JSON object with the structure: `{ "ElapsedMilliseconds":0, "Entries": [ { "OriginalText":"", "Text":"", "StartIndex":0, "Length":1, "Filter":null } ] }`.
+
+Within the returning value, `ElapsedMilliseconds` indicates the milliseconds spent for recognition. `Entries` is a list of entrances recognized by GEODI. Each entry contains `OriginalText`, which is a piece of text where recognition occurs; `Text`, which is the text of the recognition made within the text; `StartIndex`, representing OriginalText's starting position within the text (starting from 0); `Length`, which is OriginalText's length; and `Filter`, the value created for the entry, if any.
+
+An example request for `[GEODIURL]/DataExtractionHandler?op=BulkRecognizeContents` includes a `Contents` array. This array contains objects, each with `ContentURL`, `DisplayName`, `ContentDate`, and `ViewURL`. For instance, one entry might have `ContentURL: '~/MyApplication/Content.php?id=1811'`, `DisplayName:'Document1'`, `ContentDate:'Mon, 06 May 2015 10:15:20 GMT'`, and `ViewURL: '~/MyApplication/ContentView.php?id=1811'`. Other examples include `Document2` and `Document3` with similar structures and different IDs.

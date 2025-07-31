@@ -1,0 +1,5 @@
+GEODI Discovery and Classifier capabilities are expanded with country-specific semantic recognizers. This package is specifically designed for France.
+
+After installing GEODI Discovery, users can install this package.
+
+The package for France includes a France SSN Recognizer, a France Business ID Number Recognizer, a French Names Dictionary, a Dictionary of France Cities, a France ID Recognizer, and a France NIF Number Recognizer.

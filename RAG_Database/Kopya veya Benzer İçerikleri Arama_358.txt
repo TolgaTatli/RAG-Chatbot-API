@@ -1,0 +1,17 @@
+Çoğu kurumda belgelerin %40’a kadarı kopya veya yüksek oranda benzer içerikten oluşur. Bu tür tekrar eden içerikler, kullanıcılar için kafa karışıklığı yaratır, arama sonuçlarını karmaşıklaştırır ve gereksiz depolama alanı tüketir. Kopya veya benzer belgeler aynı klasörde bulunabilir, veya farklı sürücülerde, e-posta sistemlerinde, yedeklerde veya departmanlar arasında dağılmış olabilir. Ayrıca, aynı belgenin PDF ve DOCX hali gibi farklı formatlarda da bulunabilirler.
+
+GEODI, birebir kopyaları, benzer içerikleri ve görsel benzerlikleri format fark etmeden otomatik olarak bulur. GEODI, benzerlik ve kopyalığı dosya adı ya da formatına göre değil, içeriğe göre değerlendirir. Bu sayede, aynı metni içeren bir DOCX ve PDF dosyası, GEODI tarafından kopya veya benzer olarak tespit edilebilir.
+
+GEODI'nin bu yeteneği sayesinde kurumlar, temiz ve tekilleştirilmiş veri ile çalışır. Bu durum, daha doğru keşif ve sınıflama sonuçları elde etmelerini sağlar. Ayrıca, zaman kazanılır, karmaşa azalır ve raporlama süreçleri sadeleştirilir.
+
+Organizasyonlardaki belgelerin genellikle %40'ı kopyalardan oluşur. Bu kopyalar karışıklığa neden olur ve aramaları zorlaştırır. GEODI, bu kopyaları bulur ve ortadan kaldırmaya yardımcı olur.
+
+GEODI'de kopyaları aramak için çeşitli sorgular kullanılabilir. "kopya" veya "duplicate" sorgusu ile kopyası olan tüm dokümanlar bulunurken, "-kopya" ile kopyası olmayanlar bulunur. Belirli bir GEODI sorgusuna uyan içeriklerin kopyaları "kopya:(geodi sorgusu)" ile, belirli bir dosyanın kopyaları "kopya:(doc:a.pdf)" ile ve belirli bir ifadeyi içeren ilk dokümanın kopyaları "kopya:"10 ada 20 Parsel Yapı Ruhsatı"" ile bulunabilir.
+
+Belirli bir kaynak belirtilmediğinde, GEODI hangi dosyanın orijinal kabul edileceğini tanımlar. Buna göre, daha eski olan veya daha yeni olan belge orijinal kabul edilebilir. "Important" (Önemli) olarak işaretlenen kaynaklardaki kopyalar korunurken, diğerleri silinmek üzere işaretlenir. "Not Important" (Önemli Değil) olarak işaretlenen kaynaklar dışında bir kopya varsa, bu listedeki kaynaklardakiler güvenle silinebilir.
+
+GEODI, kopyalar gibi, içerikler arasında benzerlikleri de tespit eder. Kopyaların aksine, benzerlik oransal bir özelliktir; her kopya aynı zamanda benzerdir, ancak tüm benzerler kopya değildir. İsteğe bağlı olarak, kopyalar benzerlik listesinden hariç tutulabilir.
+
+GEODI'de benzer içerikleri aramak için çeşitli sorgular ve parametreler mevcuttur. Örneğin, `benzer:(doc:a.pdf)` veya `similar:(doc:a.pdf)` ile belirli bir dosyanın benzerleri bulunabilir. `benzer:"Ankara Kalesi"` sorgusu, "Ankara Kalesi" ifadesini içeren ilk dokümanın benzerlerini getirir. Benzer içerik listesinde gösterilecek maksimum benzer sayısını `benzer:(maxcount:...)` ile sınırlanabilir. Benzerlik eşik değeri `benzer:(minsimilarity:...)` ile ayarlanabilir ve varsayılan değer %70'tir. Kopyaları benzerlik sonuçlarından hariç tutmak için `benzer:(excludeDuplicates:true)` kullanılabilir, bu parametre varsayılan olarak doğrudur.
+
+Çok sayıda benzer ancak birebir aynı olmayan belgeyle çalışırken, GEODI bu belgeler arasından yalnızca bir temsilci belgeyi getirme imkanı sunar. Bu işlem, arama verimliliğini artırır ve gereksiz içeriklerin imha veya karantinaya alınarak temizlenmesine yardımcı olur.

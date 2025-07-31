@@ -1,0 +1,5 @@
+GEODI versions changes in content that originate from the same source. This versioning process takes place within the index, not directly at the source. For the ability to open old versions, the backup option must be activated.
+
+When searching, all versions are searched by default. Content that has versions will have a suffix like :1 or :2 added to its name.
+
+To specifically search for the latest state of each content, `ver:last` must be added to the query. The query `ver:[son | last]` is used to retrieve the latest versions. Old versions can be found using the query `ver:0`. To find versions that are one prior to the current one, the query `ver:[önceki | eski | prev | hasprev]` is used.

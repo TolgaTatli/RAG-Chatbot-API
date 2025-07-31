@@ -1,0 +1,3 @@
+It is questioned whether appropriate tagging is possible without a popup when 25 users send emails outside the company via Outlook and OWA.
+
+Customizations can be made based on From-To.

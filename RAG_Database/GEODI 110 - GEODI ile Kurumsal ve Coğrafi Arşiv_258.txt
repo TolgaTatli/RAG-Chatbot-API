@@ -1,0 +1,15 @@
+Bu eğitim ile GEODI ile Arşiv nasıl oluşturulur ve Coğrafi yetenekleri öğreneceksiniz. Burada söz edilen özelliklerin bir kısmı CAD&GIS Viewer, GeoArchive, GEODI Pro ve Parsel Tanıyıcı modülünden gelir.
+
+Eğitimin süresi 1 saattir. Ön şart eğitimler olarak GEODI 101 ve GEODI 102 belirtilmiştir.
+
+Eğitim kapsamındaki konular arasında Arama Sayfası, sürükle bırak ile doküman ekleme ve neden metaveri/index gerekmediğinin açıklaması yer almaktadır.
+
+Taranmış dokümanlar için nasıl taranacağı, dikkat edilecek konular, cep telefonu ile tarama, not ekleme ve sorguları izleme konuları işlenmektedir.
+
+Harita ile ilgili konular arasında harita üzerinden dokümanlara ulaşma, haritanın nasıl oluştuğu, konum kaynakları (İl/İlçe sözlükleri, Parseller, Coğrafi Sınırlar, Pafta Tanıyıcı, Koordinatlı Resimler) bulunmaktadır. Ayrıca harita overlay (bir NCZ veya DWG’nin ana harita üzerinde çizilmesi) ve yakınında sorgusu da kapsamdadır.
+
+CAD&GIS dosyaları başlığı altında desteklenen dosyalar (DWG, NCZ, DGN, GeotTIFF, ECW, KML, SHP gibi), görüntüleme ve not alma, konumsal olarak çakışan dosyaların açılması ve 2 farklı dosyanın karşılaştırılması / fark analizi konuları ele alınmaktadır.
+
+Diğer konular arasında Veri Tabanı Ekleme, Yetkiler, Konumlar, Sorular ve Destekleyici Materyal bulunmaktadır.
+
+Eğitimler genel bir fikir vermeyi amaçlar ve öğrendiklerinizi kullanarak pekiştirmeniz gereklidir. Eğitim kapsamında belirtilen bazı özellikler lisansınızda yer almayabilir.

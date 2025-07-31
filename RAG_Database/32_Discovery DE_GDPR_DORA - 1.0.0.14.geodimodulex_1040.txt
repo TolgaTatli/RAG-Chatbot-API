@@ -1,0 +1,7 @@
+Automatic classification functionality is available.
+
+Country-specific semantic recognizers extend the capabilities of GEODI Discovery and Classification. A package specifically for Germany is available, which must be installed after GEODI Discovery.
+
+The Germany package includes various recognizers: Plate Recognizer, Driver License Number, Germany Post Code Recognizer, Tax ID Recognizer, Tax Number Recognizer, Trade Registration Number, VSNR Recognizer, and DE Passport Number Recognizer.
+
+The version of this package is 1.0.0.14.

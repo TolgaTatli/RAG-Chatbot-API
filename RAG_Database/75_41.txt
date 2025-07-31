@@ -1,0 +1,3 @@
+It is not a necessary operation to perform scans made with 75 GDE using a Scheduler.
+
+GEODI continues to queue and process data that comes from GDEs.

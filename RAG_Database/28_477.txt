@@ -1,0 +1,7 @@
+GEODI can scan existing email inboxes. It automatically indexes email content and attachments, making both the email body and attachments searchable.
+
+GEODI supports the automatic indexing of *.PST and *.OST files. It can also index emails from servers that use IMAP or POP3 protocols.
+
+For Exchange Server, GEODI can index all users' emails if a user has access permission to other users' email addresses. The EWS service must be enabled on the Exchange Server for this feature.
+
+Users can view indexed emails based on their permissions if they are listed in the From, To, CC, or BCC fields.

@@ -1,0 +1,5 @@
+It is possible to hide the "Open in Browser" button on the 184 Content Viewers Page.
+
+An add-on developed for this purpose is available in DECE-STORE.
+
+This add-on can be installed.

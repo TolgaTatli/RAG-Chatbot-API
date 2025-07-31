@@ -1,0 +1,11 @@
+This document outlines a PoC or After Sales installation and configuration RoadMap, which represents a basic flow where each phase has detailed pages.
+
+The first phase, "01 - Opening Meeting," allows for the invitation of various departments, including data protection officers, IT, Legal, Management, Purchase, or HR. During this meeting, discussions will cover "how is DECE?", "What is GEODI, and what is it for?", and an attempt to clarify expectations, data sources, and needs such as OCR. To proceed, servers that meet the requirements should be ready, as detailed in "GEODI Installation Requirements."
+
+The second phase, "02 - Setup," involves installing GEODI and its necessary modules. This process includes the activation of licenses, user authorizations, and general system settings, as outlined in "GEODI Server Installation."
+
+The third phase, "03 - Configuration," allows for different paths to be followed for Discovery, Classification, or Search. DECE-STORE is identified as a key resource for finding ready components to address regulations or country-specific needs, with specific mentions of "DECE-STORE," "Discovery," "Classification," and "Search."
+
+The fourth phase, "04 - Technical Briefing," occurs before the closing meeting. During this briefing, information will be provided regarding the system topology, monitoring of agents, performance issues, backup, and API.
+
+The "Closing" signifies that the installation and configuration have been completed. It is stated that GEODI is hoped to meet expectations, and it is time to switch to routine operating mode. Any new needs, such as adding a new data source or a new rule, will be possible.

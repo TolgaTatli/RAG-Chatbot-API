@@ -1,0 +1,25 @@
+The CAD&GIS Viewer module provides support for viewing and searching various files, along with many other features.
+
+Users can take notes on the viewer to mark locations, such as erroneous spots in an architectural project or plan. The CAD&GIS Viewer also enables the creation of a common sharing area for projects, facilitating collaboration among multiple stakeholders on the same project.
+
+GEODI includes an automatic versioning feature that allows tracking changes in projects. Information like who made a change and how many times it changed can be easily retrieved. If backup is enabled, GEODI displays old versions for CAD documents, including NCZ, DWG, and DGN files, and can compare old and new versions. The system also supports comparing versions of different files, such as the difference between two satellite images or a satellite image and a plan.
+
+With the CAD&GIS Viewer, files do not need to be downloaded to the local environment. All information is stored on the server and can be viewed at any time, including on mobile devices, subject to authorization.
+
+Text information within supported file formats, such as shape attributes, becomes searchable. For formats or applications that do not have direct projection, they can be defined using GEODI's metadata capabilities.
+
+No additional license or local software is required for viewing files. A browser is sufficient for access, regardless of the platform, including mobile.
+
+Supported file types include AutoCAD (DWG, DXF), Netcad (NCZ, CKS, KTB), Microstation (DGN), SHP, KML, ECW, SID, IMG, and GeoTIFF.
+
+Training content for GEODI Users covers file types and examples, viewers, note taking and notation, versioning (including asking for old/new versions and comparing), and working with geographic files (intersections, bringing relevant files).
+
+Training content for GEODI Admins includes set-up, CAD and GIS files (DWG for AutoCAD, NCZ for Netcad, DGN for Microstation, KML for Google Earth and all GIS software, GeoTIFF, ECW, MrSID for all GIS software, and Shape for all GIS software).
+
+Further training content for GEODI Admins covers viewers, noting that no additional software is required, intersections/neighbors in viewers, comparison features, note taking, and handling large files/strip maps.
+
+Additional training content for GEODI Admins addresses projection, including why and how it is defined, supported formats, shape file projection information that may be required, and the importance of projection for the Border Recognizer (a GeoArchive feature).
+
+Training content also covers publishing as WMS, including which content types GEODI publishes as WMS, and considerations such as tokens and choosing the right projection.
+
+A section for Questions and Answers is also provided.

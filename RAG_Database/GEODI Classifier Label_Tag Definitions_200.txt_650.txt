@@ -1,0 +1,15 @@
+GEODI Classifier features a flexible labeling mechanism designed to integrate with DLP software or an existing labeling schema. It labels PDF, Office, and Libre Office documents, while using ADS (Alternate Data Stream) for all other document types. GEODI directly supports files already tagged with a user's current classification tool and can adapt to an existing label scheme.
+
+Labels used in the standard template and sample files have mandatory first lines, with others being optional, and can be changed or new ones added. Labels should follow a "name:value name:value ..." structure. At least one label must represent the class value and must be fixed. The value can take various forms, such as "class:confidential", "class:{58f30e89-66db-4092-a81f-282a2eee431c}", or "class:{\"id\":\"58f30e89-66db-4092-a81f-282a2eee431c\"}".
+
+Variables can be used inside tags, and their names are case-sensitive. These variables can represent information such as the computer user name, email sender for OWA, GEODI user for batch classification, the version of the application (Shell, Office addon, or GEODI), date information in yyyy-mm-dd format, e-poch date value, and UTC full time information. The specific variable may vary depending on the classification tool.
+
+For users without an existing labeling schema, GEODI provides standard default classes and tag definitions. These can be used directly or modified. If no existing tag is present, these tags can be utilized for DLP compliance.
+
+The "Confidential" class includes labels such as "geodilabelclass:id_classification_secret=2155a213-0150-4c2d-9211-dba2def647fd", "geodilabeluser:user=%User%", and "geodilabeltime:datetime=%Date-UTC%". Its coverage applies to content with money, specifically amounts greater than 50K USD or equivalent, and selected keywords. These selected keywords are located in a dictionary, which can be freely modified.
+
+The "PII" (Personally Identifiable Information) class uses labels like "geodilabelclass:id_classification_personalinfo=d36d9a67-b760-4689-ad88-96381e595636", "geodilabeluser:user=%User%", and "geodilabeltime:datetime=%Date-UTC%". Its coverage includes content containing both a name or ID, and a phone number, email, address, or blood type. The term "ID" encompasses National ID numbers, Medical Numbers, and Passports, among others.
+
+The "Restricted" class is defined by labels such as "geodilabelclass:id_classification_restricted=3c9990e0-a748-41de-9d8c-db8783fa5103", "geodilabeluser:user=%User%", and "geodilabeltime:datetime=%Date-UTC%". Its coverage includes IBANs, Tax Numbers, Swift codes, and keywords like "restricted" or "internal use only". These keywords are stored in a dictionary that can be freely modified.
+
+The "Unclassifed" class is associated with labels such as "geodilabelclass:id_classification_unclassified=0ef0d4bf-59b8-4ae6-bbc0-fafde041157b", "geodilabeluser:user=%User%", and "geodilabeltime:datetime=%Date-UTC%".

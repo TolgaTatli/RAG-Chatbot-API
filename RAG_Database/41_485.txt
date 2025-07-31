@@ -1,0 +1,5 @@
+GEODI offers rule and AI-based automatic classification. It provides comprehensive classification capabilities supported by natural language processing and artificial intelligence. GEODI can classify previously unclassified data, supporting both batch classification and classification as data is discovered.
+
+GEODI's classification features include working with a single agent, offering speed and practicality. The rules can be customized.
+
+GEODI ensures compliance with numerous regulations. It provides log analysis and a detailed analysis panel. GEODI's classification also works in conjunction with discovery and search functions.

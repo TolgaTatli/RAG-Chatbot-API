@@ -1,0 +1,1 @@
+GEODI allows for 2 groupings of Recognizers. When working with groups in the Project Wizard, 'GroupName' must be utilized. For naming within the Facet field, the format 'Grup\İsim' should be applied.

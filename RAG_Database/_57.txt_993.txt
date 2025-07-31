@@ -1,0 +1,1 @@
+PST-extended mail archives are discoverable regardless of their source, including folders. This means that .PST files found in "172 Folder" can be discovered.

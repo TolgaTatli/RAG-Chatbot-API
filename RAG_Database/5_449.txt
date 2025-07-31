@@ -1,0 +1,3 @@
+Log4j is not used in Geodi.
+
+When sending emails, scanning and automatic classification can be performed. However, email sending is not blocked.

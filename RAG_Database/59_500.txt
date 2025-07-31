@@ -1,0 +1,1 @@
+On average, the discovery rate is between 0.5 and 1+ TB per day. This daily discovery rate corresponds to an average of 20-40 GB per hour.

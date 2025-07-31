@@ -1,0 +1,15 @@
+This page explains how GEODI Server operates in a redundant structure, covering both Active-Passive and Active-Active configurations.
+
+For an Active-Passive configuration, two servers and two GEODI licenses are required. Both the Active-GEODI and Passive-GEODI servers must have identical settings and indexes.
+
+To ensure uninterrupted operation of GDEs and/or Classification Agents based on the GEODI Server, DNS records must be adjusted during the transition. The Active-GEODI address should become the Passive-GEODI address after the transition, and therefore, the IP option should not be used in the settings.
+
+Active and Passive GEODI configurations, project settings, versions, and modules must be identical. GEODI Privacy settings may affect the validity of settings on the relevant machine, which should be considered during synchronization. The Token used for GDEs and/or Classification agents must be the same, and Active and Passive GEODIs should use the same LDAP users, ensuring the same TOKEN is obtained for the same user.
+
+Active and Passive GEODIs can operate on the same indexes and/or copies. Source addresses and UNCPaths must be identical on both servers. If directories are mapped with drive names using commands like `net use` or `subst`, their network access addresses should also be the same for this purpose.
+
+During the transition from Active to Passive, the GEODI environment and settings for working in a Disaster Environment must be synchronized. If the process is manual, the necessary arrangements should be made in the script. Once the passive GEODI is activated, changes, such as adding a new document, will occur on the passive system. When switching back to the active GEODI, these actions must be reversed.
+
+In GEODI, the Active-Active configuration is specifically utilized for the Classifier solution. This configuration allows for setup and load balancing via NLB (Network Load Balancer) devices, with usage dependent on the desired settings within NLB device management.
+
+To implement the Active-Active configuration for the Classification solution, specific conditions must be met across the GEODIs. These include identical GEODI Versions, GEODI Module Versions, the TOKEN user for installation (including User name and Password), Project Names, and Project settings such as Classification rules and classes.

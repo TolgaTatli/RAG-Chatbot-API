@@ -1,0 +1,1 @@
+Greenplum Database can be discovered and anonymized. All Database Management Systems (DBMSs) can be discovered and anonymized, provided that an ODBC Driver is available.

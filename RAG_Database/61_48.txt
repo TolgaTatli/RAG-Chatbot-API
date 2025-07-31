@@ -1,0 +1,1 @@
+GDE'den gelen veriler kaynaktan silindiğinde, Geodi'de de silinmesi veya gösterilmemesi mümkündür. Bu işlem, "Silinenleri sil" aksiyonu ile gerçekleştirilebilir. Alternatif olarak, GEODI indeks bakım arayüzü üzerinden de bu işlem yapılabilir.

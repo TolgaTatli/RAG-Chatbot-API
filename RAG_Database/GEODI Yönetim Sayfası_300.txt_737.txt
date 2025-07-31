@@ -1,0 +1,31 @@
+GEODI ayarları, yeni proje oluşturma, modüllerin kurulumu ve diğer seçenekler bu sayfadan yapılır.
+
+Yönetim sayfasına, GEODI'nin system tray icon (sağ-alt) menüsünden "Yönetim Sayfası" seçeneği ile erişilir.
+
+Yönetim sayfasında üç ana menü bulunmaktadır.
+
+Projeler menüsü, projelerin yönetildiği alandır. Bu alandan yeni proje oluşturma, proje sihirbazı ile projeleri düzenleme, indexlemeyi başlatma veya durdurma gibi işlemler yapılır. Bu menüdeki seçenekler yetkilere göre farklı görünebilir.
+
+Projeler, GEODI Proje Sihirbazı kullanılarak oluşturulur ve düzenlenir. GEODI Tarama Seçenekleri de bu kapsamda yer alır.
+
+Projeler menüsünden projelerin Tarama ve Optimizasyon işlemleri yapılabilir.
+
+"Değişenleri Tara" özelliği, GEODI’nin taradığı içeriklerde yapılan değişiklikleri GEODI indeksine eklemek için kullanılır. Bu ayarlamalar otomatik zamanlanmış şekilde kaynak veya proje bazlı olarak yapılabilir.
+
+Bakım altında yer alan "Optimize" seçeneğinin daha iyi bir performans için kullanılması önerilir.
+
+"Proje Değişimlerini Eski İçeriklere Uygula" özelliği, projede yapılan değişikliklerin Index üzerinde etkili olması için kullanılması gerekmeyen bir yöntemdir. Örneğin, projeye eklenen yeni bir tanıyıcı sayesinde zaman kaybı minimum seviyede tutularak projede değişiklikler uygulanabilir ve bu işlem tekrar tarama gerekmeden tamamlanabilir.
+
+"Silinmiş İçerikleri Kaldır" yöntemi, GEODI'nin kaynakları taradıktan sonra oluşturduğu Index üzerinde tuttuğu içeriklerde silinme gibi bir durum olduğunda, bu içerikleri GEODI Index üzerinden kaldırmak için kullanılır.
+
+"Yetkileri Düzenle" özelliği ile kullanıcıların yetkileri kurum yöneticileri tarafından değiştirilebilir. GEODI üzerinde bu yöntem uygulandığında, herhangi bir yetkisiz kişinin görmemesi için LDAP üzerinden yapılan ayarlar otomatik olarak uygulanır.
+
+Onarım menüsü altında "Hızlı Onarım" seçeneği, Index ile ilgili bir problem yaşandığı zaman ilk kullanılacak yöntemdir.
+
+"Detaylı Onarım" yöntemi, Hızlı Onarım'ın sonuç vermediği durumlarda tercih edilmelidir. Bu yöntem, Hızlı Onarım'a göre daha çok zaman almaktadır.
+
+"Tüm İçerikleri Tara" özelliği, proje ilk başladığı zaman, kaynaklar ayarlandıktan sonra kullanılır.
+
+Sözlükler menüsü, projelerde kullanılacak sözlüklerin yönetildiği alandır. Bu menüdeki seçenekler yetkilere göre farklı görünebilir.
+
+Ayarlar alanı, kullanıcı ayarları ve diğer ayarların toplandığı yerdir. Bu alandaki sekmeler yetkiye göre farklı görünebilir.

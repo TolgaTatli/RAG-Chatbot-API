@@ -1,0 +1,3 @@
+GEODI'nin Greenplum veri tabanlarına bağlanması mümkün görünmektedir.
+
+Greenplum bir MPP veri tabanı olduğundan, kapsamlı keşif pratik olmayabilir. Bu nedenle, örneklemeli keşif en doğru yaklaşım olacaktır.

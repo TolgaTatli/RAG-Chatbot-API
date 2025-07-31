@@ -1,0 +1,5 @@
+GEODI projesinde çok sayıda kaynak tanımlanabilir ve kaynağa göre sorgulama yapılabilir. Kaynak sorgusu için "kaynak:&lt;&gt;" veya "source:&lt;&gt;" formatı kullanılır. Bir örnek olarak, "kaynak:Arşiv parent:*.ZIP ankara" sorgusu, Arşiv kaynağı içindeki ZIP dosyalarda Ankara geçen belgeleri hedefler.
+
+İçeriğin bulunduğu ortam (bir folder, ZIP dosyası, web sayfası gibi) biliniyorsa, Parent sorgusu ile seçimi daraltmak mümkündür. Örnek Parent sorguları arasında "parent:Ankara*" (ZIP veya Folder adında Ankara geçen dosyalar) ve "parent:*.ZIP" (ZIP içindeki dosyalar) bulunur.
+
+Bir ZIP dosyasını ya da folder'ı içindeki bir dosyaya göre sorgulamak için child sorgusu kullanılabilir. "child:”görüşelim”" sorgusu, notlarında "görüşelim" yazan belgeleri bulmaya yarayan bir örnektir.

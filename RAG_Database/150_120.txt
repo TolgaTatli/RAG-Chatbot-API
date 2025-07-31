@@ -1,0 +1,3 @@
+By default, Classification agents cannot be removed from a client's computer by a Local Admin. The management of this permission is handled by Active Directory (AD). However, necessary settings can be configured for users with Local Admin privileges.
+
+If Classification agents are removed, files will be created without classification and will be blocked by Data Loss Prevention (DLP). Many users of GEODI solutions configure their DLP to prevent the circulation of unclassified files.

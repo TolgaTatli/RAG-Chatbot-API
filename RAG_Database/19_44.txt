@@ -1,0 +1,1 @@
+Geodi employs various methods for ranking and calculating relationship scores. Specific details for options such as OrderBy:name and OrderBy:date are available on the GEODI Sorguları page.

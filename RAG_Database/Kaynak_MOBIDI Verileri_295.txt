@@ -1,0 +1,5 @@
+GEODI, MOBIDI kayıtlarını indeksleyebilir.
+
+MOBIDI kayıtları farklı konum bilgilerine sahip olabilir. Bu konum bilgileri kayıtların kendisi, her fotoğraf ve GEODI tarafından tanınan yer isimleri, adresler veya diğer herhangi bir konum bilgisine sahip metin olabilir.
+
+MOBIDI office ve GEODI sunucusu aynı sunucuda olmalıdır.

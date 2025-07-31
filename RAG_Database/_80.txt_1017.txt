@@ -1,0 +1,1 @@
+GEODI OCR provides the capability to search data within QR Code content. Searching is also possible within BarCode content.

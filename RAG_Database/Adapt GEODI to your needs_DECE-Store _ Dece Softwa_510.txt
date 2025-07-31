@@ -1,0 +1,13 @@
+GEODI offers solutions including Search, Discover, Mask, Encrypt, and Classify, with the overall aim to protect data. The DECE-Store is presented as a way to adapt GEODI to specific needs.
+
+GEODI performs tasks such as Discovery, Classification, and Masking, which are designed to adapt to local regulations or company needs. This adaptability is achieved using Low-Code and DECE-STORE. A webinar titled "Adapt GEODI to your needs:DECE-Store" was held on 11/6/2024 and lasted 15 minutes, discussing how GEODI easily adapts to different needs using Low-Code and DECE-STORE.
+
+An upcoming webinar titled "World’s First AI-LLM Powered Data Discovery and Classification with GEODI Q" is scheduled for 23/1/2025.
+
+Recent webinars include "PCI/DSS Compliance with GEODI" on 27/8/2024 (23 min), "Life in a legal department with GEODI" on 6/8/2024 (18 min), and "Semantic Discovery, Classification and Search" on 23/7/2024 (30 min).
+
+Further recent webinars include "Database Discovery" on 9/7/2024 (30 min), "How quick GEODI in 0 to Classification" on 25/6/2024 (23 min), and "Data Anonymization and Masking" on 4/6/2024 (30 min).
+
+Older webinars and success stories include "Media Archive with Face Recognition" on 27/2/2020 (8 min) and "Croatia, Ministry of Agriculture Success Story" on 23/1/2020 (7 min).
+
+Dece Software provides various resources and contact options, including Contact Us, Support, Live Projects, Need Analysis, Solutions, GEODI Platform, Company, Resources, Blogs, Bulletins, Success Stories, Webinars, Support&Technical Docs, Developer Resources, Technology, Partners, Register, About-Us, Integrations, Career, Privacy Policy, and an email address info@decesoftware.com.

@@ -1,0 +1,1 @@
+It is very possible to mask IP addresses. IP masking or event anonymization can be implemented in a few weeks, particularly in cases of potential purchase.

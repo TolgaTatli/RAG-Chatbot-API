@@ -1,0 +1,7 @@
+This course teaches the basic features of the CAD&GIS Viewer module. It covers CAD Viewers, note-taking, collaboration, and versioning. Advanced issues such as publishing a drawing as a base map or WMS are also included. The course is intended for a general audience and has a duration of one hour.
+
+Users are encouraged to contact support teams if they are unsure about a topic or unable to perform a task. It is noted that some features mentioned may not be available depending on the user's license.
+
+The CAD&GIS Viewer module includes basic features such as Search, Viewer, Intersecting content, Versioning, and Note-taking. An E-Signature feature is also available, which requires the GEODI e-Signature module. Advanced topics covered include defining projection for content that does not have a projection, defining any content as a base map, and WMS definitions. Additional features are provided when used with the GeoArchive module.
+
+The CAD&GIS Viewer module is applicable for use cases such as Project Offices, Municipalities, and Construction companies. It supports various vector formats including Autocad (DWG, DXF), Microstation (DGN), ArcGIS, Google Earth (KML, KMZ), DWG, NCZ, DGN, DXF, SHP, and KML. Supported raster formats include ECW, SID, and IMG.

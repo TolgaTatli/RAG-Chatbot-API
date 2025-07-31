@@ -1,0 +1,3 @@
+The Discovery IL/PPL/EEA package, version 1.0.0.7, is designed to extend the capabilities of GEODI Discovery and Classification through country-specific semantic recognizers. This specific package is intended for Israel.
+
+Installation of the Discovery IL/PPL/EEA package is required after GEODI Discovery has been set up. A specific feature included in this package is the Israeli Shekel Recognizer.

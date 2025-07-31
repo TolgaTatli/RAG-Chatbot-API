@@ -1,0 +1,7 @@
+If a document is classified and subsequently encrypted, the preservation of its classification is entirely dependent on the specific encryption method utilized.
+
+Bulletins are available for topics such as AI-Based Enterprise Search, Data Discovery, GIS, Archive, Mobile Team Management, and Data Protection. GEODI provides solutions and capabilities including Search, Discover, Mask, Encrypt, and Classify.
+
+GEODI has been implemented by various entities for data management and security. Palestine Investment Bank manages its security posture with GEODI. Melikgazi Municipality secures critical data using GEODI and ArcGIS. Simit Sarayı safeguards sensitive and critical data with GEODI. Green Crescent protects sensitive data with GEODI and Symantec DLP Solutions. Gelecek Varlık also protects sensitive data with GEODI and Symantec. The Republic of Türkiye Ministry of Energy and Natural Resources classifies their data with GEODI. Other collaborations and success stories include Endeksa and Beykoz Kundura.
+
+Available links and resources include Contact Us, Support, Live Projects, Need Analysis, GEODI Platform, Company, Resources, Blogs, Bulletins, Success Stories, Webinars, Support&Technical Docs, Developer Resources, Technology, Partners, About-Us, Integrations, Career, and Privacy Policy. The contact email address is info@decesoftware.com.

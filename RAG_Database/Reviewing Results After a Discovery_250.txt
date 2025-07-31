@@ -1,0 +1,23 @@
+GEODI offers Reports, Dashboards, and Predefined Queries for analyzing discovery results. If risky findings are detected, actions such as Secure Delete, Quarantine, or Masking can be considered to mitigate the risk.
+
+GEODI provides predefined queries to detect documents matching regulatory criteria for compliance with regulations like PCI/DSS, KVKK, or GDPR. The PII query targets content with names or IDs alongside data such as phone numbers, blood types, addresses, or emails. The PCI query detects financial data including IBANs, CVVs, and credit card numbers.
+
+To focus on risky sources, GEODI allows combining predefined PCI or PII queries with a source filter. Results from such queries can be masked or securely deleted based on organizational policy.
+
+GEODI also provides queries for content older than a specific number of years, such as predefined:O5Y for 5 years, predefined:O10Y for 10 years, and predefined:O15Y for 15 years. These queries can be combined with other filters, like predefined PII or PCI queries, for deeper insights.
+
+GEODI enables user-based analysis by allowing queries to be intersected by user or group, which helps in analyzing what a specific user can access. With the GEODI Access Management license, users can also report on and update user permissions through workflows.
+
+GEODI assists in identifying original files, duplicates, and similar content, addressing duplicates as a common issue that can disrupt workflows.
+
+Beyond predefined queries, GEODI supports flexible keyword and rule-based searches. This capability is valuable for Data Subject Access Requests (DSAR) under GDPR or KVKK, allowing users to search for a person’s name, isolate internal content, and generate a content list report.
+
+GEODI Q integrates advanced AI capabilities into the discovery process. It can detect document types, fraud patterns, and competition violations. GEODI Q also performs summarization, CV analysis, sentiment analysis, and flags offensive emails.
+
+GEODI includes a ready-to-use Discovery Panel, which is a dashboard offering summarized insights driven by queries. This panel is accessible to system admins and members of the ACC.Discovery group. The panel features a Finding Breakdown, such as the number of PII IDs or VISA cards, Trend Analysis to show how findings evolve week by week (defaulting to the last 8 weeks), and Source Filtering to display counts by source.
+
+Predefined queries simplify the use of complex or hard-to-remember rules. These queries can recognize multiple currencies, cover over 10 credit card types and test cards, and identify database files like SQL Server, Oracle, SQLite, and MDB. They also find video files, image files, web content including email, maskable content, local-only content, GDE-fed content, and PII-related content adaptable to local rules. Additionally, they can identify content related to religion, ethnicity, marital status, health-related terms, unions, political views, foundations, CV-related documents, and source code files.
+
+Queries in GEODI impact not only dashboards but also reports and actions. For example, queries can be used to generate reports listing all relevant findings or to list all redundant files using duplicate queries.
+
+Queries can trigger actions, either manually or as part of automated workflows. Examples include using a duplicate query to securely delete files or performing bulk masking. Available actions include Secure Delete, Quarantine, Masking, Send Email, and Generate Report.

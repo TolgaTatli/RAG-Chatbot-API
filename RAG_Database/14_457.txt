@@ -1,0 +1,1 @@
+In GEODI, a question is raised concerning individuals who are not customers: if their information exists within GEODI, can these individuals search for their own data? This query is further elaborated by asking, "What data is there about me?"

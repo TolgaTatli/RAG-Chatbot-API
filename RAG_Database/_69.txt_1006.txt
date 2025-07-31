@@ -1,0 +1,3 @@
+GEODI is capable of scanning EML files, including the attachments found within them.
+
+Files embedded in databases can be scanned even without their file name and extension. Names for these files can be generated using DB meta. More details are provided on the database source support page.

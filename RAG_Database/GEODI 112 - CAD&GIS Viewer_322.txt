@@ -1,0 +1,15 @@
+The course aims to explain the scope of the CAD&GIS Viewer module, including the indexing, viewing, and note-taking of CAD files. It will also cover defining projections for files when necessary, defining CAD&GIS content as a base layer, and WMS publishing.
+
+The content of the course is suitable for Technical, Sales, User, and General audiences.
+
+The duration of the course is 20 minutes.
+
+The scope of the course covers the basic features of the CAD&GIS Viewer module. It also includes information on search functionalities, with several usage scenarios such as for Project Offices, Municipalities, and Construction Companies.
+
+The course covers supported formats, including Vector formats like Autocad (DWG, DXF), Netcad (NCZ), Microstation (DGN), ArcGIS, Google Earth (KML, KMZ), SHP, and KML. Supported Raster formats include ECW, SID, and IMG.
+
+The course addresses viewing features such as intersecting elements and versions. It also covers note-taking, which includes E-Signature functionality via the GEODI e-İmza Module.
+
+Advanced topics covered in the course include defining projections for files that lack them, using supported content as a base layer, WMS publishing, and Geographic Archiving with the GeoArchive module.
+
+The trainings are intended to provide a general idea, and participants are required to reinforce what they have learned through practice. It is noted that some features mentioned within the scope of the training may not be included in a user's license.

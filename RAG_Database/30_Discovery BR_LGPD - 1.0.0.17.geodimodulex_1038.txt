@@ -1,0 +1,9 @@
+GEODI OCR provides successful support for Turkish characters.
+
+Country-specific semantic recognizers extend the capabilities of GEODI Discovery and Classification.
+
+A package is available for Brazil, which is designed to extend GEODI Discovery and Classifier capabilities. This package can be installed after GEODI Discovery and allows for checking LGPD compliance.
+
+The Brazil-specific package includes the following recognizers: CNPJ Recognizer, CPF Recognizer, PIS Recognizer, Brasil Zip Code Recognizer, Brasil Passport Number Recognizer, and Brazilian Real Recognizer.
+
+The version of the Discovery BR/LGPD package is 1.0.0.17.

@@ -1,0 +1,1 @@
+GEODI allows for the integration of different applications via an API. Through this integration, it is possible to perform path-based searches. Additionally, searching can be done based on text within file content and through discovery results.

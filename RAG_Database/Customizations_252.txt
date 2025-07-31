@@ -1,0 +1,17 @@
+GEODI includes hundreds of prebuilt templates, dictionaries, definitions, and recognizers, enabling immediate use out of the box. For more specific scenarios, GEODI supports extensive customization through low-code and no-code tools.
+
+Customized components become part of your system, requiring careful management of any changes. For instance, a poorly written regex might generate numerous false positives or cause performance issues. Such components must undergo testing as thoroughly as GEODI’s built-in components and meet similar quality standards to ensure smooth operation.
+
+GEODI 9 provides a report and packaging feature for customization to assist in tracking and maintaining these types of customizations.
+
+To report customizations, navigate to Settings, then Reports, then System Reports, where the Customization Report will display any changes.
+
+Regarding "Changes," there is a risk that the next update will replace these files. It is advised not to change any files that are part of the default installation and modules. To override default behavior, this should be done in the GEODIDATAFOLDER folder.
+
+"New ones" refers to files that are newly created and will not be affected by software updates.
+
+"Deleteds" refers to files that have been deleted, and it is important to understand the reason for any resource deletion.
+
+It is considered good practice to check the customization before diagnosing any problem.
+
+To package the current situation, navigate to Settings, then Reports, then System Reports, where the Customization Package option will create a GeodiModuleX package for the new and changed files. This package will include a date-time tag, allowing it to be repeated at any time, and it is possible to install an old package to revert to that specific date.

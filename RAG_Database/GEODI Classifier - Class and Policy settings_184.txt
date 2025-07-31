@@ -1,0 +1,95 @@
+GEODI Classifier is a set of tools designed for both manual and automatic classification. This page focuses on configuring the central management of these tools.
+
+To configure the Classifier Module, use "Activate Classification Tools" on the last page of the Project Wizard to open the management dialog. Within this dialog, classes, rules, header, footer, and watermark settings are configured. Ready project templates are available and suggested for use to provide pre-configured settings.
+
+As a best practice, it is recommended to create a separate project specifically for classification, distinct from projects used for search or discovery. A project designated for classification does not require data.
+
+The "Classes" tab is used to define class labels, their associated rules, and how they appear in plugins such as Microsoft Office. Classes should be arranged with the most important ones listed at the top.
+
+Each class must be assigned a unique ID value. The "Name" field specifies the text of the class that will be displayed in user interfaces.
+
+The "Category" field allows for the creation of a classification tree, which is useful for managing a large number of classes. This field can be left empty by default.
+
+The "Description" field is used to record essential information about a class, serving as a guideline for plugin users. Descriptions entered here will be visible in the users' classification interface.
+
+The "Query" field enables documents that match the specified query to automatically be assigned the corresponding class.
+
+Predefined GEODI queries are available to simplify configuration and management by allowing the use of the same queries in classes, panels, and other locations.
+
+Tags are key and value pairs written into MS Word, PDF, or ADS files. GEODI can adapt existing classification schemas for a seamless transition when switching from another classification solution.
+
+Header, Footer, and Watermark values are applicable only to MS Office software. If a user selects a class, the associated text will be embedded into the document.
+
+For Header, Footer, and Watermark values, the placeholder %User% can be used to include a user name. The newline character \n can be used to create multiple lines of text within these values.
+
+In auto-classification, if the content of a document does not match any other query, the last class is automatically chosen.
+
+The "Behaviour" tab is where default classification rules are set. These rules are automatically updated for all clients approximately every 10 minutes. Rules can be overridden or changed for specific users, groups, IP addresses, or classification tools using the "Customize" tab.
+
+The "Auto Classify Behaviour" setting determines how automatic classification functions. Options include "Use as a suggestion," which allows the user to decide whether to use auto-classification; "Disabled," which turns off automatic classification; and "Do not select the class under auto," which prevents users from choosing classes lower than the automatically suggested one.
+
+The "Ask Classes on Save" option controls when a dialog opens in MS Office add-ins for choosing classes during saving, closing, or printing. "Show when necessary" means the dialog does not open if auto-classification is possible or if the document already has a class. "Always" causes the dialog to open after each change. "Never - Manuel Only" means the user must manually open the dialog.
+
+The "Use OS Meta" setting allows Microsoft Office, Libre Office, and PDF formats to be tagged with ADS. These tags are exclusively created by the Shell/Desktop classification tool.
+
+"Allow Class Lowering" determines whether a user can select a lesser class for a document that has already been classified. This is an important setting that can be overridden by user, group, or IP.
+
+When the "Classifying internal emails" feature is enabled, an email can be sent without prompting for classification if the sending domain address and the target domain address are identical.
+
+By default, all classified documents are logged, with logs stored on the server side. The "Log Format" setting allows for deactivating this process or changing the logging format. These logs are located in the same place as other GEODI logs.
+
+The "Do not use images for Header/Footer" option, when selected, causes headers and footers to be used as text in Excel instead of images, which is the default behavior.
+
+If the "Do not use images for Watermark" setting is selected, the watermark will be disabled in Excel, whereas by default, the watermark is used as an image in Excel.
+
+The "Customize" tab allows default classification rules to be modified based on User, Group, IP, or the specific application. For instance, certain groups can be restricted to auto-classification only, while others are permitted class-lowering. Each customization is a rule, and multiple rules can be added. If rules overlap, the first rule takes precedence.
+
+The "Active" setting in customization allows for enabling or disabling a customization for end users.
+
+For ease of management, especially with numerous customizations, it is recommended to use systematic naming and descriptions for customizations.
+
+The "Users" field in customization specifies the individuals and groups affected by the customization, allowing for the selection of more than one person or group.
+
+Advanced options can be created using a macro within customization, enabling the creation of IP or time-based rules. Examples include selecting an IP address for customization validity or allowing customization use between specific hours. Objects that can be used with macros are accessible via the link: https://service.decesoftware.com/api.
+
+The "Applications" field allows selection of the applications affected by the customization. Multiple applications can be selected, and if none are selected, the customization applies to all applications.
+
+Settings such as Auto Classify Behaviour, Ask Classes on Save, OS Meta, Classifying internal emails, and Allow Class Lowering can be chosen for customization or overriding.
+
+Classification can be disabled for selected users, groups, or IP addresses using the "Disable Classification" option.
+
+The "Available Classes" setting allows specifying which classes are offered for each customization, enabling certain classes to be available only to specific groups or departments.
+
+The "Pop-Up Texts Settings" allow for customizing terminology according to user preferences.
+
+"Auto Button Text" defines the name of the automatic button in the classification interface.
+
+The "Category" setting adds a general title to the left side of the upper category classes in the open pop-up interface.
+
+"Subcategory" is used to add titles to the left side of Subcategory classes in the open pop-up interface. If the category name from the class definitions is to be used as the title, "Use Class Category" must be checked. These fields should be left blank if a categorical structure is not utilized.
+
+The "Form Title" setting allows changing the title of the dialog that opens during saving or printing for MS Office.
+
+A "Description" can be added or changed for the dialog that opens during saving or printing for MS Office.
+
+The "Class Not Selected Message" is the message displayed on the dialog that opens during saving, closing, or printing for MS Office if a class has not been selected for the document.
+
+The text of the "OK Button" on the dialog opened during saving, closing, or printing for MS Office can be changed.
+
+"Unknown Class Text" refers to the class that indicates a document is unclassified when it appears in unclassified documents.
+
+"Top Bg, Text Color, Bottom Color" settings change the color combinations on the pop-up window in the GEODI Classifier Add-In screen. If an incorrect or missing value is provided, the system reverts to default colors.
+
+The "Class Not Defined Icon" is the icon for the class that indicates a document is unclassified when it appears in unclassified documents.
+
+The "Setup" section indicates that the software automatically generates the token and MSI parameters required for installation. Further details are available on the client pages and OWA installation page.
+
+To ignore PII information contained in e-mail signatures, two methods are available: changing e-mail server settings or preparing a dictionary.
+
+The e-mail server method involves configuring the e-mail server to add a signature after classification or just before sending. For Exchange, a method is available via the link: https://learn.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/disclaimers-signatures-footers-or-headers. This method only solves the problem for the first email in a chain, as signatures accumulate in subsequent mails.
+
+A GEODI dictionary method works for all situations. This method requires a senders list containing values used in signatures, such as name, phone, and e-mail. GEODI can use Excel or a Table as a dictionary, and the signature must be generated using Excel formulas or SQL. A sample Excel file is provided, and the Excel dictionary requires manual updates.
+
+The dictionary must be added to the discoveries list for the classification project. This method is effective only if the dictionary and mail signatures match exactly, so testing with sample senders is suggested before release.
+
+This dictionary can also be utilized for e-mail discovery to prevent signatures from being recognized as PII in older emails. However, actual PII data from the sender found in the e-mail body, contracts, or medical records will still be recognized.

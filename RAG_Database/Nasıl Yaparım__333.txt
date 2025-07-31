@@ -1,0 +1,3 @@
+Bu sayfalarda seçilmiş bazı konuların nasıl yapılacağı anlatılacaktır. Bu konulara başlamadan önce, minimumda GEODI 101, GEODI 102 ve diğer eğitim içeriklerinin tamamlanmış olması beklenmektedir.
+
+Bu sayfalarda ele alınacak konular arasında İlişkilerin Keşfi, Ağ Grafiğinin nasıl kullanılacağı ve Haritanın nasıl kullanılacağı bulunmaktadır.

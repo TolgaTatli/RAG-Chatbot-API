@@ -1,0 +1,7 @@
+A classification feature for Linux and MacOS is included in the roadmap. This feature will be implemented as a tool that operates solely through the shell.
+
+Classification can be performed in Fileorbis. Fileorbis stores its data within the filesystem, which enables direct access for an authorized user.
+
+In situations where direct access for discovery is not feasible, low-code definitions can be created for resources that provide a web API or a similar type of API.
+
+A classification method that operates internally within Fileorbis is not currently part of the roadmap.

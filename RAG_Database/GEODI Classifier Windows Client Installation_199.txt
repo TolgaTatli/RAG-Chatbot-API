@@ -1,0 +1,29 @@
+This MSI package contains Classifier Desktop, which includes a Shell Extension, and Microsoft Office add-ons.
+
+The GEODI Classifier SETUP tab automatically generates the necessary parameters. Installation can be performed manually or by utilizing a deployment tool such as ManageEngine.
+
+Office add-ons cannot be disabled or removed by users; only system administrators have the capability to perform these actions.
+
+Installed agents are monitored using an Agent Management Panel, which is described within GEODI.
+
+Installation conditions include the requirement for a GEODI Workspace dedicated to Classification policies. Additionally, the GEODI URL address must be accessible from all endpoints. For deployments across multiple PCs, a tool like ManageEngine, SCCM, or PDQ is necessary.
+
+The Classifier Agent can be located at the address /GUI/Agents/Classifier.
+
+MSI parameters are provided for informational purposes, as the GEODI Classifier SETUP tab automatically generates them.
+
+The GEODI_URL parameter specifies the address that agents will use to access GEODI. A secure and named address, such as one using DNS or SSL, is recommended for this parameter.
+
+The GEODI_WSNAME parameter defines the name of the GEODI Workspace where policies are established. Agents will use this parameter to update policies.
+
+The GEODI_TOKEN parameter represents a token generated within Classification Settings. It is recommended to create a separate user for this token, as the token user password should not be changed.
+
+Commands for agent deployment can be utilized with tools such as PDQ, ManageEngine, or SCCM.
+
+For setup, the command is "GEODI.Classifier.msi" /quiet GEODI_URL="https://.." GEODI_WSNAME="ClassifierWorkspace" GEODI_TOKEN=. The GEODI Classifier SETUP tab automatically generates these parameters.
+
+To uninstall the agent, the command msiexec.exe /x "GEODI.Classifier.msi" /qn /norestart can be used.
+
+The update command is start "" "%ProgramFiles(x86)%\DECE Software\GEODI Classifier\Updater.exe". Normally, this command is not required because agents update themselves automatically.
+
+Agents automatically check for updates every two days and update themselves from the GEODI server, eliminating the need for user intervention.

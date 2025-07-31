@@ -1,0 +1,5 @@
+GEODI is capable of indexing MOBIDI records.
+
+MOBIDI records can contain various types of location information. This includes the records themselves, individual photographs, and text that GEODI recognizes, such as place names, addresses, or other location details.
+
+A requirement for this functionality is that the MOBIDI office and the GEODI server must be located on the same server.

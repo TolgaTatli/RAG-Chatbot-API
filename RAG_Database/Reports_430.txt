@@ -1,0 +1,11 @@
+GEODI enables the creation of custom reports in HTML, Text, Excel, Zip, or CSV formats. A GEODI Pro license is necessary for reporting. Reports support Macro and Localization, and Notification E-mail Body definitions can also function as reports. The reporting feature can be utilized in various contexts.
+
+GEODI reports require a jSettings file and other files, depending on the report type. These settings files must be located in either `Settings/Reports` or `%appdata%App/Geodi/Settings/Reports`. The GEODI Report API is available. Report display name, icon, visibility condition, and numerous other settings are stored within the jSettings file.
+
+The visibility of a report in GEODI is determined by its `ConditionMacro`. If a report is specific to a WorkSpace, the `ActionTarget` setting should be employed. An example configuration for an HTML report shows `ConditionMacro:'c.HasPermission("DECE.SYSTEMMANAGER")'` and `ActionTargets:"*"`.
+
+To limit the rows included in a GEODI report, the `AndQuery` setting within `GenericSettings` can be used. For instance, this setting can restrict a report to only contain PDF files or, as shown in a sample, limit it to erroneous files by setting `AndQuery` to `"status:HasCanError"`.
+
+By default, each row in a GEODI report represents a `GeodEntry`, which is a discovered word like a date or an IBAN. To configure each row to represent content instead, the `OneSummaryPerRecord` setting within `GenericSettings` must be set to `true`.
+
+The `Init` setting in GEODI reports executes prior to the report's generation. This setting allows for the modification of data objects, such as transforming each row into a layer. A sample `Init` configuration demonstrates using `c.Distinct(c.Data,"=string.Concat(context.Data.OutputGeodiContent.SystemContentID,context.Data.RecognizerBackRef.Recognizer.DisplayName )")` to achieve this.

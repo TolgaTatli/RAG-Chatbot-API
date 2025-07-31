@@ -1,0 +1,1 @@
+İçerikBulgu(DB) raporu, veritabanı taramalarında tablo ve kolon isimlerini raporlama yeteneğine sahiptir. Bu rapor, veritabanı taramaları sırasında tablo ve kolon isimlerini alabilmek için farklı bir yöntem olup olmadığı sorusuna bir yanıt sunmaktadır.

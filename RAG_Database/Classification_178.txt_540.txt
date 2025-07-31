@@ -1,0 +1,15 @@
+This page serves as a guide for installing both server and client-side tools of the GEODI Classifier. The installation of a Manual or Automatic classification project typically requires 1 to 2 hours.
+
+If GEODI is the initial classification tool being used, users can immediately begin with ready-made classes that have been refined through various user experiences. For those who already possess a classification tool, porting existing classifications to GEODI is also straightforward.
+
+Policies can be modified at any time after agents are installed, as agents automatically update these policies. The GEODI Classification Policy Manager enables overriding policies based on criteria such as groups, persons, client software, and IP addresses.
+
+Ready-to-use panels are provided to monitor agents and classification actions, which are logged. After agents are distributed, users can commence classification. The GEODI 121 online course offers sufficient training for end users to learn Desktop and Office classification.
+
+The Classifier installation follows a roadmap checklist. Initial steps include ensuring GEODI Server is installed, activating the Classification Module, and activating Default Classes and Policies. Mail signatures should also be ignored, which can be done via a dictionary or mail server settings.
+
+Further steps in the Classifier installation roadmap involve generating an Agent MSI Package and performing a sample agent installation on selected clients. Following this, the agent monitor panel and the log analysis panel must be activated.
+
+The final stages of the Classifier installation roadmap include an interim review, modification of classes and policies, and the deployment of agents to all clients.
+
+For additional information, users are directed to the GEODI Classifier FAQ page. Other relevant resources mentioned include GEODI Classifier - Class and Policy settings, GEODI Classifier Label/Tag Definitions, Discover and Classify, GEODI Classifier Windows Client Installation, GEODI OWA Classifier Installation, GEODI Classifier Office and Other Plugins User Guide, GEODI Classifier Batch Classification, and GEODI Classifier Log Analysis Panel and Classifier Project.

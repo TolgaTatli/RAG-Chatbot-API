@@ -1,0 +1,11 @@
+After running the setup, GEODI starts in default mode and automatically opens a tab in the browser. The management and query interface can be accessed by right-clicking on GEODI in the System Bar/System-Tray. Other users access GEODI through the browser.
+
+In default mode, GEODI uses its own HTTP server, eliminating the need for a separate WEB server. In this configuration, GEODI operates with the authorizations of the user from which it is run. Users must set up processes, such as restarting GEODI, to occur when the server machine is turned on.
+
+Once the default mode setup is complete, GEODI can be switched to Windows service or IIS mode. The settings established are valid for all modes.
+
+GEODI Server runs on port 3323 by default when utilizing its own application server, though this port can be changed. GEODI can be accessed from any computer on the network where the GEODI Server is located using the address http://<server ip>:3323.
+
+External users can access GEODI if a public address is available. Defining a domain, such as geodi.yourdomain.com, is recommended to facilitate access. For access from outside the network and for mobile use, port forwarding must be configured in the organization's firewall, similar to other web applications.
+
+There are two methods to change the port for GEODI. The port parameter can be provided from the command line when running GEODI, for example, "GEODI.exe port=80". Alternatively, the port can be set permanently using the AppPort value within the System Configuration - Security Settings file. These port change methods are also valid for MOBIDI Office.

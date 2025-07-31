@@ -1,0 +1,3 @@
+When classified, 34 PDF files do not appear in the management dashboard. These classified files are not displayed in either the project management panel or the agent management panel.
+
+Despite not appearing in the management dashboard, related log information for these files is visible from the content panel. Additionally, the file path for these files can be seen from the LogAnalysis panel.

@@ -1,0 +1,3 @@
+Our classification solutions do not work on the Lotus Notes/Domino environment. These solutions are effective in Windows Desktop, OWA, and Microsoft Office.
+
+It is possible to discover documents and contents stored in Lotus Notes/Domino. This requires an OLEDB or ODBC provider for Lotus Notes. An example provider is the Introduction to the Lotus Connector for OLE DB (hcltechsw.com), and other drivers may also exist.

@@ -1,0 +1,7 @@
+GEODI can index MOBIDI records as well.
+
+MOBIDI records may have different location information. This includes the records themselves, each photograph, and text with place names, addresses, or any other location information GEODI recognizes.
+
+The MOBIDI office and GEODI server must be on the same server.
+
+For detailed information, refer to GEODI Integration.

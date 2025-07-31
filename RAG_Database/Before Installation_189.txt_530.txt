@@ -1,0 +1,7 @@
+Before installation, users are informed about several steps. It is necessary to ensure that a server meets the minimum requirements for a GEODI Server. If the license covers PC discovery and Classifier, users must also check if endpoints meet the requirements.
+
+Users are also asked to answer questions about their preferences on the GEODI Installation Checklist. The installation process will then continue with the GEODI Server Installation and Configuration.
+
+Teams will provide support during these processes. The text concludes by thanking the user for trusting and choosing GEODI.
+
+The 'Pre Installation Checklist' is a Microsoft Excel Spreadsheet file named 'Geodi_Installation_CheckList.xlsx'. This file was modified on October 04, 2022, by serdar ak.

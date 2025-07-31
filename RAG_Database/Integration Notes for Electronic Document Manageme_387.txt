@@ -1,0 +1,23 @@
+A large number of integration models can be produced between GEODI and software such as electronic document management systems (EDMS) and archive software.
+
+GEODI integration models are primarily based on requesting GEODI from the related software. This approach, where EDMS or archive software requests GEODI, resolves many complex processes from the outset. It eliminates the need to share the database where documents are stored, removes the requirement for GEODI to resolve complex authorization mechanisms, and means GEODI does not need to understand the life cycle of documents.
+
+When a new document arrives, all incoming documents, attachments, and metadata can be sent to GEODI using the Geodi Feed API (FeedHandler). This Feed API also incorporates privileges, which are applied within GEODI provided that the users of GEODI and the integrated software are matched.
+
+For extracting metadata or index information from a newly added document, the Geodi Data Extraction API (Formatter) can be used. This enables GEODI to provide details such as dates, parcel numbers, and other information contained within the document. If the Geodi Feed API (FeedHandler) is already in use, the Geodi Query API (Query) option can be utilized to prevent adding the same content twice.
+
+If an access right of a document changes, the updated authorizations are communicated to GEODI again using the Geodi Feed API (FeedHandler).
+
+When the content of a document changes, the modified content must be passed to GEODI, which will then update its records accordingly. The method used for this update is again the FeedAPI.
+
+Should the index or metadata of a document change, manually generated index or metadata values can be sent to GEODI alongside the document itself. The FeedAPI is the method employed for this, and a metadata change is also considered a version change.
+
+Before integration, a one-time batch transfer to GEODI is required for all data that already exists in the EDMS or archive software. This bulk transfer is performed using the FeedAPI and is recommended as a night-time task if there are many documents. The Geodi Feed API - Integration with Application Services (GEODI → APP) can also be considered for bulk transfers.
+
+Documents can be opened either within the user's own software or directly in GEODI. The Feed API provides this option for document access.
+
+GEODI Full is a text search software capable of performing search operations like 'files nearby' based on location information. It also offers semantic search capabilities derived from dates found within content. These search functionalities can be integrated and utilized in various ways within the user's software.
+
+Users can interpret the results returned by the GEODI Search API themselves and visualize them according to their own standards. Alternatively, the GEODI Search result can be easily integrated into software using an iframe, with theme support available in GEODI for visual customization.
+
+Authorization is managed by taking into account permissions and prohibitions transmitted via the Feed API in GEODI queries. Consequently, if a user is unable to access a document through the EDMS or archive software, they will also be unable to access it through a GEODI query.

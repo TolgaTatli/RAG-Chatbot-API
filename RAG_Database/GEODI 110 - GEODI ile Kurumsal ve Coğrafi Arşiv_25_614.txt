@@ -1,0 +1,13 @@
+The purpose of this training is to teach how to create an archive with GEODI and to learn its geographical capabilities. Some of the features mentioned in this training originate from the CAD&GIS Viewer, GeoArchive, GEODI Pro, and Parsel Tanıyıcı modules.
+
+The general duration of this training is 1 hour. Prerequisites for this training include completing GEODI 101 and GEODI 102.
+
+The training covers queries, including the search page, adding documents via drag-and-drop, and an explanation of why metadata/index is not required. It also addresses scanned documents, including how to scan them, points to consider, scanning with a mobile phone, adding notes, and monitoring queries.
+
+Map functionalities are covered, including accessing documents via the map, how the map is formed, and location sources such as provincial/district dictionaries, parcels, geographical boundaries, and the Pafta Tanıyıcı. Other map features include coordinated images, map overlay (drawing an NCZ or DWG on the main map), and proximity queries.
+
+The training includes information on CAD&GIS files, listing supported formats such as DWG, NCZ, DGN, GeoTIFF, ECW, KML, and SHP. Capabilities include viewing and note-taking, opening spatially overlapping files, and comparing two different files for difference analysis.
+
+The training also covers topics such as adding databases and managing permissions.
+
+The trainings aim to provide a general idea, and it is necessary to reinforce what is learned through practice. Users should not hesitate to ask for support from the teams for topics they are unsure about or cannot perform. Some features mentioned within the scope of the training may not be included in the user's license.

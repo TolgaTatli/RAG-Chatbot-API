@@ -1,0 +1,9 @@
+GEODI data classification and data protection solutions have gained a data masking feature, which allows for the complete purification of documents from personal data. These solutions now include Document Masking, enabling the complete removal of PII or any other sensitive information from content.
+
+The GEODI Masking solution works on Office, PDF, or Open Office documents. It preserves the original document while dynamically creating a copy based on user preferences.
+
+Masking is highly accurate due to GEODI's high-accuracy AI and NLP-based data discovery features. Sensitive information such as Names, Dates, IBANS, and Credit card numbers can be easily masked. A full list for a specific country is available upon request.
+
+Masking may be integrated into existing software by using the GEODI API.
+
+GEODI offers solutions including Search, Discover, Mask, Encrypt, and Classify, stating, "We Protect Your Data."

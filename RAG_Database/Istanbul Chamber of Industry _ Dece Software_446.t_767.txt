@@ -1,0 +1,9 @@
+The Istanbul Chamber of Industry is implementing a Data Discovery and Classification project with GEODI. This project is being undertaken within the scope of GDPR compliance.
+
+GEODI discovers and reports sensitive data found within all structured and unstructured data sources. Policies for exterminating, classifying, and labeling are created based on Semantic Discovery results, which ensures compliance with GDPR and Data Security.
+
+The Istanbul Chamber of Industry (ICI) intends to use GEODI's data consolidation for benefits. With GEODI, employees will gain access to constantly flowing data on the organization's servers from a single point, within their authorization. This is expected to largely eliminate problems that may arise from incomplete or incorrect information.
+
+Dece Software offers solutions that include Search, Discover, Mask, Encrypt, and Classify capabilities. These functionalities are part of the GEODI Platform.
+
+Dece Software lists various references, including entities from the Private Sector, State Agencies, and Municipalities & SPA. Specific references include Croatia, Ministry of Agriculture; Vakıfbank; National Budget Office of Nigeria; Ministry of Energy and Natural Resources; Saudi Finance Company; Al Tijaria; Topnet; National Finance of Omman; Palestine Investment Bank; Vakıf Katılım; Iron Mountain; Ziraat Katılım; Verifone; Green Crescent; Kahve Dünyası; Gelecek Varlık; ICT Authority; Ministry of Trade; Carrefoursa; Teknosa; Istanbul Chamber of Industry; Koton; Turkey Coal Enterprises; Unifree Duty Free; The North Marmara Motorway; and Türk Nippon Insurance.

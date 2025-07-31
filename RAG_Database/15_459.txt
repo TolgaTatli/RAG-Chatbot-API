@@ -1,0 +1,3 @@
+Details are needed on how rights management works. Specifically, there is a need for information on granting permissions, such as allowing some users to only see content while other users can see reports but not the content.
+
+Such a rights management setup is possible. Detailed topics regarding GEODI User/Permission Management are explained on the page found at https://destek.dece.com.tr/space/geoditr/3952811968/GEODI+Kullanıcı%2FYetki+Yönetimi.

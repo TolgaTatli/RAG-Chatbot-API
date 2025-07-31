@@ -1,0 +1,15 @@
+GEODI Proje Sihirbazı ile kullanıcıların kullanacağı ara yüzler, göreceği kaynaklar, yetkiler, varsayılan görünümler ve diğer pek çok kural tanımlanır.
+
+Bu eğitim genel bir fikir verir; detaylar için detay destek sayfalarına başvurulmalıdır.
+
+Eğitimin içeriği Teknik, Satış, Kullanıcı ve Genel konularını kapsar.
+
+Eğitimin süresi 45 dakika + 45 dakikadır.
+
+Eğitimin kapsamı GEODI Proje Sihirbazı'dır.
+
+Eğitimler genel bir fikir vermeyi amaçlar ve öğrenilenlerin kullanılarak pekiştirilmesi gereklidir.
+
+Emin olunmayan veya yapılamayan konularda ekiplerden destek istenmelidir.
+
+Eğitim kapsamında belirtilen bazı özellikler lisansınızda yer almayabilir.

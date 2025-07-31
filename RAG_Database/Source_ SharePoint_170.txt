@@ -1,0 +1,13 @@
+SharePoint connection is on Cloud Drives. Files in the selected folders will be indexed, and ignore and other rules apply. Users can connect to their SharePoint account using either the SharePoint Online or SharePoint On-premise option.
+
+An authorized SharePoint user must be provided for connection. Different connections to the same site can be defined with varying rules, such as enabling or disabling OCR or setting different discovery coverage.
+
+Conditions for SharePoint connection include providing an Online or On-premise SharePoint service access address. A SharePoint account with minimum read privileges is required, and the scope of discovery will be limited to that user's access. When connecting to SharePoint Online in GEODI, usage approval must be given, which is asked once.
+
+To connect a SharePoint Online account, a redirect is made to the Microsoft Site. After entering the username and password, the desired directory for discovery is selected.
+
+For SharePoint On-premise, the service address to be connected, username, and password information are filled in. After the connection is established, the directory for discovery is selected.
+
+Classifying content on SharePoint from the GEODI ES Interface using desktop, Office Add-in, and classification tools works on files in SharePoint Online under specific conditions. These conditions include GEODI operating in an executable (exe) mode and SharePoint connections being established using the MAP (Network Drive) method. For SharePoint Online usage, the MAP method can be applied by utilizing the instructions provided on the `https://learn.microsoft.com/en-us/sharepoint/sharepoint-view-in-edge` page. Microsoft SharePoint does not offer a similar method for on-premises, so this recommended solution is only applicable to SharePoint Online.
+
+For troubleshooting SharePoint Online connections, ensure the machine has internet. If the username or password is entered incorrectly, a warning code is received, requiring a check of the login username and password. A warning is also received if the service address is entered incorrectly, in which case the service address should be checked.

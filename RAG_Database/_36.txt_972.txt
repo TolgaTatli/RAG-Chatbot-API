@@ -1,0 +1,3 @@
+Log files cannot be configured to create a new file for each day.
+
+The GDE agent cannot be stopped and started at will, and it is not necessary to do so. When GEODI is closed, the agents enter a standby state. They resume operation when GEODI is opened.

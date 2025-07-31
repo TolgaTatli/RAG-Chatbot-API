@@ -1,0 +1,3 @@
+Dropbox dizinleri, Windows dizinleri gibi indekslenir ve keşfedilir. Dosya ihmal kuralları geçerlidir.
+
+Bağlantı için gereken şartlar, minimumda readonly yetkisi olan geçerli bir DropBox hesabıdır.

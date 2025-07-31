@@ -1,0 +1,1 @@
+Classification rules cannot be written based on the number of occurrences of information found by the recognizer within 50 documents.

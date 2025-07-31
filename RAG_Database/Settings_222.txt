@@ -1,0 +1,19 @@
+Within System Settings, License info allows users to check the remaining license time and activate the license. This action may be necessary when switching servers or formats. When a subscription approaches its end, the provided license key should be set in this section.
+
+DECE-STORE functions as a repository for regulations, reports, and country-specific solutions, among other items. During installation, GEODI automatically accesses DECE-STORE to download modules that are included in the user's license.
+
+Security Level in GEODI pertains to how the system stores settings, which includes certain passwords and credentials. Further explanation on this topic is available at the provided URL: https://decesw.atlassian.net/wiki/spaces/geodien/pages/3968073729/GEODI+Privacy+Issues#Security-of-usernames%2C-passwords%2C-and-credentials.
+
+Error Analysis provides brief reports on scanning errors. These errors can be related to various issues such as permissions, corrupted files, or unsupported content.
+
+Usage Analysis offers brief reports concerning GEODI usage.
+
+System Reports include numerous reports about the system, which are useful for maintaining system health.
+
+Guest login is only necessary if a site needs to be accessible to the public. Examples of such sites include documentation portals or culture portals.
+
+Under Indexing Settings, Indexing Speed can be adjusted. It is suggested to increase the speed if sufficient CPU, disk, and memory resources are available. Conversely, if resource usage becomes too high, the speed should be decreased.
+
+Within User Settings, the Authorization Manager is where global permissions and other related settings are configured.
+
+GEODI includes default E-Mail settings that specify the address to be used for notifications. Users have the option to modify these settings for their organization or continue using the default configurations.

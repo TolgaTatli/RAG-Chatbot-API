@@ -1,0 +1,41 @@
+Bulletins are available for AI-Based Enterprise Search, Data Discovery, GIS, Archive, Mobile Team Management, and Data Protection.
+
+A bulletin titled 'Enhancing DORA Compliance with GEODI: A Unified Approach to Data Security for Financial Firms' was published on December 4, 2024, and has a read time of 3 minutes.
+
+On November 20, 2024, a bulletin titled 'Revolutionizing Data Discovery with GEODI Q' was released, with a read time of 2 minutes.
+
+A bulletin titled 'Build your AI Assistant with GEODI' was published on November 19, 2024, and takes 2 minutes to read.
+
+The bulletin 'Now it is time to leave manual classification and let AI do it.' was released on November 17, 2024, with a read time of 2 minutes. This bulletin is associated with search, discovery, classification, masking, and regulations.
+
+On October 1, 2024, a bulletin titled 'How do you maintain your Data Security Posture Management, DSPM?' was published. It has a read time of 4 minutes and is tagged with search, discovery, classification, and masking.
+
+The bulletin 'Keep Your Data Safe with GEODI!' was released on July 26, 2024, with a read time of 2 minutes. It is associated with search, classification, and masking.
+
+On July 4, 2024, a bulletin titled 'How to Start to Comply with PDPL?' was published, with a read time of 3 minutes. This bulletin is tagged with masking.
+
+A bulletin titled 'Anonymization:Freely Share Data with Test and other Teams' was released on March 2, 2024, with a read time of 6 minutes. It is associated with regulations.
+
+On May 23, 2023, a bulletin titled 'Compliance With Regulations Goes Through Discovery: PCI/DSS' was published. It has a read time of 1 minute and is tagged with search, discovery, and regulations.
+
+The bulletin 'Boost Your Favorite CRM with Enterprise Search' was released on October 13, 2022, with a read time of 2 minutes.
+
+On September 20, 2022, a bulletin titled 'Permanent Delete and Quarantine of the Data based on Semantic Discovery' was published. It has a read time of 2 minutes and is tagged with discovery, masking, and remediations.
+
+A bulletin titled 'Enterprise Search: The Biggest Step in Digital Transformation' was released on March 22, 2022, with a read time of 2 minutes. It is associated with search.
+
+On March 1, 2022, a bulletin titled 'Face Recognition with GEODI' was published, with a read time of 3 minutes. This bulletin is tagged with search and discovery.
+
+The bulletin 'GEODI with Microsoft Dynamics and Zoho CRM' was released on February 18, 2022, with a read time of 2 minutes. It is associated with search.
+
+On February 8, 2022, a bulletin titled 'Semantic Social Media Search, Content Analysis and GEODI' was published, with a read time of 2 minutes. This bulletin is tagged with search.
+
+A bulletin titled 'DECE is now and ESRI partner' was released on November 16, 2021, with a read time of 2 minutes. It is associated with news.
+
+On October 1, 2021, a bulletin titled 'Protection Starts with Discovery' was published, with a read time of 3 minutes. This bulletin is tagged with discovery.
+
+The bulletin 'GEODI Recognizes E-Signed Documents' was released on September 6, 2021, with a read time of 2 minutes. It is associated with search and discovery.
+
+On August 16, 2021, a bulletin titled 'Masking:Discover and Hide any Sensitive Information in your Data' was published, with a read time of 2 minutes. This bulletin is tagged with masking.
+
+The GEODI platform provides solutions for Search, Discover, Mask, Encrypt, and Classify.

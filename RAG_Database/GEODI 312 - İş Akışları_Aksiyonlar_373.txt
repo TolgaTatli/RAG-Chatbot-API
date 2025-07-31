@@ -1,0 +1,13 @@
+Bu eğitimde GEODI Aksiyonları ve İş Akışları tanıtılmaktadır. Aksiyonlar, keşfedilen veriler üzerinde Güvenli Silme, Karantinaya Alma veya Toplu Maskeleme gibi gerçekleştirilen işlemleri ifade eder. Bu aksiyonlar, önceden tanımlanmış kurallara göre otomatik olarak çalıştırılabilen bir İş Akışının parçasıdır. Örneğin, yüksek riskli bir alanda PII veya PCI içeren bir belge tespit edildiğinde, GEODI bu dosyayı otomatik olarak karantinaya alabilir ve içeriğini yerinde maskeleyebilir.
+
+Bu teknik eğitim 30 dakika sürmektedir ve herhangi bir ön şart eğitim bulunmamaktadır. Eğitimin kapsamı İş Akışları/Workflows 9 ile Keşif Sonuçlarını İnceleme ve Aksiyonları içerir.
+
+Temel kavramlar arasında İş Akışları, Sorgu, Aksiyonlar, Olaylar ve Hemen Çalıştır bulunur. İş Akışları, sorgular veya olaylar tarafından tetiklenen işlem dizilerini otomatikleştirir. Sorgu, hangi veriler üzerinde işlem yapılacağını tanımlar. Aksiyonlar, keşfedilen veriler üzerinde gerçekleştirilen işlemlerdir. Olaylar, "Keşif Tamamlandı" veya "Dosya Oluşturuldu" gibi tetikleyici olaylardır. "Hemen Çalıştır" ise iş akışını manuel olarak herhangi bir anda çalıştırma işlevidir.
+
+Mevcut aksiyonlar şunlardır: Güvenli Silme, veriyi kalıcı olarak siler. Karantinaya Alma, riskli içeriği güvenli bir konuma taşır. Maskeleme, hassas bilgileri okunamaz hale getirir. Sınıflandırma, içeriğe etiket veya meta veri uygular. Şifreleme, içeriği şifreyle korur. Kopyalama, sonraki işlemlerden önce yedek oluşturur. E-Posta Gönderme ise kullanıcılara veya gruplara ekli bildirim gönderir.
+
+Kullanım senaryoları arasında PII verisini otomatik olarak silmek, depolama alanındaki mükerrer dosyaları kaldırmak, aylık silme gibi zamanlanmış temizlik işlemleri yapmak ve hassasiyet veya konuma bağlı koşullu silme gerçekleştirmek yer alır.
+
+İleri düzey konular arasında Aksiyonları Birleştirme ve Sıralama, İndeks ve Sonuç İzleme ile Kaynaklar Arası Aksiyonlar bulunur. Karmaşık iş akışları için birden fazla aksiyon zincirleme şekilde kullanılabilir, örneğin Kopyala → Sınıflandır → Sil. Aksiyon sonuçları Keşif Paneli üzerinden takip edilebilir. Kaynaklar Arası Aksiyonlar, Uzak Uç Noktalar (Windows/Linux/macOS), SharePoint, Amazon S3, Veritabanları ve E-postalar (Exchange, IMAP) gibi farklı platformlarda aksiyonların uygulanmasını sağlar.
+
+Eğitimler genel bir fikir vermeyi amaçlar ve öğrenilenlerin kullanılarak pekiştirilmesi gereklidir. Eğitim kapsamında belirtilen bazı özellikler lisanslarda yer almayabilir.

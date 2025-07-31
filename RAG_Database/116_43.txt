@@ -1,0 +1,1 @@
+Pardus işletim sisteminde veri sınıflama yapmak mümkündür. Veri keşfi GDE ile yapılabilir ve sınıflama işlemi GEODI toplu sınıflama kullanılarak gerçekleştirilebilir.

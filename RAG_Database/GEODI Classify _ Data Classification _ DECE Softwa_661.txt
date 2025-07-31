@@ -1,0 +1,13 @@
+The service makes it easy to access Digital Archive and Digital Inventory through Data classification. Users can experience the convenience of accessing their data classified with GEODI.
+
+Data classification identifies and labels data according to protection policies. The GEODI Classification suite offers both automatic and manual classification tools. These tools help keep data safe across various platforms, including Desktop, Office, CAD, or OWA (Web mail) data. The Classification Suite is compatible with preferred DLP solutions and is supported by GEODI Discovery.
+
+The Desktop Classifier is a classification agent that allows users or systems within an organization to classify any file type in Windows Explorer. This classification can be done manually or automatically. Data types such as CAD, Video, and Office files can all be labeled using this tool.
+
+The MS Office Classifier is a classification plugin compatible with Word, Excel, Powerpoint, and Outlook. It enables automatic or manual classification when saving, printing, or sending e-mails or documents. This tool also applies defined headers, footers, and watermarks to Office documents.
+
+The Exchange Server/Office 365 Classifier allows OWA, Exchange Server, and Webmail users to classify outgoing e-mails. This classification can be performed automatically or manually.
+
+The service lists various references, including the Ministry of Agriculture in Croatia, Vakıfbank, the National Budget Office of Nigeria, and the Ministry of Energy and Natural Resources. Other references include Saudi Finance Company, Al Tijaria, Topnet, National Finance of Omman, Palestine Investment Bank, Vakıf Katılım, Iron Mountain, Ziraat Katılım, Verifone, Green Crescent, Kahve Dünyası, Gelecek Varlık, ICT Authority, Ministry of Trade, Carrefoursa, Teknosa, Istanbul Chamber of Industry, Koton, Turkey Coal Enterprises, Unifree Duty Free, The North Marmara Motorway, and Türk Nippon Insurance. References also broadly include entities from the Private Sector, State Agencies, and Municipalities & SPA.
+
+The capabilities of the service include Search, Discover, Mask, Encrypt, and Classify. The service states, "We Protect Your Data."

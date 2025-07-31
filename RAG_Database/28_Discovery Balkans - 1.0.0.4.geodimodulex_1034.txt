@@ -1,0 +1,7 @@
+Country-specific semantic recognizers are utilized to extend the capabilities of GEODI Discovery and Classification. This package is designed for the Balkans region.
+
+The Balkans package covers the following countries: Croatia, Serbia, Montenegro, Kosovo, Slovenia, Albania, North Macedonia, Bosnia-Herzegovina, Bulgaria, and Greece.
+
+This package must be installed after GEODI Discovery.
+
+A JMBG ID Number Recognizer is included within this package.

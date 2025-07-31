@@ -1,0 +1,7 @@
+GEODI BELGENET Modülü ile GEODI’de BELGENET’i kaynak olarak tanımlayabilirsiniz. Modül DECE-STORE’dan yüklenebilir. Verdiğiniz kriterlere uygun şekilde BELGENET içindeki belgeleri arayabilir, keşfedebilir ve görüntüleyebilirsiniz. Bulduğunuz belgeler BELGENET üzerinde açılacaktır.
+
+Geçerli bir BELGENET kullanıcı olmalıdır. Arama, keşif ve diğer özellikler bu kullanıcın yetkileri ile sınırlıdır.
+
+Bağlantı için gereken şartlar bir Belgenet erişim adresi ve minimumda okuma yetkisine sahip bir Belgenet hesabıdır. Keşif kapsamı bu kullanıcının erişimi ile sınırlı olacaktır.
+
+Indeksleme bu tarihten sonra eklenmiş belgeleri kapsayacaktır. Bitiş tarihini boş bırakabilirsiniz. Zamanlanmış Indekslemeyi aktive ederseniz, yeni genel belgeler belirlediğiniz periyotta işlenmeye devam edecektir.

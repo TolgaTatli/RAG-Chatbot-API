@@ -1,0 +1,1 @@
+A detailed report regarding who accesses which data is provided. It is possible to see users accessing via GEODI. Furthermore, a new development allows visibility into which group or user has permission for which file.

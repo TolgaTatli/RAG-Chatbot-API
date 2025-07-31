@@ -1,0 +1,3 @@
+Sınıflandırma ajanları varsayılan olarak kaldırılamaz. Bu yetkinin yönetimi Active Directory (AD) tarafında gerçekleştirilir.
+
+Lokal admin yetkisine sahip kullanıcılar için gerekli ayarlar yapılabilir.

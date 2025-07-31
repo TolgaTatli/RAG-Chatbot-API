@@ -1,0 +1,9 @@
+GEODI searches for given criteria across all sources connected to your project.
+
+A language recognizer predicts the content language based on the content.
+
+A document with one page of English and one page may generate two languages together.
+
+Search criteria for languages include 'lang:EN' and 'lang:ES'. Using 'lang:ES or lang:EN' will yield EN and ES documents. Conversely, 'lang:ES and lang:EN' will result in documents containing both EN and ES languages together.
+
+At the beginning, you may determine which languages to recognize.

@@ -1,0 +1,29 @@
+GEODI is known by the motto "Ara-Keşfet-Sınıfla-Maskele." Data discovery is frequently discussed in the context of regulations such as KVKK or PCI/DSS. GEODI's data discovery capabilities extend beyond what is merely required for these regulations.
+
+The discovery of relationships between individuals, dates, and locations through data discovery is critical information across numerous professions and tasks. GEODI tools facilitate various analyses, including identifying documents where two people appear together, individuals in the same photograph, place names associated with a person, or people, places, or dates related to a specific word.
+
+GEODI is beneficial for a wide range of professionals, including lawyers, press consultants, independent auditors, inspectors, experts, managers, and those involved in Digital Forensics. The tools are characterized by their simple usage and effective results.
+
+Although person names, places, and dates have been specifically mentioned, the functionalities described are applicable to all entities discovered by GEODI's data discovery tools.
+
+GEODI's discovery tools identify various entities within data, including names, place names, addresses, TCNO, credit card numbers, company names, and other user-definable assets. These recognized entities serve as a summary of the content and are termed "kelime" (words) within GEODI. A relationship can manifest as two individuals appearing in the same document. While person names appearing in widely separated parts of a document may not indicate a relationship, their close proximity within the same document can signify one. Furthermore, if the same name appears across different documents, those documents can be considered related.
+
+GEODI supports over 200 data sources, ensuring comprehensive coverage of digital data, including scanned documents processed via OCR. It handles various file types such as databases, Word, Excel, Open Office files, emails, UYAP files, videos, and images. This allows GEODI to process documents like invoices, reports, proposal files, project files, specifications, and contracts without requiring prior manipulation. The system also allows for the addition of new data sources not currently listed.
+
+When searching for two names in GEODI, the system initially returns content where both names are present, without guaranteeing their proximity within the document. GEODI addresses this with a specific proximity search operator. For instance, specifying a search with `~10` after the names indicates that they must be a maximum of 10 words apart. Users can adjust this distance value based on their intuition, with 10 words serving as the default, selected to align with average paragraph size.
+
+The rule for determining the proximity between a name and a place name in GEODI is identical to that for two names. Users can simply type the name and place. Variations in spelling are supported, with `*` covering forms like "Ispartalı" or "Ispartada," and `~` accommodating misspelled terms.
+
+GEODI queries allow for the simultaneous application of multiple rules and the addition of any number of criteria. For instance, a query can combine proximity of two names with the presence of a specific word, or a word with a date range. GEODI's semantic capabilities ensure accurate identification of dates, regardless of their language, format, or alphabet.
+
+Beyond merely listing content, GEODI queries offer more extensive information through various view options. These include "Kelimeler" (Words), "Takvim" (Calendar), "Ağ Grafiği" (Network Graph), and "Harita" (Map), which provide additional insights beyond the standard "İçerikler" (Contents) tab used for proximity queries.
+
+The "Kelimeler" (Words) page in GEODI lists names, dates, and other information found in proximity to queried entities. Users can filter results to display only nearby dates, or both dates and places; otherwise, all discovered words are shown. This page also supports querying the proximity to a single entity, which will display related dates and other information. Queries on the "Kelimeler" page influence the Map, Calendar, and Network Graph views, but do not alter the results displayed in the "İçerikler" (Contents) view.
+
+The "Takvim" (Calendar) page is automatically generated from date information found within texts. When a query is executed, it displays dates from the matching content. For example, a query for "ekonomi" will show all dates from documents containing that word, while "ekonomi()" will narrow results to dates in close proximity to "ekonomi." Dates listed on the "Kelimeler" page are presented as a calendar, including information on their frequency over time. Users can click on a date within the calendar to access the corresponding document.
+
+The "Harita" (Map) page in GEODI displays locations, referred to as "Konum," which are derived from words possessing coordinates, such as parcels, place names, or phone numbers with area codes. Similar to other views, typing a term like "ekonomi" on the Map page will show locations from documents containing that word, while "ekonomi()" will display locations in close proximity to it. This functionality allows users to identify geographical relevance, such as prominent economic locations in news or specific land-related entities in archives.
+
+The "Ağ Grafiği" (Network Graph) page, a component of the GEODI Discovery Module, provides a visual representation of relationships between words, between words and documents, or between documents and words.
+
+The GEODI FacePro application is capable of recognizing faces within photographs and videos. This functionality allows users to perform queries, such as identifying individuals who appear together in the same photograph, utilizing previously described methods.

@@ -1,0 +1,3 @@
+A multilingual watermark for classification can be created using a format such as '[$en:english;.ar:Arabic]'. This format is usable for all languages.
+
+GEODI automatically selects the language for the watermark according to the user's language.

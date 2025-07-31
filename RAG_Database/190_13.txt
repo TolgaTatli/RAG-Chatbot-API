@@ -1,0 +1,5 @@
+The classification of PDF files taking long may have a few reasons, including server load, network issues, and GEODI configuration.
+
+Experience suggests that server load and network issues are the most probable reasons for PDF classification taking long. There are tools available to check both problems, and IT teams should be asked to check them.
+
+For the GEODI side, a preset Classification environment is available, mostly for Proof of Concepts (PoCs). Users may download and check the same files, using GEODI's server with the internet as the transfer medium. In this environment, two PDFs, one 100K and one 4MB, took an average of 2 and 15 seconds respectively. The reason for the 4MB file's duration is its file size, and these durations should be even less in a local network.

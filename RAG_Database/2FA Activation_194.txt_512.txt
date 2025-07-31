@@ -1,0 +1,11 @@
+GEODI provides an alternative login mechanism through 3rd party providers that support Two-Factor Authentication (2FA). To enable 2FA on login, one of these providers must be activated. Currently, 2FA is supported for DUO, Google, Linkedin, Facebook, and Microsoft, and it is only available for LDAP users. The settings under Settings/LoginProvider apply; for instance, if the 2FA option is active on the Google side, 2FA is also valid for GEODI without requiring additional settings.
+
+To activate Microsoft 2FA, users must possess an Office365 account and log in to GEODI using that same account. The 2FA module for Microsoft must be installed from the DECE-STORE for activation. Following installation, the Microsoft logo will appear on the GEODI login page, and users must log in to GEODI by clicking the Microsoft icon.
+
+To activate 2FA with DUO, specific steps must be followed. Users must have a DUO subscription, which can be obtained from http://duo.com. Additionally, the 2FA Module must be installed via DECE-STORE, accessible through Settings/Module Management.
+
+A definition must be made under the /Settings/2FA directory for DUO 2FA. The Default.json.sample file can be used as a template for this definition. The definition file must conform to JSON rules and can be verified using https://jsonformatter.curiousconcept.com/.
+
+The required values for the DUO definition, such as "ClientKey", "SecretKey", and "Host", are obtained from the Applications section of the Duo Admin page, accessible at https://admin.duosecurity.com/login?next=%2F. After logging in, WebSDK or DUO API application settings must be provided to the relevant values from the Applications tab. The "Type" should be "DUO" and "Device" can be set to "All", allowing selection of devices from the Duo Interface.
+
+After these settings are configured, the DUO verification page will open on the GEODI Login page for LDAP users. When a new user is added, they must be synchronized on the Duo side.

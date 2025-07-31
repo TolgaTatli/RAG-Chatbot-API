@@ -1,0 +1,9 @@
+Plugins can be used to customize interfaces by adding HTML and additional scripts. HTML files copied to %appdata%App/GEODI/GUI/Custom/ES/Component or folders under GUI/Custom/ES/Component, located next to the application, will be included in ES and DA interfaces. This method allows access to any event and class.
+
+The conditions for an extension's operation can be set by placing a jSettings file next to it. If no .jsettings files are present, the HTML will be included in the content without any conditions. Extension installation can be limited to desired conditions by defining macros in the ConditionMacro field of jSettings. For GEODI, the jSettings conditionMacro object is GeodiWorkspace. Helper methods can be used.
+
+Desired project names for running an extension can be set in the ActionTargets field of the jSettings file. All projects can be included by setting this field to an asterisk (*). Project names in this field can be separated using a comma (,).
+
+The component folder for the map interface is GUI/Custom/Map/Component, and its jSettings conditionMacro object is GeodiWorkspace. For viewer interfaces, the component folders are GUI/Custom/Viewer/Default/Script and UI/Custom/Viewer/Default/RightPanel. In the case of viewer interfaces, the jSettings conditionMacro object is also GeodiWorkspace.
+
+Server tags, which are explained in the HTML Report page, can be used. However, macro data in HTML is equal to null and cannot be used.

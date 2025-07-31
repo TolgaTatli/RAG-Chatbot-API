@@ -1,0 +1,3 @@
+When performing sampled discovery in databases, querying all tables is not an expected situation.
+
+GEODI makes requests in a way that minimizes the strain on the database.

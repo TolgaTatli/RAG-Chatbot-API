@@ -1,0 +1,3 @@
+It is currently not possible to perform destruction and quarantine operations within the GEODI interface.
+
+Solidworks files can be classified by users using GEODI Classifier. Files that do not have an add-in area can be classified using the right-click (shell extension) classify option, and they can be tagged using the ADS (Alternate Data Stream) method.

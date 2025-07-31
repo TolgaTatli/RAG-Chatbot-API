@@ -1,0 +1,27 @@
+This MSI package contains Classifier Desktop (Shell Extension) and Microsoft Office add-ons.
+
+The GEODI Classifier SETUP tab automatically generates the parameters. Installation can be performed manually or by using a tool like ManageEngine for deployment.
+
+Office add-ons cannot be disabled or removed by users; only system administrators can perform these actions.
+
+Installed agents are monitored with a panel, which is described in GEODI as the Agent Management Panel.
+
+Installation conditions include requiring a GEODI Workspace for Classification policies, ensuring the GEODI URL address is accessible from the endpoints, and utilizing a tool such as ManageEngine, SCCM, or PDQ for multiple PCs.
+
+The Classifier Agent can be found in /GUI/Agents/Classifier.
+
+The GEODI_URL parameter specifies the address that agents will use to access GEODI, and a secure and named address (DNS, SSL) is recommended.
+
+The GEODI_WSNAME parameter refers to the GEODI Workspace name where policies are defined, and agents will update these policies.
+
+The GEODI_TOKEN is generated in Classification Settings. It is recommended to create a separate user for the token because the token user password should not be changed.
+
+The following commands can be used for agent deployment with tools such as PDQ, ManageEngine, or SCCM.
+
+For setup, the command is "GEODI.Classifier.msi" /quiet GEODI_URL="https://.." GEODI_WSNAME="ClassifierWorkspace" GEODI_TOKEN=. The GEODI Classifier SETUP tab automatically generates these parameters.
+
+To uninstall the agent, the command is msiexec.exe /x "GEODI.Classifier.msi" /qn /norestart.
+
+To update, the command is start "" "%ProgramFiles(x86)%\DECE Software\GEODI Classifier\Updater.exe", which runs the Updater. This command is typically not needed because agents update themselves.
+
+Agents will check for updates every two days and update themselves from the GEODI server, so user intervention is not required.

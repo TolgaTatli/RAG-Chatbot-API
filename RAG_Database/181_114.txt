@@ -1,0 +1,5 @@
+GEODI's software performs discovery and classification for regulations such as PCI/DSS, KVKK, HIPAA, and SAMA. These regulations are applicable across different countries and sectors.
+
+There is no known software accreditation mechanism for the regulations mentioned, including PCI/DSS, KVKK, HIPAA, and SAMA. Therefore, GEODI is not compliant with or accredited by a specific standard.
+
+However, the reports, results, and findings produced by GEODI are utilized by experts and firms that are subject to these standards. For example, GEODI can generate the three-year reports required for PCI/DSS audits.

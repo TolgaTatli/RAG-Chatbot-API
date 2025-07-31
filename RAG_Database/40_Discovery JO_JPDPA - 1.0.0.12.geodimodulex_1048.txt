@@ -1,0 +1,7 @@
+The Discovery JO/JPDPA package extends the capabilities of GEODI Discovery and Classification using country-specific semantic recognizers. This package is for Jordanian.
+
+This package should be installed after GEODI Discovery.
+
+The package includes a Jordanian Dinar Recognizer, a Jordanian Cities Recognizer, and a Jordan Passport Recognizer.
+
+The version of this package is 1.0.0.12.

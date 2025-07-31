@@ -1,0 +1,9 @@
+GEODI can be integrated with E-Commerce or Payment Systems to enable charging users for content downloads. When a user views content in GEODI and wishes to download it, they are first directed to a payment page. Upon successful completion of the transaction, the requested file is then forwarded to the user.
+
+A button can be added to the GEODI viewer to direct users to any E-Commerce software. For detailed instructions on how to write HTML Extensions for GEODI interfaces, users should refer to the "Writing HTML Extensions" page. During this redirection, specific parameters required by the E-Commerce software can be passed, such as the document's name, the total number of pages, or the number of the currently displayed page if only a single page download is desired. These parameters can be transmitted as HTTP get/post parameters using JavaScript.
+
+In most cases, GEODI visitors who are guests will be required to enter the E-Commerce system during the purchase process, and this scenario does not necessitate any user integration. For other user integration scenarios, necessary information can be found on the "Sharing user authorizations (GEODI → APP)" page.
+
+After a user logs in and completes payment, the E-Commerce System utilizes the Geodi REST API to receive and transmit the content, whether it is a document or a specific page, to the user. This transmission can occur through methods such as direct download or email. A token, which is required for these REST API calls, can be obtained once from the relevant interfaces and subsequently used for each request.
+
+An example of an integration developed by BT Haber, which utilizes Garanti Bank Virtual Pos services, is accessible at http://94.101.87.176/?wsName=DEMO-TR-BTHaber&Tab=DLV&loginWithGuest=1.

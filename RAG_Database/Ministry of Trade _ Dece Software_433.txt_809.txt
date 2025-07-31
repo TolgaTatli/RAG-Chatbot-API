@@ -1,0 +1,9 @@
+The Ministry of Trade selected GEODI for its Data Discovery and Data Classification project. This selection was made to ensure compliance with GDPR and for Data Protection purposes.
+
+GEODI Semantic Discovery Tools are capable of scanning millions of documents from file folders, databases, PCs, and E-Mails. GEODI automatically classifies these documents using pre-set rules based on Semantic Discovery and Query. All remediation policies are developed in light of the discovery results.
+
+Data Protection Officers (DPOs) can utilize GEODI's search and insight capabilities. These capabilities allow DPOs to access and report documents containing critical and sensitive data within seconds.
+
+The GEODI Platform is offered as a solution. Other listed solutions and capabilities include Search, Discover, Mask, Classify, and Encrypt.
+
+Dece Software is associated with the GEODI Platform. Dece Software's offerings include solutions such as Search, Discover, Mask, and Classify. They also provide resources like blogs, bulletins, success stories, webinars, and support & technical documentation.

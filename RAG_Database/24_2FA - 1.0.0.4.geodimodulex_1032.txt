@@ -1,0 +1,3 @@
+The 2FA module provides two-factor authentication support for Google, Microsoft, or providers like DUO.
+
+GEODI solely provides the necessary infrastructure for 2FA; users may need to purchase external licenses depending on their provider choices.

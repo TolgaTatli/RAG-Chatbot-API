@@ -1,0 +1,7 @@
+GEODI Q, developed by Dece Software, is introduced as the world’s first AI-LLM powered data discovery and classification tool. It advances existing AI and NLP-based solutions by integrating LLM capabilities into data security, discovery, and classification. This aims to revolutionize the way data is managed, searched, and understood.
+
+An upcoming webinar titled "World’s First AI-LLM Powered Data Discovery and Classification with GEODI Q" is scheduled for January 23, 2025. Recent webinars include "PCI/DSS Compliance with GEODI" on August 27, 2024 (23 min), "Life in a legal department with GEODI" on August 6, 2024 (18 min), "Semantic Discovery, Classification and Search" on July 23, 2024 (30 min), "Database Discovery" on July 9, 2024 (30 min), "How quick GEODI in 0 to Classification" on June 25, 2024 (23 min), "Adapt GEODI to your needs:DECE-Store" on June 11, 2024 (15 min), "Data Anonymization and Masking" on June 4, 2024 (30 min), and "Media Archive with Face Recognition" on February 27, 2020 (8 min).
+
+GEODI offers solutions for data management, including Search, Discover, Mask, Encrypt, and Classify. The company states, "We Protect Your Data."
+
+A success story involving GEODI is noted with the Croatia Ministry of Agriculture, dated January 23, 2020, and lasting 7 minutes.

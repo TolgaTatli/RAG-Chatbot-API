@@ -1,0 +1,7 @@
+If there are issues viewing content, users are advised to click a link to open it in a new window or to change their browser's cookie settings.
+
+Available support and account access options include Technical Support, SSS (FAQ), Contact Us, and logging into an account.
+
+The product identified is GEODI, with the version number 8.0.0.27821.
+
+Login options include "Beni hatırla" (Remember me) and "Şifremi Unuttum" (Forgot password). Users can also log in using external services such as Dropbox, LinkedIn, Microsoft, or Google.

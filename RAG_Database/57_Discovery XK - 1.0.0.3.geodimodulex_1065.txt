@@ -1,0 +1,5 @@
+Country-specific semantic recognizers extend the capabilities of GEODI Discovery and Classification. The Discovery XK package is for Kosovo.
+
+This package should be installed after GEODI Discovery. It includes the Kosovo Parcel Recognizer and the Kosovo Cadastral Zone Recognizer.
+
+The version of Discovery XK is 1.0.0.3.

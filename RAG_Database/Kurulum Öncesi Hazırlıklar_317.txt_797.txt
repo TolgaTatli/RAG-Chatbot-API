@@ -1,0 +1,5 @@
+GEODI'nin sağlıklı çalışabilmesi için, GEODI Sistem Gereksinimleri sayfasında minimum özellikleri belirtilen bir sunucu hazırlanmalıdır. Lisansınız içinde PC keşfi ve Sınıflama olması durumunda gereken özellikler yine aynı sayfada belirtilmiştir.
+
+Kurulum öncesi ekte belirtilen kontrol listesindeki bir kaç soruyu yanıtlamanız rica ediyoruz. Bütün süreçte DECE ekipleri sizlerin yanında olacaktır. Kurulum süreçleri GEODI Server Kurulum ve Konfigürasyon sayfası üzerinden devam edecektir.
+
+Kurulum Kontrol Listesi, bir Microsoft Excel Spreadsheet'idir. Bu dosya 'Geodi_Kurulum_KontrolListesi.xlsx' olarak adlandırılmıştır. Dosya, 04 Ekim 2022 tarihinde serdar ak tarafından değiştirilmiştir.

@@ -1,0 +1,7 @@
+This course covers the setup of GEODI Classification tools for OWA, Microsoft 365, or Exchange Server. The course focuses only on GEODI specific topics. Participants are assumed to have sufficient knowledge of the email servers in question. Classification Agent deployment for EndPoints is covered in GEODI 315. It is assumed that configuration issues covered in GEODI 314 have been finished.
+
+The content of the course is technical. The duration of the course is 45 minutes.
+
+The management panel generates the necessary manifest file and credentials. Access and necessary credentials are required to install the add-on. Details regarding GEODI OWA Classifier Installation are explained on the "GEODI OWA Classifier Installation - geodi-en - Confluence (atlassian.net)" page. Policy changes are effective immediately.
+
+Support from teams is available for those unsure about a topic or unable to do something. Some features may not be included in a user's license.

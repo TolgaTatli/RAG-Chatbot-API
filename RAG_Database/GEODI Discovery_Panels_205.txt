@@ -1,0 +1,7 @@
+The panels display the results of GEODI discoveries in a summarized form. These panels allow for easier access to results compared to reports. The summaries presented in the panels are influenced by queries, which helps in achieving effective results more easily. After using the panels, the next step is to use Reports and Actions.
+
+Panels are accessible to system administrators and members of the group. The panels are only visible in projects where is included in the GenericSettings under the Advanced Workspace settings.
+
+The Discovery Panel summarizes findings, duplicate contents, and non-compliant contents in reports. For this panel, users can refer to GEODI 131 training.
+
+The Client Panel is used to monitor GDE ve Classifier agents. This panel is visible only to System Admins. Details for this panel can be found on the following page.

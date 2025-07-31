@@ -1,0 +1,15 @@
+The classification and log analysis panel template projects are ready with the installation of the classification module. In projects where classification activities are monitored, classification movements are recorded regularly. These classification logs can be written to a database and monitored and analyzed by any SIEM tool or Log Analysis Panel.
+
+With the GEODI Log Analysis Panel, users can monitor their classification activities and perform analysis on a user and class basis. The panel requires the logs to be in a Database. Once the Classification Module is installed, the project will be automatically activated.
+
+Via the GEODI Log Analysis Panel, users can review information such as Classes, Number of Classifications by Applications, Number of Classifications by Users, Classified Contents, and Trend analysis of the number of classifications by Month, Week, and Year. Any user in group will see the dashboard.
+
+The GEODI Log Analysis Panel processes data contained within the GEODI log records. New log entries will continue to be automatically processed according to the defined scan for changes.
+
+Regarding log format settings and SIEM Applications, logs may be in CSV, CEF, Syslog, or Database formats. GEODI Logs can be used in SIEM applications. For other logs, users can check the GEODI Logs page.
+
+GEODI log records include specific fields: Object ID (Unique ID), Log Time (Time of transaction), Log User (User who doing the classification), Log App (GEODI), Log App Ver (GEODI Version), Log Module (DLP Classifier), Log Security Level (https veya http), Log Level (medium), File (UNCPath of classified content, for example: C:\Users\ \Desktop\New Word Doc (2).docx), Previous Class, Class (Given Class), Source (Method of classification, either Shell or Add-In), Client IP, and Client User (Client Username). The Previous Class field has a value of “?” for content without a class.
+
+The AutoClass column in GEODI logs provides the ID value of the class determined automatically if it is used as an automatic recommendation or forcibly. If automatic classification has never been used, this column will be logged as empty.
+
+The Action Type field in GEODI logs details how a classification occurred. "Auto" indicates an automatically assigned class. "Manuel" signifies a manual class selection. "Offline" denotes a manual class selection made via GDE and Shell. "AUTOCLASS Body Email" means the content was classified as auto with "%AUTOCLASS%" text in Outlook desktop. "Auto Menu Click" refers to classification by automatic clicking on the Add-In. "Class Menu Click" indicates classification by selecting a class through the Add-In. "Form UI" means a form interface was opened and selection was made through the form. "Forced AutoClass" signifies that automatic classification was enforced.

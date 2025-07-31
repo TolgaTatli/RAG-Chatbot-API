@@ -1,0 +1,7 @@
+GEODI can be made into a Service after installation. To make it a Service, the GEODI.WindowsServiceInstall.bat file, located in the GEODI directory, must be run with administrator privileges. The GEODI Service starts without needing a login session, making it necessary to install GEODI as a service for continuous operation.
+
+Windows will ask for an administrator username and password; this information is not requested by GEODI. The user associated with the service must have access rights to the directories GEODI will index and other Windows resources.
+
+The GEODI Service will be listed as "GEODI.WindowsService" in the service list, and it can be stopped or started at any time. When starting the service, GEODI.exe should not be open. To uninstall the service, the GEODI.WindowsServiceUnInstall.bat file, located in the same directory, can be used.
+
+If a mapped directory is used in GEODI resources, or for other tasks that need to be performed at startup, the necessary *.bat file should be placed in the GEODI → Settings/BatchFiles/Startup directory.

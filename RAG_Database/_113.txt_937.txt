@@ -1,0 +1,3 @@
+The software performs discovery and classification for regulations such as PCI/DSS, KVKK, HIPAA, and SAMA. These regulations are subject to different countries and sectors.
+
+None of these regulations, including PCI/DSS, KVKK, HIPAA, and SAMA, have a known software accreditation mechanism.

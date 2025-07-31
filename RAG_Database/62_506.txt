@@ -1,0 +1,3 @@
+The classification of any image, including OCR-scanned documents, is possible. Image types such as JPG, PNG, or TIFF will be tagged with ADS. However, if there is no access to the content, only manual classification can be effectively utilized.
+
+The GEODI OCR process converts image types such as JPG, PNG, or TIFF into SPDF (Searchable PDF) format. When these images are converted to SPDF, it becomes possible to write the tag directly into the PDF, which then enables discovery and automatic classification.

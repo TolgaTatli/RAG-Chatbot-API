@@ -1,0 +1,5 @@
+The best way to record geological findings is by taking a photo. This form also saves location and time, and allows users to take notes and annotate. This approach is applicable to various sectors including construction, architecture, engineering, telecom, municipality, energy, service, electricity, geology, and mining.
+
+Key categories or fields mentioned include Description, Result, Drawing Area, and Geological Survey.
+
+The version number associated with the information is 1.0.21155.18.

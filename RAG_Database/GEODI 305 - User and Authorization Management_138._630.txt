@@ -1,0 +1,11 @@
+This training teaches how to authorize GEODI contents, panels, or notes. It also covers LDAP integration and row-based authorization of database contents. The training content is technical and has a duration of 1 hour. Participants must have received GEODI user and Project management trainings as prerequisites.
+
+The scope of the training includes GEODI Project Wizard, GEODI User/Authorization Management, GEODI Maps, GEODI Dictionary and Recognizers, and GEODI Automatic Notification and E-Mail Settings. It also covers Index Backup and Recovery from Backup, Active-Passive and Active-Active configuration, and User management.
+
+Within GEODI User Management, the training covers creating users and creating or assigning groups. It details defining various authorizations, including System Authorizations, Project Authorizations, Content Source Authorizations, Note seeing authorization definition, and Registered query authorization definition.
+
+Further topics under GEODI User Management include Panels and Authorizations, Operator Authorization for Classifier, and LDAP integration, which encompasses Groups and User emails. The training also addresses changes in authority and their duration of influence, Integration Authorization Sharing, Reading authorizations from the database, and Authorization feed with Feed API.
+
+The training also covers Tokens and Authorizations, specifically the Token receiving interface and issues such as password change. Guest User Authorizations are discussed, along with login methods such as Login with Google and OAuth2, which includes Facebook, Google, and ertc.
+
+For supporting material, participants are advised to ask for support from the teams if they are unsure about a topic or unable to do something. It is also noted that some features discussed may not be included in a user's license.

@@ -1,0 +1,1 @@
+It is possible to scan files embedded in Veriban without their file name and extension. Names can be generated for these files using DB meta. Further details regarding this process are explained on the database source support page.

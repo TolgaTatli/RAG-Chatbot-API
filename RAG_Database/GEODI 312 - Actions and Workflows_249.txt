@@ -1,0 +1,13 @@
+This training introduces GEODI Actions and Workflows. Actions are defined as operations performed on discovered data, such as Secure Delete, Quarantine, or Bulk Masking. These actions are part of a Workflow, which allows them to run automatically based on predefined rules. For example, if a document containing PII or PCI data is detected in a high-risk area, GEODI can automatically quarantine the file and mask its contents in place.
+
+The core concepts of GEODI include Workflows, Queries, Actions, Events, and the "Run Immediately" function. Workflows automate sequences of actions triggered by queries or events. A Query defines the scope, specifying what data will be acted upon. Actions are the operations executed on discovered data. Events serve as triggers, such as "Discovery Complete" or "File Created." The "Run Immediately" function allows for manual execution of a workflow at any time.
+
+GEODI offers several available actions for data management. "Secure Delete" permanently removes data. "Quarantine" moves risky content to a safe location. "Mask" obfuscates sensitive information. "Classify" applies metadata labels to content. "Encrypt" protects content with encryption. "Copy" creates a backup before further actions. "Send Email" notifies users or groups with attachments.
+
+GEODI actions can be applied in various use cases. These include automatically deleting PII data, removing duplicate files from storage, and scheduling periodic cleanups, such as monthly deletions. Additionally, conditional deletion can be performed based on the sensitivity of data or its location.
+
+Advanced topics in GEODI include combining and ordering actions, index and results monitoring, and cross-source actions. Multiple actions can be chained together for complex workflows, such as "Copy" followed by "Classify" and then "Delete." Action results can be tracked via the Discovery Panel. Cross-source actions allow applying operations across varied platforms, including Remote Endpoints (Windows, Linux, macOS), SharePoint, Amazon S3, Databases, and Emails (e.g., Exchange, IMAP).
+
+The training is intended for a "Teknik" audience and has a duration of 30 minutes. There are no stated prerequisites for this training. The scope of the training includes "İş Akışları/Workflows 9" and "Reviewing Results After a Discovery."
+
+Trainings are intended to provide a general idea. Learners need to reinforce what they have learned by applying it. It is also noted that some features mentioned in the training may not be included in a user's specific license.

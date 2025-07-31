@@ -1,0 +1,1 @@
+PC veya Fileserver'dan keşfi yapılan dosyaların arayüzden sınıflamasını zamanlamak mümkündür.

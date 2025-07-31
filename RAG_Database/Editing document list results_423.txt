@@ -1,0 +1,7 @@
+Templates can be changed and data manipulated by capturing jQuery events on a list, which allows for altering the look of results while preserving features in current HTML. Specific events include GUI_DLVOnStarting, which is triggered before the document list request; GUI_DLVOnStartRender, which is triggered after receiving the document list; and GUI_DLVOnEndRender, which is triggered after all operations are completed.
+
+Templates can be changed using an object passed as a parameter to the events. Adding a 'Cancel=true' value to this object can stop the process and take control of every event related to it. Template documents can be checked for editing templates.
+
+Documents can be listed in more than one place in the interface. Question results are displayed on the main screen, and similar copy documents are shown on the right when a document is clicked; both use the same event. For the fields on the right, the args.Options.RenderSub value is passed as true. The args.targetDom value for the region to be customized can also be checked if needed.
+
+The TemplateSelector value can be changed so that different templates are used for each data.

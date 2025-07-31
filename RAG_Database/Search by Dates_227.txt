@@ -1,0 +1,13 @@
+GEODI searches for given criteria across all sources connected to your project. It allows users to search dates using natural language, and GEODI will find all relevant dates regardless of their written format.
+
+GEODI automatically recognizes all dates and date ranges within content and presents them in a CALENDAR view. With an installed language package, it can process dates in Russian, Arabic, Georgian, Hebrew, and other languages. The calendar view provides insight into the temporal distribution of a query, which helps in perceiving temporal events, especially when news is concentrated, such as around events like the Orange Blower Festival.
+
+The `contentdate` prefix limits searches to specific content dates, such as file dates or tweet dates. Users can search by specific dates like "23 April 1923" or "04.23.1923". GEODI also supports searching for content with dates within a specified range, such as "1st of May to December 31 of 1923", or content that has a given date, or content added today.
+
+GEODI supports searching using Relative Date Clauses, where the reference date ("today") is determined by the computer's current date. GEODI recognizes these relative date words in emails and social media, as the content date is considered a known source in these contexts.
+
+Relative date clauses such as "Yesterday", "Today", and "Tomorrow" function as expected. Queries like "This Week", "Last Week", and "Next Week" are converted to dates spanning from Monday to Sunday.
+
+Queries for "This Month", "Last Month", and "Next Month" are converted to dates from the first to the last day of the respective month. Similarly, "This Year", "Last Year", and "Next Year" queries are converted to dates from January 01 to December 31 of the specified year.
+
+When the "Next Decade" query is made, it returns dates from the current week and the 10 years following this week. Conversely, the "Last Decade" query returns dates from the current week and the 10 years preceding this week.

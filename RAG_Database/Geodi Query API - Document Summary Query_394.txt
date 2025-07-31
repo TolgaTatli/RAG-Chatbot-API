@@ -1,0 +1,15 @@
+Generating a Geodi Token is needed. If preparing an end-user interface, displaying search results with templates will be more useful. The QueryHandler.GetSummaries service is a simplified service. The getDocumentSummaries API offers more features, and the summary text length can be set with GetSummaryType in the query parameter.
+
+The GetSummaries service returns summaries of locations that match a query from within a particular workspace.
+
+The request for GetSummaries uses the format `[GEODIURL]/QueryHandler?op=GetSummaries&wsName=[WSNAME]&q=[SearchString]&startIndex=[StartIndex]&endIndex=[EndIndex]&options=[OptionsJSON]&UserSession=[TOKEN]`. The `wsName` parameter (string) specifies the workspace name, and `q` (string) is the query text. `StartIndex` (int, optional) indicates the starting index for query results, and `EndIndex` (int, optional) indicates the ending index for query results, both with a limit of 0. For query text syntax rules, refer to GEODI Queries.
+
+The `options` parameter (Optional) allows for additional parameters to change the query result. These include `ContentIDFilter` (int[]) to filter content, `Envelope` ([LonMin(int),LatMin(int),LonMax(int),LatMax(int)]) to return words within specified BBOX geometry boundaries, `LayerIdFilter` (int[]) to filter words by the IDs of recognizers, and `KeywordIdFilter` (int[]) to filter words by IDs.
+
+The GetSummaries service supports both GET and POST HTTP methods. Expected errors include 401 Unauthorized access / Access denied, 403 Forbidden, 511 Network Authentication Required, and 501 Server Error.
+
+The resulting value from a GetSummaries request is an array of objects. Each object contains a `ContentID`, which is the Id of the content, and a `Summary` object. The `Summary` object provides documents summary information, including `SummaryID` (Summary Id) and `Text` (Summary text). An example structure is `[ { "ContentID": 1, "Summary": { "SummaryID": "", "Text": "" } } ]`.
+
+An example request `[GEODIURL]/QueryHandler?op=GetSummaries&wsName=PROJECT&q=ankara&startIndex=0&endIndex=1` yields a result such as `[ { "ContentID": 2, "Summary": { "SummaryID": "FTS_0_123_4567_8", "Text": "... ankara ..." } } ]`. Another example request, `[GEODIURL]/QueryHandler?op=GetSummaries&wsName=PROJECT&q=ankara&startIndex=0&endIndex=1&options={"ContentIDFilter":[3]}`, demonstrates filtering by ContentID and can return multiple results, for instance, `[ { "ContentID": 3, "Summary": { "SummaryID": "FTS_0_123_4567_8", "Text": "... ankara ..." } }, { "ContentID": 3, "Summary": { "SummaryID": "FTS_9_876_5432_1", "Text": "... ankara ..." } } ]`.
+
+Example applications for using this service include .Net WinForm (C#), Java, and HTML - Javascript.

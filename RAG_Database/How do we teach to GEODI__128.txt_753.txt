@@ -1,0 +1,9 @@
+The "Ayarlar" (Settings) tab on the 51 Yetki (Authorization) Screen is always displayed.
+
+GEODI discovers valuable information in content, relying heavily on artificial intelligence and rules for its discovery capabilities. The accuracy of this discovery improves as the number of examples increases. When GEODI incorrectly identifies information, a method is required to provide it with the correct information.
+
+The "learning process" is the method used to teach GEODI when it has incorrectly identified something and to show it the correct answer.
+
+To mark errors, one should find the incorrect information on the Words page. From the three-dot menu, select the "Learn" operation, and then provide the necessary information in the opened form.
+
+GEODI requires many more examples to learn, and assistance from teams may be needed for this task. Corrections made will likely become effective for new content within a few days. For changes in old content, it may be necessary to perform a scan or scan for changes, with assistance available from technical teams.

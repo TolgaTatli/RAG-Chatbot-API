@@ -1,0 +1,3 @@
+The Agent Management Panel is equipped with various filters.
+
+Among these filters is the 'last data arrival criterion'. This criterion allows for the exclusion of agents that have not established a connection for an extended period from the list.

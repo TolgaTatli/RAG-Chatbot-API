@@ -1,0 +1,3 @@
+Discovery can be performed for Atlassian Wiki. Confluence can be utilized as a source for this purpose.
+
+The possibility of discovering a large number of Zimbra email accounts simultaneously depends entirely on the capabilities of the Zimbra email server.

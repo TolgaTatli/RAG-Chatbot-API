@@ -1,0 +1,13 @@
+An ArcGIS Pro and WebAppBuilder add-in for GEODI provides ArcGIS users with access to Archive, GeoAI, semantic search, and calendar functionalities through GEODI.
+
+DECE is now an ESRI partner, a partnership established on 11/16/2021. This collaboration allows ArcGIS users to access GEODI's many features more easily, which are designed to simplify the work of enterprise GIS users. The authorities of ESRI Turkey and ESRI Dubai provided support in this process.
+
+The first product resulting from this partnership is a GEODI add-in for ArcGIS Pro. This add-in enables ArcGIS Pro users to access an archive created with GEODI or utilize GEODI's consolidated search capabilities directly via ArcGIS.
+
+GeoAI is integrated into GEODI. Through the add-in, ArcGIS users can automatically extract traffic signs or other objects from videos and directly open the relevant video frame by clicking on a sign.
+
+The goal is to continue extending the product line, with plans to deliver similar abilities on ArcGIS Enterprise soon.
+
+Another outcome of the partnership is GEODI's ArcGIS REST API compatible services. ArcGIS users can now consume GEODI geojson services, in addition to WMS and KML services.
+
+GEODI offers capabilities including Search, Discover, Mask, Encrypt, and Classify, emphasizing its role in data protection.

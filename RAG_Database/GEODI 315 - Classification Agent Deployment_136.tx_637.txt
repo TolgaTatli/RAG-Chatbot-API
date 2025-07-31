@@ -1,0 +1,11 @@
+The Classification Agent operates on Windows EndPoints and integrates with Microsoft Office and Desktop. GEODI Classifier also includes an add-on for OWA, which is covered in GEODI 316.
+
+The content is technical, with a duration of 45 minutes, and no prerequisite trainings are listed. It is assumed that configuration issues covered in GEODI 314 have been finished.
+
+In GEODI 314, it was shown that GEODI Classifier generates an MSI command line ready to run. This batch can be run in each EndPoint for Proof of Concept (PoC) or for small networks. For large networks, a tool like ManageEngine, SCCI, or similar must be used.
+
+A GEODI Classifier Windows Client Installation page explains the MSI parameters for install, update, and uninstall. Once installed, Agents will continue to check and retrieve changes for about 10 minutes. The GEODI server address and Token should not change, and creating a Tokenuser is considered best practice.
+
+Agents update themselves when a new version is ready. The default update address is DECE Servers. For a large number of EndPoints, it is strongly recommended to change and set an offline update environment for the organization. A GEODI Classifier Windows Client Installation page covers offline installation details.
+
+Users are advised to ask for support from the teams if they are unsure about a topic or unable to perform a task. It is also noted that some features may not be included in the user's license.

@@ -1,0 +1,7 @@
+In data discovery projects, when a mailbox or all emails are discovered, authorized persons see all emails. The setting described here allows each user to see only their own emails. Higher authorities, such as administrators, retain their permissions.
+
+In a Mail Indexing Project, a setting applied through the Ctrl + Shift interface, either source-based or project-based, allows users to view emails only if they are mentioned in the From, To, CC, or BCC fields.
+
+When "AppendUserMails" is selected within "Permission_CustomizeMode" in the Ctrl + Shift interface, a user logging into GEODI can view an indexed email if they are mentioned in the From, To, CC, or BCC fields. Beyond this, only the system administrator can view the email.
+
+After changing the setting, if "ReIndex Permission" is performed, the permission index for past email data will be corrected; this is not done automatically. Changes to these permission settings or error corrections do not require re-scanning. "ReIndex Permission" is sufficient for organizing past data.

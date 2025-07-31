@@ -1,0 +1,33 @@
+GEODI addresses a wide range of data security needs, including discovery, classification, and masking. In 2022, Gartner introduced DSPM (Data Security Posture Management) as a strategic approach to identifying and protecting sensitive data across distributed environments. GEODI's capabilities align with the DSPM framework, making it a comprehensive and forward-looking solution for organizations seeking control, compliance, and confidence in their data management.
+
+GEODI DSPM (Data Security Posture Management) helps organizations discover, classify, and protect sensitive data. This functionality applies regardless of where the data resides, covering file systems, emails, SharePoint, databases, or cloud platforms.
+
+The Discovery feature of GEODI DSPM automatically scans and identifies sensitive data. This includes types such as PII, PCI, or custom-defined content across all data sources.
+
+The Classification feature of GEODI DSPM applies labels, tags, or metadata. This is done to organize and control data based on its content, risk, or compliance rules.
+
+The Protection feature of GEODI DSPM enables actions such as masking, anonymization, encryption, or secure deletion. These actions can be performed either manually or through automated workflows.
+
+The Visibility feature of GEODI DSPM provides dashboards and detailed reports. These tools are used to track where sensitive data lives and how it is handled.
+
+GEODI DSPM's Automation & Workflows feature allows for real-time responses to findings. This is achieved with powerful, rule-based automation, enabling actions like quarantining files, notifying teams, or automatically classifying content.
+
+Consent-based Remediation in GEODI DSPM is a governance-driven approach. In this approach, actions such as deletion, quarantine, or redaction of data are executed only after explicit approval by authorized individuals, typically data owners or information custodians.
+
+GEODI DSPM offers Multi-platform Support. It works across various operating systems and platforms, including Windows, Linux, macOS, SharePoint, S3, and databases.
+
+GEODI DSPM bridges data discovery with automated response. This functionality provides users with control and confidence over their data security posture.
+
+Within the DSPM (Data Security Posture Management) framework, Data Discovery and Classification are identified as critical components. GEODI particularly excels in these specific areas.
+
+GEODI offers Advanced Discovery & Classification, providing seamless alignment with regulatory compliance standards such as GDPR, KVKK, DPDPL, PDPL, SAMA, and HIPAA. It can detect and manage sensitive data, including PII, PCI, financials, and fraud-related information. Its Automated Classification feature aims to reduce human error and minimize data risk.
+
+GEODI features AI-Powered Accuracy, utilizing AI & NLP-Based Intelligence to achieve high precision and broad coverage. It integrates GEODI Q-LLM to leverage next-gen large language models for deeper discovery. The system is built on a scalable architecture, enabling high performance with lightning-fast scans.
+
+GEODI provides Broad Integration & Automation, supporting rich data sources such as file systems, emails, SharePoint, S3, and databases. Its Workflow-Based Automation allows for automatically quarantining, masking, or deleting risky content. Access Management controls who can see what and where.
+
+GEODI is designed to be Enterprise-Ready & Easy to Use, featuring an Admin-Friendly UI that is powerful yet simple for system administrators. It is described as a partner, offering helpdesk support, partners, and an active user community. It supports On-Premise Deployment, providing full control over infrastructure. Continuous Improvement is ensured through frequent updates and roadmap-driven innovation, and an Open API allows seamless integration with existing ecosystems.
+
+GEODI is described as not just a powerful tool, but also a comprehensive DSPM solution partner. It is stated to add value to organizations’ data security strategies.
+
+Trainings are intended to provide a general idea, and learners need to reinforce what they have learned by applying it. It is noted that some features mentioned in the training may not be included in a user's license.

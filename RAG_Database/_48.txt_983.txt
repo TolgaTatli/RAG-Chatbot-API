@@ -1,0 +1,3 @@
+A proximity query can be performed between two names.
+
+Many examples for discovering and querying relationships can be found in the 'How do I do it' field.

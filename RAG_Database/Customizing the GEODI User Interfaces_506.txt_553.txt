@@ -1,0 +1,7 @@
+Existing GEODI user interfaces can be customized, and new reports, dashboard definitions, and event behaviors can be added.
+
+Within GEODI, Enterprise Search (ES) and Digital Atlas (DA) are available as initial query pages.
+
+Customizations can be made by adding HTML files and scripts to interfaces, and by preparing new views for the ES interface.
+
+Specific customization actions include writing HTML Plugins, creating a Dashboard, creating a Query View, editing document list results, creating a Theme, creating a Layout, creating a Template, modifying Map styles, and adding a Banner to the Project.

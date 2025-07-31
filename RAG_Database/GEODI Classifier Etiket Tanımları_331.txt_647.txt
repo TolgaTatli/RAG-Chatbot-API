@@ -1,0 +1,23 @@
+GEODI Classifier features a flexible labeling mechanism designed to integrate with DLP software or adapt to an existing labeling schema.
+
+Labels are created within the file for PDF, Office, and Libre Office documents, while for other file types, they are created as ADS (Alternate Data Stream).
+
+GEODI directly supports files labeled with your existing classification tool and adapts to its labeling schema.
+
+Standard templates include a labeling schema and sample files. In these definitions, the first label row is mandatory, while others are optional. Definitions can be modified, and new ones can be added.
+
+The label structure for classes in GEODI Classifier is defined as "name:value name:value ...". At least one label must represent a class value and be constant, with the value capable of taking many different forms, such as `class:secret` or `class:{58f30e89-66db-4092-a81f-282a2eee431c}`.
+
+Variables can be used within the value field, such as username or date. Variable names are case-sensitive and may vary depending on the classification tool. Examples of variables include computer username, email sender for OWA, GEODI user for bulk classification, application version (Shell, Office add-on, or GEODI), date in yyyy-mm-dd format, epoch date value, and UTC full time information.
+
+If an existing label schema is not present, default classes are available for use, as these definitions come pre-configured with GEODI Classification.
+
+The "Gizli" (Secret) default class includes labels such as `geodilabelclass:id_classification_secret=2155a213-0150-4c2d-9211-dba2def647fd`, `geodilabeluser:user=%User%`, and `geodilabeltime:datetime=%Date-UTC%`. Content criteria for this class include content with 50K USD or equivalent amounts and specific words, which are located in a customizable dictionary.
+
+The "Kişisel Veri" (Personal Data) default class includes labels such as `geodilabelclass:id_classification_personalinfo=d36d9a67-b760-4689-ad88-96381e595636`, `geodilabeluser:user=%User%`, and `geodilabeltime:datetime=%Date-UTC%`. The definition of personal data is similar across many regulations, typically involving a name or ID combined with phone, email, address, or blood type. ID definitions are general and can include National ID, Medical Record ID, passport numbers, and ID numbers from different countries added to a project.
+
+The "Hizmete Özel" (Restricted) default class includes labels such as `geodilabelclass:id_classification_restricted=3c9990e0-a748-41de-9d8c-db8783fa5103`, `geodilabeluser:user=%User%`, and `geodilabeltime:datetime=%Date-UTC%`. Content criteria for this class include terms like IBAN, Tax Numbers, Swift code, and "hizmete özel" (restricted), which are located in a customizable dictionary.
+
+The "Tasnif Dışı" (Unclassified) default class includes labels such as `geodilabelclass:id_classification_unclassified=0ef0d4bf-59b8-4ae6-bbc0-fafde041157b`, `geodilabeluser:user=%User%`, and `geodilabeltime:datetime=%Date-UTC%`.
+
+For the Defense Industry, a schema supporting NATO and National Classification rules can be downloaded from DECE-STORE.

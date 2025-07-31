@@ -1,0 +1,9 @@
+GEODI provides documentation for the REST API methods it offers. This documentation may vary depending on the specific GEODI version and modules that are in use. The provided APIs can be accessed through specific links.
+
+If a user owns a GEODI installation, they should utilize their own GEODI domain and port information. This custom information should be used instead of the domain specified in the provided documentation links.
+
+Specific documentation links include the API introduction page at https://servis2.dece.com.tr/Api, and a GUI for generating tokens at https://servis2.dece.com.tr/api/GeodiTokenApi.html. The complete REST API document for all services is located at https://servis2.dece.com.tr/GUI/DeceSystemInfoWebHandler?op=GetServices.
+
+Users can find a specific REST API method they need while using the Geodi interface. This is accomplished by following the network tab within the browser console.
+
+Additional documentation links are available for HTML Report Objects at https://servis2.dece.com.tr/GUI/DeceSystemInfoWebHandler?op=FactoryInfo&Name=HTMLPageItemFactory. Documentation for Map Style CSS Definitions can be found at https://servis2.dece.com.tr/GUI/DeceSystemInfoWebHandler?op=GetCodeBasedCssDefaults&ForInfo=True.

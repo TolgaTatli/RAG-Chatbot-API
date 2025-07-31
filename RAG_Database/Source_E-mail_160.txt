@@ -1,0 +1,33 @@
+GEODI offers two methods for indexing email content and attachments. No action is required for *.PST or *.OST files, as they are indexed automatically. This page specifically addresses the indexing of email servers.
+
+Emails to be discovered can be restricted by fields such as date range and content. This determination must be made before starting the discovery process.
+
+For On-Prem Exchange servers, the "EWS" service must be activated. An example access URL is https://mail.company.com/ews/exchange.asmx.
+
+Many accounts can be discovered simultaneously for Exchange. If this option is selected, the discovery must be performed by a user with appropriate permissions.
+
+When selecting a server, there may be extra questions depending on the chosen server. If the desired server is not listed, a connection can be established using the "Other" option with IMAP or POP3 protocols.
+
+GEODI discovers mail attachments, and the discovery scope can be restricted to include only mail attachments. Procedures such as OCR and Face Recognition can also be applied to these mail attachments.
+
+Mails can be utilized for search purposes. In Enterprise Search Projects, users have the option to select "See only your own emails" in their settings.
+
+In GEODI, all users' emails can be indexed on an Exchange Server by using an authorized user who has access to other email addresses. For connection, the "Include Shared Mailboxes" option should be checked under E-mail Account Settings, and an authorized Exchange email address is required.
+
+For mail management, an authorized email address must first be defined, and Discovery Management permissions should be assigned to it to enable operations via a single email address. Permissions must be assigned through Exchange Admin Center under Admin Roles, specifically Discovery Management, by adding the created email address. Required permissions include Address Lists, Application Impersonation, Legal hold, and Mailbox Search. Additionally, "Read and manage permissions" must be granted to the authorized email address for the email addresses intended for scanning.
+
+To perform actions on the mail account, a new person needs to be added from the account's "Contacts" tab. To add multiple people to the list, the "Import People" option can be selected from the Manage menu.
+
+Regarding email visibility and permissions by user, a user logged into GEODI can view an email if their address is included in the From, To, CC, or BCC fields of the indexed email. Otherwise, only the system administrator can view it.
+
+For troubleshooting an inability to connect to an Exchange server, ensure that the EWS service is defined for On-Prem installations and check the GEODI server’s connection to the Exchange server.
+
+If the GEODI server connects to the email server through a proxy, manual proxy settings can be configured for email connections. This requires filling in the Proxy Server Address, Proxy User, and Proxy Password.
+
+To connect to a mail server not included in the list, such as Zimbra or iRedMail, the "Other" option can be used with IMAP or POP3 protocols.
+
+If an "Account information cannot be verified" error appears during mail definition, check if the URL form for the server address is correct. The specified user must be able to log in via the defined address. If this error occurs with an authorized email address defined for mass email address scans, verify the permissions given to the user. If the error is not received with a Global Admin Account, the authorizations of the defined authorized account should be checked.
+
+If accounts other than the authorized mail account are not included in the scan, verify that the email addresses to be scanned are registered in the address book of the authorized email account. Also, ensure that the authorized email address defined for inclusion in the scan has "Read and manage permission."
+
+If email discovery takes too long, the issue is primarily related to the mail server and network. Emails can also be restricted by date to mitigate this.

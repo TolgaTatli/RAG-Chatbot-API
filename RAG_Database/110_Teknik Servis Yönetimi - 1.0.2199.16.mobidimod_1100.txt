@@ -1,0 +1,7 @@
+The number of active sessions can be parametrically limited, and this limitation is dependent on the user count.
+
+The system can track or record information such as Customer Name, Address, Telephone, E-Mail, Complaint, Activity, Device Model, Device Serial Number, Technician Name-Surname, and Price.
+
+The system includes a Technical Service Management feature. This feature allows users to record and analyze technical services. It supports tracking all stages, including fault detection, technician assignment, fault resolution, recording of used parts, and device delivery to the customer. Users can also obtain reports and create a technical information archive. Associated keywords include fault, service, computer, phone, device, service, technician, and maintenance.
+
+The system version is 1.0.2199.16.

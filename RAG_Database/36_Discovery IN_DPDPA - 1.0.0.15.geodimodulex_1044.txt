@@ -1,0 +1,3 @@
+Country-specific semantic recognizers are designed to extend the capabilities of GEODI Discovery and Classification. This particular package is intended for India. Users should install this package after GEODI Discovery.
+
+The package for India includes several specific recognizers. These recognizers are the India Aadhar Card Recognizer, India Pan Card Recognizer, Indian Bank Number, India State Dictionary, Indian Rupi Recognizer, and IFSC Recognizer.

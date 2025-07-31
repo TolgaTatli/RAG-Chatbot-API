@@ -1,0 +1,11 @@
+GEODI is designed to facilitate the work of Office and Field workers. With GEODI, access to information accelerates and sharing becomes easier. It is easy to use, so users can start immediately after a very short user training, and its ease of use will increase with continued use.
+
+Certificate Courses offered include the GEODI DSPM Course Program.
+
+User Courses available are GEODI 101 - Basic User Training, GEODI 102 - Query Rules, and GEODI 121 - Classification tools User Training.
+
+Installation Courses require participants to have knowledge of Windows servers, IIS, network, and firewalls. These courses include GEODI 301 - GEODI Installation and Implementation, GEODI 311 - Discovery Agent(GDE) Deployment, GEODI 315 - Classification Agent Deployment, and GEODI 316 - OWA e-Mail Classification Installation.
+
+System Administrator Courses teach participants the administration of GEODI servers. System administrators are expected to have received user training. Specific courses are GEODI 302 - System Management, GEODI 305 - User and Authorization Management, GEODI 303 - Project Wizard, GEODI 304 - System Monitoring and Troubleshooting, and GEODI 314 - Classification.
+
+GEODI for GIS Users Courses include GEODI 110 - Corporate and Geographic Archive with GEODI.

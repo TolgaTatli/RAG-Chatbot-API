@@ -1,0 +1,3 @@
+User management for a corporate installation can be configured using OIDC or SAML.
+
+Authenticator interfaces can be developed for OIDC or SAML.

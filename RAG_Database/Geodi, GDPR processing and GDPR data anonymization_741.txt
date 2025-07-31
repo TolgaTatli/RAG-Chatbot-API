@@ -1,0 +1,17 @@
+GEODI helps manage and protect GDPR processing at a high level through its data anonymization methods.
+
+Digital transformation encourages information sharing, but obstacles like regulations, including GDPR, PCI/DSS, or HIPAA, limit this sharing, which can slow down business processes. This creates a dilemma regarding achieving both sharing and compliance simultaneously.
+
+Selective Data Anonymization can resolve the dilemma of sharing data while maintaining compliance. For instance, databases can be analyzed and shared with software developers or data science teams, allowing them to work on “real” data. This process satisfies both data protection officers and software developers.
+
+Anonymization can also be applied to contracts, allowing them to be shared among departments like management, legal, and purchase by changing sensitive details such as names, money, or dates.
+
+GEODI Anonymization is a smart solution designed to make it extremely difficult to extract real data from anonymized data. It features random and same-to-same modes, where identifiers like a person's ID change, but the anonymized data, such as names, SSNs, or IBANs, still appears real.
+
+GEODI Anonymization can process various types of information, including names, ID numbers, company names, place names, financial information, and money information.
+
+The GEODI Anonymization solution facilitates data sharing without increasing risks. It can be used with various document types, including Word, Excel, PDF, or Libre Office databases, and an API is also available.
+
+GEODI Anonymization offers two modes: one where documents and databases are permanently changed, allowing copies to be freely shared, and another where documents indexed by GEODI can be dynamically anonymized based on user permissions, making the same original document appear different to various users.
+
+A high-accuracy GEODI Data Discovery solution is essential for successful anonymization.

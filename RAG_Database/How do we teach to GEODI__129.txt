@@ -1,0 +1,7 @@
+GEODI discovers valuable information in content, with its discovery capabilities heavily relying on artificial intelligence and rules. The accuracy of discovery improves as the number of examples increases.
+
+When GEODI identifies something incorrectly, a method is needed to show it the correct information. This method is referred to as the "learning process," which teaches GEODI when it has made an incorrect identification and how to provide the correct answer.
+
+To mark errors, one should find the incorrect information on the Words page. From there, select the "Learn" operation from the three-dot menu, and then provide the necessary information in the opened form.
+
+GEODI will require many more examples to learn, and assistance from teams may be needed for this task. Corrections made are likely to become effective for new content within a few days. If changes are desired in old content, it may be necessary to perform a scan or scan for changes, with technical teams providing assistance for this process.

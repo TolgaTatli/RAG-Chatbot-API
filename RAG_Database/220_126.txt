@@ -1,0 +1,7 @@
+GEODI uses Modified Date instead of Creation Date. Modified Date is considered a more reliable value.
+
+The Creation Date changes in situations such as copying.
+
+The Modified Date indicates the usage date of a file, even if the file is old but still in use.
+
+Modified Date is a more reliable option for operations like destruction or quarantine.

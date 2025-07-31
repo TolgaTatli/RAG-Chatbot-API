@@ -1,0 +1,3 @@
+When defining a Source Fileserver to GEODI, it is possible to perform scanning by entering a User Screen and Password.
+
+GEODI allows users to utilize dictionaries, such as "Turkey Places," to view their documents on the Turkey map. This functionality enables the display of locations like the city where a customer works, the district where business is conducted, or an address found on an invoice, all on the map.

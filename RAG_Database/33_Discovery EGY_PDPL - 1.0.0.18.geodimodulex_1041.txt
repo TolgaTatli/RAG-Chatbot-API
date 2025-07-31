@@ -1,0 +1,5 @@
+Country-specific semantic recognizers extend the capabilities of GEODI Discovery and Classification. This package is specifically designed for Egypt.
+
+This package must be installed after GEODI Discovery. It includes the EGY PID Recognizer and the EGY Pound Recognizer.
+
+The version of this package is 1.0.0.18.

@@ -1,0 +1,47 @@
+This page guides users through installing GEODI Classifier for both server and end-user setups. The typical setup time for GEODI Classifier is 1 to 1.5 hours. For new users of classification tools, a quick start is possible by immediately using predefined classes. If migrating from another tool, defining existing classes and labels takes a similar amount of time, requiring a sample Word document for each class to define labels, with automatic classification rules defined afterwards.
+
+GEODI Classifier utilizes a single classification agent architecture. This agent is compatible with deployment tools such as ManageEngine or similar solutions. Once the agent software is deployed, its updates are fully automated.
+
+The GEODI Classifier system includes built-in panels for dashboards and monitoring. These panels are ready-to-use and provided as part of the system, allowing users to monitor classification agents and track classification activities.
+
+Policies and rules within GEODI Classifier are automatically enforced after the agent deployment. The system offers advanced policy management, enabling customization by group, user, or application. These policies are managed centrally via GEODI’s policy manager.
+
+End users can begin using the Office, Desktop, and OWA plugins for GEODI Classifier after watching the official training video. Specific training resources include GEODI 121 – Classification Tools User Training, GEODI Classifier - Class and Policy settings, GEODI Classifier Label/Tag Definitions, GEODI Classifier Windows Client Installation, GEODI Classifier OWA Installation, GEODI Classifier Batch Classification, and GEODI Classifier Log Analysis Panel and Classifier Project.
+
+The installation roadmap for GEODI Classifier includes a checklist of steps. These steps involve installing GEODI Server, activating the Classification Module, activating Default Classes and Policies, ignoring mail signatures, generating the Agent MSI Package, performing a sample agent installation to selected clients, activating the agent monitor panel, and activating the log analysis panel. An interim review is suggested before modifying classes and policies, followed by deploying agents to all clients.
+
+Automatic classification can be disabled for a specific group using the GEODI Classification Policy Manager. This manager allows for the creation of variations based on groups, individuals, IP addresses, and software like Word or Excel. Classification can be set to automatic for one user group, manual for others, or disabled for a specific user group as needed. Changes in rules take effect on clients approximately 10 minutes after modification.
+
+GEODI Classifier supports batch classification. Users can perform this by querying the target and selecting “Batch Classification” from the GEODI facet area. This process includes files from folders, file servers, and GDE (PCs). Labels are written either to the respective files or as alternate data streams (ADS).
+
+Semantic Classification in GEODI refers to the classification of files discovered based on query results. GEODI can recognize entities such as IBAN, Credit Card, money, document type, and date. For example, a class secret rule might contain “Money>1M TL”, with GEODI recognizing money in various forms. Similarly, a classified class might contain a rule “if a contract”, where GEODI uses AI to understand if a document is a contract.
+
+GEODI classification tools preserve the original file date of classified documents. Additionally, files discovered with GDE on remote PCs can be classified in-place. If a Classification license is held for documents coming to the GEODI server through GDE, documents can be queried and classified via GEODI ES, with the classification occurring on the source machine, provided that machine has both Classifier and GDE solutions installed.
+
+There is no concept of writing labels directly to databases with GEODI Classifier. However, the tools can report the classification of a database record, enabling users to take action based on this report. Furthermore, internal emails within an organization (same domain) can be optionally excluded from classification via the GEODI Classification Management Interface.
+
+Header, Footer, and Watermark elements in GEODI Classifier can be multilingual, allowing for the definition of multiple languages. The language is chosen by machine language, and values like usernames can be incorporated into these settings, with support for multiple lines. Depending on policies, 'Allow Class Lowering' can be permitted or prohibited for all or specific sets of users, and a rule can be applied to prohibit assigning a class below automatic classification.
+
+To exclude email signatures, which contain sender's PII, users must either change email server settings or prepare a dictionary. The result format for classification logs can be DB, syslog, CEF, or CSV. These logs can be monitored and analyzed using a SIEM or the Log Analysis Panel.
+
+GEODI Classifier agents can be deployed using tools such as ManageEngine, PDQ, SCCM, or similar solutions, as the GEODI Classification solution automatically generates the required MSI and parameters. For a small number of machines, manual MSI execution is possible. Agents check for updates every two days and are monitored from a dedicated panel. GEODI Classification and GDE (Discovery) agents are designed to impose minimal load on endpoint/client machines.
+
+By default, Windows users are prevented from removing or deactivating Office plugins associated with GEODI Classifier. Policy changes take effect on clients automatically and within approximately 10 minutes.
+
+GEODI Classifier add-ons can work offline, but they must access the GEODI server at least once to retrieve policies. When offline, only manual classification is possible, as automatic classification is not available. Rules from the last connection are used, and logs are accumulated and transferred once a connection to the server is re-established.
+
+Files that do not support labels, other than PDF and Office documents, are classified using the Alternate Data Stream (ADS) method. ADS is an NTFS feature, and its labels can be listed using the “dir /r” command. ADS labels, being an NTFS feature, may not always be preserved. Labels are preserved when a file is renamed, its extension is changed (e.g., txt to log, mp4 to avi), or it is copied to another NTFS filesystem, regardless of whether the GEODI classifier is installed. However, labels are not preserved if the file is copied via RDP, Wetransfer, or similar methods, copied to a non-NTFS filesystem, carried in a compressed file (Rar/zip), or attached to an e-mail.
+
+GEODI Classifier can be used simultaneously with other classification solutions. It can adapt to the labeling scheme of an existing classification tool, allowing continued use of both without additional work on the DLP side. GEODI Classifier is compatible with MIP (Microsoft Information Protection) labels and other schemas.
+
+The GEODI classification solution operates on Windows computers. However, data discovery can be performed on Linux, MacOS, or SharePoint environments.
+
+GEODI Classifier can understand documents that have been classified with a different classification tool, provided the labeling scheme is the same. The GEODI classification tool recognizes the class of a previously classified file and behaves according to its policy settings.
+
+If Office extensions or desktop classification are not active, the client installation should be verified. Clients must have accessed GEODI at least once, and the validity of the GEODI token should be checked. If automatic classification is not active, it may be due to a lack of access to the GEODI server, or automatic classification may be disabled in the policy settings.
+
+Classification may take a long time due to network traffic, server load, and file sizes, as GEODI reads file content for auto-classification, and opening with Word or Excel can also be time-consuming. Email signatures are expected to be recognized as personal data because they contain PII about the sender; a solution for this is available on a specific Confluence page, and the same method applies to header/footer information in Letterheaded Word files.
+
+If classification agents and add-ins cannot see the GEODI server, it may be because GEODI is closed or its port is not open. If add-ons have accessed the GEODI server at least once and obtained policies, only manual classification is possible, with automatic classification unavailable, and rules from the last connection are used, with logs accumulated and transferred upon server connection. For sending a large number of emails simultaneously, such as with Mail Merge, adding the '%AutoClass%' expression to the email body or Word document will enable automatic classification without a pop-up, or a separate classification policy can be created for Outlook/OWA.
+
+Classification agents automatically check for server updates every two days. Access to 'documents.decesoftware.com' must be provided for this control and automatic update process; if access is available but updates are not occurring, firewall settings should be checked. If Outlook mails have a label but no header or footer, users should check 'Cash Mode' to true in their 'Exchange Account Settings'.

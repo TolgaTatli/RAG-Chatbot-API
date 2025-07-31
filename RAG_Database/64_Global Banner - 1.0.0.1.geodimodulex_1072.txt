@@ -1,0 +1,7 @@
+GEODI incorporates a banner design that is visible across all projects.
+
+Users can modify the picture and logo of this banner according to their preferences.
+
+To change the banner's background image and logo, users can obtain assistance by visiting developers.dece.com.tr.
+
+The version of this feature is 1.0.0.1.

@@ -1,0 +1,7 @@
+The order of GEODI results can be changed.
+
+Sorting behavior differs on the Contents and Words pages.
+
+Additional options are provided for Words.
+
+These options include 'sırala:ad/adı/isim | orderby:name', 'sırala:tarih | orderby:date', and 'sırala:katman | orderby:layer'.

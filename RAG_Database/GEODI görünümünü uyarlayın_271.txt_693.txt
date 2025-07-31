@@ -1,0 +1,13 @@
+GEODI offers various view options to enhance user experience, allowing users to select according to their needs. These settings are stored on a browser-basis, enabling different view selections on different devices.
+
+Theme selection is available within GEODI. Users can choose a theme from the top-right menu in the search interface or by appending "&Theme=" to the URL. Themes influence visual elements such as font, color, and icons.
+
+Layout selection is a GEODI feature. To select a layout, users must append "&Layout=" to the URL. Layouts alter the positions of the search box and other GEODI components, with available options including Layout1-Layout3.
+
+Template selection is provided in GEODI. To choose a template, users need to append "&Template=" to the URL. Templates determine how content will appear, and available options range from Template1 to Template7.
+
+The Digital Atlas View in GEODI allows users to see Maps and Contents together. To activate this view, the GEODI link should be modified to include "/DA/". The Digital Atlas View is also affected by changes made to the Theme.
+
+For new designs, users have the option to create their own custom layout choices. This can be achieved through the "Layout Hazırlama" (Layout Preparation) feature found at the developers.dece.com.tr address.
+
+Different Enterprise Search (ES) views can be managed within GEODI. Users can determine the views to be used in the search interface from the Advanced menu on the last page of the GEODI Project Wizard. Views such as Contents, Words, Map, Network Graph, Calendar, and Explorer can be optionally enabled or disabled. Some views are dependent on a license and are consequently not found in the general view settings.

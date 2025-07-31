@@ -1,0 +1,15 @@
+For GEODI classifier OWA installation, you must download the Manifest.xml file using the specified method and then forward it to the Exchange Admin.
+
+Minimum setup requirements for this extension include installation on the Outlook Web App, Exchange On-Premises, or Exchange Online. The OWA server must be able to access the GEODI server, and the mail server requires SSL for the GEODI URL. For Exchange Online, the GEODI URL must be public. The user name and password for the token should not be changed, as doing so will necessitate repeating the installation.
+
+To create the manifest, download the .xml file using the "Download Manifest" button in the setup tab. To load the manifest, use the Add-In upload feature in Microsoft 365 Admin Center/Built-In Apps for all defined or desired users. After this process, the system will begin distribution, and deployment may take 3-24 hours.
+
+If the OWA add-in pop-up does not show when sending an e-mail, policy settings may need to be changed. For an On-Prem Exchange environment, this is an issue that must be solved on the Microsoft side by taking actions described at https://learn.microsoft.com/en-us/office/dev/add-ins/outlook/outlook-on-send-addins?tabs=classic#install-outlook-add-ins-that-use-on-send. Re-creating the manifest file is not required in this scenario.
+
+If the add-in did not activate for OWA e-mail users, several reasons are possible. Verify if the GEODI server is running. Before creating the manifest file, ensure the GEODI URL address in the UI is correct; otherwise, repeat the installation. Microsoft OWA servers must be able to see the GEODI server, and if Exchange Online is used, the GEODI address must be public. Additionally, SSL must be defined for the GEODI address and confirmed not to be expired.
+
+If the add-in stops working, check if the GEODI server is running. Also, verify if the project used to create the manifest file is still active; if not, revert the project or re-create it, which will require repeating the manifest process. Confirm that the TokenUser and its password are still valid; if not, the manifest process must be repeated.
+
+Policy changes do not require the manifest to be reloaded, as all changes are applied automatically. However, a manifest reload is required in cases where the GEODI URL or Tokenuser changes.
+
+It is possible to create two or more manifests for testing or other requirements. This can be done by creating multiple projects and a manifest file for each project.

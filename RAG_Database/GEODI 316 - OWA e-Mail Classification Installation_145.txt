@@ -1,0 +1,7 @@
+The course focuses on the installation of GEODI Classification tools for OWA, Microsoft 365, or Exchange Server. It exclusively covers GEODI specific topics. Participants are expected to possess sufficient knowledge of the relevant email servers.
+
+Prerequisite training for this course includes understanding GEODI Classifier installation and the customization of classes.
+
+The scope of the course includes Installation Details, GEODI Classifier OWA Installation, Troubleshooting, GEODI Classifier - Class and Policy settings, GEODI Classifier Label/Tag Definitions, GEODI Classifier Windows Client Installation, GEODI Classifier Batch Classification, and GEODI Classifier Log Analysis Panel and Classifier Project. Troubleshooting information is available at https://decesw.atlassian.net/wiki/spaces/geodien/pages/3987636225/GEODI+Classifier+OWA+Installation#Troubleshooting. Further information on GEODI Classifier Log Analysis Panel and Classifier Project is located at /wiki/spaces/geoditr/pages/4323049493.
+
+For support, individuals should not hesitate to ask the teams if they are unsure about a topic or unable to perform a task. It is noted that some features may not be included in a user's license.

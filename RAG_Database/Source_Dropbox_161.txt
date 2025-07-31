@@ -1,0 +1,3 @@
+Dropbox directories are indexed and discovered like Windows directories. File neglect rules apply.
+
+A valid DropBox account with minimum readonly privileges is a condition for connection.

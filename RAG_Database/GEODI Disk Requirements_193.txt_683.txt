@@ -1,0 +1,17 @@
+GEODI Server requires extra storage for purposes other than installation. GEODI does not copy data but uses and indexes it from its original location, meaning no additional storage is needed for the data itself.
+
+The GEODI index serves as the database for performing search, discovery, and other functions. The size of this index can vary significantly based on factors such as data volume, data types, and specific settings.
+
+To reduce GEODI index size due to disk restrictions, several measures can be implemented. These include compressing the index folder, which typically yields over 10% gain, and preventing the indexing of text and/or number-rich files like Excel, CSV, and log files. Disabling Content summaries can also reduce index size by up to 90%, although activating content similarity increases index size. Content summaries can be disabled via ProjectWizard -> Last Page -> Advanced Properties -> JSON -> DisableIndex_Summary:True.
+
+If Content summaries are disabled, a new dictionary or recognizers addition necessitates restarting indexing from the beginning, rather than utilizing the quick indexing option.
+
+The GEODI index is composed of three distinct parts, which can be distributed across different discs. The first part is crucial for speed and should ideally be placed on fast storage, such as an SSD. The remaining parts can be stored on other storage with more available space.
+
+For uninterrupted operations, sufficient space must be allocated for GEODI index backups.
+
+GEODI logs are located under %appdata%. These logs are automatically deleted after 90 days, but users can manually delete logs if they grow too large.
+
+The OCR process, which converts scanned content into text, does not require extra storage by default and does not impact search and discovery capabilities. However, creating Searchable PDFs (SPDFs) does necessitate additional storage for these files.
+
+The Backup Content feature allows for backing up all content from various sources, including social media, folders, or files from remote PCs gathered by GDE. Allocating space for this backup is required.

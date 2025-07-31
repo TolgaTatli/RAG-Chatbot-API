@@ -1,0 +1,25 @@
+GEODI bir web uygulamasıdır. Kullanıcılar GEODI’ye Chrome, FireFox veya Edge gibi bir browser ile erişir. GEODI Server kullanıcıların sunucularında çalışır ve veriler dışarıya çıkmaz. Bu sayfada kurulum öncesi ihtiyaç duyulacak temel bileşenler bulunmaktadır.
+
+GEODI için sunucu özellikleri arasında 16+ Çekirdek, 32Gb+ bellek ve 500GB+ Disk yer alır. Sunucu işletim sistemi olarak Windows 8 ve üzeri, yazılım olarak ise .NET Framework 4.0 gereklidir. Yüksek trafik ve OCR gibi yüksek CPU kullanımı durumlarında daha fazla bellek önerilir. Sunucu fiziksel, sanal ya da bulut ortamında (Azure, Amazon, Natro, Radore gibi) olabilir.
+
+FacePro (yüz tanıma) ve ImagePro (nesne tanıma) uygulamaları lisansa dahil ise CUDA destekli NVIDIA GPU donanımı gereklidir.
+
+GEODI kurulumu için yetkili kullanıcılar veya erişim bilgileri gereklidir. Bu, Windows servis kurulumu yapabilecek bir kullanıcıyı, Folder veri kaynakları ve Dosya sunuculara read-only erişimi olan bir kullanıcıyı içerir. Dosya sunucular GDE ajanı ile de indekslenebilir ve her sunucu için ayrı kullanıcı gerekebilir. Veri tabanları, e-postalar ve diğer kaynaklar için gerekli erişim bilgileri kurulum öncesi hazır olmalıdır. GEODI bu bilgileri kriptolu saklar.
+
+GEODI, indeksleme için ve tercihlere göre farklı amaçlarla disk alanına ihtiyaç duyar.
+
+GEODI için internet erişimi zorunlu değildir. servis.dece.com.tr ve service.decesoftware.com adresleri DECE-STORE ve otomatik modül güncellemeleri için kullanılır; bu adresler güncelleme istenmediği veya offline kurulum yapıldıysa gerekmez. documents.decesoftware.com ve alt linkleri GEODI ve Ajanları setup ve otomatik güncellemeler için gereklidir; offline kurulum seçeneği kullanılırsa bu da gerekmez.
+
+GEODI için bir destek sitesi bulunmaktadır. Yardım masası adresi https://decesupport.atlassian.net/ olup, Atlassian kimlik doğrulaması https://id.atlassian.com/ üzerinden yapılır. http://destek.dece.com.tr adresi ise Destek sitesi, Support Q (AI Asistan) online yardım ve helpdesk erişimi sağlar.
+
+Kullanıcıların GEODI’ye erişebilmeleri için SSL sertifikalı bir adres ve varsayılan 3323 (değişebilir) portunun açık olması gereklidir. Kullanıcılar veya Ajanların GEODI’ye erişebilmeleri gereklidir. Kullanıcı veya ajanların ağ üzerinde bulundukları adrese göre, GEODI adresinin internete açık olması gerekebilir. AppStore veya Google Play’dan indirilebilen GEODI Mobil uygulaması için GEODI adresinin internete açık olması gereklidir. GEODI’ye erişimde sıkıntı yaşanırsa SSS sayfasına başvurulması önerilir.
+
+GEODI, çok sayıda veri adaptörü ile veri kaynaklarına bağlanır. GEODI Veri Kaynakları sayfasında her bir adaptörün nasıl kullanılacağı hakkında detaylı bilgi bulunabilir. Kurulum öncesinde hangi kaynaklara bağlanılacağına karar verilmesi ve bu kaynaklar için gereken erişim bilgilerinin hazır olması önerilir. Veri keşfi yapılmak isteniyorsa keşif kapsamını belirlemek önemlidir. GEODI, KVKK, PCI/DSS, ülkelere özel veya kuruma özel hazır tanıyıcılara sahiptir.
+
+İhtiyaca bağlı olarak bazı ajanların kurulması gerekebilir. PC/FileServer keşif ajanı olan GEODI Desktop Explorer (GDE), Windows, Pardus, Linux ve Mac bilgisayarlarda çalışabilir. GDE, GEODI login kullanıcısı ya da Windows servisi olarak çalışabilir. Bu ajanların kurulumu, güncellenmesi veya kaldırılması için ManageEngine veya SCCM gibi bir araç kullanılması önerilir. Kullanıcıların PC’lerdeki dosyaları görüntülemesini isteniyorsa PC üzerinden port 1982 (değişebilir) açık olmalıdır. GDE ile indekslenen dosyaların yedeklenmesi mümkündür.
+
+Sınıflama ajanı olan GEODI Classifier ailesi Desktop ve Microsoft Office ajanlarına sahiptir. Office Classifier ajanı Microsoft Office Word, Excel, PowerPoint ve Outlook içinde çalışır. Desktop Classifier ajanı Windows Explorer içinde çalışır. Ajanlar tek bir pakette yer alırlar. Bu ajanların kurulumu, güncellenmesi veya kaldırılması için ManageEngine veya SCCM gibi bir araç kullanılması önerilir.
+
+Microsoft Office Classifier, MS Word, Excel, PowerPoint ve Outlook’un 2007 ve üstü versiyonları ile uyumludur.
+
+OWA Classifier, MS Exchange Server (2013 ve üstü versiyonları) ve Microsoft Office 365 ile uyumludur.

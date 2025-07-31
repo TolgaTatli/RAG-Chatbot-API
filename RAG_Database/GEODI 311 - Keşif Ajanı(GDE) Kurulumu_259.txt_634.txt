@@ -1,0 +1,11 @@
+This training covers the distribution of GEODI discovery tools or agents to end computers. The training focuses exclusively on GEODI-specific topics. It is assumed that participants are already familiar with systems like ManageEngine, PDQ, or other similar systems developed for agent distribution.
+
+The content of this training is technical.
+
+The duration of this training is 45 minutes.
+
+There are no prerequisite trainings specified for this course.
+
+The scope of this training includes GEODI Desktop Explorer (GDE).
+
+The trainings are intended to provide a general understanding. Participants are expected to reinforce their learning through practice. For topics that are unclear or difficult, participants should not hesitate to seek support from the teams. It is also noted that some features mentioned within the training may not be included in the participant's license.

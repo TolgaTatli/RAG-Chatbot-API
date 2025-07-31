@@ -1,0 +1,3 @@
+Keşif bulgusu içeren içerikleri aramak için bu sistem kullanılabilir. İstediğiniz bulgu türünü belirtmek amacıyla 'layer' veya 'katman' sorgusu kullanılabilir.
+
+Belirli bulgu türleri için kullanılabilecek sorgu örnekleri arasında 'katman:Tarih', 'katman:"Kişi Adları"', 'layer:Date' ve 'katman:”Tarih Hashtag”' bulunmaktadır.

@@ -1,0 +1,15 @@
+GEODI can connect to many different data sources. It can index these sources and perform discovery within a single project or across different projects.
+
+Data sources are introduced using the GEODI Project Wizard. Many settings, such as authorization and sampling, can be customized on a per-source basis. Sampled discovery is possible for all sources.
+
+File formats listed in the supported formats list are processed regardless of their source. For example, a PDF file located in a folder, attached to a web page, or embedded in a database record is processed in the same way.
+
+Actions such as destruction, quarantine, or classification are supported for some data sources. Which specific sources support these actions is stated on the relevant page.
+
+A Risk Score is requested for each data source. This scoring is used in reporting and helps in making decisions for actions like destruction or quarantine after discovery.
+
+The Risk Score is a value between 0 and 100. It should be high for sources that pose a risk if sensitive data is found. For instance, shared areas have a high risk score.
+
+GEODI supports various data sources including: Folder, File Server, PCs, Database (with DB Meta Definitions), E-mail, Web Page, Confluence, Amazon S3, Dropbox, Google Drive, OneDrive, SharePoint, FTP&WebDAV, MOBIDI Data, BELGENET, SSH, and Microsoft Teams.
+
+The data sources mentioned are included with GEODI Standard. For information on other sources, users should refer to the relevant module page.

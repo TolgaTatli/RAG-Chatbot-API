@@ -1,0 +1,5 @@
+The text identifies an Aviation Terms Dictionary, which is also known by its Turkish name, Havacılık Terimleri Sözlüğü.
+
+This dictionary allows for the aviation terms dictionary to be added to GEODI.
+
+The version number associated with this is 1.0.21.0.

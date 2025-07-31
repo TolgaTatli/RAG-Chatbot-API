@@ -1,0 +1,5 @@
+These pages are designed to explain how to perform selected topics.
+
+Prior to using these pages, users are expected to have completed GEODI 101 and GEODI 102, along with other training materials.
+
+Specific topics covered include Relationship Discovery, how to use the Network Graph, and how to use the map.

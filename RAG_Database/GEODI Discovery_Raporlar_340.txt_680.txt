@@ -1,0 +1,19 @@
+GEODI Discovery, keşif sonuçlarını sunmak için pek çok yöntem sunar ve raporlar bu yöntemlerden biridir.
+
+Belirtilen raporlara sistem yöneticileri ve grubunun üyeleri erişebilir. Raporların geçerli olması istenen projeler için özel bir ayar yapılmalıdır.
+
+Keşif Özet raporu, yapısal ve yapısal olmayan veri keşif sonuçlarını özetler. Bu rapor, hassas veri içeren veriler, bulgular, tablo/kolon adları gibi bilgileri özet olarak sunar. Keşif Özeti, pek çok alt rapor içerir ve PDF formatındadır.
+
+İçerik Listesi raporunda her satır bir içerik/dosya ve risk değerini ifade eder. Riskler, kaynağa ve bulgulara verilen risk puanları kullanılarak hesaplanır.
+
+İçerik Listesi, her türlü içeriği, dosyaları, veritabanı satırlarını, e-postaları ve GDE ile beslenen dosyaları kapsar. Sorgular kullanarak içerik türlerini sınırlamak mümkündür.
+
+Her kaynak için 0 ile 100 arasında bir risk puanı belirlemek gereklidir. Risk puanı atanmamış kaynaklar, risk içermediği varsayılır.
+
+Bir içerik veya dosyanın risk puanı, kaynağın risk puanı ve bulgular kullanılarak hesaplanır. Her bulgunun bir risk puanı vardır; örneğin, Kişisel Veriler (PII) ve Kredi Kartı Verileri (PCI) yüksek risk taşırken, bir şehir adı düşük risk puanına sahiptir.
+
+İçerik Bulgu raporu, her bir doküman için keşfedilen bulgu sayısını ve türünü raporlar. Bu rapor, bir içeriğin uyumlu ya da uyumsuzluğu hakkında net bilgi verir.
+
+İçerik Detay raporu, en ayrıntılı rapordur ve her satır bir keşif sonucu olacak şekilde CSV formatında üretilir. Her satırda kaynak, içerik tanıyıcı, versiyon ve keşif sonuçları (İsim, İban veya Para gibi) bulunur. Bu rapor, içerikler hakkında alınabilecek en ayrıntılı bilgiyi sunar; örneğin, bir dosya veya içerikte 100 kredi kartı ve 100 kimlik bilgisi varsa, 200 satır oluşur.
+
+İçerik Detay raporunu kullanmadan önce hedef içeriği sorgu ile daraltmanız önerilir.

@@ -1,0 +1,1 @@
+These pages will explain how to perform selected topics. Prior to this, it is expected that GEODI 101, GEODI 102, and other training content have been completed as a minimum. The specific topics covered include the Discovery of Relationships, how to use the Network Graph, and how to use the Map.

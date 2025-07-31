@@ -1,0 +1,25 @@
+Onay Tabanlı İyileştirme, silme, karantinaya alma veya maskelenme gibi işlemlerin yalnızca yetkili kişilerin açık onayı sonrası gerçekleştirilmesini sağlayan, yönetişim odaklı bir yaklaşımdır. Bu kişiler genellikle veri sahipleri veya bilgi sorumlularıdır.
+
+Bu model, verinin sorumluluğunu veri sahibine vererek karar mekanizmasını merkeziyetçilikten çıkarır ve sorumluluk sağlar.
+
+Şeffaflık, kimin, ne zaman ve neye onay verdi bilgisiyle birlikte tüm işlemlerin denetlenebilir şekilde kaydedilmesiyle sağlanır.
+
+Yönetişim ve Uyumluluk açısından, GDPR, KVKK, ISO 27001 gibi regülasyonlara uyum sağlar ve otomasyon öncesinde insan onayı gerektirir.
+
+Kontrollü Otomasyon, onay (etiketleme, not bırakma, kullanıcı arayüzü üzerinden işaretleme gibi) verildikten sonra sistemin (örneğin GEODI) işlemi zamanlanmış iş akışıyla otomatik gerçekleştirmesini ifade eder.
+
+Onay Tabanlı İyileştirme, regülasyonlara tabi sektörler, örneğin finans, sağlık ve kamu alanları için uygundur.
+
+Veri sahipliği ve sorumluluk paylaşımı yaklaşımını benimseyen kurumlar için de uygun bir modeldir.
+
+Silme veya müdahale işlemlerinde geri dönüşsüz adımlar atmadan önce güvenlik isteyen yapılar için de uygundur.
+
+Sistem, veri sahibinin bir belgeye “Silinsin” gibi önceden tanımlı bir not bırakarak işlem yapılmasını istemesiyle çalışır.
+
+GEODI Veri Keşif şablonlarında "Delete", "Copy and then Delete", ve "Copy and then Mask" gibi hazır metinler tanımlıdır.
+
+Zamanlanmış iş akışları, bu notları periyodik olarak tarar ve ilgili işlemleri (silme/karantinaya alma) otomatik olarak yapar.
+
+Yöneticiye, hangi belgeye ne işlem yapıldığı ve kim tarafından onaylandığı bilgisiyle birlikte bir rapor gönderilir.
+
+Denetim kaydı, içerik silinse bile veri sahibinin kararıyla birlikte saklanır.

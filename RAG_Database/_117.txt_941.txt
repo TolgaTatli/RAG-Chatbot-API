@@ -1,0 +1,3 @@
+A general method for distinguishing anonymized documents from their originals is not known.
+
+The concept of a Masked/Anonymized document does not exist in known operating systems or file systems, including NTFS, FAT, and Linux. This issue is not limited to GEODI.

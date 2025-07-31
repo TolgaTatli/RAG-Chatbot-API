@@ -1,0 +1,5 @@
+This course is for anyone who uses the GEODI Data Classification Suite, including its Desktop, Microsoft Office Addons, and OWA components. The audience for this course is general.
+
+There are no prerequisite trainings for this course. Supporting materials include the GEODI Classifier Office and Other Plugins User Guide and a User Training Video.
+
+Users should not hesitate to ask for support from the teams if they are unsure about a topic or unable to do something. It is noted that some features may not be included in a user's license.

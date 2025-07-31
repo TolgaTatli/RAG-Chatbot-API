@@ -1,0 +1,3 @@
+GEODI Server communicates with agents using HTTP and HTTPS protocols. This communication is conducted via Web Services and utilizes token information.
+
+Agents have taken necessary precautions to prevent third parties from accessing information.

@@ -1,0 +1,9 @@
+GEODI's similarity search functionality allows users to find similar content between text and images. It can list similar items based on a provided image or text. Examples of similarity searches include `benzer:(doc:a.pdf)` or `similar:(doc:a.pdf)` to find documents similar to a specific file, and `benzer:”Ankara Kalesi"` to find documents similar to the first document containing "Ankara Kalesi".
+
+For similarity searches, GEODI supports additional expressions to refine results. The `maxcount:` expression can limit the number of similar items returned. The `minsimilarity:0.7` expression allows modification of the similarity ratio, which has a default value of 0.7. Additionally, `excludeDuplicates:true` can be used to remove duplicates from the search results; its default setting is `false`.
+
+GEODI assists in managing duplicate documents, which commonly constitute 40% of an organization's documents. These duplicates can lead to confusion and complicate search processes. GEODI's capability helps to identify and facilitate the elimination of such duplicates.
+
+Users can search for duplicates in GEODI using specific commands. Typing `kopya` or `duplicate` will find all documents that have copies. To locate documents without copies, the command `-kopya` is used. More specific searches include `kopya:(doc:a.pdf)` to find copies of a particular document, or `kopya:"10 ada 20 Parsel Yapı Ruhsatı"` to find copies of the first document containing that phrase.
+
+Both duplicate and similar documents are displayed within the GEODI search interface. These documents are also shown within GEODI's viewers.

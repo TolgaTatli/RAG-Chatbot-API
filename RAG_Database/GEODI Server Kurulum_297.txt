@@ -1,0 +1,53 @@
+Bu sayfa, GEODI kurulumu, gereksinimleri, ayarları ve keşif, sınıflama veya diğer konular için devreye alma aşamalarını içermektedir.
+
+GEODI, bir kullanıcı oturum açmışken EXE olarak veya bir Windows servisi olarak çalışabilir. Kesintisiz bir çalışma sağlamak için GEODI'nin servis olarak kurulması önerilir.
+
+Kurulum sırasında belirtilen GEODIDATAFOLDER, projeler, indeksler, loglar ve bazı ayarlar için kullanılacak dizin olacaktır. Servis kullanıcısının bu dizine erişimi olduğundan emin olunmalıdır. Varsayılan dizin C:\GEODIDATAFOLDER'dır. Bu dizin SystemSettings.json içinde değiştirilebilir, ancak eski dizinin yeni konuma taşınması gereklidir.
+
+Kurulum, lisans kodunu soracaktır ve lisansa dahil olan modüller DECE-STORE üzerinden otomatik olarak kurulacaktır. Eğer DECE-STORE (http://service.decesoftware.com) erişimi sağlanamıyorsa, DECE Ekibinin ilettiği dosyalar ilgili dizine kopyalanmalıdır; yeni sürümler çıktıkça ekipler dosyaları iletecektir.
+
+GEODI kurulduktan sonra, GEODI yönetim arayüzü tarayıcıda http://127.0.0.1:3323/manager adresi ile açılacaktır. Bu adres sadece lokalde geçerlidir. Sınıflama veya Ajanlı keşif uygulamaları için GEODI sunucusuna uçbilgisayarlardan/endpoint makinelerden erişilebilir bir adres tanımlanmalıdır; bu amaçla DNS ve SSL tanımları gerekebilir.
+
+Bir sonraki adım, DECE-STORE'dan ihtiyaç duyulan keşif kapsamı veya diğer şablonları yüklemektir. Ülke, Regülasyon veya İhtiyaç bilgileri ile arama yapılabilir. Bir kez yüklendikten sonra GEODI bu eklentileri otomatik olarak güncellemeye devam edecektir. Çevrimdışı kurulum durumunda güncellemeler ancak manuel olarak yapılabilir; DECE-STORE'a açılacak sınırlı bir erişim otomatik güncelleme için yeterli olacaktır.
+
+Sınıflama ve Ajanlı PC Keşif projeleri için GEODI adresinin güvenli ve istemcilerden erişilebilir olması gerekmektedir. SSL Sertifikası için GEODI'de belirli ayarlar yapılmalıdır. Detaylar için https://decesw.atlassian.net/wiki/x/VbcyBQ sayfasına başvurulabilir. Ajan dağıtımları öncesinde bu tanımlar yapılmalıdır.
+
+SSL tanımları için ilgili dosyada "AppPort":443, "NoSSLPort":80, "ForceHttpsRedirect":true ve "SSLLocalCertificateSerial":" " ayarları yapılmalıdır. Sertifika numarasını alabilmek için Windows Run üzerinden "Kullanıcı Sertifikalarını Yönetin" uygulaması çalıştırılmalıdır. Sertifika Seri Numarası, Kişisel ağacı altındaki ilgili sertifikanın özellikleri/ayrıntılar sekmesinden alınabilir. Eğer bir *.pfx dosyası varsa, önce dosyaya çift tıklayarak yüklenmelidir. Sertifikaların bir yük dengeleyici ile yönetildiği durumlarda GEODI tarafında herhangi ek bir tanım yapılması gerekmez.
+
+GEODI kurulduktan sonra sürekli çalışma için, GEODI dizininde bulunan GEODI.WindowsServiceInstall.bat dosyası yönetici yetkileri ile çalıştırılarak Windows servis haline getirilir. Windows, yönetici kullanıcı adı ve şifresini isteyecektir. Bu kullanıcının GEODI'nin indeksleyeceği dizinler ve diğer Windows kaynaklarına erişim yetkisinin olması beklenir. Erişim yoksa, bu kaynaklara erişim yetkisi olan kullanıcılar GEODI içinde de verilebilir. Servisi kaldırmak için GEODI.WindowsServiceUnInstall.bat kullanılabilir.
+
+Servisi başlatırken GEODI.exe açık olmamalıdır. Servis çalışırken GEODI.EXE çalıştırılabilir; EXE otomatik olarak servis ile bağlantı kuracaktır. Bu işlem, Windows Form arayüzü gerektiren ender durumlarda kullanılabilir.
+
+GEODI kaynaklarında MAP edilmiş bir dizin kullanılıyorsa veya açılışta yapılması gereken diğer işler için, gerekli *.bat dosyası GEODI → Settings/BatchFiles/Startup dizinine konulmalıdır.
+
+Yazılımlar sürekli güncellenmektedir. GEODI güncellemesi için kurulum ile gelen "update.bat" komutunun yönetici olarak çalıştırılması yeterlidir. Komut çalıştırılıp bırakılabilir; çalışan bir sistemde gerekli tüm işlemler yapılacaktır. "update.bat" komutu, uygun yetkisi olan bir kullanıcı ile birlikte zamanlanmış göreve de çevrilebilir.
+
+PC keşif (GDE) ve Sınıflama Ajanlarının güncellenmesi tamamen otomatiktir. GEODI modülleri, GEODI ana versiyonuna göre daha sık güncellenirler. Sadece modülleri güncellemek için UpdateModules.bat çalıştırılabilir.
+
+GEODI, alarmlar ve zamanlanmış rapor gibi özellikler için tanımlanmış ya da talep eden kullanıcılara e-posta iletir. Bu e-postalar sistemin izlenmesi için fayda sağlar. Varsayılan ayarlarda e-postalar DECE sunucularını kullanır. Çevrimdışı ortamlar için ya da e-posta ayarlarını değiştirmek için "GEODI Otomatik Bilgilendirme ve E-Posta Ayarları" sayfasında yer alan tanımlar yapılmalıdır.
+
+Kurulum dizininde yer alan LicenseUpdate.bat ile Lisans diyaloğu açılır. Makine taşınacaksa, lisans önce pasife alınıp diğer makinada aktive edilebilir. Lisans süresi dolunca yeni gelen lisans anahtarı da aynı şekilde girilebilir. Bu işlem servis çalışırken yapılabilir, durdurmaya gerek yoktur.
+
+GEODI Loglarına ilişkin bilgiler "GEODI Logları" sayfasında yer almaktadır. SIEM entegrasyonu için sadece burada söz edilen dizinlerin tanıtılması gerekmektedir.
+
+GEODI ve Modülleri sürekli olarak geliştirilmektedir. Bu geliştirmeler sonucunda çözülen hataların yanı sıra, daha fazla performans, daha başarılı keşif, daha yüksek hız, daha az sistem kaynağı kullanımı ve hem kullanıcı hem de sistem yöneticileri için pek çok yeni özellik eklenir. Ortalama ayda bir güncelleme çıkar ve takip edilmesi önerilir. Güncelleme bilgileri GEODI Download sayfasından takip edilebilir.
+
+Windows Sistem güncellemeleri için önlem almaya gerek yoktur. GEODI Servisi otomatik olarak duracak ve sistemle birlikte yeniden başlayacaktır. Manuel müdahale gerekmez. Varsayılan ayarlarda değişenleri keşfet ve periyodik indeks yedeklemesi aktiftir. Bu ayarlar değiştirilmediği sürece beklenmedik kapanmalarda (Servisin bilerek öldürülmesi, Elektrik kesintisi vb.) veri kaybı yaşanmaz.
+
+Lisansı güncellemek için bu sayfada anlatılan yöntem uygulanmalı ve akabinde servis yeniden başlatılmalıdır.
+
+Keşif için birden çok GEODI kullanılabilir; her GEODI aynı veya farklı veri kaynaklarını keşfedebilir. Yönetim ve raporlama, Ana GEODI üzerinden merkezi olarak yapılır. Yüksek erişilebilirlik için yedekli kurulum yapılabilir; GEODI aktif-aktif yapıyı da destekler.
+
+GEODI açılmıyorsa, lisans kontrol edilmeli ve deneme/trial kullanılıyorsa sürenin bitmediğinden emin olunmalıdır. SystemSettings.json geçerli bir JSON olmayabilir, UTF-8 ve geçerli olduğu doğrulanmalıdır. SystemSettings.json içinde geçersiz değerler (AppDataFolder veya Port değerleri) olabilir. Diskin dolu olup olmadığı kontrol edilmelidir. GEODIDATAFOLDER/logs dizinindeki engine ve app error logları incelenmelidir.
+
+GEODI Servisi başlatılamıyorsa, servis kullanıcısının geçerli olup olmadığı ve yetkilerinin yeterli olup olmadığı kontrol edilmelidir; şifresi değişmiş olabilir. Servis kullanıcısı GEODIDATAFOLDER'da minimum Oku/Yaz/Silme yetkisine sahip olmalıdır.
+
+GEODI Projesi açılırken indeks dosyalara erişim hatası alınıyorsa, Exe veya Servis modunda kullanıcının GEODIDATAFOLDER erişimi olduğundan emin olunmalıdır. Dosyaların başka bir işlem tarafından kullanılmadığından emin olunmalıdır. Farklı projelerin aynı hedef dizine yedekleme yapması bu durumu oluşturabilir; varsayılan ayarlara geri dönülmeli ya da projeler kontrol edilmelidir.
+
+Modüller güncellenemiyorsa, belirli erişimlerin olması gerekmektedir. Eğer DECE-STORE erişimi yoksa çevrimdışı güncelleme prosedürü izlenebilir.
+
+Lisans kodu geçersiz ise, lisans süresi bitmiş olabilir. Eğer ilk aktivasyon aşamasında hata alınıyorsa, DECE sunucularına erişim sorunu vardır ya da çevrimdışı lisans aktivasyon işlemi uygulanmalıdır.
+
+Geodiadmin şifresi unutulduysa, ilgili dizin silinerek sistem en başa döndürülebilir. Önlem olarak, "yetkileri düzenle" yetkisine sahip bir yedek kullanıcı oluşturulması önerilir.
+
+İndeksler için yer kalmadıysa, https://decesw.atlassian.net/wiki/spaces/geoditr/pages/edit-v2/3952811449#GEODI-AppDataFolder adresinde belirtilen ayar ile konum değiştirilebilir.

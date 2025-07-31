@@ -1,0 +1,3 @@
+Şifreleme ve maskeleme işlemleri yapılabilmektedir.
+
+Maskeleme, Veri Tabanı, Ofis Dokümanları ve PDF’ler üzerinde çalışır.

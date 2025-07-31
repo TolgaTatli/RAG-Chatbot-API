@@ -1,0 +1,23 @@
+GEODI screens can be retrieved from a different application by specifying query text and then used within an iframe. This functionality allows for the direct display of various views, such as Document, Map, Words, or Network graph, within external software. By default, GEODI is disabled in an iframe when accessed from an external domain; however, allowed addresses can be configured in the "System Configuration - Security Settings." Additionally, the GEODI server must possess an SSL certificate for this integration.
+
+The Enterprise Search GUI request uses the GET HttpMethod and follows the format: `[GEODIURL]?wsName=[wsName]&GUIOptions=[GUIOptions]&Tab=[Tab]&loginWithGuest=1&q=[SearchString]`. Expected errors for this request include `401 Unauthorized access / Access denied`, `403 Forbidden`, and `511 Network Authentication Required`.
+
+The `wsName` parameter in the GEODI Enterprise Search GUI request is used to specify the name of the workspace where the search should be performed.
+
+The `GUIOptions` parameter is optional and is utilized to specify which fields should be shown or hidden within the interface. This parameter uses flag bit values to control various display aspects.
+
+Specific `GUIOptions` values include `SimpleResutView` (1), which displays results without the query and facet; `HideDLV` (2), which hides the document list result; `HideKLV` (4), which hides the word list result; `HideMap` (8), which hides the map; `HideKML` (16), which hides the KML export link; and `HideExport` (32), which hides the Excel Export link.
+
+Further `GUIOptions` values are `HideAdvanceQuery` (64), which hides the advanced query; `HideNoteIcon` (128), which hides annotations if prohibited in project definitions regardless of the submitted value; `HideFilter` (256), which hides the filtering link; `HideChangeProject` (512), which hides project switching options, allowing users to switch only to authorized projects if not specified; `HidePermissionMenu` (1024), which hides authority management links unless required privileges exist; and `HideProjectWizard` (2048), which hides project edit links unless required privileges exist.
+
+Additional `GUIOptions` include `HideChangeLanguage` (4096) to hide language change links, `HideLogout` (8192) to hide the log out link, `HideFacet` (16384) to hide the facet screen, `ShowDGARPH` (32768) to activate the network graph, `HideQueryBar` (65536) to hide the query bar, `HideLogoBar` (131072) to hide the logo bar, `DisableSimpleSearchStart` (262144) to disable simple search at the start if no query is present, `HideWatchQueries` (524288) to hide watch queries, `HideActions` (1048576) to hide action icons, and `HideRightDocInfoPanel` (2097152) to prevent the document information interface from opening on the right when clicking a document if the screen width is sufficient.
+
+The `Tab` parameter is optional and is used to specify the initial screen displayed. Its possible values are `DLV` to open the document list result, `KLV` to open the Word list result, `MAP` to open the map, and `DGRAPH` to open the network graph.
+
+The `loginWithGuest` parameter is optional and, if GEODI is configured with guest user support, it enables automatic guest login by bypassing the login screen.
+
+The `q` parameter is an optional field for specifying the query text. For detailed syntax rules regarding query text, users should refer to "GEODI Queries."
+
+To ensure consistent results across all browsers, both the `wsName` and `Query` parameters must be passed with URL encoding. For HTML content, a JavaScript function `UrlEncode(val)` can be used, which leverages `window.encodeURIComponent` or falls back to replacing `&` with `%26`. For .Net environments, `System.Web.HttpUtility.UrlEncode` is available for this purpose.
+
+Usage examples demonstrate how to construct GEODI URLs for specific display outcomes. For instance, a "Search" example is `http://127.0.0.1:3323/?wsName=Rotas%C4%B1z%20Seyyah&loginWithGuest=1&q=geodi`. An "Only Result" display, showing just the query result, uses `GUIOptions = 131073`, which combines `SimpleResutView` and `HideLogoBar`, and can be set to display `DLV`, `KLV`, or `MAP` via the `Tab` parameter. For a "Network graph" display, `GUIOptions = 163841` is used, combining `SimpleResultView`, `HideLogoBar`, and `ShowDGARPH`, which activates the network graph and enables its viewing in project settings even if not initially opened.

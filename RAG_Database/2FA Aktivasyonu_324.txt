@@ -1,0 +1,9 @@
+GEODI kullanıcıları, 2FA kullanarak sisteme birden çok doğrulama aşaması ile giriş yaparlar. 2FA aktivasyonu opsiyoneldir. Bu sayfa, DUO, Google, Linkedin, Facebook ve Microsoft dahil olmak üzere farklı 2FA sağlayıcıları için aktivasyon prosedürlerini içermektedir. 2FA yalnızca LDAP kullanıcıları için geçerlidir.
+
+Google veya diğer OAuth/OpenID destekleyen sistemler için Settings/LoginProvider altındaki ayarlar geçerlidir. Örneğin, Google tarafında 2FA seçeneği aktif ise, GEODI için de 2FA geçerli olur ve herhangi ek bir ayar yapılmasına gerek yoktur.
+
+Microsoft Office 365 kullanıcıları ile giriş desteklenmektedir. Microsoft tarafında aktive edilen 2FA yetenekleri GEODI için de geçerlidir. Bu aktivasyon için DECE-STORE üzerinde 2FA modülü kurulmalıdır. Modülün kurulmasıyla GEODI Giriş Sayfasına Microsoft logosu gelir ve kullanıcılar bu logo ile giriş yapmalıdır.
+
+DUO ile 2FA'yı aktive etmek için kullanıcıların bir DUO aboneliği olmalıdır. DECE-STORE üzerinden 2FA Modülünün kurulumu sağlanmalıdır (Ayarlar/Modül Yönetimi). Ardından, /Settings/2FA dizini altında bir tanım yapılmalıdır; bu tanım için Default.json.sample dosyasından faydalanılabilir. Tanım dosyası JSON kurallarına uygun olmalı ve https://jsonformatter.curiousconcept.com/ ile doğrulanabilir.
+
+Gereken değerler Duo Admin sayfası Uygulamalar bölümünden temin edilebilir (https://admin.duosecurity.com/login?next=%2F). Giriş yapıldıktan sonra, Applications sekmesinden WebSDK veya DUO API uygulama ayarları ilgili değerlere verilmelidir. Bu değerler arasında "ClientKey" (Integration key değeri), "SecretKey" (Secret key değeri), "Host" (API hostname değeri), "Type" ("DUO" olarak belirtilen, farklı sağlayıcılar için değişebilir) ve "Device" ("All" olarak belirtilen, Duo arayüzünden cihaz seçimi sağlar) bulunur. Ayarlar sonrası LDAP kullanıcıları için GEODI Giriş sayfasında DUO doğrulama sayfası açılır. Yeni kullanıcı eklendiği zaman Duo tarafında senkronize edilmelidir.

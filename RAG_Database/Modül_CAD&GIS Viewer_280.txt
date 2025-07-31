@@ -1,0 +1,17 @@
+The CAD&GIS Viewer module provides viewing and search support for various files, along with numerous additional features.
+
+The viewer allows users to take notes, such as marking erroneous areas in an architectural project or plan. It also enables the creation of a common sharing area for projects, facilitating collaboration among multiple stakeholders on the same project.
+
+GEODI's automatic versioning feature allows tracking project changes, including who made changes and how many times. If backup is enabled, GEODI can display old versions of CAD documents (such as NCZ, DWG, DGN) and perform old-new version comparisons. It is also possible to compare versions of different files, including the difference between two satellite images or a satellite image and a plan.
+
+With the CAD&GIS Viewer, files do not need to be downloaded to the local environment. All information resides on the server and can be viewed, including on mobile devices, at any time according to permissions.
+
+Text information within supported file formats becomes searchable, such as Shape attributes or Netcad texts. For formats or applications that do not have direct projection, GEODI's metadata capabilities can be used to define them.
+
+No additional license or local software is required for viewing. A browser is sufficient on any platform, including mobile.
+
+The CAD&GIS Viewer supports various file types, including AutoCAD (DWG, DXF), Netcad (NCZ, CKS, KTB), Microstation (DGN), SHP, KML, ECW, SID, IMG, and GeoTIFF.
+
+Training content for GEODI Users covers topics such as supported file types and examples, viewer functionalities, note-taking and navigation, versioning (including querying and comparing old and new versions), and working with geographic files, specifically handling intersections and retrieving related files.
+
+Training content for GEODI Administrators includes installation procedures and details on CAD and GIS files, specifying their associated software (e.g., DWG for AutoCAD, NCZ for Netcad, DGN for Microstation, KML for Google Earth and all GIS software, GeoTIFF, ECW, MrSID, and Shape for all GIS software). It also covers viewer features like no extra software requirement and handling intersections/neighbors, comparison features, note-taking, managing large files/strip maps, and understanding projection (its definition and importance, including for Shape files and the GeoArchive feature). Additionally, it addresses publishing content as WMS, outlining the types of content GEODI publishes and key considerations like tokens and correct projection selection, concluding with a Q&A section.

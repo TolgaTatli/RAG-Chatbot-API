@@ -1,0 +1,15 @@
+Dece Software provides a software solution that includes unique features for managing media archives. These media archives can consist of video records, photographs, or voice notes.
+
+The software solution addresses the problem of media archive contents being spread across many different platforms and sources, which makes it almost impossible to watch or look at every single item. This solution for media archive management is based on AI.
+
+A webinar titled "Media Archive with Face Recognition" was held on February 27, 2020, and has a duration of 8 minutes. This webinar explains how the problem of media archive management is solved with a single AI-based solution.
+
+An upcoming webinar, "World’s First AI-LLM Powered Data Discovery and Classification with GEODI Q," is scheduled for January 23, 2025.
+
+Recent webinars include "PCI/DSS Compliance with GEODI" (August 27, 2024, 23 min), "Life in a legal department with GEODI" (August 6, 2024, 18 min), "Semantic Discovery, Classification and Search" (July 23, 2024, 30 min), "Database Discovery" (July 9, 2024, 30 min), "How quick GEODI in 0 to Classification" (June 25, 2024, 23 min), "Adapt GEODI to your needs:DECE-Store" (June 11, 2024, 15 min), and "Data Anonymization and Masking" (June 4, 2024, 30 min).
+
+A success story involving the "Croatia, Ministry of Agriculture" was presented on January 23, 2020, and is 7 minutes long.
+
+Dece Software's solutions include Search, Discover, Mask, Encrypt, and Classify, with the company stating, "We Protect Your Data."
+
+Dece Software can be contacted via email at info@decesoftware.com.

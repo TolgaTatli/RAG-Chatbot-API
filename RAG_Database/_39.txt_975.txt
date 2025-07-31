@@ -1,0 +1,3 @@
+GEODI cannot perform destruction or quarantine actions on emails that have been discovered from an Exchange Server.
+
+Scans performed with GDE cannot be done with a Scheduler, as it is not a necessary process. GEODI continues to process data received from GDEs by queuing it.

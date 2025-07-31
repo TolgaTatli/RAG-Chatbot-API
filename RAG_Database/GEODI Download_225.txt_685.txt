@@ -1,0 +1,65 @@
+GEODI SETUP 8.0.141, released on December 19, 2024, introduces the ability for GEODI to discover SSH sources. For some of these SSH sources, an agent can still be utilized. Further details regarding SSH source discovery are available on the Source:SSH page.
+
+With GEODI SETUP 8.0.141, the backup option is now set as the default. All templates are configured to have backup active. The designated default backup folder is `/backup` within the index folder. Projects are scheduled to be backed up daily at 03:00, a feature referred to as Scheduled Backup.
+
+GEODI SETUP 8.0.141 includes various improvements for classification. The settings for "Classify after discovery" are now more manageable, with additional details provided on the Classification page. Furthermore, the recognition of labels and visual markings from alternative classification tools has been enhanced.
+
+GEODI Q has received numerous improvements in version 8.0.141. The GEODI Q recognizer and chat features have been significantly enhanced, leading to improvements in advanced discovery and automated classification capabilities.
+
+Installation of the GDE Agent has been made easier with GEODI SETUP 8.0.141. The Project wizard now generates the necessary Batch file for setting up the GDE agent, which can be copied and used with tools such as ManageEngine or SCCM. Manual installation of the GDE Agent remains an alternative option.
+
+GEODI SETUP 8.0.140, released on November 25, 2024, significantly improves the readability of error and warning messages. GEODI logs and interface messages for situations like unreadable files, inaccessible web pages, invalid tokens, or user information, which were previously difficult to understand, are now much clearer and categorized as Error, Warning, or Information.
+
+GEODI SETUP 8.0.140 introduces an option to exclude Views during database discovery. This feature helps reduce duplicate data discovery and improves performance, as Views often contain data already present in other tables. This functionality is detailed under Source:DataBase.
+
+With GEODI SETUP 8.0.140, users can now configure a manual proxy for email connections. This feature is referenced under Kaynak:E-Mail.
+
+GEODI SETUP 8.0.140 provides a solution for non-overlapping sharing and file permissions. During LDAP permission checks on shared resources, an option has been added to ignore sharing permissions and built-in permissions. When settings are changed, re-scanning is not required, as the new settings are applied to existing content via the "Adjust Permissions" feature. This is part of User/Authorization Management.
+
+In GEODI SETUP 8.0.140, the default speed has been increased from its previous value of 3 to 5. This adjustment means that new projects will now initiate faster.
+
+GEODI SETUP 8.0.140 includes improvements and speed enhancements for Summary Reports. These reports, which provide an overview of various details about projects and discoveries, have received visual and performance enhancements to offer a better user experience. This is noted under Discovery:Reports.
+
+GEODI SETUP 8.0.139, released on November 5, 2024, features improvements to the Classification Server and Agents. Additionally, labeling and annotation features have been enhanced.
+
+With GEODI SETUP 8.0.139, agents are now available on DECE-STORE, making their management much easier. Agent updates, while previously automatic, are now also much easier to manage in closed networks.
+
+GEODI SETUP 8.0.139 simplifies offline updates, making it much easier to manage updates within closed networks.
+
+GEODI SETUP 8.0.139 introduces indexing of unknown file extensions. Files that are not included in the ignore list will now be indexed by their name and dates.
+
+GEODI SETUP 8.0.138, released on October 17, 2024, includes updated default values based on user feedback. Performance speed is now at its highest level. Unrecognized file extensions, previously ignored, will now be indexed by file name. MDB and file-based databases will be indexed by name by default, with a required module available from DECE-STORE for exploring tables and rows.
+
+Maintenance tools, such as those for updating permissions, have been accelerated in GEODI SETUP 8.0.138.
+
+GEODI SETUP 8.0.137, released on September 16, 2024, introduces the ability to query for file names and file contents. Users can now search by specifying either just the content or just the file name, a capability usable in searches or classifications. This feature is related to GEODI Query Rules.
+
+GEODI SETUP 8.0.137 allows for the compression of old indexes. Due to new index improvements, the GEODI index structure has become more compact, and this version enables compressing old discovery and search indexes to transition them to the new structure.
+
+In GEODI SETUP 8.0.137, it is possible to modify default auto-classification rules using new dictionaries. There are two dictionaries for the Confidential and Restricted classes, and any additions, deletions, or modifications to these dictionaries will impact the classification rules. These dictionaries can be accessed under the Classification tab on the GEODI dictionaries page, where entries can be managed as needed. This functionality is part of GEODI Classifier - Class and Policy settings.
+
+GEODI SETUP 8.0.137 enhances the name recognizer, a critical feature of GEODI NLP, to cover more languages. Numerous improvements have been made to recognize names, with the most significant being the recognition of names in additional languages, which is crucial for discovery and classification from unstructured data.
+
+GEODI SETUP 8.0.137 ensures consistent behavior for digits across all languages. Regardless of the alphabet or language a number is written in, GEODI now processes it the same way, applying to ID numbers, dates, or any other text containing a digit.
+
+GEODI SETUP 8.0.137 adds a ready `SourceCode` query. The `predefined:SourceCode` query lists all source code files and supports extensions for well-known languages. To use this query, the module must be installed from DECE-STORE.
+
+GEODI SETUP 8.0.137 includes a ready `CV` query. The `predefined:CV` query searches various CV documents based on their content. It currently supports English, German, French, Arabic, Spanish, Portuguese, Hindu, Urdu, and Turkish languages.
+
+GEODI Setup 8.0.135, released on August 9, 2024, introduces new Country and Regulation Templates. The discovery scope has been significantly enhanced, and the performance for each country has improved. Templates are now available for each country and regulation, allowing users to select a template to begin discovery. This feature is part of GEODI Discovery. Additionally, DECE-STORE can now be searched using regulation names such as GDPR, SAMA, or PDPL.
+
+GEODI Setup 8.0.135 allows for limiting System Administrators' permissions. System Administrators no longer need to be superusers; their access to projects can be restricted, preventing them from viewing content and discovery results, and enabling them to solely manage the system. More information is available via a provided URL.
+
+GEODI Setup 8.0.135 features improved LDAP Support and new queries. Enhancements have been made to LDAP file permissions, and it is now possible to query documents based on whether a particular user and group can view them. These queries can also be utilized for classification, for instance, to classify a document as confidential if a specific group has access to it. This functionality is further detailed under GEODI Query Rules.
+
+GEODI Setup 8.0.135 includes a new component for system admins to view all permissions of a content item. On the search interface, system admins can click a document to see who has access to it.
+
+GEODI Setup 8.0.134, released on July 25, 2024, significantly reduces index disk requirements. The GEODI index has been improved for disk size, and minor performance enhancements have also been implemented.
+
+The License Dialog has been improved in GEODI Setup 8.0.134 for subscription licenses. The remaining time is now more visible, and the processes for license deactivation and activation have been simplified.
+
+GEODI Setup 8.0.134 offers faster Sampled DB discovery. The workload on databases for sampling mode has been optimized, resulting in sampled DB discovery being up to 70% faster.
+
+GEODI Setup 8.0.134 optimizes memory usage, making it almost constant for any dataset. This addresses previous issues where some discovery projects consumed excessive memory, potentially leading to "out of memory" errors. The memory requirements stated in the system requirements remain valid.
+
+GEODI Setup 8.0.134 introduces new predefined queries, accompanied by a new page offering more detailed explanations. These predefined queries simplify the process of addressing target data, including `Predefined:PCI` for discoveries within the PCI/DSS regulation scope, `Predefined:PII` for PII data, and `Predefined:O5Y` for legacy data older than 5 years. Further information is available under GEODI Query Rules.

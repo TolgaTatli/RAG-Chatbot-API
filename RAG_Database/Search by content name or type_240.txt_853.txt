@@ -1,0 +1,19 @@
+GEODI searches for given criteria across all sources connected to a user's project.
+
+GEODI's search rules are valid for names and the body of any content. To limit a search to names, users can use the "or" prefix.
+
+The meaning of "name" in GEODI may vary depending on the content type. The name is what is displayed in the GEODI search result.
+
+GEODI displays content types on the facet. Users can always use these types to limit their search to a certain content type.
+
+In GEODI, "→ search PDF files" actually means searching for names ending with ".pdf".
+
+In GEODI, "→ Any content that name starts with Training" refers to searching for content where the name begins with "Training".
+
+In GEODI, "→ Tweets" refers to searching for Tweets.
+
+In GEODI, "-&gt; Tweets with word possible in name or body" refers to searching for Tweets that contain the word "possible" in their name or body.
+
+In GEODI, "-&gt; Tweets with word possible in name only" refers to searching for Tweets that contain the word "possible" only in their name.
+
+In GEODI, "→ notes" refers to searching for notes.

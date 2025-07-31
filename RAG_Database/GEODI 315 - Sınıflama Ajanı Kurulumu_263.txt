@@ -1,0 +1,9 @@
+Bu eğitim, GEODI Sınıflama araçlarının ve ajanlarının uç bilgisayarlara dağıtımını kapsar. Eğitim sadece GEODI'ye özgü konuları ele alır ve ajan dağıtımı için geliştirilmiş ManageEngine, PDQ veya benzeri bir sistemin bilindiği varsayılır.
+
+Eğitimin içeriği teknik olup, süresi 30 dakikadır. Ön şart olarak, GEODI Classifier kurulumu ve sınıfların özelleştirilmesi gibi konuların kavranmış olması gerekmektedir.
+
+Eğitimin kapsamı, istemci kurulumu için gereken standart IT konularını içerir. GEODI Classifier, ManageEngine veya benzeri araçlar için gerekli komut satırını otomatik olarak üretir; bu üretim Token gibi bilgileri de içerir.
+
+Eğitimde ele alınan konular arasında GEODI Classifier Windows İstemci Kurulumu, GEODI Classifier Sınıf ve Politikaların belirlenmesi, GEODI Classifier Etiket Tanımları, GEODI Classifier OWA Kurulumu, GEODI Classifier Toplu Sınıflama, ve GEODI Classifier Log Analiz Paneli ile Classifier Projesi bulunmaktadır.
+
+Eğitimler genel bir fikir vermeyi amaçlar ve öğrenilenlerin kullanılarak pekiştirilmesi gereklidir. Eğitim kapsamında belirtilen bazı özelliklerin kullanıcının lisansında yer almayabileceği belirtilmiştir.

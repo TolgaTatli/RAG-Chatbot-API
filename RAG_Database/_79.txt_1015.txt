@@ -1,0 +1,3 @@
+It is possible to define a Class Upper Category in GEODI Classifier.
+
+It is possible to schedule the classification of files discovered from a PC or Fileserver via the interface.

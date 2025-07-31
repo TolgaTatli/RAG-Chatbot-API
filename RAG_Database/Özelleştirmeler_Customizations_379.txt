@@ -1,0 +1,17 @@
+GEODI, kurulum sonrası hemen kullanılabilecek yüzlerce hazır şablon, sözlük, tanım ve tanıyıcı ile birlikte gelir. Daha özel senaryolar için GEODI, low-code veya no-code araçlarla kapsamlı özelleştirme desteği sunar.
+
+Özelleştirilmiş bileşenlerin yapının bir parçası haline geldiği bilinmelidir ve bu nedenle yapılan değişiklikler dikkatle yönetilmelidir. Örneğin, yazılan bir regex çok sayıda yanlış pozitif (FP) üretebilir veya performans sorunu yaratabilir. Bu gibi bileşenlerin en az GEODI hazır bileşenleri kadar iyi test edilmesi ve benzer kalite standartlarına sahip olması kaliteli bir işleyiş için gereklidir.
+
+GEODI 9, bu tür özelleştirmeleri takip etmek ve sürdürmek için özelleştirme raporlama ve paketleme özelliklerini sunar.
+
+Özelleştirmeleri raporlamak için Ayarlar → Raporlar → Sistem Raporları → Özelleştirme Raporu yolu izlenmelidir. Bu rapor, yapılan tüm değişiklikleri gösterir.
+
+Rapordaki "Changes" (Değiştirilenler) bölümü bir risk taşır; bir sonraki güncellemede bu dosyalar değiştirilecektir. Varsayılan kurulum ve modüllerle gelen dosyalar değiştirilmemelidir. Varsayılan davranışı değiştirmek istenirse, bu işlem GEODIDATAFOLDER klasöründe yapılmalıdır.
+
+Rapordaki "New ones" (Yeniler) bölümü, yeni oluşturulan dosyaları ifade eder. Bu dosyalar yazılım güncellemelerinden etkilenmezler.
+
+Rapordaki "Deleteds" (Silinenler) bölümü, silinmiş dosyaları gösterir; herhangi bir kaynağın neden silindiğini bilmek gereklidir.
+
+Herhangi bir problemi teşhis etmeden önce özelleştirmeleri kontrol etmek iyi bir uygulamadır.
+
+Mevcut durumu paketlemek için Ayarlar → Raporlar → Sistem Raporları → Özelleştirme Paketi yolu izlenmelidir. Bu işlem, yeni ve değiştirilmiş dosyaları içeren bir GeodiModuleX paketi oluşturur. Paket, tekrar kullanılabilmesi için tarih-saat etiketiyle birlikte gelir. Önceden oluşturulmuş bir paketi yükleyerek sistemin o tarihteki duruma geri döndürülmesi mümkündür.

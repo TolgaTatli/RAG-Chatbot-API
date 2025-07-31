@@ -1,0 +1,3 @@
+It is possible to perform Data Discovery with GDE on 52 Windows servers without requiring a login.
+
+GDE can be installed as a service.

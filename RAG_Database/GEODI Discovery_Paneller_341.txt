@@ -1,0 +1,7 @@
+GEODI Panelleri, keşif sonuçlarını özet olarak gösterir. Panellerin yetenekleri sayesinde sonuçlara raporlardan daha kolay ulaşılabilir. Panellerde sunulan özetler sorgulardan etkilenir, bu da etkin sonuca daha kolay erişim sağlar. Bir sonraki adımda Rapor ve Aksiyonlar kullanılabilir.
+
+Panellere sistem yöneticileri ve bir grubun üyeleri erişebilir.
+
+Keşif Paneli, bulguları, kopya içerikleri ve regülasyonlara uymayan içerikleri özet olarak raporlar. Bu panel hakkında daha fazla bilgi için GEODI 131 eğitimine başvurulabilir.
+
+Client Paneli, GDE ve Classifier ajanlarını izler. Bu panel yalnızca Sistem Yöneticileri tarafından görülebilir.

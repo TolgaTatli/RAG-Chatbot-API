@@ -1,0 +1,3 @@
+Masking solutions are available and functional for Office, Libre Office, and PDF files.
+
+However, a feature for masking data within the body of emails is not currently available.

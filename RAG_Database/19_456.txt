@@ -1,0 +1,1 @@
+The classification agent does not use local resources for automated classification, which results in an average CPU load well below 5%. This low resource consumption and CPU load also apply to the discovery agent.

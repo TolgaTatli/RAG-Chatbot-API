@@ -1,0 +1,5 @@
+In the GEODI project, you can define and query numerous sources. You can query by source using `kaynak:< >` or `source:< >`.
+
+You can narrow down your selection using the Parent query if you know the environment where the content is located, such as a folder, ZIP file, or web page. For example, `parent:Ankara*` will find files with "Ankara" in their ZIP or Folder name, and `parent:*.ZIP` will find files within ZIPs. The query `kaynak:Arşiv parent:*.ZIP ankara` searches for documents containing "Ankara" within ZIP files inside an archive source.
+
+If you want to query a ZIP file or folder based on a file within it, you can use the Child query. For instance, `child:"görüşelim"` will find documents with "görüşelim" in their notes.

@@ -1,0 +1,1 @@
+Geodi minimizes local network usage by employing methods such as compression and striping large documents. This approach ensures that Geodi does not create a heavy load on the network.

@@ -1,0 +1,27 @@
+GEODI is consistently presented with the motto "Search-Discover-Classify-Mask." Data discovery typically comes to the forefront in relation to regulations such as KVKK or PCI/DSS. However, GEODI possesses capabilities far beyond the data discovery required for regulations.
+
+Maps are one of GEODI's features. While some sectors might question the relevance of maps, the reality is that 80% of our lives are connected to location and maps in some way. Upon reflection, the numerous benefits of maps become apparent. GEODI enables greater utilization of maps by making map preparation entirely automatic and cost-free.
+
+For municipalities, construction firms, architectural offices, planning units, project offices, and construction real estate units, map usage is clear and evident. These units often use GIS software. GEODI provides significant benefits by incorporating unstructured data into the process.
+
+The situation is different for those working in Digital Forensics, who want to see locations within data, such as where photos were taken or which addresses are mentioned. GEODI's capabilities meet these needs, as there is no additional cost for maps regardless of the objective. Maps are automatically generated using artificial intelligence and natural language processing, which then opens the door for relationships, heat maps, and various analyses.
+
+Small and Medium-sized Enterprises (SMEs) must process data with limited resources, and employing a data analyst is not easy. A map can reveal a lot about suppliers, customers, service points, or stores.
+
+Maintaining map or GIS systems typically incurs costs, often requiring qualified operators and data entry. With GEODI, the cost is zero. Maps complement features like search and discovery.
+
+An example project, AnkaPedia, is available on GEODI's website under the live projects link. This project utilized open-source data related to Ankara. The map for this project was generated entirely automatically from sources such as PDF, Word, Excel, DWG, NCZ, Databases, Videos, and Social Media. A key benefit is that the map provides extensive information about data without incurring additional costs with GEODI.
+
+The data used in the AnkaPedia project could have been an organization's archive, invoices, contracts, projects, eBYS data, or CRM or ERP databases.
+
+Another example from GEODI's English website is the Map of World News project, which features a heat map of news from nearly 100 news sites. Through this map, it is possible to perform queries related to Covid or the Ukraine war and obtain their respective maps.
+
+GEODI covers over 200 data sources, ensuring no digital data is left out. Scanned documents processed via OCR are also handled. Databases, Word, Excel, Open Office files, emails, UYAP files, videos, and images are all included. This means invoices, reports, proposal files, project files, specifications, contracts, and more can be processed by GEODI without any prior manipulation. It is always possible to add new sources not found in the existing list.
+
+The information displayed on a GEODI map can vary depending on the objective. For a municipality, this might include parcels; for others, it could be customer addresses, construction sites, locations of service providers, or city and district names mentioned in a report. All or part of this information can be displayed on the map.
+
+To find locations related to a specific word, such as places of export, typing "ihracat" into the GEODI search box will show locations from documents containing the word "ihracat." To specifically search for locations related to export, one should type "ihracat()". Experimenting with the parenthesis (proximity query) will demonstrate its effective results. The search results will show export-related locations, and for further insight into which locations are more prominent, one can switch to the heat map to view the results.
+
+If existing company addresses or construction site locations are available, these can be converted into a dictionary within minutes. Once in dictionary format, GEODI will plot documents, emails, or database records onto the map. This process is straightforward.
+
+If a different GIS software is in use, GEODI can be used alongside ArcGIS, GeoServer, or other software. GEODI has been developed for this purpose and supports international standards like WMS. Additionally, there is a widget specifically for ArcGIS Enterprise.

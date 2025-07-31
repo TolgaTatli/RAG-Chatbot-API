@@ -1,0 +1,25 @@
+An ILoginProvider implementation or an alternative method can be used to utilize existing ILoginProvider implementations. This secure, server-based method is suitable when a user is already logged in. GEODI Oauth2 includes a client, enabling simple definitions for systems supporting Oauth2 login for Single Sign-On (SSO), thereby providing a common login interface and session usage via GEODI.
+
+The GetAutoLoginLink service allows an application to redirect its user to a GEODI interface without requiring a login screen. Links obtained through this service bypass the need for a login page, as the user specified by the trusted application is considered already logged into the system. Only applications defined under Settings/ClientToken can use this service, and application validation occurs by making a request to the ValidateURL specified in its definition.
+
+If a .NET SOAP API is implemented that accepts the same parameters and returns the same object as output, a specific attribute should be added to the method.
+
+The request for GetAutoLoginLink is structured as [GEODIURL]/TokenHandler?op=GetAutoLoginLink&ClientID=[ClientID]&ClientValidator=[ClientValidator]&LoginUser=[LoginUser]&UserSession=[Token].
+
+The ClientID parameter is defined under Settings/ClientToken, and its complexity can be customized. The ClientValidator is a key defined by the requesting application, recommended to be encrypted data with time information. It is expected to be validated by requesting the ValidateURL in Settings/ClientToken and receiving "OK".
+
+The LoginUser parameter contains the user information logged into the requesting application. For an LDAP user, only the username, LDAP:Domain\UserName, or LDAP:UserName can be passed; if the domain is omitted, GEODI uses the registered LDAP domain address of the user's application. For a GEODI user, GEODI:UserName must be passed.
+
+The UserSession parameter holds the Token information, which can be obtained from the "Generating a GEODI Token" page, and requires access to the GetAutoLoginLink service. IPFilter is an optional parameter specifying the IP filter where the obtained link will function. TimeOutMinute is an optional parameter indicating how long the obtained link can be used to log into GEODI, with a default value of 120 minutes.
+
+For the workflow, a UTF8 encoding definition, such as { ClientID:"MyClientID", ValidateURL: "http(s)://yourhost/....?validator={ClientValidator}", GEODIRequestHeader:"GEODI_Request" }, should be saved in a jSettings file and placed in the Settings/ClientToken folder accessible by the GEODI application. The ClientValidator is passed between request headers, even if {ClientValidator} is used within the ValidateURL content. If a GEODIRequestHeader definition is present, this information is added as a header to the ValidateURL request, which can be used to verify that GEODI is the calling application.
+
+The supported HTTP methods for requests are GET and POST.
+
+Expected errors include 401 Unauthorized access / Access denied, 403 Forbidden, 511 Network Authentication Required, 452 ClientValidator could not be verified, 453 LoginUser required, 454 Invalid Client Id or empty ValidateUrl, 455 LDAP domain not found (received when trying to find the LDAP domain if username is passed as LDAP: username), and 500 for other errors or Web Request errors.
+
+The expected result of the GetAutoLoginLink service is the return of a URL containing the Token information.
+
+An example application is a .Net 3.5 ClientToken WebHandler written in C#.
+
+The GetAutoLoginToken service has the same definition as GetAutoLoginLink but returns only the Token, not the URL plus Token.

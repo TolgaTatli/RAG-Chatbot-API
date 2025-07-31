@@ -1,0 +1,5 @@
+The data processing speed offered is 0.5-1TB/Day, which is described as a very good speed.
+
+Country-specific semantic recognizers extend the capabilities of GEODI Discovery and Classification. A specific package, identified as 'Discovery US/HIPAA/COPPA' and version 1.0.0.17, is designed for the USA. This package should be installed after GEODI Discovery.
+
+The 'Discovery US/HIPAA/COPPA' package allows users to check HIPAA compliance. This package includes several recognizers: Medical Record Recognizer, SSN Recognizer, USA Zip Code Recognizer, VIN Recognizer, and US Passport Number Recognizer.

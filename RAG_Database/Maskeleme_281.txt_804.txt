@@ -1,0 +1,29 @@
+GEODI can perform Masking or Anonymization on files and databases based on discovery results. Masking involves blacking out sensitive data within content or replacing it with a fixed text. Anonymization, on the other hand, means replacing a value with another value that appears real.
+
+With Masking, sensitive data is completely removed. Anonymization severs the connection to real data, yet the data continues to appear real. By anonymizing data or databases containing sensitive information, users can comfortably share them with test teams, data analysis teams, or researchers.
+
+The method for masking findings can be determined. This can involve simply replacing data with an asterisk (*), or changing a name or phone number to a distinct value like [NAME] or [TELNO]. For larger data types such as IBANs or credit cards, masking can involve showing only the first 2 and last 4 characters. For names, it is possible to mask using just the initial letter. The GEODI Data Masking module allows for these applications. However, content names, including file names and email headers, are not masked.
+
+Masking can be performed in several ways, including Permanent File Masking, Dynamic Masking, and Database Masking.
+
+Permanent File Masking involves changing discovery layers, which are determined as permanent or copy, in file-based data. It is possible to define separate rules for personal data, financial data, or all data. This process can create a copy document where all discovered words, found by recognizers or dictionaries, are hidden. Different masking options allow the same document to have varying versions when shared with legal and purchasing units.
+
+Dynamic Masking causes selected discovery layers to change dynamically for chosen groups or users. This means one user might view the same document completely, while another user might open it with monetary fields or personal data hidden.
+
+Database Masking creates a masked or anonymized copy of a given database. It is possible to mask a database for software development teams.
+
+For file-based permanent Masking, GEODI creates a copy of the content file to perform the operation. The modified file is then available for download. This operation can also be performed in bulk using the "Bulk Mask/Anonymize" action from the Actions menu, which generates a script that must be run by a system administrator. For individual or a small number of files, changed copies can be produced using the mask/anonymize operation within the viewer.
+
+The masking operation supports various file formats, including Word (*.doc, *.docx, *.rtf), Excel (*.xlsm, *.csv, *.xlsx, *.xls), PDF (*.pdf), Powerpoint (*.ppt, *.pptx, *.ppsx), and Libreoffice (*.odp, *.odt, *.ods). For supported formats, the masking operation is found within their viewers.
+
+Users can mask all discovered data or a selected subset of it. For this purpose, any number of definitions (Masking Meta) can be created. By default, certain definitions are provided, and these can be modified or added to using the method specified on the relevant page. For example, a name like "Hasan Hüseyin" can be masked as "[NAME]" or "****". Definitions allow for different masking styles based on different recognizers, meaning names, IBANs, and monetary expressions can all be masked differently.
+
+With Dynamic Masking, discovery results, viewer, words, network graph, summary, and other screens display information in a masked format. Masking in the viewer applies to the following types regardless of their source, whether embedded in a File Server, SharePoint, or Database: Office Files (Word, Excel, PowerPoint), Open Office (ODT, ODS, ...), PDF, TXT, and XPS.
+
+Dynamic Masking is configured by selecting the "Dynamic Masking" box on the last page of the project wizard and then setting up the configurations. Once settings are applied, files within the project are displayed to users in a masked format.
+
+Dynamic Masking operates with group-based authorization. A masking metadata is defined for each group. When group members open a project file, it is displayed in a masked format according to the defined masking metadata. The "No Masking" setting displays results without masking for the specified group. Any group or user not matching a profile is assumed to use the "Mask All" profile. Files downloaded are also in a masked format.
+
+Database masking permanently masks the given database. Users can choose to work on a copy if they wish to retain the original data. Database masking offers several use cases, such as when sharing a database with software or test teams, where it permanently removes sensitive data. It also permanently removes sensitive data for secure sharing when a database is shared for data analysis.
+
+Masking authorization is the same as document download authorization; those with download permission can use it. For dynamic masking, authorization can be done on a user and discovery layer basis. To use masking, both MASKELEME and DISCOVERY licenses are required.

@@ -1,0 +1,5 @@
+Machine users fed by 67 GDE can see only content within their own authorization area in GEODI.
+
+Details regarding this are explained within the scope of Enterprise Search.
+
+A similar authorization scheme is also applicable to emails.

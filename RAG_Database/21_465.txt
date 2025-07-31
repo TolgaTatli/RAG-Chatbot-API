@@ -1,0 +1,5 @@
+It is possible to integrate with an organization's own EBYS systems to enable real-time data analysis during data entry. This integration allows for an output to be filled within their own software.
+
+Such integrations with different eBYS and Archive Software have been realized through Service APIs.
+
+This scenario can be realized using GEODI's services.

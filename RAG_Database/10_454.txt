@@ -1,0 +1,3 @@
+GEODI can perform File Server scanning. There are two main methods to achieve this capability.
+
+One of the methods for GEODI to perform File Server scanning is through Network Sharing. If a network share is available, GEODI can directly access and index files via this shared path. This method does not require any additional tools and is simple, provided the necessary permissions are in place.

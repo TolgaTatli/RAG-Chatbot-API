@@ -1,0 +1,5 @@
+29 Microsoft Office Add-ons are available.
+
+Country-specific semantic recognizers extend the capabilities of GEODI Discovery and Classification. This package, identified as Discovery BH version 1.0.0.3, is specifically for Bahrain. It should be installed after GEODI Discovery.
+
+The Bahrain package includes several specific semantic recognizers: Bahrain Dinar Recognizer, Bahrain City Recognizer, Bahrain ID Recognizer, and Bahrain Passport Recognizer.

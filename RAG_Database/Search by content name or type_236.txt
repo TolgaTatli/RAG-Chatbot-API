@@ -1,0 +1,7 @@
+GEODI searches for given criteria across all sources connected to your project. The search rules are valid for names and the body of any content.
+
+To limit the search to names, use the or prefix. The name means may vary depending on the content type. The name is what you see in the GEODI search result.
+
+GEODI displays content types on the facet. You may always use the types to limit the search to a certain type.
+
+Examples of search limitations include searching PDF files, which actually means names ending with .pdf. Another example is searching for any content where the name starts with Training. Searches can also be limited to Tweets, including Tweets with a word possible in the name or body, or Tweets with a word possible in the name only. Additionally, searches can be limited to notes.

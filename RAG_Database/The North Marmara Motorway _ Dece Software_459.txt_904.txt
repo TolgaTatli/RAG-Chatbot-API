@@ -1,0 +1,9 @@
+The North Marmara Motorway chose GEODI for a Data Discovery and Data Classification project. This project was undertaken within the scope of GDPR compliance and Data Security.
+
+GEODI Semantic Discovery Tools are capable of scanning millions of documents from various sources, including file folders, databases, PCs, and E-Mails. GEODI automatically classifies these documents using pre-set rules based on Semantic Discovery. The results of this discovery process inform all destruction or security policies.
+
+Data Protection Officers (DPOs) can utilize GEODI's search and insight capabilities to access and report documents containing critical and sensitive data within seconds.
+
+GEODI offers capabilities such as Search, Discover, Mask, Encrypt, and Classify.
+
+Dece Software's references include Croatia, Ministry of Agriculture; Vakıfbank; National Budget Office of Nigeria; Ministry of Energy and Natural Resources; Saudi Finance Company; Al Tijaria; Topnet; National Finance of Omman; Palestine Investment Bank; Vakıf Katılım; Iron Mountain; Ziraat Katılım; Verifone; Ziraat Katılım; Green Crescent; Kahve Dünyası; Gelecek Varlık; ICT Authority; Ministry of Trade; Carrefoursa; Teknosa; Istanbul Chamber of Industry; Koton; Turkey Coal Enterprises; Unifree Duty Free; The North Marmara Motorway; and Türk Nippon Insurance. These references fall under categories such as Private Sector, State Agencies, and Municipalities & SPA.

@@ -1,0 +1,3 @@
+It is possible to enable place names or a dictionary to work only in certain areas.
+
+For every dictionary and recognizer, the option to work only in the title or in the body is available.

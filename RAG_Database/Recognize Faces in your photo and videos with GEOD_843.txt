@@ -1,0 +1,9 @@
+GEODI FacePro enables the discovery of people in photos or videos, identifies people within the same frame, and uncovers connections between videos and web pages.
+
+Face recognition technology, specifically FacePro, can be utilized for applications such as Cultural Portals or Intelligence purposes. FacePro's capabilities include discovering individuals in photos and videos, identifying two or more people in the same video frame, and finding connections between videos and web pages related to a person.
+
+FacePro operates as a self-learning software, capable of recognizing the same individual across various videos and photos without requiring prior knowledge. The software discovers individuals, and users then name the person. For example, FacePro can identify multiple appearances of Stallone, such as Stallone at the Oscar ceremony, the beaten face of Rocky Bilbao, and Rambo with long hair, all as the same person. Beyond celebrities, FacePro can also find people within a user's media archive.
+
+For organizations like shopping malls or hotels that maintain video recordings for security, FacePro simplifies compliance with GDPR regulations by enabling the search for a person using a photograph across millions of hours of video. Additionally, FacePro can detect "suspicious" situations or identify a fugitive person in images captured from multiple cameras.
+
+Various entities, including Museums, Newspapers, Intelligence Units, Football Clubs, and Researchers, are identified as potential beneficiaries of FacePro.

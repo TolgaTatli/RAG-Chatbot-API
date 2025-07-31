@@ -1,0 +1,1 @@
+It is possible to mask only a specific range of TCKNs, such as those in the format 13********* 42. This can be achieved by creating masking metadata, and similar rules can be provided using low-code capabilities.

@@ -1,0 +1,1 @@
+58 GDE is capable of working with .Net 6 or .Net 7.

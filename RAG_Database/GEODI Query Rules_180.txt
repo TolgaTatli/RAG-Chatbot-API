@@ -1,0 +1,41 @@
+GEODI Queries are at the core of all solutions and are one of the keys to being a powerful DSPM (Data Security Posture Management) platform. Queries are how users express what they are monitoring or interested in.
+
+GEODI’s semantic queries help users easily find what they are looking for, even within complex, unclassified, and highly diverse documents.
+
+The ability to search allows users to identify risky data and take actions such as deletion or quarantine when necessary.
+
+Automatic classification relies on queries. With rule-based or AI-powered recognizers and queries, users can automatically categorize documents.
+
+Discovery results can be viewed in dashboards and reports. On dashboards, queries enable filtering different perspectives and parts of the same data.
+
+Queries enable users to narrow down relevant information and receive notifications, such as when an invoice is ready, PII data is copied to a risky area, or files a manager is watching become available.
+
+The GEODI Query language is as simple as Google's, allowing users to type words and see results. Semantic queries provide a sharper way to address data when simple words are insufficient.
+
+GEODI queries by date, including not just the document date but also dates within the content. These dates, even if written in many different formats, are all the same for GEODI, as dates are semantic entities with many ways to query them.
+
+Money is another example of a semantic entity. The Discovery tool catches money phrases written in many different ways, unifying them based on their value and currency. This makes finding them easier than with word search alone, and recognizing money is useful for auto-classification, fine-tuning permission schemas, and more.
+
+There are more semantic features that help users find any document faster and more accurately. This page and its sub-pages will explain all the rules in detail.
+
+GEODI offers various search capabilities including Basic Search, Search by content name or type, Search by Dates, Search by Discovery, Search Duplicate or Similar Content, Search On Fields or DB Columns, Search by word proximity, Search by Version, Search by Hierarchy and Source, Search on Ownership or Permissions, Search on e-mails and domains, Search by Image, Search by Content Language, E-Signed Documents: Search and View, Spatial Queries, Save and Watch Queries, and Sort result and ranking.
+
+Sample queries are provided for users to try with their content to demonstrate the ease and effectiveness of finding content.
+
+An example query is "Jan-March 2017 doc:*.PDF Georgia", which specifies a date range, a PDF document type, and the term "Georgia".
+
+If a document came via email, the rule for specifying content type remains the same. For instance, "content:e-Mail Georgia" specifies email as a content type, similar to how PDF is specified.
+
+Another sample query is "parent:*.ZIP doc:Geological* Wall", which finds documents within a ZIP file, with a name starting "Geological", and containing the word "wall".
+
+During an HR process where notes are made on resumes, the query "child:(.geodinote “let’s interview”)" can find resumes that received positive notes.
+
+Conversely, the query "child:(.geodinote “not suitable”)" can find resumes with negative notes.
+
+To search for "Georgia" but exclude terms starting with "Aqua", the query "Georgia -Aqua*" can be used.
+
+When searching for a word and its synonyms simultaneously, a GEODI dictionary can be defined. Queries such as "Artifical Intelligence", "AI", and "Expert System" can be made identical using a single-line dictionary.
+
+In long documents, using just words can be misleading if they are far apart. The proximity rule `()` can be used, as in "Education() “High School”", which finds "High School" within 10 words of "Education". Removing the parentheses changes the result.
+
+The query "100..500GBP" allows finding words close to currency expressions that fit the specified range.

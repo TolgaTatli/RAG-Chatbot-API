@@ -1,0 +1,47 @@
+A GEODI Project or Workspace combines data sources, discovery rules, authorizations, and other policies.
+
+When creating a new project, you are prompted to select a project template. Starting with pre-created templates for classification and data discovery will simplify the process.
+
+If the template you are looking for is not among the options, you can select from ready-made modules in DECE-STORE via Manager/Settings/Module Manager. These modules include regulations like PCI/DSS, KVKK, GDPR, or HIPAA, country-specific definitions, or other tools.
+
+The next step is defining content sources. Options such as folders, web pages, and email accounts are offered. These options may vary depending on the application modules. You can define as many sources as you wish and set access permissions on a per-source basis.
+
+The names you give to sources and the icons you choose will appear on the search pages. It is recommended to choose them carefully. Separating sources will facilitate both usage and authorization.
+
+The list of sources you see in the project wizard may vary according to your license.
+
+To automatically include new incoming data, you can use the "Enable automatic scanning" option. You select the scanning frequency based on the content's change rate.
+
+The folder source allows content to be added via drag-and-drop. The "Enable feeding from browser" setting must be turned on.
+
+The OCR process is a long-running and high CPU-consuming operation. Therefore, it is recommended to consider certain aspects when applying it to large datasets.
+
+With the project template you selected, recognizers come pre-configured. You can choose to skip them or make additional additions as desired.
+
+Recognizers and Dictionaries are GEODI's information extraction tools. With the Date Recognizer, dates in content are read and parsed, and with the Parcel Recognizer, parcel numbers in content are read and parsed. Recognizers may vary according to your license. With Dictionaries, you can define synonyms, such as Law/Kanun, İfraz/Tevhid, Kil/Clay, Artificial Intelligence/Yapay Zeka.
+
+Some recognizers may offer additional setting options accessible via a right-click on the Layers page.
+
+You can use Google, Bing, WMS sources, and CAD files as basemaps according to your needs. Using basemaps like Google or Bing may require approval or a license from the respective company.
+
+The final page of the wizard is where information such as the project's name and description, along with numerous settings, are configured. After saving the project, it will appear in the projects list, and you can edit it at any time.
+
+You must also give final approval for settings like OCR and Backup, which you activated in the sources, on this page.
+
+GEODI automatically includes changed content. For this purpose, you determine the period at which changes will be checked. It is also possible to adjust this setting on a per-source basis.
+
+In addition to source-based access restrictions, you also determine which users your project will be accessible to from here.
+
+After saving, your first scan may begin. You can manage the scanning process later from the projects page.
+
+If you have a Classification License, you activate classification for the project on the final page of the Project Wizard and define the rules. Classification rules will be provided according to the template you selected.
+
+The GEODI Classification solution consists of several components. All necessary steps for installation and agent deployment to endpoints can be found on the pages below.
+
+The initial scan may take time depending on the size of the data. Subsequent scanning is performed only for changed and new content and takes much less time.
+
+You can continue to use GEODI during scanning, but you should consider that operations like heavy file content or OCR might slow down usage.
+
+For the search interface, themes and various layout options are offered. You can select the defaults for your project.
+
+The next stage after this is to announce your project and begin training.

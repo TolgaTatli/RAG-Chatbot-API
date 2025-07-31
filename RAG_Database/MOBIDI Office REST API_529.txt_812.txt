@@ -1,0 +1,5 @@
+The software self-documents its REST API methods. The specific methods available may vary based on the software version and any installed add-ons.
+
+To retrieve the specific REST API methods, users must replace the placeholder in the provided links with their host address. These links include the API start page at `/Api`, the Generate Token GUI at `/api/MobidiTokenApi.html`, and a comprehensive list of all REST API methods at `/GUI/DeceSystemInfoWebHandler?op=GetServices`.
+
+Users can also find needed API methods by observing the Network Tabs while using the application. Additional specific links are provided for HTML Report Objects at `/GUI/DeceSystemInfoWebHandler?op=FactoryInfo&Name=HTMLPageItemFactory` and for Map Style CSS definitions at `/GUI/DeceSystemInfoWebHandler?op=GetCodeBasedCssDefaults&ForInfo=True`.

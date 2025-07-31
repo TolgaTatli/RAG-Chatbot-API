@@ -1,0 +1,13 @@
+The Projects tab is where projects are managed. This includes creating new projects, starting or stopping indexing, obtaining system reports, and performing maintenance.
+
+A new project is created using the '+' icon. Before creating a project, it is suggested to select suitable templates for specific needs, such as PCI/DSS, GDPR, SAMA, or other discovery or classification rules. Once a project is created, it can be changed, though project setting options may become limited after indexing begins.
+
+The Project List tab displays all projects. It is suggested, but not mandatory, to separate each data source and classification project into distinct projects for easier management, unless an Enterprise Search application is desired.
+
+The settings for all projects are stored in the %appdata% folder or a preferred folder. This information is mentioned on the installation page.
+
+Indexing starts or stops with the '>' icon. Once indexing begins, its activity can be monitored.
+
+Many organizations may require multiple GEODI servers for various reasons. For BigData, when massive data is distributed across sources like FileServers, Databases, Sharepoint, e-Mails, Hive, and ElasticSearch, multiple GEODI Servers are needed to complete discovery within a reasonable timeframe. Auto Classification also requires CPU resources, leading to the suggestion of separating Classification servers, which can then be used in multiples behind a load balancer.
+
+Users can install as many GEODI Servers as needed and choose to manage them separately. There is also a method available that simplifies management and offers new features, such as consolidated reports.

@@ -1,0 +1,13 @@
+GEODI, IIS'e ihtiyaç duymadan çalışabilir. Ancak IIS yeteneklerine ihtiyaç duyuluyorsa GEODI, IIS servisi olarak da kurulabilir. Bu kurulum sayfasını takip etmek için temel IIS bilgisine sahip olmak gereklidir.
+
+IIS kurulumu için öncelikle IIS uygulamasının kurulu olması gerekmektedir. Eğer kuruluysa, ASP.net bileşenlerinin yüklü olup olmadığı kontrol edilmelidir. IIS uygulaması veya ASP.net bileşenleri kurulu değilse, “Windows Özellikleri Aç veya Kapat” menüsü üzerinden “İnternet Information Services” butonu işaretlenir. Daha sonra “Word Wide Web Hizmetleri → Uygulama Geliştirme Özellikleri” içerisinde bulunan ASP/ASP .NET 3.5/ASP .NET 4.8 kutucukları işaretlenmelidir. Bu işlemler otomatik olarak gerçekleşir ve tamamlandıktan sonra IIS kurulumu sağlanır.
+
+IIS uygulaması başlatıldıktan sonra yeni bir uygulama havuzu oluşturulmalıdır. Bu havuz için .Net CLR sürümü v4.xx ve yönetilen ardışık düzen modu Tümleşik olarak ayarlanmalıdır. Havuz oluşturulduktan sonra gelişmiş ayarlardan uygulama havuzu kimliği oluşturulmalıdır. Tanımlanan bu hesabın “GEODI” ve “Tanımlı AppData” Klasörlerine tam yetkili olması gerekmektedir. Ayrıca, Maximum Worker Processes (En Fazla Çalışan İşlem Sayısı) 1 olmalı ve havuz ayarlarından Recycling Conditions → Regular time intervals (Geri Dönüşüm Koşulları→Düzenli zaman aralıkları) devre dışı bırakılmalıdır.
+
+GEODI lisans işlemleri ve ilk kurulum için GEODI.exe olarak çalıştırılmalıdır. GEODI IIS Servisi sürekli çalışacak olup, proje düzenleme veya diğer amaçlar için GEODI.EXE kullanılmalıdır. GEODI’nin kapanıp açılması IIS servisini etkilemez. IIS ayakta olduğu sürece GEODI erişilebilir olur ve Windows oturum açma işlemleri gerekmez.
+
+GEODI kaynaklarında MAP edilmiş bir dizin kullanılıyorsa veya açılışta yapılması gereken diğer işler için GEODI → Settings/BatchFiles/Startup dizinine gerekli .bat dosyası konulmalıdır.
+
+IIS kurulumu tamamlandıktan sonra GEODI’yi IIS üzerinden servis etmek için öncelikle Sistem Yapılandırma - Güvenlik Ayarları bölümünde belirtildiği şekilde “AppDataFolder” değerinin belirlenmesi gerekir. Belirtilen dizine IIS üzerindeki GEODI uygulamasının da erişebiliyor olması gerekmektedir. Örnek bir değer olarak { "AppDataFolder":"C:\\GEODI_APPDATA" } belirtilmiştir.
+
+Yeni bir web sitesi oluşturmak için Siteler üzerinden işlem yapılır. Site adı, fiziksel yol, port ve domain gibi genel ayarlar yapılandırılır. Ayarları sına seçeneği ile verilen dizine olan yetki kontrolleri yapılabilir. Uygulama havuzundan daha önce oluşturulan “GEODI” havuzu seçilmelidir.

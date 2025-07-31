@@ -1,0 +1,9 @@
+Dece Software offers solutions including Search, Discover, Mask, and Classify, which are associated with the GEODI Platform. The company provides support, live projects, and need analysis. Resources available from Dece Software include blogs, bulletins, success stories, webinars, support and technical documentation, and developer resources.
+
+Dece Software lists its references, which include entities from the Private Sector, State Agencies, and Municipalities & SPA. Specific references mentioned are Croatia's Ministry of Agriculture, Vakıfbank, National Budget Office of Nigeria, Ministry of Energy and Natural Resources, Saudi Finance Company, Al Tijaria, Topnet, National Finance of Omman, Palestine Investment Bank, Vakıf Katılım, Iron Mountain, Ziraat Katılım, Verifone, Green Crescent, Kahve Dünyası, Gelecek Varlık, ICT Authority, Ministry of Trade, Carrefoursa, Teknosa, Istanbul Chamber of Industry, Koton, Turkey Coal Enterprises, Unifree Duty Free, The North Marmara Motorway, and Türk Nippon Insurance.
+
+Green Crescent, described as one of the most valuable non-governmental organizations globally, is implementing a Data Discovery and Classification project. This project utilizes GEODI, which will assist Green Crescent in complying with GDPR and PCI/DSS regulations. For this project, GEODI Semantic Discovery Tools are designed to scan the entire data lake and automatically classify documents based on discovery.
+
+The functionalities associated with GEODI include Search, Discover, Mask, Encrypt, and Classify. Dece Software states its purpose as "We Protect Your Data."
+
+Dece Software can be contacted via the email address info@decesoftware.com.

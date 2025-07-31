@@ -1,0 +1,7 @@
+GDE MACOS installation is performed by using a click-to-run method on the downloaded *.pkg package.
+
+After the GDE MACOS installation is complete, TOKEN and URL settings are configured within the Settings.json.sample file on the client machine.
+
+Once these settings are made, the file's name is changed and saved as a JSON file using the command: $ sudo cp /Applications/GDE/Settings.json.sample /Applications/GDE/Settings.json.
+
+When the special settings file for the initial installation is modified, GDE MACOS and Linux must be restarted.
