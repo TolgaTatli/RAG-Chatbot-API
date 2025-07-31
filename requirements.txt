@@ -1,0 +1,15 @@
+sentence-transformers
+faiss-cpu
+transformers
+torch
+pandas
+numpy
+tqdm
+python-dotenv
+openai
+langchain
+langchain-community
+chromadb
+fastapi
+uvicorn
+langdetect
