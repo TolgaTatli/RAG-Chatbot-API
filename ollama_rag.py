@@ -126,6 +126,87 @@ Lütfen soruyu yanıtla:"""
             print(f"❌ Ollama bağlantı hatası: {str(e)}")
             return f"Ollama bağlantı hatası: {str(e)}"
 
+    def generate_answer_stream(self, question: str, context: str):
+        """Streaming yanıt üretir - gerçek zamanlı chunk'lar döndürür"""
+        if not self.check_ollama_status():
+            yield "Ollama çalışmıyor. Lütfen 'ollama serve' komutunu çalıştırın."
+            return
+
+        # Prompt uzunluğunu kontrol et - çok uzun olabilir
+        if len(context) > 15000:
+            context = context[:15000] + "..."
+
+        # Sorunun dilini tespit et
+        question_language = "Turkish" if any(turkish_word in question.lower() for turkish_word in ['nedir', 'nasıl', 'neden', 'ne', 'kim', 'hangi']) else "English"
+
+        # Prompt oluştur
+        if context and context.strip():
+            prompt = f"""Sen yardımcı ve bilgili bir yapay zeka asistanısın. Kullanıcının sorusunu aşağıdaki bilgileri kullanarak cevaplayacaksın.
+
+VERİ TABANI BİLGİLERİ:
+{context}
+
+KULLANICININ SORUSU: {question}
+
+TALİMATLAR:
+1. Verilen bilgileri kullanarak soruya net ve anlaşılır bir cevap ver
+2. Cevabını samimi ve yardımsever bir tonla yaz
+3. Ham veri yapıştırma, işleyip düzgün cevap ver
+4. {question_language} dilinde cevap ver
+5. Eğer verilen bilgiler yetersizse, genel bilginle destekle
+
+Lütfen soruyu yanıtla:"""
+        else:
+            prompt = f"""Sen yardımcı bir yapay zeka asistanısın. Kullanıcının sorusuna mevcut genel bilginle cevap ver.
+
+KULLANICININ SORUSU: {question}
+
+TALİMATLAR:
+1. Soruya samimi ve yardımsever bir tonla cevap ver
+2. {question_language} dilinde cevap ver
+3. Eğer bilmiyorsan dürüstçe söyle
+
+Lütfen soruyu yanıtla:"""
+
+        try:
+            payload = {
+                "model": self.model_name,
+                "prompt": prompt,
+                "stream": True,  # Streaming aktif
+                "options": {
+                    "temperature": 0.4,
+                    "top_p": 0.9,
+                    "max_tokens": 600
+                }
+            }
+
+            response = requests.post(
+                self.ollama_url,
+                json=payload,
+                timeout=60,
+                stream=True  # Python requests streaming
+            )
+
+            if response.status_code == 200:
+                # Streaming yanıtları işle
+                for line in response.iter_lines():
+                    if line:
+                        try:
+                            chunk_data = json.loads(line.decode('utf-8'))
+                            if 'response' in chunk_data:
+                                text_chunk = chunk_data['response']
+                                if text_chunk:  # Boş chunk'ları atla
+                                    yield text_chunk
+                        except json.JSONDecodeError:
+                            continue
+            else:
+                yield f"Ollama hatası: HTTP {response.status_code}"
+
+        except requests.exceptions.Timeout:
+            yield "⏰ Ollama yanıt süresi aşıldı. Model çok büyük olabilir."
+        except Exception as e:
+            yield f"Ollama bağlantı hatası: {str(e)}"
+
     def is_general_chat_question(self, question: str) -> bool:
         """Sorunun genel sohbet sorusu olup olmadığını kontrol et"""
         general_chat_keywords = [

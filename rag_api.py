@@ -1,7 +1,9 @@
 from fastapi import FastAPI, HTTPException, Body, Query
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from typing import Optional, Dict, List, Any
 import uvicorn
+import json
 from fastapi.middleware.cors import CORSMiddleware
 
 from rag_system import RAGRetriever
@@ -109,6 +111,69 @@ async def generate(request: GenerateRequest):
             "method": result.get("method", "unknown"),
             "sources": result.get("sources", [])
         }
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"İşlem sırasında hata oluştu: {str(e)}")
+
+@app.post("/generate-stream")
+async def generate_stream(request: GenerateRequest):
+    """
+    Sorguya yanıt oluştur ve sonucu gerçek streaming olarak döndür
+
+    - **question**: Kullanıcı sorusu
+    - **top_k**: Kullanılacak döküman sayısı [isteğe bağlı]
+    """
+    if not qa_system or not retriever:
+        raise HTTPException(status_code=500, detail="RAG sistemi henüz başlatılmadı")
+
+    try:
+        # RAG araması yap
+        search_results = retriever.search(request.question, request.top_k)
+        context = retriever.get_context_for_query(request.question, request.top_k)
+
+        # Server-Sent Events formatı için generator
+        async def event_generator():
+            try:
+                # Başlangıç mesajı
+                yield "data: " + json.dumps({
+                    "type": "start",
+                    "message": "Yanıt oluşturuluyor...",
+                    "sources_count": len(search_results)
+                }) + "\n\n"
+
+                # Ollama'dan gerçek streaming al
+                for chunk in qa_system.generate_answer_stream(request.question, context):
+                    if chunk:  # Boş chunk'ları atla
+                        yield "data: " + json.dumps({
+                            "type": "chunk",
+                            "text": chunk
+                        }) + "\n\n"
+
+                # Son mesaj - kaynak bilgileri
+                top_confidence = search_results[0]['score'] if search_results else 0
+                yield "data: " + json.dumps({
+                    "type": "end",
+                    "sources": search_results[:4],
+                    "confidence": top_confidence,
+                    "method": "ollama_with_rag" if context else "ollama_general"
+                }) + "\n\n"
+
+            except Exception as e:
+                yield "data: " + json.dumps({
+                    "type": "error",
+                    "message": f"Hata oluştu: {str(e)}"
+                }) + "\n\n"
+
+        # StreamingResponse döndür
+        return StreamingResponse(
+            event_generator(),
+            media_type="text/event-stream",
+            headers={
+                'Cache-Control': 'no-cache',
+                'Connection': 'keep-alive',
+                'X-Accel-Buffering': 'no',
+            }
+        )
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"İşlem sırasında hata oluştu: {str(e)}")
