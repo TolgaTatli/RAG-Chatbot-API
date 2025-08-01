@@ -9,7 +9,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from rag_system import RAGRetriever
 from ollama_rag import OllamaRAGQA
 
-# Pydantic modelleri
 class GenerateRequest(BaseModel):
     question: str
     top_k: Optional[int] = 3
@@ -20,23 +19,20 @@ class GenerateResponse(BaseModel):
     method: str
     sources: List[Dict[str, Any]]
 
-# FastAPI uygulaması
 app = FastAPI(
     title="RAG API",
-    description="Ollama tabanlı RAG (Retrieval-Augmented Generation) API",
+    description="Ollama RAG A",
     version="1.0.0"
 )
 
-# CORS yapılandırması
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Tüm originlere izin ver (geliştirme için)
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Global değişkenler
 retriever = None
 qa_system = None
 
@@ -48,18 +44,13 @@ async def startup_event():
     print("🦙 RAG API başlatılıyor...")
 
     try:
-        # Retriever'ı başlat
         retriever = RAGRetriever()
-
-        # Önceden oluşturulmuş index'i yükle
         retriever.load_from_files("faiss_index.bin", "documents.pkl")
-
-        # Ollama QA sistemi oluştur
         qa_system = OllamaRAGQA(retriever, model_name="gemma3")
 
-        print("✅ RAG sistemi başarıyla yüklendi.")
+        print("RAG sistemi başarıyla yüklendi.")
     except Exception as e:
-        print(f"❌ RAG sistemi yüklenirken hata oluştu: {e}")
+        print(f"RAG sistemi yüklenirken hata oluştu: {e}")
 
 @app.get("/")
 async def root():
@@ -104,7 +95,6 @@ async def generate(request: GenerateRequest):
             top_k=request.top_k
         )
 
-        # Yanıtı döndür
         return {
             "answer": result["answer"],
             "confidence": result.get("confidence", 0),
@@ -127,29 +117,24 @@ async def generate_stream(request: GenerateRequest):
         raise HTTPException(status_code=500, detail="RAG sistemi henüz başlatılmadı")
 
     try:
-        # RAG araması yap
         search_results = retriever.search(request.question, request.top_k)
         context = retriever.get_context_for_query(request.question, request.top_k)
 
-        # Server-Sent Events formatı için generator
         async def event_generator():
             try:
-                # Başlangıç mesajı
                 yield "data: " + json.dumps({
                     "type": "start",
                     "message": "Yanıt oluşturuluyor...",
                     "sources_count": len(search_results)
                 }) + "\n\n"
 
-                # Ollama'dan gerçek streaming al
                 for chunk in qa_system.generate_answer_stream(request.question, context):
-                    if chunk:  # Boş chunk'ları atla
+                    if chunk:
                         yield "data: " + json.dumps({
                             "type": "chunk",
                             "text": chunk
                         }) + "\n\n"
 
-                # Son mesaj - kaynak bilgileri
                 top_confidence = search_results[0]['score'] if search_results else 0
                 yield "data: " + json.dumps({
                     "type": "end",
@@ -164,7 +149,6 @@ async def generate_stream(request: GenerateRequest):
                     "message": f"Hata oluştu: {str(e)}"
                 }) + "\n\n"
 
-        # StreamingResponse döndür
         return StreamingResponse(
             event_generator(),
             media_type="text/event-stream",

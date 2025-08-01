@@ -132,14 +132,11 @@ Lütfen soruyu yanıtla:"""
             yield "Ollama çalışmıyor. Lütfen 'ollama serve' komutunu çalıştırın."
             return
 
-        # Prompt uzunluğunu kontrol et - çok uzun olabilir
         if len(context) > 15000:
             context = context[:15000] + "..."
 
-        # Sorunun dilini tespit et
         question_language = "Turkish" if any(turkish_word in question.lower() for turkish_word in ['nedir', 'nasıl', 'neden', 'ne', 'kim', 'hangi']) else "English"
 
-        # Prompt oluştur
         if context and context.strip():
             prompt = f"""Sen yardımcı ve bilgili bir yapay zeka asistanısın. Kullanıcının sorusunu aşağıdaki bilgileri kullanarak cevaplayacaksın.
 
@@ -172,7 +169,7 @@ Lütfen soruyu yanıtla:"""
             payload = {
                 "model": self.model_name,
                 "prompt": prompt,
-                "stream": True,  # Streaming aktif
+                "stream": True,
                 "options": {
                     "temperature": 0.4,
                     "top_p": 0.9,
@@ -184,18 +181,17 @@ Lütfen soruyu yanıtla:"""
                 self.ollama_url,
                 json=payload,
                 timeout=60,
-                stream=True  # Python requests streaming
+                stream=True
             )
 
             if response.status_code == 200:
-                # Streaming yanıtları işle
                 for line in response.iter_lines():
                     if line:
                         try:
                             chunk_data = json.loads(line.decode('utf-8'))
                             if 'response' in chunk_data:
                                 text_chunk = chunk_data['response']
-                                if text_chunk:  # Boş chunk'ları atla
+                                if text_chunk:
                                     yield text_chunk
                         except json.JSONDecodeError:
                             continue
@@ -203,7 +199,7 @@ Lütfen soruyu yanıtla:"""
                 yield f"Ollama hatası: HTTP {response.status_code}"
 
         except requests.exceptions.Timeout:
-            yield "⏰ Ollama yanıt süresi aşıldı. Model çok büyük olabilir."
+            yield "Ollama yanıt süresi aşıldı. Model çok büyük olabilir."
         except Exception as e:
             yield f"Ollama bağlantı hatası: {str(e)}"
 
@@ -224,13 +220,10 @@ Lütfen soruyu yanıtla:"""
         
         question_lower = question.lower()
         
-        # Spesifik bilgi soruları: "X nedir?" formatı - RAG moduna gitsin
         if ('nedir' in question_lower or 'what is' in question_lower) and len(question.split()) > 1:
-            # Sadece "nedir?" tek başına değilse RAG moduna git
             if question_lower.strip() not in ['nedir?', 'what is?']:
                 return False
         
-        # Tam eşleşme kontrolü (sadece çok genel sorular için)
         exact_matches = [
             'kimsin?', 'ne yapıyorsun?', 'yardım?',
             'sen kimsin?', 'sen nesin?', 'sen ne yapıyorsun?',
@@ -260,10 +253,8 @@ Lütfen soruyu yanıtla:"""
         if not results:
             return None
             
-        # Genel tutarlılık kontrolü - en yüksek skorlu sonucu döndür
         best_result = max(results, key=lambda x: x['score'])
         
-        # Birden fazla kaynak benzer bilgi veriyorsa güveni artır
         similar_count = sum(1 for r in results if r['score'] >= best_result['score'] * 0.8)
         
         return {
@@ -289,7 +280,7 @@ Kısa, samimi ve yardımsever bir cevap ver. Türkçe cevap ver."""
                 "prompt": prompt,
                 "stream": False,
                 "options": {
-                    "temperature": 0.7,  # Daha yaratıcı yanıtlar için
+                    "temperature": 0.7,
                     "top_p": 0.9,
                     "max_tokens": 150
                 }
@@ -311,10 +302,8 @@ Kısa, samimi ve yardımsever bir cevap ver. Türkçe cevap ver."""
             return "Merhaba! Size nasıl yardımcı olabilirim?"
 
     def answer_question(self, question: str, top_k: int = 5, confidence_threshold: float = 0.0) -> Dict:
-        # RAG araması yap - her durumda
-        search_results = self.retriever.search(question, 10)  # Daha fazla sonuç al, filtreleme sonrası için
+        search_results = self.retriever.search(question, 10)
 
-        # Sonuç yoksa
         if not search_results:
             return {
                 'question': question,
@@ -324,15 +313,12 @@ Kısa, samimi ve yardımsever bir cevap ver. Türkçe cevap ver."""
                 'method': 'no_results'
             }
 
-        # Sonuçları çeşitlendirmek için, aynı içerikleri filtrele ve sırala
         filtered_results = []
         seen_texts = set()
 
-        # Önce sonuçları güven skoruna göre sırala (yüksekten düşüğe)
         search_results = sorted(search_results, key=lambda x: x['score'], reverse=True)
 
         for result in search_results:
-            # İlk 50 karakter benzersiz mi kontrol et
             text_signature = result['text'][:50]
             if text_signature not in seen_texts:
                 seen_texts.add(text_signature)
@@ -340,44 +326,32 @@ Kısa, samimi ve yardımsever bir cevap ver. Türkçe cevap ver."""
                 if len(filtered_results) >= top_k:
                     break
 
-        # Filtrelenmiş sonuçları kullan - yalnızca yüksek skorlu olanları al
         high_score_results = [r for r in filtered_results if r['score'] >= 0.4]
         if high_score_results:
             search_results = high_score_results[:top_k]
         else:
             search_results = filtered_results[:top_k]
 
-        # Bağlam oluştur
         context = self.retriever.get_context_for_query(question, top_k)
 
-        # Tutarlılık kontrolü yap
         consistency_check = self._check_answer_consistency(search_results, question)
         
-        # En yüksek güven skoru
         top_confidence = search_results[0]['score'] if search_results else 0
         
-        # Tutarlılık kontrolünden gelen güven skorunu da dikkate al
         if consistency_check and consistency_check.get('source_count', 1) > 1:
             top_confidence = max(top_confidence, consistency_check['confidence'])
 
-        # Güven skoru düşükse
         low_confidence = top_confidence < confidence_threshold
 
-        # Çok düşük güven skorunda bile LLM'e soralım, belki genel bilgiyle cevap verebilir
-        # Artık ham veri döndürmeyeceğiz
 
-        # Ollama ile cevap oluştur - HER ZAMAN LLM kullan, ham veri asla döndürme
         if self.check_ollama_status():
-            # RAG verisi varsa onu kullan, yoksa genel bilgiyle cevapla
             if search_results and context:
                 answer = self.generate_answer(question, context)
                 method = 'ollama_with_rag'
             else:
-                # RAG verisi yoksa genel AI yanıtı ver
                 answer = self.generate_general_response(question)
                 method = 'ollama_general'
         else:
-            # Ollama yoksa basit geri dönüş
             answer = "Üzgünüm, şu anda cevap oluşturamıyorum. Ollama servisi çalışmıyor."
             method = 'service_unavailable'
 
@@ -391,62 +365,58 @@ Kısa, samimi ve yardımsever bir cevap ver. Türkçe cevap ver."""
         }
 
     def interactive_qa(self):
-        """Etkileşimli soru-cevap modu"""
-        print("🦙 Ollama RAG Soru-Cevap Sistemi")
+        print("Ollama RAG Soru-Cevap Sistemi")
         print(f"Model: {self.model_name}")
         print("Çıkmak için 'quit' yazın.")
         print("-" * 50)
 
-        # Ollama durumunu kontrol et
         if not self.check_ollama_status():
-            print("⚠️  Ollama çalışmıyor!")
+            print("Ollama çalışmıyor!")
             print("Kurulum için: https://ollama.ai")
             print("Başlatmak için: ollama serve")
             print("Model indirmek için: ollama deepseek-r1")
             print("\nYine de temel arama yapabilirsiniz...")
         else:
-            print(f"✅ Ollama aktif - Model: {self.model_name}")
+            print(f"Ollama aktif - Model: {self.model_name}")
 
         while True:
-            question = input("\n❓ Sorunuz: ").strip()
+            question = input("\nSorunuz: ").strip()
 
-            # Boş sorgu kontrolü
             if not question:
                 print("Lütfen bir soru yazın.")
                 continue
 
-            # Çıkış kontrolü
             if question.lower() in ['quit', 'exit', 'çık', 'çıkış']:
-                print("👋 Hoşça kalın!")
+                print("Hoşça kalın!")
                 break
 
             try:
-                print("🔍 Aranıyor...")
+                print("Aranıyor...")
                 result = self.answer_question(question)
 
-                print(f"\n💬 Cevap:")
+                print(f"\nCevap:")
                 print(result['answer'])
 
                 if result['sources']:
-                    print(f"\n📊 Güven skoru: {result['confidence']:.3f}")
-                    print(f"📝 Kaynak sayısı: {len(result['sources'])}")
-                    print(f"🔧 Method: {result['method']}")
+                    print(f"\nGüven skoru: {result['confidence']:.3f}")
+                    print(f"Kaynak sayısı: {len(result['sources'])}")
+                    print(f"Method: {result['method']}")
 
                     if len(result['sources']) > 0:
-                        print(f"\n📚 Kaynaklar:")
+                        print(f"\nKaynaklar:")
                         for i, source in enumerate(result['sources'][:4]):
                             print(f"  {i+1}. {source['text'][:100]}... (skor: {source['score']:.3f})")
                 elif result['method'] == 'general_chat':
-                    print("💬 Genel sohbet modu")
+                    print("Genel sohbet modu")
 
             except KeyboardInterrupt:
-                print("\n\n👋 Kullanıcı tarafından durduruldu!")
+                print("\n\nKullanıcı tarafından durduruldu!")
                 break
             except Exception as e:
-                print(f"\n❌ Hata oluştu: {str(e)}")
-                print(f"❌ Hata türü: {type(e).__name__}")
+                print(f"\nHata oluştu: {str(e)}")
+                print(f"Hata türü: {type(e).__name__}")
                 import traceback
-                print(f"❌ Detaylı hata:")
+                print(f"Detaylı hata:")
                 traceback.print_exc()
                 print("Tekrar deneyin veya 'quit' yazarak çıkın.")
 
@@ -464,6 +434,6 @@ if __name__ == "__main__":
         qa_system.interactive_qa()
 
     except FileNotFoundError:
-        print("❌ Index dosyaları bulunamadı. Önce data_processor.py çalıştırın.")
+        print("Index dosyaları bulunamadı. Önce data_processor.py çalıştırın.")
     except Exception as e:
-        print(f"❌ Hata: {e}")
+        print(f"Hata: {e}")
