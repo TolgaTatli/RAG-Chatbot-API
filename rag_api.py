@@ -1,4 +1,5 @@
 import time
+from datetime import datetime
 
 from fastapi import FastAPI, HTTPException, Query, Depends, Header
 from fastapi.responses import StreamingResponse
@@ -242,8 +243,10 @@ async def generate(request: GenerateRequest, current_user = Depends(get_current_
     user_id = current_user.id if current_user else request.user_id
 
     start_time = time.time()
-    try: 
+    conversation_saved = False
+    conversation_id = None
 
+    try:
         result = qa_system.answer_question(
             question=request.question,
             top_k=request.top_k
@@ -251,28 +254,44 @@ async def generate(request: GenerateRequest, current_user = Depends(get_current_
 
         response_time = time.time() - start_time
 
-        if supabase_logger:
-            success = supabase_logger.log_conversation(
-                question=request.question,
-                answer=result["answer"],
-                model_name=qa_system.model_name,
-                confidence=result.get("confidence", 0),
-                sources=result.get("sources", []),
-                response_time=response_time,
-                user_id=user_id
-            )
-            print(f"Conversation log: {'✓ Başarılı' if success else '✗ Başarısız'} (User: {user_id or 'Anonymous'})")
+        # Chat kaydetme işlemini güçlendir ve SENKRON yap
+        if supabase_logger and result.get("answer"):
+            try:
+                conversation_result = supabase_logger.log_conversation_with_id(
+                    question=request.question,
+                    answer=result["answer"],
+                    model_name=qa_system.model_name,
+                    confidence=result.get("confidence", 0),
+                    sources=result.get("sources", []),
+                    response_time=response_time,
+                    user_id=user_id
+                )
+                if conversation_result["success"]:
+                    conversation_saved = True
+                    conversation_id = conversation_result["conversation_id"]
+                    print(f"✓ Conversation kaydedildi (ID: {conversation_id}, User: {user_id or 'Anonymous'}, Response: {len(result['answer'])} chars)")
+                else:
+                    print(f"✗ Conversation kaydetme başarısız (User: {user_id or 'Anonymous'})")
+            except Exception as save_error:
+                print(f"❌ Conversation kaydetme hatası: {save_error}")
         else:
-            print("⚠️ Supabase logger mevcut değil - conversation kaydedilmedi!")
+            if not supabase_logger:
+                print("⚠️ Supabase logger mevcut değil - conversation kaydedilmedi!")
+            elif not result.get("answer"):
+                print("⚠️ Boş answer - conversation kaydedilmedi!")
 
         return {
             "answer": result["answer"],
             "confidence": result.get("confidence", 0),
             "method": result.get("method", "unknown"),
-            "sources": result.get("sources", [])
+            "sources": result.get("sources", []),
+            "conversation_saved": conversation_saved,
+            "conversation_id": conversation_id,
+            "user_authenticated": current_user is not None
         }
 
     except Exception as e:
+        print(f"❌ Generate endpoint hatası: {str(e)}")
         raise HTTPException(status_code=500, detail=f"İşlem sırasında hata oluştu: {str(e)}")
 
 
@@ -311,27 +330,47 @@ async def generate_stream(request: GenerateRequest, current_user = Depends(get_c
 
                 response_time = time.time() - start_time
                 top_confidence = search_results[0]['score'] if search_results else 0
+                conversation_saved = False
+                conversation_id = None
 
+                # Chat kaydetme işlemini güçlendir ve senkron yap
                 if supabase_logger and full_answer.strip():
-                    success = supabase_logger.log_conversation(
-                        question=request.question,
-                        answer=full_answer,
-                        model_name=qa_system.model_name,
-                        confidence=top_confidence,
-                        sources=search_results[:4],
-                        response_time=response_time,
-                        user_id=user_id 
-                    )
-                    print(f"Streaming conversation log: {'✓ Başarılı' if success else '✗ Başarısız'} (User: {user_id or 'Anonymous'})")
+                    try:
+                        conversation_result = supabase_logger.log_conversation_with_id(
+                            question=request.question,
+                            answer=full_answer,
+                            model_name=qa_system.model_name,
+                            confidence=top_confidence,
+                            sources=search_results[:4],
+                            response_time=response_time,
+                            user_id=user_id
+                        )
+                        if conversation_result["success"]:
+                            conversation_saved = True
+                            conversation_id = conversation_result["conversation_id"]
+                            print(f"✓ Streaming conversation kaydedildi (ID: {conversation_id}, User: {user_id or 'Anonymous'}, Response: {len(full_answer)} chars)")
+                        else:
+                            print(f"✗ Streaming conversation kaydetme başarısız (User: {user_id or 'Anonymous'})")
+                    except Exception as save_error:
+                        print(f"❌ Streaming conversation kaydetme hatası: {save_error}")
+                else:
+                    if not supabase_logger:
+                        print("⚠️ Supabase logger mevcut değil - streaming conversation kaydedilmedi!")
+                    elif not full_answer.strip():
+                        print("⚠️ Boş answer - streaming conversation kaydedilmedi!")
 
                 yield "data: " + json.dumps({
                     "type": "end",
                     "sources": search_results[:4],
                     "confidence": top_confidence,
-                    "method": "ollama_with_rag" if context else "ollama_general"
+                    "method": "ollama_with_rag" if context else "ollama_general",
+                    "conversation_saved": conversation_saved,
+                    "conversation_id": conversation_id,
+                    "user_authenticated": current_user is not None
                 }) + "\n\n"
 
             except Exception as e:
+                print(f"❌ Streaming generator hatası: {str(e)}")
                 yield "data: " + json.dumps({
                     "type": "error",
                     "message": f"Hata oluştu: {str(e)}"
@@ -348,6 +387,7 @@ async def generate_stream(request: GenerateRequest, current_user = Depends(get_c
         )
 
     except Exception as e:
+        print(f"❌ Streaming endpoint hatası: {str(e)}")
         raise HTTPException(status_code=500, detail=f"İşlem sırasında hata oluştu: {str(e)}")
 
 @app.get("/history")
@@ -443,6 +483,25 @@ async def get_conversation_count(current_user = Depends(require_auth)):
     return {
         "user_id": current_user.id,
         "total_conversations": count
+    }
+
+@app.get("/history/latest")
+async def get_latest_conversations(
+    current_user = Depends(require_auth),
+    limit: int = Query(5, description="Son kaç conversation getirileceği")
+):
+    """En son conversation'ları getir - real-time güncellemeler için"""
+    if not supabase_logger:
+        raise HTTPException(status_code=500, detail="Supabase bağlantısı yok")
+
+    # Sadece authenticated user'ın son conversation'larını getir
+    latest = supabase_logger.get_conversation_history(current_user.id, limit)
+
+    return {
+        "conversations": latest,
+        "user_id": current_user.id,
+        "count": len(latest),
+        "timestamp": datetime.utcnow().isoformat()
     }
 
 if __name__ == "__main__":

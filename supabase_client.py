@@ -113,22 +113,94 @@ class SupabaseLogger:
         user_id artık UUID formatında olmalı (Supabase Auth user ID)
         """
         try:
+            # Veri validasyonu
+            if not question or not answer:
+                print(f"❌ log_conversation: Eksik veri - question: {bool(question)}, answer: {bool(answer)}")
+                return False
+
+            if not question.strip() or not answer.strip():
+                print(f"❌ log_conversation: Boş veri - question length: {len(question.strip())}, answer length: {len(answer.strip())}")
+                return False
+
             data = {
-                "question": question,
-                "answer": answer,
-                "model_name": model_name,
-                "confidence": confidence,
-                "sources": sources,  # JSONB olduğu için json.dumps gerekmez
+                "question": question.strip(),
+                "answer": answer.strip(),
+                "model_name": model_name or "unknown",
+                "confidence": confidence if confidence is not None else 0.0,
+                "sources": sources if sources is not None else [],
                 "response_time": response_time,
-                "user_id": user_id,  # UUID string
+                "user_id": user_id,  # UUID string veya None
                 "created_at": datetime.utcnow().isoformat()
             }
 
+            print(f"🔍 log_conversation: Kayıt edilecek veri - user_id: {user_id}, question length: {len(data['question'])}, answer length: {len(data['answer'])}")
+
             result = self.supabase.table("conversations").insert(data).execute()
-            return True
+
+            if result.data:
+                print(f"✅ log_conversation: Başarıyla kaydedildi - ID: {result.data[0].get('id', 'unknown')}")
+                return True
+            else:
+                print(f"❌ log_conversation: Kayıt başarısız - result.data boş")
+                return False
+
         except Exception as e:
-            print(f"Supabase kayıt hatası: {e}")
+            print(f"❌ log_conversation: Supabase kayıt hatası: {e}")
+            print(f"   - question: {question[:100] if question else 'None'}...")
+            print(f"   - answer: {answer[:100] if answer else 'None'}...")
+            print(f"   - user_id: {user_id}")
             return False
+
+    def log_conversation_with_id(self,
+                        question: str,
+                        answer: str,
+                        model_name: str,
+                        confidence: float = 0.0,
+                        sources: Optional[list] = None,
+                        response_time: Optional[float] = None,
+                        user_id: Optional[str] = None) -> Dict[str, Any]:
+        """
+        Conversation'ı Supabase'e kaydet ve ID'sini döndür
+        """
+        try:
+            # Veri validasyonu
+            if not question or not answer:
+                print(f"❌ log_conversation_with_id: Eksik veri - question: {bool(question)}, answer: {bool(answer)}")
+                return {"success": False, "conversation_id": None, "error": "Eksik veri"}
+
+            if not question.strip() or not answer.strip():
+                print(f"❌ log_conversation_with_id: Boş veri - question length: {len(question.strip())}, answer length: {len(answer.strip())}")
+                return {"success": False, "conversation_id": None, "error": "Boş veri"}
+
+            data = {
+                "question": question.strip(),
+                "answer": answer.strip(),
+                "model_name": model_name or "unknown",
+                "confidence": confidence if confidence is not None else 0.0,
+                "sources": sources if sources is not None else [],
+                "response_time": response_time,
+                "user_id": user_id,  # UUID string veya None
+                "created_at": datetime.utcnow().isoformat()
+            }
+
+            print(f"🔍 log_conversation_with_id: Kayıt edilecek veri - user_id: {user_id}, question length: {len(data['question'])}, answer length: {len(data['answer'])}")
+
+            result = self.supabase.table("conversations").insert(data).execute()
+
+            if result.data and len(result.data) > 0:
+                conversation_id = result.data[0].get('id')
+                print(f"✅ log_conversation_with_id: Başarıyla kaydedildi - ID: {conversation_id}")
+                return {"success": True, "conversation_id": conversation_id}
+            else:
+                print(f"❌ log_conversation_with_id: Kayıt başarısız - result.data boş")
+                return {"success": False, "conversation_id": None, "error": "Kayıt başarısız"}
+
+        except Exception as e:
+            print(f"❌ log_conversation_with_id: Supabase kayıt hatası: {e}")
+            print(f"   - question: {question[:100] if question else 'None'}...")
+            print(f"   - answer: {answer[:100] if answer else 'None'}...")
+            print(f"   - user_id: {user_id}")
+            return {"success": False, "conversation_id": None, "error": str(e)}
 
     def get_conversation_history(self, user_id: str, limit: int = 50):
         """
