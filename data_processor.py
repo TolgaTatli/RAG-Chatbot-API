@@ -172,7 +172,7 @@ if __name__ == "__main__":
     processor = RAGDataProcessor()
 
     # Verileri yükle
-    processor.load_jsonl_data("geodi_fine_tuning_dataset.jsonl")
+    processor.load_jsonl_data("llm_augmented.jsonl")
     processor.load_txt_folder("RAG_database", chunk_size=512, overlap=100)
 
     # Embedding ve index oluştur

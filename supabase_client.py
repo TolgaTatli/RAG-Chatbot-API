@@ -70,23 +70,27 @@ class SupabaseLogger:
     def get_user(self, access_token: str) -> Dict[str, Any]:
         """Token'dan kullanıcı bilgilerini getir"""
         try:
-            # Token'ı set et
-            self.supabase.auth.set_session(None, access_token)
-            user = self.supabase.auth.get_user()
+            print(f"🔍 get_user çağrıldı - Token: {access_token[:20]}..." if access_token else "🔍 get_user çağrıldı - Token: None")
             
-            if user and user.user:
+            # Token'ı headers'a set et
+            response = self.supabase.auth.get_user(access_token)
+            
+            if response and response.user:
+                print(f"✅ Token doğrulandı - User ID: {response.user.id}, Email: {response.user.email}")
                 return {
                     "success": True,
-                    "user": user.user,
-                    "user_id": user.user.id,
-                    "email": user.user.email
+                    "user": response.user,
+                    "user_id": response.user.id,
+                    "email": response.user.email
                 }
             else:
+                print("❌ Token geçersiz - user bulunamadı")
                 return {
                     "success": False,
                     "message": "Geçersiz token"
                 }
         except Exception as e:
+            print(f"❌ Token doğrulama hatası: {e}")
             return {
                 "success": False,
                 "error": str(e),
@@ -157,18 +161,20 @@ class SupabaseLogger:
             print(f"Supabase kayıt hatası: {e}")
             return False
 
-    def get_conversation_history(self, user_id: Optional[str] = None, limit: int = 50):
+    def get_conversation_history(self, user_id: str, limit: int = 50):
         """
         Kullanıcının conversation geçmişini getir
-        RLS sayesinde kullanıcı sadece kendi kayıtlarını görebilir
+        user_id parametresi zorunludur - sadece o kullanıcının kayıtları getirilir
         """
+        if not user_id:
+            print("⚠️ get_conversation_history: user_id boş - hiçbir kayıt döndürülmüyor")
+            return []
+
         try:
-            query = self.supabase.table("conversations").select("*")
+            # user_id kontrolü zorunlu - güvenlik için
+            result = self.supabase.table("conversations").select("*").eq("user_id", user_id).order("created_at", desc=True).limit(limit).execute()
 
-            if user_id:
-                query = query.eq("user_id", user_id)
-
-            result = query.order("created_at", desc=True).limit(limit).execute()
+            print(f"📊 get_conversation_history: {len(result.data)} kayıt bulundu (user_id: {user_id})")
             return result.data
         except Exception as e:
             print(f"Geçmiş getirme hatası: {e}")
@@ -232,6 +238,21 @@ class SupabaseLogger:
         except Exception as e:
             print(f"Conversation silme hatası: {e}")
             return False
+
+    def get_conversation_by_id(self, conversation_id: int, user_id: Optional[str] = None) -> Optional[dict]:
+        """Belirli bir conversation'ın detaylarını getir"""
+        try:
+            query = self.supabase.table("conversations").select("*").eq("id", conversation_id)
+            
+            # Eğer user_id varsa, sadece o kullanıcının conversation'larına erişim ver
+            if user_id:
+                query = query.eq("user_id", user_id)
+            
+            result = query.single().execute()
+            return result.data
+        except Exception as e:
+            print(f"Conversation getirme hatası: {e}")
+            return None
 
     def get_user_models(self, user_id: str) -> list:
         """Kullanıcının kullandığı model'ları ve sayılarını getir"""

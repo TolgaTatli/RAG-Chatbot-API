@@ -69,17 +69,24 @@ security = HTTPBearer(auto_error=False)
 async def get_current_user(credentials: Optional[HTTPAuthorizationCredentials] = Depends(security)):
     """JWT token'dan kullanıcı bilgilerini çıkar (opsiyonel)"""
     if not credentials:
+        print("🔍 get_current_user: Token bulunamadı")
         return None
     
     if not supabase_logger:
+        print("🔍 get_current_user: Supabase logger yok")
         return None
         
     try:
+        print(f"🔍 get_current_user: Token alındı - {credentials.credentials[:20]}...")
         user_info = supabase_logger.get_user(credentials.credentials)
         if user_info["success"]:
+            print(f"✅ get_current_user: Kullanıcı doğrulandı - {user_info['user'].email}")
             return user_info["user"]
+        else:
+            print(f"❌ get_current_user: Token geçersiz - {user_info.get('message', 'Bilinmeyen hata')}")
         return None
-    except:
+    except Exception as e:
+        print(f"❌ get_current_user exception: {e}")
         return None
 
 
@@ -376,28 +383,23 @@ async def generate_stream(request: GenerateRequest, current_user = Depends(get_c
 
 @app.get("/history")
 async def get_history(
-    current_user = Depends(get_current_user),
-    user_id: Optional[str] = Query(None), 
+    current_user = Depends(require_auth),  # Auth zorunlu yap
     limit: int = Query(50)
 ):
-    """Konuşma geçmişini getir - Authenticated user kendi geçmişini görür"""
+    """Konuşma geçmişini getir - Sadece authenticated user kendi geçmişini görür"""
     if not supabase_logger:
         raise HTTPException(status_code=500, detail="Supabase bağlantısı yok")
 
-    # Authenticated user varsa kendi ID'sini kullan, yoksa query parameter'ı kullan
-    target_user_id = current_user.id if current_user else user_id
+    # Sadece authenticated user'ın kendi conversation'larını getir
+    history = supabase_logger.get_conversation_history(current_user.id, limit)
 
-    history = supabase_logger.get_conversation_history(target_user_id, limit)
-    
     # Conversation count da ekle
-    total_count = 0
-    if current_user:
-        total_count = supabase_logger.get_conversation_count(current_user.id)
-    
+    total_count = supabase_logger.get_conversation_count(current_user.id)
+
     return {
         "conversations": history,
-        "user_authenticated": current_user is not None,
-        "user_id": target_user_id,
+        "user_authenticated": True,
+        "user_id": current_user.id,
         "total_conversations": total_count,
         "showing": len(history),
         "limit": limit
@@ -423,6 +425,26 @@ async def search_history(
         "user_id": current_user.id
     }
 
+
+@app.get("/history/{conversation_id}")
+async def get_conversation_by_id(
+    conversation_id: int,
+    current_user = Depends(get_current_user)
+):
+    """Belirli bir conversation'ın detaylarını getir"""
+    if not supabase_logger:
+        raise HTTPException(status_code=500, detail="Supabase bağlantısı yok")
+    
+    # Conversation'ı getir
+    conversation = supabase_logger.get_conversation_by_id(conversation_id, current_user.id if current_user else None)
+    
+    if not conversation:
+        raise HTTPException(status_code=404, detail="Conversation bulunamadı")
+    
+    return {
+        "conversation": conversation,
+        "user_authenticated": current_user is not None
+    }
 
 @app.delete("/history/{conversation_id}")
 async def delete_conversation(
