@@ -8,6 +8,125 @@ class SupabaseLogger:
     def __init__(self):
         self.supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
+    # ====== AUTHENTICATION METHODS ======
+    
+    def sign_up(self, email: str, password: str, metadata: Optional[Dict] = None) -> Dict[str, Any]:
+        """Yeni kullanıcı kaydı"""
+        try:
+            response = self.supabase.auth.sign_up({
+                "email": email,
+                "password": password,
+                "options": {"data": metadata} if metadata else None
+            })
+            return {
+                "success": True,
+                "user": response.user,
+                "session": response.session,
+                "message": "Kayıt başarılı! Email'inizi kontrol edin."
+            }
+        except Exception as e:
+            return {
+                "success": False,
+                "error": str(e),
+                "message": "Kayıt sırasında hata oluştu."
+            }
+
+    def sign_in(self, email: str, password: str) -> Dict[str, Any]:
+        """Kullanıcı girişi"""
+        try:
+            response = self.supabase.auth.sign_in_with_password({
+                "email": email,
+                "password": password
+            })
+            return {
+                "success": True,
+                "user": response.user,
+                "session": response.session,
+                "access_token": response.session.access_token,
+                "message": "Giriş başarılı!"
+            }
+        except Exception as e:
+            return {
+                "success": False,
+                "error": str(e),
+                "message": "Giriş başarısız. Email veya şifre hatalı."
+            }
+
+    def sign_out(self) -> Dict[str, Any]:
+        """Kullanıcı çıkışı"""
+        try:
+            self.supabase.auth.sign_out()
+            return {
+                "success": True,
+                "message": "Çıkış başarılı!"
+            }
+        except Exception as e:
+            return {
+                "success": False,
+                "error": str(e),
+                "message": "Çıkış sırasında hata oluştu."
+            }
+
+    def get_user(self, access_token: str) -> Dict[str, Any]:
+        """Token'dan kullanıcı bilgilerini getir"""
+        try:
+            # Token'ı set et
+            self.supabase.auth.set_session(None, access_token)
+            user = self.supabase.auth.get_user()
+            
+            if user and user.user:
+                return {
+                    "success": True,
+                    "user": user.user,
+                    "user_id": user.user.id,
+                    "email": user.user.email
+                }
+            else:
+                return {
+                    "success": False,
+                    "message": "Geçersiz token"
+                }
+        except Exception as e:
+            return {
+                "success": False,
+                "error": str(e),
+                "message": "Token doğrulama hatası"
+            }
+
+    def send_magic_link(self, email: str) -> Dict[str, Any]:
+        """Magic link gönder (şifresiz giriş)"""
+        try:
+            self.supabase.auth.sign_in_with_otp({
+                "email": email
+            })
+            return {
+                "success": True,
+                "message": "Magic link email'inize gönderildi!"
+            }
+        except Exception as e:
+            return {
+                "success": False,
+                "error": str(e),
+                "message": "Magic link gönderme hatası"
+            }
+
+    def reset_password(self, email: str) -> Dict[str, Any]:
+        """Şifre sıfırlama linki gönder"""
+        try:
+            self.supabase.auth.reset_password_email(email)
+            return {
+                "success": True,
+                "message": "Şifre sıfırlama linki email'inize gönderildi!"
+            }
+        except Exception as e:
+            return {
+                "success": False,
+                "error": str(e),
+                "message": "Şifre sıfırlama hatası"
+            }
+
+    # ====== CONVERSATION LOGGING (Güncellenmiş) ======
+
     def log_conversation(self,
                         question: str,
                         answer: str,
@@ -16,15 +135,19 @@ class SupabaseLogger:
                         sources: Optional[list] = None,
                         response_time: Optional[float] = None,
                         user_id: Optional[str] = None) -> bool:
+        """
+        Conversation'ı Supabase'e kaydet
+        user_id artık UUID formatında olmalı (Supabase Auth user ID)
+        """
         try:
             data = {
                 "question": question,
                 "answer": answer,
                 "model_name": model_name,
                 "confidence": confidence,
-                "sources": json.dumps(sources) if sources else None,
+                "sources": sources,  # JSONB olduğu için json.dumps gerekmez
                 "response_time": response_time,
-                "user_id": user_id,
+                "user_id": user_id,  # UUID string
                 "created_at": datetime.utcnow().isoformat()
             }
 
@@ -35,6 +158,10 @@ class SupabaseLogger:
             return False
 
     def get_conversation_history(self, user_id: Optional[str] = None, limit: int = 50):
+        """
+        Kullanıcının conversation geçmişini getir
+        RLS sayesinde kullanıcı sadece kendi kayıtlarını görebilir
+        """
         try:
             query = self.supabase.table("conversations").select("*")
 
@@ -45,4 +172,82 @@ class SupabaseLogger:
             return result.data
         except Exception as e:
             print(f"Geçmiş getirme hatası: {e}")
+            return []
+
+    def get_user_stats(self, user_id: str) -> Dict[str, Any]:
+        """Kullanıcının conversation istatistiklerini getir"""
+        try:
+            # View'dan kullanıcı istatistiklerini al
+            result = self.supabase.table("user_conversation_stats").select("*").eq("user_id", user_id).execute()
+            
+            if result.data and len(result.data) > 0:
+                return {
+                    "success": True,
+                    "stats": result.data[0]
+                }
+            else:
+                return {
+                    "success": True,
+                    "stats": {
+                        "total_conversations": 0,
+                        "avg_confidence": 0,
+                        "last_conversation_at": None,
+                        "favorite_model": None
+                    }
+                }
+        except Exception as e:
+            return {
+                "success": False,
+                "error": str(e),
+                "message": "İstatistik getirme hatası"
+            }
+
+    def get_conversation_count(self, user_id: str) -> int:
+        """Kullanıcının toplam conversation sayısını getir"""
+        try:
+            # PostgreSQL function'ını çağır
+            result = self.supabase.rpc("get_user_conversation_count", {"target_user_id": user_id}).execute()
+            return result.data if result.data else 0
+        except Exception as e:
+            print(f"Conversation count hatası: {e}")
+            return 0
+
+    def search_conversations(self, user_id: str, search_term: str, limit: int = 20) -> list:
+        """Kullanıcının conversation'larında arama yap"""
+        try:
+            result = self.supabase.table("conversations").select("*").eq("user_id", user_id).or_(
+                f"question.ilike.%{search_term}%,answer.ilike.%{search_term}%"
+            ).order("created_at", desc=True).limit(limit).execute()
+            
+            return result.data
+        except Exception as e:
+            print(f"Conversation arama hatası: {e}")
+            return []
+
+    def delete_conversation(self, conversation_id: int, user_id: str) -> bool:
+        """Kullanıcının belirli bir conversation'ını sil"""
+        try:
+            result = self.supabase.table("conversations").delete().eq("id", conversation_id).eq("user_id", user_id).execute()
+            return True
+        except Exception as e:
+            print(f"Conversation silme hatası: {e}")
+            return False
+
+    def get_user_models(self, user_id: str) -> list:
+        """Kullanıcının kullandığı model'ları ve sayılarını getir"""
+        try:
+            result = self.supabase.table("conversations").select("model_name").eq("user_id", user_id).execute()
+            
+            # Model sayımı yap
+            models = {}
+            for row in result.data:
+                model = row.get("model_name", "unknown")
+                models[model] = models.get(model, 0) + 1
+            
+            # Sayıya göre sırala
+            sorted_models = sorted(models.items(), key=lambda x: x[1], reverse=True)
+            
+            return [{"model_name": model, "count": count} for model, count in sorted_models]
+        except Exception as e:
+            print(f"Model listesi hatası: {e}")
             return []

@@ -14,3 +14,8 @@ fastapi
 uvicorn
 langdetect
 supabase
+python-jose[cryptography]
+passlib[bcrypt]
+python-multipart
+pydantic
+requests

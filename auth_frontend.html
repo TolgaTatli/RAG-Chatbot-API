@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Chat with Auth</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .auth-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .chat-section {
+            margin-top: 20px;
+        }
+        input, button, textarea {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .logout-btn {
+            background-color: #dc3545;
+        }
+        .logout-btn:hover {
+            background-color: #c82333;
+        }
+        .message {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .success { background-color: #d4edda; color: #155724; }
+        .error { background-color: #f8d7da; color: #721c24; }
+        .info { background-color: #d1ecf1; color: #0c5460; }
+        .user-info {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .chat-message {
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .user-message {
+            background: #e3f2fd;
+            text-align: right;
+        }
+        .bot-message {
+            background: #f1f8e9;
+        }
+        textarea {
+            width: 95%;
+            height: 100px;
+            resize: vertical;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 RAG Chat with Authentication</h1>
+        
+        <!-- Auth Section -->
+        <div class="auth-section" id="authSection">
+            <h3>👤 Kimlik Doğrulama</h3>
+            
+            <!-- Login Form -->
+            <div id="loginForm">
+                <h4>Giriş Yap</h4>
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Şifre" required>
+                <button onclick="signIn()">Giriş Yap</button>
+                <button onclick="showSignupForm()">Kayıt Ol</button>
+                <button onclick="sendMagicLink()">Magic Link Gönder</button>
+            </div>
+            
+            <!-- Signup Form -->
+            <div id="signupForm" class="hidden">
+                <h4>Kayıt Ol</h4>
+                <input type="text" id="signupName" placeholder="Ad Soyad">
+                <input type="email" id="signupEmail" placeholder="Email" required>
+                <input type="password" id="signupPassword" placeholder="Şifre (min 6 karakter)" required>
+                <button onclick="signUp()">Kayıt Ol</button>
+                <button onclick="showLoginForm()">Giriş Formuna Dön</button>
+            </div>
+            
+            <!-- User Info (when logged in) -->
+            <div id="userInfo" class="user-info hidden">
+                <h4>🔐 Kullanıcı Bilgileri</h4>
+                <p><strong>Email:</strong> <span id="userEmail"></span></p>
+                <p><strong>ID:</strong> <span id="userId"></span></p>
+                <div id="userStats">
+                    <p><strong>📊 İstatistikler:</strong></p>
+                    <p>• Toplam Sohbet: <span id="totalConversations">-</span></p>
+                    <p>• Ortalama Güven: <span id="avgConfidence">-</span>%</p>
+                    <p>• En Çok Kullanılan Model: <span id="favoriteModel">-</span></p>
+                </div>
+                <button class="logout-btn" onclick="signOut()">Çıkış Yap</button>
+                <button onclick="loadUserStats()">İstatistikleri Yenile</button>
+            </div>
+        </div>
+        
+        <!-- Messages -->
+        <div id="messages"></div>
+        
+        <!-- Chat Section -->
+        <div class="chat-section">
+            <h3>💬 RAG Chat</h3>
+            <textarea id="questionInput" placeholder="Sorunuzu yazın..."></textarea>
+            <br>
+            <button onclick="sendQuestion()" id="sendButton">Gönder</button>
+            <button onclick="clearChat()">Sohbeti Temizle</button>
+            <button onclick="loadHistory()">Geçmişi Yükle</button>
+            <button onclick="searchConversations()" id="searchBtn">Ara</button>
+            <input type="text" id="searchInput" placeholder="Sohbetlerde ara..." style="display:none;">
+        </div>
+        
+        <!-- Chat Messages -->
+        <div id="chatMessages"></div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:8000';
+        let accessToken = localStorage.getItem('accessToken');
+        let currentUser = null;
+
+        // Initialize
+        window.onload = function() {
+            if (accessToken) {
+                getCurrentUser();
+            }
+        };
+
+        function showMessage(message, type = 'info') {
+            const messagesDiv = document.getElementById('messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}`;
+            messageDiv.textContent = message;
+            messagesDiv.appendChild(messageDiv);
+            
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                messageDiv.remove();
+            }, 5000);
+        }
+
+        function showLoginForm() {
+            document.getElementById('loginForm').classList.remove('hidden');
+            document.getElementById('signupForm').classList.add('hidden');
+        }
+
+        function showSignupForm() {
+            document.getElementById('loginForm').classList.add('hidden');
+            document.getElementById('signupForm').classList.remove('hidden');
+        }
+
+        async function signUp() {
+            const name = document.getElementById('signupName').value;
+            const email = document.getElementById('signupEmail').value;
+            const password = document.getElementById('signupPassword').value;
+
+            if (!email || !password) {
+                showMessage('Email ve şifre gerekli!', 'error');
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_BASE}/auth/signup`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        password: password,
+                        full_name: name
+                    })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    showMessage(result.message, 'success');
+                    showLoginForm();
+                } else {
+                    showMessage(result.detail || 'Kayıt hatası', 'error');
+                }
+            } catch (error) {
+                showMessage('Bağlantı hatası: ' + error.message, 'error');
+            }
+        }
+
+        async function signIn() {
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+
+            if (!email || !password) {
+                showMessage('Email ve şifre gerekli!', 'error');
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_BASE}/auth/signin`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        password: password
+                    })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    accessToken = result.access_token;
+                    localStorage.setItem('accessToken', accessToken);
+                    currentUser = result.user;
+                    
+                    showMessage(result.message, 'success');
+                    updateAuthUI();
+                } else {
+                    showMessage(result.detail || 'Giriş hatası', 'error');
+                }
+            } catch (error) {
+                showMessage('Bağlantı hatası: ' + error.message, 'error');
+            }
+        }
+
+        async function signOut() {
+            try {
+                await fetch(`${API_BASE}/auth/signout`, {
+                    method: 'POST'
+                });
+                
+                accessToken = null;
+                currentUser = null;
+                localStorage.removeItem('accessToken');
+                
+                showMessage('Çıkış başarılı!', 'success');
+                updateAuthUI();
+                clearChat();
+            } catch (error) {
+                showMessage('Çıkış hatası: ' + error.message, 'error');
+            }
+        }
+
+        async function getCurrentUser() {
+            if (!accessToken) return;
+
+            try {
+                const response = await fetch(`${API_BASE}/auth/me`, {
+                    headers: {
+                        'Authorization': `Bearer ${accessToken}`
+                    }
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    currentUser = result.user;
+                    updateAuthUI();
+                    loadUserStats(); // İstatistikleri de yükle
+                } else {
+                    // Token expired or invalid
+                    accessToken = null;
+                    localStorage.removeItem('accessToken');
+                    updateAuthUI();
+                }
+            } catch (error) {
+                console.error('User info error:', error);
+            }
+        }
+
+        async function loadUserStats() {
+            if (!accessToken) return;
+
+            try {
+                // Stats endpoint
+                const statsResponse = await fetch(`${API_BASE}/auth/stats`, {
+                    headers: {
+                        'Authorization': `Bearer ${accessToken}`
+                    }
+                });
+
+                if (statsResponse.ok) {
+                    const stats = await statsResponse.json();
+                    document.getElementById('totalConversations').textContent = stats.total_conversations || 0;
+                    document.getElementById('avgConfidence').textContent = ((stats.avg_confidence || 0) * 100).toFixed(1);
+                    document.getElementById('favoriteModel').textContent = stats.favorite_model || 'Henüz yok';
+                }
+
+                // Models endpoint
+                const modelsResponse = await fetch(`${API_BASE}/auth/models`, {
+                    headers: {
+                        'Authorization': `Bearer ${accessToken}`
+                    }
+                });
+
+                if (modelsResponse.ok) {
+                    const result = await modelsResponse.json();
+                    console.log('User models:', result.models);
+                }
+            } catch (error) {
+                console.error('Stats loading error:', error);
+            }
+        }
+
+        async function sendMagicLink() {
+            const email = document.getElementById('loginEmail').value;
+            
+            if (!email) {
+                showMessage('Email adresi gerekli!', 'error');
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_BASE}/auth/magic-link`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        email: email
+                    })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    showMessage(result.message, 'success');
+                } else {
+                    showMessage(result.detail || 'Magic link hatası', 'error');
+                }
+            } catch (error) {
+                showMessage('Bağlantı hatası: ' + error.message, 'error');
+            }
+        }
+
+        function updateAuthUI() {
+            const loginForm = document.getElementById('loginForm');
+            const signupForm = document.getElementById('signupForm');
+            const userInfo = document.getElementById('userInfo');
+
+            if (currentUser) {
+                loginForm.classList.add('hidden');
+                signupForm.classList.add('hidden');
+                userInfo.classList.remove('hidden');
+                
+                document.getElementById('userEmail').textContent = currentUser.email;
+                document.getElementById('userId').textContent = currentUser.id;
+            } else {
+                loginForm.classList.remove('hidden');
+                signupForm.classList.add('hidden');
+                userInfo.classList.add('hidden');
+            }
+        }
+
+        async function sendQuestion() {
+            const question = document.getElementById('questionInput').value.trim();
+            
+            if (!question) {
+                showMessage('Lütfen bir soru yazın!', 'error');
+                return;
+            }
+
+            // Add user message to chat
+            addChatMessage(question, 'user');
+            
+            // Clear input
+            document.getElementById('questionInput').value = '';
+            
+            // Disable send button
+            document.getElementById('sendButton').disabled = true;
+            document.getElementById('sendButton').textContent = 'Gönderiliyor...';
+
+            try {
+                const headers = {
+                    'Content-Type': 'application/json'
+                };
+                
+                if (accessToken) {
+                    headers['Authorization'] = `Bearer ${accessToken}`;
+                }
+
+                const response = await fetch(`${API_BASE}/generate`, {
+                    method: 'POST',
+                    headers: headers,
+                    body: JSON.stringify({
+                        question: question,
+                        top_k: 3
+                    })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    addChatMessage(result.answer, 'bot', result);
+                } else {
+                    showMessage(result.detail || 'Soru gönderme hatası', 'error');
+                }
+            } catch (error) {
+                showMessage('Bağlantı hatası: ' + error.message, 'error');
+            } finally {
+                document.getElementById('sendButton').disabled = false;
+                document.getElementById('sendButton').textContent = 'Gönder';
+            }
+        }
+
+        function addChatMessage(message, sender, metadata = null) {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `chat-message ${sender}-message`;
+            
+            let content = `<strong>${sender === 'user' ? '👤 Sen' : '🤖 RAG Bot'}:</strong><br>${message}`;
+            
+            if (metadata && sender === 'bot') {
+                content += `<br><small>📊 Güven: ${(metadata.confidence * 100).toFixed(1)}% | Yöntem: ${metadata.method}</small>`;
+                if (metadata.sources && metadata.sources.length > 0) {
+                    content += `<br><small>📚 Kaynak sayısı: ${metadata.sources.length}</small>`;
+                }
+            }
+            
+            messageDiv.innerHTML = content;
+            chatMessages.appendChild(messageDiv);
+            
+            // Scroll to bottom
+            messageDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function clearChat() {
+            document.getElementById('chatMessages').innerHTML = '';
+        }
+
+        async function loadHistory() {
+            try {
+                const headers = {};
+                
+                if (accessToken) {
+                    headers['Authorization'] = `Bearer ${accessToken}`;
+                }
+
+                const response = await fetch(`${API_BASE}/history?limit=10`, {
+                    headers: headers
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    clearChat();
+                    
+                    if (result.conversations && result.conversations.length > 0) {
+                        showMessage(`${result.conversations.length} geçmiş sohbet yüklendi (Toplam: ${result.total_conversations || 'N/A'})`, 'success');
+                        
+                        // Reverse to show oldest first
+                        result.conversations.reverse().forEach(conv => {
+                            addChatMessage(conv.question, 'user');
+                            addChatMessage(conv.answer, 'bot', {
+                                confidence: conv.confidence,
+                                method: 'history',
+                                conversation_id: conv.id
+                            });
+                        });
+                    } else {
+                        showMessage('Geçmiş sohbet bulunamadı', 'info');
+                    }
+                } else {
+                    showMessage(result.detail || 'Geçmiş yükleme hatası', 'error');
+                }
+            } catch (error) {
+                showMessage('Bağlantı hatası: ' + error.message, 'error');
+            }
+        }
+
+        async function searchConversations() {
+            const searchInput = document.getElementById('searchInput');
+            const searchBtn = document.getElementById('searchBtn');
+            
+            if (searchInput.style.display === 'none') {
+                // Show search input
+                searchInput.style.display = 'inline';
+                searchInput.focus();
+                searchBtn.textContent = 'İptal';
+            } else {
+                // Perform search or cancel
+                const searchTerm = searchInput.value.trim();
+                
+                if (searchTerm) {
+                    if (!accessToken) {
+                        showMessage('Arama yapmak için giriş yapmalısınız!', 'error');
+                        return;
+                    }
+                    
+                    try {
+                        const response = await fetch(`${API_BASE}/history/search?search=${encodeURIComponent(searchTerm)}&limit=20`, {
+                            headers: {
+                                'Authorization': `Bearer ${accessToken}`
+                            }
+                        });
+
+                        const result = await response.json();
+
+                        if (response.ok) {
+                            clearChat();
+                            
+                            if (result.conversations && result.conversations.length > 0) {
+                                showMessage(`"${searchTerm}" için ${result.found} sonuç bulundu`, 'success');
+                                
+                                result.conversations.forEach(conv => {
+                                    addChatMessage(conv.question, 'user');
+                                    addChatMessage(conv.answer, 'bot', {
+                                        confidence: conv.confidence,
+                                        method: 'search',
+                                        conversation_id: conv.id
+                                    });
+                                });
+                            } else {
+                                showMessage(`"${searchTerm}" için sonuç bulunamadı`, 'info');
+                            }
+                        } else {
+                            showMessage(result.detail || 'Arama hatası', 'error');
+                        }
+                    } catch (error) {
+                        showMessage('Arama hatası: ' + error.message, 'error');
+                    }
+                }
+                
+                // Hide search input
+                searchInput.style.display = 'none';
+                searchInput.value = '';
+                searchBtn.textContent = 'Ara';
+            }
+        }
+
+        // Enter key support for question input
+        document.getElementById('questionInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendQuestion();
+            }
+        });
+    </script>
+</body>
+</html>
