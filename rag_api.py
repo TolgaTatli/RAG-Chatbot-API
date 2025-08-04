@@ -40,10 +40,6 @@ class SignUpRequest(BaseModel):
     full_name: Optional[str] = None
 
 
-class MagicLinkRequest(BaseModel):
-    email: str
-
-
 app = FastAPI(
     title="RAG API",
     description="Ollama RAG A",
@@ -177,6 +173,7 @@ async def signin(request: AuthRequest):
         return {
             "message": result["message"],
             "access_token": result["access_token"],
+            "clear_chat": True,
             "user": {
                 "id": result["user"].id,
                 "email": result["user"].email,
@@ -195,34 +192,6 @@ async def signout():
     
     result = supabase_logger.sign_out()
     return {"message": result["message"]}
-
-
-@app.post("/auth/magic-link")
-async def send_magic_link(request: MagicLinkRequest):
-    """Magic link gönder (şifresiz giriş)"""
-    if not supabase_logger:
-        raise HTTPException(status_code=500, detail="Auth servisi mevcut değil")
-    
-    result = supabase_logger.send_magic_link(request.email)
-    
-    if result["success"]:
-        return {"message": result["message"]}
-    else:
-        raise HTTPException(status_code=400, detail=result["message"])
-
-
-@app.post("/auth/reset-password")
-async def reset_password(request: MagicLinkRequest):
-    """Şifre sıfırlama linki gönder"""
-    if not supabase_logger:
-        raise HTTPException(status_code=500, detail="Auth servisi mevcut değil")
-    
-    result = supabase_logger.reset_password(request.email)
-    
-    if result["success"]:
-        return {"message": result["message"]}
-    else:
-        raise HTTPException(status_code=400, detail=result["message"])
 
 
 @app.get("/auth/me")

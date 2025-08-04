@@ -97,37 +97,6 @@ class SupabaseLogger:
                 "message": "Token doğrulama hatası"
             }
 
-    def send_magic_link(self, email: str) -> Dict[str, Any]:
-        """Magic link gönder (şifresiz giriş)"""
-        try:
-            self.supabase.auth.sign_in_with_otp({
-                "email": email
-            })
-            return {
-                "success": True,
-                "message": "Magic link email'inize gönderildi!"
-            }
-        except Exception as e:
-            return {
-                "success": False,
-                "error": str(e),
-                "message": "Magic link gönderme hatası"
-            }
-
-    def reset_password(self, email: str) -> Dict[str, Any]:
-        """Şifre sıfırlama linki gönder"""
-        try:
-            self.supabase.auth.reset_password_email(email)
-            return {
-                "success": True,
-                "message": "Şifre sıfırlama linki email'inize gönderildi!"
-            }
-        except Exception as e:
-            return {
-                "success": False,
-                "error": str(e),
-                "message": "Şifre sıfırlama hatası"
-            }
 
     # ====== CONVERSATION LOGGING (Güncellenmiş) ======
 
