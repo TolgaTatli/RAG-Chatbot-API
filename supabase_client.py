@@ -158,9 +158,12 @@ class SupabaseLogger:
                         confidence: float = 0.0,
                         sources: Optional[list] = None,
                         response_time: Optional[float] = None,
-                        user_id: Optional[str] = None) -> Dict[str, Any]:
+                        user_id: Optional[str] = None,
+                        thread_id: Optional[str] = None,
+                        parent_message_id: Optional[int] = None) -> Dict[str, Any]:
         """
         Conversation'ı Supabase'e kaydet ve ID'sini döndür
+        thread_id varsa mevcut thread'e ekle, yoksa yeni thread oluştur
         """
         try:
             # Veri validasyonu
@@ -172,6 +175,18 @@ class SupabaseLogger:
                 print(f"❌ log_conversation_with_id: Boş veri - question length: {len(question.strip())}, answer length: {len(answer.strip())}")
                 return {"success": False, "conversation_id": None, "error": "Boş veri"}
 
+            # Thread ID yoksa yeni thread oluştur
+            if not thread_id:
+                thread_result = self.supabase.rpc("create_new_thread").execute()
+                thread_id = thread_result.data
+                message_order = 1
+                print(f"🆕 Yeni thread oluşturuldu: {thread_id}")
+            else:
+                # Mevcut thread'e ekle - sıradaki mesaj numarasını al
+                order_result = self.supabase.rpc("get_next_message_order", {"target_thread_id": thread_id}).execute()
+                message_order = order_result.data
+                print(f"📝 Mevcut thread'e ekleniyor: {thread_id}, Order: {message_order}")
+
             data = {
                 "question": question.strip(),
                 "answer": answer.strip(),
@@ -179,137 +194,128 @@ class SupabaseLogger:
                 "confidence": confidence if confidence is not None else 0.0,
                 "sources": sources if sources is not None else [],
                 "response_time": response_time,
-                "user_id": user_id,  # UUID string veya None
+                "user_id": user_id,
+                "thread_id": thread_id,
+                "parent_message_id": parent_message_id,
+                "message_order": message_order,
                 "created_at": datetime.utcnow().isoformat()
             }
 
-            print(f"🔍 log_conversation_with_id: Kayıt edilecek veri - user_id: {user_id}, question length: {len(data['question'])}, answer length: {len(data['answer'])}")
+            print(f"🔍 log_conversation_with_id: Thread {thread_id}, Order {message_order}, User: {user_id}")
 
             result = self.supabase.table("conversations").insert(data).execute()
 
             if result.data and len(result.data) > 0:
                 conversation_id = result.data[0].get('id')
-                print(f"✅ log_conversation_with_id: Başarıyla kaydedildi - ID: {conversation_id}")
-                return {"success": True, "conversation_id": conversation_id}
+                print(f"✅ log_conversation_with_id: Başarıyla kaydedildi - ID: {conversation_id}, Thread: {thread_id}")
+                return {
+                    "success": True,
+                    "conversation_id": conversation_id,
+                    "thread_id": thread_id,
+                    "message_order": message_order
+                }
             else:
                 print(f"❌ log_conversation_with_id: Kayıt başarısız - result.data boş")
                 return {"success": False, "conversation_id": None, "error": "Kayıt başarısız"}
 
         except Exception as e:
             print(f"❌ log_conversation_with_id: Supabase kayıt hatası: {e}")
-            print(f"   - question: {question[:100] if question else 'None'}...")
-            print(f"   - answer: {answer[:100] if answer else 'None'}...")
-            print(f"   - user_id: {user_id}")
             return {"success": False, "conversation_id": None, "error": str(e)}
 
-    def get_conversation_history(self, user_id: str, limit: int = 50):
-        """
-        Kullanıcının conversation geçmişini getir
-        user_id parametresi zorunludur - sadece o kullanıcının kayıtları getirilir
-        """
-        if not user_id:
-            print("⚠️ get_conversation_history: user_id boş - hiçbir kayıt döndürülmüyor")
+    def get_conversation_threads(self, user_id: str, limit: int = 50):
+        """Kullanıcının thread'lerini getir (deleted olanlar hariç) - View uyumlu"""
+        try:
+            # conversation_threads view'ini kullan ama deleted_by_user filtresini conversations tablosu üzerinden yap
+            result = self.supabase.table("conversation_threads").select("*").eq("user_id", user_id).order("last_updated_at", desc=True).limit(limit).execute()
+
+            if not result.data:
+                print(f"📊 get_conversation_threads: 0 thread bulundu (user_id: {user_id})")
+                return []
+
+            # Her thread için ilk mesajının deleted_by_user durumunu kontrol et
+            filtered_threads = []
+            for thread in result.data:
+                thread_id = thread.get("thread_id")
+                if thread_id:
+                    # Thread'in deleted durumunu kontrol et
+                    check_result = self.supabase.table("conversations").select("deleted_by_user").eq("thread_id", thread_id).eq("user_id", user_id).limit(1).execute()
+
+                    if check_result.data and not check_result.data[0].get("deleted_by_user", False):
+                        filtered_threads.append(thread)
+
+            print(f"📊 get_conversation_threads: {len(filtered_threads)} thread bulundu (user_id: {user_id})")
+            return filtered_threads
+        except Exception as e:
+            print(f"Thread listesi getirme hatası: {e}")
             return []
 
+    def soft_delete_thread(self, thread_id: str, user_id: str) -> bool:
+        """Thread'i soft delete yap (sadece conversations tablosunda)"""
         try:
-            # user_id kontrolü zorunlu - güvenlik için
-            result = self.supabase.table("conversations").select("*").eq("user_id", user_id).order("created_at", desc=True).limit(limit).execute()
+            # Thread'deki tüm mesajları soft delete
+            result = self.supabase.table("conversations").update({
+                "deleted_by_user": True
+            }).eq("thread_id", thread_id).eq("user_id", user_id).execute()
 
-            print(f"📊 get_conversation_history: {len(result.data)} kayıt bulundu (user_id: {user_id})")
-            return result.data
-        except Exception as e:
-            print(f"Geçmiş getirme hatası: {e}")
-            return []
-
-    def get_user_stats(self, user_id: str) -> Dict[str, Any]:
-        """Kullanıcının conversation istatistiklerini getir"""
-        try:
-            # View'dan kullanıcı istatistiklerini al
-            result = self.supabase.table("user_conversation_stats").select("*").eq("user_id", user_id).execute()
-            
-            if result.data and len(result.data) > 0:
-                return {
-                    "success": True,
-                    "stats": result.data[0]
-                }
-            else:
-                return {
-                    "success": True,
-                    "stats": {
-                        "total_conversations": 0,
-                        "avg_confidence": 0,
-                        "last_conversation_at": None,
-                        "favorite_model": None
-                    }
-                }
-        except Exception as e:
-            return {
-                "success": False,
-                "error": str(e),
-                "message": "İstatistik getirme hatası"
-            }
-
-    def get_conversation_count(self, user_id: str) -> int:
-        """Kullanıcının toplam conversation sayısını getir"""
-        try:
-            # PostgreSQL function'ını çağır
-            result = self.supabase.rpc("get_user_conversation_count", {"target_user_id": user_id}).execute()
-            return result.data if result.data else 0
-        except Exception as e:
-            print(f"Conversation count hatası: {e}")
-            return 0
-
-    def search_conversations(self, user_id: str, search_term: str, limit: int = 20) -> list:
-        """Kullanıcının conversation'larında arama yap"""
-        try:
-            result = self.supabase.table("conversations").select("*").eq("user_id", user_id).or_(
-                f"question.ilike.%{search_term}%,answer.ilike.%{search_term}%"
-            ).order("created_at", desc=True).limit(limit).execute()
-            
-            return result.data
-        except Exception as e:
-            print(f"Conversation arama hatası: {e}")
-            return []
-
-    def delete_conversation(self, conversation_id: int, user_id: str) -> bool:
-        """Kullanıcının belirli bir conversation'ını sil"""
-        try:
-            result = self.supabase.table("conversations").delete().eq("id", conversation_id).eq("user_id", user_id).execute()
+            print(f"✅ Thread soft deleted: {thread_id}")
             return True
         except Exception as e:
-            print(f"Conversation silme hatası: {e}")
+            print(f"❌ Soft delete hatası: {e}")
             return False
 
-    def get_conversation_by_id(self, conversation_id: int, user_id: Optional[str] = None) -> Optional[dict]:
-        """Belirli bir conversation'ın detaylarını getir"""
+    def get_thread_messages(self, thread_id: str, user_id: str) -> list:
+        """Belirli bir thread'in tüm mesajlarını getir (deleted olanlar hariç)"""
         try:
-            query = self.supabase.table("conversations").select("*").eq("id", conversation_id)
-            
-            # Eğer user_id varsa, sadece o kullanıcının conversation'larına erişim ver
-            if user_id:
-                query = query.eq("user_id", user_id)
-            
-            result = query.single().execute()
+            # Thread'in deleted durumunu kontrol et
+            check_result = self.supabase.table("conversations").select("deleted_by_user").eq("thread_id", thread_id).eq("user_id", user_id).limit(1).execute()
+
+            if check_result.data and check_result.data[0].get("deleted_by_user", False):
+                print(f"⚠️ Deleted thread access attempt: {thread_id} by {user_id}")
+                return []
+
+            result = self.supabase.rpc("get_thread_messages", {"target_thread_id": thread_id}).execute()
+
+            # Güvenlik için user_id kontrolü
+            if result.data:
+                # İlk mesajın user_id'sini kontrol et
+                first_message = result.data[0] if result.data else None
+                if first_message and first_message.get('user_id') != user_id:
+                    print(f"⚠️ Unauthorized thread access attempt: {thread_id} by {user_id}")
+                    return []
+
+                # Deleted mesajları filtrele
+                filtered_messages = [msg for msg in result.data if not msg.get('deleted_by_user', False)]
+                print(f"📊 get_thread_messages: {len(filtered_messages)} mesaj bulundu (thread: {thread_id})")
+                return filtered_messages
+
+            print(f"📊 get_thread_messages: 0 mesaj bulundu (thread: {thread_id})")
+            return []
+        except Exception as e:
+            print(f"Thread mesajları getirme hatası: {e}")
+            return []
+
+    def restore_thread(self, thread_id: str, user_id: str) -> bool:
+        """Soft deleted thread'i geri getir"""
+        try:
+            # Thread'deki tüm mesajları restore et
+            result = self.supabase.table("conversations").update({
+                "deleted_by_user": False
+            }).eq("thread_id", thread_id).eq("user_id", user_id).execute()
+
+            print(f"✅ Thread restored: {thread_id}")
+            return True
+        except Exception as e:
+            print(f"❌ Restore hatası: {e}")
+            return False
+
+    def get_conversation_history(self, user_id: str, limit: int = 50):
+        """Kullanıcının geçmiş sohbetlerini getir (deleted olanlar hariç)"""
+        try:
+            result = self.supabase.table("conversations").select("*").eq("user_id", user_id).eq("deleted_by_user", False).order("created_at", desc=True).limit(limit).execute()
+
+            print(f"📊 get_conversation_history: {len(result.data)} sohbet bulundu (user_id: {user_id})")
             return result.data
         except Exception as e:
-            print(f"Conversation getirme hatası: {e}")
-            return None
-
-    def get_user_models(self, user_id: str) -> list:
-        """Kullanıcının kullandığı model'ları ve sayılarını getir"""
-        try:
-            result = self.supabase.table("conversations").select("model_name").eq("user_id", user_id).execute()
-            
-            # Model sayımı yap
-            models = {}
-            for row in result.data:
-                model = row.get("model_name", "unknown")
-                models[model] = models.get(model, 0) + 1
-            
-            # Sayıya göre sırala
-            sorted_models = sorted(models.items(), key=lambda x: x[1], reverse=True)
-            
-            return [{"model_name": model, "count": count} for model, count in sorted_models]
-        except Exception as e:
-            print(f"Model listesi hatası: {e}")
+            print(f"Conversation history getirme hatası: {e}")
             return []
+

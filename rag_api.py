@@ -21,6 +21,7 @@ class GenerateRequest(BaseModel):
     question: str
     top_k: Optional[int] = 3
     user_id: Optional[str] = None
+    thread_id: Optional[str] = None  # Thread ID olarak değiştir (UUID string)
 
 
 class GenerateResponse(BaseModel):
@@ -245,6 +246,7 @@ async def generate(request: GenerateRequest, current_user = Depends(get_current_
     start_time = time.time()
     conversation_saved = False
     conversation_id = None
+    thread_id = None
 
     try:
         result = qa_system.answer_question(
@@ -264,12 +266,14 @@ async def generate(request: GenerateRequest, current_user = Depends(get_current_
                     confidence=result.get("confidence", 0),
                     sources=result.get("sources", []),
                     response_time=response_time,
-                    user_id=user_id
+                    user_id=user_id,
+                    thread_id=request.thread_id  # thread_id olarak düzelt
                 )
                 if conversation_result["success"]:
                     conversation_saved = True
                     conversation_id = conversation_result["conversation_id"]
-                    print(f"✓ Conversation kaydedildi (ID: {conversation_id}, User: {user_id or 'Anonymous'}, Response: {len(result['answer'])} chars)")
+                    thread_id = conversation_result["thread_id"]
+                    print(f"✓ Conversation kaydedildi (ID: {conversation_id}, Thread: {thread_id}, User: {user_id or 'Anonymous'})")
                 else:
                     print(f"✗ Conversation kaydetme başarısız (User: {user_id or 'Anonymous'})")
             except Exception as save_error:
@@ -287,6 +291,7 @@ async def generate(request: GenerateRequest, current_user = Depends(get_current_
             "sources": result.get("sources", []),
             "conversation_saved": conversation_saved,
             "conversation_id": conversation_id,
+            "thread_id": thread_id if conversation_saved else None,
             "user_authenticated": current_user is not None
         }
 
@@ -332,6 +337,7 @@ async def generate_stream(request: GenerateRequest, current_user = Depends(get_c
                 top_confidence = search_results[0]['score'] if search_results else 0
                 conversation_saved = False
                 conversation_id = None
+                thread_id = None
 
                 # Chat kaydetme işlemini güçlendir ve senkron yap
                 if supabase_logger and full_answer.strip():
@@ -343,12 +349,14 @@ async def generate_stream(request: GenerateRequest, current_user = Depends(get_c
                             confidence=top_confidence,
                             sources=search_results[:4],
                             response_time=response_time,
-                            user_id=user_id
+                            user_id=user_id,
+                            thread_id=request.thread_id  # thread_id parametresini ekle
                         )
                         if conversation_result["success"]:
                             conversation_saved = True
                             conversation_id = conversation_result["conversation_id"]
-                            print(f"✓ Streaming conversation kaydedildi (ID: {conversation_id}, User: {user_id or 'Anonymous'}, Response: {len(full_answer)} chars)")
+                            thread_id = conversation_result["thread_id"]
+                            print(f"✓ Streaming conversation kaydedildi (ID: {conversation_id}, Thread: {thread_id}, User: {user_id or 'Anonymous'})")
                         else:
                             print(f"✗ Streaming conversation kaydetme başarısız (User: {user_id or 'Anonymous'})")
                     except Exception as save_error:
@@ -366,6 +374,7 @@ async def generate_stream(request: GenerateRequest, current_user = Depends(get_c
                     "method": "ollama_with_rag" if context else "ollama_general",
                     "conversation_saved": conversation_saved,
                     "conversation_id": conversation_id,
+                    "thread_id": thread_id if conversation_saved else None,
                     "user_authenticated": current_user is not None
                 }) + "\n\n"
 
@@ -395,21 +404,18 @@ async def get_history(
     current_user = Depends(require_auth),  # Auth zorunlu yap
     limit: int = Query(50)
 ):
-    """Konuşma geçmişini getir - Sadece authenticated user kendi geçmişini görür"""
+    """Konuşma geçmişini getir - Thread sistemi ile uyumlu (backward compatibility için)"""
     if not supabase_logger:
         raise HTTPException(status_code=500, detail="Supabase bağlantısı yok")
 
-    # Sadece authenticated user'ın kendi conversation'larını getir
+    # get_conversation_history fonksiyonunu kullan (soft delete uyumlu)
     history = supabase_logger.get_conversation_history(current_user.id, limit)
-
-    # Conversation count da ekle
-    total_count = supabase_logger.get_conversation_count(current_user.id)
 
     return {
         "conversations": history,
         "user_authenticated": True,
         "user_id": current_user.id,
-        "total_conversations": total_count,
+        "total_conversations": len(history),
         "showing": len(history),
         "limit": limit
     }
@@ -494,15 +500,101 @@ async def get_latest_conversations(
     if not supabase_logger:
         raise HTTPException(status_code=500, detail="Supabase bağlantısı yok")
 
-    # Sadece authenticated user'ın son conversation'larını getir
-    latest = supabase_logger.get_conversation_history(current_user.id, limit)
+    # Thread sistemi kullan
+    threads = supabase_logger.get_conversation_threads(current_user.id, limit)
+    
+    # Eski format için dönüştür
+    conversations = []
+    for thread in threads:
+        conversations.append({
+            "id": thread.get("first_message_id"),
+            "thread_id": thread.get("thread_id"),
+            "question": thread.get("thread_title"),
+            "created_at": thread.get("thread_created_at"),
+            "last_updated_at": thread.get("last_updated_at"),
+            "message_count": thread.get("message_count", 1)
+        })
 
     return {
-        "conversations": latest,
+        "conversations": conversations,
         "user_id": current_user.id,
-        "count": len(latest),
+        "count": len(conversations),
         "timestamp": datetime.utcnow().isoformat()
     }
+
+@app.get("/threads")
+async def get_conversation_threads(
+    current_user = Depends(require_auth),
+    limit: int = Query(50)
+):
+    """Kullanıcının conversation thread'lerini getir (yeni thread sistemi)"""
+    if not supabase_logger:
+        raise HTTPException(status_code=500, detail="Supabase bağlantısı yok")
+
+    # Thread'leri getir
+    threads = supabase_logger.get_conversation_threads(current_user.id, limit)
+
+    return {
+        "threads": threads,
+        "user_authenticated": True,
+        "user_id": current_user.id,
+        "showing": len(threads),
+        "limit": limit
+    }
+
+@app.get("/threads/{thread_id}/messages")
+async def get_thread_messages(
+    thread_id: str,
+    current_user = Depends(require_auth)
+):
+    """Belirli bir thread'in tüm mesajlarını getir"""
+    if not supabase_logger:
+        raise HTTPException(status_code=500, detail="Supabase bağlantısı yok")
+
+    # Thread'in mesajlarını getir
+    messages = supabase_logger.get_thread_messages(thread_id, current_user.id)
+
+    if not messages:
+        raise HTTPException(status_code=404, detail="Thread bulunamadı veya erişim izni yok")
+
+    return {
+        "thread_id": thread_id,
+        "messages": messages,
+        "message_count": len(messages),
+        "user_authenticated": True
+    }
+
+@app.delete("/threads/{thread_id}")
+async def soft_delete_thread(
+    thread_id: str,
+    current_user = Depends(require_auth)
+):
+    """Thread'i soft delete yap (kullanıcıdan gizle)"""
+    if not supabase_logger:
+        raise HTTPException(status_code=500, detail="Supabase bağlantısı yok")
+
+    success = supabase_logger.soft_delete_thread(thread_id, current_user.id)
+
+    if success:
+        return {"message": "Thread başarıyla silindi", "thread_id": thread_id}
+    else:
+        raise HTTPException(status_code=404, detail="Thread bulunamadı veya silinirken hata oluştu")
+
+@app.post("/threads/{thread_id}/restore")
+async def restore_thread(
+    thread_id: str,
+    current_user = Depends(require_auth)
+):
+    """Soft deleted thread'i geri getir"""
+    if not supabase_logger:
+        raise HTTPException(status_code=500, detail="Supabase bağlantısı yok")
+
+    success = supabase_logger.restore_thread(thread_id, current_user.id)
+
+    if success:
+        return {"message": "Thread başarıyla geri getirildi", "thread_id": thread_id}
+    else:
+        raise HTTPException(status_code=404, detail="Thread bulunamadı veya geri getirilirken hata oluştu")
 
 if __name__ == "__main__":
     uvicorn.run("rag_api:app", host="0.0.0.0", port=8000, reload=True)
