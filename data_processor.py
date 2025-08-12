@@ -171,11 +171,9 @@ class RAGDataProcessor:
 if __name__ == "__main__":
     processor = RAGDataProcessor()
 
-    # Verileri yükle
     processor.load_jsonl_data("llm_augmented.jsonl")
     processor.load_txt_folder("RAG_database", chunk_size=512, overlap=100)
 
-    # Embedding ve index oluştur
     processor.create_embeddings()
     processor.build_faiss_index()
     processor.save_index("faiss_index.bin", "documents.pkl")

@@ -1,16 +1,13 @@
 #!/usr/bin/env python3
-"""
-Supabase Auth Debug Script - Kayıt sorununun kaynağını bulmak için
-"""
+
 
 import os
 from dotenv import load_dotenv
 from supabase import create_client, Client
 
 def debug_supabase_auth():
-    print("=== Supabase Auth Debug ===")
+    print("DEbug")
     
-    # Environment variables yükle
     load_dotenv()
     
     supabase_url = os.getenv("SUPABASE_URL")
@@ -26,15 +23,13 @@ def debug_supabase_auth():
     print(f"URL: {supabase_url}")
     print(f"Key: {supabase_key[:20]}...{supabase_key[-10:]}")
     
-    # Supabase client test
     try:
         supabase: Client = create_client(supabase_url, supabase_key)
-        print("✓ Supabase client oluşturuldu")
+        print("Supabase client oluşturuldu")
     except Exception as e:
-        print(f"❌ Supabase client hatası: {e}")
+        print(f"Supabase client hatası: {e}")
         return False
     
-    # Auth test - basit kayıt denemesi
     test_email = "debug-test@example.com"
     test_password = "testpass123"
     
@@ -42,15 +37,12 @@ def debug_supabase_auth():
     print(f"Test Email: {test_email}")
     
     try:
-        # Önce mevcut kullanıcıyı sil (varsa)
         print("Eski test kullanıcısını temizlemeye çalışıyor...")
         try:
-            # Admin API kullanımı için service_role key gerekli, o yüzden skip
             pass
         except:
             pass
         
-        # Yeni kayıt dene
         print("Yeni kullanıcı kaydı deneniyor...")
         response = supabase.auth.sign_up({
             "email": test_email,
@@ -60,41 +52,40 @@ def debug_supabase_auth():
             }
         })
         
-        print("✓ Kayıt başarılı!")
+        print("Kayıt başarılı!")
         print(f"User ID: {response.user.id if response.user else 'None'}")
         print(f"Email confirmed: {response.user.email_confirmed_at is not None if response.user else 'Unknown'}")
         print(f"Session: {'Var' if response.session else 'Yok'}")
         
         if response.user and not response.user.email_confirmed_at:
-            print("⚠️ Email confirmation gerekli!")
+            print("⚠Email confirmation gerekli!")
             print("Supabase Dashboard > Authentication > Settings > 'Enable email confirmations' kontrolü yapın")
         
         return True
         
     except Exception as e:
-        print(f"❌ Auth kayıt hatası: {e}")
+        print(f"Auth kayıt hatası: {e}")
         print(f"Hata tipi: {type(e).__name__}")
         
-        # Detaylı hata analizi
         error_str = str(e).lower()
         
         if "email" in error_str and "confirm" in error_str:
-            print("\n🔧 Çözüm: Email confirmation ayarları")
+            print("\nÇözüm: Email confirmation ayarları")
             print("1. Supabase Dashboard > Authentication > Settings")
             print("2. 'Enable email confirmations' kapatın veya SMTP ayarlayın")
             
         elif "invalid" in error_str or "credentials" in error_str:
-            print("\n🔧 Çözüm: API credentials kontrol")
+            print("\nÇözüm: API credentials kontrol")
             print("1. SUPABASE_URL doğru mu?")
             print("2. SUPABASE_ANON_KEY doğru mu?")
             
         elif "rate" in error_str or "limit" in error_str:
-            print("\n🔧 Çözüm: Rate limiting")
+            print("\nÇözüm: Rate limiting")
             print("1. Çok fazla deneme yapılmış olabilir")
             print("2. Birkaç dakika bekleyin")
             
         elif "domain" in error_str or "url" in error_str:
-            print("\n🔧 Çözüm: Domain ayarları")
+            print("\nÇözüm: Domain ayarları")
             print("1. Supabase Dashboard > Authentication > URL Configuration")
             print("2. Site URL: http://localhost:8000 ekleyin")
             
@@ -110,20 +101,20 @@ def check_supabase_auth_settings():
     print("\n=== Supabase Auth Settings Kontrol Listesi ===")
     print("Supabase Dashboard'da kontrol edilmesi gerekenler:")
     print("")
-    print("📍 Authentication > Settings:")
+    print("Authentication > Settings:")
     print("   • Enable email confirmations: KAPALI olmalı (veya SMTP ayarlı)")
     print("   • Enable phone confirmations: İhtiyaca göre")
     print("   • JWT expiry: 3600 (1 saat)")
     print("")
-    print("📍 Authentication > URL Configuration:")
+    print("Authentication > URL Configuration:")
     print("   • Site URL: http://localhost:8000")
     print("   • Additional Redirect URLs: http://localhost:3000, http://localhost:8000")
     print("")
-    print("📍 Settings > API:")
+    print("Settings > API:")
     print("   • Project URL: .env dosyasındaki SUPABASE_URL ile aynı")
     print("   • anon public key: .env dosyasındaki SUPABASE_ANON_KEY ile aynı")
     print("")
-    print("📍 Authentication > Providers:")
+    print("Authentication > Providers:")
     print("   • Email: Enabled")
     print("   • Diğer provider'lar ihtiyaca göre")
 
@@ -133,4 +124,4 @@ if __name__ == "__main__":
     if not success:
         check_supabase_auth_settings()
         
-    print(f"\n{'✅ Debug tamamlandı!' if success else '❌ Sorunlar var, yukarıdaki çözümleri deneyin.'}")
+    print(f"\n{'Debug tamamlandı!' if success else '❌ Sorunlar var, yukarıdaki çözümleri deneyin.'}")

@@ -9,41 +9,34 @@ os.environ['TRANSFORMERS_VERBOSITY'] = 'error'
 
 
 class OllamaRAGQA:
-    """Ollama ile yerel LLM kullanarak RAG sistemi"""
 
-    def __init__(self, retriever, model_name: str = "gemma3"):
-        """
-        Args:
-            retriever: RAG retriever instance
-            model_name: Ollama model adı (gemma3, llama3.2, deepseek-r1 vb.)
-        """
+    def __init__(self, retriever, model_name: str = "deepseek-r1:1.5b"):
+
         self.retriever = retriever
         self.model_name = model_name
         self.ollama_url = "http://localhost:11434/api/generate"
 
     def check_ollama_status(self) -> bool:
-        """Ollama'nın çalışıp çalışmadığını kontrol et"""
         try:
             response = requests.get("http://localhost:11434/api/tags", timeout=10)
             if response.status_code == 200:
                 models_data = response.json()
                 models = models_data.get('models', [])
                 model_names = [model['name'] for model in models]
-                print(f"📋 Mevcut modeller: {[name.split(':')[0] for name in model_names]}")
+                print(f"Mevcut modeller: {[name.split(':')[0] for name in model_names]}")
 
-                # Kullanmak istediğimiz modelin var olup olmadığını kontrol et
                 current_model_exists = any(self.model_name in name for name in model_names)
                 if not current_model_exists:
-                    print(f"⚠️ Model '{self.model_name}' bulunamadı!")
+                    print(f"⚠Model '{self.model_name}' bulunamadı!")
                     return False
 
                 return True
             return False
         except requests.exceptions.ConnectionError:
-            print("❌ Ollama sunucusuna bağlanılamadı. 'ollama serve' komutu çalıştırılmış mı?")
+            print("Ollama sunucusuna bağlanılamadı. 'ollama serve' komutu çalıştırılmış mı?")
             return False
         except Exception as e:
-            print(f"❌ Ollama bağlantı hatası: {e}")
+            print(f"Ollama bağlantı hatası: {e}")
             return False
 
     def generate_answer(self, question: str, context: str) -> str:
@@ -51,15 +44,12 @@ class OllamaRAGQA:
         if not self.check_ollama_status():
             return "Ollama çalışmıyor. Lütfen 'ollama serve' komutunu çalıştırın."
 
-        # Prompt uzunluğunu kontrol et - çok uzun olabilir
         if len(context) > 15000:
             context = context[:15000] + "..."
             print(f"Bağlam çok uzun, kısaltıldı: {len(context)} karakter")
 
-        # Sorunun dilini tespit et
         question_language = "Turkish" if any(turkish_word in question.lower() for turkish_word in ['nedir', 'nasıl', 'neden', 'ne', 'kim', 'hangi']) else "English"
         
-        # Yeni hibrit yaklaşım: RAG bilgilerini kullanarak detaylı ve samimi cevap
         if context and context.strip():
             prompt = f"""Sen yardımcı ve bilgili bir yapay zeka asistanısın. Kullanıcının sorusunu aşağıdaki bilgileri kullanarak cevaplayacaksın.
 
@@ -94,13 +84,13 @@ Lütfen soruyu yanıtla:"""
                 "prompt": prompt,
                 "stream": False,
                 "options": {
-                    "temperature": 0.4,  # Orta seviye yaratıcılık
+                    "temperature": 0.4,
                     "top_p": 0.9,
-                    "max_tokens": 600  # Daha uzun cevaplar için
+                    "max_tokens": 600
                 }
             }
 
-            print(f"🔍 Ollama API'ye istek gönderiliyor...")
+            print(f"Ollama API'ye istek gönderiliyor")
             response = requests.post(
                 self.ollama_url,
                 json=payload,
@@ -117,17 +107,16 @@ Lütfen soruyu yanıtla:"""
                 except:
                     error_detail = response.text[:200]
 
-                print(f"❌ Ollama API hatası: {response.status_code} - {error_detail}")
+                print(f"Ollama API hatası: {response.status_code} - {error_detail}")
                 return f"Ollama hatası: HTTP {response.status_code} - {error_detail}"
 
         except requests.exceptions.Timeout:
-            return "⏰ Ollama yanıt süresi aşıldı. Model çok büyük olabilir."
+            return "Ollama yanıt süresi aşıldı. Model çok büyük olabilir."
         except Exception as e:
-            print(f"❌ Ollama bağlantı hatası: {str(e)}")
+            print(f"Ollama bağlantı hatası: {str(e)}")
             return f"Ollama bağlantı hatası: {str(e)}"
 
     def generate_answer_stream(self, question: str, context: str):
-        """Streaming yanıt üretir - gerçek zamanlı chunk'lar döndürür"""
         if not self.check_ollama_status():
             yield "Ollama çalışmıyor. Lütfen 'ollama serve' komutunu çalıştırın."
             return
@@ -138,32 +127,32 @@ Lütfen soruyu yanıtla:"""
         question_language = "Turkish" if any(turkish_word in question.lower() for turkish_word in ['nedir', 'nasıl', 'neden', 'ne', 'kim', 'hangi']) else "English"
 
         if context and context.strip():
-            prompt = f"""Sen yardımcı ve bilgili bir yapay zeka asistanısın. Kullanıcının sorusunu aşağıdaki bilgileri kullanarak cevaplayacaksın.
+            prompt = f"""You are a GEODI AI assitant. You will answer the user's question using the provided database information.
 
-VERİ TABANI BİLGİLERİ:
+DATABASE INFORMATION:
 {context}
 
-KULLANICININ SORUSU: {question}
+USER'S QUESTION: {question}
 
-TALİMATLAR:
-1. Verilen bilgileri kullanarak soruya net ve anlaşılır bir cevap ver
-2. Cevabını samimi ve yardımsever bir tonla yaz
-3. Ham veri yapıştırma, işleyip düzgün cevap ver
-4. {question_language} dilinde cevap ver
-5. Eğer verilen bilgiler yetersizse, genel bilginle destekle
+INSTRUCTIONS:
+1. Use the provided information to give a clear and concise answer
+2. Write your answer in a friendly and helpful tone
+3. Do not paste raw data, process it and give a proper answer
+4. Answer in {question_language} language
+5. If the provided information is insufficient, supplement with your general knowledge
 
-Lütfen soruyu yanıtla:"""
+Please answer the question:"""
         else:
-            prompt = f"""Sen yardımcı bir yapay zeka asistanısın. Kullanıcının sorusuna mevcut genel bilginle cevap ver.
+            prompt = f"""You are a helpful AI assistant. You will answer the user's question using your general knowledge.
 
-KULLANICININ SORUSU: {question}
+USER'S QUESTION: {question}
 
-TALİMATLAR:
-1. Soruya samimi ve yardımsever bir tonla cevap ver
-2. {question_language} dilinde cevap ver
-3. Eğer bilmiyorsan dürüstçe söyle
+INSTRUCTIONS:
+1. Provide a friendly and helpful answer
+2. Answer in {question_language} language
+3. If you don't know, be honest and say so
 
-Lütfen soruyu yanıtla:"""
+Please answer the question:"""
 
         try:
             payload = {
@@ -204,7 +193,6 @@ Lütfen soruyu yanıtla:"""
             yield f"Ollama bağlantı hatası: {str(e)}"
 
     def is_general_chat_question(self, question: str) -> bool:
-        """Sorunun genel sohbet sorusu olup olmadığını kontrol et"""
         general_chat_keywords = [
             'merhaba', 'selam', 'hello', 'hi', 'hey',
             'nasılsın', 'nasıl gidiyor', 'how are you', 'how do you do',
@@ -237,7 +225,6 @@ Lütfen soruyu yanıtla:"""
         return any(keyword in question_lower for keyword in general_chat_keywords)
 
     def _contains_technical_terms(self, question: str) -> bool:
-        """Sorunun teknik terimler içerip içermediğini kontrol et"""
         technical_terms = [
             'port', 'api', 'agent', 'server', 'database', 'config', 'ip', 'url',
             'geodi', 'gde', 'discovery', 'communication', 'protocol', 'service',
@@ -249,7 +236,6 @@ Lütfen soruyu yanıtla:"""
         return any(term in question_lower for term in technical_terms)
 
     def _check_answer_consistency(self, results: List[Dict], question: str) -> Dict:
-        """Sonuçların tutarlılığını kontrol et ve en güvenilir cevabı seç"""
         if not results:
             return None
             
@@ -264,15 +250,14 @@ Lütfen soruyu yanıtla:"""
         }
 
     def generate_general_response(self, question: str) -> str:
-        """Genel sohbet soruları için yapay zeka benzeri cevap üret"""
         if not self.check_ollama_status():
             return "Ollama çalışmıyor. Lütfen 'ollama serve' komutunu çalıştırın."
 
-        prompt = f"""Sen yardımcı bir yapay zeka asistanısın. Kullanıcının sorusuna doğal ve samimi bir şekilde cevap ver.
+        prompt = f"""You are a helpful AI assistant. You will answer the user's question in a casual and engaging way.
 
 SORU: {question}
 
-Kısa, samimi ve yardımsever bir cevap ver. Türkçe cevap ver."""
+Please answer the question in a friendly and conversational tone:"""
 
         try:
             payload = {
@@ -296,11 +281,10 @@ Kısa, samimi ve yardımsever bir cevap ver. Türkçe cevap ver."""
                 result = response.json()
                 return result.get('response', 'Cevap alınamadı.')
             else:
-                return "Üzgünüm, şu anda cevap veremiyorum."
+                return "I'am sorry, I cant's answer that right now."
 
         except Exception as e:
-            return "Merhaba! Size nasıl yardımcı olabilirim?"
-
+            return "Hello, how can I help you? I'm just a simple AI assistant and can't answer that right now."
     def answer_question(self, question: str, top_k: int = 5, confidence_threshold: float = 0.0) -> Dict:
         search_results = self.retriever.search(question, 10)
 
@@ -374,7 +358,7 @@ Kısa, samimi ve yardımsever bir cevap ver. Türkçe cevap ver."""
             print("Ollama çalışmıyor!")
             print("Kurulum için: https://ollama.ai")
             print("Başlatmak için: ollama serve")
-            print("Model indirmek için: ollama deepseek-r1")
+            print("Model indirmek için: ollama deepseek-r1:1.5b")
             print("\nYine de temel arama yapabilirsiniz...")
         else:
             print(f"Ollama aktif - Model: {self.model_name}")
@@ -430,7 +414,7 @@ if __name__ == "__main__":
 
     try:
         retriever.load_from_files("faiss_index.bin", "documents.pkl")
-        qa_system = OllamaRAGQA(retriever, model_name="gemma3")
+        qa_system = OllamaRAGQA(retriever, model_name="deepseek-r1:1.5b")
         qa_system.interactive_qa()
 
     except FileNotFoundError:

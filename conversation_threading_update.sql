@@ -1,24 +1,17 @@
--- ===== CONVERSATION THREADING SİSTEMİ =====
-
--- 1. Conversations tablosuna thread yapısı ekle
 ALTER TABLE conversations
 ADD COLUMN IF NOT EXISTS thread_id UUID DEFAULT NULL,
 ADD COLUMN IF NOT EXISTS parent_message_id INTEGER DEFAULT NULL,
 ADD COLUMN IF NOT EXISTS message_order INTEGER DEFAULT 1;
 
--- 2. Thread ID için index ekle
 CREATE INDEX IF NOT EXISTS idx_conversations_thread_id ON conversations(thread_id);
 CREATE INDEX IF NOT EXISTS idx_conversations_parent_message ON conversations(parent_message_id);
 CREATE INDEX IF NOT EXISTS idx_conversations_thread_order ON conversations(thread_id, message_order);
 
--- 3. Mevcut conversations'ları thread'lere organize et
--- Her conversation kendi thread'inin ilk mesajı olarak ayarla
 UPDATE conversations
 SET thread_id = gen_random_uuid(),
     message_order = 1
 WHERE thread_id IS NULL;
 
--- 4. Thread başlıkları için view oluştur
 CREATE OR REPLACE VIEW conversation_threads AS
 SELECT
     c.thread_id,
@@ -45,7 +38,6 @@ LEFT JOIN conversations last_msg ON (
 WHERE c.thread_id IS NOT NULL
 GROUP BY c.thread_id, c.user_id, first_msg.question, first_msg.created_at, last_msg.created_at, first_msg.id, last_msg.id;
 
--- 5. Thread mesajları için function oluştur
 CREATE OR REPLACE FUNCTION get_thread_messages(target_thread_id UUID)
 RETURNS TABLE (
     id INTEGER,
@@ -81,7 +73,6 @@ AS $$
     ORDER BY c.message_order ASC;
 $$;
 
--- 6. Yeni thread oluşturma function'ı
 CREATE OR REPLACE FUNCTION create_new_thread()
 RETURNS UUID
 LANGUAGE SQL
@@ -89,7 +80,6 @@ AS $$
     SELECT gen_random_uuid();
 $$;
 
--- 7. Thread'e mesaj ekleme function'ı
 CREATE OR REPLACE FUNCTION get_next_message_order(target_thread_id UUID)
 RETURNS INTEGER
 LANGUAGE SQL STABLE
@@ -99,13 +89,11 @@ AS $$
     WHERE thread_id = target_thread_id;
 $$;
 
--- 8. RLS policy'lerini thread yapısına uygun güncelle
 DROP POLICY IF EXISTS "Users can view own conversations" ON conversations;
 DROP POLICY IF EXISTS "Users can insert own conversations" ON conversations;
 DROP POLICY IF EXISTS "Users can update own conversations" ON conversations;
 DROP POLICY IF EXISTS "Users can delete own conversations" ON conversations;
 
--- Thread-aware policy'ler
 CREATE POLICY "Users can view own conversation threads" ON conversations
     FOR SELECT USING (auth.uid() = user_id);
 
@@ -118,7 +106,6 @@ CREATE POLICY "Users can update own conversation threads" ON conversations
 CREATE POLICY "Users can delete own conversation threads" ON conversations
     FOR DELETE USING (auth.uid() = user_id);
 
--- 9. Thread istatistikleri için view
 CREATE OR REPLACE VIEW user_thread_stats AS
 SELECT
     user_id,

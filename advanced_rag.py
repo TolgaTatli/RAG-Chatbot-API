@@ -4,22 +4,13 @@ from openai import OpenAI
 from rag_system import RAGRetriever
 from dotenv import load_dotenv
 
-# .env dosyasından environment variables yükle
 load_dotenv()
-
 class AdvancedRAGQA:
-    """OpenAI GPT ile gelişmiş RAG soru-cevap sistemi"""
-
     def __init__(self, retriever: RAGRetriever, model_name: str = "gpt-3.5-turbo"):
-        """
-        Args:
-            retriever: RAG retriever instance
-            model_name: OpenAI model adı
-        """
+
         self.retriever = retriever
         self.model_name = model_name
 
-        # OpenAI istemcisini başlat
         api_key = os.getenv("OPENAI_API_KEY")
         if api_key:
             self.client = OpenAI(api_key=api_key)
@@ -29,16 +20,6 @@ class AdvancedRAGQA:
             print("Lütfen .env dosyasına OPENAI_API_KEY=your_api_key ekleyin")
 
     def generate_answer(self, question: str, context: str) -> str:
-        """
-        Bağlama dayalı cevap üret
-
-        Args:
-            question: Kullanıcı sorusu
-            context: İlgili dökümanlardan oluşan bağlam
-
-        Returns:
-            Oluşturulan cevap
-        """
         prompt = f"""Sen yardımсı bir asistansın. Aşağıdaki bağlam bilgilerini kullanarak kullanıcının sorusunu cevapla.
 
 BAĞLAM:
@@ -75,20 +56,9 @@ CEVAP:"""
             return f"Cevap oluştururken hata oluştu: {e}"
 
     def answer_question(self, question: str, top_k: int = 3) -> Dict:
-        """
-        Soruya detaylı cevap ver
 
-        Args:
-            question: Soru
-            top_k: Kullanılacak döküman sayısı
-
-        Returns:
-            Cevap ve meta bilgiler
-        """
-        # İlgili dökümanları bul
         search_results = self.retriever.search(question, top_k)
 
-        # Bağlam oluştur
         context = self.retriever.get_context_for_query(question, top_k)
 
         if not search_results:
@@ -100,12 +70,10 @@ CEVAP:"""
                 'method': 'no_results'
             }
 
-        # GPT ile cevap oluştur
         if self.client:
             answer = self.generate_answer(question, context)
             method = 'gpt_generated'
         else:
-            # Fallback: En iyi eşleşen dökümanı kullan
             best_match = search_results[0]
             answer = f"En ilgili bilgi: {best_match['text'][:300]}..."
             method = 'retrieval_only'
@@ -120,7 +88,6 @@ CEVAP:"""
         }
 
     def interactive_qa(self):
-        """Gelişmiş etkileşimli soru-cevap modu"""
         print("🤖 Gelişmiş RAG Soru-Cevap Sistemi")
         print("Çıkmak için 'quit' yazın.")
         print("Yardım için 'help' yazın.")
@@ -153,7 +120,6 @@ CEVAP:"""
                 print(f"• Kaynak sayısı: {len(result['sources'])}")
                 print(f"• Yöntem: {result['method']}")
 
-                # Kaynakları göster seçeneği
                 if result['sources']:
                     show_sources = input("\n📚 Kaynak dökümanları görmek ister misiniz? (e/h): ").strip().lower()
                     if show_sources in ['e', 'evet', 'y', 'yes']:
@@ -166,7 +132,6 @@ CEVAP:"""
                 print(f"❌ Hata oluştu: {e}")
 
     def show_help(self):
-        """Yardım bilgilerini göster"""
         help_text = """
 🆘 **Yardım**
 
@@ -190,20 +155,16 @@ CEVAP:"""
 if __name__ == "__main__":
     print("🚀 Gelişmiş RAG sistemi başlatılıyor...")
 
-    # Retriever'ı başlat
     retriever = RAGRetriever()
 
     try:
-        # Önceden oluşturulmuş index'i yükle
         retriever.load_from_files("faiss_index.bin", "documents.pkl")
 
-        # Gelişmiş QA sistemi oluştur
         qa_system = AdvancedRAGQA(retriever)
 
-        # Etkileşimli mod başlat
         qa_system.interactive_qa()
 
     except FileNotFoundError:
-        print("❌ Index dosyaları bulunamadı. Önce data_processor.py çalıştırın.")
+        print("Index dosyaları bulunamadı. Önce data_processor.py çalıştırın.")
     except Exception as e:
-        print(f"❌ Hata: {e}")
+        print(f"Hata: {e}")

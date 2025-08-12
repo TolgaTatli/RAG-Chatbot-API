@@ -15,13 +15,12 @@ from ollama_rag import OllamaRAGQA
 from supabase_client import SupabaseLogger
 
 
-# ====== REQUEST/RESPONSE MODELS ======
 
 class GenerateRequest(BaseModel):
     question: str
     top_k: Optional[int] = 3
     user_id: Optional[str] = None
-    thread_id: Optional[str] = None  # Thread ID olarak değiştir (UUID string)
+    thread_id: Optional[str] = None
 
 
 class GenerateResponse(BaseModel):
@@ -62,34 +61,31 @@ supabase_logger = None
 security = HTTPBearer(auto_error=False)
 
 
-# ====== AUTH DEPENDENCY ======
 
 async def get_current_user(credentials: Optional[HTTPAuthorizationCredentials] = Depends(security)):
-    """JWT token'dan kullanıcı bilgilerini çıkar (opsiyonel)"""
     if not credentials:
-        print("🔍 get_current_user: Token bulunamadı")
+        print("get_current_user: Token bulunamadı")
         return None
     
     if not supabase_logger:
-        print("🔍 get_current_user: Supabase logger yok")
+        print("get_current_user: Supabase logger yok")
         return None
         
     try:
-        print(f"🔍 get_current_user: Token alındı - {credentials.credentials[:20]}...")
+        print(f"get_current_user: Token alındı - {credentials.credentials[:20]}...")
         user_info = supabase_logger.get_user(credentials.credentials)
         if user_info["success"]:
-            print(f"✅ get_current_user: Kullanıcı doğrulandı - {user_info['user'].email}")
+            print(f"get_current_user: Kullanıcı doğrulandı - {user_info['user'].email}")
             return user_info["user"]
         else:
-            print(f"❌ get_current_user: Token geçersiz - {user_info.get('message', 'Bilinmeyen hata')}")
+            print(f"get_current_user: Token geçersiz - {user_info.get('message', 'Bilinmeyen hata')}")
         return None
     except Exception as e:
-        print(f"❌ get_current_user exception: {e}")
+        print(f"get_current_user exception: {e}")
         return None
 
 
 async def require_auth(user = Depends(get_current_user)):
-    """Auth zorunlu endpoint'ler için"""
     if not user:
         raise HTTPException(
             status_code=401, 
@@ -103,12 +99,12 @@ async def require_auth(user = Depends(get_current_user)):
 async def startup_event():
     global retriever, qa_system, supabase_logger
 
-    print("🦙 RAG API başlatılıyor...")
+    print("RAG API başlatılıyor...")
 
     try:
         retriever = RAGRetriever()
         retriever.load_from_files("faiss_index.bin", "documents.pkl")
-        qa_system = OllamaRAGQA(retriever, model_name="gemma3")
+        qa_system = OllamaRAGQA(retriever, model_name="deepseek-r1:1.5b")
         supabase_logger = SupabaseLogger()
 
         print("RAG sistemi başarıyla yüklendi.")
@@ -142,12 +138,8 @@ async def check_status():
         "supabase_auth": "available" if supabase_logger else "unavailable"
     }
 
-
-# ====== AUTHENTICATION ENDPOINTS ======
-
 @app.post("/auth/signup")
 async def signup(request: SignUpRequest):
-    """Yeni kullanıcı kaydı"""
     if not supabase_logger:
         raise HTTPException(status_code=500, detail="Auth servisi mevcut değil")
     
@@ -165,7 +157,6 @@ async def signup(request: SignUpRequest):
 
 @app.post("/auth/signin")
 async def signin(request: AuthRequest):
-    """Kullanıcı girişi"""
     if not supabase_logger:
         raise HTTPException(status_code=500, detail="Auth servisi mevcut değil")
     
@@ -188,7 +179,6 @@ async def signin(request: AuthRequest):
 
 @app.post("/auth/signout")
 async def signout():
-    """Kullanıcı çıkışı"""
     if not supabase_logger:
         raise HTTPException(status_code=500, detail="Auth servisi mevcut değil")
     
@@ -198,7 +188,6 @@ async def signout():
 
 @app.get("/auth/me")
 async def get_me(user = Depends(require_auth)):
-    """Mevcut kullanıcı bilgilerini getir"""
     return {
         "user": {
             "id": user.id,
@@ -211,7 +200,6 @@ async def get_me(user = Depends(require_auth)):
 
 @app.get("/auth/stats")
 async def get_user_stats(user = Depends(require_auth)):
-    """Kullanıcının conversation istatistiklerini getir"""
     if not supabase_logger:
         raise HTTPException(status_code=500, detail="Supabase bağlantısı yok")
     
@@ -224,23 +212,17 @@ async def get_user_stats(user = Depends(require_auth)):
 
 @app.get("/auth/models")
 async def get_user_models(user = Depends(require_auth)):
-    """Kullanıcının kullandığı modelleri getir"""
     if not supabase_logger:
         raise HTTPException(status_code=500, detail="Supabase bağlantısı yok")
     
     models = supabase_logger.get_user_models(user.id)
     return {"models": models}
 
-
-# ====== RAG ENDPOINTS ======
-
-
 @app.post("/generate", response_model=GenerateResponse)
 async def generate(request: GenerateRequest, current_user = Depends(get_current_user)):
     if not qa_system or not retriever:
         raise HTTPException(status_code=500, detail="RAG sistemi henüz başlatılmadı")
 
-    # Authenticated user'ın ID'sini kullan, yoksa request'teki user_id'yi kullan
     user_id = current_user.id if current_user else request.user_id
 
     start_time = time.time()
@@ -256,7 +238,6 @@ async def generate(request: GenerateRequest, current_user = Depends(get_current_
 
         response_time = time.time() - start_time
 
-        # Chat kaydetme işlemini güçlendir ve SENKRON yap
         if supabase_logger and result.get("answer"):
             try:
                 conversation_result = supabase_logger.log_conversation_with_id(
@@ -273,16 +254,16 @@ async def generate(request: GenerateRequest, current_user = Depends(get_current_
                     conversation_saved = True
                     conversation_id = conversation_result["conversation_id"]
                     thread_id = conversation_result["thread_id"]
-                    print(f"✓ Conversation kaydedildi (ID: {conversation_id}, Thread: {thread_id}, User: {user_id or 'Anonymous'})")
+                    print(f"Conversation kaydedildi (ID: {conversation_id}, Thread: {thread_id}, User: {user_id or 'Anonymous'})")
                 else:
-                    print(f"✗ Conversation kaydetme başarısız (User: {user_id or 'Anonymous'})")
+                    print(f"Conversation kaydetme başarısız (User: {user_id or 'Anonymous'})")
             except Exception as save_error:
-                print(f"❌ Conversation kaydetme hatası: {save_error}")
+                print(f"Conversation kaydetme hatası: {save_error}")
         else:
             if not supabase_logger:
-                print("⚠️ Supabase logger mevcut değil - conversation kaydedilmedi!")
+                print("Supabase logger mevcut değil - conversation kaydedilmedi!")
             elif not result.get("answer"):
-                print("⚠️ Boş answer - conversation kaydedilmedi!")
+                print("Boş answer - conversation kaydedilmedi!")
 
         return {
             "answer": result["answer"],
@@ -296,7 +277,7 @@ async def generate(request: GenerateRequest, current_user = Depends(get_current_
         }
 
     except Exception as e:
-        print(f"❌ Generate endpoint hatası: {str(e)}")
+        print(f"Generate endpoint hatası: {str(e)}")
         raise HTTPException(status_code=500, detail=f"İşlem sırasında hata oluştu: {str(e)}")
 
 
@@ -305,7 +286,6 @@ async def generate_stream(request: GenerateRequest, current_user = Depends(get_c
     if not qa_system or not retriever:
         raise HTTPException(status_code=500, detail="RAG sistemi henüz başlatılmadı")
 
-    # Authenticated user'ın ID'sini kullan, yoksa request'teki user_id'yi kullan
     user_id = current_user.id if current_user else request.user_id
 
     start_time = time.time()
@@ -327,7 +307,7 @@ async def generate_stream(request: GenerateRequest, current_user = Depends(get_c
 
                 for chunk in qa_system.generate_answer_stream(request.question, context):
                     if chunk:
-                        full_answer += chunk  # Chunk'ları biriktir
+                        full_answer += chunk
                         yield "data: " + json.dumps({
                             "type": "chunk",
                             "text": chunk
@@ -339,7 +319,6 @@ async def generate_stream(request: GenerateRequest, current_user = Depends(get_c
                 conversation_id = None
                 thread_id = None
 
-                # Chat kaydetme işlemini güçlendir ve senkron yap
                 if supabase_logger and full_answer.strip():
                     try:
                         conversation_result = supabase_logger.log_conversation_with_id(
@@ -350,22 +329,22 @@ async def generate_stream(request: GenerateRequest, current_user = Depends(get_c
                             sources=search_results[:4],
                             response_time=response_time,
                             user_id=user_id,
-                            thread_id=request.thread_id  # thread_id parametresini ekle
+                            thread_id=request.thread_id
                         )
                         if conversation_result["success"]:
                             conversation_saved = True
                             conversation_id = conversation_result["conversation_id"]
                             thread_id = conversation_result["thread_id"]
-                            print(f"✓ Streaming conversation kaydedildi (ID: {conversation_id}, Thread: {thread_id}, User: {user_id or 'Anonymous'})")
+                            print(f"Streaming conversation kaydedildi (ID: {conversation_id}, Thread: {thread_id}, User: {user_id or 'Anonymous'})")
                         else:
-                            print(f"✗ Streaming conversation kaydetme başarısız (User: {user_id or 'Anonymous'})")
+                            print(f"Streaming conversation kaydetme başarısız (User: {user_id or 'Anonymous'})")
                     except Exception as save_error:
                         print(f"❌ Streaming conversation kaydetme hatası: {save_error}")
                 else:
                     if not supabase_logger:
-                        print("⚠️ Supabase logger mevcut değil - streaming conversation kaydedilmedi!")
+                        print("Supabase logger mevcut değil - streaming conversation kaydedilmedi!")
                     elif not full_answer.strip():
-                        print("⚠️ Boş answer - streaming conversation kaydedilmedi!")
+                        print("Boş answer - streaming conversation kaydedilmedi!")
 
                 yield "data: " + json.dumps({
                     "type": "end",
@@ -379,7 +358,7 @@ async def generate_stream(request: GenerateRequest, current_user = Depends(get_c
                 }) + "\n\n"
 
             except Exception as e:
-                print(f"❌ Streaming generator hatası: {str(e)}")
+                print(f"Streaming generator hatası: {str(e)}")
                 yield "data: " + json.dumps({
                     "type": "error",
                     "message": f"Hata oluştu: {str(e)}"
@@ -396,19 +375,17 @@ async def generate_stream(request: GenerateRequest, current_user = Depends(get_c
         )
 
     except Exception as e:
-        print(f"❌ Streaming endpoint hatası: {str(e)}")
+        print(f"Streaming endpoint hatası: {str(e)}")
         raise HTTPException(status_code=500, detail=f"İşlem sırasında hata oluştu: {str(e)}")
 
 @app.get("/history")
 async def get_history(
-    current_user = Depends(require_auth),  # Auth zorunlu yap
+    current_user = Depends(require_auth), 
     limit: int = Query(50)
 ):
-    """Konuşma geçmişini getir - Thread sistemi ile uyumlu (backward compatibility için)"""
     if not supabase_logger:
         raise HTTPException(status_code=500, detail="Supabase bağlantısı yok")
 
-    # get_conversation_history fonksiyonunu kullan (soft delete uyumlu)
     history = supabase_logger.get_conversation_history(current_user.id, limit)
 
     return {
@@ -427,7 +404,6 @@ async def search_history(
     current_user = Depends(require_auth),
     limit: int = Query(20)
 ):
-    """Authenticated user'ın conversation'larında arama yap"""
     if not supabase_logger:
         raise HTTPException(status_code=500, detail="Supabase bağlantısı yok")
     
@@ -446,11 +422,9 @@ async def get_conversation_by_id(
     conversation_id: int,
     current_user = Depends(get_current_user)
 ):
-    """Belirli bir conversation'ın detaylarını getir"""
     if not supabase_logger:
         raise HTTPException(status_code=500, detail="Supabase bağlantısı yok")
     
-    # Conversation'ı getir
     conversation = supabase_logger.get_conversation_by_id(conversation_id, current_user.id if current_user else None)
     
     if not conversation:
@@ -466,7 +440,6 @@ async def delete_conversation(
     conversation_id: int,
     current_user = Depends(require_auth)
 ):
-    """Belirli bir conversation'ı sil"""
     if not supabase_logger:
         raise HTTPException(status_code=500, detail="Supabase bağlantısı yok")
     
@@ -480,7 +453,6 @@ async def delete_conversation(
 
 @app.get("/history/count")
 async def get_conversation_count(current_user = Depends(require_auth)):
-    """Kullanıcının toplam conversation sayısını getir"""
     if not supabase_logger:
         raise HTTPException(status_code=500, detail="Supabase bağlantısı yok")
     
@@ -496,14 +468,11 @@ async def get_latest_conversations(
     current_user = Depends(require_auth),
     limit: int = Query(5, description="Son kaç conversation getirileceği")
 ):
-    """En son conversation'ları getir - real-time güncellemeler için"""
     if not supabase_logger:
         raise HTTPException(status_code=500, detail="Supabase bağlantısı yok")
 
-    # Thread sistemi kullan
     threads = supabase_logger.get_conversation_threads(current_user.id, limit)
     
-    # Eski format için dönüştür
     conversations = []
     for thread in threads:
         conversations.append({
@@ -527,11 +496,9 @@ async def get_conversation_threads(
     current_user = Depends(require_auth),
     limit: int = Query(50)
 ):
-    """Kullanıcının conversation thread'lerini getir (yeni thread sistemi)"""
     if not supabase_logger:
         raise HTTPException(status_code=500, detail="Supabase bağlantısı yok")
 
-    # Thread'leri getir
     threads = supabase_logger.get_conversation_threads(current_user.id, limit)
 
     return {
@@ -547,11 +514,9 @@ async def get_thread_messages(
     thread_id: str,
     current_user = Depends(require_auth)
 ):
-    """Belirli bir thread'in tüm mesajlarını getir"""
     if not supabase_logger:
         raise HTTPException(status_code=500, detail="Supabase bağlantısı yok")
 
-    # Thread'in mesajlarını getir
     messages = supabase_logger.get_thread_messages(thread_id, current_user.id)
 
     if not messages:
@@ -569,7 +534,6 @@ async def soft_delete_thread(
     thread_id: str,
     current_user = Depends(require_auth)
 ):
-    """Thread'i soft delete yap (kullanıcıdan gizle)"""
     if not supabase_logger:
         raise HTTPException(status_code=500, detail="Supabase bağlantısı yok")
 
@@ -585,7 +549,6 @@ async def restore_thread(
     thread_id: str,
     current_user = Depends(require_auth)
 ):
-    """Soft deleted thread'i geri getir"""
     if not supabase_logger:
         raise HTTPException(status_code=500, detail="Supabase bağlantısı yok")
 

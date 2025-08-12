@@ -1,11 +1,8 @@
--- ===== CONVERSATIONS TABLOSU GÜNCELLEMESİ =====
 
--- 1. Mevcut policy'leri kaldır
 DROP POLICY IF EXISTS "Enable read access for all users" ON conversations;
 DROP POLICY IF EXISTS "Enable insert access for all users" ON conversations;
 
--- 2. user_id tipini UUID'ye çevir ve auth.users'a reference et
-ALTER TABLE conversations 
+ALTER TABLE conversations
     ALTER COLUMN user_id TYPE UUID USING user_id::UUID;
 
 -- 3. Foreign key constraint ekle (opsiyonel ama önerilen)
